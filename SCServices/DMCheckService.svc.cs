@@ -22,6 +22,7 @@ namespace SyncServices
                 if (ip.AddressFamily == AddressFamily.InterNetwork)
                 {
                     return "Your Sync Web-Service IP Address is: " + ip.ToString();
+
                 }
             }
             return "Sorry";
