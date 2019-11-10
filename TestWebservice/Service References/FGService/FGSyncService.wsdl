@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FGSyncService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFGSyncService_ResetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetData" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_ResetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetFGYearInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGYearInventory" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetFGYearInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGYearInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_UpdateFGDesktop_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFGDesktop" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_UpdateFGDesktop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFGDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetPing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPing" />
+  </wsdl:message>
+  <wsdl:message name="IFGSyncService_GetPing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFGSyncService">
+    <wsdl:operation name="ResetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFGSyncService/ResetData" message="tns:IFGSyncService_ResetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFGSyncService/ResetDataResponse" message="tns:IFGSyncService_ResetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGYearInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFGSyncService/GetFGYearInventory" message="tns:IFGSyncService_GetFGYearInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFGSyncService/GetFGYearInventoryResponse" message="tns:IFGSyncService_GetFGYearInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFGSyncService/GetUserData" message="tns:IFGSyncService_GetUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFGSyncService/GetUserDataResponse" message="tns:IFGSyncService_GetUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFGDesktop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFGSyncService/UpdateFGDesktop" message="tns:IFGSyncService_UpdateFGDesktop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFGSyncService/UpdateFGDesktopResponse" message="tns:IFGSyncService_UpdateFGDesktop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFGSyncService/GetPing" message="tns:IFGSyncService_GetPing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFGSyncService/GetPingResponse" message="tns:IFGSyncService_GetPing_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFGSyncService" type="tns:IFGSyncService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ResetData">
+      <soap:operation soapAction="http://tempuri.org/IFGSyncService/ResetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFGYearInventory">
+      <soap:operation soapAction="http://tempuri.org/IFGSyncService/GetFGYearInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IFGSyncService/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFGDesktop">
+      <soap:operation soapAction="http://tempuri.org/IFGSyncService/UpdateFGDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <soap:operation soapAction="http://tempuri.org/IFGSyncService/GetPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FGSyncService">
+    <wsdl:port name="BasicHttpBinding_IFGSyncService" binding="tns:BasicHttpBinding_IFGSyncService">
+      <soap:address location="http://localhost:58380/FGSyncService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

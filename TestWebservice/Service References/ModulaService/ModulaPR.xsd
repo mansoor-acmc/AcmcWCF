@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ItemEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvailableCount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsManual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMatched" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PhysicalCount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProcessByIT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SyncId" type="xs:long" />
+      <xs:element minOccurs="0" name="UoM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+  <xs:complexType name="ArrayOfItemEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemEntity" nillable="true" type="tns:ArrayOfItemEntity" />
+  <xs:complexType name="ArrayOfWOPool">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WOPool" nillable="true" type="tns:WOPool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWOPool" nillable="true" type="tns:ArrayOfWOPool" />
+  <xs:complexType name="WOPool">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkOrderPoolCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WOPool" nillable="true" type="tns:WOPool" />
+  <xs:complexType name="ArrayOfPMEquipment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMEquipment" nillable="true" type="tns:PMEquipment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPMEquipment" nillable="true" type="tns:ArrayOfPMEquipment" />
+  <xs:complexType name="PMEquipment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attachments" nillable="true" type="tns:ArrayOfEquipCatalog" />
+      <xs:element minOccurs="0" name="EquipmentGroupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PMEquipment" nillable="true" type="tns:PMEquipment" />
+  <xs:complexType name="ArrayOfEquipCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipCatalog" nillable="true" type="tns:EquipCatalog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEquipCatalog" nillable="true" type="tns:ArrayOfEquipCatalog" />
+  <xs:complexType name="EquipCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilePath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EquipCatalog" nillable="true" type="tns:EquipCatalog" />
+  <xs:complexType name="ArrayOfPMFailureCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMFailureCode" nillable="true" type="tns:PMFailureCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPMFailureCode" nillable="true" type="tns:ArrayOfPMFailureCode" />
+  <xs:complexType name="PMFailureCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PMFailureCode" nillable="true" type="tns:PMFailureCode" />
+  <xs:complexType name="ArrayOfPMRepairCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMRepairCode" nillable="true" type="tns:PMRepairCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPMRepairCode" nillable="true" type="tns:ArrayOfPMRepairCode" />
+  <xs:complexType name="PMRepairCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RepairCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PMRepairCode" nillable="true" type="tns:PMRepairCode" />
+  <xs:complexType name="ArrayOfPMWorkItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMWorkItem" nillable="true" type="tns:PMWorkItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPMWorkItem" nillable="true" type="tns:ArrayOfPMWorkItem" />
+  <xs:complexType name="PMWorkItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemRecId" type="xs:long" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Qty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Sto_HostRIF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sto_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sto_Requester" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UoM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WOPkId" type="xs:long" />
+      <xs:element minOccurs="0" name="WorkOrderID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PMWorkItem" nillable="true" type="tns:PMWorkItem" />
+  <xs:complexType name="PMWorkOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RepairCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TablePk" type="xs:long" />
+      <xs:element minOccurs="0" name="WOEquipment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WOPoolCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WOStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WOType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkItems" nillable="true" type="tns:ArrayOfPMWorkItem" />
+      <xs:element minOccurs="0" name="WorkOrderID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PMWorkOrder" nillable="true" type="tns:PMWorkOrder" />
+</xs:schema>

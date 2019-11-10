@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0886A1BB-E874-4319-BFF7-57B3A5C636DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SyncServices</RootNamespace>
+    <AssemblyName>SyncServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DeviceOps.svc" />
+    <Content Include="DMCheckService.svc" />
+    <Content Include="FGSyncService.svc" />
+    <Content Include="ModulaPR.svc" />
+    <Content Include="SalesService.svc" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\PublishProfiles\SyncServices.pubxml" />
+    <None Include="Properties\PublishProfiles\SyncServicesTest.pubxml" />
+    <None Include="Properties\PublishProfiles\SyncServicesTest184.pubxml" />
+    <None Include="Properties\PublishProfiles\SyncServicesTest2.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices.wsdl" />
+    <None Include="Service References\Attendance\AttendanceServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices1.wsdl" />
+    <None Include="Service References\Attendance\AttendanceServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\AttendanceServices9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Attendance\SyncServices.Attendance.AxdEmpTimeCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Attendance\SyncServices.Attendance.EntityKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices1310.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices1311.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices1312.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices132.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices133.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices134.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices135.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices136.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices137.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices138.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices139.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServices2.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServices21.wsdl" />
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.DMExportContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.DMExportMiniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.DMForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.DMSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.EntityKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.ItemCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\DataManagerServices\SyncServices.DataManagerServices.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EAMServices\EAMServices14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices1410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices1411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices1412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices1413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices144.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices146.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices147.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices148.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices2.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices21.wsdl" />
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.AxdWorkItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.EntityKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.EquipContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.FailureCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.PMLineCostContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.PMWorkItemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.PMWorkOrderContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.RepairCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.WOLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.WOPoolContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SyncServices.EAMServices.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="SCSyncService.svc" />
+    <None Include="Service References\EAMServices\configuration91.svcinfo" />
+    <None Include="Service References\EAMServices\configuration.svcinfo" />
+    <None Include="Service References\EAMServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Attendance\configuration91.svcinfo" />
+    <None Include="Service References\Attendance\configuration.svcinfo" />
+    <None Include="Service References\Attendance\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup144.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup146.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup147.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup148.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup2.wsdl" />
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup21.wsdl" />
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.AxdJournalCounting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventAvailContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventForItemUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventJournalTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventJournalTransContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventSumContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SyncServices.InventCountingService.WarehouseContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder1410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder1411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder1412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder1413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder144.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder146.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder147.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder148.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder2.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder21.wsdl" />
+    <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.AxdSOPick.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.CustomerDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
+    <None Include="Service References\UserMgtServices\configuration.svcinfo" />
+    <None Include="Service References\UserMgtServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalesOrderAX\configuration91.svcinfo" />
+    <None Include="Service References\SalesOrderAX\configuration.svcinfo" />
+    <None Include="Service References\SalesOrderAX\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DataManagerServices\configuration91.svcinfo" />
+    <None Include="Service References\DataManagerServices\configuration.svcinfo" />
+    <None Include="Service References\DataManagerServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InventCountingService\configuration91.svcinfo" />
+    <None Include="Service References\InventCountingService\configuration.svcinfo" />
+    <None Include="Service References\InventCountingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ServiceUrls.txt" />
+    <Content Include="UserMgtService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.AttendanceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.UserInfoContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices1.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBClass.cs" />
+    <Compile Include="DeviceMessage.cs" />
+    <Compile Include="DeviceOps.svc.cs">
+      <DependentUpon>DeviceOps.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DMCheckService.svc.cs">
+      <DependentUpon>DMCheckService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicatePallet.cs" />
+    <Compile Include="FGSyncService.svc.cs">
+      <DependentUpon>FGSyncService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IDeviceOps.cs" />
+    <Compile Include="IDMCheckService.cs" />
+    <Compile Include="IFGSyncService.cs" />
+    <Compile Include="IModulaPR.cs" />
+    <Compile Include="ISalesService.cs" />
+    <Compile Include="ISCSyncService.cs" />
+    <Compile Include="IUserMgtService.cs" />
+    <Compile Include="LocationHistory.cs" />
+    <Compile Include="ModulaPR.svc.cs">
+      <DependentUpon>ModulaPR.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLine.cs" />
+    <Compile Include="SalesService.svc.cs">
+      <DependentUpon>SalesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SalesTable.cs" />
+    <Compile Include="Service References\Attendance\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataManagerServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EAMServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SCSyncService.svc.cs">
+      <DependentUpon>SCSyncService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InventCountingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesOrderAX\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserMgtServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgtService.svc.cs">
+      <DependentUpon>UserMgtService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Attendance\" />
+    <WCFMetadataStorage Include="Service References\DataManagerServices\" />
+    <WCFMetadataStorage Include="Service References\EAMServices\" />
+    <WCFMetadataStorage Include="Service References\InventCountingService\" />
+    <WCFMetadataStorage Include="Service References\SalesOrderAX\" />
+    <WCFMetadataStorage Include="Service References\UserMgtServices\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>58380</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SyncServices</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

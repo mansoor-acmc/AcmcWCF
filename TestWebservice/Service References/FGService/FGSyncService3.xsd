@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="ArrayOfInventAvailContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventAvailContract" nillable="true" type="tns:InventAvailContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventAvailContract" nillable="true" type="tns:ArrayOfInventAvailContract" />
+  <xs:complexType name="InventAvailContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="availPhysicalField" type="xs:decimal" />
+          <xs:element name="availPhysicalFieldSpecified" type="xs:boolean" />
+          <xs:element name="batchIdField" nillable="true" type="xs:string" />
+          <xs:element name="colorIdField" nillable="true" type="xs:string" />
+          <xs:element name="configurationIdField" nillable="true" type="xs:string" />
+          <xs:element name="itemIdField" nillable="true" type="xs:string" />
+          <xs:element name="locationIdField" nillable="true" type="xs:string" />
+          <xs:element name="productNameField" nillable="true" type="xs:string" />
+          <xs:element name="serialIdField" nillable="true" type="xs:string" />
+          <xs:element name="siteIdField" nillable="true" type="xs:string" />
+          <xs:element name="sizeIdField" nillable="true" type="xs:string" />
+          <xs:element name="syncIdField" type="xs:int" />
+          <xs:element name="syncIdFieldSpecified" type="xs:boolean" />
+          <xs:element name="wMSLocationIdField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventAvailContract" nillable="true" type="tns:InventAvailContract" />
+  <xs:complexType name="XppObjectBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+</xs:schema>

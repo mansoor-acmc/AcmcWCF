@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ModulaPR" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" />
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IModulaPR_GetItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItem" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetWOPools_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOPools" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetWOPools_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOPoolsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipments" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetFailureCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFailureCodes" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetFailureCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFailureCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetRepairCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepairCodes" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetRepairCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepairCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetWorkOrderTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkOrderTypes" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetWorkOrderTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkOrderTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipLocations" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetEquipLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetInlineWorkItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInlineWorkItems" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetInlineWorkItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInlineWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetOtherWorkItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherWorkItems" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetOtherWorkItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_SaveWorkOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWorkOrder" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_SaveWorkOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWorkOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_SetWorkOrderStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWorkOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_SetWorkOrderStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetWorkOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_DeleteWorkItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkItem" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_DeleteWorkItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetPing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPing" />
+  </wsdl:message>
+  <wsdl:message name="IModulaPR_GetPing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IModulaPR">
+    <wsdl:operation name="GetItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetItem" message="tns:IModulaPR_GetItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetItemResponse" message="tns:IModulaPR_GetItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetItems" message="tns:IModulaPR_GetItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetItemsResponse" message="tns:IModulaPR_GetItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOPools">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetWOPools" message="tns:IModulaPR_GetWOPools_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetWOPoolsResponse" message="tns:IModulaPR_GetWOPools_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetEquipments" message="tns:IModulaPR_GetEquipments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetEquipmentsResponse" message="tns:IModulaPR_GetEquipments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFailureCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetFailureCodes" message="tns:IModulaPR_GetFailureCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetFailureCodesResponse" message="tns:IModulaPR_GetFailureCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepairCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetRepairCodes" message="tns:IModulaPR_GetRepairCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetRepairCodesResponse" message="tns:IModulaPR_GetRepairCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetEquipment" message="tns:IModulaPR_GetEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetEquipmentResponse" message="tns:IModulaPR_GetEquipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetWorkOrderTypes" message="tns:IModulaPR_GetWorkOrderTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetWorkOrderTypesResponse" message="tns:IModulaPR_GetWorkOrderTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetEquipLocations" message="tns:IModulaPR_GetEquipLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetEquipLocationsResponse" message="tns:IModulaPR_GetEquipLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInlineWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetInlineWorkItems" message="tns:IModulaPR_GetInlineWorkItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetInlineWorkItemsResponse" message="tns:IModulaPR_GetInlineWorkItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetOtherWorkItems" message="tns:IModulaPR_GetOtherWorkItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetOtherWorkItemsResponse" message="tns:IModulaPR_GetOtherWorkItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/SaveWorkOrder" message="tns:IModulaPR_SaveWorkOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/SaveWorkOrderResponse" message="tns:IModulaPR_SaveWorkOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWorkOrderStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/SetWorkOrderStatus" message="tns:IModulaPR_SetWorkOrderStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/SetWorkOrderStatusResponse" message="tns:IModulaPR_SetWorkOrderStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/DeleteWorkItem" message="tns:IModulaPR_DeleteWorkItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/DeleteWorkItemResponse" message="tns:IModulaPR_DeleteWorkItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IModulaPR/GetPing" message="tns:IModulaPR_GetPing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IModulaPR/GetPingResponse" message="tns:IModulaPR_GetPing_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IModulaPR" type="tns:IModulaPR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItem">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOPools">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetWOPools" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipments">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetEquipments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFailureCodes">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetFailureCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepairCodes">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetRepairCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipment">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderTypes">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetWorkOrderTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipLocations">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetEquipLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInlineWorkItems">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetInlineWorkItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherWorkItems">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetOtherWorkItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkOrder">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/SaveWorkOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWorkOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/SetWorkOrderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/DeleteWorkItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <soap:operation soapAction="http://tempuri.org/IModulaPR/GetPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ModulaPR">
+    <wsdl:port name="BasicHttpBinding_IModulaPR" binding="tns:BasicHttpBinding_IModulaPR">
+      <soap:address location="http://localhost:58380/ModulaPR.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

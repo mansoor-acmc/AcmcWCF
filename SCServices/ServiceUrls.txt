@@ -1,0 +1,3 @@
+﻿http://FAC-PROD-AX03:8101/DynamicsAx/Services/SalesOrder
+
+http://FAC-STAGE-AX04:8101/DynamicsAx/Services/SalesOrder

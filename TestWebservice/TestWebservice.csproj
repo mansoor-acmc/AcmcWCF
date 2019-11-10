@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62C04622-1477-44F8-973B-8F31DC49A5DD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestWebservice</RootNamespace>
+    <AssemblyName>TestWebservice</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DeviceOps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DMCheckService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FGService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModulaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesOrder\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SCServiceFrom50\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SCSyncService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserMgtServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceOps\DeviceOps.wsdl" />
+    <None Include="Service References\DeviceOps\DeviceOps.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceOps\DeviceOps1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceOps\DeviceOps2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceOps\TestWebservice.DeviceOps.DeviceMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService.wsdl" />
+    <None Include="Service References\DMCheckService\DMCheckService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\DMCheckService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportMiniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DuplicatePallet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.ItemForChart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FGService\FGSyncService.wsdl" />
+    <None Include="Service References\FGService\FGSyncService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\FGSyncService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\FGSyncService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\FGSyncService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\FGSyncService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\FGSyncService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGService\TestWebservice.FGService.InventAvailContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FGService\TestWebservice.FGService.PalletEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FGService\TestWebservice.FGService.UserData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR.wsdl" />
+    <None Include="Service References\ModulaService\ModulaPR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\ModulaPR32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.ItemEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMEquipment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMFailureCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMRepairCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMWorkItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMWorkOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOPool.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService1.wsdl" />
+    <None Include="Service References\SalesOrder\SalesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\SalesService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesTable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SCServiceFrom50\SCSyncService.wsdl" />
+    <None Include="Service References\SCServiceFrom50\SCSyncService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCServiceFrom50\SCSyncService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCServiceFrom50\SCSyncService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCServiceFrom50\TestWebservice.SCServiceFrom50.ItemEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SCSyncService\SCSyncService.wsdl" />
+    <None Include="Service References\SCSyncService\SCSyncService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCSyncService\SCSyncService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCSyncService\SCSyncService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCSyncService\TestWebservice.SCSyncService.ItemEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\TestWebservice.UserMgtServices.AttendanceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\TestWebservice.UserMgtServices.UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtService.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DeviceOps\" />
+    <WCFMetadataStorage Include="Service References\DMCheckService\" />
+    <WCFMetadataStorage Include="Service References\FGService\" />
+    <WCFMetadataStorage Include="Service References\ModulaService\" />
+    <WCFMetadataStorage Include="Service References\SalesOrder\" />
+    <WCFMetadataStorage Include="Service References\SCServiceFrom50\" />
+    <WCFMetadataStorage Include="Service References\SCSyncService\" />
+    <WCFMetadataStorage Include="Service References\UserMgtServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrder\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrder\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrder\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrder\SalesService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\SCSyncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaService\ModulaPR.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\UserMgtService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceOps\DeviceOps.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceOps\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceOps\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceOps\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGService\FGSyncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCServiceFrom50\SCSyncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCServiceFrom50\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCServiceFrom50\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCServiceFrom50\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\DMCheckService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

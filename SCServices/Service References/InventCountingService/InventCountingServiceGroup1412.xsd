@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" xmlns:st="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd8" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+  <xs:element name="JournalCounting" type="tns:AxdJournalCounting" />
+  <xs:complexType name="AxdJournalCounting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearNilFieldsOnUpdate" nillable="true" type="st:AxdEnum_boolean" />
+      <xs:element minOccurs="0" name="DocPurpose" nillable="true" type="st:AxdEnum_XMLDocPurpose" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="st:AxdExtType_DataAreaId" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTable" type="tns:AxdEntity_InventJournalTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_InventJournalTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_DocumentHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlockUserGroupId" nillable="true" type="st:AxdExtType_JournalBlockUserGroupId" />
+      <xs:element minOccurs="0" name="BlockUserId" nillable="true" type="st:AxdExtType_JournalBlockUserId" />
+      <xs:element minOccurs="0" name="DeletePostedLines" nillable="true" type="st:AxdExtType_JournalDeletePostedLines" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="st:AxdExtType_JournalDescription" />
+      <xs:element minOccurs="0" name="DetailSummary" nillable="true" type="st:AxdExtType_JournalDetailSummary" />
+      <xs:element minOccurs="0" name="InventDimFixed" nillable="true" type="st:AxdExtType_InventDimFixed" />
+      <xs:element minOccurs="0" name="InventDocType_PL" nillable="true" type="st:AxdEnum_PlInventDocType" />
+      <xs:element minOccurs="0" name="InventLocationId" nillable="true" type="st:AxdExtType_PurchInventLocationId" />
+      <xs:element minOccurs="0" name="InventSiteId" nillable="true" type="st:AxdExtType_InventSiteId" />
+      <xs:element minOccurs="0" name="JournalId" nillable="true" type="st:AxdExtType_InventJournalId" />
+      <xs:element minOccurs="0" name="JournalIdOrignal" nillable="true" type="st:AxdExtType_InventJournalIdOrignal" />
+      <xs:element minOccurs="0" name="JournalNameId" nillable="true" type="st:AxdExtType_InventJournalNameId" />
+      <xs:element minOccurs="0" name="JournalType" nillable="true" type="st:AxdEnum_InventJournalType" />
+      <xs:element minOccurs="0" name="LedgerDimension" nillable="true" type="st:AxdType_DefaultAccount" />
+      <xs:element minOccurs="0" name="NumOfLines" nillable="true" type="st:AxdExtType_JournalNumOfLines" />
+      <xs:element minOccurs="0" name="Posted" nillable="true" type="st:AxdExtType_JournalPosted" />
+      <xs:element minOccurs="0" name="PostedDateTime" nillable="true" type="st:AxdExtType_JournalPostedDateTime" />
+      <xs:element minOccurs="0" name="PostedUserId" nillable="true" type="st:AxdExtType_JournalPostedUserId" />
+      <xs:element minOccurs="0" name="ProdId" nillable="true" type="st:AxdExtType_ProdId" />
+      <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
+      <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
+      <xs:element minOccurs="0" name="Reservation" nillable="true" type="st:AxdEnum_ItemReservation" />
+      <xs:element minOccurs="0" name="RetailRetailStatusType" nillable="true" type="st:AxdExtType_RetailRetailStatusType" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="st:AxdExtType_JournalSessionId" />
+      <xs:element minOccurs="0" name="SessionLoginDateTime" nillable="true" type="st:AxdExtType_JournalSessionLoginDateTime" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="st:AxdExtType_InventJournalSource" />
+      <xs:element minOccurs="0" name="Storno_RU" nillable="true" type="st:AxdExtType_Storno_RU" />
+      <xs:element minOccurs="0" name="SystemBlocked" nillable="true" type="st:AxdExtType_JournalSystemBlocked" />
+      <xs:element minOccurs="0" name="VoucherChange" nillable="true" type="st:AxdEnum_InventJournalVoucherChange" />
+      <xs:element minOccurs="0" name="VoucherDraw" nillable="true" type="st:AxdEnum_JournalVoucherDraw" />
+      <xs:element minOccurs="0" name="VoucherNumberSequenceTable" nillable="true" type="st:AxdEntityKey_NumberSequenceTable" />
+      <xs:element minOccurs="0" name="Worker" nillable="true" type="st:AxdExtType_HcmPersonnelNumberId" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTrans" type="tns:AxdEntity_InventJournalTrans" />
+    </xs:sequence>
+    <xs:attribute fixed="entity" name="class" use="required" />
+    <xs:attribute name="action" type="st:AxdEnum_AxdEntityAction" />
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_InventJournalTrans">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityNumber" nillable="true" type="st:AxdExtType_ProjActivityNumber" />
+      <xs:element minOccurs="0" name="AssetBookId" nillable="true" type="st:AxdExtType_AssetBookIdPurchSalesInvent" />
+      <xs:element minOccurs="0" name="AssetId" nillable="true" type="st:AxdExtType_AssetId" />
+      <xs:element minOccurs="0" name="AssetTransType" nillable="true" type="st:AxdEnum_AssetTransTypeJournal" />
+      <xs:element minOccurs="0" name="BOMLine" nillable="true" type="st:AxdExtType_BOMLine" />
+      <xs:element minOccurs="0" name="CostAmount" nillable="true" type="st:AxdExtType_CostAmount" />
+      <xs:element minOccurs="0" name="CostMarkup" nillable="true" type="st:AxdExtType_CostMarkup" />
+      <xs:element minOccurs="0" name="CostPrice" nillable="true" type="st:AxdExtType_ItemCostPrice" />
+      <xs:element minOccurs="0" name="Counted" nillable="true" type="st:AxdExtType_InventQtyCounted" />
+      <xs:element minOccurs="0" name="DefaultDimension" nillable="true" type="st:AxdType_DimensionAttributeValueSet" />
+      <xs:element minOccurs="0" name="DSA_IN" nillable="true" type="st:AxdEnum_NoYes" />
+      <xs:element minOccurs="0" name="ExciseRecordType_IN" nillable="true" type="st:AxdEnum_ExciseRecordType_IN" />
+      <xs:element minOccurs="0" name="ExciseTariffCodes_IN" nillable="true" type="st:AxdExtType_TariffCode_IN" />
+      <xs:element minOccurs="0" name="ExciseType_IN" nillable="true" type="st:AxdEnum_ExciseType_IN" />
+      <xs:element minOccurs="0" name="IntrastatFulfillmentDate_HU" nillable="true" type="st:AxdExtType_IntrastatFulfillmentDate_HU" />
+      <xs:element minOccurs="0" name="InventDimId" nillable="true" type="st:AxdExtType_InventDimId" />
+      <xs:element minOccurs="0" name="InventOnHand" nillable="true" type="st:AxdExtType_InventQtyOnHand" />
+      <xs:element minOccurs="0" name="InventRefId" nillable="true" type="st:AxdExtType_InventRefId" />
+      <xs:element minOccurs="0" name="InventRefTransId" nillable="true" type="st:AxdExtType_InventRefTransId" />
+      <xs:element minOccurs="0" name="InventRefType" nillable="true" type="st:AxdEnum_InventRefType" />
+      <xs:element minOccurs="0" name="InventTransId" nillable="true" type="st:AxdExtType_InventTransId" />
+      <xs:element minOccurs="0" name="InventTransIdFather" nillable="true" type="st:AxdExtType_InventTransId" />
+      <xs:element minOccurs="0" name="InventTransIdReturn" nillable="true" type="st:AxdExtType_InventTransIdReturn" />
+      <xs:element minOccurs="1" name="ItemId" type="st:AxdUnion_AxdExtType_ItemIdInventoried_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="JournalId" nillable="true" type="st:AxdExtType_InventJournalId" />
+      <xs:element minOccurs="0" name="JournalType" nillable="true" type="st:AxdEnum_InventJournalType" />
+      <xs:element minOccurs="0" name="LedgerDimension" nillable="true" type="st:AxdType_LedgerAccount" />
+      <xs:element minOccurs="0" name="LineNum" nillable="true" type="st:AxdExtType_LineNum" />
+      <xs:element minOccurs="0" name="PdsCopyBatchAttrib" nillable="true" type="st:AxdExtType_PdsCopyBatchAttrib" />
+      <xs:element minOccurs="0" name="PdsCWInventOnHand" nillable="true" type="st:AxdExtType_PdsCWInventQty" />
+      <xs:element minOccurs="0" name="PdsCWInventQtyCounted" nillable="true" type="st:AxdExtType_PdsCWInventQty" />
+      <xs:element minOccurs="0" name="PdsCWQty" nillable="true" type="st:AxdExtType_PdsCWInventQty" />
+      <xs:element minOccurs="0" name="PostalAddress_IN" nillable="true" type="st:AxdEntityKey_LogisticsPostalAddress" />
+      <xs:element minOccurs="0" name="PriceUnit" nillable="true" type="st:AxdExtType_PriceUnit" />
+      <xs:element minOccurs="0" name="ProdId" nillable="true" type="st:AxdExtType_ProdId" />
+      <xs:element minOccurs="0" name="ProfitSet" nillable="true" type="st:AxdEnum_CostProfitSet" />
+      <xs:element minOccurs="0" name="ProjCategoryId" nillable="true" type="st:AxdExtType_ProjCategoryId" />
+      <xs:element minOccurs="0" name="ProjId" nillable="true" type="st:AxdExtType_ProjId" />
+      <xs:element minOccurs="0" name="ProjLinePropertyId" nillable="true" type="st:AxdExtType_ProjLinePropertyId" />
+      <xs:element minOccurs="0" name="ProjSalesCurrencyId" nillable="true" type="st:AxdUnion_AxdExtType_ProjSalesCurrencyCode_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="ProjSalesPrice" nillable="true" type="st:AxdExtType_ProjSalesPriceCost" />
+      <xs:element minOccurs="0" name="ProjTaxGroupId" nillable="true" type="st:AxdExtType_ProjTaxGroup" />
+      <xs:element minOccurs="0" name="ProjTaxItemGroupId" nillable="true" type="st:AxdExtType_ProjTaxItemGroup" />
+      <xs:element minOccurs="0" name="ProjTransId" nillable="true" type="st:AxdExtType_ProjItemTransId" />
+      <xs:element minOccurs="0" name="ProjUnitID" nillable="true" type="st:AxdUnion_AxdExtType_UnitOfMeasureSymbol_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="Qty" nillable="true" type="st:AxdExtType_InventQtyJournal" />
+      <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
+      <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
+      <xs:element minOccurs="0" name="ReleaseDate" nillable="true" type="st:AxdExtType_PostReleaseDate" />
+      <xs:element minOccurs="0" name="ReqPOId" nillable="true" type="st:AxdExtType_ReqPOId" />
+      <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="st:AxdExtType_SalesAmount" />
+      <xs:element minOccurs="0" name="ScrapTypeId_RU" nillable="true" type="st:AxdExtType_PurchReturnActionId" />
+      <xs:element minOccurs="0" name="Shift" nillable="true" type="st:AxdExtType_Shift" />
+      <xs:element minOccurs="0" name="Storno_RU" nillable="true" type="st:AxdExtType_Storno_RU" />
+      <xs:element minOccurs="0" name="ToInventDimId" nillable="true" type="st:AxdExtType_InventDimId" />
+      <xs:element minOccurs="0" name="ToInventTransId" nillable="true" type="st:AxdExtType_InventTransIdTo" />
+      <xs:element minOccurs="0" name="TransDate" nillable="true" type="st:AxdExtType_JournalTransDate" />
+      <xs:element minOccurs="0" name="Voucher" nillable="true" type="st:AxdExtType_Voucher" />
+      <xs:element minOccurs="0" name="WarehouseLocation_IN" nillable="true" type="st:AxdExtType_LogisticsLocationRecId" />
+      <xs:element minOccurs="0" name="Worker" nillable="true" type="st:AxdExtType_HcmPersonnelNumberId" />
+    </xs:sequence>
+    <xs:attribute fixed="entity" name="class" use="required" />
+    <xs:attribute name="action" type="st:AxdEnum_AxdEntityAction" />
+  </xs:complexType>
+</xs:schema>

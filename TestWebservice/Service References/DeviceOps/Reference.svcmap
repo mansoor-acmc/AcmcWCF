@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3618ff1-e00b-426d-a121-2d2c495988e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.17.0.50/SyncServicesTest/DeviceOPS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DeviceOps.xsd" MetadataType="Schema" ID="9def9e02-863e-4857-b231-a6d0f91921f0" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest/DeviceOps.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeviceOps1.xsd" MetadataType="Schema" ID="789203a1-aee3-4c4b-9675-540fd8a79c5a" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest/DeviceOps.svc?xsd=xsd2" />
+    <MetadataFile FileName="DeviceOps.wsdl" MetadataType="Wsdl" ID="96dde969-abf3-44b6-b8aa-42a52e39cbfe" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest/DeviceOps.svc?wsdl" />
+    <MetadataFile FileName="DeviceOps.disco" MetadataType="Disco" ID="7010e32d-73b4-4a89-a5cb-3ebee411a685" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest/DeviceOps.svc?disco" />
+    <MetadataFile FileName="DeviceOps2.xsd" MetadataType="Schema" ID="886c2144-7f8a-4f88-8488-3782ab0987f6" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest/DeviceOps.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

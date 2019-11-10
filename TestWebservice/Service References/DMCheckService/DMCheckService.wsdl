@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DMCheckService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDMCheckService_GetPing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPing" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetPing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetPalletInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalletInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetPalletInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetPalletInfoByRecordId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoByRecordId" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetPalletInfoByRecordId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoByRecordIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ConfirmPalletReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ConfirmPalletReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ConfirmPalletAndLocationReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletAndLocationReceive" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ConfirmPalletAndLocationReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletAndLocationReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_CancelPalletReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_CancelPalletReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdateAndConfirmPalletReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_PrintAgainPallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintAgainPallet" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_PrintAgainPallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintAgainPalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_DMClearPrintAgain_InputMessage">
+    <wsdl:part name="parameters" element="tns:DMClearPrintAgain" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_DMClearPrintAgain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DMClearPrintAgainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdateOfflinePallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOfflinePallets" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdateOfflinePallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOfflinePalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_TransferPalletsToNewLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferPalletsToNewLocation" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_TransferPalletsToNewLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferPalletsToNewLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_SummaryPallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPallets" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_SummaryPallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ItemGroupPallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:ItemGroupPallets" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ItemGroupPallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ItemGroupPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_CreateDowntimeForMarpak_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDowntimeForMarpak" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_CreateDowntimeForMarpak_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDowntimeForMarpakResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetProductionByLinesForChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionByLinesForChart" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetProductionByLinesForChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionByLinesForChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetProductionByItemsForChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionByItemsForChart" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetProductionByItemsForChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionByItemsForChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetWHLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWHLocations" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetWHLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWHLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetDuplicatePallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicatePallets" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetDuplicatePallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicatePalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ClearDuplicatePallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearDuplicatePallet" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ClearDuplicatePallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearDuplicatePalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ClearDuplicatePalletsAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearDuplicatePalletsAll" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_ClearDuplicatePalletsAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearDuplicatePalletsAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDMCheckService">
+    <wsdl:operation name="GetPing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetPing" message="tns:IDMCheckService_GetPing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetPingResponse" message="tns:IDMCheckService_GetPing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetPalletInfo" message="tns:IDMCheckService_GetPalletInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetPalletInfoResponse" message="tns:IDMCheckService_GetPalletInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfoByRecordId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetPalletInfoByRecordId" message="tns:IDMCheckService_GetPalletInfoByRecordId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetPalletInfoByRecordIdResponse" message="tns:IDMCheckService_GetPalletInfoByRecordId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ConfirmPalletReceive" message="tns:IDMCheckService_ConfirmPalletReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ConfirmPalletReceiveResponse" message="tns:IDMCheckService_ConfirmPalletReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletAndLocationReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ConfirmPalletAndLocationReceive" message="tns:IDMCheckService_ConfirmPalletAndLocationReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ConfirmPalletAndLocationReceiveResponse" message="tns:IDMCheckService_ConfirmPalletAndLocationReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPalletReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/CancelPalletReceive" message="tns:IDMCheckService_CancelPalletReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/CancelPalletReceiveResponse" message="tns:IDMCheckService_CancelPalletReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAndConfirmPalletReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceiveResponse" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintAgainPallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/PrintAgainPallet" message="tns:IDMCheckService_PrintAgainPallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/PrintAgainPalletResponse" message="tns:IDMCheckService_PrintAgainPallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DMClearPrintAgain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/DMClearPrintAgain" message="tns:IDMCheckService_DMClearPrintAgain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/DMClearPrintAgainResponse" message="tns:IDMCheckService_DMClearPrintAgain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfflinePallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdateOfflinePallets" message="tns:IDMCheckService_UpdateOfflinePallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdateOfflinePalletsResponse" message="tns:IDMCheckService_UpdateOfflinePallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferPalletsToNewLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocation" message="tns:IDMCheckService_TransferPalletsToNewLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocationResponse" message="tns:IDMCheckService_TransferPalletsToNewLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/SummaryPallets" message="tns:IDMCheckService_SummaryPallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/SummaryPalletsResponse" message="tns:IDMCheckService_SummaryPallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemGroupPallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ItemGroupPallets" message="tns:IDMCheckService_ItemGroupPallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ItemGroupPalletsResponse" message="tns:IDMCheckService_ItemGroupPallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDowntimeForMarpak">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/CreateDowntimeForMarpak" message="tns:IDMCheckService_CreateDowntimeForMarpak_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/CreateDowntimeForMarpakResponse" message="tns:IDMCheckService_CreateDowntimeForMarpak_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionByLinesForChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetProductionByLinesForChart" message="tns:IDMCheckService_GetProductionByLinesForChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetProductionByLinesForChartResponse" message="tns:IDMCheckService_GetProductionByLinesForChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionByItemsForChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetProductionByItemsForChart" message="tns:IDMCheckService_GetProductionByItemsForChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetProductionByItemsForChartResponse" message="tns:IDMCheckService_GetProductionByItemsForChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetWHLocations" message="tns:IDMCheckService_GetWHLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetWHLocationsResponse" message="tns:IDMCheckService_GetWHLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicatePallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetDuplicatePallets" message="tns:IDMCheckService_GetDuplicatePallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetDuplicatePalletsResponse" message="tns:IDMCheckService_GetDuplicatePallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearDuplicatePallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePallet" message="tns:IDMCheckService_ClearDuplicatePallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePalletResponse" message="tns:IDMCheckService_ClearDuplicatePallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearDuplicatePalletsAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePalletsAll" message="tns:IDMCheckService_ClearDuplicatePalletsAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePalletsAllResponse" message="tns:IDMCheckService_ClearDuplicatePalletsAll_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDMCheckService" type="tns:IDMCheckService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPing">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfo">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetPalletInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfoByRecordId">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetPalletInfoByRecordId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletReceive">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/ConfirmPalletReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletAndLocationReceive">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/ConfirmPalletAndLocationReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPalletReceive">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/CancelPalletReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAndConfirmPalletReceive">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintAgainPallet">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/PrintAgainPallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMClearPrintAgain">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/DMClearPrintAgain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfflinePallets">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdateOfflinePallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferPalletsToNewLocation">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPallets">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/SummaryPallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ItemGroupPallets">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/ItemGroupPallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDowntimeForMarpak">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/CreateDowntimeForMarpak" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionByLinesForChart">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetProductionByLinesForChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionByItemsForChart">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetProductionByItemsForChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHLocations">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetWHLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicatePallets">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetDuplicatePallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearDuplicatePallet">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/ClearDuplicatePallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearDuplicatePalletsAll">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/ClearDuplicatePalletsAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DMCheckService">
+    <wsdl:port name="BasicHttpBinding_IDMCheckService" binding="tns:BasicHttpBinding_IDMCheckService">
+      <soap:address location="http://localhost:58380/DMCheckService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

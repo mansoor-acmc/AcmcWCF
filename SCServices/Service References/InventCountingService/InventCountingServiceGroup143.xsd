@@ -1,0 +1,3708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AxdEnum_boolean">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="false" />
+      <xs:enumeration value="true" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_XMLDocPurpose">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Purpose:Purpose</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Original" />
+      <xs:enumeration value="Duplicate" />
+      <xs:enumeration value="Proforma" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_DataAreaId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Company:ID for an area of data</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_AxdEntityAction">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">AxdEntityAction:AxdEntityAction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="create" />
+      <xs:enumeration value="update" />
+      <xs:enumeration value="replace" />
+      <xs:enumeration value="delete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RecId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Record-ID:Unique ID for the record in the database</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Int64" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdType_Int64">
+    <xs:restriction base="xs:long">
+      <xs:minInclusive value="-9223372036854775808" />
+      <xs:maxInclusive value="9223372036854775807" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RecVersion">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Record Version:Version of the record in the database</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdType_Integer">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="-2147483648" />
+      <xs:maxInclusive value="2147483647" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStmtISOMax500Text">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Text:Text fields in the ISO20022 schema. We've taken the maximum text size so as to be able to accommodate fields from non ISO formats as well.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementIdentificationText">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Text:Text fields in the ISO20022 schema. We've taken the maximum text size so as to be able to accommodate fields from non ISO formats as well.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RefRecId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reference:Reference field in a different table</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Int64" />
+  </xs:simpleType>
+  <xs:complexType name="AxdType_DateTime">
+    <xs:simpleContent>
+      <xs:extension base="xs:dateTime">
+        <xs:attribute name="localDateTime" type="xs:dateTime" />
+        <xs:attribute name="timezone" type="tns:AxdEnum_Timezone" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdEnum_Timezone">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GMTMINUS1200INTERNATIONALDATELINEWEST" />
+      <xs:enumeration value="GMTMINUS1100MIDWAYISLAND_SAMOA" />
+      <xs:enumeration value="GMTMINUS1000HAWAII" />
+      <xs:enumeration value="GMTMINUS0900ALASKA" />
+      <xs:enumeration value="GMTMINUS0800PACIFICTIME" />
+      <xs:enumeration value="GMTMINUS0800TIJUANA_BAJACALIFORNIA" />
+      <xs:enumeration value="GMTMINUS0700ARIZONA" />
+      <xs:enumeration value="GMTMINUS0700MOUNTAINTIME" />
+      <xs:enumeration value="GMTMINUS0700CHIHUAHUA_LAPAZ_MAZATLAN" />
+      <xs:enumeration value="GMTMINUS0600CENTRALAMERICA" />
+      <xs:enumeration value="GMTMINUS0600CENTRALTIME" />
+      <xs:enumeration value="GMTMINUS0600GUADALAJARA_MEXICOCITY" />
+      <xs:enumeration value="GMTMINUS0600SASKATCHEWAN" />
+      <xs:enumeration value="GMTMINUS0500BOGOTA_LIMA_QUITO_RIOBRANCO" />
+      <xs:enumeration value="GMTMINUS0500EASTERNTIME" />
+      <xs:enumeration value="GMTMINUS0500INDIANA" />
+      <xs:enumeration value="GMTMINUS0430CARACAS" />
+      <xs:enumeration value="GMTMINUS0400ASUNCION" />
+      <xs:enumeration value="GMTMINUS0400ATLANTICTIME" />
+      <xs:enumeration value="GMTMINUS0400LAPAZ" />
+      <xs:enumeration value="GMTMINUS0400MANAUS" />
+      <xs:enumeration value="GMTMINUS0400SANTIAGO" />
+      <xs:enumeration value="GMTMINUS0330NEWFOUNDLAND" />
+      <xs:enumeration value="GMTMINUS0300BRASILIA" />
+      <xs:enumeration value="GMTMINUS0300BUENOSAIRES" />
+      <xs:enumeration value="GMTMINUS0300BUENOSAIRES_GEORGETOWN" />
+      <xs:enumeration value="GMTMINUS0300GREENLAND" />
+      <xs:enumeration value="GMTMINUS0300MONTEVIDEO" />
+      <xs:enumeration value="GMTMINUS0300_SALVADOR" />
+      <xs:enumeration value="GMTMINUS0200MIDATLANTIC" />
+      <xs:enumeration value="GMTMINUS0100AZORES" />
+      <xs:enumeration value="GMTMINUS0100CAPEVERDIS" />
+      <xs:enumeration value="GMT_CASABLANCA" />
+      <xs:enumeration value="GMT_COORDINATEDUNIVERSALTIME" />
+      <xs:enumeration value="GMT_CASABLANCA_MONTROVIA_REYKJAVIK" />
+      <xs:enumeration value="GMT_DUBLIN_EDINBURGH_LISBON_LONDON" />
+      <xs:enumeration value="GMTPLUS0100_AMSTERDAM_BERLIN_BERN_ROME" />
+      <xs:enumeration value="GMTPLUS0100BELGRADE_BRATISLAVA_BUDAPEST" />
+      <xs:enumeration value="GMTPLUS0100BRUSSELS_COPENHAGEN_MADRID" />
+      <xs:enumeration value="GMTPLUS0100SARAJEVO_SKOPJE_WARSAW_ZAGREB" />
+      <xs:enumeration value="GMTPLUS0100WESTCENTRALAFRICA" />
+      <xs:enumeration value="GMTPLUS0200AMMAN" />
+      <xs:enumeration value="GMTPLUS0200ATHENS_BUCHAREST_ISTANBUL" />
+      <xs:enumeration value="GMTPLUS0200BEIRUT" />
+      <xs:enumeration value="GMTPLUS0200MINSK" />
+      <xs:enumeration value="GMTPLUS0200CAIRO" />
+      <xs:enumeration value="GMTPLUS0200_DAMASCUS" />
+      <xs:enumeration value="GMTPLUS0200HARARE_PRETORIA" />
+      <xs:enumeration value="GMTPLUS0200HELSINKI_KYIV_RIGA_VILNIUS" />
+      <xs:enumeration value="GMTPLUS0200JERUSALEM" />
+      <xs:enumeration value="GMTPLUS0200WINDHOEK" />
+      <xs:enumeration value="GMTPLUS0300BAGHDAD" />
+      <xs:enumeration value="GMT_PLUS0300KALININGRAD_MINSK" />
+      <xs:enumeration value="GMTPLUS0300KUWAIT_RIYADH" />
+      <xs:enumeration value="GMTPLUS0300MOSCOW_STPETERSBURG_VOLGOGRAD" />
+      <xs:enumeration value="GMTPLUS0400PORTLOUIS" />
+      <xs:enumeration value="GMTPLUS0300NAIROBI" />
+      <xs:enumeration value="GMTPLUS0300TBILISI" />
+      <xs:enumeration value="GMTPLUS0330TEHRAN" />
+      <xs:enumeration value="GMTPLUS0400ABUDHABI_MUSCAT" />
+      <xs:enumeration value="GMTPLUS0400BAKU" />
+      <xs:enumeration value="GMTPLUS0400CAUCASUSSTANDARDTIME" />
+      <xs:enumeration value="GMTPLUS0400YEREVAN" />
+      <xs:enumeration value="GMTPLUS0430KABUL" />
+      <xs:enumeration value="GMTPLUS0500EKATERINBURG" />
+      <xs:enumeration value="GMTPLUS0500ISLAMABAD_KARACHI" />
+      <xs:enumeration value="GMTPLUS0500ISLAMABAD_KARACHI_TASHKENT" />
+      <xs:enumeration value="GMTPLUS0530CHENNAI_KOLKATA_MUMBAI" />
+      <xs:enumeration value="GMTPLUS0530SRIJAYAWARDENEPURA" />
+      <xs:enumeration value="GMTPLUS0545KATHMANDU" />
+      <xs:enumeration value="GMTPLUS0600ALMATY_NOVOSIBIRSK" />
+      <xs:enumeration value="GMTPLUS0600ASTANA_DHAKA" />
+      <xs:enumeration value="GMTPLUS0600DHAKA" />
+      <xs:enumeration value="GMTPLUS0630_YANGON" />
+      <xs:enumeration value="GMTPLUS0700_BANGKOK_HANOI_JAKARTA" />
+      <xs:enumeration value="GMTPLUS0700KRASNOYARSK" />
+      <xs:enumeration value="GMTPLUS0800BEIJING_CHONGQING_HONGKONG" />
+      <xs:enumeration value="GMTPLUS0800IRKUTSK_ULAANBATAAR" />
+      <xs:enumeration value="GMTPLUS0800_ULAANBAATAR" />
+      <xs:enumeration value="GMTPLUS0800KUALALUMPUR_SINGAPORE" />
+      <xs:enumeration value="GMTPLUS0800PERTH" />
+      <xs:enumeration value="GMTPLUS0800TAIPEI" />
+      <xs:enumeration value="GMTPLUS0900OSAKA_SAPPORO_TOKYO" />
+      <xs:enumeration value="GMTPLUS0900SEOUL" />
+      <xs:enumeration value="GMTPLUS0900YAKUTSK" />
+      <xs:enumeration value="GMTPLUS0930ADELAIDE" />
+      <xs:enumeration value="GMTPLUS0930DARWIN" />
+      <xs:enumeration value="GMTPLUS1000BRISBANE" />
+      <xs:enumeration value="GMTPLUS1000CANBERRA_MELBOURNE_SYDNEY" />
+      <xs:enumeration value="GMTPLUS1000GUAM_PORTMORESBY" />
+      <xs:enumeration value="GMTPLUS1000HOBART" />
+      <xs:enumeration value="GMTPLUS1000VLADIVOSTOK" />
+      <xs:enumeration value="GMTPLUS0600MAGADAN" />
+      <xs:enumeration value="GMTPLUS1100MAGADAN_SOLOMONIS" />
+      <xs:enumeration value="GMTPLUS1200AUCKLAND_WELLINGTON" />
+      <xs:enumeration value="GMTPLUS1200FIJI_KAMCHATKA_MARSHALLIS" />
+      <xs:enumeration value="GMTPLUS1300NUKU_ALOFA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_BankStmtISODateTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">DateTime:UTC Date Time fields in the ISO20022 schema.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_BankStmtISONumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number:Numeric (number) fields in the ISO20022 schema. We've taken the maximum text size so as to be able to accommodate fields from non ISO formats as well.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementNameText">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Text fields in the ISO20022 schema. We've taken the maximum text size so as to be able to accommodate fields from non ISO formats as well.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="140" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStmtISOCurrencyCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Currency:Currency-Code fields in the ISO20022 schema.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStmtISODecimal">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Decimals:Decimal fields in the ISO20022 schema.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdType_Decimal">
+    <xs:restriction base="xs:decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_AccountingDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Accounting date:Transaction date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CompanyBankAccountId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Bank account:Bank account number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_BankStatementType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Type:Type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Reconciliation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankIBAN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">IBAN:International bank account number. maximum of 34 alphanumeric characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Statement ID:Unique key, allocated to importing a bank statement if it has not a statement ID specified.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementManual">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Manual:The statement is manually input.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Posted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Posted:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankRegNum">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Routing number:Routing number of the bank.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_BankStatementStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Status:Status</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Validated" />
+      <xs:enumeration value="InMatch" />
+      <xs:enumeration value="Reconciled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SWIFTNo">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">SWIFT code:SWIFT code, also known as BIC (Bank Identifier Code).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementValidatedBy">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Validated by:The user who run and complete the validation.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TransDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Date:Transaction date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Voucher">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Voucher:Voucher number in ledger.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementAmountDrCrIndicator">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Direction:Indicate the balance direction, debit or credit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Credit" />
+      <xs:enumeration value="Debit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_BankStatementBalanceType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Balance type:Balance type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Opening" />
+      <xs:enumeration value="Closing" />
+      <xs:enumeration value="NetAmount" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_AmountCur">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Amount in transaction currency:The amount in the transaction currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ExchRate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Exchange rate:Specify the cost in the foreign currency.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_BankStatementLineStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Status:Status</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Booked" />
+      <xs:enumeration value="Information" />
+      <xs:enumeration value="Pending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_BankStatementBookingDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Booking date:The date that transaction occurred.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_NoYesId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BankStatementReconciled">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reconciled:The statement is fully reconciled.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdType_ExtCodeValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Value:Actual value of the related record according to the selected external code type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_BankStmtISOCurrencyCode_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_BankStmtISOCurrencyCode tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLoyaltyCustId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Loyalty customer:Identification of the loyalty customer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CustName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Customer name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CustAccount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Customer account:Customer account number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLoyaltyCardId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Loyalty card number:Identification of the loyalty card.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLinkType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Link type:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cashier" />
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Contact" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLoyaltySchemeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Scheme ID:Identification of the loyalty scheme id.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLoyaltyTenderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Loyalty card type:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AsCardTender" />
+      <xs:enumeration value="AsContactTender" />
+      <xs:enumeration value="NoTender" />
+      <xs:enumeration value="Blocked" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResCategoryHierarchyName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Category hierarchy name</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_RetailChannelType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Channel type:Channel type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetailStore" />
+      <xs:enumeration value="OnlineStore" />
+      <xs:enumeration value="OnlineMarketplace" />
+      <xs:enumeration value="SharePointOnlineStore" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CurrencyCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Currency:Current currency code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdType_DimensionAttributeValue">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdType_DimensionAttributeValues">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="Value" type="tns:AxdType_DimensionAttributeValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdType_DimensionAttributeValueSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="Values" type="tns:AxdType_DimensionAttributeValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_RetailEventNotificationProfileId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Email notification profile:The field identifies retail Email notification profile</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RelationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Relation type field:Immediate derived table in table inheritance.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Int64" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InterCompanyInventLocationId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Warehouse:Identify the warehouse.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_DirPartyNumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Party ID:Party identification</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_NoYes">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailStoreArea">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Store area:Store area in square footage</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTransactionServiceProfileId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Profile:Real-time Service profile ID</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailStoreId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Store number:Identification of store</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Phone">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Telephone:Telephone number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailFromTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">From:Time of day</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:time">
+      <xs:pattern value="^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}(\.[0-9]+)?([\+\-](0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))?$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailToTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">To:Time of day</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:time">
+      <xs:pattern value="^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}(\.[0-9]+)?([\+\-](0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))?$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailStatementMethod">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Statement method:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Staff" />
+      <xs:enumeration value="Terminal" />
+      <xs:enumeration value="Total" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailOneStatementPerDay">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">One statement per day:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailClosingMethod">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Closing method:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DateTime" />
+      <xs:enumeration value="PosBatch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailMaxDifferenceAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Amount:The amount in the accounting currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailMaxRoundingAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Maximum rounding amount:The amount in the accounting currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailFunctionalityProfileId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Profile:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailCreateLabelsForZeroPrice">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Create labels for zero price:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTenderTypeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Payment method:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTenderDeclarationCalculation">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tender declaration calculation:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LastTender" />
+      <xs:enumeration value="SumTender" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailMaximumTextLengthOnReceipt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Maximum text length on receipt:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailNumberOfTopOrBottomLines">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number of top/bottom lines:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailItemIdOnReceipt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Product number on receipt:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ItemId" />
+      <xs:enumeration value="BarcodeItemId" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailServiceChargePct">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Service charge (%):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailServiceChargePrompt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Service charge prompt:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TaxGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales tax group:A group of sales tax codes for calculating taxes on a sale or purchase</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailReplicationCounter">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Replication counter:Retail scheduler replication counter</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailRoundingTaxAccount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Difference tax account:Account number for posting in ledger.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailMaxRoundingTaxAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Information if tax difference over:The amount in the accounting currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailLayoutId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Screen layout ID:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailGeneratesShelfLabels">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Prints shelf labels:Generates shelf labels for the current store</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailGeneratesItemLabels">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Prints product labels:Generates product labels for the current store</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LanguageId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Language:Select the language for the current text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="7" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailReqPlanIdSched">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Master plan:Identification of plan</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ServerName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Server name:Machine name of server.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailDatabaseName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Database name:Name of database</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailDBUserName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">User name:Name of database user</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailDBPassword">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Password:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailPOItemFilter">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">PO product filter:Only products that have been assigned to the store or the store's store group can be purchased for the store's location.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailConnDistributionGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Distribution group:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailHideTrainingMode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Hide training mode:Disables training mode for all registers in the store.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeOfDay">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:Time of day</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:time">
+      <xs:pattern value="^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}(\.[0-9]+)?([\+\-](0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))?$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailseparateStmtPerStaffTerminal">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Staff/register:Separate statement posting per staff and register?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTaxIdNumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tax identification number (TIN):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventLocationId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Warehouse:Identify the warehouse.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdType_DefaultAccount">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="MainAccount" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_RetailTaxOverrideGroupCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales tax override group:The ID number of the sales tax override group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTerminalId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Register number:Identification of POS terminal</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTerminalName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Description">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Description:Brief description of transaction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTerminalStatement">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Register statement:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_RetailClosingStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Closing" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailManagerKeyOnReturn">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Manager key on return:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailOpenDrawerAtLiLo">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Open drawer at logon/logoff:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailExitAfterEachTransaction">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Exit after each transaction:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailAutoLoggOffTimeout">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Auto logoff timeout (minutes):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailReturnInTransaction">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Return in transaction:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_RetailNoneItemBarcodeItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ItemId" />
+      <xs:enumeration value="BarcodeItem" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailEFTTerminalId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">EFT POS register number:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailTerminalStore">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Receipt setup location:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Terminal" />
+      <xs:enumeration value="Store" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailMaxDisplayTextLength">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Maximum text length:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailCustomerDisplayText">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Customer display text:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailHardwareProfileId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Profile number:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailVisualProfileId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Profile number:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailPrintTaxRefundChecks">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Print tax refund checks:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailReceiptPrintingDefaultOff">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Receipt printing off by default:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailReceiptBarcode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Receipt bar code:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_VendAccount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Vendor account:Vendor account number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailUpdateServicePort">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Update service port:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailIpAddress">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">IP address:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailStandAlone">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Stand alone:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailNumberSequenceGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number sequence group:Group for allocation of different number sequences to different customers/vendors.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailNoneTotalAll">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Slip if return:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Total" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdType_Str_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdType_Str tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdType_Str">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">EmplContractPeriodCurr:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyArrived">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Arrived:Quantity arrived in the item reception</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyAvailOrdered">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Total available:Physical quantity available including ordered minus ordered reservation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyAvailPhysical">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Available physical:Physical quantity available</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventSumClosed">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Closed:Is the on-hand inventory closed, that is with no quantity and value?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyDeducted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Deducted:Quantity that has been physically deducted, but not posted.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventDimId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Dimension No.:Identification of dimensions for the item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_ItemId_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_ItemId tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item number:Identify item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_DateExpected">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Expected date:Date of expected movement</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_DatePhysical">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Physical date:Date of physical transaction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyOnOrder">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">On order:Quantity on order</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyOrdered">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Ordered:Quantity ordered</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsCWInventQty">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">CW quantity:Catch weight quantity.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyPhysicalOnhand">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Physical inventory:Physical quantity available from the inventory</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CostAmountPhysical">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Physical cost amount:Inventory value for the physically updated quantity.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyPicked">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Picked:Quantity that has been picked</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyPosted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Posted quantity:Financially entered quantity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CostAmountPosted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Financial cost amount:Inventory value for the financially updated quantity.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyQuotationIssue">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quotation issue:Quantity in quotation for issue</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyQuotationReceipt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quotation receipt:Quantity of receipts in quotation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyReceived">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Received:Physical quantity received, but not posted</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyRegistered">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Registered:Quantity that has been registered with the item reception</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyReservOrdered">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Ordered reserved:Quantity reserved on quantity ordered</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyReservPhysical">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Physical reserved:Quantity reserved of the physical quantity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ABC">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">ABC code:ABC code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="C" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ConfigIdAlternative">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Alternative configuration:Alternative configuration is used in order entry.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResItemColorName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Color:Descriptive name of color</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResItemSizeName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Size:Descriptive name of size</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResItemStyleName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Style:Descriptive name of style</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemIdAlternative">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Alternative item number:Alternative inventory number is used for order entry.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RAssetMainGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">FA group:identifier of FA group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemAutoReportFinished">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Auto-report as finished:Activate automatic report as finished in connection with transactions for the item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventNumGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number group:Identification of number group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMCalcGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Calculation group:Identification of the calculation group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemBOMLevel">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Level:Calculated BOM level on latest requirement calculation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemBOMManualReceipt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Arrival:Manually enter material profit for this item for a production?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMUnitId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Unit:BOM consumption unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CommissItemGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Commission item group:Identification of commission item group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CostGroupIdDirectMaterial">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Cost group:Identification of the cost group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemCostModel">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Latest cost price:Update the item automatically with latest cost price?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CustomsTariffCode_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tariff code:Enter the tariff code.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_Direction_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Direction:Direction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Import" />
+      <xs:enumeration value="Export" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdEntityKey_CustomsTariffCodeTable_IN">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="TariffCode" type="tns:AxdExtType_CustomsTariffCode_IN" />
+      <xs:element minOccurs="1" name="Direction" type="tns:AxdEnum_Direction_IN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_BOMMeasureDensity">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Density:Measurement conversion factor for the density dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMMeasureDepth">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Depth:Measurement conversion factor for the depth dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EPCManager">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">EPC manager:The EPC manager of the item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ExceptionCode_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Exception code:Fiscal classification exception code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TariffCode_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tariff code:Select the excise tariff code.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EximProductGroup_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Product group:Unique identification of the product group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventFiscalLIFOAvoidCalc">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Avoid LIFO calculation:Exclude items from fiscal LIFO calculation.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventFiscalLIFONormalValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Normal value:Normal value for the group or item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_InventFiscalLIFONormalValueCalc">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Normal value calculation:Normal value calculation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Never" />
+      <xs:enumeration value="Manual" />
+      <xs:enumeration value="Automatic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ForecastDMPInclude">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Demand planning:Include in demand planning.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventDepth">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Depth:Standard depth</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventHeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Height:Standard height</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventWidth">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Width:Standard width</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMMeasureHeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Height:Measurement conversion factor for the height dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ICMSonService_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">ICMS on service:ICMS tax applied on service item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_IntrastatItemCodeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Commodity:Item commodity code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_IntrastatProcId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Statistics procedure:Code for the current statistical procedure.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_IntrastatConvert">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Additional units:Quantity of additional units per inventory unit, used for Intrastat.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventFiscalLIFOGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Fiscal LIFO reporting group:Identification of fiscal LIFO reporting group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventProductTypeId_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Product type:Unique ID to identify the product type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemBuyerGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Buyer group:Identification of the buyer group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemDimCostPrice">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Use cost price by variant:Activate, use, and maintain cost prices for product variants.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPriceToleranceGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item price tolerance group:Identification of item price tolerance group for accounts payable invoice matching</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_RFIDItemTaggingLevel">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item tagging level:Item tagging level</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ItemLevel" />
+      <xs:enumeration value="CaseLevel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ItemType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item type:Item type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Item" />
+      <xs:enumeration value="DEL_BOM" />
+      <xs:enumeration value="Service" />
+      <xs:enumeration value="DEL_Formula" />
+      <xs:enumeration value="DEL_Asset_RU" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_MarkupCodeVend_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Charges code:Identification of the charges</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PurchMatchingPolicyWithNotSetOption">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Line matching policy:Line matching policy</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="ThreeWayMatch" />
+      <xs:enumeration value="TwoWayMatch" />
+      <xs:enumeration value="NoMatch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQty">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quantity:Quantity of the item in inventory unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemNameAlias">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Search name:Find fast name applying to the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemNetWeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Net weight:Net weight of inventory item for one inventory unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_NGP_FR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">NGP:French national item code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LvNRTaxGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Natural resource tax group:Group identifier.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemOrigCountryRegionId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Country/region:Country/region of origin of the current inventory item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemOrigCountyId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">County:County of origin of the current inventory item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemOrigStateId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">State/province:State of origin for the current item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPackagingGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Packing group:Identification of the packing group</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPackingType_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Type of packing:Type of packing in a packing slip.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RFIDPalletTagging">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Pallet tagging:Is pallet tagging mandatory?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAAutostart">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Autostart configuration:Autostart of configuration dialog when entering a modeling enabled item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAHideApproval">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Hide approval dialog:Hide approval dialog after acknowledgement of configuration details</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAHideDialog">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Hide dialog box:Hide dialog for automatic configuration based on default values</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAInventItemGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Product model group:Identification of the item product model group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAItemAutoGenerated">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Autogenerated:Generated item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PBAMandatoryConfig">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Mandatory configuration:Check item lines for complete configuration details</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PDSBaseAttributeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Base attribute:Define the base attributes for the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsLeadTimeBest">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lead time:Best before.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsFreightAllocationGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Freight allocation group:Freight allocation unique ID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsItemRebateGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item rebate group:Group of item for which a rebate is applicable.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PDSPotencyAttribRecordingEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Record the attribute value:Record the attribute value</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PurchProdReceipt" />
+      <xs:enumeration value="Quality" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsLeadTimeAdvice">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lead time:Lead time advice.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PdsLeadTimeLife">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lead time:Lead time life.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PDSTargetFactor">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Target:Target value for the batch attribute selected as the potency base attribute</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PdsVendorCheckItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Approved vendor check method:Approved vendor check method</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoCheck" />
+      <xs:enumeration value="WarningOnly" />
+      <xs:enumeration value="NotAllowed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPhantom">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Phantom:Propose item as phantom item in bills of materials?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PlPKWiUCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">PKWiU:PKWiU code.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PmfPlanningItemId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Planning formula:Default planning formula.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PmfProductType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Production type:Production type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Co_Product" />
+      <xs:enumeration value="By_Product" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="MainItem" />
+      <xs:enumeration value="BOM" />
+      <xs:enumeration value="Formula" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PmfYieldPct">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Yield:Yield percentage of formula lines.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPrimaryVendId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Vendor:Primary vendor for planned purchase order</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ProdFlushingPrincipItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Flushing principle:Flushing principle</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Start" />
+      <xs:enumeration value="Finish" />
+      <xs:enumeration value="Manual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemProdGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Production group:Production group proposed when creating productions for the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemProdPoolId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Production pool:Pool proposed when creating productions for the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResProductDisplayProductNumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Product number:Identification of the product</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="70" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjCategoryId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Category:Category that is used as a default.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PropertyIdItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Property:Necessary property when producing the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemPurchModel">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Latest purchase price:Update the item automatically with latest purchase price?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Coverage group:Identification of the coverage group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PlSADRateCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">SAD group:Code of item group.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemSalesContributionRatio">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Contribution ratio:Contribution ratio to be used when calculating sales price</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemSalesModel">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales price model:Calculate sales price of the item by which model?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Contributionratio" />
+      <xs:enumeration value="PercentMarkup" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemSalesPercentMarkup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Charges percentage:Charges percentage to be used when calculating sales price</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_SalesPriceModelBasic">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Base price:Base price</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PurchPrice" />
+      <xs:enumeration value="CostPrice" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ScrapConst">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Constant scrap:Constant scrap in BOM unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ScrapVar">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Variable scrap:Variable scrap percentage (must be specified as a percent)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ServiceCode_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Service code:Define the service code.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SkipIntraCompanySync_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Disable intracompany synchronization:Disable intracompany synchronization for agreement line.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSSortCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sort code:Sort order of locations.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ConfigIdStandard">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Default configuration:Configuration proposed for item transactions</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_IntrastatMarkupPct">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Charges percentage:Portion of the amount in hundredths</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemTaraWeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tare weight:The tare weight of the item for an inventory unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_FITaxationOrigin_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Taxation origin:Taxation origin</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="National" />
+      <xs:enumeration value="DirectImport" />
+      <xs:enumeration value="Import" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TaxFiscalClassificationId_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Fiscal classification code:Specify the fiscal classification code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TaxPackagingQty">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Packing quantity:Quantity of which packing duty is to be calculated. The quantity is stated per inventory unit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TaxServiceCodeId_BR">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Service code:Fiscal classification applied for services</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemVolume">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Volume:Volume in cubic meters of an inventory unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemUseAlternative">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Use alternative:When should alternative item number be used?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Never" />
+      <xs:enumeration value="InventWhen0" />
+      <xs:enumeration value="Always" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMMeasureWidth">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Width:Factor for the measurement dimension width.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSArrivalHandlingTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Arrival handling time:Time used to arrival update per inventory standard order quantity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:time">
+      <xs:pattern value="^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}(\.[0-9]+)?([\+\-](0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))?$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSPalletTypeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Pallet type:Description of the bearer</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeHour24">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:Time of day</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:time">
+      <xs:pattern value="^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}(\.[0-9]+)?([\+\-](0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]))?$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ModuleInventPurchSales">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Module type:Module type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invent" />
+      <xs:enumeration value="Purch" />
+      <xs:enumeration value="Sales" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Price">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Price:Run-dependent price per unit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_UnitOfMeasureSymbol">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Unit:Unit symbol</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceAuthorization">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Firming time fence:Period in days from today's date, where planned orders are to be firmed automatically.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CalendarDays">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Working days:Are days specified in the working days calendar?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceCapacity">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Capacity time fence:Period, in number of days from today's date, where the planned BOM is to be capacity-scheduled.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqCovInventDimId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Dimension No.:Identify the inventory dimensions that the item is coverage planned to.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqCovPeriod">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Coverage period:Coverage period in days used when master scheduling according to the method Period.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqCovRule">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Coverage code:How should item be coverage planned when requirement calculation is made?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Period" />
+      <xs:enumeration value="Req" />
+      <xs:enumeration value="MinMax" />
+      <xs:enumeration value="Manual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceCoverage">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Coverage time fence:Period, in number of days from today's date, until which inventory is coverage planned.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceExplosion">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Explosion time fence:Period, in number of days from today's date, where planned BOM is to be exploded.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventLocationIdReqMain">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Main warehouse:Identify the warehouse.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LeadTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lead time:Lead time in days.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LeadTimeTransfer">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Transfer time:General procurement time in days when transferring the item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceLocking">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Freeze time fence:Period, in number of days from today's date, during which created planned orders may not be changed.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyMaxOnhand">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Maximum:Maximum on-hand, applying to the item when master scheduling according to Min./Max.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqMaxNegativeDays">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Negative days:Maximum number of days that inventory may have negative coverage.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqMaxPositiveDays">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Positive days:Maximum number of days that inventory may have positive coverage.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqSafetyKeyId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Min./Max. key:Identification of minimum/maximum key</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyMinOnhand">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Minimum:Minimum on-hand, safety stock applying to the item when master scheduling</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ReqMinSafetyPeriod">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Minimum periods:Should the safety stock be fulfilled in all the periods defined by the minimum key, or only once?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ReqMinSatisfy">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Fulfill minimum:Fulfill minimum</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TodaysDate" />
+      <xs:enumeration value="TodaysDateTime" />
+      <xs:enumeration value="FirstIssue" />
+      <xs:enumeration value="TimeFenceDate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_PmfPlanningItemId_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_PmfPlanningItemId tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PmfPlanPriorityCurrent">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Current priority:Current master planning priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PmfPlanPriorityDateChanged">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Date changed:The date the priority was changed.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PmfPlanPriorityDefault">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Default priority:Master planning default priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ReqPOType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Planned order type:Planned order type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Purch" />
+      <xs:enumeration value="Production" />
+      <xs:enumeration value="Transfer" />
+      <xs:enumeration value="Kanban" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TimeFenceBackRequisition">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Approved requisitions:Number of days in the past, during which demand from approved requisitions is included in master scheduling</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_VendAccount_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_VendAccount tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResCategoryName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Category name</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="254" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdEntityKey_EcoResCategory">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="Name" type="tns:AxdExtType_EcoResCategoryName" />
+      <xs:element minOccurs="1" name="CategoryHierarchy_Name" type="tns:AxdExtType_EcoResCategoryHierarchyName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_JournalBlockUserGroupId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Private for user group:User group that the journal is private to.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalDeletePostedLines">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Delete lines after posting:Delete journal lines when posting is completed?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalDescription">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Description:Description of the journal.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalDetailSummary">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Detail level:Specify summation level</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Detail" />
+      <xs:enumeration value="Summary" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailInventJournalTagSeqId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Tag series:Tag series to be used in journals with the journal name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PlInventDocType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Inventory document type:Inventory document type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="empty" />
+      <xs:enumeration value="PW" />
+      <xs:enumeration value="RW" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventJournalNameId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Identification of the journal name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_InventJournalType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Journal type:Journal type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Movement" />
+      <xs:enumeration value="LossProfit" />
+      <xs:enumeration value="Transfer" />
+      <xs:enumeration value="BOM" />
+      <xs:enumeration value="Count" />
+      <xs:enumeration value="project" />
+      <xs:enumeration value="TagCounting" />
+      <xs:enumeration value="Asset" />
+      <xs:enumeration value="PlExternalTransfer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ItemReservation">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reservation:Reservation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Automatic" />
+      <xs:enumeration value="Explosion" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_InventJournalVoucherChange">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">New voucher by:New voucher by</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DateChange" />
+      <xs:enumeration value="DateItemChange" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_JournalVoucherDraw">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Selection by:Selection by</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entering" />
+      <xs:enumeration value="Post" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_NumberSequenceCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number sequence code:Current number sequence code to be used with references.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SelectableDataArea">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Company:ID for the company you can select</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_FiscalCalendarID">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Calendar:Enter a name for the calendar</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_FiscalYearName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Fiscal year:Name of the fiscal year, which you specify when you create a new fiscal year</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PeriodName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Period name:Specify a name for the period, for example, January, Period 01, Close-internal, or Close-external</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdEntityKey_NumberSequenceTable">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="NumberSequence" type="tns:AxdExtType_NumberSequenceCode" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_DataArea" nillable="true" type="tns:AxdExtType_SelectableDataArea" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_LegalEntity_DataArea" nillable="true" type="tns:AxdExtType_SelectableDataArea" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_OperatingUnit_PartyNumber" nillable="true" type="tns:AxdExtType_DirPartyNumber" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_FiscalCalendarPeriod_FiscalCalendarYear_FiscalCalendar_CalendarId" nillable="true" type="tns:AxdExtType_FiscalCalendarID" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_FiscalCalendarPeriod_FiscalCalendarYear_Name" nillable="true" type="tns:AxdExtType_FiscalYearName" />
+      <xs:element minOccurs="0" name="NumberSequenceScope_FiscalCalendarPeriod_Name" nillable="true" type="tns:AxdExtType_PeriodName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_JournalBlockUserId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Private for user:User that the journal is private to.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventDimFixed">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Mandatory dimensions:Dimensions selected by the user.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PurchInventLocationId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Warehouse:Identify the warehouse.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventSiteId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Site:Identify the site</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventJournalId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Journal:Identification of the journal.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventJournalIdOrignal">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Original journal No.:Journal number that the lines are transferred from.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalNumOfLines">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lines:Number of journal lines.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalPosted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Posted:Has the journal been posted?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_JournalPostedDateTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Posted on:Date the journal was posted.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_JournalPostedUserId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Posted by:User who posted the journal.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProdId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Production:Identify the production order.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailRetailStatusType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Retail status type:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Sent" />
+      <xs:enumeration value="PartReceipt" />
+      <xs:enumeration value="ClosedOk" />
+      <xs:enumeration value="ClosedDifference" />
+      <xs:enumeration value="Canceled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalSessionId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Session ID:ID for the current session.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_JournalSessionLoginDateTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Logon time:Date and time.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_InventJournalSource">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Inventory journal source:Source of inventory journal creation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Storno_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Storno:Correction +/- (Debit/Credit) to transaction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalSystemBlocked">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Locked by system:Is journal locked by system?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_HcmPersonnelNumberId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Personnel number:The personnel number for the worker</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CostAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Cost amount:Cost value for quantity.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CostMarkup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Charges on cost:Fixed charges on cost price, which are independent of quantity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemCostPrice">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Cost price:Item cost price used for posting</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventRefId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reference number:Number of the order, project, production, or purchase referred to</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventRefTransId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reference lot:Lot ID referred to.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_InventRefType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Reference type:Reference type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Sales" />
+      <xs:enumeration value="Purch" />
+      <xs:enumeration value="Production" />
+      <xs:enumeration value="ProdLine" />
+      <xs:enumeration value="InventJournal" />
+      <xs:enumeration value="CRMQuotation" />
+      <xs:enumeration value="InventTransfer" />
+      <xs:enumeration value="FixedAsset" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventTransId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Lot ID:Identification of the item lot.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventTransIdReturn">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Return lot ID:Lot ID for items being returned</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_ItemIdInventoried_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_ItemIdInventoried tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemIdInventoried">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item number:Identify item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LineNum">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Line number:Identification of line.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PriceUnit">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Price unit:Number of units the price is specified in.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyJournal">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quantity:Quantity to be posted</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JournalTransDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Date:Transaction date applying to the journal line.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_EcoResItemConfigurationName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Configuration:Descriptive name of configuration</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventBatchId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Batch number:Batch dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventGTDId_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">GTD number:Customs declaration number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventOwnerId_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Owner:Inventory owner.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventProfileId_RU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Inventory profile:Inventory profile.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventSerialId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Serial number:Serial number dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSLocationId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Location:Location in a warehouse.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSPalletId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Pallet ID:Unique ID for the pallet (Serial Shipping Container Code)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="18" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_WMSCheckText">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Check text:Check text for location.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Integer">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Integer:Integer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_NoYesCombo">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RAssetId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">FA inventory number:Unique key for identification of fixed asset. The key is used when creating new assets.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_AttendanceStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="LateComing" />
+      <xs:enumeration value="EarlyGoing" />
+      <xs:enumeration value="LateAndEarly" />
+      <xs:enumeration value="Absent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PMWorkOrderID">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Work Order Id:Select any Processing Option to proceed.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjActivityNumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Activity number:The activity number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_AssetBookIdPurchSalesInvent">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Value model:Value model related to the current transaction.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_AssetId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Fixed asset number:Unique key for identification of fixed asset. The key is used when creating new assets.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_AssetTransTypeJournal">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Transaction type:Transaction type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Acquisition" />
+      <xs:enumeration value="AcquisitionAdj" />
+      <xs:enumeration value="Depreciation" />
+      <xs:enumeration value="DepreciationAdj" />
+      <xs:enumeration value="Revaluation" />
+      <xs:enumeration value="WriteUpAdj" />
+      <xs:enumeration value="WriteDownAdj" />
+      <xs:enumeration value="DisposalSale" />
+      <xs:enumeration value="DisposalScrap" />
+      <xs:enumeration value="CapitalReserve" />
+      <xs:enumeration value="CapitalReserveTransfer" />
+      <xs:enumeration value="ExtraordinaryDepreciation" />
+      <xs:enumeration value="DerogatoryIncrease" />
+      <xs:enumeration value="DerogatoryDecrease" />
+      <xs:enumeration value="BonusDepreciation_IN" />
+      <xs:enumeration value="Preacquisition_CZ" />
+      <xs:enumeration value="NotCostAllocatedPart_PL" />
+      <xs:enumeration value="AccumulatedDepreciation_PL" />
+      <xs:enumeration value="PostingOffAccDepreciation_PL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_BOMLine">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">BOM line:Is the transaction a BOM line?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyCounted">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quantity counted:Quantity counted when counting the on-hand inventory</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ExciseRecordType_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Excise record type:Excise record type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="RG23A" />
+      <xs:enumeration value="RG23C" />
+      <xs:enumeration value="RG23D" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ExciseType_IN">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Excise type:Excise type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Manufacturer" />
+      <xs:enumeration value="Trader" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_IntrastatFulfillmentDate_HU">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Intrastat fulfillment date:Date of Intrastat fulfillment.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventQtyOnHand">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">On-hand:Physical on-hand inventory of the item</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdType_LedgerAccount">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="DisplayValue" type="xs:string" />
+      <xs:element minOccurs="1" name="MainAccount" type="xs:string" />
+      <xs:element minOccurs="0" name="Values" nillable="true" type="tns:AxdType_DimensionAttributeValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_PdsCopyBatchAttrib">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Copy batch attributes:Copy batch attributes from 'from' batch to 'to' batch?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LogisticsLocationId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Location ID:ID for location</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_EffectiveDateTime">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Effective::The effective date and time for record</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AxdEntityKey_LogisticsPostalAddress">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="Location_LocationId" type="tns:AxdExtType_LogisticsLocationId" />
+      <xs:element minOccurs="1" name="ValidFrom" type="tns:AxdExtType_EffectiveDateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AxdEnum_CostProfitSet">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Profit-setting:Profit-setting</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Profit1" />
+      <xs:enumeration value="Profit2" />
+      <xs:enumeration value="Profit3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Project ID:Project identification</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjLinePropertyId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Line property:Attribute that defines cost and sales percentages and options for revenue accrual and capitalization cost</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_ProjSalesCurrencyCode_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_ProjSalesCurrencyCode tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjSalesCurrencyCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales currency:Currency in which the project is invoiced.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjSalesPriceCost">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales price:Sales price per unit calculated in the current sales currency.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjTaxGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales tax group:A group of sales tax codes for calculating taxes on a sale or purchase</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjTaxItemGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item sales tax group:Group of sales tax codes that can be calculated for an item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ProjItemTransId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Transaction ID:Identification of transaction.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_UnitOfMeasureSymbol_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_UnitOfMeasureSymbol tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_PostReleaseDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Release date:The date that the transaction can be posted. If the field is blank, the transaction can be posted immediately.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_ReqPOId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Number:Number identifying the planned order</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales amount:The total of sales price multiplied by quantity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PurchReturnActionId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Return action:What should happen with the returned items?</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_Shift">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Shift Code:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_InventTransIdTo">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Receive lot ID:Identification of the receive lot.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_LogisticsLocationRecId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Location:Reference field in a different table</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Int64" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesShippingDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Ship date:Confirmed ship date if exists, otherwise requested ship date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_CustDlvModeId_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_CustDlvModeId tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_CustDlvModeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Mode of delivery:The means by which the order will be delivered</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesIdBase">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales order:Identification of the order.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Name:Describe the order</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_SalesStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Status:Status</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Backorder" />
+      <xs:enumeration value="Delivered" />
+      <xs:enumeration value="Invoiced" />
+      <xs:enumeration value="Canceled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_SalesType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Order type:Order type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Journal" />
+      <xs:enumeration value="DEL_Quotation" />
+      <xs:enumeration value="Subscription" />
+      <xs:enumeration value="Sales" />
+      <xs:enumeration value="ReturnItem" />
+      <xs:enumeration value="DEL_Blanket" />
+      <xs:enumeration value="ItemReq" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_DiscAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Cash discount amount:The amount in the transaction currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_MarkupAmount">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Charges amount:The amount in the transaction currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_TaxAmountCur">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales tax amount:Calculated sales tax amount in the sales tax settlement currency</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesQty">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Sales quantity:Number of sales units.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_ItemIdSmall_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_ItemIdSmall tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemIdSmall">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Item number:Identify item.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ItemFreeTxt">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Text:Standard item description.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_RetailCategory">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Retail category:Category identifier</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Int64" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesOrderedQty">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Quantity:Quantity ordered in the sales unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="tns:AxdType_Decimal">
+      <xs:fractionDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdUnion_AxdExtType_SalesUnit_AxdType_ExtCodeValue">
+    <xs:union memberTypes="tns:AxdExtType_SalesUnit tns:AxdType_ExtCodeValue" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_SalesUnit">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Unit:Unit the item is sold in.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_AxdValidTimeStateType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AsOf" />
+      <xs:enumeration value="Range" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ValidTimeStateUpdate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CreateNewTimePeriod" />
+      <xs:enumeration value="Correction" />
+      <xs:enumeration value="EffectiveBased" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_HCMEEOEstablishmentName">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">EEO establishment:The name of the EEO establishment</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_HcmEmploymentType">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Worker type:Worker type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Employee" />
+      <xs:enumeration value="Contractor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AxdExtType_HcmEmploymentValidFrom">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Employment start date:Start date of the worker employment</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AxdExtType_HcmEmploymentValidTo">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Employment end date:End date of worker employment</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="tns:AxdType_DateTime" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AxdExtType_PRBenDedRuleCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Benefit/Deduction Rules:Benefit/Deduction Rules</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PREarningRuleCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Earning Rule:Earning Rule</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_JmgDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Date:Criterion - date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ContractEndDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">End Date:Transaction date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_ContractPeriod">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OneYear" />
+      <xs:enumeration value="TwoYear" />
+      <xs:enumeration value="ThreeYear" />
+      <xs:enumeration value="FourYear" />
+      <xs:enumeration value="FiveYear" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ContractStartDate">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Start Date:Transaction date</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ContractTypes">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Types:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_OMOperatingUnitNumber">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Organization number:A unique alphanumeric identifier for the organization</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_ContractFamilyStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_HcmCompensationLevelId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Level:Identification of the compensation grade, band, or step</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PREmployeeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Employee:Employee</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_HrmDescription">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Description:Brief description of transaction</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_HcmPositionId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Position:Unique identification of position</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PREntitlementCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Entitlement Code:Entitlement Code</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PREntitlementRuleCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Entitlement Rule:Entitlement Rule</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_MedicalClass">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="C" />
+      <xs:enumeration value="VIP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdEnum_PersonnelStatusChangeApproval">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Approval Status:Approval Status</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Created" />
+      <xs:enumeration value="Submitted" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Cancelled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxdExtType_PersonnelStatusChangeId">
+    <xs:annotation>
+      <xs:documentation xml:lang="EN-US">Personnel Status Change #:Personnel Status Change Reference Number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="16" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

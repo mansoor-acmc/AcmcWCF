@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EAMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_WorkItemsService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_WorkItemsService" type="i0:WorkItemsService">
+    <wsp:PolicyReference URI="#NetTcpBinding_WorkItemsService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="DeleteWorkItem">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/DeleteWorkItem" style="document" />
+      <wsdl:input name="WorkItemsServiceDeleteWorkItemRequest">
+        <soap12:header message="i0:WorkItemsServiceDeleteWorkItemRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceDeleteWorkItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipLocations">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetEquipLocations" style="document" />
+      <wsdl:input name="WorkItemsServiceGetEquipLocationsRequest">
+        <soap12:header message="i0:WorkItemsServiceGetEquipLocationsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetEquipLocationsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepaireCodes">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetRepaireCodes" style="document" />
+      <wsdl:input name="WorkItemsServiceGetRepaireCodesRequest">
+        <soap12:header message="i0:WorkItemsServiceGetRepaireCodesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetRepaireCodesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEquipments">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetAllEquipments" style="document" />
+      <wsdl:input name="WorkItemsServiceGetAllEquipmentsRequest">
+        <soap12:header message="i0:WorkItemsServiceGetAllEquipmentsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetAllEquipmentsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/find" style="document" />
+      <wsdl:input name="WorkItemsServiceFindRequest">
+        <soap12:header message="i0:WorkItemsServiceFindRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceFindResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipment">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetEquipment" style="document" />
+      <wsdl:input name="WorkItemsServiceGetEquipmentRequest">
+        <soap12:header message="i0:WorkItemsServiceGetEquipmentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetEquipmentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFailureCodes">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetFailureCodes" style="document" />
+      <wsdl:input name="WorkItemsServiceGetFailureCodesRequest">
+        <soap12:header message="i0:WorkItemsServiceGetFailureCodesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetFailureCodesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInlineWorkItems">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetInlineWorkItems" style="document" />
+      <wsdl:input name="WorkItemsServiceGetInlineWorkItemsRequest">
+        <soap12:header message="i0:WorkItemsServiceGetInlineWorkItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetInlineWorkItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/delete" style="document" />
+      <wsdl:input name="WorkItemsServiceDeleteRequest">
+        <soap12:header message="i0:WorkItemsServiceDeleteRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceDeleteResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/create" style="document" />
+      <wsdl:input name="WorkItemsServiceCreateRequest">
+        <soap12:header message="i0:WorkItemsServiceCreateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceCreateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdate">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/CreateOrUpdate" style="document" />
+      <wsdl:input name="WorkItemsServiceCreateOrUpdateRequest">
+        <soap12:header message="i0:WorkItemsServiceCreateOrUpdateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceCreateOrUpdateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/getMaxId" style="document" />
+      <wsdl:input name="WorkItemsServiceGetMaxIdRequest">
+        <soap12:header message="i0:WorkItemsServiceGetMaxIdRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetMaxIdResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOPoolCode">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetWOPoolCode" style="document" />
+      <wsdl:input name="WorkItemsServiceGetWOPoolCodeRequest">
+        <soap12:header message="i0:WorkItemsServiceGetWOPoolCodeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetWOPoolCodeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestWorkorder">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetLatestWorkorder" style="document" />
+      <wsdl:input name="WorkItemsServiceGetLatestWorkorderRequest">
+        <soap12:header message="i0:WorkItemsServiceGetLatestWorkorderRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetLatestWorkorderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/read" style="document" />
+      <wsdl:input name="WorkItemsServiceReadRequest">
+        <soap12:header message="i0:WorkItemsServiceReadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceReadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderTypes">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypes" style="document" />
+      <wsdl:input name="WorkItemsServiceGetWorkOrderTypesRequest">
+        <soap12:header message="i0:WorkItemsServiceGetWorkOrderTypesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetWorkOrderTypesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetWOStatus">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/SetWOStatus" style="document" />
+      <wsdl:input name="WorkItemsServiceSetWOStatusRequest">
+        <soap12:header message="i0:WorkItemsServiceSetWOStatusRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceSetWOStatusResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MainCostByProdLine">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/MainCostByProdLine" style="document" />
+      <wsdl:input name="WorkItemsServiceMainCostByProdLineRequest">
+        <soap12:header message="i0:WorkItemsServiceMainCostByProdLineRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceMainCostByProdLineResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/update" style="document" />
+      <wsdl:input name="WorkItemsServiceUpdateRequest">
+        <soap12:header message="i0:WorkItemsServiceUpdateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceUpdateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PostedWorkItems">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/PostedWorkItems" style="document" />
+      <wsdl:input name="WorkItemsServicePostedWorkItemsRequest">
+        <soap12:header message="i0:WorkItemsServicePostedWorkItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServicePostedWorkItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherWorkItems">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/GetOtherWorkItems" style="document" />
+      <wsdl:input name="WorkItemsServiceGetOtherWorkItemsRequest">
+        <soap12:header message="i0:WorkItemsServiceGetOtherWorkItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceGetOtherWorkItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkOrder">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/SaveWorkOrder" style="document" />
+      <wsdl:input name="WorkItemsServiceSaveWorkOrderRequest">
+        <soap12:header message="i0:WorkItemsServiceSaveWorkOrderRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceSaveWorkOrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEquipments">
+      <soap12:operation soapAction="http://tempuri.org/WorkItemsService/SearchEquipments" style="document" />
+      <wsdl:input name="WorkItemsServiceSearchEquipmentsRequest">
+        <soap12:header message="i0:WorkItemsServiceSearchEquipmentsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WorkItemsServiceSearchEquipmentsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EAMServices">
+    <wsdl:port name="NetTcpBinding_WorkItemsService" binding="tns:NetTcpBinding_WorkItemsService">
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/EAMServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/EAMServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>AX2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

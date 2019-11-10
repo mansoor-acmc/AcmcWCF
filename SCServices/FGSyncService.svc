@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SyncServices.FGSyncService" CodeBehind="FGSyncService.svc.cs" %>

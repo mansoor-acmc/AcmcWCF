@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="801e551c-3949-4959-95fd-420fe9fcabdb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58380/DMCheckService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DMCheckService.xsd" MetadataType="Schema" ID="eff46e4f-9a91-48b2-8ff4-cb77773f26d0" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DMCheckService1.xsd" MetadataType="Schema" ID="e32ae6b2-05e0-427e-a3a8-ca324f360e0c" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DMCheckService.wsdl" MetadataType="Wsdl" ID="d13b37fa-d55f-4a17-9fc9-154d51c2b927" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?wsdl" />
+    <MetadataFile FileName="DMCheckService2.xsd" MetadataType="Schema" ID="9b2439d2-893e-4a41-a5cf-900caddc663f" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DMCheckService3.xsd" MetadataType="Schema" ID="e0b3cdd3-2ec5-4fb4-b4a2-766413bc905e" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DMCheckService4.xsd" MetadataType="Schema" ID="7001297e-9ec5-48de-ab71-e429fd6ebf72" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DMCheckService5.xsd" MetadataType="Schema" ID="2a05a3f3-c489-47f3-b1c4-7e80a3322049" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DMCheckService.disco" MetadataType="Disco" ID="745b0609-9266-4a08-b22a-34419896acdf" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

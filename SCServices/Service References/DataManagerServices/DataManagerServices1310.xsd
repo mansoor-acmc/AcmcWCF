@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave" xmlns:st="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd5" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+  <xs:element name="DMDataToSave" type="tns:AxdDMDataToSave" />
+  <xs:complexType name="AxdDMDataToSave">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearNilFieldsOnUpdate" nillable="true" type="st:AxdEnum_boolean" />
+      <xs:element minOccurs="0" name="DocPurpose" nillable="true" type="st:AxdEnum_XMLDocPurpose" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="st:AxdExtType_DataAreaId" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportData" type="tns:AxdEntity_DMExportData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_DMExportData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_DocumentHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
+      <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:date" />
+      <xs:element minOccurs="0" name="ExportFieldID" nillable="true" type="st:AxdType_Integer" />
+      <xs:element minOccurs="0" name="FieldValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute fixed="entity" name="class" use="required" />
+    <xs:attribute name="action" type="st:AxdEnum_AxdEntityAction" />
+  </xs:complexType>
+</xs:schema>
