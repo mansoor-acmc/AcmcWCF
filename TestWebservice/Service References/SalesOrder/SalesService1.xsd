@@ -26,4 +26,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+  <xs:complexType name="ArrayOfCustomerDeliveryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerDeliveryContract" nillable="true" type="tns:ArrayOfCustomerDeliveryContract" />
+  <xs:complexType name="CustomerDeliveryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="customerAccountField" nillable="true" type="xs:string" />
+          <xs:element name="customerNameField" nillable="true" type="xs:string" />
+          <xs:element name="packingSlipNumField" nillable="true" type="xs:string" />
+          <xs:element name="quantityField" type="xs:decimal" />
+          <xs:element name="quantityFieldSpecified" type="xs:boolean" />
+          <xs:element name="trucksField" type="xs:int" />
+          <xs:element name="trucksFieldSpecified" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
 </xs:schema>

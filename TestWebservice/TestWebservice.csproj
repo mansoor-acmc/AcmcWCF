@@ -246,6 +246,9 @@
     <None Include="Service References\SalesOrder\SalesService43.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.CustomerDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesLine.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

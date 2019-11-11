@@ -47,5 +47,8 @@ namespace SyncServices
 
         [OperationContract]
         string GetPing();
+
+        [OperationContract]
+        SalesTable ReceivePickingList(string userName, string device);
     }
 }

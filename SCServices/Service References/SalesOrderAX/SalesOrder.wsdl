@@ -29,63 +29,11 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="http://tempuri.org" location="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?wsdl=wsdl0" />
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-axr3-dev:8101/DynamicsAx/Services/SalesOrder?wsdl=wsdl0" />
   <wsdl:types />
   <wsdl:binding name="NetTcpBinding_SOPickService" type="i0:SOPickService">
     <wsp:PolicyReference URI="#NetTcpBinding_SOPickService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="findSalesOrder">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/findSalesOrder" style="document" />
-      <wsdl:input name="SOPickServiceFindSalesOrderRequest">
-        <soap12:header message="i0:SOPickServiceFindSalesOrderRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceFindSalesOrderResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetLatestPallets">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/GetLatestPallets" style="document" />
-      <wsdl:input name="SOPickServiceGetLatestPalletsRequest">
-        <soap12:header message="i0:SOPickServiceGetLatestPalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceGetLatestPalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="UnreservePallet">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/UnreservePallet" style="document" />
-      <wsdl:input name="SOPickServiceUnreservePalletRequest">
-        <soap12:header message="i0:SOPickServiceUnreservePalletRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceUnreservePalletResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="read">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/read" style="document" />
-      <wsdl:input name="SOPickServiceReadRequest">
-        <soap12:header message="i0:SOPickServiceReadRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceReadResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
     <wsdl:operation name="SaveHistory">
       <soap12:operation soapAction="http://tempuri.org/SOPickService/SaveHistory" style="document" />
       <wsdl:input name="SOPickServiceSaveHistoryRequest">
@@ -93,32 +41,6 @@
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output name="SOPickServiceSaveHistoryResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ReservePallets">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/ReservePallets" style="document" />
-      <wsdl:input name="SOPickServiceReservePalletsRequest">
-        <soap12:header message="i0:SOPickServiceReservePalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceReservePalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="SavePickingLoad">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/SavePickingLoad" style="document" />
-      <wsdl:input name="SOPickServiceSavePickingLoadRequest">
-        <soap12:header message="i0:SOPickServiceSavePickingLoadRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceSavePickingLoadResponse">
         <soap12:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="AifFaultFault">
@@ -138,6 +60,84 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="findPickingList">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/findPickingList" style="document" />
+      <wsdl:input name="SOPickServiceFindPickingListRequest">
+        <soap12:header message="i0:SOPickServiceFindPickingListRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceFindPickingListResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReservePallets">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/ReservePallets" style="document" />
+      <wsdl:input name="SOPickServiceReservePalletsRequest">
+        <soap12:header message="i0:SOPickServiceReservePalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceReservePalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UnreservePallet">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/UnreservePallet" style="document" />
+      <wsdl:input name="SOPickServiceUnreservePalletRequest">
+        <soap12:header message="i0:SOPickServiceUnreservePalletRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceUnreservePalletResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestPallets">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/GetLatestPallets" style="document" />
+      <wsdl:input name="SOPickServiceGetLatestPalletsRequest">
+        <soap12:header message="i0:SOPickServiceGetLatestPalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceGetLatestPalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePickingLoad">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/SavePickingLoad" style="document" />
+      <wsdl:input name="SOPickServiceSavePickingLoadRequest">
+        <soap12:header message="i0:SOPickServiceSavePickingLoadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceSavePickingLoadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findSalesOrder">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/findSalesOrder" style="document" />
+      <wsdl:input name="SOPickServiceFindSalesOrderRequest">
+        <soap12:header message="i0:SOPickServiceFindSalesOrderRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceFindSalesOrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="CustomersDeliveryByTrucks">
       <soap12:operation soapAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks" style="document" />
       <wsdl:input name="SOPickServiceCustomersDeliveryByTrucksRequest">
@@ -145,6 +145,45 @@
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output name="SOPickServiceCustomersDeliveryByTrucksResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/find" style="document" />
+      <wsdl:input name="SOPickServiceFindRequest">
+        <soap12:header message="i0:SOPickServiceFindRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceFindResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/read" style="document" />
+      <wsdl:input name="SOPickServiceReadRequest">
+        <soap12:header message="i0:SOPickServiceReadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceReadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePickingList">
+      <soap12:operation soapAction="http://tempuri.org/SOPickService/ReceivePickingList" style="document" />
+      <wsdl:input name="SOPickServiceReceivePickingListRequest">
+        <soap12:header message="i0:SOPickServiceReceivePickingListRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SOPickServiceReceivePickingListResponse">
         <soap12:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="AifFaultFault">
@@ -177,40 +216,14 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="findPickingList">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/findPickingList" style="document" />
-      <wsdl:input name="SOPickServiceFindPickingListRequest">
-        <soap12:header message="i0:SOPickServiceFindPickingListRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceFindPickingListResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="find">
-      <soap12:operation soapAction="http://tempuri.org/SOPickService/find" style="document" />
-      <wsdl:input name="SOPickServiceFindRequest">
-        <soap12:header message="i0:SOPickServiceFindRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SOPickServiceFindResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="SalesOrder">
     <wsdl:port name="NetTcpBinding_SOPickService" binding="tns:NetTcpBinding_SOPickService">
-      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesOrder" />
+      <soap12:address location="net.tcp://fac-axr3-dev:8201/DynamicsAx/Services/SalesOrder" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesOrder</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-axr3-dev:8201/DynamicsAx/Services/SalesOrder</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>AX2@kabholding.com</Upn>
+          <Upn>ax2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

@@ -443,6 +443,98 @@ namespace SyncServices
             return client.CustomersDeliveryByTrucks(context, startDate, endDate);
         }
 
+        public SalesTable ReceivePickingList(string userName, string device)
+        {
+            string pickingId=string.Empty;
+            SalesTableContract contract = null;
+            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            try
+            {
+                contract = client.ReceivePickingList(context, userName, device);
+            }
+            catch (System.ServiceModel.FaultException<AifFault> aifExp)
+            {
+                string allMsgs = string.Empty;
+                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                foreach (InfologMessage msg in msgs)
+                {
+                    allMsgs += msg.Message + Environment.NewLine;
+                }
+
+                if (!string.IsNullOrEmpty(allMsgs))
+                {
+                    string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
+
+                    throw new Exception(allMsgs);
+                }
+            }
+            catch (Exception exp)
+            {
+                try
+                {
+                    string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
+                }
+                catch { }
+                throw exp;
+            }
+            finally
+            {
+                PickHistoryContract history = new PickHistoryContract()
+                {
+                    PickingId = pickingId,
+                    UpdatedByUser = userName,
+                    UpdatedDateTime = DateTime.Now,
+                    UpdatedDateTimeSpecified = true,
+                    UpdateStatus = PalletStatus.PickingList,
+                    UpdateStatusSpecified = true,
+                    DeviceName = device,
+                    Remarks = "Searching Picking List for: " + pickingId,
+                    PalletNo = string.Empty
+                };
+                client.SaveHistory(new CallContext()
+                {
+                    MessageId = Guid.NewGuid().ToString(),
+                    Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+                }, history);
+
+                client.Close();
+            }
+            SalesTable salesTable = new SalesTable()
+            {
+                SalesId = contract.SalesId,
+                SalesName = contract.SalesName,
+                DriverName = contract.DriverName,
+                TruckPlate = contract.TruckPlate,
+                DeliveryDate = contract.DeliveryDate,
+                DeliveryMode = contract.DeliveryMode,
+                DeliveryName = contract.DeliveryName,
+                HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
+                PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
+                StartLoading = contract.StartLoad,
+                StopLoading = contract.StopLoad
+            };
+
+            salesTable.Lines = new List<SalesLine>();
+            if (contract.SalesLines.Count() > 0)
+            {
+                foreach (SalesLineContract axdline in contract.SalesLines)
+                {
+                    salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
+                }
+            }
+
+            return salesTable;
+        }
+
+
         public string GetPing()
         {
             //save the Ping into database. so that we know that network is available or not

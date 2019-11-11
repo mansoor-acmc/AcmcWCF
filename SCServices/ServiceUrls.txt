@@ -1,3 +1,16 @@
-﻿http://FAC-PROD-AX03:8101/DynamicsAx/Services/SalesOrder
+﻿http://FAC-PROD-AX03:8101/DynamicsAx/Services/AttendanceServices
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/DataManagerServices
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/DMMobileServiceGroup
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/EAMServices
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/ImportFromWMSServices
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/InventCountingServiceGroup
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/JournalMovementServices
+http://FAC-PROD-AX03:8101/DynamicsAx/Services/SalesOrder
 
-http://FAC-STAGE-AX04:8101/DynamicsAx/Services/SalesOrder
+
+
+
+Development:
+http://FAC-AXR3-DEV:8101/DynamicsAx/Services/DataManagerServices
+http://FAC-AXR3-DEV:8101/DynamicsAx/Services/DMMobileServiceGroup
+http://FAC-AXR3-DEV:8101/DynamicsAx/Services/SalesOrder

@@ -24,6 +24,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -130,47 +132,47 @@
     <None Include="Service References\Attendance\SyncServices.Attendance.EntityKey.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices13.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServices.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices131.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices1.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServices1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices1310.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices1311.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices1312.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices132.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices133.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices134.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices135.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices136.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices137.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices138.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices139.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServices9.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServices2.wsdl" />
-    <None Include="Service References\DataManagerServices\DataManagerServices21.wsdl" />
     <None Include="Service References\DataManagerServices\SyncServices.DataManagerServices.DMExportContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -347,50 +349,50 @@
     <None Include="Service References\InventCountingService\SyncServices.InventCountingService.WarehouseContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder14.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder141.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1410.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1411.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1412.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1413.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder13.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder142.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder143.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder144.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder145.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder146.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder147.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder148.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder149.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder9.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder2.wsdl" />
-    <None Include="Service References\SalesOrderAX\SalesOrder21.wsdl" />
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.AxdSOPick.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -17,6 +17,14 @@ namespace TestWebservice
         static void Main(string[] args)
         {
             bool result11 = false;
+            string str = "";
+            SalesOrder.SalesServiceClient client1 = new SalesServiceClient();
+            var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
+            foreach (SalesLine line in items1.Lines)
+            {
+                str += "Line# " + line.PickingId.ToString() + Environment.NewLine;
+            }
+
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);
