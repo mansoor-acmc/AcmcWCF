@@ -457,6 +457,10 @@ namespace SyncServices
             try
             {
                 contract = client.ReceivePickingList(context, userName, device);
+                if (contract != null && contract.SalesLines != null && contract.SalesLines.Count() > 0)
+                {
+                    pickingId = contract.SalesLines[0].PickingId;
+                }
             }
             catch (System.ServiceModel.FaultException<AifFault> aifExp)
             {
