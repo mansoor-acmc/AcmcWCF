@@ -7,6 +7,7 @@ namespace SyncServices
 {
     public class SalesTable
     {
+        public string PickingId { get; set; }
         public string SalesId { get; set; }
         public string SalesName { get; set; }
         public DateTime? DeliveryDate { get; set; }

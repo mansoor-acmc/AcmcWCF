@@ -4,10 +4,75 @@
   <xs:import schemaLocation="http://fac-axr3-dev:8101/DynamicsAx/Services/SalesOrder?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
   <xs:import schemaLocation="http://fac-axr3-dev:8101/DynamicsAx/Services/SalesOrder?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" />
   <xs:import schemaLocation="http://fac-axr3-dev:8101/DynamicsAx/Services/SalesOrder?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+  <xs:element name="SOPickServiceFindPickingListRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceFindPickingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:SalesTableContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReceivePickingListRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReceivePickingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:SalesTableContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReservePalletsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="configId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="pallets" nillable="true" type="q3:ArrayOfSalesLineContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReservePalletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q4:ArrayOfSalesLineContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceCustomersDeliveryByQtyRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceCustomersDeliveryByQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfCustomerDeliveryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="SOPickServiceSaveHistoryRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="history" nillable="true" type="q1:PickHistoryContract" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="history" nillable="true" type="q6:PickHistoryContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -31,25 +96,11 @@
   <xs:element name="SOPickServiceCheckPalletAvailableResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:SalesLineContract" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q7:SalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SOPickServiceFindPickingListRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceFindPickingListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q3:SalesTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceReservePalletsRequest">
+  <xs:element name="SOPickServiceCheckPalletAvailableMultiRequest">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
@@ -59,14 +110,58 @@
         <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="pallets" nillable="true" type="q4:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="serials" nillable="true" type="q8:ArrayOfPalletItemContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SOPickServiceReservePalletsResponse">
+  <xs:element name="SOPickServiceCheckPalletAvailableMultiResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q9:ArrayOfSalesLineContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceFindSalesOrderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceFindSalesOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q10:SalesTableContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceGetLatestPalletsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceGetLatestPalletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q11:ArrayOfSalesLineContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceCustomersDeliveryByTrucksRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceCustomersDeliveryByTrucksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q12:ArrayOfCustomerDeliveryContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -84,18 +179,46 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SOPickServiceGetLatestPalletsRequest">
+  <xs:element name="SOPickServiceLoginDeviceRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="_pickingId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deviceIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="projectName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SOPickServiceGetLatestPalletsResponse">
+  <xs:element name="SOPickServiceLoginDeviceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceFindRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q6:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q13:QueryCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" minOccurs="0" ref="q14:SOPick" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReadRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q15:EntityKeyList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOPickServiceReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" minOccurs="0" ref="q16:SOPick" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,114 +234,6 @@
   <xs:element name="SOPickServiceSavePickingLoadResponse">
     <xs:complexType>
       <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceFindSalesOrderRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceFindSalesOrderResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q7:SalesTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCustomersDeliveryByTrucksRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCustomersDeliveryByTrucksResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q8:ArrayOfCustomerDeliveryContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceFindRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q9:QueryCriteria" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceFindResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" minOccurs="0" ref="q10:SOPick" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceReadRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q11:EntityKeyList" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceReadResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" minOccurs="0" ref="q12:SOPick" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceReceivePickingListRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceReceivePickingListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q13:SalesTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCheckPalletAvailableMultiRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="configId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="serials" nillable="true" type="q14:ArrayOfPalletItemContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCheckPalletAvailableMultiResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q15:ArrayOfSalesLineContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCustomersDeliveryByQtyRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOPickServiceCustomersDeliveryByQtyResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q16:ArrayOfCustomerDeliveryContract" />
-      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

@@ -22,13 +22,13 @@ namespace TestWebservice
             var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
             foreach (SalesLine line in items1.Lines)
             {
-                str += "Line# " + line.PickingId.ToString() + Environment.NewLine;
+                str += line.PickingId.ToString() + ": "+line.Location;
             }
 
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);
-            string pallets = "K215218,K215219,";
+            string pallets = "K215218, K215219,";
             if (pallets.EndsWith(","))
                 pallets = pallets.Substring(0, pallets.Length - 1);
 

@@ -32,6 +32,8 @@ namespace SyncServices
         public DateTime UpdatedDate { get; set; }
         public string UpdateType { get; set; } //1=Find, 2=Delete, 3=Reserve, 4=Un-Reserve
         public long LineRecId { get; set; }
+        public string Location { get; set; }
+        public InventByGrLocContract[] Locations { get; set; }
 
         public SalesLineContract FromConvert(SalesLine axdline)
         {
@@ -60,17 +62,24 @@ namespace SyncServices
                 Warehouse = axdline.Warehouse,
                 Serial = axdline.SerialNumber,
                 PickingId = axdline.PickingId,
+                wLocationId = axdline.Location,
                 Remarks = axdline.Remarks,
                 IsHalfPallet = axdline.IsHalfPallet,
                 IsHalfPalletSpecified = true,
                 ExclusiveHalfPallet = axdline.ExclusiveHalfPallet,
                 ExclusiveHalfPalletSpecified = true,
                 LineRecId=axdline.LineRecId,
-                LineRecIdSpecified=true
+                LineRecIdSpecified=true,
+                Locations = axdline.Locations
             };
         }
         public SalesLine ToConvert(SalesLineContract axdline)
         {
+            string locs = string.Empty;
+            if (axdline.Locations.Count() > 0)
+            {
+                locs = string.Join(",",(axdline.Locations.Select(t => t.LocationId)));
+            }
             return new SalesLine()
             {
                 SalesId = axdline.SalesId,
@@ -90,11 +99,14 @@ namespace SyncServices
                 Warehouse = axdline.Warehouse,
                 SerialNumber = axdline.Serial,
                 PickingId = axdline.PickingId,
+                Location = locs,
                 Remarks = axdline.Remarks,
                 IsHalfPallet = axdline.IsHalfPallet,
                 ExclusiveHalfPallet = axdline.ExclusiveHalfPallet,
-                LineRecId = axdline.LineRecId
+                LineRecId = axdline.LineRecId,
+                Locations = axdline.Locations
             };
+            
         }
         public List<SalesLine> ToListConvert(List<SalesLineContract> lines)
         {

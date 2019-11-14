@@ -50,5 +50,8 @@ namespace SyncServices
 
         [OperationContract]
         SalesTable ReceivePickingList(string userName, string device);
+
+        [OperationContract]
+        void SaveLoginHistory(string userName, string device, string deviceIp, string projectName);
     }
 }

@@ -262,6 +262,9 @@ namespace TestWebservice.SalesOrder {
         private long LineRecIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -399,6 +402,19 @@ namespace TestWebservice.SalesOrder {
                 if ((this.LineRecIdField.Equals(value) != true)) {
                     this.LineRecIdField = value;
                     this.RaisePropertyChanged("LineRecId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
                 }
             }
         }

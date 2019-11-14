@@ -116,6 +116,7 @@ namespace SyncServices
             {
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
+                PickingId = contract.PickingId,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 DeliveryDate = contract.DeliveryDate,
@@ -515,6 +516,7 @@ namespace SyncServices
             {
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
+                PickingId = contract.PickingId,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 DeliveryDate = contract.DeliveryDate,
@@ -538,6 +540,24 @@ namespace SyncServices
             return salesTable;
         }
 
+        public void SaveLoginHistory(string userName, string device, string deviceIp, string projectName)
+        {
+            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            try
+            {
+                client.LoginDevice(context, device, deviceIp, userName, projectName);
+            }
+            finally
+            {
+                client.Close();
+            }
+        }
 
         public string GetPing()
         {
