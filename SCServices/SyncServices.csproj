@@ -399,6 +399,12 @@
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.CustomerDeliveryContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.FGLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesLineContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

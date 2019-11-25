@@ -53,5 +53,11 @@ namespace SyncServices
 
         [OperationContract]
         void SaveLoginHistory(string userName, string device, string deviceIp, string projectName);
+
+        [OperationContract]
+        FGLineContract[] GetFGLines();
+
+        [OperationContract]
+        FGDeliveryContract[] GetDeliveries(DateTime dateSearch);
     }
 }

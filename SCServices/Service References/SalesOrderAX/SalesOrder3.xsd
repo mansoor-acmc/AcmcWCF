@@ -15,9 +15,36 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
-  <xs:complexType name="InventByGrLocContract">
+  <xs:complexType name="FGDeliveryContract">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TruckDriver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TruckPlateNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
+  <xs:complexType name="FGLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FGLineName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FGLineNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="OnGateNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FGLineContract" nillable="true" type="tns:FGLineContract" />
+  <xs:complexType name="InventByGrLocContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
@@ -29,7 +56,7 @@
   <xs:element name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
   <xs:complexType name="PalletItemContract">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
@@ -41,7 +68,7 @@
   <xs:element name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
   <xs:complexType name="PickHistoryContract">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="PalletNo" nillable="true" type="xs:string" />
@@ -67,7 +94,7 @@
   <xs:element name="PalletStatus" nillable="true" type="tns:PalletStatus" />
   <xs:complexType name="SalesLineContract">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="ExclusiveHalfPallet" type="xs:boolean" />
           <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
@@ -108,20 +135,20 @@
   <xs:element name="ArrayOfInventByGrLocContract" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
   <xs:complexType name="SalesTableContract">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
           <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="DeliveryName" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="HalfPallet" type="q6:NoYes" />
+          <xs:element minOccurs="0" name="HalfPallet" type="q8:NoYes" />
           <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SalesLines" nillable="true" type="tns:ArrayOfSalesLineContract" />
           <xs:element minOccurs="0" name="SalesName" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SalesStatus" type="tns:SalesStatus" />
           <xs:element minOccurs="0" name="SalesType" type="tns:SalesType" />
-          <xs:element minOccurs="0" name="SameConfiguration" type="q6:NoYes" />
+          <xs:element minOccurs="0" name="SameConfiguration" type="q8:NoYes" />
           <xs:element minOccurs="0" name="StartLoad" type="xs:dateTime" />
           <xs:element minOccurs="0" name="StopLoad" type="xs:dateTime" />
           <xs:element minOccurs="0" name="TruckPlate" nillable="true" type="xs:string" />
@@ -158,16 +185,28 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="SalesType" nillable="true" type="tns:SalesType" />
-  <xs:complexType name="ArrayOfCustomerDeliveryContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCustomerDeliveryContract" nillable="true" type="tns:ArrayOfCustomerDeliveryContract" />
   <xs:complexType name="ArrayOfPalletItemContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfPalletItemContract" nillable="true" type="tns:ArrayOfPalletItemContract" />
+  <xs:complexType name="ArrayOfCustomerDeliveryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerDeliveryContract" nillable="true" type="tns:ArrayOfCustomerDeliveryContract" />
+  <xs:complexType name="ArrayOfFGLineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FGLineContract" nillable="true" type="tns:FGLineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFGLineContract" nillable="true" type="tns:ArrayOfFGLineContract" />
+  <xs:complexType name="ArrayOfFGDeliveryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFGDeliveryContract" nillable="true" type="tns:ArrayOfFGDeliveryContract" />
 </xs:schema>

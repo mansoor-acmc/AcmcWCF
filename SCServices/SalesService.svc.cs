@@ -559,6 +559,46 @@ namespace SyncServices
             }
         }
 
+        public FGLineContract[] GetFGLines()
+        {
+            
+            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            try
+            {
+                return client.GetFGLines(context);
+            }
+            finally
+            {
+                client.Close();
+            }
+        }
+
+        public FGDeliveryContract[] GetDeliveries(DateTime dateSearch)
+        {
+            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            try
+            {
+                return client.GetDeliveries(context, dateSearch);
+            }
+            finally
+            {
+                client.Close();
+            }
+        }
+
+
         public string GetPing()
         {
             //save the Ping into database. so that we know that network is available or not
