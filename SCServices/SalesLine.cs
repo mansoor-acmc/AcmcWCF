@@ -76,9 +76,9 @@ namespace SyncServices
         public SalesLine ToConvert(SalesLineContract axdline)
         {
             string locs = string.Empty;
-            if (axdline.Locations.Count() > 0)
+            if (axdline.Locations != null && axdline.Locations.Count() > 0)
             {
-                locs = string.Join(",",(axdline.Locations.Select(t => t.LocationId)));
+                locs = string.Join(",", (axdline.Locations.Select(t => t.LocationId)));
             }
             return new SalesLine()
             {

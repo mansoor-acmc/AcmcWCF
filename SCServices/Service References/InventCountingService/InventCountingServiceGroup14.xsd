@@ -85,30 +85,30 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
-  <xs:complexType name="ArrayOfInventJournalTableContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTableContract" nillable="true" type="tns:InventJournalTableContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfInventJournalTableContract" nillable="true" type="tns:ArrayOfInventJournalTableContract" />
   <xs:complexType name="ArrayOfInventSumContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InventSumContract" nillable="true" type="tns:InventSumContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfInventSumContract" nillable="true" type="tns:ArrayOfInventSumContract" />
-  <xs:complexType name="ArrayOfInventForItemUnit">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfInventForItemUnit" nillable="true" type="tns:ArrayOfInventForItemUnit" />
   <xs:complexType name="ArrayOfInventJournalTransContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTransContract" nillable="true" type="tns:InventJournalTransContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfInventJournalTransContract" nillable="true" type="tns:ArrayOfInventJournalTransContract" />
+  <xs:complexType name="ArrayOfInventJournalTableContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTableContract" nillable="true" type="tns:InventJournalTableContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventJournalTableContract" nillable="true" type="tns:ArrayOfInventJournalTableContract" />
+  <xs:complexType name="ArrayOfInventForItemUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventForItemUnit" nillable="true" type="tns:ArrayOfInventForItemUnit" />
   <xs:complexType name="ArrayOfWarehouseContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />

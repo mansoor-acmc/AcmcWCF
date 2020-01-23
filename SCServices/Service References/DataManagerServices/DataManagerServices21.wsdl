@@ -29,63 +29,11 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="http://tempuri.org" location="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?wsdl=wsdl0" />
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?wsdl=wsdl0" />
   <wsdl:types />
   <wsdl:binding name="NetTcpBinding_DMDataToSaveService" type="i0:DMDataToSaveService">
     <wsp:PolicyReference URI="#NetTcpBinding_DMDataToSaveService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="ImportDataInDynamics">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/ImportDataInDynamics" style="document" />
-      <wsdl:input name="DMDataToSaveServiceImportDataInDynamicsRequest">
-        <soap12:header message="i0:DMDataToSaveServiceImportDataInDynamicsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceImportDataInDynamicsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="SummaryNormalPallets">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/SummaryNormalPallets" style="document" />
-      <wsdl:input name="DMDataToSaveServiceSummaryNormalPalletsRequest">
-        <soap12:header message="i0:DMDataToSaveServiceSummaryNormalPalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceSummaryNormalPalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="saveItemNumber">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/saveItemNumber" style="document" />
-      <wsdl:input name="DMDataToSaveServiceSaveItemNumberRequest">
-        <soap12:header message="i0:DMDataToSaveServiceSaveItemNumberRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceSaveItemNumberResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="update">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/update" style="document" />
-      <wsdl:input name="DMDataToSaveServiceUpdateRequest">
-        <soap12:header message="i0:DMDataToSaveServiceUpdateRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceUpdateResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
     <wsdl:operation name="ConfirmPalletAndLocationReceive">
       <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceive" style="document" />
       <wsdl:input name="DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest">
@@ -93,188 +41,6 @@
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output name="DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetPalletInfo">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetPalletInfo" style="document" />
-      <wsdl:input name="DMDataToSaveServiceGetPalletInfoRequest">
-        <soap12:header message="i0:DMDataToSaveServiceGetPalletInfoRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceGetPalletInfoResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="DMClearPrintAgain">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/DMClearPrintAgain" style="document" />
-      <wsdl:input name="DMDataToSaveServiceDMClearPrintAgainRequest">
-        <soap12:header message="i0:DMDataToSaveServiceDMClearPrintAgainRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceDMClearPrintAgainResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetPalletInfoByRecordId">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordId" style="document" />
-      <wsdl:input name="DMDataToSaveServiceGetPalletInfoByRecordIdRequest">
-        <soap12:header message="i0:DMDataToSaveServiceGetPalletInfoByRecordIdRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceGetPalletInfoByRecordIdResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ItemGroupPallets">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/ItemGroupPallets" style="document" />
-      <wsdl:input name="DMDataToSaveServiceItemGroupPalletsRequest">
-        <soap12:header message="i0:DMDataToSaveServiceItemGroupPalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceItemGroupPalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateTransferPallets">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateTransferPallets" style="document" />
-      <wsdl:input name="DMDataToSaveServiceUpdateTransferPalletsRequest">
-        <soap12:header message="i0:DMDataToSaveServiceUpdateTransferPalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceUpdateTransferPalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetItemCodesTable">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetItemCodesTable" style="document" />
-      <wsdl:input name="DMDataToSaveServiceGetItemCodesTableRequest">
-        <soap12:header message="i0:DMDataToSaveServiceGetItemCodesTableRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceGetItemCodesTableResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="create">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/create" style="document" />
-      <wsdl:input name="DMDataToSaveServiceCreateRequest">
-        <soap12:header message="i0:DMDataToSaveServiceCreateRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceCreateResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetMaxMovementNumber">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumber" style="document" />
-      <wsdl:input name="DMDataToSaveServiceGetMaxMovementNumberRequest">
-        <soap12:header message="i0:DMDataToSaveServiceGetMaxMovementNumberRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceGetMaxMovementNumberResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="DMSetPrintAgain">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/DMSetPrintAgain" style="document" />
-      <wsdl:input name="DMDataToSaveServiceDMSetPrintAgainRequest">
-        <soap12:header message="i0:DMDataToSaveServiceDMSetPrintAgainRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceDMSetPrintAgainResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="GetItemCodes">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetItemCodes" style="document" />
-      <wsdl:input name="DMDataToSaveServiceGetItemCodesRequest">
-        <soap12:header message="i0:DMDataToSaveServiceGetItemCodesRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceGetItemCodesResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="CancelPalletReceive">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/CancelPalletReceive" style="document" />
-      <wsdl:input name="DMDataToSaveServiceCancelPalletReceiveRequest">
-        <soap12:header message="i0:DMDataToSaveServiceCancelPalletReceiveRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceCancelPalletReceiveResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateOfflinePallets">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateOfflinePallets" style="document" />
-      <wsdl:input name="DMDataToSaveServiceUpdateOfflinePalletsRequest">
-        <soap12:header message="i0:DMDataToSaveServiceUpdateOfflinePalletsRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceUpdateOfflinePalletsResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="CreateDowntimeForMarpak">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpak" style="document" />
-      <wsdl:input name="DMDataToSaveServiceCreateDowntimeForMarpakRequest">
-        <soap12:header message="i0:DMDataToSaveServiceCreateDowntimeForMarpakRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceCreateDowntimeForMarpakResponse">
-        <soap12:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="AifFaultFault">
-        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateAndConfirmPalletReceive">
-      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceive" style="document" />
-      <wsdl:input name="DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest">
-        <soap12:header message="i0:DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest_Headers" part="context" use="literal" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse">
         <soap12:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="AifFaultFault">
@@ -294,6 +60,227 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/create" style="document" />
+      <wsdl:input name="DMDataToSaveServiceCreateRequest">
+        <soap12:header message="i0:DMDataToSaveServiceCreateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceCreateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPalletReceive">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/CancelPalletReceive" style="document" />
+      <wsdl:input name="DMDataToSaveServiceCancelPalletReceiveRequest">
+        <soap12:header message="i0:DMDataToSaveServiceCancelPalletReceiveRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceCancelPalletReceiveResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMovementNumber">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumber" style="document" />
+      <wsdl:input name="DMDataToSaveServiceGetMaxMovementNumberRequest">
+        <soap12:header message="i0:DMDataToSaveServiceGetMaxMovementNumberRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceGetMaxMovementNumberResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfflinePallets">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateOfflinePallets" style="document" />
+      <wsdl:input name="DMDataToSaveServiceUpdateOfflinePalletsRequest">
+        <soap12:header message="i0:DMDataToSaveServiceUpdateOfflinePalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceUpdateOfflinePalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferPallets">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateTransferPallets" style="document" />
+      <wsdl:input name="DMDataToSaveServiceUpdateTransferPalletsRequest">
+        <soap12:header message="i0:DMDataToSaveServiceUpdateTransferPalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceUpdateTransferPalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodes">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetItemCodes" style="document" />
+      <wsdl:input name="DMDataToSaveServiceGetItemCodesRequest">
+        <soap12:header message="i0:DMDataToSaveServiceGetItemCodesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceGetItemCodesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/update" style="document" />
+      <wsdl:input name="DMDataToSaveServiceUpdateRequest">
+        <soap12:header message="i0:DMDataToSaveServiceUpdateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceUpdateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DMSetPrintAgain">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/DMSetPrintAgain" style="document" />
+      <wsdl:input name="DMDataToSaveServiceDMSetPrintAgainRequest">
+        <soap12:header message="i0:DMDataToSaveServiceDMSetPrintAgainRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceDMSetPrintAgainResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DMClearPrintAgain">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/DMClearPrintAgain" style="document" />
+      <wsdl:input name="DMDataToSaveServiceDMClearPrintAgainRequest">
+        <soap12:header message="i0:DMDataToSaveServiceDMClearPrintAgainRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceDMClearPrintAgainResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfo">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetPalletInfo" style="document" />
+      <wsdl:input name="DMDataToSaveServiceGetPalletInfoRequest">
+        <soap12:header message="i0:DMDataToSaveServiceGetPalletInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceGetPalletInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDataInDynamics">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/ImportDataInDynamics" style="document" />
+      <wsdl:input name="DMDataToSaveServiceImportDataInDynamicsRequest">
+        <soap12:header message="i0:DMDataToSaveServiceImportDataInDynamicsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceImportDataInDynamicsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveItemNumber">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/saveItemNumber" style="document" />
+      <wsdl:input name="DMDataToSaveServiceSaveItemNumberRequest">
+        <soap12:header message="i0:DMDataToSaveServiceSaveItemNumberRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceSaveItemNumberResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ItemGroupPallets">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/ItemGroupPallets" style="document" />
+      <wsdl:input name="DMDataToSaveServiceItemGroupPalletsRequest">
+        <soap12:header message="i0:DMDataToSaveServiceItemGroupPalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceItemGroupPalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfoByRecordId">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordId" style="document" />
+      <wsdl:input name="DMDataToSaveServiceGetPalletInfoByRecordIdRequest">
+        <soap12:header message="i0:DMDataToSaveServiceGetPalletInfoByRecordIdRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceGetPalletInfoByRecordIdResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryNormalPallets">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/SummaryNormalPallets" style="document" />
+      <wsdl:input name="DMDataToSaveServiceSummaryNormalPalletsRequest">
+        <soap12:header message="i0:DMDataToSaveServiceSummaryNormalPalletsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceSummaryNormalPalletsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDowntimeForMarpak">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpak" style="document" />
+      <wsdl:input name="DMDataToSaveServiceCreateDowntimeForMarpakRequest">
+        <soap12:header message="i0:DMDataToSaveServiceCreateDowntimeForMarpakRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceCreateDowntimeForMarpakResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodesTable">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetItemCodesTable" style="document" />
+      <wsdl:input name="DMDataToSaveServiceGetItemCodesTableRequest">
+        <soap12:header message="i0:DMDataToSaveServiceGetItemCodesTableRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceGetItemCodesTableResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="GetWHLocations">
       <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/GetWHLocations" style="document" />
       <wsdl:input name="DMDataToSaveServiceGetWHLocationsRequest">
@@ -307,14 +294,27 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="UpdateAndConfirmPalletReceive">
+      <soap12:operation soapAction="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceive" style="document" />
+      <wsdl:input name="DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest">
+        <soap12:header message="i0:DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="DataManagerServices">
     <wsdl:port name="NetTcpBinding_DMDataToSaveService" binding="tns:NetTcpBinding_DMDataToSaveService">
-      <soap12:address location="net.tcp://fac-axr3-dev:8201/DynamicsAx/Services/DataManagerServices" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/DataManagerServices" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-axr3-dev:8201/DynamicsAx/Services/DataManagerServices</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/DataManagerServices</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

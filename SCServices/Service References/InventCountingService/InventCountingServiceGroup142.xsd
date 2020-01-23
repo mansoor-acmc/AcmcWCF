@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
-  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
-  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" />
   <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
-  <xs:element name="JournalCountingServiceGetCountingJournalsRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="JournalCountingServiceGetCountingJournalsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:ArrayOfInventJournalTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" />
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
   <xs:element name="JournalCountingServiceGetItemsAvailableRequest">
     <xs:complexType>
       <xs:sequence />
@@ -24,7 +12,34 @@
   <xs:element name="JournalCountingServiceGetItemsAvailableResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:ArrayOfInventSumContract" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:ArrayOfInventSumContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceUpdateCountingRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="journald" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="lines" nillable="true" type="q2:ArrayOfInventJournalTransContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceUpdateCountingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q3:ArrayOfInventJournalTransContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceGetCountingJournalsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceGetCountingJournalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q4:ArrayOfInventJournalTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -38,36 +53,7 @@
   <xs:element name="JournalCountingServiceGetItemUoMResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q3:ArrayOfInventForItemUnit" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="JournalCountingServiceUpdateCountingRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="journald" nillable="true" type="xs:string" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="lines" nillable="true" type="q4:ArrayOfInventJournalTransContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="JournalCountingServiceUpdateCountingResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfInventJournalTransContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="JournalCountingServiceFindRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q6:QueryCriteria" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="JournalCountingServiceFindResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" minOccurs="0" ref="q7:JournalCounting" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfInventForItemUnit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -81,7 +67,7 @@
   <xs:element name="JournalCountingServiceGetWarehouseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q8:ArrayOfWarehouseContract" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q6:ArrayOfWarehouseContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -95,18 +81,32 @@
   <xs:element name="JournalCountingServiceGetYearFGInventoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q9:ArrayOfInventAvailContract" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q7:ArrayOfInventAvailContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="JournalCountingServiceReadRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q10:EntityKeyList" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q8:EntityKeyList" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="JournalCountingServiceReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" minOccurs="0" ref="q9:JournalCounting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceFindRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q10:QueryCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalCountingServiceFindResponse">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q11="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting" minOccurs="0" ref="q11:JournalCounting" />

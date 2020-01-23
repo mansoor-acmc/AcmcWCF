@@ -12,7 +12,7 @@ namespace SyncServices.InventCountingService {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -115,7 +115,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -273,7 +273,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -319,7 +319,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -379,7 +379,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services")]
     public enum InfologMessageType {
@@ -401,7 +401,7 @@ namespace SyncServices.InventCountingService {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventJournalTableContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventForItemUnit))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventAvailContract))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -419,7 +419,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -470,7 +470,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -535,7 +535,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -670,7 +670,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -721,7 +721,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -758,7 +758,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -966,26 +966,12 @@ namespace SyncServices.InventCountingService {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="InventCountingService.JournalCountingService")]
     public interface JournalCountingService {
         
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetCountingJournalsRequest) of message JournalCountingServiceGetCountingJournalsRequest does not match the default value (GetCountingJournals)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetCountingJournals", ReplyAction="http://tempuri.org/JournalCountingService/GetCountingJournalsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetCountingJournalsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse GetCountingJournals(SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetItemsAvailableRequest) of message JournalCountingServiceGetItemsAvailableRequest does not match the default value (GetItemsAvailable)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetItemsAvailable", ReplyAction="http://tempuri.org/JournalCountingService/GetItemsAvailableResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetItemsAvailableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableResponse GetItemsAvailable(SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetItemUoMRequest) of message JournalCountingServiceGetItemUoMRequest does not match the default value (GetItemUoM)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetItemUoM", ReplyAction="http://tempuri.org/JournalCountingService/GetItemUoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceUpdateCountingRequest) of message JournalCountingServiceUpdateCountingRequest does not match the default value (UpdateCounting)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/UpdateCounting", ReplyAction="http://tempuri.org/JournalCountingService/UpdateCountingResponse")]
@@ -994,12 +980,19 @@ namespace SyncServices.InventCountingService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceUpdateCountingResponse UpdateCounting(SyncServices.InventCountingService.JournalCountingServiceUpdateCountingRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceFindRequest) of message JournalCountingServiceFindRequest does not match the default value (find)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/find", ReplyAction="http://tempuri.org/JournalCountingService/findResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetCountingJournalsRequest) of message JournalCountingServiceGetCountingJournalsRequest does not match the default value (GetCountingJournals)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetCountingJournals", ReplyAction="http://tempuri.org/JournalCountingService/GetCountingJournalsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetCountingJournalsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceFindResponse find(SyncServices.InventCountingService.JournalCountingServiceFindRequest request);
+        SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse GetCountingJournals(SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetItemUoMRequest) of message JournalCountingServiceGetItemUoMRequest does not match the default value (GetItemUoM)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetItemUoM", ReplyAction="http://tempuri.org/JournalCountingService/GetItemUoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetWarehouseRequest) of message JournalCountingServiceGetWarehouseRequest does not match the default value (GetWarehouse)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetWarehouse", ReplyAction="http://tempuri.org/JournalCountingService/GetWarehouseResponse")]
@@ -1021,10 +1014,17 @@ namespace SyncServices.InventCountingService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceReadResponse read(SyncServices.InventCountingService.JournalCountingServiceReadRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceFindRequest) of message JournalCountingServiceFindRequest does not match the default value (find)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/find", ReplyAction="http://tempuri.org/JournalCountingService/findResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.InventCountingService.JournalCountingServiceFindResponse find(SyncServices.InventCountingService.JournalCountingServiceFindRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1127,7 +1127,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1175,43 +1175,6 @@ namespace SyncServices.InventCountingService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetCountingJournalsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetCountingJournalsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        public JournalCountingServiceGetCountingJournalsRequest() {
-        }
-        
-        public JournalCountingServiceGetCountingJournalsRequest(SyncServices.InventCountingService.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetCountingJournalsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetCountingJournalsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.InventJournalTableContract[] response;
-        
-        public JournalCountingServiceGetCountingJournalsResponse() {
-        }
-        
-        public JournalCountingServiceGetCountingJournalsResponse(SyncServices.InventCountingService.InventJournalTableContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemsAvailableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class JournalCountingServiceGetItemsAvailableRequest {
         
@@ -1242,48 +1205,6 @@ namespace SyncServices.InventCountingService {
         }
         
         public JournalCountingServiceGetItemsAvailableResponse(SyncServices.InventCountingService.InventSumContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetItemUoMRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string allItems;
-        
-        public JournalCountingServiceGetItemUoMRequest() {
-        }
-        
-        public JournalCountingServiceGetItemUoMRequest(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
-            this.CallContext = CallContext;
-            this.allItems = allItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetItemUoMResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.InventForItemUnit[] response;
-        
-        public JournalCountingServiceGetItemUoMResponse() {
-        }
-        
-        public JournalCountingServiceGetItemUoMResponse(SyncServices.InventCountingService.InventForItemUnit[] response) {
             this.response = response;
         }
     }
@@ -1336,25 +1257,188 @@ namespace SyncServices.InventCountingService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetCountingJournalsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetCountingJournalsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        public JournalCountingServiceGetCountingJournalsRequest() {
+        }
+        
+        public JournalCountingServiceGetCountingJournalsRequest(SyncServices.InventCountingService.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetCountingJournalsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetCountingJournalsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.InventJournalTableContract[] response;
+        
+        public JournalCountingServiceGetCountingJournalsResponse() {
+        }
+        
+        public JournalCountingServiceGetCountingJournalsResponse(SyncServices.InventCountingService.InventJournalTableContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetItemUoMRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string allItems;
+        
+        public JournalCountingServiceGetItemUoMRequest() {
+        }
+        
+        public JournalCountingServiceGetItemUoMRequest(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
+            this.CallContext = CallContext;
+            this.allItems = allItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetItemUoMResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.InventForItemUnit[] response;
+        
+        public JournalCountingServiceGetItemUoMResponse() {
+        }
+        
+        public JournalCountingServiceGetItemUoMResponse(SyncServices.InventCountingService.InventForItemUnit[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetWarehouseRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string siteId;
+        
+        public JournalCountingServiceGetWarehouseRequest() {
+        }
+        
+        public JournalCountingServiceGetWarehouseRequest(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
+            this.CallContext = CallContext;
+            this.siteId = siteId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetWarehouseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.WarehouseContract[] response;
+        
+        public JournalCountingServiceGetWarehouseResponse() {
+        }
+        
+        public JournalCountingServiceGetWarehouseResponse(SyncServices.InventCountingService.WarehouseContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetYearFGInventoryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public int startId;
+        
+        public JournalCountingServiceGetYearFGInventoryRequest() {
+        }
+        
+        public JournalCountingServiceGetYearFGInventoryRequest(SyncServices.InventCountingService.CallContext CallContext, int startId) {
+            this.CallContext = CallContext;
+            this.startId = startId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetYearFGInventoryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.InventAvailContract[] response;
+        
+        public JournalCountingServiceGetYearFGInventoryResponse() {
+        }
+        
+        public JournalCountingServiceGetYearFGInventoryResponse(SyncServices.InventCountingService.InventAvailContract[] response) {
+            this.response = response;
+        }
+    }
+    
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private CriteriaElement[] criteriaElementField;
+        private KeyField[] keyDataField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
-        public CriteriaElement[] CriteriaElement {
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public KeyField[] KeyData {
             get {
-                return this.criteriaElementField;
+                return this.keyDataField;
             }
             set {
-                this.criteriaElementField = value;
-                this.RaisePropertyChanged("CriteriaElement");
+                this.keyDataField = value;
+                this.RaisePropertyChanged("KeyData");
             }
         }
         
@@ -1369,80 +1453,38 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string dataSourceNameField;
+        private string fieldField;
         
-        private string fieldNameField;
-        
-        private Operator operatorField;
-        
-        private string value1Field;
-        
-        private string value2Field;
+        private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DataSourceName {
+        public string Field {
             get {
-                return this.dataSourceNameField;
+                return this.fieldField;
             }
             set {
-                this.dataSourceNameField = value;
-                this.RaisePropertyChanged("DataSourceName");
+                this.fieldField = value;
+                this.RaisePropertyChanged("Field");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string FieldName {
+        public string Value {
             get {
-                return this.fieldNameField;
+                return this.valueField;
             }
             set {
-                this.fieldNameField = value;
-                this.RaisePropertyChanged("FieldName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public Operator Operator {
-            get {
-                return this.operatorField;
-            }
-            set {
-                this.operatorField = value;
-                this.RaisePropertyChanged("Operator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Value1 {
-            get {
-                return this.value1Field;
-            }
-            set {
-                this.value1Field = value;
-                this.RaisePropertyChanged("Value1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Value2 {
-            get {
-                return this.value2Field;
-            }
-            set {
-                this.value2Field = value;
-                this.RaisePropertyChanged("Value2");
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -1457,35 +1499,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public enum Operator {
-        
-        /// <remarks/>
-        Equal,
-        
-        /// <remarks/>
-        NotEqual,
-        
-        /// <remarks/>
-        Greater,
-        
-        /// <remarks/>
-        GreaterOrEqual,
-        
-        /// <remarks/>
-        Less,
-        
-        /// <remarks/>
-        LessOrEqual,
-        
-        /// <remarks/>
-        Range,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1587,7 +1601,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_boolean {
@@ -1600,7 +1614,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_XMLDocPurpose {
@@ -1616,7 +1630,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1638,6 +1652,8 @@ namespace SyncServices.InventCountingService {
         private System.Nullable<AxdExtType_JournalDetailSummary> detailSummaryField;
         
         private bool detailSummaryFieldSpecified;
+        
+        private string fSHReplenishmentRefField;
         
         private System.Nullable<int> inventDimFixedField;
         
@@ -1688,6 +1704,10 @@ namespace SyncServices.InventCountingService {
         private System.Nullable<AxdEnum_ItemReservation> reservationField;
         
         private bool reservationFieldSpecified;
+        
+        private System.Nullable<AxdEnum_RetailReplenishmentType> retailReplenishmentTypeField;
+        
+        private bool retailReplenishmentTypeFieldSpecified;
         
         private System.Nullable<AxdExtType_RetailRetailStatusType> retailRetailStatusTypeField;
         
@@ -1831,6 +1851,18 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string FSHReplenishmentRef {
+            get {
+                return this.fSHReplenishmentRefField;
+            }
+            set {
+                this.fSHReplenishmentRefField = value;
+                this.RaisePropertyChanged("FSHReplenishmentRef");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
         public System.Nullable<int> InventDimFixed {
             get {
                 return this.inventDimFixedField;
@@ -1854,7 +1886,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
         public System.Nullable<AxdEnum_PlInventDocType> InventDocType_PL {
             get {
                 return this.inventDocType_PLField;
@@ -1878,7 +1910,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
         public string InventLocationId {
             get {
                 return this.inventLocationIdField;
@@ -1890,7 +1922,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public string InventSiteId {
             get {
                 return this.inventSiteIdField;
@@ -1902,7 +1934,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
         public string JournalId {
             get {
                 return this.journalIdField;
@@ -1914,7 +1946,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
         public string JournalIdOrignal {
             get {
                 return this.journalIdOrignalField;
@@ -1926,7 +1958,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
         public string JournalNameId {
             get {
                 return this.journalNameIdField;
@@ -1938,7 +1970,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
         public System.Nullable<AxdEnum_InventJournalType> JournalType {
             get {
                 return this.journalTypeField;
@@ -1962,7 +1994,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
         public AxdType_DefaultAccount LedgerDimension {
             get {
                 return this.ledgerDimensionField;
@@ -1974,7 +2006,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
         public System.Nullable<int> NumOfLines {
             get {
                 return this.numOfLinesField;
@@ -1998,7 +2030,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public System.Nullable<AxdExtType_JournalPosted> Posted {
             get {
                 return this.postedField;
@@ -2022,7 +2054,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
         public AxdExtType_JournalPostedDateTime PostedDateTime {
             get {
                 return this.postedDateTimeField;
@@ -2034,7 +2066,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
         public string PostedUserId {
             get {
                 return this.postedUserIdField;
@@ -2046,7 +2078,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
         public string ProdId {
             get {
                 return this.prodIdField;
@@ -2058,7 +2090,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=21)]
         public System.Nullable<long> RecId {
             get {
                 return this.recIdField;
@@ -2082,7 +2114,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
         public System.Nullable<int> RecVersion {
             get {
                 return this.recVersionField;
@@ -2106,7 +2138,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
         public System.Nullable<AxdEnum_ItemReservation> Reservation {
             get {
                 return this.reservationField;
@@ -2130,7 +2162,31 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=24)]
+        public System.Nullable<AxdEnum_RetailReplenishmentType> RetailReplenishmentType {
+            get {
+                return this.retailReplenishmentTypeField;
+            }
+            set {
+                this.retailReplenishmentTypeField = value;
+                this.RaisePropertyChanged("RetailReplenishmentType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RetailReplenishmentTypeSpecified {
+            get {
+                return this.retailReplenishmentTypeFieldSpecified;
+            }
+            set {
+                this.retailReplenishmentTypeFieldSpecified = value;
+                this.RaisePropertyChanged("RetailReplenishmentTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=25)]
         public System.Nullable<AxdExtType_RetailRetailStatusType> RetailRetailStatusType {
             get {
                 return this.retailRetailStatusTypeField;
@@ -2154,7 +2210,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=26)]
         public System.Nullable<int> SessionId {
             get {
                 return this.sessionIdField;
@@ -2178,7 +2234,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=27)]
         public AxdExtType_JournalSessionLoginDateTime SessionLoginDateTime {
             get {
                 return this.sessionLoginDateTimeField;
@@ -2190,7 +2246,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=28)]
         public string Source {
             get {
                 return this.sourceField;
@@ -2202,7 +2258,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=29)]
         public System.Nullable<AxdExtType_Storno_RU> Storno_RU {
             get {
                 return this.storno_RUField;
@@ -2226,7 +2282,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=30)]
         public System.Nullable<AxdExtType_JournalSystemBlocked> SystemBlocked {
             get {
                 return this.systemBlockedField;
@@ -2250,7 +2306,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=29)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=31)]
         public System.Nullable<AxdEnum_InventJournalVoucherChange> VoucherChange {
             get {
                 return this.voucherChangeField;
@@ -2274,7 +2330,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=30)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=32)]
         public System.Nullable<AxdEnum_JournalVoucherDraw> VoucherDraw {
             get {
                 return this.voucherDrawField;
@@ -2298,7 +2354,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=31)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=33)]
         public AxdEntityKey_NumberSequenceTable VoucherNumberSequenceTable {
             get {
                 return this.voucherNumberSequenceTableField;
@@ -2310,7 +2366,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=32)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=34)]
         public string Worker {
             get {
                 return this.workerField;
@@ -2322,7 +2378,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InventJournalTrans", Order=33)]
+        [System.Xml.Serialization.XmlElementAttribute("InventJournalTrans", Order=35)]
         public AxdEntity_InventJournalTrans[] InventJournalTrans {
             get {
                 return this.inventJournalTransField;
@@ -2380,7 +2436,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalDeletePostedLines {
@@ -2393,7 +2449,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalDetailSummary {
@@ -2406,7 +2462,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_PlInventDocType {
@@ -2422,7 +2478,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventJournalType {
@@ -2456,7 +2512,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2488,7 +2544,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalPosted {
@@ -2501,7 +2557,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2510,15 +2566,57 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidTo))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidFrom))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_PostReleaseDate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_EffectiveDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_WHSShipmentArrivalUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_WHSShipConfirmUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_WHSDropOffUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_VendBankAccountExpiryDate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_VendBankAccountActiveDate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_TrvDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_TMSRequestedPickupDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_TMSConfirmedPickupDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_TMSActivityDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_WHSShipUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_DueUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_WHSDeliveryUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_CashDiscUTCDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_SMARepairFinishDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_SMASignOffDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_SMAPreferredServiceDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ApprovedDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_PurchReqSubmittedDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_PurchRFQExpiryDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_VersioningTimeStamp))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ActivationDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_TransDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentSeniorityDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentStartDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentTransitionDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentLastWorkedDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentAdjStartDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ValidFromDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ValidToDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ToDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_FromDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_StartDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_EndDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_DateTimeExecuted))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_smmDateTimeLastEdit))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_CreatedDateTime))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_JournalSessionLoginDateTime))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_JournalPostedDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_PostReleaseDate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ExpirationDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_AttributeValueDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_SMALatestCompletionDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_ClosedDateTime))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_BankStatementBookingDate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_BankStmtISODateTime))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_InvoiceReleaseDate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_EffectiveDateTime))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_UTCTimestamp))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidTo))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidFrom))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2606,7 +2704,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_Timezone {
@@ -2615,7 +2713,7 @@ namespace SyncServices.InventCountingService {
         GMTMINUS1200INTERNATIONALDATELINEWEST,
         
         /// <remarks/>
-        GMTMINUS1100MIDWAYISLAND_SAMOA,
+        GMTMINUS1100COORDINATEDUNIVERSALTIME,
         
         /// <remarks/>
         GMTMINUS1000HAWAII,
@@ -2654,6 +2752,9 @@ namespace SyncServices.InventCountingService {
         GMTMINUS0500BOGOTA_LIMA_QUITO_RIOBRANCO,
         
         /// <remarks/>
+        GMTMINUS0500EASTERNTIME_MEXICO,
+        
+        /// <remarks/>
         GMTMINUS0500EASTERNTIME,
         
         /// <remarks/>
@@ -2675,9 +2776,6 @@ namespace SyncServices.InventCountingService {
         GMTMINUS0400MANAUS,
         
         /// <remarks/>
-        GMTMINUS0400SANTIAGO,
-        
-        /// <remarks/>
         GMTMINUS0330NEWFOUNDLAND,
         
         /// <remarks/>
@@ -2697,6 +2795,9 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         GMTMINUS0300_SALVADOR,
+        
+        /// <remarks/>
+        GMTMINUS0300SANTIAGO,
         
         /// <remarks/>
         GMTMINUS0200MIDATLANTIC,
@@ -2732,6 +2833,9 @@ namespace SyncServices.InventCountingService {
         GMTPLUS0100SARAJEVO_SKOPJE_WARSAW_ZAGREB,
         
         /// <remarks/>
+        GMTPLUS0100TRIPOLI,
+        
+        /// <remarks/>
         GMTPLUS0100WESTCENTRALAFRICA,
         
         /// <remarks/>
@@ -2765,10 +2869,13 @@ namespace SyncServices.InventCountingService {
         GMTPLUS0200WINDHOEK,
         
         /// <remarks/>
-        GMTPLUS0300BAGHDAD,
+        GMTPLUS0300ISTANBUL,
         
         /// <remarks/>
         GMT_PLUS0300KALININGRAD_MINSK,
+        
+        /// <remarks/>
+        GMTPLUS0300BAGHDAD,
         
         /// <remarks/>
         GMTPLUS0300KUWAIT_RIYADH,
@@ -2793,6 +2900,9 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         GMTPLUS0400BAKU,
+        
+        /// <remarks/>
+        GMTPLUS0400IZHEVSK_SAMARA,
         
         /// <remarks/>
         GMTPLUS0400CAUCASUSSTANDARDTIME,
@@ -2822,13 +2932,13 @@ namespace SyncServices.InventCountingService {
         GMTPLUS0545KATHMANDU,
         
         /// <remarks/>
-        GMTPLUS0600ALMATY_NOVOSIBIRSK,
-        
-        /// <remarks/>
         GMTPLUS0600ASTANA_DHAKA,
         
         /// <remarks/>
         GMTPLUS0600DHAKA,
+        
+        /// <remarks/>
+        GMTPLUS0600ALMATY_NOVOSIBIRSK,
         
         /// <remarks/>
         GMTPLUS0630_YANGON,
@@ -2888,59 +2998,359 @@ namespace SyncServices.InventCountingService {
         GMTPLUS1000VLADIVOSTOK,
         
         /// <remarks/>
-        GMTPLUS0600MAGADAN,
+        GMTPLUS1100CHOKURDAKH,
         
         /// <remarks/>
         GMTPLUS1100MAGADAN_SOLOMONIS,
         
         /// <remarks/>
+        GMTPLUS0600MAGADAN,
+        
+        /// <remarks/>
+        GMTPLUS1200ANADYR_PETRO_KAMCHATSKY,
+        
+        /// <remarks/>
         GMTPLUS1200AUCKLAND_WELLINGTON,
         
         /// <remarks/>
+        GMTPLUS1200COORDINATEDUNIVERSALTIME,
+        
+        /// <remarks/>
         GMTPLUS1200FIJI_KAMCHATKA_MARSHALLIS,
+        
+        /// <remarks/>
+        GMTMINUS1100MIDWAYISLAND_SAMOA,
         
         /// <remarks/>
         GMTPLUS1300NUKU_ALOFA,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public partial class AxdExtType_HcmEmploymentValidTo : AxdType_DateTime {
+    public partial class AxdExtType_WHSShipmentArrivalUTCDateTime : AxdType_DateTime {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public partial class AxdExtType_HcmEmploymentValidFrom : AxdType_DateTime {
+    public partial class AxdExtType_WHSShipConfirmUTCDateTime : AxdType_DateTime {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public partial class AxdExtType_PostReleaseDate : AxdType_DateTime {
+    public partial class AxdExtType_WHSDropOffUTCDateTime : AxdType_DateTime {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public partial class AxdExtType_EffectiveDateTime : AxdType_DateTime {
+    public partial class AxdExtType_VendBankAccountExpiryDate : AxdType_DateTime {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_VendBankAccountActiveDate : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_TrvDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_TMSRequestedPickupDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_TMSConfirmedPickupDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_TMSActivityDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_WHSShipUTCDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_DueUTCDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_WHSDeliveryUTCDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_CashDiscUTCDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_SMARepairFinishDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_SMASignOffDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_SMAPreferredServiceDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ApprovedDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_PurchReqSubmittedDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_PurchRFQExpiryDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_VersioningTimeStamp : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ActivationDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_TransDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentSeniorityDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentStartDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentTransitionDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentLastWorkedDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentAdjStartDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ValidFromDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ValidToDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ToDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_FromDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_StartDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_EndDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_DateTimeExecuted : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_smmDateTimeLastEdit : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_CreatedDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2949,7 +3359,52 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_PostReleaseDate : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ExpirationDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_AttributeValueDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_SMALatestCompletionDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_ClosedDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2958,7 +3413,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2967,7 +3422,52 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_InvoiceReleaseDate : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_EffectiveDateTime : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_UTCTimestamp : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentValidTo : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public partial class AxdExtType_HcmEmploymentValidFrom : AxdType_DateTime {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ItemReservation {
@@ -2983,7 +3483,20 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public enum AxdEnum_RetailReplenishmentType {
+        
+        /// <remarks/>
+        CrossDocking,
+        
+        /// <remarks/>
+        BuyersPush,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_RetailRetailStatusType {
@@ -3011,7 +3524,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_Storno_RU {
@@ -3024,7 +3537,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalSystemBlocked {
@@ -3037,7 +3550,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventJournalVoucherChange {
@@ -3050,7 +3563,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_JournalVoucherDraw {
@@ -3063,7 +3576,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3083,6 +3596,10 @@ namespace SyncServices.InventCountingService {
         private string numberSequenceScope_FiscalCalendarPeriod_FiscalCalendarYear_NameField;
         
         private string numberSequenceScope_FiscalCalendarPeriod_NameField;
+        
+        private System.Nullable<AxdEnum_OMOperatingUnitType> numberSequenceScope_OperatingUnitTypeField;
+        
+        private bool numberSequenceScope_OperatingUnitTypeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -3169,6 +3686,30 @@ namespace SyncServices.InventCountingService {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<AxdEnum_OMOperatingUnitType> NumberSequenceScope_OperatingUnitType {
+            get {
+                return this.numberSequenceScope_OperatingUnitTypeField;
+            }
+            set {
+                this.numberSequenceScope_OperatingUnitTypeField = value;
+                this.RaisePropertyChanged("NumberSequenceScope_OperatingUnitType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NumberSequenceScope_OperatingUnitTypeSpecified {
+            get {
+                return this.numberSequenceScope_OperatingUnitTypeFieldSpecified;
+            }
+            set {
+                this.numberSequenceScope_OperatingUnitTypeFieldSpecified = value;
+                this.RaisePropertyChanged("NumberSequenceScope_OperatingUnitTypeSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -3180,7 +3721,38 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public enum AxdEnum_OMOperatingUnitType {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        OMDepartment,
+        
+        /// <remarks/>
+        OMCostCenter,
+        
+        /// <remarks/>
+        OMValueStream,
+        
+        /// <remarks/>
+        OMBusinessUnit,
+        
+        /// <remarks/>
+        OMAnyOU,
+        
+        /// <remarks/>
+        OMRetailChannel,
+        
+        /// <remarks/>
+        RetailChannel,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3335,6 +3907,10 @@ namespace SyncServices.InventCountingService {
         
         private string reqPOIdField;
         
+        private string retailInfocodeIdEx2Field;
+        
+        private string retailInformationSubcodeIdEx2Field;
+        
         private System.Nullable<decimal> salesAmountField;
         
         private bool salesAmountFieldSpecified;
@@ -3357,9 +3933,7 @@ namespace SyncServices.InventCountingService {
         
         private string voucherField;
         
-        private System.Nullable<long> warehouseLocation_INField;
-        
-        private bool warehouseLocation_INFieldSpecified;
+        private string warehouseLocation_INField;
         
         private string workerField;
         
@@ -4263,6 +4837,30 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=50)]
+        public string RetailInfocodeIdEx2 {
+            get {
+                return this.retailInfocodeIdEx2Field;
+            }
+            set {
+                this.retailInfocodeIdEx2Field = value;
+                this.RaisePropertyChanged("RetailInfocodeIdEx2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=51)]
+        public string RetailInformationSubcodeIdEx2 {
+            get {
+                return this.retailInformationSubcodeIdEx2Field;
+            }
+            set {
+                this.retailInformationSubcodeIdEx2Field = value;
+                this.RaisePropertyChanged("RetailInformationSubcodeIdEx2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=52)]
         public System.Nullable<decimal> SalesAmount {
             get {
                 return this.salesAmountField;
@@ -4286,7 +4884,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=51)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=53)]
         public string ScrapTypeId_RU {
             get {
                 return this.scrapTypeId_RUField;
@@ -4298,7 +4896,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=52)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=54)]
         public string Shift {
             get {
                 return this.shiftField;
@@ -4310,7 +4908,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=53)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=55)]
         public System.Nullable<AxdExtType_Storno_RU> Storno_RU {
             get {
                 return this.storno_RUField;
@@ -4334,7 +4932,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=54)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=56)]
         public string ToInventDimId {
             get {
                 return this.toInventDimIdField;
@@ -4346,7 +4944,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=55)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=57)]
         public string ToInventTransId {
             get {
                 return this.toInventTransIdField;
@@ -4358,7 +4956,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true, Order=56)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true, Order=58)]
         public System.Nullable<System.DateTime> TransDate {
             get {
                 return this.transDateField;
@@ -4382,7 +4980,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=57)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=59)]
         public string Voucher {
             get {
                 return this.voucherField;
@@ -4394,8 +4992,8 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=58)]
-        public System.Nullable<long> WarehouseLocation_IN {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=60)]
+        public string WarehouseLocation_IN {
             get {
                 return this.warehouseLocation_INField;
             }
@@ -4406,19 +5004,7 @@ namespace SyncServices.InventCountingService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool WarehouseLocation_INSpecified {
-            get {
-                return this.warehouseLocation_INFieldSpecified;
-            }
-            set {
-                this.warehouseLocation_INFieldSpecified = value;
-                this.RaisePropertyChanged("WarehouseLocation_INSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=59)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=61)]
         public string Worker {
             get {
                 return this.workerField;
@@ -4476,7 +5062,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_AssetTransTypeJournal {
@@ -4540,10 +5126,22 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         PostingOffAccDepreciation_PL,
+        
+        /// <remarks/>
+        ExpensedRetirmentObligation_JP,
+        
+        /// <remarks/>
+        ReductionEntryRepaymentSubsidy_JP,
+        
+        /// <remarks/>
+        ReductionEntryRepayment_JP,
+        
+        /// <remarks/>
+        ReductionEntryRepaymentProportional_JP,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_BOMLine {
@@ -4556,7 +5154,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4589,7 +5187,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4635,7 +5233,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_NoYes {
@@ -4648,7 +5246,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ExciseRecordType_IN {
@@ -4667,7 +5265,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ExciseType_IN {
@@ -4683,7 +5281,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventRefType {
@@ -4717,7 +5315,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4778,7 +5376,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_PdsCopyBatchAttrib {
@@ -4791,7 +5389,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4837,7 +5435,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_CostProfitSet {
@@ -4856,7 +5454,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_AxdEntityAction {
@@ -4872,209 +5470,6 @@ namespace SyncServices.InventCountingService {
         
         /// <remarks/>
         delete,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceFindRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-        public SyncServices.InventCountingService.QueryCriteria QueryCriteria;
-        
-        public JournalCountingServiceFindRequest() {
-        }
-        
-        public JournalCountingServiceFindRequest(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.QueryCriteria QueryCriteria) {
-            this.CallContext = CallContext;
-            this.QueryCriteria = QueryCriteria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceFindResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting")]
-        public SyncServices.InventCountingService.AxdJournalCounting JournalCounting;
-        
-        public JournalCountingServiceFindResponse() {
-        }
-        
-        public JournalCountingServiceFindResponse(SyncServices.InventCountingService.AxdJournalCounting JournalCounting) {
-            this.JournalCounting = JournalCounting;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetWarehouseRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string siteId;
-        
-        public JournalCountingServiceGetWarehouseRequest() {
-        }
-        
-        public JournalCountingServiceGetWarehouseRequest(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
-            this.CallContext = CallContext;
-            this.siteId = siteId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetWarehouseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.WarehouseContract[] response;
-        
-        public JournalCountingServiceGetWarehouseResponse() {
-        }
-        
-        public JournalCountingServiceGetWarehouseResponse(SyncServices.InventCountingService.WarehouseContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetYearFGInventoryRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public int startId;
-        
-        public JournalCountingServiceGetYearFGInventoryRequest() {
-        }
-        
-        public JournalCountingServiceGetYearFGInventoryRequest(SyncServices.InventCountingService.CallContext CallContext, int startId) {
-            this.CallContext = CallContext;
-            this.startId = startId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetYearFGInventoryResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.InventAvailContract[] response;
-        
-        public JournalCountingServiceGetYearFGInventoryResponse() {
-        }
-        
-        public JournalCountingServiceGetYearFGInventoryResponse(SyncServices.InventCountingService.InventAvailContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private KeyField[] keyDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public KeyField[] KeyData {
-            get {
-                return this.keyDataField;
-            }
-            set {
-                this.keyDataField = value;
-                this.RaisePropertyChanged("KeyData");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fieldField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Field {
-            get {
-                return this.fieldField;
-            }
-            set {
-                this.fieldField = value;
-                this.RaisePropertyChanged("Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5119,6 +5514,195 @@ namespace SyncServices.InventCountingService {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CriteriaElement[] criteriaElementField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
+        public CriteriaElement[] CriteriaElement {
+            get {
+                return this.criteriaElementField;
+            }
+            set {
+                this.criteriaElementField = value;
+                this.RaisePropertyChanged("CriteriaElement");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataSourceNameField;
+        
+        private string fieldNameField;
+        
+        private Operator operatorField;
+        
+        private string value1Field;
+        
+        private string value2Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DataSourceName {
+            get {
+                return this.dataSourceNameField;
+            }
+            set {
+                this.dataSourceNameField = value;
+                this.RaisePropertyChanged("DataSourceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string FieldName {
+            get {
+                return this.fieldNameField;
+            }
+            set {
+                this.fieldNameField = value;
+                this.RaisePropertyChanged("FieldName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Operator Operator {
+            get {
+                return this.operatorField;
+            }
+            set {
+                this.operatorField = value;
+                this.RaisePropertyChanged("Operator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Value1 {
+            get {
+                return this.value1Field;
+            }
+            set {
+                this.value1Field = value;
+                this.RaisePropertyChanged("Value1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Value2 {
+            get {
+                return this.value2Field;
+            }
+            set {
+                this.value2Field = value;
+                this.RaisePropertyChanged("Value2");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public enum Operator {
+        
+        /// <remarks/>
+        Equal,
+        
+        /// <remarks/>
+        NotEqual,
+        
+        /// <remarks/>
+        Greater,
+        
+        /// <remarks/>
+        GreaterOrEqual,
+        
+        /// <remarks/>
+        Less,
+        
+        /// <remarks/>
+        LessOrEqual,
+        
+        /// <remarks/>
+        Range,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceFindRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+        public SyncServices.InventCountingService.QueryCriteria QueryCriteria;
+        
+        public JournalCountingServiceFindRequest() {
+        }
+        
+        public JournalCountingServiceFindRequest(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.QueryCriteria QueryCriteria) {
+            this.CallContext = CallContext;
+            this.QueryCriteria = QueryCriteria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceFindResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JournalCounting")]
+        public SyncServices.InventCountingService.AxdJournalCounting JournalCounting;
+        
+        public JournalCountingServiceFindResponse() {
+        }
+        
+        public JournalCountingServiceFindResponse(SyncServices.InventCountingService.AxdJournalCounting JournalCounting) {
+            this.JournalCounting = JournalCounting;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface JournalCountingServiceChannel : SyncServices.InventCountingService.JournalCountingService, System.ServiceModel.IClientChannel {
     }
@@ -5147,18 +5731,6 @@ namespace SyncServices.InventCountingService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse SyncServices.InventCountingService.JournalCountingService.GetCountingJournals(SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest request) {
-            return base.Channel.GetCountingJournals(request);
-        }
-        
-        public SyncServices.InventCountingService.InventJournalTableContract[] GetCountingJournals(SyncServices.InventCountingService.CallContext CallContext) {
-            SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetCountingJournals(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableResponse SyncServices.InventCountingService.JournalCountingService.GetItemsAvailable(SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableRequest request) {
             return base.Channel.GetItemsAvailable(request);
         }
@@ -5167,19 +5739,6 @@ namespace SyncServices.InventCountingService {
             SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableRequest();
             inValue.CallContext = CallContext;
             SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetItemsAvailable(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse SyncServices.InventCountingService.JournalCountingService.GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request) {
-            return base.Channel.GetItemUoM(request);
-        }
-        
-        public SyncServices.InventCountingService.InventForItemUnit[] GetItemUoM(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
-            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest();
-            inValue.CallContext = CallContext;
-            inValue.allItems = allItems;
-            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetItemUoM(inValue);
             return retVal.response;
         }
         
@@ -5198,16 +5757,28 @@ namespace SyncServices.InventCountingService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceFindResponse SyncServices.InventCountingService.JournalCountingService.find(SyncServices.InventCountingService.JournalCountingServiceFindRequest request) {
-            return base.Channel.find(request);
+        SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse SyncServices.InventCountingService.JournalCountingService.GetCountingJournals(SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest request) {
+            return base.Channel.GetCountingJournals(request);
         }
         
-        public SyncServices.InventCountingService.AxdJournalCounting find(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.QueryCriteria QueryCriteria) {
-            SyncServices.InventCountingService.JournalCountingServiceFindRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceFindRequest();
+        public SyncServices.InventCountingService.InventJournalTableContract[] GetCountingJournals(SyncServices.InventCountingService.CallContext CallContext) {
+            SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest();
             inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            SyncServices.InventCountingService.JournalCountingServiceFindResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).find(inValue);
-            return retVal.JournalCounting;
+            SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetCountingJournals(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse SyncServices.InventCountingService.JournalCountingService.GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request) {
+            return base.Channel.GetItemUoM(request);
+        }
+        
+        public SyncServices.InventCountingService.InventForItemUnit[] GetItemUoM(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
+            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest();
+            inValue.CallContext = CallContext;
+            inValue.allItems = allItems;
+            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetItemUoM(inValue);
+            return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5246,6 +5817,19 @@ namespace SyncServices.InventCountingService {
             inValue.CallContext = CallContext;
             inValue.EntityKeyList = EntityKeyList;
             SyncServices.InventCountingService.JournalCountingServiceReadResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).read(inValue);
+            return retVal.JournalCounting;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.InventCountingService.JournalCountingServiceFindResponse SyncServices.InventCountingService.JournalCountingService.find(SyncServices.InventCountingService.JournalCountingServiceFindRequest request) {
+            return base.Channel.find(request);
+        }
+        
+        public SyncServices.InventCountingService.AxdJournalCounting find(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.QueryCriteria QueryCriteria) {
+            SyncServices.InventCountingService.JournalCountingServiceFindRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceFindRequest();
+            inValue.CallContext = CallContext;
+            inValue.QueryCriteria = QueryCriteria;
+            SyncServices.InventCountingService.JournalCountingServiceFindResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).find(inValue);
             return retVal.JournalCounting;
         }
     }

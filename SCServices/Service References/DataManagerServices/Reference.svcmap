@@ -18,24 +18,24 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://FAC-AXR3-DEV:8101/DynamicsAx/Services/DataManagerServices" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/DataManagerServices" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DataManagerServices.xsd" MetadataType="Schema" ID="6edddd63-25e1-45d2-a302-4ab4df6f47b8" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd12" />
-    <MetadataFile FileName="DataManagerServices1.xsd" MetadataType="Schema" ID="79bd9aba-e766-4831-9c5b-83cc97b68de6" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd1" />
-    <MetadataFile FileName="DataManagerServices2.xsd" MetadataType="Schema" ID="c16a5ccc-5f74-4a9b-b49a-6fbfb2c1d691" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd0" />
-    <MetadataFile FileName="DataManagerServices3.xsd" MetadataType="Schema" ID="65eb821f-0942-4766-94d6-72d3bda75a96" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd3" />
-    <MetadataFile FileName="DataManagerServices4.xsd" MetadataType="Schema" ID="78364d76-646f-467a-823e-4c7ccdc2df50" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd2" />
-    <MetadataFile FileName="DataManagerServices5.xsd" MetadataType="Schema" ID="8a022a6c-bc5d-496c-a5b9-252fb295eb72" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd10" />
-    <MetadataFile FileName="DataManagerServices6.xsd" MetadataType="Schema" ID="53a0cd25-6eb2-4e1e-8bf7-050df54b9068" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd4" />
-    <MetadataFile FileName="DataManagerServices7.xsd" MetadataType="Schema" ID="8a4dabb6-8e40-4415-80b7-8d1638e7a23f" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd7" />
-    <MetadataFile FileName="DataManagerServices8.xsd" MetadataType="Schema" ID="c461cdf9-1b3d-49af-8d53-89769c668ad8" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd6" />
-    <MetadataFile FileName="DataManagerServices9.xsd" MetadataType="Schema" ID="5871a866-abd6-43c9-be18-84dd8b2182e9" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd9" />
-    <MetadataFile FileName="DataManagerServices10.xsd" MetadataType="Schema" ID="9f6499b0-6025-4b9b-afcd-f53180f19a47" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd8" />
-    <MetadataFile FileName="DataManagerServices11.xsd" MetadataType="Schema" ID="0b73ea40-cfa4-4488-94f1-a7c31c38c6b9" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd11" />
-    <MetadataFile FileName="DataManagerServices12.xsd" MetadataType="Schema" ID="77a08fc7-a895-46da-94b2-2d9213a17a1a" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd5" />
-    <MetadataFile FileName="DataManagerServices.wsdl" MetadataType="Wsdl" ID="52001709-b0ad-4d99-90a1-f23faaa663ce" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices?wsdl=wsdl0" />
-    <MetadataFile FileName="DataManagerServices1.wsdl" MetadataType="Wsdl" ID="a2b20077-d7b9-4100-aacb-550c60734a1b" SourceId="1" SourceUrl="http://fac-axr3-dev:8101/DynamicsAx/Services/DataManagerServices" />
+    <MetadataFile FileName="DataManagerServices13.xsd" MetadataType="Schema" ID="4d765838-b921-47a3-ae6d-9b7583d71428" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd3" />
+    <MetadataFile FileName="DataManagerServices131.xsd" MetadataType="Schema" ID="41cea8d7-fb88-42b1-af97-211762df54e0" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd7" />
+    <MetadataFile FileName="DataManagerServices132.xsd" MetadataType="Schema" ID="be379883-cb1a-4ae4-ad26-80593ed6b576" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd2" />
+    <MetadataFile FileName="DataManagerServices2.wsdl" MetadataType="Wsdl" ID="676ff909-5b48-41b7-85c9-64bd2cfdfcfe" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?wsdl=wsdl0" />
+    <MetadataFile FileName="DataManagerServices133.xsd" MetadataType="Schema" ID="7c2586f1-2e6f-4590-b365-60f0a11b76ea" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd12" />
+    <MetadataFile FileName="DataManagerServices134.xsd" MetadataType="Schema" ID="76198bf0-3e46-426a-ae60-1f27ed8fbf61" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd1" />
+    <MetadataFile FileName="DataManagerServices135.xsd" MetadataType="Schema" ID="fca39d75-a1c1-49f5-8511-e52d05bc89fc" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd5" />
+    <MetadataFile FileName="DataManagerServices136.xsd" MetadataType="Schema" ID="3743aada-a20c-41c4-9cb1-2f0bad498797" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd9" />
+    <MetadataFile FileName="DataManagerServices137.xsd" MetadataType="Schema" ID="3a6d3cc7-af59-4254-bd8b-ff1502ce228f" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd10" />
+    <MetadataFile FileName="DataManagerServices138.xsd" MetadataType="Schema" ID="968fa9d3-ad05-42f7-b4de-90300942285e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd11" />
+    <MetadataFile FileName="DataManagerServices139.xsd" MetadataType="Schema" ID="18ef3219-3ab7-494f-9d2b-62e958668fdf" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd0" />
+    <MetadataFile FileName="DataManagerServices1310.xsd" MetadataType="Schema" ID="ed09fe85-57c5-4927-b31f-a5f0a7ef4a12" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd4" />
+    <MetadataFile FileName="DataManagerServices1311.xsd" MetadataType="Schema" ID="ba1e59d0-1fbf-45fd-9ac6-31dd461e9176" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd8" />
+    <MetadataFile FileName="DataManagerServices21.wsdl" MetadataType="Wsdl" ID="4d2606d3-4047-438b-956b-8729bcd7e156" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices" />
+    <MetadataFile FileName="DataManagerServices1312.xsd" MetadataType="Schema" ID="94f576eb-f8ef-4454-abaa-93dd49afaf2e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/DataManagerServices?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

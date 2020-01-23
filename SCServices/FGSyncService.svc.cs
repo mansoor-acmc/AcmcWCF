@@ -52,13 +52,12 @@ namespace SyncServices
             //UserType are: Admin, Supervisor, Employee
 
             allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });
-            allUser.Add(new UserData() { UserName = "mardini", Password = "mar12345", UserType = "Supervisor" });
-            allUser.Add(new UserData() { UserName = "usman", Password = "usm12345", UserType = "Supervisor" });
-            allUser.Add(new UserData() { UserName = "hamza", Password = "h2018", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "ayman", Password = "a2018", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "hassan", Password = "m2018", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "bakar", Password = "b2018", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "omer", Password = "o2018", UserType = "Employee" });
+            allUser.Add(new UserData() { UserName = "mardini", Password = "mar12345", UserType = "Supervisor" });            
+            allUser.Add(new UserData() { UserName = "hamza", Password = "h2019", UserType = "Employee" });
+            allUser.Add(new UserData() { UserName = "ayman", Password = "a2019", UserType = "Employee" });
+            allUser.Add(new UserData() { UserName = "hassan", Password = "m2019", UserType = "Employee" });
+            allUser.Add(new UserData() { UserName = "bakar", Password = "b2019", UserType = "Employee" });
+            allUser.Add(new UserData() { UserName = "omer", Password = "o2019", UserType = "Employee" });
 
             return allUser;
         }

@@ -395,6 +395,1220 @@ namespace SyncServices.DataManagerServices {
         Error,
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="DataManagerServices.DMDataToSaveService")]
+    public interface DMDataToSaveService {
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest) of message DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest does not match the default value (ConfirmPalletAndLocationReceive)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceiveResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceiveAifFaultFau" +
+            "lt", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse ConfirmPalletAndLocationReceive(SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceConfirmPalletReceiveRequest) of message DMDataToSaveServiceConfirmPalletReceiveRequest does not match the default value (ConfirmPalletReceive)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceiveResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceiveAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletReceiveResponse ConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletReceiveRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCreateRequest) of message DMDataToSaveServiceCreateRequest does not match the default value (create)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/create", ReplyAction="http://tempuri.org/DMDataToSaveService/createResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse create(SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCancelPalletReceiveRequest) of message DMDataToSaveServiceCancelPalletReceiveRequest does not match the default value (CancelPalletReceive)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/CancelPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/CancelPalletReceiveResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/CancelPalletReceiveAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse CancelPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetMaxMovementNumberRequest) of message DMDataToSaveServiceGetMaxMovementNumberRequest does not match the default value (GetMaxMovementNumber)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumber", ReplyAction="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumberResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumberAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse GetMaxMovementNumber(SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateOfflinePalletsRequest) of message DMDataToSaveServiceUpdateOfflinePalletsRequest does not match the default value (UpdateOfflinePallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateOfflinePallets", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateOfflinePalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateOfflinePalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse UpdateOfflinePallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateTransferPalletsRequest) of message DMDataToSaveServiceUpdateTransferPalletsRequest does not match the default value (UpdateTransferPallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateTransferPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateTransferPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateTransferPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse UpdateTransferPallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetItemCodesRequest) of message DMDataToSaveServiceGetItemCodesRequest does not match the default value (GetItemCodes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetItemCodes", ReplyAction="http://tempuri.org/DMDataToSaveService/GetItemCodesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetItemCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse GetItemCodes(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateRequest) of message DMDataToSaveServiceUpdateRequest does not match the default value (update)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/update", ReplyAction="http://tempuri.org/DMDataToSaveService/updateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/updateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse update(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceDMSetPrintAgainRequest) of message DMDataToSaveServiceDMSetPrintAgainRequest does not match the default value (DMSetPrintAgain)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/DMSetPrintAgain", ReplyAction="http://tempuri.org/DMDataToSaveService/DMSetPrintAgainResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/DMSetPrintAgainAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse DMSetPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceDMClearPrintAgainRequest) of message DMDataToSaveServiceDMClearPrintAgainRequest does not match the default value (DMClearPrintAgain)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/DMClearPrintAgain", ReplyAction="http://tempuri.org/DMDataToSaveService/DMClearPrintAgainResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/DMClearPrintAgainAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse DMClearPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetPalletInfoRequest) of message DMDataToSaveServiceGetPalletInfoRequest does not match the default value (GetPalletInfo)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetPalletInfo", ReplyAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse GetPalletInfo(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceImportDataInDynamicsRequest) of message DMDataToSaveServiceImportDataInDynamicsRequest does not match the default value (ImportDataInDynamics)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ImportDataInDynamics", ReplyAction="http://tempuri.org/DMDataToSaveService/ImportDataInDynamicsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ImportDataInDynamicsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse ImportDataInDynamics(SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceSaveItemNumberRequest) of message DMDataToSaveServiceSaveItemNumberRequest does not match the default value (saveItemNumber)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/saveItemNumber", ReplyAction="http://tempuri.org/DMDataToSaveService/saveItemNumberResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/saveItemNumberAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse saveItemNumber(SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceItemGroupPalletsRequest) of message DMDataToSaveServiceItemGroupPalletsRequest does not match the default value (ItemGroupPallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ItemGroupPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/ItemGroupPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ItemGroupPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse ItemGroupPallets(SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetPalletInfoByRecordIdRequest) of message DMDataToSaveServiceGetPalletInfoByRecordIdRequest does not match the default value (GetPalletInfoByRecordId)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordId", ReplyAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse GetPalletInfoByRecordId(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceSummaryNormalPalletsRequest) of message DMDataToSaveServiceSummaryNormalPalletsRequest does not match the default value (SummaryNormalPallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/SummaryNormalPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/SummaryNormalPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/SummaryNormalPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse SummaryNormalPallets(SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCreateDowntimeForMarpakRequest) of message DMDataToSaveServiceCreateDowntimeForMarpakRequest does not match the default value (CreateDowntimeForMarpak)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpak", ReplyAction="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpakResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpakAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse CreateDowntimeForMarpak(SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetItemCodesTableRequest) of message DMDataToSaveServiceGetItemCodesTableRequest does not match the default value (GetItemCodesTable)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetItemCodesTable", ReplyAction="http://tempuri.org/DMDataToSaveService/GetItemCodesTableResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetItemCodesTableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse GetItemCodesTable(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetWHLocationsRequest) of message DMDataToSaveServiceGetWHLocationsRequest does not match the default value (GetWHLocations)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetWHLocations", ReplyAction="http://tempuri.org/DMDataToSaveService/GetWHLocationsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetWHLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsResponse GetWHLocations(SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest) of message DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest does not match the default value (UpdateAndConfirmPalletReceive)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceiveResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceiveAifFaultFault" +
+            "", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+    public partial class CallContext : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string companyField;
+        
+        private string languageField;
+        
+        private string logonAsUserField;
+        
+        private string messageIdField;
+        
+        private string partitionKeyField;
+        
+        private ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] propertyBagField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Company {
+            get {
+                return this.companyField;
+            }
+            set {
+                this.companyField = value;
+                this.RaisePropertyChanged("Company");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+                this.RaisePropertyChanged("Language");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string LogonAsUser {
+            get {
+                return this.logonAsUserField;
+            }
+            set {
+                this.logonAsUserField = value;
+                this.RaisePropertyChanged("LogonAsUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string MessageId {
+            get {
+                return this.messageIdField;
+            }
+            set {
+                this.messageIdField = value;
+                this.RaisePropertyChanged("MessageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string PartitionKey {
+            get {
+                return this.partitionKeyField;
+            }
+            set {
+                this.partitionKeyField = value;
+                this.RaisePropertyChanged("PartitionKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfstringstring", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
+        public ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] PropertyBag {
+            get {
+                return this.propertyBagField;
+            }
+            set {
+                this.propertyBagField = value;
+                this.RaisePropertyChanged("PropertyBag");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+    public partial class ArrayOfKeyValueOfstringstringKeyValueOfstringstring : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("Key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string palletNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string locationId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public long recordId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceUser;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        public bool isFromSL;
+        
+        public DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest() {
+        }
+        
+        public DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, string locationId, long recordId, string deviceName, string deviceUser, bool isFromSL) {
+            this.CallContext = CallContext;
+            this.palletNum = palletNum;
+            this.locationId = locationId;
+            this.recordId = recordId;
+            this.deviceName = deviceName;
+            this.deviceUser = deviceUser;
+            this.isFromSL = isFromSL;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string response;
+        
+        public DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse() {
+        }
+        
+        public DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceConfirmPalletReceiveRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string palletNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long recordId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceUser;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        public bool isFromSL;
+        
+        public DMDataToSaveServiceConfirmPalletReceiveRequest() {
+        }
+        
+        public DMDataToSaveServiceConfirmPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser, bool isFromSL) {
+            this.CallContext = CallContext;
+            this.palletNum = palletNum;
+            this.recordId = recordId;
+            this.deviceName = deviceName;
+            this.deviceUser = deviceUser;
+            this.isFromSL = isFromSL;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceConfirmPalletReceiveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public DMDataToSaveServiceConfirmPalletReceiveResponse() {
+        }
+        
+        public DMDataToSaveServiceConfirmPalletReceiveResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
+    public partial class AxdDMDataToSave : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.Nullable<AxdEnum_boolean> clearNilFieldsOnUpdateField;
+        
+        private bool clearNilFieldsOnUpdateFieldSpecified;
+        
+        private System.Nullable<AxdEnum_XMLDocPurpose> docPurposeField;
+        
+        private bool docPurposeFieldSpecified;
+        
+        private string senderIdField;
+        
+        private AxdEntity_DMExportData[] dMExportDataField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<AxdEnum_boolean> ClearNilFieldsOnUpdate {
+            get {
+                return this.clearNilFieldsOnUpdateField;
+            }
+            set {
+                this.clearNilFieldsOnUpdateField = value;
+                this.RaisePropertyChanged("ClearNilFieldsOnUpdate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ClearNilFieldsOnUpdateSpecified {
+            get {
+                return this.clearNilFieldsOnUpdateFieldSpecified;
+            }
+            set {
+                this.clearNilFieldsOnUpdateFieldSpecified = value;
+                this.RaisePropertyChanged("ClearNilFieldsOnUpdateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<AxdEnum_XMLDocPurpose> DocPurpose {
+            get {
+                return this.docPurposeField;
+            }
+            set {
+                this.docPurposeField = value;
+                this.RaisePropertyChanged("DocPurpose");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DocPurposeSpecified {
+            get {
+                return this.docPurposeFieldSpecified;
+            }
+            set {
+                this.docPurposeFieldSpecified = value;
+                this.RaisePropertyChanged("DocPurposeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string SenderId {
+            get {
+                return this.senderIdField;
+            }
+            set {
+                this.senderIdField = value;
+                this.RaisePropertyChanged("SenderId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DMExportData", Order=3)]
+        public AxdEntity_DMExportData[] DMExportData {
+            get {
+                return this.dMExportDataField;
+            }
+            set {
+                this.dMExportDataField = value;
+                this.RaisePropertyChanged("DMExportData");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public enum AxdEnum_boolean {
+        
+        /// <remarks/>
+        @false,
+        
+        /// <remarks/>
+        @true,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public enum AxdEnum_XMLDocPurpose {
+        
+        /// <remarks/>
+        Original,
+        
+        /// <remarks/>
+        Duplicate,
+        
+        /// <remarks/>
+        Proforma,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
+    public partial class AxdEntity_DMExportData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string _DocumentHashField;
+        
+        private System.Nullable<long> recIdField;
+        
+        private bool recIdFieldSpecified;
+        
+        private System.Nullable<int> recVersionField;
+        
+        private bool recVersionFieldSpecified;
+        
+        private System.Nullable<System.DateTime> dateField;
+        
+        private bool dateFieldSpecified;
+        
+        private System.Nullable<int> exportFieldIDField;
+        
+        private bool exportFieldIDFieldSpecified;
+        
+        private string fieldValueField;
+        
+        private string itemNumberField;
+        
+        private string classField;
+        
+        private AxdEnum_AxdEntityAction actionField;
+        
+        private bool actionFieldSpecified;
+        
+        public AxdEntity_DMExportData() {
+            this.classField = "entity";
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string _DocumentHash {
+            get {
+                return this._DocumentHashField;
+            }
+            set {
+                this._DocumentHashField = value;
+                this.RaisePropertyChanged("_DocumentHash");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<long> RecId {
+            get {
+                return this.recIdField;
+            }
+            set {
+                this.recIdField = value;
+                this.RaisePropertyChanged("RecId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RecIdSpecified {
+            get {
+                return this.recIdFieldSpecified;
+            }
+            set {
+                this.recIdFieldSpecified = value;
+                this.RaisePropertyChanged("RecIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<int> RecVersion {
+            get {
+                return this.recVersionField;
+            }
+            set {
+                this.recVersionField = value;
+                this.RaisePropertyChanged("RecVersion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RecVersionSpecified {
+            get {
+                return this.recVersionFieldSpecified;
+            }
+            set {
+                this.recVersionFieldSpecified = value;
+                this.RaisePropertyChanged("RecVersionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true, Order=3)]
+        public System.Nullable<System.DateTime> Date {
+            get {
+                return this.dateField;
+            }
+            set {
+                this.dateField = value;
+                this.RaisePropertyChanged("Date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DateSpecified {
+            get {
+                return this.dateFieldSpecified;
+            }
+            set {
+                this.dateFieldSpecified = value;
+                this.RaisePropertyChanged("DateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<int> ExportFieldID {
+            get {
+                return this.exportFieldIDField;
+            }
+            set {
+                this.exportFieldIDField = value;
+                this.RaisePropertyChanged("ExportFieldID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ExportFieldIDSpecified {
+            get {
+                return this.exportFieldIDFieldSpecified;
+            }
+            set {
+                this.exportFieldIDFieldSpecified = value;
+                this.RaisePropertyChanged("ExportFieldIDSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string FieldValue {
+            get {
+                return this.fieldValueField;
+            }
+            set {
+                this.fieldValueField = value;
+                this.RaisePropertyChanged("FieldValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string ItemNumber {
+            get {
+                return this.itemNumberField;
+            }
+            set {
+                this.itemNumberField = value;
+                this.RaisePropertyChanged("ItemNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string @class {
+            get {
+                return this.classField;
+            }
+            set {
+                this.classField = value;
+                this.RaisePropertyChanged("class");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public AxdEnum_AxdEntityAction action {
+            get {
+                return this.actionField;
+            }
+            set {
+                this.actionField = value;
+                this.RaisePropertyChanged("action");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool actionSpecified {
+            get {
+                return this.actionFieldSpecified;
+            }
+            set {
+                this.actionFieldSpecified = value;
+                this.RaisePropertyChanged("actionSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
+    public enum AxdEnum_AxdEntityAction {
+        
+        /// <remarks/>
+        create,
+        
+        /// <remarks/>
+        update,
+        
+        /// <remarks/>
+        replace,
+        
+        /// <remarks/>
+        delete,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private KeyField[] keyDataField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public KeyField[] KeyData {
+            get {
+                return this.keyDataField;
+            }
+            set {
+                this.keyDataField = value;
+                this.RaisePropertyChanged("KeyData");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fieldField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Field {
+            get {
+                return this.fieldField;
+            }
+            set {
+                this.fieldField = value;
+                this.RaisePropertyChanged("Field");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceCreateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
+        public SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave;
+        
+        public DMDataToSaveServiceCreateRequest() {
+        }
+        
+        public DMDataToSaveServiceCreateRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
+            this.CallContext = CallContext;
+            this.DMDataToSave = DMDataToSave;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceCreateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.DataManagerServices.EntityKey[] EntityKeyList;
+        
+        public DMDataToSaveServiceCreateResponse() {
+        }
+        
+        public DMDataToSaveServiceCreateResponse(SyncServices.DataManagerServices.EntityKey[] EntityKeyList) {
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCancelPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceCancelPalletReceiveRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string palletNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long recordId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceUser;
+        
+        public DMDataToSaveServiceCancelPalletReceiveRequest() {
+        }
+        
+        public DMDataToSaveServiceCancelPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+            this.CallContext = CallContext;
+            this.palletNum = palletNum;
+            this.recordId = recordId;
+            this.deviceName = deviceName;
+            this.deviceUser = deviceUser;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCancelPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceCancelPalletReceiveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public DMDataToSaveServiceCancelPalletReceiveResponse() {
+        }
+        
+        public DMDataToSaveServiceCancelPalletReceiveResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetMaxMovementNumberRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetMaxMovementNumberRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        public DMDataToSaveServiceGetMaxMovementNumberRequest() {
+        }
+        
+        public DMDataToSaveServiceGetMaxMovementNumberRequest(SyncServices.DataManagerServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetMaxMovementNumberResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetMaxMovementNumberResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long response;
+        
+        public DMDataToSaveServiceGetMaxMovementNumberResponse() {
+        }
+        
+        public DMDataToSaveServiceGetMaxMovementNumberResponse(long response) {
+            this.response = response;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class DMExportOfflineContract : XppObjectBase {
+        
+        private decimal boxesOnPalletField;
+        
+        private bool boxesOnPalletFieldSpecified;
+        
+        private string caliberField;
+        
+        private string deviceNameField;
+        
+        private string deviceUserField;
+        
+        private string gradeField;
+        
+        private bool isApprovedByFGField;
+        
+        private bool isApprovedByFGFieldSpecified;
+        
+        private bool isApprovedBySLField;
+        
+        private bool isApprovedBySLFieldSpecified;
+        
+        private NoYes isOfflineModeField;
+        
+        private bool isOfflineModeFieldSpecified;
+        
+        private string palletNumField;
+        
+        private string shadeField;
+        
+        private string whLocationIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public decimal BoxesOnPallet {
+            get {
+                return this.boxesOnPalletField;
+            }
+            set {
+                this.boxesOnPalletField = value;
+                this.RaisePropertyChanged("BoxesOnPallet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BoxesOnPalletSpecified {
+            get {
+                return this.boxesOnPalletFieldSpecified;
+            }
+            set {
+                this.boxesOnPalletFieldSpecified = value;
+                this.RaisePropertyChanged("BoxesOnPalletSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Caliber {
+            get {
+                return this.caliberField;
+            }
+            set {
+                this.caliberField = value;
+                this.RaisePropertyChanged("Caliber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string DeviceName {
+            get {
+                return this.deviceNameField;
+            }
+            set {
+                this.deviceNameField = value;
+                this.RaisePropertyChanged("DeviceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string DeviceUser {
+            get {
+                return this.deviceUserField;
+            }
+            set {
+                this.deviceUserField = value;
+                this.RaisePropertyChanged("DeviceUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsApprovedByFG {
+            get {
+                return this.isApprovedByFGField;
+            }
+            set {
+                this.isApprovedByFGField = value;
+                this.RaisePropertyChanged("IsApprovedByFG");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsApprovedByFGSpecified {
+            get {
+                return this.isApprovedByFGFieldSpecified;
+            }
+            set {
+                this.isApprovedByFGFieldSpecified = value;
+                this.RaisePropertyChanged("IsApprovedByFGSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool IsApprovedBySL {
+            get {
+                return this.isApprovedBySLField;
+            }
+            set {
+                this.isApprovedBySLField = value;
+                this.RaisePropertyChanged("IsApprovedBySL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsApprovedBySLSpecified {
+            get {
+                return this.isApprovedBySLFieldSpecified;
+            }
+            set {
+                this.isApprovedBySLFieldSpecified = value;
+                this.RaisePropertyChanged("IsApprovedBySLSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public NoYes IsOfflineMode {
+            get {
+                return this.isOfflineModeField;
+            }
+            set {
+                this.isOfflineModeField = value;
+                this.RaisePropertyChanged("IsOfflineMode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsOfflineModeSpecified {
+            get {
+                return this.isOfflineModeFieldSpecified;
+            }
+            set {
+                this.isOfflineModeFieldSpecified = value;
+                this.RaisePropertyChanged("IsOfflineModeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string PalletNum {
+            get {
+                return this.palletNumField;
+            }
+            set {
+                this.palletNumField = value;
+                this.RaisePropertyChanged("PalletNum");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+                this.RaisePropertyChanged("Shade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public string whLocationId {
+            get {
+                return this.whLocationIdField;
+            }
+            set {
+                this.whLocationIdField = value;
+                this.RaisePropertyChanged("whLocationId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    public enum NoYes {
+        
+        /// <remarks/>
+        No,
+        
+        /// <remarks/>
+        Yes,
+    }
+    
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WmsLocationContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ItemCodeContract))]
@@ -875,238 +2089,6 @@ namespace SyncServices.DataManagerServices {
                 this.RaisePropertyChanged("whLocationId");
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    public partial class DMExportOfflineContract : XppObjectBase {
-        
-        private decimal boxesOnPalletField;
-        
-        private bool boxesOnPalletFieldSpecified;
-        
-        private string caliberField;
-        
-        private string deviceNameField;
-        
-        private string deviceUserField;
-        
-        private string gradeField;
-        
-        private bool isApprovedByFGField;
-        
-        private bool isApprovedByFGFieldSpecified;
-        
-        private bool isApprovedBySLField;
-        
-        private bool isApprovedBySLFieldSpecified;
-        
-        private NoYes isOfflineModeField;
-        
-        private bool isOfflineModeFieldSpecified;
-        
-        private string palletNumField;
-        
-        private string shadeField;
-        
-        private string whLocationIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public decimal BoxesOnPallet {
-            get {
-                return this.boxesOnPalletField;
-            }
-            set {
-                this.boxesOnPalletField = value;
-                this.RaisePropertyChanged("BoxesOnPallet");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BoxesOnPalletSpecified {
-            get {
-                return this.boxesOnPalletFieldSpecified;
-            }
-            set {
-                this.boxesOnPalletFieldSpecified = value;
-                this.RaisePropertyChanged("BoxesOnPalletSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string Caliber {
-            get {
-                return this.caliberField;
-            }
-            set {
-                this.caliberField = value;
-                this.RaisePropertyChanged("Caliber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string DeviceName {
-            get {
-                return this.deviceNameField;
-            }
-            set {
-                this.deviceNameField = value;
-                this.RaisePropertyChanged("DeviceName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string DeviceUser {
-            get {
-                return this.deviceUserField;
-            }
-            set {
-                this.deviceUserField = value;
-                this.RaisePropertyChanged("DeviceUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string Grade {
-            get {
-                return this.gradeField;
-            }
-            set {
-                this.gradeField = value;
-                this.RaisePropertyChanged("Grade");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool IsApprovedByFG {
-            get {
-                return this.isApprovedByFGField;
-            }
-            set {
-                this.isApprovedByFGField = value;
-                this.RaisePropertyChanged("IsApprovedByFG");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsApprovedByFGSpecified {
-            get {
-                return this.isApprovedByFGFieldSpecified;
-            }
-            set {
-                this.isApprovedByFGFieldSpecified = value;
-                this.RaisePropertyChanged("IsApprovedByFGSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool IsApprovedBySL {
-            get {
-                return this.isApprovedBySLField;
-            }
-            set {
-                this.isApprovedBySLField = value;
-                this.RaisePropertyChanged("IsApprovedBySL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsApprovedBySLSpecified {
-            get {
-                return this.isApprovedBySLFieldSpecified;
-            }
-            set {
-                this.isApprovedBySLFieldSpecified = value;
-                this.RaisePropertyChanged("IsApprovedBySLSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public NoYes IsOfflineMode {
-            get {
-                return this.isOfflineModeField;
-            }
-            set {
-                this.isOfflineModeField = value;
-                this.RaisePropertyChanged("IsOfflineMode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsOfflineModeSpecified {
-            get {
-                return this.isOfflineModeFieldSpecified;
-            }
-            set {
-                this.isOfflineModeFieldSpecified = value;
-                this.RaisePropertyChanged("IsOfflineModeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public string PalletNum {
-            get {
-                return this.palletNumField;
-            }
-            set {
-                this.palletNumField = value;
-                this.RaisePropertyChanged("PalletNum");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string Shade {
-            get {
-                return this.shadeField;
-            }
-            set {
-                this.shadeField = value;
-                this.RaisePropertyChanged("Shade");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public string whLocationId {
-            get {
-                return this.whLocationIdField;
-            }
-            set {
-                this.whLocationIdField = value;
-                this.RaisePropertyChanged("whLocationId");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
-    public enum NoYes {
-        
-        /// <remarks/>
-        No,
-        
-        /// <remarks/>
-        Yes,
     }
     
     /// <remarks/>
@@ -2073,306 +3055,290 @@ namespace SyncServices.DataManagerServices {
         Forklift,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="DataManagerServices.DMDataToSaveService")]
-    public interface DMDataToSaveService {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateOfflinePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateOfflinePalletsRequest {
         
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceImportDataInDynamicsRequest) of message DMDataToSaveServiceImportDataInDynamicsRequest does not match the default value (ImportDataInDynamics)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ImportDataInDynamics", ReplyAction="http://tempuri.org/DMDataToSaveService/ImportDataInDynamicsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ImportDataInDynamicsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse ImportDataInDynamics(SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest request);
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
         
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceSummaryNormalPalletsRequest) of message DMDataToSaveServiceSummaryNormalPalletsRequest does not match the default value (SummaryNormalPallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/SummaryNormalPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/SummaryNormalPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/SummaryNormalPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse SummaryNormalPallets(SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.DMExportOfflineContract[] lines;
         
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceSaveItemNumberRequest) of message DMDataToSaveServiceSaveItemNumberRequest does not match the default value (saveItemNumber)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/saveItemNumber", ReplyAction="http://tempuri.org/DMDataToSaveService/saveItemNumberResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/saveItemNumberAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse saveItemNumber(SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateRequest) of message DMDataToSaveServiceUpdateRequest does not match the default value (update)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/update", ReplyAction="http://tempuri.org/DMDataToSaveService/updateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/updateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse update(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest) of message DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest does not match the default value (ConfirmPalletAndLocationReceive)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceiveResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletAndLocationReceiveAifFaultFau" +
-            "lt", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse ConfirmPalletAndLocationReceive(SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetPalletInfoRequest) of message DMDataToSaveServiceGetPalletInfoRequest does not match the default value (GetPalletInfo)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetPalletInfo", ReplyAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse GetPalletInfo(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceDMClearPrintAgainRequest) of message DMDataToSaveServiceDMClearPrintAgainRequest does not match the default value (DMClearPrintAgain)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/DMClearPrintAgain", ReplyAction="http://tempuri.org/DMDataToSaveService/DMClearPrintAgainResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/DMClearPrintAgainAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse DMClearPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetPalletInfoByRecordIdRequest) of message DMDataToSaveServiceGetPalletInfoByRecordIdRequest does not match the default value (GetPalletInfoByRecordId)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordId", ReplyAction="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetPalletInfoByRecordIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse GetPalletInfoByRecordId(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceItemGroupPalletsRequest) of message DMDataToSaveServiceItemGroupPalletsRequest does not match the default value (ItemGroupPallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ItemGroupPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/ItemGroupPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ItemGroupPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse ItemGroupPallets(SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateTransferPalletsRequest) of message DMDataToSaveServiceUpdateTransferPalletsRequest does not match the default value (UpdateTransferPallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateTransferPallets", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateTransferPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateTransferPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse UpdateTransferPallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetItemCodesTableRequest) of message DMDataToSaveServiceGetItemCodesTableRequest does not match the default value (GetItemCodesTable)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetItemCodesTable", ReplyAction="http://tempuri.org/DMDataToSaveService/GetItemCodesTableResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetItemCodesTableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse GetItemCodesTable(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCreateRequest) of message DMDataToSaveServiceCreateRequest does not match the default value (create)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/create", ReplyAction="http://tempuri.org/DMDataToSaveService/createResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse create(SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetMaxMovementNumberRequest) of message DMDataToSaveServiceGetMaxMovementNumberRequest does not match the default value (GetMaxMovementNumber)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumber", ReplyAction="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumberResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetMaxMovementNumberAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse GetMaxMovementNumber(SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceDMSetPrintAgainRequest) of message DMDataToSaveServiceDMSetPrintAgainRequest does not match the default value (DMSetPrintAgain)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/DMSetPrintAgain", ReplyAction="http://tempuri.org/DMDataToSaveService/DMSetPrintAgainResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/DMSetPrintAgainAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse DMSetPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetItemCodesRequest) of message DMDataToSaveServiceGetItemCodesRequest does not match the default value (GetItemCodes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetItemCodes", ReplyAction="http://tempuri.org/DMDataToSaveService/GetItemCodesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetItemCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse GetItemCodes(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCancelPalletReceiveRequest) of message DMDataToSaveServiceCancelPalletReceiveRequest does not match the default value (CancelPalletReceive)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/CancelPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/CancelPalletReceiveResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/CancelPalletReceiveAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse CancelPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateOfflinePalletsRequest) of message DMDataToSaveServiceUpdateOfflinePalletsRequest does not match the default value (UpdateOfflinePallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateOfflinePallets", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateOfflinePalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateOfflinePalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse UpdateOfflinePallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceCreateDowntimeForMarpakRequest) of message DMDataToSaveServiceCreateDowntimeForMarpakRequest does not match the default value (CreateDowntimeForMarpak)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpak", ReplyAction="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpakResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/CreateDowntimeForMarpakAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse CreateDowntimeForMarpak(SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest) of message DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest does not match the default value (UpdateAndConfirmPalletReceive)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceiveResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/UpdateAndConfirmPalletReceiveAifFaultFault" +
-            "", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceConfirmPalletReceiveRequest) of message DMDataToSaveServiceConfirmPalletReceiveRequest does not match the default value (ConfirmPalletReceive)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceive", ReplyAction="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceiveResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/ConfirmPalletReceiveAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletReceiveResponse ConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletReceiveRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (DMDataToSaveServiceGetWHLocationsRequest) of message DMDataToSaveServiceGetWHLocationsRequest does not match the default value (GetWHLocations)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DMDataToSaveService/GetWHLocations", ReplyAction="http://tempuri.org/DMDataToSaveService/GetWHLocationsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.DataManagerServices.AifFault), Action="http://tempuri.org/DMDataToSaveService/GetWHLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsResponse GetWHLocations(SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-    public partial class CallContext : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string companyField;
-        
-        private string languageField;
-        
-        private string logonAsUserField;
-        
-        private string messageIdField;
-        
-        private string partitionKeyField;
-        
-        private ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] propertyBagField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string Company {
-            get {
-                return this.companyField;
-            }
-            set {
-                this.companyField = value;
-                this.RaisePropertyChanged("Company");
-            }
+        public DMDataToSaveServiceUpdateOfflinePalletsRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string Language {
-            get {
-                return this.languageField;
-            }
-            set {
-                this.languageField = value;
-                this.RaisePropertyChanged("Language");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string LogonAsUser {
-            get {
-                return this.logonAsUserField;
-            }
-            set {
-                this.logonAsUserField = value;
-                this.RaisePropertyChanged("LogonAsUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string MessageId {
-            get {
-                return this.messageIdField;
-            }
-            set {
-                this.messageIdField = value;
-                this.RaisePropertyChanged("MessageId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string PartitionKey {
-            get {
-                return this.partitionKeyField;
-            }
-            set {
-                this.partitionKeyField = value;
-                this.RaisePropertyChanged("PartitionKey");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfstringstring", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
-        public ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] PropertyBag {
-            get {
-                return this.propertyBagField;
-            }
-            set {
-                this.propertyBagField = value;
-                this.RaisePropertyChanged("PropertyBag");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        public DMDataToSaveServiceUpdateOfflinePalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportOfflineContract[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-    public partial class ArrayOfKeyValueOfstringstringKeyValueOfstringstring : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateOfflinePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateOfflinePalletsResponse {
         
-        private string keyField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.DMExportContract[] response;
         
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string Key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("Key");
-            }
+        public DMDataToSaveServiceUpdateOfflinePalletsResponse() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
+        public DMDataToSaveServiceUpdateOfflinePalletsResponse(SyncServices.DataManagerServices.DMExportContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateTransferPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateTransferPalletsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.DMForTransfer[] lines;
+        
+        public DMDataToSaveServiceUpdateTransferPalletsRequest() {
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        public DMDataToSaveServiceUpdateTransferPalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMForTransfer[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateTransferPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateTransferPalletsResponse {
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.DMForTransfer[] response;
+        
+        public DMDataToSaveServiceUpdateTransferPalletsResponse() {
+        }
+        
+        public DMDataToSaveServiceUpdateTransferPalletsResponse(SyncServices.DataManagerServices.DMForTransfer[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetItemCodesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        public DMDataToSaveServiceGetItemCodesRequest() {
+        }
+        
+        public DMDataToSaveServiceGetItemCodesRequest(SyncServices.DataManagerServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetItemCodesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.ItemCodeContract[] response;
+        
+        public DMDataToSaveServiceGetItemCodesResponse() {
+        }
+        
+        public DMDataToSaveServiceGetItemCodesResponse(SyncServices.DataManagerServices.ItemCodeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.DataManagerServices.EntityKey[] EntityKeyList;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
+        public SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave;
+        
+        public DMDataToSaveServiceUpdateRequest() {
+        }
+        
+        public DMDataToSaveServiceUpdateRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.EntityKey[] EntityKeyList, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+            this.DMDataToSave = DMDataToSave;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateResponse {
+        
+        public DMDataToSaveServiceUpdateResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMSetPrintAgainRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceDMSetPrintAgainRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string palletNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long recordId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceUser;
+        
+        public DMDataToSaveServiceDMSetPrintAgainRequest() {
+        }
+        
+        public DMDataToSaveServiceDMSetPrintAgainRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+            this.CallContext = CallContext;
+            this.palletNum = palletNum;
+            this.recordId = recordId;
+            this.deviceName = deviceName;
+            this.deviceUser = deviceUser;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMSetPrintAgainResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceDMSetPrintAgainResponse {
+        
+        public DMDataToSaveServiceDMSetPrintAgainResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMClearPrintAgainRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceDMClearPrintAgainRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        public DMDataToSaveServiceDMClearPrintAgainRequest() {
+        }
+        
+        public DMDataToSaveServiceDMClearPrintAgainRequest(SyncServices.DataManagerServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMClearPrintAgainResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceDMClearPrintAgainResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.DataManagerServices.DMExportMiniContract[] response;
+        
+        public DMDataToSaveServiceDMClearPrintAgainResponse() {
+        }
+        
+        public DMDataToSaveServiceDMClearPrintAgainResponse(SyncServices.DataManagerServices.DMExportMiniContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetPalletInfoRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string palletNum;
+        
+        public DMDataToSaveServiceGetPalletInfoRequest() {
+        }
+        
+        public DMDataToSaveServiceGetPalletInfoRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum) {
+            this.CallContext = CallContext;
+            this.palletNum = palletNum;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetPalletInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.DMExportContract response;
+        
+        public DMDataToSaveServiceGetPalletInfoResponse() {
+        }
+        
+        public DMDataToSaveServiceGetPalletInfoResponse(SyncServices.DataManagerServices.DMExportContract response) {
+            this.response = response;
         }
     }
     
@@ -2422,48 +3388,6 @@ namespace SyncServices.DataManagerServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceSummaryNormalPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceSummaryNormalPalletsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _itemId;
-        
-        public DMDataToSaveServiceSummaryNormalPalletsRequest() {
-        }
-        
-        public DMDataToSaveServiceSummaryNormalPalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, string _itemId) {
-            this.CallContext = CallContext;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceSummaryNormalPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceSummaryNormalPalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMSummaryContract[] response;
-        
-        public DMDataToSaveServiceSummaryNormalPalletsResponse() {
-        }
-        
-        public DMDataToSaveServiceSummaryNormalPalletsResponse(SyncServices.DataManagerServices.DMSummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceSaveItemNumberRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class DMDataToSaveServiceSaveItemNumberRequest {
         
@@ -2497,674 +3421,6 @@ namespace SyncServices.DataManagerServices {
         }
         
         public DMDataToSaveServiceSaveItemNumberResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private KeyField[] keyDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public KeyField[] KeyData {
-            get {
-                return this.keyDataField;
-            }
-            set {
-                this.keyDataField = value;
-                this.RaisePropertyChanged("KeyData");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fieldField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Field {
-            get {
-                return this.fieldField;
-            }
-            set {
-                this.fieldField = value;
-                this.RaisePropertyChanged("Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
-    public partial class AxdDMDataToSave : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.Nullable<AxdEnum_boolean> clearNilFieldsOnUpdateField;
-        
-        private bool clearNilFieldsOnUpdateFieldSpecified;
-        
-        private System.Nullable<AxdEnum_XMLDocPurpose> docPurposeField;
-        
-        private bool docPurposeFieldSpecified;
-        
-        private string senderIdField;
-        
-        private AxdEntity_DMExportData[] dMExportDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public System.Nullable<AxdEnum_boolean> ClearNilFieldsOnUpdate {
-            get {
-                return this.clearNilFieldsOnUpdateField;
-            }
-            set {
-                this.clearNilFieldsOnUpdateField = value;
-                this.RaisePropertyChanged("ClearNilFieldsOnUpdate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ClearNilFieldsOnUpdateSpecified {
-            get {
-                return this.clearNilFieldsOnUpdateFieldSpecified;
-            }
-            set {
-                this.clearNilFieldsOnUpdateFieldSpecified = value;
-                this.RaisePropertyChanged("ClearNilFieldsOnUpdateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public System.Nullable<AxdEnum_XMLDocPurpose> DocPurpose {
-            get {
-                return this.docPurposeField;
-            }
-            set {
-                this.docPurposeField = value;
-                this.RaisePropertyChanged("DocPurpose");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DocPurposeSpecified {
-            get {
-                return this.docPurposeFieldSpecified;
-            }
-            set {
-                this.docPurposeFieldSpecified = value;
-                this.RaisePropertyChanged("DocPurposeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string SenderId {
-            get {
-                return this.senderIdField;
-            }
-            set {
-                this.senderIdField = value;
-                this.RaisePropertyChanged("SenderId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DMExportData", Order=3)]
-        public AxdEntity_DMExportData[] DMExportData {
-            get {
-                return this.dMExportDataField;
-            }
-            set {
-                this.dMExportDataField = value;
-                this.RaisePropertyChanged("DMExportData");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public enum AxdEnum_boolean {
-        
-        /// <remarks/>
-        @false,
-        
-        /// <remarks/>
-        @true,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public enum AxdEnum_XMLDocPurpose {
-        
-        /// <remarks/>
-        Original,
-        
-        /// <remarks/>
-        Duplicate,
-        
-        /// <remarks/>
-        Proforma,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
-    public partial class AxdEntity_DMExportData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string _DocumentHashField;
-        
-        private System.Nullable<long> recIdField;
-        
-        private bool recIdFieldSpecified;
-        
-        private System.Nullable<int> recVersionField;
-        
-        private bool recVersionFieldSpecified;
-        
-        private System.Nullable<System.DateTime> dateField;
-        
-        private bool dateFieldSpecified;
-        
-        private System.Nullable<int> exportFieldIDField;
-        
-        private bool exportFieldIDFieldSpecified;
-        
-        private string fieldValueField;
-        
-        private string itemNumberField;
-        
-        private string classField;
-        
-        private AxdEnum_AxdEntityAction actionField;
-        
-        private bool actionFieldSpecified;
-        
-        public AxdEntity_DMExportData() {
-            this.classField = "entity";
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string _DocumentHash {
-            get {
-                return this._DocumentHashField;
-            }
-            set {
-                this._DocumentHashField = value;
-                this.RaisePropertyChanged("_DocumentHash");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public System.Nullable<long> RecId {
-            get {
-                return this.recIdField;
-            }
-            set {
-                this.recIdField = value;
-                this.RaisePropertyChanged("RecId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool RecIdSpecified {
-            get {
-                return this.recIdFieldSpecified;
-            }
-            set {
-                this.recIdFieldSpecified = value;
-                this.RaisePropertyChanged("RecIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public System.Nullable<int> RecVersion {
-            get {
-                return this.recVersionField;
-            }
-            set {
-                this.recVersionField = value;
-                this.RaisePropertyChanged("RecVersion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool RecVersionSpecified {
-            get {
-                return this.recVersionFieldSpecified;
-            }
-            set {
-                this.recVersionFieldSpecified = value;
-                this.RaisePropertyChanged("RecVersionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true, Order=3)]
-        public System.Nullable<System.DateTime> Date {
-            get {
-                return this.dateField;
-            }
-            set {
-                this.dateField = value;
-                this.RaisePropertyChanged("Date");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DateSpecified {
-            get {
-                return this.dateFieldSpecified;
-            }
-            set {
-                this.dateFieldSpecified = value;
-                this.RaisePropertyChanged("DateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public System.Nullable<int> ExportFieldID {
-            get {
-                return this.exportFieldIDField;
-            }
-            set {
-                this.exportFieldIDField = value;
-                this.RaisePropertyChanged("ExportFieldID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ExportFieldIDSpecified {
-            get {
-                return this.exportFieldIDFieldSpecified;
-            }
-            set {
-                this.exportFieldIDFieldSpecified = value;
-                this.RaisePropertyChanged("ExportFieldIDSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string FieldValue {
-            get {
-                return this.fieldValueField;
-            }
-            set {
-                this.fieldValueField = value;
-                this.RaisePropertyChanged("FieldValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string ItemNumber {
-            get {
-                return this.itemNumberField;
-            }
-            set {
-                this.itemNumberField = value;
-                this.RaisePropertyChanged("ItemNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string @class {
-            get {
-                return this.classField;
-            }
-            set {
-                this.classField = value;
-                this.RaisePropertyChanged("class");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public AxdEnum_AxdEntityAction action {
-            get {
-                return this.actionField;
-            }
-            set {
-                this.actionField = value;
-                this.RaisePropertyChanged("action");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool actionSpecified {
-            get {
-                return this.actionFieldSpecified;
-            }
-            set {
-                this.actionFieldSpecified = value;
-                this.RaisePropertyChanged("actionSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
-    public enum AxdEnum_AxdEntityAction {
-        
-        /// <remarks/>
-        create,
-        
-        /// <remarks/>
-        update,
-        
-        /// <remarks/>
-        replace,
-        
-        /// <remarks/>
-        delete,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.DataManagerServices.EntityKey[] EntityKeyList;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
-        public SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave;
-        
-        public DMDataToSaveServiceUpdateRequest() {
-        }
-        
-        public DMDataToSaveServiceUpdateRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.EntityKey[] EntityKeyList, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-            this.DMDataToSave = DMDataToSave;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateResponse {
-        
-        public DMDataToSaveServiceUpdateResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string palletNum;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string locationId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public long recordId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceUser;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
-        public bool isFromSL;
-        
-        public DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest() {
-        }
-        
-        public DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, string locationId, long recordId, string deviceName, string deviceUser, bool isFromSL) {
-            this.CallContext = CallContext;
-            this.palletNum = palletNum;
-            this.locationId = locationId;
-            this.recordId = recordId;
-            this.deviceName = deviceName;
-            this.deviceUser = deviceUser;
-            this.isFromSL = isFromSL;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string response;
-        
-        public DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse() {
-        }
-        
-        public DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetPalletInfoRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string palletNum;
-        
-        public DMDataToSaveServiceGetPalletInfoRequest() {
-        }
-        
-        public DMDataToSaveServiceGetPalletInfoRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum) {
-            this.CallContext = CallContext;
-            this.palletNum = palletNum;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetPalletInfoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.DMExportContract response;
-        
-        public DMDataToSaveServiceGetPalletInfoResponse() {
-        }
-        
-        public DMDataToSaveServiceGetPalletInfoResponse(SyncServices.DataManagerServices.DMExportContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMClearPrintAgainRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceDMClearPrintAgainRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        public DMDataToSaveServiceDMClearPrintAgainRequest() {
-        }
-        
-        public DMDataToSaveServiceDMClearPrintAgainRequest(SyncServices.DataManagerServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMClearPrintAgainResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceDMClearPrintAgainResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMExportMiniContract[] response;
-        
-        public DMDataToSaveServiceDMClearPrintAgainResponse() {
-        }
-        
-        public DMDataToSaveServiceDMClearPrintAgainResponse(SyncServices.DataManagerServices.DMExportMiniContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoByRecordIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetPalletInfoByRecordIdRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long recordId;
-        
-        public DMDataToSaveServiceGetPalletInfoByRecordIdRequest() {
-        }
-        
-        public DMDataToSaveServiceGetPalletInfoByRecordIdRequest(SyncServices.DataManagerServices.CallContext CallContext, long recordId) {
-            this.CallContext = CallContext;
-            this.recordId = recordId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoByRecordIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetPalletInfoByRecordIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.DMExportContract response;
-        
-        public DMDataToSaveServiceGetPalletInfoByRecordIdResponse() {
-        }
-        
-        public DMDataToSaveServiceGetPalletInfoByRecordIdResponse(SyncServices.DataManagerServices.DMExportContract response) {
             this.response = response;
         }
     }
@@ -3229,239 +3485,39 @@ namespace SyncServices.DataManagerServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateTransferPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateTransferPalletsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoByRecordIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetPalletInfoByRecordIdRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.DataManagerServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMForTransfer[] lines;
-        
-        public DMDataToSaveServiceUpdateTransferPalletsRequest() {
-        }
-        
-        public DMDataToSaveServiceUpdateTransferPalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMForTransfer[] lines) {
-            this.CallContext = CallContext;
-            this.lines = lines;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateTransferPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateTransferPalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMForTransfer[] response;
-        
-        public DMDataToSaveServiceUpdateTransferPalletsResponse() {
-        }
-        
-        public DMDataToSaveServiceUpdateTransferPalletsResponse(SyncServices.DataManagerServices.DMForTransfer[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesTableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetItemCodesTableRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        public DMDataToSaveServiceGetItemCodesTableRequest() {
-        }
-        
-        public DMDataToSaveServiceGetItemCodesTableRequest(SyncServices.DataManagerServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesTableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetItemCodesTableResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Data.DataSet response;
-        
-        public DMDataToSaveServiceGetItemCodesTableResponse() {
-        }
-        
-        public DMDataToSaveServiceGetItemCodesTableResponse(System.Data.DataSet response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceCreateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/DMDataToSave")]
-        public SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave;
-        
-        public DMDataToSaveServiceCreateRequest() {
-        }
-        
-        public DMDataToSaveServiceCreateRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
-            this.CallContext = CallContext;
-            this.DMDataToSave = DMDataToSave;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceCreateResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.DataManagerServices.EntityKey[] EntityKeyList;
-        
-        public DMDataToSaveServiceCreateResponse() {
-        }
-        
-        public DMDataToSaveServiceCreateResponse(SyncServices.DataManagerServices.EntityKey[] EntityKeyList) {
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetMaxMovementNumberRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetMaxMovementNumberRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        public DMDataToSaveServiceGetMaxMovementNumberRequest() {
-        }
-        
-        public DMDataToSaveServiceGetMaxMovementNumberRequest(SyncServices.DataManagerServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetMaxMovementNumberResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetMaxMovementNumberResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long response;
-        
-        public DMDataToSaveServiceGetMaxMovementNumberResponse() {
-        }
-        
-        public DMDataToSaveServiceGetMaxMovementNumberResponse(long response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMSetPrintAgainRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceDMSetPrintAgainRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string palletNum;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public long recordId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceUser;
-        
-        public DMDataToSaveServiceDMSetPrintAgainRequest() {
+        public DMDataToSaveServiceGetPalletInfoByRecordIdRequest() {
         }
         
-        public DMDataToSaveServiceDMSetPrintAgainRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+        public DMDataToSaveServiceGetPalletInfoByRecordIdRequest(SyncServices.DataManagerServices.CallContext CallContext, long recordId) {
             this.CallContext = CallContext;
-            this.palletNum = palletNum;
             this.recordId = recordId;
-            this.deviceName = deviceName;
-            this.deviceUser = deviceUser;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceDMSetPrintAgainResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceDMSetPrintAgainResponse {
-        
-        public DMDataToSaveServiceDMSetPrintAgainResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetItemCodesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
-        
-        public DMDataToSaveServiceGetItemCodesRequest() {
-        }
-        
-        public DMDataToSaveServiceGetItemCodesRequest(SyncServices.DataManagerServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceGetItemCodesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetPalletInfoByRecordIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetPalletInfoByRecordIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.ItemCodeContract[] response;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.DMExportContract response;
         
-        public DMDataToSaveServiceGetItemCodesResponse() {
+        public DMDataToSaveServiceGetPalletInfoByRecordIdResponse() {
         }
         
-        public DMDataToSaveServiceGetItemCodesResponse(SyncServices.DataManagerServices.ItemCodeContract[] response) {
+        public DMDataToSaveServiceGetPalletInfoByRecordIdResponse(SyncServices.DataManagerServices.DMExportContract response) {
             this.response = response;
         }
     }
@@ -3469,8 +3525,8 @@ namespace SyncServices.DataManagerServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCancelPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceCancelPalletReceiveRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceSummaryNormalPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceSummaryNormalPalletsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3478,87 +3534,32 @@ namespace SyncServices.DataManagerServices {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string palletNum;
+        public string _itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public long recordId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceUser;
-        
-        public DMDataToSaveServiceCancelPalletReceiveRequest() {
+        public DMDataToSaveServiceSummaryNormalPalletsRequest() {
         }
         
-        public DMDataToSaveServiceCancelPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+        public DMDataToSaveServiceSummaryNormalPalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
-            this.palletNum = palletNum;
-            this.recordId = recordId;
-            this.deviceName = deviceName;
-            this.deviceUser = deviceUser;
+            this._itemId = _itemId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceCancelPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceCancelPalletReceiveResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public DMDataToSaveServiceCancelPalletReceiveResponse() {
-        }
-        
-        public DMDataToSaveServiceCancelPalletReceiveResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateOfflinePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateOfflinePalletsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceSummaryNormalPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceSummaryNormalPalletsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMExportOfflineContract[] lines;
+        public SyncServices.DataManagerServices.DMSummaryContract[] response;
         
-        public DMDataToSaveServiceUpdateOfflinePalletsRequest() {
+        public DMDataToSaveServiceSummaryNormalPalletsResponse() {
         }
         
-        public DMDataToSaveServiceUpdateOfflinePalletsRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportOfflineContract[] lines) {
-            this.CallContext = CallContext;
-            this.lines = lines;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateOfflinePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateOfflinePalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.DataManagerServices.DMExportContract[] response;
-        
-        public DMDataToSaveServiceUpdateOfflinePalletsResponse() {
-        }
-        
-        public DMDataToSaveServiceUpdateOfflinePalletsResponse(SyncServices.DataManagerServices.DMExportContract[] response) {
+        public DMDataToSaveServiceSummaryNormalPalletsResponse(SyncServices.DataManagerServices.DMSummaryContract[] response) {
             this.response = response;
         }
     }
@@ -3605,97 +3606,35 @@ namespace SyncServices.DataManagerServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesTableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetItemCodesTableRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.DataManagerServices.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.DMExportContract line;
-        
-        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest() {
+        public DMDataToSaveServiceGetItemCodesTableRequest() {
         }
         
-        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract line) {
+        public DMDataToSaveServiceGetItemCodesTableRequest(SyncServices.DataManagerServices.CallContext CallContext) {
             this.CallContext = CallContext;
-            this.line = line;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse() {
-        }
-        
-        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceConfirmPalletReceiveRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.DataManagerServices.CallContext CallContext;
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceGetItemCodesTableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceGetItemCodesTableResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string palletNum;
+        public System.Data.DataSet response;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public long recordId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceUser;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        public bool isFromSL;
-        
-        public DMDataToSaveServiceConfirmPalletReceiveRequest() {
+        public DMDataToSaveServiceGetItemCodesTableResponse() {
         }
         
-        public DMDataToSaveServiceConfirmPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser, bool isFromSL) {
-            this.CallContext = CallContext;
-            this.palletNum = palletNum;
-            this.recordId = recordId;
-            this.deviceName = deviceName;
-            this.deviceUser = deviceUser;
-            this.isFromSL = isFromSL;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceConfirmPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class DMDataToSaveServiceConfirmPalletReceiveResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public DMDataToSaveServiceConfirmPalletReceiveResponse() {
-        }
-        
-        public DMDataToSaveServiceConfirmPalletReceiveResponse(bool response) {
+        public DMDataToSaveServiceGetItemCodesTableResponse(System.Data.DataSet response) {
             this.response = response;
         }
     }
@@ -3737,6 +3676,46 @@ namespace SyncServices.DataManagerServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.DataManagerServices.DMExportContract line;
+        
+        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest() {
+        }
+        
+        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract line) {
+            this.CallContext = CallContext;
+            this.line = line;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse() {
+        }
+        
+        public DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DMDataToSaveServiceChannel : SyncServices.DataManagerServices.DMDataToSaveService, System.ServiceModel.IClientChannel {
     }
@@ -3765,58 +3744,6 @@ namespace SyncServices.DataManagerServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse SyncServices.DataManagerServices.DMDataToSaveService.ImportDataInDynamics(SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest request) {
-            return base.Channel.ImportDataInDynamics(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportMiniContract[] ImportDataInDynamics(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract[] lines) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).ImportDataInDynamics(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.SummaryNormalPallets(SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest request) {
-            return base.Channel.SummaryNormalPallets(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMSummaryContract[] SummaryNormalPallets(SyncServices.DataManagerServices.CallContext CallContext, string _itemId) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).SummaryNormalPallets(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse SyncServices.DataManagerServices.DMDataToSaveService.saveItemNumber(SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest request) {
-            return base.Channel.saveItemNumber(request);
-        }
-        
-        public bool saveItemNumber(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportItemNumContract _itemNum) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemNum = _itemNum;
-            SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).saveItemNumber(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse SyncServices.DataManagerServices.DMDataToSaveService.update(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest request) {
-            return base.Channel.update(request);
-        }
-        
-        public void update(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.EntityKey[] EntityKeyList, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            inValue.DMDataToSave = DMDataToSave;
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).update(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse SyncServices.DataManagerServices.DMDataToSaveService.ConfirmPalletAndLocationReceive(SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveRequest request) {
             return base.Channel.ConfirmPalletAndLocationReceive(request);
         }
@@ -3831,192 +3758,6 @@ namespace SyncServices.DataManagerServices {
             inValue.deviceUser = deviceUser;
             inValue.isFromSL = isFromSL;
             SyncServices.DataManagerServices.DMDataToSaveServiceConfirmPalletAndLocationReceiveResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).ConfirmPalletAndLocationReceive(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse SyncServices.DataManagerServices.DMDataToSaveService.GetPalletInfo(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest request) {
-            return base.Channel.GetPalletInfo(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportContract GetPalletInfo(SyncServices.DataManagerServices.CallContext CallContext, string palletNum) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest();
-            inValue.CallContext = CallContext;
-            inValue.palletNum = palletNum;
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetPalletInfo(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse SyncServices.DataManagerServices.DMDataToSaveService.DMClearPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest request) {
-            return base.Channel.DMClearPrintAgain(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportMiniContract[] DMClearPrintAgain(SyncServices.DataManagerServices.CallContext CallContext) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).DMClearPrintAgain(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse SyncServices.DataManagerServices.DMDataToSaveService.GetPalletInfoByRecordId(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest request) {
-            return base.Channel.GetPalletInfoByRecordId(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportContract GetPalletInfoByRecordId(SyncServices.DataManagerServices.CallContext CallContext, long recordId) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest();
-            inValue.CallContext = CallContext;
-            inValue.recordId = recordId;
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetPalletInfoByRecordId(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.ItemGroupPallets(SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest request) {
-            return base.Channel.ItemGroupPallets(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportContract[] ItemGroupPallets(SyncServices.DataManagerServices.CallContext CallContext, string _itemId, string grade, string shade, string caliber) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            inValue.grade = grade;
-            inValue.shade = shade;
-            inValue.caliber = caliber;
-            SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).ItemGroupPallets(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateTransferPallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest request) {
-            return base.Channel.UpdateTransferPallets(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMForTransfer[] UpdateTransferPallets(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMForTransfer[] lines) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateTransferPallets(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse SyncServices.DataManagerServices.DMDataToSaveService.GetItemCodesTable(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest request) {
-            return base.Channel.GetItemCodesTable(request);
-        }
-        
-        public System.Data.DataSet GetItemCodesTable(SyncServices.DataManagerServices.CallContext CallContext) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetItemCodesTable(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse SyncServices.DataManagerServices.DMDataToSaveService.create(SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest request) {
-            return base.Channel.create(request);
-        }
-        
-        public SyncServices.DataManagerServices.EntityKey[] create(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest();
-            inValue.CallContext = CallContext;
-            inValue.DMDataToSave = DMDataToSave;
-            SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).create(inValue);
-            return retVal.EntityKeyList;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse SyncServices.DataManagerServices.DMDataToSaveService.GetMaxMovementNumber(SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest request) {
-            return base.Channel.GetMaxMovementNumber(request);
-        }
-        
-        public long GetMaxMovementNumber(SyncServices.DataManagerServices.CallContext CallContext) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetMaxMovementNumber(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse SyncServices.DataManagerServices.DMDataToSaveService.DMSetPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest request) {
-            return base.Channel.DMSetPrintAgain(request);
-        }
-        
-        public void DMSetPrintAgain(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest();
-            inValue.CallContext = CallContext;
-            inValue.palletNum = palletNum;
-            inValue.recordId = recordId;
-            inValue.deviceName = deviceName;
-            inValue.deviceUser = deviceUser;
-            SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).DMSetPrintAgain(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse SyncServices.DataManagerServices.DMDataToSaveService.GetItemCodes(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest request) {
-            return base.Channel.GetItemCodes(request);
-        }
-        
-        public SyncServices.DataManagerServices.ItemCodeContract[] GetItemCodes(SyncServices.DataManagerServices.CallContext CallContext) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetItemCodes(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse SyncServices.DataManagerServices.DMDataToSaveService.CancelPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest request) {
-            return base.Channel.CancelPalletReceive(request);
-        }
-        
-        public bool CancelPalletReceive(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest();
-            inValue.CallContext = CallContext;
-            inValue.palletNum = palletNum;
-            inValue.recordId = recordId;
-            inValue.deviceName = deviceName;
-            inValue.deviceUser = deviceUser;
-            SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).CancelPalletReceive(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateOfflinePallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest request) {
-            return base.Channel.UpdateOfflinePallets(request);
-        }
-        
-        public SyncServices.DataManagerServices.DMExportContract[] UpdateOfflinePallets(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportOfflineContract[] lines) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateOfflinePallets(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse SyncServices.DataManagerServices.DMDataToSaveService.CreateDowntimeForMarpak(SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest request) {
-            return base.Channel.CreateDowntimeForMarpak(request);
-        }
-        
-        public bool CreateDowntimeForMarpak(SyncServices.DataManagerServices.CallContext CallContext, int _whichMarpak) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest();
-            inValue.CallContext = CallContext;
-            inValue._whichMarpak = _whichMarpak;
-            SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).CreateDowntimeForMarpak(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest request) {
-            return base.Channel.UpdateAndConfirmPalletReceive(request);
-        }
-        
-        public bool UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract line) {
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest();
-            inValue.CallContext = CallContext;
-            inValue.line = line;
-            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateAndConfirmPalletReceive(inValue);
             return retVal.response;
         }
         
@@ -4038,6 +3779,231 @@ namespace SyncServices.DataManagerServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse SyncServices.DataManagerServices.DMDataToSaveService.create(SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest request) {
+            return base.Channel.create(request);
+        }
+        
+        public SyncServices.DataManagerServices.EntityKey[] create(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCreateRequest();
+            inValue.CallContext = CallContext;
+            inValue.DMDataToSave = DMDataToSave;
+            SyncServices.DataManagerServices.DMDataToSaveServiceCreateResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).create(inValue);
+            return retVal.EntityKeyList;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse SyncServices.DataManagerServices.DMDataToSaveService.CancelPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest request) {
+            return base.Channel.CancelPalletReceive(request);
+        }
+        
+        public bool CancelPalletReceive(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveRequest();
+            inValue.CallContext = CallContext;
+            inValue.palletNum = palletNum;
+            inValue.recordId = recordId;
+            inValue.deviceName = deviceName;
+            inValue.deviceUser = deviceUser;
+            SyncServices.DataManagerServices.DMDataToSaveServiceCancelPalletReceiveResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).CancelPalletReceive(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse SyncServices.DataManagerServices.DMDataToSaveService.GetMaxMovementNumber(SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest request) {
+            return base.Channel.GetMaxMovementNumber(request);
+        }
+        
+        public long GetMaxMovementNumber(SyncServices.DataManagerServices.CallContext CallContext) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetMaxMovementNumberResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetMaxMovementNumber(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateOfflinePallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest request) {
+            return base.Channel.UpdateOfflinePallets(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportContract[] UpdateOfflinePallets(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportOfflineContract[] lines) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateOfflinePalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateOfflinePallets(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateTransferPallets(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest request) {
+            return base.Channel.UpdateTransferPallets(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMForTransfer[] UpdateTransferPallets(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMForTransfer[] lines) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateTransferPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateTransferPallets(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse SyncServices.DataManagerServices.DMDataToSaveService.GetItemCodes(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest request) {
+            return base.Channel.GetItemCodes(request);
+        }
+        
+        public SyncServices.DataManagerServices.ItemCodeContract[] GetItemCodes(SyncServices.DataManagerServices.CallContext CallContext) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetItemCodes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse SyncServices.DataManagerServices.DMDataToSaveService.update(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest request) {
+            return base.Channel.update(request);
+        }
+        
+        public void update(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.EntityKey[] EntityKeyList, SyncServices.DataManagerServices.AxdDMDataToSave DMDataToSave) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            inValue.DMDataToSave = DMDataToSave;
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).update(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse SyncServices.DataManagerServices.DMDataToSaveService.DMSetPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest request) {
+            return base.Channel.DMSetPrintAgain(request);
+        }
+        
+        public void DMSetPrintAgain(SyncServices.DataManagerServices.CallContext CallContext, string palletNum, long recordId, string deviceName, string deviceUser) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainRequest();
+            inValue.CallContext = CallContext;
+            inValue.palletNum = palletNum;
+            inValue.recordId = recordId;
+            inValue.deviceName = deviceName;
+            inValue.deviceUser = deviceUser;
+            SyncServices.DataManagerServices.DMDataToSaveServiceDMSetPrintAgainResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).DMSetPrintAgain(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse SyncServices.DataManagerServices.DMDataToSaveService.DMClearPrintAgain(SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest request) {
+            return base.Channel.DMClearPrintAgain(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportMiniContract[] DMClearPrintAgain(SyncServices.DataManagerServices.CallContext CallContext) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.DataManagerServices.DMDataToSaveServiceDMClearPrintAgainResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).DMClearPrintAgain(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse SyncServices.DataManagerServices.DMDataToSaveService.GetPalletInfo(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest request) {
+            return base.Channel.GetPalletInfo(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportContract GetPalletInfo(SyncServices.DataManagerServices.CallContext CallContext, string palletNum) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoRequest();
+            inValue.CallContext = CallContext;
+            inValue.palletNum = palletNum;
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetPalletInfo(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse SyncServices.DataManagerServices.DMDataToSaveService.ImportDataInDynamics(SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest request) {
+            return base.Channel.ImportDataInDynamics(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportMiniContract[] ImportDataInDynamics(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract[] lines) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.DataManagerServices.DMDataToSaveServiceImportDataInDynamicsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).ImportDataInDynamics(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse SyncServices.DataManagerServices.DMDataToSaveService.saveItemNumber(SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest request) {
+            return base.Channel.saveItemNumber(request);
+        }
+        
+        public bool saveItemNumber(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportItemNumContract _itemNum) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberRequest();
+            inValue.CallContext = CallContext;
+            inValue._itemNum = _itemNum;
+            SyncServices.DataManagerServices.DMDataToSaveServiceSaveItemNumberResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).saveItemNumber(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.ItemGroupPallets(SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest request) {
+            return base.Channel.ItemGroupPallets(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportContract[] ItemGroupPallets(SyncServices.DataManagerServices.CallContext CallContext, string _itemId, string grade, string shade, string caliber) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsRequest();
+            inValue.CallContext = CallContext;
+            inValue._itemId = _itemId;
+            inValue.grade = grade;
+            inValue.shade = shade;
+            inValue.caliber = caliber;
+            SyncServices.DataManagerServices.DMDataToSaveServiceItemGroupPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).ItemGroupPallets(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse SyncServices.DataManagerServices.DMDataToSaveService.GetPalletInfoByRecordId(SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest request) {
+            return base.Channel.GetPalletInfoByRecordId(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMExportContract GetPalletInfoByRecordId(SyncServices.DataManagerServices.CallContext CallContext, long recordId) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.recordId = recordId;
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetPalletInfoByRecordIdResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetPalletInfoByRecordId(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse SyncServices.DataManagerServices.DMDataToSaveService.SummaryNormalPallets(SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest request) {
+            return base.Channel.SummaryNormalPallets(request);
+        }
+        
+        public SyncServices.DataManagerServices.DMSummaryContract[] SummaryNormalPallets(SyncServices.DataManagerServices.CallContext CallContext, string _itemId) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsRequest();
+            inValue.CallContext = CallContext;
+            inValue._itemId = _itemId;
+            SyncServices.DataManagerServices.DMDataToSaveServiceSummaryNormalPalletsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).SummaryNormalPallets(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse SyncServices.DataManagerServices.DMDataToSaveService.CreateDowntimeForMarpak(SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest request) {
+            return base.Channel.CreateDowntimeForMarpak(request);
+        }
+        
+        public bool CreateDowntimeForMarpak(SyncServices.DataManagerServices.CallContext CallContext, int _whichMarpak) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakRequest();
+            inValue.CallContext = CallContext;
+            inValue._whichMarpak = _whichMarpak;
+            SyncServices.DataManagerServices.DMDataToSaveServiceCreateDowntimeForMarpakResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).CreateDowntimeForMarpak(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse SyncServices.DataManagerServices.DMDataToSaveService.GetItemCodesTable(SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest request) {
+            return base.Channel.GetItemCodesTable(request);
+        }
+        
+        public System.Data.DataSet GetItemCodesTable(SyncServices.DataManagerServices.CallContext CallContext) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.DataManagerServices.DMDataToSaveServiceGetItemCodesTableResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetItemCodesTable(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsResponse SyncServices.DataManagerServices.DMDataToSaveService.GetWHLocations(SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsRequest request) {
             return base.Channel.GetWHLocations(request);
         }
@@ -4046,6 +4012,19 @@ namespace SyncServices.DataManagerServices {
             SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsRequest();
             inValue.CallContext = CallContext;
             SyncServices.DataManagerServices.DMDataToSaveServiceGetWHLocationsResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).GetWHLocations(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse SyncServices.DataManagerServices.DMDataToSaveService.UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest request) {
+            return base.Channel.UpdateAndConfirmPalletReceive(request);
+        }
+        
+        public bool UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.CallContext CallContext, SyncServices.DataManagerServices.DMExportContract line) {
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest inValue = new SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveRequest();
+            inValue.CallContext = CallContext;
+            inValue.line = line;
+            SyncServices.DataManagerServices.DMDataToSaveServiceUpdateAndConfirmPalletReceiveResponse retVal = ((SyncServices.DataManagerServices.DMDataToSaveService)(this)).UpdateAndConfirmPalletReceive(inValue);
             return retVal.response;
         }
     }

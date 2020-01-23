@@ -18,13 +18,32 @@ namespace TestWebservice
         {
             bool result11 = false;
             string str = "";
-            SalesOrder.SalesServiceClient client1 = new SalesServiceClient();
-            var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
+
+
+            /*DMCheckService.DMForTransfer one = new DMCheckService.DMForTransfer();
+            one.palletNumField = "L002435";
+            one.whLocationIdField = "I7";
+            List<DMCheckService.DMForTransfer> allOne = new List<DMCheckService.DMForTransfer>();
+            allOne.Add(one);
+            DMCheckService.DMCheckServiceClient dmClient = new DMCheckService.DMCheckServiceClient();
+            dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+            */
+
+            List<PalletItemContract> contract = new List<PalletItemContract>();
+            contract.Add(new PalletItemContract
+            {
+                serialField = "L004649"
+            });
+           SalesOrder.SalesServiceClient client1 = new SalesServiceClient();
+            var linesReturned = client1.CheckPalletAvailableMulti("20SO-00393", "GRA-3088010DM140", "G1", "PKL20-000984", contract.ToArray(),"KVN","S10",5637550335);
+
+
+            /*var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
             foreach (SalesLine line in items1.Lines)
             {
                 str += line.PickingId.ToString() + ": "+line.Location;
             }
-
+            */
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);

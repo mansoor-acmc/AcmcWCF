@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd9" namespace="http://tempuri.org" />
@@ -18,127 +18,122 @@
       <xsd:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="JournalCountingServiceGetCountingJournalsRequest">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetCountingJournalsRequest" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceGetCountingJournalsRequest_Headers">
-    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceGetCountingJournalsResponse">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetCountingJournalsResponse" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingService_GetCountingJournals_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
-  </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetItemsAvailableRequest">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemsAvailableRequest" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetItemsAvailableRequest_Headers">
-    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetItemsAvailableResponse">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemsAvailableResponse" />
   </wsdl:message>
   <wsdl:message name="JournalCountingService_GetItemsAvailable_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceGetItemUoMRequest">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemUoMRequest" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceGetItemUoMRequest_Headers">
-    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceGetItemUoMResponse">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemUoMResponse" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingService_GetItemUoM_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceUpdateCountingRequest">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceUpdateCountingRequest" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceUpdateCountingRequest_Headers">
-    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceUpdateCountingResponse">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceUpdateCountingResponse" />
   </wsdl:message>
   <wsdl:message name="JournalCountingService_UpdateCounting_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetCountingJournalsRequest">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetCountingJournalsRequest" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetCountingJournalsRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetCountingJournalsResponse">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetCountingJournalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetCountingJournals_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetItemUoMRequest">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemUoMRequest" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetItemUoMRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceGetItemUoMResponse">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceGetItemUoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetItemUoM_AifFaultFault_FaultMessage">
     <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceFindRequest">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceFindRequest" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceFindRequest_Headers">
-    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingServiceFindResponse">
-    <wsdl:part name="parameters" element="tns:JournalCountingServiceFindResponse" />
-  </wsdl:message>
-  <wsdl:message name="JournalCountingService_find_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetWarehouseRequest">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetWarehouseRequest" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetWarehouseRequest_Headers">
-    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetWarehouseResponse">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetWarehouseResponse" />
   </wsdl:message>
   <wsdl:message name="JournalCountingService_GetWarehouse_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetYearFGInventoryRequest">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetYearFGInventoryRequest" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetYearFGInventoryRequest_Headers">
-    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceGetYearFGInventoryResponse">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceGetYearFGInventoryResponse" />
   </wsdl:message>
   <wsdl:message name="JournalCountingService_GetYearFGInventory_AifFaultFault_FaultMessage">
-    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceReadRequest">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceReadRequest" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceReadRequest_Headers">
-    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
   </wsdl:message>
   <wsdl:message name="JournalCountingServiceReadResponse">
     <wsdl:part name="parameters" element="tns:JournalCountingServiceReadResponse" />
   </wsdl:message>
   <wsdl:message name="JournalCountingService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceFindRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:JournalCountingServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_find_AifFaultFault_FaultMessage">
     <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
   </wsdl:message>
   <wsdl:portType name="JournalCountingService">
-    <wsdl:operation name="GetCountingJournals">
-      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournals" name="JournalCountingServiceGetCountingJournalsRequest" message="tns:JournalCountingServiceGetCountingJournalsRequest" />
-      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournalsResponse" name="JournalCountingServiceGetCountingJournalsResponse" message="tns:JournalCountingServiceGetCountingJournalsResponse" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournalsAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_GetCountingJournals_AifFaultFault_FaultMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetItemsAvailable">
       <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetItemsAvailable" name="JournalCountingServiceGetItemsAvailableRequest" message="tns:JournalCountingServiceGetItemsAvailableRequest" />
       <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/GetItemsAvailableResponse" name="JournalCountingServiceGetItemsAvailableResponse" message="tns:JournalCountingServiceGetItemsAvailableResponse" />
       <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/GetItemsAvailableAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_GetItemsAvailable_AifFaultFault_FaultMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetItemUoM">
-      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoM" name="JournalCountingServiceGetItemUoMRequest" message="tns:JournalCountingServiceGetItemUoMRequest" />
-      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoMResponse" name="JournalCountingServiceGetItemUoMResponse" message="tns:JournalCountingServiceGetItemUoMResponse" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_GetItemUoM_AifFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateCounting">
       <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/UpdateCounting" name="JournalCountingServiceUpdateCountingRequest" message="tns:JournalCountingServiceUpdateCountingRequest" />
       <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/UpdateCountingResponse" name="JournalCountingServiceUpdateCountingResponse" message="tns:JournalCountingServiceUpdateCountingResponse" />
       <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/UpdateCountingAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_UpdateCounting_AifFaultFault_FaultMessage" />
     </wsdl:operation>
-    <wsdl:operation name="find">
-      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/find" name="JournalCountingServiceFindRequest" message="tns:JournalCountingServiceFindRequest" />
-      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/findResponse" name="JournalCountingServiceFindResponse" message="tns:JournalCountingServiceFindResponse" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/findAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_find_AifFaultFault_FaultMessage" />
+    <wsdl:operation name="GetCountingJournals">
+      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournals" name="JournalCountingServiceGetCountingJournalsRequest" message="tns:JournalCountingServiceGetCountingJournalsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournalsResponse" name="JournalCountingServiceGetCountingJournalsResponse" message="tns:JournalCountingServiceGetCountingJournalsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/GetCountingJournalsAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_GetCountingJournals_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoM" name="JournalCountingServiceGetItemUoMRequest" message="tns:JournalCountingServiceGetItemUoMRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoMResponse" name="JournalCountingServiceGetItemUoMResponse" message="tns:JournalCountingServiceGetItemUoMResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_GetItemUoM_AifFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWarehouse">
       <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/GetWarehouse" name="JournalCountingServiceGetWarehouseRequest" message="tns:JournalCountingServiceGetWarehouseRequest" />
@@ -154,6 +149,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/read" name="JournalCountingServiceReadRequest" message="tns:JournalCountingServiceReadRequest" />
       <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/readResponse" name="JournalCountingServiceReadResponse" message="tns:JournalCountingServiceReadResponse" />
       <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/readAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/JournalCountingService/find" name="JournalCountingServiceFindRequest" message="tns:JournalCountingServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JournalCountingService/findResponse" name="JournalCountingServiceFindResponse" message="tns:JournalCountingServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JournalCountingService/findAifFaultFault" name="AifFaultFault" message="tns:JournalCountingService_find_AifFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

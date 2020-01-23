@@ -114,6 +114,8 @@ namespace SyncServices
                     cmd.Parameters.Add("@pWarehouse", SqlDbType.VarChar, 25);
                     cmd.Parameters.Add("@pBatchNumber", SqlDbType.VarChar, 15);
                     cmd.Parameters.Add("@pLocation", SqlDbType.VarChar, 12);
+                    cmd.Parameters.Add("@pLocationNew", SqlDbType.VarChar, 12);
+                    cmd.Parameters.Add("@pHasTransferLocation", SqlDbType.Bit);
 
                     cmd.Parameters.Add("@return", SqlDbType.Int);
 
@@ -136,6 +138,8 @@ namespace SyncServices
                     cmd.Parameters["@pWarehouse"].Value = row.Warehouse;
                     cmd.Parameters["@pBatchNumber"].Value = row.BatchNumber;
                     cmd.Parameters["@pLocation"].Value = row.Location;
+                    cmd.Parameters["@pLocationNew"].Value = row.LocationNew;
+                    cmd.Parameters["@pHasTransferLocation"].Value = row.HasTransferLocation;
 
                     cmd.Parameters["@return"].Direction = ParameterDirection.ReturnValue;
 
@@ -162,8 +166,7 @@ namespace SyncServices
 
             return lastSyncId;
         }
-
-        
+              
 
         public long UpdateSupplyChainDesktop(List<ItemEntity> dt)
         {
@@ -344,8 +347,8 @@ namespace SyncServices
             try
             {
                 cmd.Connection = sConnMod;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "GetInventory";
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM InventorySC;";
 
                 if (sConnMod.State != ConnectionState.Open)
                     sConnMod.Open();

@@ -18,6 +18,7 @@
       <xs:element minOccurs="0" name="DeletePostedLines" nillable="true" type="st:AxdExtType_JournalDeletePostedLines" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="st:AxdExtType_JournalDescription" />
       <xs:element minOccurs="0" name="DetailSummary" nillable="true" type="st:AxdExtType_JournalDetailSummary" />
+      <xs:element minOccurs="0" name="FSHReplenishmentRef" nillable="true" type="st:AxdExtType_RetailReplenishmentRefId" />
       <xs:element minOccurs="0" name="InventDimFixed" nillable="true" type="st:AxdExtType_InventDimFixed" />
       <xs:element minOccurs="0" name="InventDocType_PL" nillable="true" type="st:AxdEnum_PlInventDocType" />
       <xs:element minOccurs="0" name="InventLocationId" nillable="true" type="st:AxdExtType_PurchInventLocationId" />
@@ -35,6 +36,7 @@
       <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
       <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
       <xs:element minOccurs="0" name="Reservation" nillable="true" type="st:AxdEnum_ItemReservation" />
+      <xs:element minOccurs="0" name="RetailReplenishmentType" nillable="true" type="st:AxdEnum_RetailReplenishmentType" />
       <xs:element minOccurs="0" name="RetailRetailStatusType" nillable="true" type="st:AxdExtType_RetailRetailStatusType" />
       <xs:element minOccurs="0" name="SessionId" nillable="true" type="st:AxdExtType_JournalSessionId" />
       <xs:element minOccurs="0" name="SessionLoginDateTime" nillable="true" type="st:AxdExtType_JournalSessionLoginDateTime" />
@@ -102,6 +104,8 @@
       <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
       <xs:element minOccurs="0" name="ReleaseDate" nillable="true" type="st:AxdExtType_PostReleaseDate" />
       <xs:element minOccurs="0" name="ReqPOId" nillable="true" type="st:AxdExtType_ReqPOId" />
+      <xs:element minOccurs="0" name="RetailInfocodeIdEx2" nillable="true" type="st:AxdExtType_RetailInfocodeIdEx2" />
+      <xs:element minOccurs="0" name="RetailInformationSubcodeIdEx2" nillable="true" type="st:AxdExtType_RetailInformationSubcodeIdEx2" />
       <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="st:AxdExtType_SalesAmount" />
       <xs:element minOccurs="0" name="ScrapTypeId_RU" nillable="true" type="st:AxdExtType_PurchReturnActionId" />
       <xs:element minOccurs="0" name="Shift" nillable="true" type="st:AxdExtType_Shift" />
@@ -110,7 +114,7 @@
       <xs:element minOccurs="0" name="ToInventTransId" nillable="true" type="st:AxdExtType_InventTransIdTo" />
       <xs:element minOccurs="0" name="TransDate" nillable="true" type="st:AxdExtType_JournalTransDate" />
       <xs:element minOccurs="0" name="Voucher" nillable="true" type="st:AxdExtType_Voucher" />
-      <xs:element minOccurs="0" name="WarehouseLocation_IN" nillable="true" type="st:AxdExtType_LogisticsLocationRecId" />
+      <xs:element minOccurs="0" name="WarehouseLocation_IN" nillable="true" type="st:AxdExtType_LogisticsLocationId" />
       <xs:element minOccurs="0" name="Worker" nillable="true" type="st:AxdExtType_HcmPersonnelNumberId" />
     </xs:sequence>
     <xs:attribute fixed="entity" name="class" use="required" />

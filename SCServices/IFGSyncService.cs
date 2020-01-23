@@ -69,6 +69,10 @@ namespace SyncServices
         public string BatchNumber { get; set; }
         [DataMember]
         public decimal Available { get; set; }
+        [DataMember]
+        public string LocationNew { get; set; }
+        [DataMember]
+        public bool HasTransferLocation { get; set; }
     }
 
     [DataContract]
