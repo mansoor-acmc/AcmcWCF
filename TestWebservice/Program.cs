@@ -9,6 +9,7 @@ using TestWebservice.DeviceOps;
 using System.Data;
 using System.IO;
 using System.Diagnostics;
+using TestWebservice.DMCheckService;
 
 namespace TestWebservice
 {
@@ -19,24 +20,44 @@ namespace TestWebservice
             bool result11 = false;
             string str = "";
 
+            SalesOrderService.SalesOrderServiceClient soClient = new SalesOrderService.SalesOrderServiceClient();
+            //var salesid = soClient.FindSalesOrder("19SO-05804");
 
-            /*DMCheckService.DMForTransfer one = new DMCheckService.DMForTransfer();
-            one.palletNumField = "L002435";
-            one.whLocationIdField = "I7";
-            List<DMCheckService.DMForTransfer> allOne = new List<DMCheckService.DMForTransfer>();
+            DateTime start = new DateTime(2019, 05, 15);
+            DateTime end = new DateTime(2019, 10, 15);
+            var saleOrders = soClient.GetSalesOrders(start.ToShortDateString(), end.ToShortDateString(), "LC0004");
+            
+
+            //var delv=soClient.GetDeliveries(start.ToShortDateString());
+
+            List<LocationHistory> allOne = new List<LocationHistory>();
+            LocationHistory one = null;
+
+            //one = new DMForTransfer() { palletNumField = "L012356", whLocationIdField = "E2" };
+            //allOne.Add(one);
+            one = new LocationHistory() { PalletNum = "L033737", Location = "E1", IsManual=false,UserName="fg",DeviceName="S8-172.17.5.6" };
             allOne.Add(one);
-            DMCheckService.DMCheckServiceClient dmClient = new DMCheckService.DMCheckServiceClient();
-            dmClient.TransferPalletsToNewLocation(allOne.ToArray());
-            */
+            //one = new LocationHistory() { PalletNum = "K700011", Location = "J2", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+            //allOne.Add(one);
+            //one = new LocationHistory() { PalletNum = "K215552", Location = "A3", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
+            //allOne.Add(one);
+            //one = new LocationHistory() { PalletNum = "K215553", Location = "A4", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
+            //allOne.Add(one);
 
-            List<PalletItemContract> contract = new List<PalletItemContract>();
+            DMCheckService.DMCheckServiceClient dmClient = new DMCheckService.DMCheckServiceClient();
+            var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+            if (result.Count() > 0)
+                Console.WriteLine("Lines Transferred: " + result.Count().ToString());
+            
+
+            /*List<PalletItemContract> contract = new List<PalletItemContract>();
             contract.Add(new PalletItemContract
             {
                 serialField = "L004649"
             });
            SalesOrder.SalesServiceClient client1 = new SalesServiceClient();
             var linesReturned = client1.CheckPalletAvailableMulti("20SO-00393", "GRA-3088010DM140", "G1", "PKL20-000984", contract.ToArray(),"KVN","S10",5637550335);
-
+            */
 
             /*var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
             foreach (SalesLine line in items1.Lines)
@@ -47,42 +68,7 @@ namespace TestWebservice
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);
-            string pallets = "K215218, K215219,";
-            if (pallets.EndsWith(","))
-                pallets = pallets.Substring(0, pallets.Length - 1);
-
-            try
-            {
-                List<DMCheckService.DMForTransfer> lines=new List<DMCheckService.DMForTransfer>();
-                DMCheckService.DMForTransfer line=new DMCheckService.DMForTransfer(){
-                    whLocationIdField="K2",
-                    palletNumField = "K215551"//J212285,J212292,J212290
-                };
-                lines.Add(line);
-                line = new DMCheckService.DMForTransfer()
-                {
-                    whLocationIdField = "K2",
-                    palletNumField = "K215552"
-                };
-                lines.Add(line);
-                line = new DMCheckService.DMForTransfer()
-                {
-                    whLocationIdField = "A2",
-                    palletNumField = "K201953"
-                };
-                lines.Add(line);
-                
-
-                DMCheckService.DMCheckServiceClient client = new DMCheckService.DMCheckServiceClient();
-                var items = client.TransferPalletsToNewLocation(lines.ToArray());
-                
-                Console.Write(items.Count());
-            }
-            catch (Exception exp)
-            {
-                string err = exp.Message;
-                Console.Write(err);
-            }
+            
 
             /*******SalesOrder**/
            //SalesOrder.SalesServiceClient client = new SalesServiceClient();

@@ -43,7 +43,7 @@ namespace SyncServices
         List<DMExportContract> UpdateOfflinePallets(List<DMExportOfflineContract> lines);
 
         [OperationContract]
-        List<DMForTransfer> TransferPalletsToNewLocation(List<DMForTransfer> lines);
+        List<LocationHistory> TransferPalletsToNewLocation(List<LocationHistory> lines);
 
         [OperationContract]
         List<DMSummaryContract> SummaryPallets(string itemId);

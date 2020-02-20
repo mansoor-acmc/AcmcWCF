@@ -129,23 +129,49 @@ namespace SyncServices
         }
 
         #region Location Transfer
-        public List<DMForTransfer> TransferPalletsToNewLocation(List<DMForTransfer> lines)
+        public List<LocationHistory> TransferPalletsToNewLocation(List<LocationHistory> lines)
         {
-            List<DMForTransfer> returnedLines = new List<DMForTransfer>();
+            DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
+            string deviceName, userName;
+            deviceName = lines[0].DeviceName;
+            userName = lines[0].UserName;
 
-            LocationHistory objLocation=MergeDMLines(lines);
-            SaveLocations(objLocation.PalletNum,objLocation.Location, "Before saving Locations");
+            LocationHistory objLocation = MergeDMLines(lines, deviceName, userName);
 
-            string remainingPalletsToTransfer = new DBClass(DBClass.DbName.DynamicsAX).UpdatePalletLocationBulk(objLocation.Message);
+            string hasPalletsApproved = dbClass.CheckPalletApprovedBulk(objLocation.Message);
+            
+            if (hasPalletsApproved.Length > 0)
+            {
+                string palletsNotApproved = string.Empty;
+
+                string[] palletsArray = hasPalletsApproved.Split(',');
+                foreach (string pallet in palletsArray)
+                {
+                    if (!string.IsNullOrEmpty(pallet))
+                    {
+                        string[] palletAndLoc = pallet.Split(';');
+                        if (palletsNotApproved.Length > 0) palletsNotApproved += ",";
+                         palletsNotApproved += palletAndLoc[0];
+                    }
+                }
+                throw new Exception("Approve these Pallets: \r\n" + palletsNotApproved);
+            }
+
+            SaveLocations(objLocation.PalletNum,objLocation.Location, "Before saving Locations",objLocation.DeviceName,objLocation.UserName);
+
+            string remainingPalletsToTransfer = dbClass.UpdatePalletLocationBulk(objLocation.Message, objLocation.UserName, objLocation.DeviceName); //Stored Procedure
             var remainingLines = ConvertStringToList(remainingPalletsToTransfer);
+
             var savedInSP = SavedDirectlyInSP(remainingLines, lines);
+
+            List<LocationHistory> returnedLines = new List<LocationHistory>();
             if (savedInSP != null && savedInSP.Count > 0)
                 returnedLines.AddRange(savedInSP);
 
-            objLocation = MergeDMLines(remainingLines);
-            SaveLocations(objLocation.PalletNum, objLocation.Location, "After direct saving to DB, the remaining Pallets");
+            objLocation = MergeDMLines(returnedLines, deviceName, userName);
+            SaveLocations(objLocation.PalletNum, objLocation.Location, "After direct saving to DB, the remaining Pallets", objLocation.DeviceName, objLocation.UserName);
 
-            if (remainingLines.Count > 0)
+            if (returnedLines.Count > 0)
             {
                 try
                 {
@@ -156,20 +182,22 @@ namespace SyncServices
                     };
 
                     DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-                    var linesFromAX = client.UpdateTransferPallets(context, remainingLines.ToArray());
-                    if (linesFromAX != null && linesFromAX.Count() > 0)
-                    {
-                        returnedLines.AddRange(linesFromAX.ToList());
+                    var linesFromAX = client.UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray());
+                    if (linesFromAX.Count() > 0)
+                        returnedLines = ConvertFromDMForTransfer(linesFromAX.ToList());
+                    //if (linesFromAX != null && linesFromAX.Count() > 0)
+                    //{
+                    //    returnedLines.AddRange(linesFromAX.ToList());
                         
-                        var history = MergeDMLines(returnedLines);
+                    //    var history = MergeDMLines(returnedLines);
 
-                        SaveLocations(history.PalletNum, history.Location, "After Saving Locations");
-                    }
+                    //    SaveLocations(history.PalletNum, history.Location, "After Saving Locations", history.DeviceName, history.UserName);
+                    //}
                 }
                 catch (Exception exp)
                 {
-                    var locError = MergeDMLines(returnedLines);
-                    SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message);
+                    var locError = MergeDMLines(returnedLines, deviceName, userName);
+                    SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message, locError.DeviceName, locError.UserName);
                     throw exp;
                 }
             }
@@ -177,9 +205,40 @@ namespace SyncServices
             return returnedLines;
         }
 
-        private List<DMForTransfer> SavedDirectlyInSP(List<DMForTransfer> remainingPallets, List<DMForTransfer> allPallets)
+        private List<DMForTransfer> ConvertToDMForTransfer(List<LocationHistory> lines)
         {
-            foreach (DMForTransfer one in remainingPallets)
+            List<DMForTransfer> results = new List<DMForTransfer>();
+
+            foreach(LocationHistory one in lines)
+            {
+                results.Add(new DMForTransfer
+                {
+                    PalletNum = one.PalletNum,
+                    whLocationId = one.Location
+                });
+            }
+
+            return results;
+        }
+
+        private List<LocationHistory> ConvertFromDMForTransfer(List<DMForTransfer> lines)
+        {
+            List<LocationHistory> results = new List<LocationHistory>();
+            foreach (DMForTransfer one in lines)
+            {
+                results.Add(new LocationHistory
+                {
+                    PalletNum = one.PalletNum,
+                    Location = one.whLocationId
+                });
+            }
+            return results;
+        }
+
+
+        private List<LocationHistory> SavedDirectlyInSP(List<LocationHistory> remainingPallets, List<LocationHistory> allPallets)
+        {
+            foreach (LocationHistory one in remainingPallets)
             {
                 int index = allPallets.FindIndex(t => t.PalletNum == one.PalletNum);
                 allPallets.RemoveAt(index);
@@ -188,20 +247,24 @@ namespace SyncServices
             return allPallets;
         }
 
-        private List<DMForTransfer> ConvertStringToList(string pallets)
+        private List<LocationHistory> ConvertStringToList(string pallets)
         {
-            List<DMForTransfer> updatedLines = new List<DMForTransfer>();
+            List<LocationHistory> updatedLines = new List<LocationHistory>();
             string[] palletsArray = pallets.Split(',');
             foreach (string pallet in palletsArray)
             {
                 if (!string.IsNullOrEmpty(pallet))
                 {
                     string[] palletAndLoc = pallet.Split(';');
-                    updatedLines.Add(new DMForTransfer
+                    LocationHistory one = new LocationHistory();
+                    one.PalletNum = palletAndLoc[0];
+                    string[] locAndIsManual = palletAndLoc[1].Split('-');
+                    one.Location = locAndIsManual[0];
+                    if(locAndIsManual.Length>0)
                     {
-                        PalletNum = palletAndLoc[0],
-                        whLocationId = palletAndLoc[1]
-                    });
+                        one.IsManual = locAndIsManual[1].Equals("1") ? true : false;
+                    }
+                    updatedLines.Add(one);
                 }
             }
             return updatedLines;
@@ -212,7 +275,7 @@ namespace SyncServices
         /// </summary>
         /// <param name="lines"></param>
         /// <param name="message"></param>
-        private bool SaveLocations(string pallets, string locations, string message)
+        private bool SaveLocations(string pallets, string locations, string message,string deviceName, string userName)
         {
             LocationHistory objLocation = new LocationHistory()
             {
@@ -220,32 +283,37 @@ namespace SyncServices
                 Location = locations,
                 Message = message,
                 CreateDateTime = DateTime.Now,
-                DeviceName=string.Empty                
+                DeviceName= deviceName,
+                UserName = userName                
             };
             DBClass objDB = new DBClass(DBClass.DbName.DeviceMsg);
             return objDB.SaveLocationTime(objLocation, message);
         }
 
-        private LocationHistory MergeDMLines(List<DMForTransfer> lines)
+        private LocationHistory MergeDMLines(List<LocationHistory> lines, string deviceName, string userName)
         {
             LocationHistory objLocation = new LocationHistory();
 
             objLocation.CreateDateTime = DateTime.Now;
-            objLocation.Message = "";
-            objLocation.DeviceName = "";
+            objLocation.Message = "";            
             objLocation.PalletNum = "";
+            objLocation.DeviceName = deviceName;
+            objLocation.UserName = userName;
             objLocation.Location = "";
-            foreach (DMForTransfer line in lines)
+            objLocation.IsManual = false;
+
+            foreach (LocationHistory line in lines)
             {
                 objLocation.PalletNum += line.PalletNum + ",";
-                objLocation.Location += line.whLocationId.Trim() + ",";
-                objLocation.Message += line.PalletNum + ";" + line.whLocationId.Trim() + ",";
+                objLocation.Location += line.Location.Trim() + ",";
+                objLocation.Message += line.PalletNum + ";" + line.Location.Trim()+"-"+(line.IsManual?"1":"0") + ",";
+                //objLocation.DeviceName = line.DeviceName;
+                //objLocation.UserName = line.UserName;
             }
             if (objLocation.PalletNum.EndsWith(","))
                 objLocation.PalletNum = objLocation.PalletNum.Substring(0, objLocation.PalletNum.Length - 1);
             if (objLocation.Location.EndsWith(","))
-                objLocation.Location = objLocation.Location.Substring(0, objLocation.Location.Length - 1);
-           
+                objLocation.Location = objLocation.Location.Substring(0, objLocation.Location.Length - 1);           
 
             return objLocation;
         }

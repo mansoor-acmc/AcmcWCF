@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8e34f4a-6e98-4e3c-a554-6ddd536e89f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58380/SalesOrderService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesOrderService.wsdl" MetadataType="Wsdl" ID="e5551698-b462-433f-b228-25f3c5f135c7" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?wsdl" />
+    <MetadataFile FileName="SalesOrderService.xsd" MetadataType="Schema" ID="9689e844-b46b-4371-b0b5-037943fed10e" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SalesOrderService1.xsd" MetadataType="Schema" ID="57216bce-5a14-4e0d-af01-bd741884630d" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SalesOrderService2.xsd" MetadataType="Schema" ID="049b648c-4abc-4766-b6eb-77e7cc37d8dd" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalesOrderService3.xsd" MetadataType="Schema" ID="657789bf-4161-4879-8448-6566de669578" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesOrderService.disco" MetadataType="Disco" ID="5e6690fa-6580-458e-9957-89c28e4e6716" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?disco" />
+    <MetadataFile FileName="SalesOrderService4.xsd" MetadataType="Schema" ID="cab810d5-fadf-46cd-ab0b-cf40bedebbec" SourceId="1" SourceUrl="http://localhost:58380/SalesOrderService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

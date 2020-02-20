@@ -64,7 +64,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ModulaMovement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ModulaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesOrderService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -97,6 +107,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Service References\DeviceOps\DeviceOps.wsdl" />
     <None Include="Service References\DeviceOps\DeviceOps.xsd">
       <SubType>Designer</SubType>
@@ -135,9 +146,6 @@
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportMiniContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMForTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMSummaryContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -145,6 +153,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.ItemForChart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.LocationHistory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.WmsLocationContract.datasource">
@@ -177,6 +188,16 @@
     </None>
     <None Include="Service References\FGService\TestWebservice.FGService.UserData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaMovement\ModulaMovement.wsdl" />
+    <None Include="Service References\ModulaMovement\ModulaMovement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaMovement\ModulaMovement1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaMovement\ModulaMovement2.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ModulaService\ModulaPR.wsdl" />
     <None Include="Service References\ModulaService\ModulaPR.xsd">
@@ -222,6 +243,28 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService.wsdl" />
+    <None Include="Service References\SalesOrderService\SalesOrderService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.SalesTableContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SalesOrder\SalesService.xsd">
@@ -308,7 +351,9 @@
     <WCFMetadataStorage Include="Service References\DeviceOps\" />
     <WCFMetadataStorage Include="Service References\DMCheckService\" />
     <WCFMetadataStorage Include="Service References\FGService\" />
+    <WCFMetadataStorage Include="Service References\ModulaMovement\" />
     <WCFMetadataStorage Include="Service References\ModulaService\" />
+    <WCFMetadataStorage Include="Service References\SalesOrderService\" />
     <WCFMetadataStorage Include="Service References\SalesOrder\" />
     <WCFMetadataStorage Include="Service References\SCServiceFrom50\" />
     <WCFMetadataStorage Include="Service References\SCSyncService\" />
@@ -361,9 +406,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Service References\UserMgtServices\UserMgtService.disco" />
   </ItemGroup>
@@ -438,6 +481,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\DMCheckService\DMCheckService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrderService\SalesOrderService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrderService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrderService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesOrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaMovement\ModulaMovement.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaMovement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaMovement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModulaMovement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

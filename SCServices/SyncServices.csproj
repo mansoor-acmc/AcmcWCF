@@ -26,6 +26,7 @@
     <IISExpressUseClassicPipelineMode />
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,8 +73,11 @@
     <Content Include="DMCheckService.svc" />
     <Content Include="FGSyncService.svc" />
     <Content Include="ModulaPR.svc" />
+    <Content Include="SalesOrderService.svc" />
     <Content Include="SalesService.svc" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\PublishProfiles\AcmcMobileServices.pubxml" />
+    <None Include="Properties\PublishProfiles\SyncService2020.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServices.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServicesTest.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServicesTest184.pubxml" />
@@ -349,50 +353,50 @@
     <None Include="Service References\InventCountingService\SyncServices.InventCountingService.WarehouseContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder14.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder141.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1410.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1411.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1412.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1413.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder13.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder142.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder143.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder144.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder145.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder146.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder147.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder148.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder149.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder9.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder2.wsdl" />
-    <None Include="Service References\SalesOrderAX\SalesOrder21.wsdl" />
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.AxdSOPick.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -496,6 +500,7 @@
     <Compile Include="IDMCheckService.cs" />
     <Compile Include="IFGSyncService.cs" />
     <Compile Include="IModulaPR.cs" />
+    <Compile Include="ISalesOrderService.cs" />
     <Compile Include="ISalesService.cs" />
     <Compile Include="ISCSyncService.cs" />
     <Compile Include="IUserMgtService.cs" />
@@ -510,6 +515,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SalesLine.cs" />
+    <Compile Include="SalesOrderService.svc.cs">
+      <DependentUpon>SalesOrderService.svc</DependentUpon>
+    </Compile>
     <Compile Include="SalesService.svc.cs">
       <DependentUpon>SalesService.svc</DependentUpon>
     </Compile>

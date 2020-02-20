@@ -19,7 +19,6 @@ namespace TestWebservice.DMCheckService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportMiniContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportOfflineContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMForTransfer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMSummaryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.WmsLocationContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportContract))]
@@ -374,103 +373,6 @@ namespace TestWebservice.DMCheckService {
                 if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
                     this.shadeFieldField = value;
                     this.RaisePropertyChanged("shadeField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string whLocationIdField {
-            get {
-                return this.whLocationIdFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.whLocationIdFieldField, value) != true)) {
-                    this.whLocationIdFieldField = value;
-                    this.RaisePropertyChanged("whLocationIdField");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DMForTransfer", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
-    [System.SerializableAttribute()]
-    public partial class DMForTransfer : TestWebservice.DMCheckService.XppObjectBase {
-        
-        private bool isPostedFieldField;
-        
-        private bool isPostedFieldSpecifiedField;
-        
-        private bool isTransferredFieldField;
-        
-        private bool isTransferredFieldSpecifiedField;
-        
-        private string palletNumFieldField;
-        
-        private string whLocationIdFieldField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool isPostedField {
-            get {
-                return this.isPostedFieldField;
-            }
-            set {
-                if ((this.isPostedFieldField.Equals(value) != true)) {
-                    this.isPostedFieldField = value;
-                    this.RaisePropertyChanged("isPostedField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool isPostedFieldSpecified {
-            get {
-                return this.isPostedFieldSpecifiedField;
-            }
-            set {
-                if ((this.isPostedFieldSpecifiedField.Equals(value) != true)) {
-                    this.isPostedFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("isPostedFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool isTransferredField {
-            get {
-                return this.isTransferredFieldField;
-            }
-            set {
-                if ((this.isTransferredFieldField.Equals(value) != true)) {
-                    this.isTransferredFieldField = value;
-                    this.RaisePropertyChanged("isTransferredField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool isTransferredFieldSpecified {
-            get {
-                return this.isTransferredFieldSpecifiedField;
-            }
-            set {
-                if ((this.isTransferredFieldSpecifiedField.Equals(value) != true)) {
-                    this.isTransferredFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("isTransferredFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string palletNumField {
-            get {
-                return this.palletNumFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.palletNumFieldField, value) != true)) {
-                    this.palletNumFieldField = value;
-                    this.RaisePropertyChanged("palletNumField");
                 }
             }
         }
@@ -1569,6 +1471,163 @@ namespace TestWebservice.DMCheckService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LocationHistory", Namespace="http://schemas.datacontract.org/2004/07/SyncServices")]
+    [System.SerializableAttribute()]
+    public partial class LocationHistory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreateDateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeviceNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsManualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PalletNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreateDateTime {
+            get {
+                return this.CreateDateTimeField;
+            }
+            set {
+                if ((this.CreateDateTimeField.Equals(value) != true)) {
+                    this.CreateDateTimeField = value;
+                    this.RaisePropertyChanged("CreateDateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeviceName {
+            get {
+                return this.DeviceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeviceNameField, value) != true)) {
+                    this.DeviceNameField = value;
+                    this.RaisePropertyChanged("DeviceName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsManual {
+            get {
+                return this.IsManualField;
+            }
+            set {
+                if ((this.IsManualField.Equals(value) != true)) {
+                    this.IsManualField = value;
+                    this.RaisePropertyChanged("IsManual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PalletNum {
+            get {
+                return this.PalletNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PalletNumField, value) != true)) {
+                    this.PalletNumField = value;
+                    this.RaisePropertyChanged("PalletNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ItemForChart", Namespace="http://schemas.datacontract.org/2004/07/SyncServices")]
     [System.SerializableAttribute()]
     public partial class ItemForChart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1852,7 +1911,7 @@ namespace TestWebservice.DMCheckService {
         TestWebservice.DMCheckService.DMExportContract[] UpdateOfflinePallets(TestWebservice.DMCheckService.DMExportOfflineContract[] lines);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocation", ReplyAction="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocationResponse")]
-        TestWebservice.DMCheckService.DMForTransfer[] TransferPalletsToNewLocation(TestWebservice.DMCheckService.DMForTransfer[] lines);
+        TestWebservice.DMCheckService.LocationHistory[] TransferPalletsToNewLocation(TestWebservice.DMCheckService.LocationHistory[] lines);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/SummaryPallets", ReplyAction="http://tempuri.org/IDMCheckService/SummaryPalletsResponse")]
         TestWebservice.DMCheckService.DMSummaryContract[] SummaryPallets(string itemId);
@@ -1949,7 +2008,7 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.UpdateOfflinePallets(lines);
         }
         
-        public TestWebservice.DMCheckService.DMForTransfer[] TransferPalletsToNewLocation(TestWebservice.DMCheckService.DMForTransfer[] lines) {
+        public TestWebservice.DMCheckService.LocationHistory[] TransferPalletsToNewLocation(TestWebservice.DMCheckService.LocationHistory[] lines) {
             return base.Channel.TransferPalletsToNewLocation(lines);
         }
         

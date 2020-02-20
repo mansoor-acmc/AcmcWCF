@@ -649,12 +649,45 @@ namespace SyncServices
             return messages;
         }
 
+        public string CheckPalletApprovedBulk(string pallets)
+        {            
+            string strReturn = string.Empty;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Parameters.Add("@pPallets", SqlDbType.VarChar);                
+                cmd.Parameters.Add("@pReturn", SqlDbType.VarChar, 500);
+                cmd.Parameters["@pReturn"].Direction = ParameterDirection.Output;
+
+                cmd.Parameters["@pPallets"].Value = pallets;
+                
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "CheckPalletApproved";
+
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+
+                int result = cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@pReturn"].Value != DBNull.Value)
+                    strReturn = cmd.Parameters["@pReturn"].Value.ToString();
+            }
+            finally
+            {
+                if (conn.State != ConnectionState.Closed)
+                    conn.Close();
+            }
+
+            return strReturn;
+        }
+
         /// <summary>
         /// Updates or Transfers the location of pallets in Bulk
         /// </summary>
         /// <param name="pallets">Pallets with Locations, comma seperated</param>
         /// <returns>Those pallets whose are not transferred because of IsPosted=1</returns>
-        public string UpdatePalletLocationBulk(string pallets)
+        public string UpdatePalletLocationBulk(string pallets, string userName, string deviceName)
         {
             /*dbo.PalletLocTransfer
 	            @pPallets VARCHAR(MAX),
@@ -665,14 +698,18 @@ namespace SyncServices
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.Parameters.Add("@pPallets", SqlDbType.VarChar);
+                cmd.Parameters.Add("@pDeviceName", SqlDbType.VarChar,50);
+                cmd.Parameters.Add("@pUserName", SqlDbType.VarChar,10);
                 cmd.Parameters.Add("@pReturn", SqlDbType.VarChar,500);
                 cmd.Parameters["@pReturn"].Direction = ParameterDirection.Output;
 
                 cmd.Parameters["@pPallets"].Value = pallets;
+                cmd.Parameters["@pDeviceName"].Value = deviceName;
+                cmd.Parameters["@pUserName"].Value = userName;
 
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "PalletLocTransfer";
+                cmd.CommandText = "PalletLocTransferNew";
 
                 if (conn.State != ConnectionState.Open)
                     conn.Open();
@@ -699,8 +736,8 @@ namespace SyncServices
         {
             try
             {
-                string sqlString = "INSERT INTO LocationHistory (PalletNum, DeviceName, CreateDateTime, Location, Message) " +
-                    "VALUES(@p1, @p2, @p3, @p4, @p5);";
+                string sqlString = "INSERT INTO LocationHistory (PalletNum, DeviceName, CreateDateTime, Location, Message, IsManual, Username) " +
+                    "VALUES(@p1, @p2, @p3, @p4, @p5, @p6, @p7);";
 
                 SqlCommand cmd = new SqlCommand();
 
@@ -709,6 +746,8 @@ namespace SyncServices
                 cmd.Parameters.Add("@p3", SqlDbType.DateTime);
                 cmd.Parameters.Add("@p4", SqlDbType.NVarChar);
                 cmd.Parameters.Add("@p5", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@p6", SqlDbType.Bit);
+                cmd.Parameters.Add("@p7", SqlDbType.NVarChar);
 
 
                 cmd.Parameters["@p1"].Value = history.PalletNum;
@@ -716,6 +755,8 @@ namespace SyncServices
                 cmd.Parameters["@p3"].Value = history.CreateDateTime;
                 cmd.Parameters["@p4"].Value = history.Location;
                 cmd.Parameters["@p5"].Value = message;
+                cmd.Parameters["@p6"].Value = history.IsManual;
+                cmd.Parameters["@p7"].Value = history.UserName;
 
 
                 cmd.Connection = conn;

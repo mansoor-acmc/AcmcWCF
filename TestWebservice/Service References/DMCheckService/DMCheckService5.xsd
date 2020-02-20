@@ -142,27 +142,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDMExportContract" nillable="true" type="tns:ArrayOfDMExportContract" />
-  <xs:complexType name="ArrayOfDMForTransfer">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMForTransfer" nillable="true" type="tns:DMForTransfer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDMForTransfer" nillable="true" type="tns:ArrayOfDMForTransfer" />
-  <xs:complexType name="DMForTransfer">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="isPostedField" type="xs:boolean" />
-          <xs:element name="isPostedFieldSpecified" type="xs:boolean" />
-          <xs:element name="isTransferredField" type="xs:boolean" />
-          <xs:element name="isTransferredFieldSpecified" type="xs:boolean" />
-          <xs:element name="palletNumField" nillable="true" type="xs:string" />
-          <xs:element name="whLocationIdField" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="DMForTransfer" nillable="true" type="tns:DMForTransfer" />
   <xs:complexType name="ArrayOfDMSummaryContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />

@@ -590,7 +590,8 @@ namespace SyncServices
 
             try
             {
-                return client.GetDeliveries(context, dateSearch);
+                var deliveries = client.GetDeliveries(context, dateSearch);
+                return deliveries;
             }
             finally
             {

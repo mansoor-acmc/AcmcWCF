@@ -21,5 +21,9 @@ namespace SyncServices
         public int ID { get; set; }
         [DataMember]
         public DateTime CreateDateTime { get; set; }
+        [DataMember]
+        public string UserName { get; set; }
+        [DataMember]
+        public Boolean IsManual { get; set; }
     }
 }

@@ -156,14 +156,14 @@
   <xs:element name="TransferPalletsToNewLocation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfDMForTransfer" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfLocationHistory" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="TransferPalletsToNewLocationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="TransferPalletsToNewLocationResult" nillable="true" type="q8:ArrayOfDMForTransfer" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="TransferPalletsToNewLocationResult" nillable="true" type="q8:ArrayOfLocationHistory" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
