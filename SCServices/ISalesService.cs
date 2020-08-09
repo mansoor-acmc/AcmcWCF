@@ -59,5 +59,7 @@ namespace SyncServices
 
         [OperationContract]
         FGDeliveryContract[] GetDeliveries(DateTime dateSearch);
+
+        
     }
 }

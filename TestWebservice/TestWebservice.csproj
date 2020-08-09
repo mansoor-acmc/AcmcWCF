@@ -121,23 +121,23 @@
     <None Include="Service References\DeviceOps\TestWebservice.DeviceOps.DeviceMessage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService.wsdl" />
-    <None Include="Service References\DMCheckService\DMCheckService.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService1.wsdl" />
+    <None Include="Service References\DMCheckService\DMCheckService6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService1.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService61.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService2.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService62.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService3.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService63.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService4.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService64.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\DMCheckService5.xsd">
+    <None Include="Service References\DMCheckService\DMCheckService65.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportContract.datasource">
@@ -406,7 +406,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\DMCheckService1.disco" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Service References\UserMgtServices\UserMgtService.disco" />
   </ItemGroup>
@@ -478,9 +480,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\DMCheckService\DMCheckService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SalesOrderService\SalesOrderService.disco" />

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="57fc6734-7205-4866-9285-ff00a9851cbd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://FAC-DBTEST-AXR3:8101/DynamicsAx/Services/SalesServicesGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesServicesGroup8.xsd" MetadataType="Schema" ID="2ef2e90f-d740-4829-b159-aea49b029223" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd6" />
+    <MetadataFile FileName="SalesServicesGroup81.xsd" MetadataType="Schema" ID="545d897c-4ab7-46e5-b0d8-1f85dd66f180" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="SalesServicesGroup82.xsd" MetadataType="Schema" ID="e3b235fc-bf7d-499b-b2bb-8f12ecb03dda" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd5" />
+    <MetadataFile FileName="SalesServicesGroup83.xsd" MetadataType="Schema" ID="713612ff-a229-4b74-8871-8286822eecab" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd2" />
+    <MetadataFile FileName="SalesServicesGroup84.xsd" MetadataType="Schema" ID="5fe2142c-957e-45bb-8a00-eebbba3263c8" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd7" />
+    <MetadataFile FileName="SalesServicesGroup85.xsd" MetadataType="Schema" ID="1086a641-1fcd-42ec-bb51-50ca338c9d4d" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd1" />
+    <MetadataFile FileName="SalesServicesGroup2.wsdl" MetadataType="Wsdl" ID="9e1119af-462d-471c-bcca-7a18b728f086" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesServicesGroup86.xsd" MetadataType="Schema" ID="fa76ef65-ab70-46c2-9da1-2261ea21f91f" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd0" />
+    <MetadataFile FileName="SalesServicesGroup21.wsdl" MetadataType="Wsdl" ID="07997c92-74b4-46b8-8cc6-31eef0223d5d" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup" />
+    <MetadataFile FileName="SalesServicesGroup87.xsd" MetadataType="Schema" ID="8d80c1a0-8556-4feb-a643-f166ef86d838" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -18,17 +18,17 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:58380/DMCheckService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://172.17.0.50/SyncServices63/DMCheckService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DMCheckService.xsd" MetadataType="Schema" ID="eff46e4f-9a91-48b2-8ff4-cb77773f26d0" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd4" />
-    <MetadataFile FileName="DMCheckService1.xsd" MetadataType="Schema" ID="e32ae6b2-05e0-427e-a3a8-ca324f360e0c" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd5" />
-    <MetadataFile FileName="DMCheckService.wsdl" MetadataType="Wsdl" ID="d13b37fa-d55f-4a17-9fc9-154d51c2b927" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?wsdl" />
-    <MetadataFile FileName="DMCheckService2.xsd" MetadataType="Schema" ID="9b2439d2-893e-4a41-a5cf-900caddc663f" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd3" />
-    <MetadataFile FileName="DMCheckService3.xsd" MetadataType="Schema" ID="e0b3cdd3-2ec5-4fb4-b4a2-766413bc905e" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd0" />
-    <MetadataFile FileName="DMCheckService4.xsd" MetadataType="Schema" ID="7001297e-9ec5-48de-ab71-e429fd6ebf72" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd1" />
-    <MetadataFile FileName="DMCheckService5.xsd" MetadataType="Schema" ID="2a05a3f3-c489-47f3-b1c4-7e80a3322049" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?xsd=xsd2" />
-    <MetadataFile FileName="DMCheckService.disco" MetadataType="Disco" ID="745b0609-9266-4a08-b22a-34419896acdf" SourceId="1" SourceUrl="http://localhost:58380/DMCheckService.svc?disco" />
+    <MetadataFile FileName="DMCheckService6.xsd" MetadataType="Schema" ID="1c3d6fbb-a54c-4e2f-b369-81ac6724b05e" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DMCheckService61.xsd" MetadataType="Schema" ID="09aad576-b406-495b-8d38-449af2f94fa6" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DMCheckService62.xsd" MetadataType="Schema" ID="521c108d-0c5d-45f7-baa4-36c3795533d6" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DMCheckService63.xsd" MetadataType="Schema" ID="56a695e5-b6c9-4bfd-b09a-c93ccb7527da" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DMCheckService64.xsd" MetadataType="Schema" ID="4da529bf-5956-446d-8344-6508025e3ee6" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DMCheckService1.disco" MetadataType="Disco" ID="d818a1fa-efec-4889-9388-7683132c2255" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?disco" />
+    <MetadataFile FileName="DMCheckService1.wsdl" MetadataType="Wsdl" ID="085f23da-b48f-4903-b9be-6fe21aabc25e" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?wsdl" />
+    <MetadataFile FileName="DMCheckService65.xsd" MetadataType="Schema" ID="e803586b-e11e-46b4-a188-a1f5eb56a071" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd5" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfMobile.SummaryService" CodeBehind="SummaryService.svc.cs" %>

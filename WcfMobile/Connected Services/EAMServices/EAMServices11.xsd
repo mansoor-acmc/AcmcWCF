@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+  <xs:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+  <xs:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" />
+  <xs:element xmlns:q1="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" name="EntityKeyList" type="q1:EntityKeyList" />
+  <xs:element xmlns:q2="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" name="QueryCriteria" type="q2:QueryCriteria" />
+  <xs:element xmlns:q3="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" name="AxdWorkItems" type="q3:AxdWorkItems" />
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

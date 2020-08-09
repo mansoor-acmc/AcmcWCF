@@ -41,6 +41,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -60,26 +63,759 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
-    <Content Include="Web.config" />
+    <None Include="Connected Services\EAMServices\EAMServices.wsdl" />
+    <None Include="Connected Services\EAMServices\EAMServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices1.wsdl" />
+    <None Include="Connected Services\EAMServices\EAMServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.AxdWorkItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.EntityKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.EquipContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.FailureCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.PMLineCostContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.PMWorkItemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.PMWorkOrderContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.RepairCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WOLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WOPoolContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceFindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceSearchEquipmentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByEquipmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.OnHandContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetOnhandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesOrderServices\configuration91.svcinfo" />
+    <None Include="Connected Services\SalesOrderServices\configuration.svcinfo" />
+    <None Include="Connected Services\SalesOrderServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EAMServices\configuration91.svcinfo" />
+    <None Include="Connected Services\EAMServices\configuration.svcinfo" />
+    <None Include="Connected Services\EAMServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetDeliverySummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.PLNotDeliveredContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder144.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder146.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder147.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder148.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder2.wsdl" />
+    <None Include="Connected Services\SalesOrderServices\SalesOrder21.wsdl" />
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetDeliveryStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesServicesGroup\configuration91.svcinfo" />
+    <None Include="Connected Services\SalesServicesGroup\configuration.svcinfo" />
+    <None Include="Connected Services\SalesServicesGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\UserServices\configuration91.svcinfo" />
+    <None Include="Connected Services\UserServices\configuration.svcinfo" />
+    <None Include="Connected Services\UserServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="CustomerCaseService.svc" />
+    <Content Include="EAMService.svc" />
+    <Content Include="PrePickingService.svc" />
+    <Content Include="ProdPlanService.svc" />
+    <Content Include="ProdRequestService.svc" />
+    <Content Include="SalesService.svc" />
+    <Content Include="SummaryService.svc" />
+    <Content Include="UserInfoService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="Classes\DBClass.cs" />
+    <Compile Include="Connected Services\EAMServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="Connected Services\SalesOrderServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SalesServicesGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\EquipCatalog.cs" />
+    <Compile Include="Classes\ItemEntity.cs" />
+    <Compile Include="Classes\PMEquipment.cs" />
+    <Compile Include="Classes\PMFailureCode.cs" />
+    <Compile Include="Classes\PMRepairCode.cs" />
+    <Compile Include="Classes\PMWorkItem.cs" />
+    <Compile Include="Classes\PMWorkOrder.cs" />
+    <Compile Include="Classes\WOPool.cs" />
+    <Compile Include="CustomerCaseService.svc.cs">
+      <DependentUpon>CustomerCaseService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="EAMService.svc.cs">
+      <DependentUpon>EAMService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ICustomerCaseService.cs" />
+    <Compile Include="IEAMService.cs" />
+    <Compile Include="IPrePickingService.cs" />
+    <Compile Include="IProdPlanService.cs" />
+    <Compile Include="IProdRequestService.cs" />
+    <Compile Include="ISalesService.cs" />
+    <Compile Include="ISummaryService.cs" />
+    <Compile Include="IUserInfoService.cs" />
+    <Compile Include="PrePickingService.svc.cs">
+      <DependentUpon>PrePickingService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ProdPlanService.svc.cs">
+      <DependentUpon>ProdPlanService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ProdRequestService.svc.cs">
+      <DependentUpon>ProdRequestService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="RestAuthorizationManager.cs" />
+    <Compile Include="SalesService.svc.cs">
+      <DependentUpon>SalesService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SummaryService.svc.cs">
+      <DependentUpon>SummaryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\UserInfo.cs" />
+    <Compile Include="UserInfoService.svc.cs">
+      <DependentUpon>UserInfoService.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.AxdSOPick.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.CustomerDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.FGLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SalesLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SalesTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByTrucksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceFindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetFGLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceReservePalletsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.OnHandContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CustomerInvoiceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.OlderStockContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProductContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ItemSizeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CustForcastPlanContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdScheduleContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CategoryTypeLookup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CustomerCaseContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetPriorityLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.CaseServiceGetCasesSummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.SummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.OnhandByGradeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ForcastSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup2.wsdl" />
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup21.wsdl" />
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup82.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup87.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices.wsdl" />
+    <None Include="Connected Services\UserServices\UserMgtServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices1.wsdl" />
+    <None Include="Connected Services\UserServices\UserMgtServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.AttendanceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserInfoContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceLoginUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetUserInfoOnLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\PublishProfiles\AcmcMobileServices.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EAMServices\" />
+    <WCFMetadataStorage Include="Connected Services\SalesOrderServices\" />
+    <WCFMetadataStorage Include="Connected Services\SalesServicesGroup\" />
+    <WCFMetadataStorage Include="Connected Services\UserServices\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

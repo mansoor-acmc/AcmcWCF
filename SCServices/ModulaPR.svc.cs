@@ -154,6 +154,12 @@ namespace SyncServices
             }
             else
             {
+                //for bulk search use "*"
+                if (!search.EndsWith("*"))
+                    search = search + "*";
+                else if (!search.StartsWith("*"))
+                    search = "*" + search;
+
                 List<EquipContract> ds = client.SearchEquipments(context, search).ToList();
 
                 foreach (EquipContract dr in ds)

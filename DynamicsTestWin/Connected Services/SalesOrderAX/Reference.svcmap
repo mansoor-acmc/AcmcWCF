@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3fe82f3f-84d5-48b0-9e55-c78a98ee5901" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/SalesOrder" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesOrder14.xsd" MetadataType="Schema" ID="1c2ef42a-edf3-4db5-b5f2-6b56e62e14ca" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd7" />
+    <MetadataFile FileName="SalesOrder141.xsd" MetadataType="Schema" ID="416cc804-b6e0-48b8-b7e6-47f6abb5d7ec" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd4" />
+    <MetadataFile FileName="SalesOrder142.xsd" MetadataType="Schema" ID="561d789b-e1b4-4dbf-9ad3-41938000fdbb" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd5" />
+    <MetadataFile FileName="SalesOrder143.xsd" MetadataType="Schema" ID="a853f477-75c7-46dd-9765-f1154b52d749" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd12" />
+    <MetadataFile FileName="SalesOrder144.xsd" MetadataType="Schema" ID="a813053e-802a-4979-87eb-9cb7d769b4c7" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd11" />
+    <MetadataFile FileName="SalesOrder2.wsdl" MetadataType="Wsdl" ID="c079ea92-6041-4612-bedd-ef667a70608a" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesOrder145.xsd" MetadataType="Schema" ID="9b621a53-d253-46d8-a28c-d66227d9a302" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd10" />
+    <MetadataFile FileName="SalesOrder21.wsdl" MetadataType="Wsdl" ID="d3708db6-612e-4a1b-8656-d61e9a1909a5" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder" />
+    <MetadataFile FileName="SalesOrder146.xsd" MetadataType="Schema" ID="03a48e4d-6a97-4307-88a9-6199b673eb6f" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd8" />
+    <MetadataFile FileName="SalesOrder147.xsd" MetadataType="Schema" ID="4de3a9d8-a0ac-46d0-82fb-0b228492476a" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd9" />
+    <MetadataFile FileName="SalesOrder148.xsd" MetadataType="Schema" ID="800871db-e966-45d1-997d-3267e1004505" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd13" />
+    <MetadataFile FileName="SalesOrder149.xsd" MetadataType="Schema" ID="770616d7-edc3-4cfa-a74a-b57865f6fdaa" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd2" />
+    <MetadataFile FileName="SalesOrder1410.xsd" MetadataType="Schema" ID="1383a2af-57ac-4f41-bc44-c05945073a59" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd3" />
+    <MetadataFile FileName="SalesOrder1411.xsd" MetadataType="Schema" ID="987d16fe-2363-4229-a3fb-d94a033d12be" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd0" />
+    <MetadataFile FileName="SalesOrder1412.xsd" MetadataType="Schema" ID="b2263f40-4054-48b6-bac8-2c107ac52305" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd1" />
+    <MetadataFile FileName="SalesOrder1413.xsd" MetadataType="Schema" ID="13cd9140-b9b6-4361-815f-ddd00c07caa4" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesOrder?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

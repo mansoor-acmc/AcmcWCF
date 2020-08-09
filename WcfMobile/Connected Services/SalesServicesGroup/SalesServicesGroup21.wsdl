@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SalesServicesGroup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_CaseService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_InventOnHandService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_PrePickingService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_ProdPlanService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_ProdRequestService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_CaseService" type="i0:CaseService">
+    <wsp:PolicyReference URI="#NetTcpBinding_CaseService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetPriorityLookup">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetPriorityLookup" style="document" />
+      <wsdl:input name="CaseServiceGetPriorityLookupRequest">
+        <soap12:header message="i0:CaseServiceGetPriorityLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetPriorityLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerCase">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/UpdateCustomerCase" style="document" />
+      <wsdl:input name="CaseServiceUpdateCustomerCaseRequest">
+        <soap12:header message="i0:CaseServiceUpdateCustomerCaseRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceUpdateCustomerCaseResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryTypeLookup">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetCategoryTypeLookup" style="document" />
+      <wsdl:input name="CaseServiceGetCategoryTypeLookupRequest">
+        <soap12:header message="i0:CaseServiceGetCategoryTypeLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetCategoryTypeLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetResolutionLookup">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetResolutionLookup" style="document" />
+      <wsdl:input name="CaseServiceGetResolutionLookupRequest">
+        <soap12:header message="i0:CaseServiceGetResolutionLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetResolutionLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCases">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetCustomerCases" style="document" />
+      <wsdl:input name="CaseServiceGetCustomerCasesRequest">
+        <soap12:header message="i0:CaseServiceGetCustomerCasesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetCustomerCasesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerCase">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/DeleteCustomerCase" style="document" />
+      <wsdl:input name="CaseServiceDeleteCustomerCaseRequest">
+        <soap12:header message="i0:CaseServiceDeleteCustomerCaseRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceDeleteCustomerCaseResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusLookup">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetStatusLookup" style="document" />
+      <wsdl:input name="CaseServiceGetStatusLookupRequest">
+        <soap12:header message="i0:CaseServiceGetStatusLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetStatusLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerCase">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/CreateCustomerCase" style="document" />
+      <wsdl:input name="CaseServiceCreateCustomerCaseRequest">
+        <soap12:header message="i0:CaseServiceCreateCustomerCaseRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceCreateCustomerCaseResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCase">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetCase" style="document" />
+      <wsdl:input name="CaseServiceGetCaseRequest">
+        <soap12:header message="i0:CaseServiceGetCaseRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetCaseResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasesSummaryByCust">
+      <soap12:operation soapAction="http://tempuri.org/CaseService/GetCasesSummaryByCust" style="document" />
+      <wsdl:input name="CaseServiceGetCasesSummaryByCustRequest">
+        <soap12:header message="i0:CaseServiceGetCasesSummaryByCustRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CaseServiceGetCasesSummaryByCustResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_InventOnHandService" type="i0:InventOnHandService">
+    <wsp:PolicyReference URI="#NetTcpBinding_InventOnHandService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetCustomerOlderStockOverall">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall" style="document" />
+      <wsdl:input name="InventOnHandServiceGetCustomerOlderStockOverallRequest">
+        <soap12:header message="i0:InventOnHandServiceGetCustomerOlderStockOverallRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetCustomerOlderStockOverallResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInvoices">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetCustomerInvoices" style="document" />
+      <wsdl:input name="InventOnHandServiceGetCustomerInvoicesRequest">
+        <soap12:header message="i0:InventOnHandServiceGetCustomerInvoicesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetCustomerInvoicesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInvoicesByDate">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate" style="document" />
+      <wsdl:input name="InventOnHandServiceGetCustomerInvoicesByDateRequest">
+        <soap12:header message="i0:InventOnHandServiceGetCustomerInvoicesByDateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetCustomerInvoicesByDateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByCustomerZeroStock">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock" style="document" />
+      <wsdl:input name="InventOnHandServiceGetOnHandByCustomerZeroStockRequest">
+        <soap12:header message="i0:InventOnHandServiceGetOnHandByCustomerZeroStockRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetOnHandByCustomerZeroStockResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomer" style="document" />
+      <wsdl:input name="InventOnHandServiceGetOnHandByCustomerRequest">
+        <soap12:header message="i0:InventOnHandServiceGetOnHandByCustomerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetOnHandByCustomerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandQueryByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer" style="document" />
+      <wsdl:input name="InventOnHandServiceGetOnhandQueryByCustomerRequest">
+        <soap12:header message="i0:InventOnHandServiceGetOnhandQueryByCustomerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetOnhandQueryByCustomerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetInvoice" style="document" />
+      <wsdl:input name="InventOnHandServiceGetInvoiceRequest">
+        <soap12:header message="i0:InventOnHandServiceGetInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetProductInfo" style="document" />
+      <wsdl:input name="InventOnHandServiceGetProductInfoRequest">
+        <soap12:header message="i0:InventOnHandServiceGetProductInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetProductInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOlderStock">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStock" style="document" />
+      <wsdl:input name="InventOnHandServiceGetCustomerOlderStockRequest">
+        <soap12:header message="i0:InventOnHandServiceGetCustomerOlderStockRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetCustomerOlderStockResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionRequests">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/getProductionRequests" style="document" />
+      <wsdl:input name="InventOnHandServiceGetProductionRequestsRequest">
+        <soap12:header message="i0:InventOnHandServiceGetProductionRequestsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetProductionRequestsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByModel">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetProductsByModel" style="document" />
+      <wsdl:input name="InventOnHandServiceGetProductsByModelRequest">
+        <soap12:header message="i0:InventOnHandServiceGetProductsByModelRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetProductsByModelResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OutstandingBalance">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/OutstandingBalance" style="document" />
+      <wsdl:input name="InventOnHandServiceOutstandingBalanceRequest">
+        <soap12:header message="i0:InventOnHandServiceOutstandingBalanceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceOutstandingBalanceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByItem">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetOnHandByItem" style="document" />
+      <wsdl:input name="InventOnHandServiceGetOnHandByItemRequest">
+        <soap12:header message="i0:InventOnHandServiceGetOnHandByItemRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetOnHandByItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsBySize">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetProductsBySize" style="document" />
+      <wsdl:input name="InventOnHandServiceGetProductsBySizeRequest">
+        <soap12:header message="i0:InventOnHandServiceGetProductsBySizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetProductsBySizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesBySalesId">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetInvoicesBySalesId" style="document" />
+      <wsdl:input name="InventOnHandServiceGetInvoicesBySalesIdRequest">
+        <soap12:header message="i0:InventOnHandServiceGetInvoicesBySalesIdRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetInvoicesBySalesIdResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByCustomerAll">
+      <soap12:operation soapAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll" style="document" />
+      <wsdl:input name="InventOnHandServiceGetProductsByCustomerAllRequest">
+        <soap12:header message="i0:InventOnHandServiceGetProductsByCustomerAllRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InventOnHandServiceGetProductsByCustomerAllResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_PrePickingService" type="i0:PrePickingService">
+    <wsp:PolicyReference URI="#NetTcpBinding_PrePickingService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetStatusLookup">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetStatusLookup" style="document" />
+      <wsdl:input name="PrePickingServiceGetStatusLookupRequest">
+        <soap12:header message="i0:PrePickingServiceGetStatusLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetStatusLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrePicking">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/UpdatePrePicking" style="document" />
+      <wsdl:input name="PrePickingServiceUpdatePrePickingRequest">
+        <soap12:header message="i0:PrePickingServiceUpdatePrePickingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceUpdatePrePickingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGradeSizeWithOnOrder">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrder" style="document" />
+      <wsdl:input name="PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest">
+        <soap12:header message="i0:PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StatusUpdatePrePicking">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/StatusUpdatePrePicking" style="document" />
+      <wsdl:input name="PrePickingServiceStatusUpdatePrePickingRequest">
+        <soap12:header message="i0:PrePickingServiceStatusUpdatePrePickingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceStatusUpdatePrePickingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePrePicking">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/CreatePrePicking" style="document" />
+      <wsdl:input name="PrePickingServiceCreatePrePickingRequest">
+        <soap12:header message="i0:PrePickingServiceCreatePrePickingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceCreatePrePickingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGrade">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetOnhandByGrade" style="document" />
+      <wsdl:input name="PrePickingServiceGetOnhandByGradeRequest">
+        <soap12:header message="i0:PrePickingServiceGetOnhandByGradeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetOnhandByGradeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrePicking">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/DeletePrePicking" style="document" />
+      <wsdl:input name="PrePickingServiceDeletePrePickingRequest">
+        <soap12:header message="i0:PrePickingServiceDeletePrePickingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceDeletePrePickingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGradeSize">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSize" style="document" />
+      <wsdl:input name="PrePickingServiceGetOnhandByGradeSizeRequest">
+        <soap12:header message="i0:PrePickingServiceGetOnhandByGradeSizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetOnhandByGradeSizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrePickings">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetPrePickings" style="document" />
+      <wsdl:input name="PrePickingServiceGetPrePickingsRequest">
+        <soap12:header message="i0:PrePickingServiceGetPrePickingsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetPrePickingsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinglePrePicking">
+      <soap12:operation soapAction="http://tempuri.org/PrePickingService/GetSinglePrePicking" style="document" />
+      <wsdl:input name="PrePickingServiceGetSinglePrePickingRequest">
+        <soap12:header message="i0:PrePickingServiceGetSinglePrePickingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePickingServiceGetSinglePrePickingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_ProdPlanService" type="i0:ProdPlanService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ProdPlanService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="DeleteCustPlan">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/DeleteCustPlan" style="document" />
+      <wsdl:input name="ProdPlanServiceDeleteCustPlanRequest">
+        <soap12:header message="i0:ProdPlanServiceDeleteCustPlanRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceDeleteCustPlanResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlan">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetCustPlan" style="document" />
+      <wsdl:input name="ProdPlanServiceGetCustPlanRequest">
+        <soap12:header message="i0:ProdPlanServiceGetCustPlanRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetCustPlanResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanByMonth">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonth" style="document" />
+      <wsdl:input name="ProdPlanServiceGetCustPlanByMonthRequest">
+        <soap12:header message="i0:ProdPlanServiceGetCustPlanByMonthRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetCustPlanByMonthResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyForcastSummary">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary" style="document" />
+      <wsdl:input name="ProdPlanServiceGetMonthlyForcastSummaryRequest">
+        <soap12:header message="i0:ProdPlanServiceGetMonthlyForcastSummaryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetMonthlyForcastSummaryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingLines">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetSortingLines" style="document" />
+      <wsdl:input name="ProdPlanServiceGetSortingLinesRequest">
+        <soap12:header message="i0:ProdPlanServiceGetSortingLinesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetSortingLinesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyForcastBySize">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize" style="document" />
+      <wsdl:input name="ProdPlanServiceGetMonthlyForcastBySizeRequest">
+        <soap12:header message="i0:ProdPlanServiceGetMonthlyForcastBySizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetMonthlyForcastBySizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSizes">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetItemSizes" style="document" />
+      <wsdl:input name="ProdPlanServiceGetItemSizesRequest">
+        <soap12:header message="i0:ProdPlanServiceGetItemSizesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetItemSizesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyForcastBySize">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize" style="document" />
+      <wsdl:input name="ProdPlanServiceGetYearlyForcastBySizeRequest">
+        <soap12:header message="i0:ProdPlanServiceGetYearlyForcastBySizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetYearlyForcastBySizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanByMonthSize">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSize" style="document" />
+      <wsdl:input name="ProdPlanServiceGetCustPlanByMonthSizeRequest">
+        <soap12:header message="i0:ProdPlanServiceGetCustPlanByMonthSizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetCustPlanByMonthSizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustPlan">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/UpdateCustPlan" style="document" />
+      <wsdl:input name="ProdPlanServiceUpdateCustPlanRequest">
+        <soap12:header message="i0:ProdPlanServiceUpdateCustPlanRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceUpdateCustPlanResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustPlan">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/CreateCustPlan" style="document" />
+      <wsdl:input name="ProdPlanServiceCreateCustPlanRequest">
+        <soap12:header message="i0:ProdPlanServiceCreateCustPlanRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceCreateCustPlanResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanBySize">
+      <soap12:operation soapAction="http://tempuri.org/ProdPlanService/GetCustPlanBySize" style="document" />
+      <wsdl:input name="ProdPlanServiceGetCustPlanBySizeRequest">
+        <soap12:header message="i0:ProdPlanServiceGetCustPlanBySizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdPlanServiceGetCustPlanBySizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_ProdRequestService" type="i0:ProdRequestService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ProdRequestService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="DeleteProdRequest">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/DeleteProdRequest" style="document" />
+      <wsdl:input name="ProdRequestServiceDeleteProdRequestRequest">
+        <soap12:header message="i0:ProdRequestServiceDeleteProdRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceDeleteProdRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByDate">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdSchedulesByDateRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdSchedulesByDateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdSchedulesByDateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListByItemNotFinished">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinished" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestListByItemNotFinishedRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestListByItemNotFinishedRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestListByItemNotFinishedResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestByStatusList">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestByStatusListRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestByStatusListRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestByStatusListResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestSummaryByCust">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestSummaryByCustRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestSummaryByCustRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestSummaryByCustResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedules">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdSchedules" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdSchedulesRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdSchedulesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdSchedulesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByItem">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdSchedulesByItemRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdSchedulesByItemRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdSchedulesByItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListBySize">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySize" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestListBySizeRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestListBySizeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestListBySizeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByRequest">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdSchedulesByRequestRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdSchedulesByRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdSchedulesByRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProdRequest">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/CreateProdRequest" style="document" />
+      <wsdl:input name="ProdRequestServiceCreateProdRequestRequest">
+        <soap12:header message="i0:ProdRequestServiceCreateProdRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceCreateProdRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesRearrange">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdSchedulesRearrangeRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdSchedulesRearrangeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdSchedulesRearrangeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionRequestList">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProductionRequestList" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProductionRequestListRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProductionRequestListRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProductionRequestListResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdReqStatusLookup">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdReqStatusLookupRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdReqStatusLookupRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdReqStatusLookupResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestByDateList">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateList" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestByDateListRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestByDateListRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestByDateListResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListByItem">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItem" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProdRequestListByItemRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProdRequestListByItemRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProdRequestListByItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdRequest">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/UpdateProdRequest" style="document" />
+      <wsdl:input name="ProdRequestServiceUpdateProdRequestRequest">
+        <soap12:header message="i0:ProdRequestServiceUpdateProdRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceUpdateProdRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionRequest">
+      <soap12:operation soapAction="http://tempuri.org/ProdRequestService/GetProductionRequest" style="document" />
+      <wsdl:input name="ProdRequestServiceGetProductionRequestRequest">
+        <soap12:header message="i0:ProdRequestServiceGetProductionRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProdRequestServiceGetProductionRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SalesServicesGroup">
+    <wsdl:port name="NetTcpBinding_CaseService" binding="tns:NetTcpBinding_CaseService">
+      <soap12:address location="net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_InventOnHandService" binding="tns:NetTcpBinding_InventOnHandService">
+      <soap12:address location="net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_PrePickingService" binding="tns:NetTcpBinding_PrePickingService">
+      <soap12:address location="net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_ProdPlanService" binding="tns:NetTcpBinding_ProdPlanService">
+      <soap12:address location="net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_ProdRequestService" binding="tns:NetTcpBinding_ProdRequestService">
+      <soap12:address location="net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-dbtest-axr3:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

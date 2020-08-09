@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="BktRMfYyKYqo8qez46znu1vl7kI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="0JusItKGok5424tikk1fsvrTpxg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IDMCheckService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IDMCheckService" contract="DMCheckService.IDMCheckService" bindingType="basicHttpBinding" address="http://localhost:58380/DMCheckService.svc" bindingConfiguration="BasicHttpBinding_IDMCheckService">
+    <endpoint name="BasicHttpBinding_IDMCheckService" contract="DMCheckService.IDMCheckService" bindingType="basicHttpBinding" address="http://172.17.0.50/SyncServices63/DMCheckService.svc" bindingConfiguration="BasicHttpBinding_IDMCheckService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:58380/DMCheckService.svc</serializedValue>
+          <serializedValue>http://172.17.0.50/SyncServices63/DMCheckService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

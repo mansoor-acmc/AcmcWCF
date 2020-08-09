@@ -20,35 +20,41 @@ namespace TestWebservice
             bool result11 = false;
             string str = "";
 
-            SalesOrderService.SalesOrderServiceClient soClient = new SalesOrderService.SalesOrderServiceClient();
-            //var salesid = soClient.FindSalesOrder("19SO-05804");
+            DMCheckServiceClient dmClient = new DMCheckServiceClient();
+            var locs=dmClient.GetWHLocations();
+            int totRows = locs.Count();
+            Console.WriteLine(totRows.ToString());
+            dmClient.Close();
 
-            DateTime start = new DateTime(2019, 05, 15);
-            DateTime end = new DateTime(2019, 10, 15);
-            var saleOrders = soClient.GetSalesOrders(start.ToShortDateString(), end.ToShortDateString(), "LC0004");
-            
+            //SalesOrderService.SalesOrderServiceClient soClient = new SalesOrderService.SalesOrderServiceClient();
+            ////var salesid = soClient.FindSalesOrder("19SO-05804");
 
-            //var delv=soClient.GetDeliveries(start.ToShortDateString());
+            //DateTime start = new DateTime(2019, 05, 15);
+            //DateTime end = new DateTime(2019, 10, 15);
+            //var saleOrders = soClient.GetSalesOrders(start.ToShortDateString(), end.ToShortDateString(), "LC0004");
 
-            List<LocationHistory> allOne = new List<LocationHistory>();
-            LocationHistory one = null;
 
-            //one = new DMForTransfer() { palletNumField = "L012356", whLocationIdField = "E2" };
+            ////var delv=soClient.GetDeliveries(start.ToShortDateString());
+
+            //List<LocationHistory> allOne = new List<LocationHistory>();
+            //LocationHistory one = null;
+
+            ////one = new DMForTransfer() { palletNumField = "L012356", whLocationIdField = "E2" };
+            ////allOne.Add(one);
+            //one = new LocationHistory() { PalletNum = "L033737", Location = "E1", IsManual=false,UserName="fg",DeviceName="S8-172.17.5.6" };
             //allOne.Add(one);
-            one = new LocationHistory() { PalletNum = "L033737", Location = "E1", IsManual=false,UserName="fg",DeviceName="S8-172.17.5.6" };
-            allOne.Add(one);
-            //one = new LocationHistory() { PalletNum = "K700011", Location = "J2", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
-            //allOne.Add(one);
-            //one = new LocationHistory() { PalletNum = "K215552", Location = "A3", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
-            //allOne.Add(one);
-            //one = new LocationHistory() { PalletNum = "K215553", Location = "A4", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
-            //allOne.Add(one);
+            ////one = new LocationHistory() { PalletNum = "K700011", Location = "J2", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+            ////allOne.Add(one);
+            ////one = new LocationHistory() { PalletNum = "K215552", Location = "A3", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
+            ////allOne.Add(one);
+            ////one = new LocationHistory() { PalletNum = "K215553", Location = "A4", IsManual = true, UserName = "mansoor", DeviceName = "S14-172.17.5.6" };
+            ////allOne.Add(one);
 
-            DMCheckService.DMCheckServiceClient dmClient = new DMCheckService.DMCheckServiceClient();
-            var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
-            if (result.Count() > 0)
-                Console.WriteLine("Lines Transferred: " + result.Count().ToString());
-            
+            //DMCheckService.DMCheckServiceClient dmClient = new DMCheckService.DMCheckServiceClient();
+            //var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+            //if (result.Count() > 0)
+            //    Console.WriteLine("Lines Transferred: " + result.Count().ToString());
+
 
             /*List<PalletItemContract> contract = new List<PalletItemContract>();
             contract.Add(new PalletItemContract
@@ -68,30 +74,33 @@ namespace TestWebservice
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);
-            
+
 
             /*******SalesOrder**/
-           //SalesOrder.SalesServiceClient client = new SalesServiceClient();
-             //List<PalletItemContract> items = new List<PalletItemContract>();
-            //items.Add(new PalletItemContract() { serialField = "G207150", updatedDateField = new DateTime(2017, 5, 15, 8, 9, 15), updatedDateFieldSpecified = true });
+            //SalesOrder.SalesServiceClient client = new SalesServiceClient();
+            //List<PalletItemContract> items = new List<PalletItemContract>();
+            //items.Add(new PalletItemContract() { serialField = "K148334", updatedDateField = new DateTime(2020, 3, 1, 8, 9, 15), updatedDateFieldSpecified = true });
             //items.Add(new PalletItemContract() { serialField = "G206977", updatedDateField = new DateTime(2017, 5, 15, 8, 10, 12), updatedDateFieldSpecified = true });
             //items.Add(new PalletItemContract() { serialField = "G206978", updatedDateField = new DateTime(2017, 5, 15, 8, 10, 46), updatedDateFieldSpecified = true });
             //items.Add(new PalletItemContract() { serialField = "H172194", updatedDateField = new DateTime(2017, 5, 15, 8, 11, 52), updatedDateFieldSpecified = true });
             //items.Add(new PalletItemContract() { serialField = "H172195", updatedDateField = new DateTime(2017, 5, 15, 8, 12, 25), updatedDateFieldSpecified = true });
-            /*items.Add(new PalletItemContract() { serialField = "I035316", updatedDateField = new DateTime(2017, 5, 15, 8, 13, 53), updatedDateFieldSpecified = true });
-            var result = client.CheckPalletAvailableMulti("17SO-04203", "ANR-3016024SP090", "R", "ACMC-016789", items.ToArray(), "Mansoor", "Computer", 0);
+            //items.Add(new PalletItemContract() { serialField = "I035316", updatedDateField = new DateTime(2017, 5, 15, 8, 13, 53), updatedDateFieldSpecified = true });
+            
+            /*var result = client.CheckPalletAvailableMulti("20SO-01080", "CET-3049024AG090", "G1", "PKL20-002745", items.ToArray(), "Mansoor", "Computer", 0);
             if (result!=null)
             {
+                new DBClass().CheckDMExport();
+
                 new DBClass().ErrorInsert("16SO-06291", "ACMC-014127", "error string", "error trace", DateTime.Now, "SalesService", "Mansoor", "Computer", "CheckPalletAvailable");
             }*/
             ////SalesTableContract contract = client.findSalesOrder(context, "16SO-06192");
             ////Console.Write( contract.DeliveryName);
 
-           //List<string> pallets = new List<string>();// { "I113646", "I113647", "I113648", "I113650" };
-           //pallets.Add("I114272");
-           //pallets.Add("I113647");
-           //pallets.Add("I113648");
-           //pallets.Add("I113650");
+            //List<string> pallets = new List<string>();// { "I113646", "I113647", "I113648", "I113650" };
+            //pallets.Add("I114272");
+            //pallets.Add("I113647");
+            //pallets.Add("I113648");
+            //pallets.Add("I113650");
 
             /*
            string str="";
@@ -105,11 +114,11 @@ namespace TestWebservice
            Console.Write( items.SalesId);
            Console.Write(",  "+items.DeliveryDate.ToString());
            */
-            
+
             //var items = client.ValidatePallets("17SO-04439", "JOS-3049024SG090", "G1", "ACMC-016936", pallets.ToArray(), "Mansoor", "Computer 0.125", 5637162577);
-           //if (items != null && items.Count() > 0)
-             //  Console.Write(items[0].Name);
-           //var items = client.ValidatePallets("16SO-06291", "CTO-3015008DM120", "G1", "ACMC-014108", pallets.ToArray(), "Mansoor", "Computer");
+            //if (items != null && items.Count() > 0)
+            //  Console.Write(items[0].Name);
+            //var items = client.ValidatePallets("16SO-06291", "CTO-3015008DM120", "G1", "ACMC-014108", pallets.ToArray(), "Mansoor", "Computer");
 
             /*List<string> pallets = new List<string>();
             pallets.Add("G145786");
@@ -185,16 +194,16 @@ namespace TestWebservice
                 string woId = newOrder.WorkOrderID;
             }*/
 
-           //ModulaPRClient client = new ModulaPRClient();
-            
-           //int result = client.SetWorkOrderStatus("W-0007100", 6);
-           //var items = client.GetOtherWorkItems("W-0007093", "", 10);
-           //var items=client.GetInlineWorkItems("W-0007091");
-           /*foreach (PMWorkItem item in items)
-           {
-               string name = item.ItemID;
-               Console.WriteLine(name+", "+item.Sto_HostRIF+", "+item.ItemName);
-           }*/
+            //ModulaPRClient client = new ModulaPRClient();
+
+            //int result = client.SetWorkOrderStatus("W-0007100", 6);
+            //var items = client.GetOtherWorkItems("W-0007093", "", 10);
+            //var items=client.GetInlineWorkItems("W-0007091");
+            /*foreach (PMWorkItem item in items)
+            {
+                string name = item.ItemID;
+                Console.WriteLine(name+", "+item.Sto_HostRIF+", "+item.ItemName);
+            }*/
 
             /*UserMgtServices.UserMgtServiceClient client = new  UserMgtServices.UserMgtServiceClient();
             byte[] fileTo = client.DownloadFile("PH3200 HYDRAULIC PRESS WITH QUICK DIE-SET CHANGE-OVER DEVICE1_ACMC-02092_ACMC-01295.pdf", "\\\\172.17.0.150\\Dyn_Attach_Doc\\EamEqp\\");

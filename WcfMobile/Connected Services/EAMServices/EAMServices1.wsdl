@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd9" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd12" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd2" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd3" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd8" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd11" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://fac-dbtest-axr3:8101/DynamicsAx/Services/EAMServices?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WorkItemsServiceCreateOrUpdateRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceCreateOrUpdateRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceCreateOrUpdateRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceCreateOrUpdateResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceCreateOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_CreateOrUpdate_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_delete_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteWorkItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_DeleteWorkItem_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemByRecIdRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteWorkItemByRecIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemByRecIdRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceDeleteWorkItemByRecIdResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceDeleteWorkItemByRecIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_DeleteWorkItemByRecId_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceFindRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_find_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipLocationsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipLocationsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipLocationsRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipLocationsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetEquipLocations_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceCreateRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceCreateRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceCreateRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceCreateResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_create_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByDatesRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkordersByDatesRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByDatesRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByDatesResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkordersByDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetWorkordersByDates_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetAllEquipmentsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetAllEquipmentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetAllEquipmentsRequest_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q17:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetAllEquipmentsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetAllEquipmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetAllEquipments_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q18:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceReadRequest_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q20:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceMainCostByProdLineRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceMainCostByProdLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceMainCostByProdLineRequest_Headers">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q21:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceMainCostByProdLineResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceMainCostByProdLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_MainCostByProdLine_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q22:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderStatusLookupRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkOrderStatusLookupRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderStatusLookupRequest_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q23:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderStatusLookupResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkOrderStatusLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetWorkOrderStatusLookup_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q24:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOnhandRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetOnhandRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOnhandRequest_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOnhandResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetOnhandResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetOnhand_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q26:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetFailureCodesRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetFailureCodesRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetFailureCodesRequest_Headers">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q27:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetFailureCodesResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetFailureCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetFailureCodes_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q28:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetInlineWorkItemsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetInlineWorkItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetInlineWorkItemsRequest_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q29:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetInlineWorkItemsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetInlineWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetInlineWorkItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q30:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentRequest_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetEquipment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q32:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetSingleWorkorderWithItemsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetSingleWorkorderWithItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetSingleWorkorderWithItemsRequest_Headers">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q33:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetSingleWorkorderWithItemsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetSingleWorkorderWithItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetSingleWorkorderWithItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q34:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderTypesRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkOrderTypesRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderTypesRequest_Headers">
+    <wsdl:part xmlns:q35="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q35:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkOrderTypesResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkOrderTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetWorkOrderTypes_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q36:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetLatestWorkorderRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetLatestWorkorderRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetLatestWorkorderRequest_Headers">
+    <wsdl:part xmlns:q37="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q37:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetLatestWorkorderResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetLatestWorkorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetLatestWorkorder_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q38:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSearchEquipmentsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSearchEquipmentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSearchEquipmentsRequest_Headers">
+    <wsdl:part xmlns:q39="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q39:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSearchEquipmentsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSearchEquipmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_SearchEquipments_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q40:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceUpdateRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceUpdateRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceUpdateRequest_Headers">
+    <wsdl:part xmlns:q41="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q41:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceUpdateResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_update_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q42:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServicePostedWorkItemsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServicePostedWorkItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServicePostedWorkItemsRequest_Headers">
+    <wsdl:part xmlns:q43="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q43:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServicePostedWorkItemsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServicePostedWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_PostedWorkItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q44:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWOPoolCodeRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWOPoolCodeRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWOPoolCodeRequest_Headers">
+    <wsdl:part xmlns:q45="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q45:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWOPoolCodeResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWOPoolCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetWOPoolCode_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q46:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSaveWorkOrderRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSaveWorkOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSaveWorkOrderRequest_Headers">
+    <wsdl:part xmlns:q47="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q47:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSaveWorkOrderResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSaveWorkOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_SaveWorkOrder_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q48:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSetWOStatusRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSetWOStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSetWOStatusRequest_Headers">
+    <wsdl:part xmlns:q49="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q49:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceSetWOStatusResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceSetWOStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_SetWOStatus_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q50:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetMaxIdRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetMaxIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetMaxIdRequest_Headers">
+    <wsdl:part xmlns:q51="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q51:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetMaxIdResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetMaxIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_getMaxId_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q52:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentsByCostCenterRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipmentsByCostCenterRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentsByCostCenterRequest_Headers">
+    <wsdl:part xmlns:q53="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q53:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetEquipmentsByCostCenterResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetEquipmentsByCostCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetEquipmentsByCostCenter_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q54:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOtherWorkItemsRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetOtherWorkItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOtherWorkItemsRequest_Headers">
+    <wsdl:part xmlns:q55="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q55:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetOtherWorkItemsResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetOtherWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetOtherWorkItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q56:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetRepaireCodesRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetRepaireCodesRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetRepaireCodesRequest_Headers">
+    <wsdl:part xmlns:q57="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q57:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetRepaireCodesResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetRepaireCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetRepaireCodes_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q58:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByEquipmentRequest">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkordersByEquipmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByEquipmentRequest_Headers">
+    <wsdl:part xmlns:q59="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q59:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsServiceGetWorkordersByEquipmentResponse">
+    <wsdl:part name="parameters" element="tns:WorkItemsServiceGetWorkordersByEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkItemsService_GetWorkordersByEquipment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q60:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="WorkItemsService">
+    <wsdl:operation name="CreateOrUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/CreateOrUpdate" name="WorkItemsServiceCreateOrUpdateRequest" message="tns:WorkItemsServiceCreateOrUpdateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse" name="WorkItemsServiceCreateOrUpdateResponse" message="tns:WorkItemsServiceCreateOrUpdateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/CreateOrUpdateAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_CreateOrUpdate_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/delete" name="WorkItemsServiceDeleteRequest" message="tns:WorkItemsServiceDeleteRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/deleteResponse" name="WorkItemsServiceDeleteResponse" message="tns:WorkItemsServiceDeleteResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/deleteAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_delete_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItem" name="WorkItemsServiceDeleteWorkItemRequest" message="tns:WorkItemsServiceDeleteWorkItemRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse" name="WorkItemsServiceDeleteWorkItemResponse" message="tns:WorkItemsServiceDeleteWorkItemResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_DeleteWorkItem_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItemByRecId">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId" name="WorkItemsServiceDeleteWorkItemByRecIdRequest" message="tns:WorkItemsServiceDeleteWorkItemByRecIdRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse" name="WorkItemsServiceDeleteWorkItemByRecIdResponse" message="tns:WorkItemsServiceDeleteWorkItemByRecIdResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_DeleteWorkItemByRecId_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/find" name="WorkItemsServiceFindRequest" message="tns:WorkItemsServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/findResponse" name="WorkItemsServiceFindResponse" message="tns:WorkItemsServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/findAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_find_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipLocations" name="WorkItemsServiceGetEquipLocationsRequest" message="tns:WorkItemsServiceGetEquipLocationsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse" name="WorkItemsServiceGetEquipLocationsResponse" message="tns:WorkItemsServiceGetEquipLocationsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipLocationsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetEquipLocations_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/create" name="WorkItemsServiceCreateRequest" message="tns:WorkItemsServiceCreateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/createResponse" name="WorkItemsServiceCreateResponse" message="tns:WorkItemsServiceCreateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/createAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_create_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkordersByDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates" name="WorkItemsServiceGetWorkordersByDatesRequest" message="tns:WorkItemsServiceGetWorkordersByDatesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse" name="WorkItemsServiceGetWorkordersByDatesResponse" message="tns:WorkItemsServiceGetWorkordersByDatesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetWorkordersByDates_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEquipments">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetAllEquipments" name="WorkItemsServiceGetAllEquipmentsRequest" message="tns:WorkItemsServiceGetAllEquipmentsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse" name="WorkItemsServiceGetAllEquipmentsResponse" message="tns:WorkItemsServiceGetAllEquipmentsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetAllEquipments_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/read" name="WorkItemsServiceReadRequest" message="tns:WorkItemsServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/readResponse" name="WorkItemsServiceReadResponse" message="tns:WorkItemsServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/readAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MainCostByProdLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/MainCostByProdLine" name="WorkItemsServiceMainCostByProdLineRequest" message="tns:WorkItemsServiceMainCostByProdLineRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse" name="WorkItemsServiceMainCostByProdLineResponse" message="tns:WorkItemsServiceMainCostByProdLineResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/MainCostByProdLineAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_MainCostByProdLine_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderStatusLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup" name="WorkItemsServiceGetWorkOrderStatusLookupRequest" message="tns:WorkItemsServiceGetWorkOrderStatusLookupRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse" name="WorkItemsServiceGetWorkOrderStatusLookupResponse" message="tns:WorkItemsServiceGetWorkOrderStatusLookupResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetWorkOrderStatusLookup_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhand">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetOnhand" name="WorkItemsServiceGetOnhandRequest" message="tns:WorkItemsServiceGetOnhandRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetOnhandResponse" name="WorkItemsServiceGetOnhandResponse" message="tns:WorkItemsServiceGetOnhandResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetOnhandAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetOnhand_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFailureCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetFailureCodes" name="WorkItemsServiceGetFailureCodesRequest" message="tns:WorkItemsServiceGetFailureCodesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetFailureCodesResponse" name="WorkItemsServiceGetFailureCodesResponse" message="tns:WorkItemsServiceGetFailureCodesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetFailureCodesAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetFailureCodes_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInlineWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems" name="WorkItemsServiceGetInlineWorkItemsRequest" message="tns:WorkItemsServiceGetInlineWorkItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse" name="WorkItemsServiceGetInlineWorkItemsResponse" message="tns:WorkItemsServiceGetInlineWorkItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetInlineWorkItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipment" name="WorkItemsServiceGetEquipmentRequest" message="tns:WorkItemsServiceGetEquipmentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipmentResponse" name="WorkItemsServiceGetEquipmentResponse" message="tns:WorkItemsServiceGetEquipmentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipmentAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetEquipment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleWorkorderWithItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems" name="WorkItemsServiceGetSingleWorkorderWithItemsRequest" message="tns:WorkItemsServiceGetSingleWorkorderWithItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse" name="WorkItemsServiceGetSingleWorkorderWithItemsResponse" message="tns:WorkItemsServiceGetSingleWorkorderWithItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetSingleWorkorderWithItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes" name="WorkItemsServiceGetWorkOrderTypesRequest" message="tns:WorkItemsServiceGetWorkOrderTypesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse" name="WorkItemsServiceGetWorkOrderTypesResponse" message="tns:WorkItemsServiceGetWorkOrderTypesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetWorkOrderTypes_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestWorkorder">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder" name="WorkItemsServiceGetLatestWorkorderRequest" message="tns:WorkItemsServiceGetLatestWorkorderRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse" name="WorkItemsServiceGetLatestWorkorderResponse" message="tns:WorkItemsServiceGetLatestWorkorderResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetLatestWorkorder_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEquipments">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/SearchEquipments" name="WorkItemsServiceSearchEquipmentsRequest" message="tns:WorkItemsServiceSearchEquipmentsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse" name="WorkItemsServiceSearchEquipmentsResponse" message="tns:WorkItemsServiceSearchEquipmentsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/SearchEquipmentsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_SearchEquipments_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/update" name="WorkItemsServiceUpdateRequest" message="tns:WorkItemsServiceUpdateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/updateResponse" name="WorkItemsServiceUpdateResponse" message="tns:WorkItemsServiceUpdateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/updateAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_update_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostedWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/PostedWorkItems" name="WorkItemsServicePostedWorkItemsRequest" message="tns:WorkItemsServicePostedWorkItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse" name="WorkItemsServicePostedWorkItemsResponse" message="tns:WorkItemsServicePostedWorkItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/PostedWorkItemsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_PostedWorkItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOPoolCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetWOPoolCode" name="WorkItemsServiceGetWOPoolCodeRequest" message="tns:WorkItemsServiceGetWOPoolCodeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse" name="WorkItemsServiceGetWOPoolCodeResponse" message="tns:WorkItemsServiceGetWOPoolCodeResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetWOPoolCode_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/SaveWorkOrder" name="WorkItemsServiceSaveWorkOrderRequest" message="tns:WorkItemsServiceSaveWorkOrderRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse" name="WorkItemsServiceSaveWorkOrderResponse" message="tns:WorkItemsServiceSaveWorkOrderResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/SaveWorkOrderAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_SaveWorkOrder_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWOStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/SetWOStatus" name="WorkItemsServiceSetWOStatusRequest" message="tns:WorkItemsServiceSetWOStatusRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/SetWOStatusResponse" name="WorkItemsServiceSetWOStatusResponse" message="tns:WorkItemsServiceSetWOStatusResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/SetWOStatusAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_SetWOStatus_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/getMaxId" name="WorkItemsServiceGetMaxIdRequest" message="tns:WorkItemsServiceGetMaxIdRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/getMaxIdResponse" name="WorkItemsServiceGetMaxIdResponse" message="tns:WorkItemsServiceGetMaxIdResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/getMaxIdAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_getMaxId_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentsByCostCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter" name="WorkItemsServiceGetEquipmentsByCostCenterRequest" message="tns:WorkItemsServiceGetEquipmentsByCostCenterRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse" name="WorkItemsServiceGetEquipmentsByCostCenterResponse" message="tns:WorkItemsServiceGetEquipmentsByCostCenterResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetEquipmentsByCostCenter_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems" name="WorkItemsServiceGetOtherWorkItemsRequest" message="tns:WorkItemsServiceGetOtherWorkItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse" name="WorkItemsServiceGetOtherWorkItemsResponse" message="tns:WorkItemsServiceGetOtherWorkItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetOtherWorkItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepaireCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetRepaireCodes" name="WorkItemsServiceGetRepaireCodesRequest" message="tns:WorkItemsServiceGetRepaireCodesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse" name="WorkItemsServiceGetRepaireCodesResponse" message="tns:WorkItemsServiceGetRepaireCodesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetRepaireCodesAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetRepaireCodes_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkordersByEquipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment" name="WorkItemsServiceGetWorkordersByEquipmentRequest" message="tns:WorkItemsServiceGetWorkordersByEquipmentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse" name="WorkItemsServiceGetWorkordersByEquipmentResponse" message="tns:WorkItemsServiceGetWorkordersByEquipmentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentAifFaultFault" name="AifFaultFault" message="tns:WorkItemsService_GetWorkordersByEquipment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

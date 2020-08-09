@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f008da23-4dc6-4b8c-8faa-2afb3f337345" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://FAC-DBTEST-AXR3:8101/DynamicsAx/Services/SalesOrder" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesOrder2.wsdl" MetadataType="Wsdl" ID="f5aacf40-ac6a-4b83-b2c8-7060eba9fd55" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder" />
+    <MetadataFile FileName="SalesOrder14.xsd" MetadataType="Schema" ID="30143f10-424d-4a2d-86ad-2eff206af3dc" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd6" />
+    <MetadataFile FileName="SalesOrder141.xsd" MetadataType="Schema" ID="755769b3-073a-42e3-8125-db7349cec3c0" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd13" />
+    <MetadataFile FileName="SalesOrder142.xsd" MetadataType="Schema" ID="18274a2b-ef30-4ce4-bf50-003c2561b807" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd5" />
+    <MetadataFile FileName="SalesOrder21.wsdl" MetadataType="Wsdl" ID="20152302-726e-4c67-b876-dacb57e53955" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesOrder143.xsd" MetadataType="Schema" ID="5d977bc5-30b7-4d04-83fd-f31e9e68ff89" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd2" />
+    <MetadataFile FileName="SalesOrder144.xsd" MetadataType="Schema" ID="f7255d11-b6db-436a-954a-d58645c89a89" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd9" />
+    <MetadataFile FileName="SalesOrder145.xsd" MetadataType="Schema" ID="0adea127-1929-4709-85e3-62eef3033e3e" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd11" />
+    <MetadataFile FileName="SalesOrder146.xsd" MetadataType="Schema" ID="cab067dd-172f-4dd0-9e3d-3ac0e90ea56d" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd8" />
+    <MetadataFile FileName="SalesOrder147.xsd" MetadataType="Schema" ID="ff5f61b9-3c15-483f-9e6a-1dd2cb152005" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd7" />
+    <MetadataFile FileName="SalesOrder148.xsd" MetadataType="Schema" ID="4c26263e-b1db-4e9b-b755-d1f2f85f789c" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd4" />
+    <MetadataFile FileName="SalesOrder149.xsd" MetadataType="Schema" ID="1f2bf299-c8ca-413d-9f21-8000792537e9" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd3" />
+    <MetadataFile FileName="SalesOrder1410.xsd" MetadataType="Schema" ID="35152b60-7195-4d5a-b8e2-5f0875414cbb" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd0" />
+    <MetadataFile FileName="SalesOrder1411.xsd" MetadataType="Schema" ID="cad8e774-e46f-4002-948c-55df6f435623" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd10" />
+    <MetadataFile FileName="SalesOrder1412.xsd" MetadataType="Schema" ID="5c16f61b-70fd-4b18-90a2-0b5d36959679" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd1" />
+    <MetadataFile FileName="SalesOrder1413.xsd" MetadataType="Schema" ID="7f7ef0b2-6058-4bdc-8eca-83e0235fe1fb" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/SalesOrder?xsd=xsd12" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

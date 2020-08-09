@@ -282,6 +282,10 @@ namespace SyncServices
             {
                 items = client.CheckPalletAvailableMulti(context, salesId, itemId, configId, pickingId, userName,
                     device, lineRecId, pallets.ToArray());
+
+                //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+               // new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", "Error", "", DateTime.Now, "SaleService", userName, device, "CheckPalletAvailable", allParameters);
+
             }
             catch (System.ServiceModel.FaultException<AifFault> aifExp)
             {

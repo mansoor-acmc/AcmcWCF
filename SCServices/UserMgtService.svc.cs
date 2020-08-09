@@ -30,6 +30,13 @@ namespace SyncServices
             //client.ChannelFactory.Credentials.UserName.UserName = @"kabholding.com\ax2";
             //client.ChannelFactory.Credentials.UserName.Password = "Dyn@n1c5Ax";
 
+            bool isLoggedin=client.LoginUser(context, new UserInfoContract()
+            {
+                UserId = userId,
+                UserPassword = password,
+                NetworkDomain = "kabholding.com"
+            });
+
             UserInfoContract user = client.GetUserInfo(context, new UserInfoContract()
             {
                 UserId = userId,
@@ -69,6 +76,8 @@ namespace SyncServices
                 return null;            
 
         }
+
+        
 
         public List<AttendanceContract> GetAttendances(string userId, string password, DateTime profileDate)
         {

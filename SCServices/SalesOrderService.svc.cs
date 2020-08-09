@@ -15,21 +15,21 @@ namespace SyncServices
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class SalesOrderService : ISalesOrderService
     {
-        public SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId)
-        {
+        //public SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId)
+        //{
            
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+        //    SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+        //    CallContext context = new CallContext()
+        //    {
+        //        MessageId = Guid.NewGuid().ToString(),
+        //        Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+        //    };
 
-            SalesTableContract[] allContract = client.findSalesOrdersList(context,Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateTo), customerId);
-            client.Close();
+        //    SalesTableContract[] allContract = client.findSalesOrdersList(context,Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateTo), customerId);
+        //    client.Close();
 
-            return allContract;
-        }
+        //    return allContract;
+        //}
 
         public SalesTableContract FindSalesOrder(string salesId)
         {
@@ -46,17 +46,17 @@ namespace SyncServices
             return contract;
         }
 
-        public FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId)
-        {
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+        //public FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId)
+        //{
+        //    SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
+        //    CallContext context = new CallContext()
+        //    {
+        //        MessageId = Guid.NewGuid().ToString(),
+        //        Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+        //    };
 
-            return client.GetCustomerDeliveries(context, Convert.ToDateTime(dateSearch), customerId);
-        }
+        //    return client.GetCustomerDeliveries(context, Convert.ToDateTime(dateSearch), customerId);
+        //}
 
         public string GetPing()
         {

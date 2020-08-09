@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.17.0.50/SyncServices63/DMCheckService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="DMExportContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="barCodePalletField" nillable="true" type="xs:string" />
+          <xs:element name="boxesOnPalletField" type="xs:int" />
+          <xs:element name="boxesOnPalletFieldSpecified" type="xs:boolean" />
+          <xs:element name="caliberField" nillable="true" type="xs:string" />
+          <xs:element name="cancelDateTimeField" type="xs:dateTime" />
+          <xs:element name="cancelDateTimeFieldSpecified" type="xs:boolean" />
+          <xs:element name="codeLabelField" type="xs:boolean" />
+          <xs:element name="codeLabelFieldSpecified" type="xs:boolean" />
+          <xs:element name="dMShortDesc2Field" nillable="true" type="xs:string" />
+          <xs:element name="dMShortDescField" nillable="true" type="xs:string" />
+          <xs:element name="deviceNameField" nillable="true" type="xs:string" />
+          <xs:element name="deviceUserField" nillable="true" type="xs:string" />
+          <xs:element name="fGApprovalTimeField" type="xs:dateTime" />
+          <xs:element name="fGApprovalTimeFieldSpecified" type="xs:boolean" />
+          <xs:element name="gradeField" nillable="true" type="xs:string" />
+          <xs:element name="isApprovedByFGField" type="xs:boolean" />
+          <xs:element name="isApprovedByFGFieldSpecified" type="xs:boolean" />
+          <xs:element name="isApprovedBySLField" type="xs:boolean" />
+          <xs:element name="isApprovedBySLFieldSpecified" type="xs:boolean" />
+          <xs:element name="isCancelledField" type="xs:boolean" />
+          <xs:element name="isCancelledFieldSpecified" type="xs:boolean" />
+          <xs:element name="isPostedField" type="xs:boolean" />
+          <xs:element name="isPostedFieldSpecified" type="xs:boolean" />
+          <xs:element name="itemDescField" nillable="true" type="xs:string" />
+          <xs:element name="itemNumberField" nillable="true" type="xs:string" />
+          <xs:element name="lGVOrForkliftField" type="tns:PalletTransportBy" />
+          <xs:element name="lGVOrForkliftFieldSpecified" type="xs:boolean" />
+          <xs:element name="lineOfOriginField" type="xs:int" />
+          <xs:element name="lineOfOriginFieldSpecified" type="xs:boolean" />
+          <xs:element name="marpakMovNumField" type="xs:long" />
+          <xs:element name="marpakMovNumFieldSpecified" type="xs:boolean" />
+          <xs:element name="movementNumberField" type="xs:long" />
+          <xs:element name="movementNumberFieldSpecified" type="xs:boolean" />
+          <xs:element name="palletNumField" nillable="true" type="xs:string" />
+          <xs:element name="piecesForBoxField" type="xs:int" />
+          <xs:element name="piecesForBoxFieldSpecified" type="xs:boolean" />
+          <xs:element name="recordIdField" type="xs:long" />
+          <xs:element name="recordIdFieldSpecified" type="xs:boolean" />
+          <xs:element name="shadeField" nillable="true" type="xs:string" />
+          <xs:element name="shiftDateField" type="xs:dateTime" />
+          <xs:element name="shiftDateFieldSpecified" type="xs:boolean" />
+          <xs:element name="shiftField" type="xs:int" />
+          <xs:element name="shiftFieldSpecified" type="xs:boolean" />
+          <xs:element name="sizeField" nillable="true" type="xs:string" />
+          <xs:element name="surfaceMQBoxField" type="xs:decimal" />
+          <xs:element name="surfaceMQBoxFieldSpecified" type="xs:boolean" />
+          <xs:element name="timeStampField" type="xs:dateTime" />
+          <xs:element name="timeStampFieldSpecified" type="xs:boolean" />
+          <xs:element name="totalPiecesOnPalletField" type="xs:int" />
+          <xs:element name="totalPiecesOnPalletFieldSpecified" type="xs:boolean" />
+          <xs:element name="totalSurfaceField" type="xs:decimal" />
+          <xs:element name="totalSurfaceFieldSpecified" type="xs:boolean" />
+          <xs:element name="whLocationIdField" nillable="true" type="xs:string" />
+          <xs:element name="whichMarpakField" type="xs:int" />
+          <xs:element name="whichMarpakFieldSpecified" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportContract" nillable="true" type="tns:DMExportContract" />
+  <xs:complexType name="XppObjectBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+  <xs:simpleType name="PalletTransportBy">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LGV" />
+      <xs:enumeration value="Forklift" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PalletTransportBy" nillable="true" type="tns:PalletTransportBy" />
+  <xs:complexType name="ArrayOfDMExportMiniContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportMiniContract" nillable="true" type="tns:ArrayOfDMExportMiniContract" />
+  <xs:complexType name="DMExportMiniContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="barCodePalletField" nillable="true" type="xs:string" />
+          <xs:element name="dMShortDesc2Field" nillable="true" type="xs:string" />
+          <xs:element name="dMShortDescField" nillable="true" type="xs:string" />
+          <xs:element name="palletNumField" nillable="true" type="xs:string" />
+          <xs:element name="recordIdField" type="xs:long" />
+          <xs:element name="recordIdFieldSpecified" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
+  <xs:complexType name="ArrayOfDMExportOfflineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportOfflineContract" nillable="true" type="tns:DMExportOfflineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportOfflineContract" nillable="true" type="tns:ArrayOfDMExportOfflineContract" />
+  <xs:complexType name="DMExportOfflineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="boxesOnPalletField" type="xs:decimal" />
+          <xs:element name="boxesOnPalletFieldSpecified" type="xs:boolean" />
+          <xs:element name="caliberField" nillable="true" type="xs:string" />
+          <xs:element name="deviceNameField" nillable="true" type="xs:string" />
+          <xs:element name="deviceUserField" nillable="true" type="xs:string" />
+          <xs:element name="gradeField" nillable="true" type="xs:string" />
+          <xs:element name="isApprovedByFGField" type="xs:boolean" />
+          <xs:element name="isApprovedByFGFieldSpecified" type="xs:boolean" />
+          <xs:element name="isApprovedBySLField" type="xs:boolean" />
+          <xs:element name="isApprovedBySLFieldSpecified" type="xs:boolean" />
+          <xs:element name="isOfflineModeField" type="tns:NoYes" />
+          <xs:element name="isOfflineModeFieldSpecified" type="xs:boolean" />
+          <xs:element name="palletNumField" nillable="true" type="xs:string" />
+          <xs:element name="shadeField" nillable="true" type="xs:string" />
+          <xs:element name="whLocationIdField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportOfflineContract" nillable="true" type="tns:DMExportOfflineContract" />
+  <xs:simpleType name="NoYes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NoYes" nillable="true" type="tns:NoYes" />
+  <xs:complexType name="ArrayOfDMExportContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportContract" nillable="true" type="tns:DMExportContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportContract" nillable="true" type="tns:ArrayOfDMExportContract" />
+  <xs:complexType name="ArrayOfDMSummaryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMSummaryContract" nillable="true" type="tns:ArrayOfDMSummaryContract" />
+  <xs:complexType name="DMSummaryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="caliberField" nillable="true" type="xs:string" />
+          <xs:element name="gradeField" nillable="true" type="xs:string" />
+          <xs:element name="itemDescriptionField" nillable="true" type="xs:string" />
+          <xs:element name="itemNumberField" nillable="true" type="xs:string" />
+          <xs:element name="numOfPalletsApprovedField" type="xs:int" />
+          <xs:element name="numOfPalletsApprovedFieldSpecified" type="xs:boolean" />
+          <xs:element name="numOfPalletsField" type="xs:int" />
+          <xs:element name="numOfPalletsFieldSpecified" type="xs:boolean" />
+          <xs:element name="numOfPalletsPostedField" type="xs:int" />
+          <xs:element name="numOfPalletsPostedFieldSpecified" type="xs:boolean" />
+          <xs:element name="shadeField" nillable="true" type="xs:string" />
+          <xs:element name="totalQtyField" type="xs:decimal" />
+          <xs:element name="totalQtyFieldSpecified" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />
+  <xs:complexType name="ArrayOfWmsLocationContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="WmsLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="locationField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+</xs:schema>

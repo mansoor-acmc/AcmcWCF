@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3e6b5cd-13e0-4996-802d-897220021d6b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.17.0.50/SyncServices2020/SalesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesService.xsd" MetadataType="Schema" ID="2ba15638-c95a-4ea3-8c31-2d68d3b9b98c" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SalesService1.xsd" MetadataType="Schema" ID="b71eea14-c389-4626-96b7-209266900af7" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SalesService2.xsd" MetadataType="Schema" ID="cebe5c89-82b2-40f3-8610-0b6168b9d796" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SalesService.wsdl" MetadataType="Wsdl" ID="95babccf-5f18-4923-9c11-e379b6cb197b" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?wsdl" />
+    <MetadataFile FileName="SalesService3.xsd" MetadataType="Schema" ID="257a176f-b635-4cf9-b7d6-7392b8feee5c" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesService4.xsd" MetadataType="Schema" ID="a4ba7b82-25e3-4242-83b0-fb4aa10adcaa" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalesService5.xsd" MetadataType="Schema" ID="4af3b5bd-e25c-4ed3-82ae-2468b65c1b90" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SalesService.disco" MetadataType="Disco" ID="01b0a856-02aa-43be-be6d-b2b7b5ce7754" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?disco" />
+    <MetadataFile FileName="SalesService6.xsd" MetadataType="Schema" ID="1ff93830-19d3-4efe-aed8-f813b5005587" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices2020/SalesService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

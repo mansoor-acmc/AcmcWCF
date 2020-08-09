@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6781e8fb-6c4b-47d2-b0a6-8a16bb175121" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://FAC-DBTEST-AXR3:8101/DynamicsAx/Services/UserMgtServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserMgtServices.xsd" MetadataType="Schema" ID="3e4ff6d3-4810-4822-9ff6-9011579297f2" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd6" />
+    <MetadataFile FileName="UserMgtServices1.xsd" MetadataType="Schema" ID="0e8ccb4b-269d-4339-89c0-8769407d3731" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd5" />
+    <MetadataFile FileName="UserMgtServices2.xsd" MetadataType="Schema" ID="1171ffeb-17b9-4646-b748-cf4fe3bb7d65" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd4" />
+    <MetadataFile FileName="UserMgtServices3.xsd" MetadataType="Schema" ID="aecacd59-d6a5-4f17-980e-258672c21370" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd3" />
+    <MetadataFile FileName="UserMgtServices4.xsd" MetadataType="Schema" ID="bcdf5e93-d205-40c3-9f52-159e51631d19" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd7" />
+    <MetadataFile FileName="UserMgtServices.wsdl" MetadataType="Wsdl" ID="e5a0698b-a5e7-42e6-ba38-5971d05fe690" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?wsdl=wsdl0" />
+    <MetadataFile FileName="UserMgtServices5.xsd" MetadataType="Schema" ID="63d97888-f43f-4cb8-9bbd-2fa85933f640" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd1" />
+    <MetadataFile FileName="UserMgtServices1.wsdl" MetadataType="Wsdl" ID="5344a701-df93-4f36-87dc-a59c620a63b7" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices" />
+    <MetadataFile FileName="UserMgtServices6.xsd" MetadataType="Schema" ID="40238a28-0236-4ce6-b086-d0cc1f396dce" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd2" />
+    <MetadataFile FileName="UserMgtServices7.xsd" MetadataType="Schema" ID="e55d774a-0d7c-4bc9-9668-bfee2401f20a" SourceId="1" SourceUrl="http://fac-dbtest-axr3:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

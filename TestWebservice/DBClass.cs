@@ -10,6 +10,35 @@ namespace TestWebservice
 {
     public class DBClass
     {
+        public void CheckDMExport()
+        {
+            SqlConnection sConnMod = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnImpExpDB"].ConnectionString);
+
+            try
+            {
+                string sqlString = "Select top 100 * from DMExport order by ExpTimestamp desc";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = sConnMod;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sqlString;
+
+                if (sConnMod.State != ConnectionState.Open)
+                    sConnMod.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dr.Read())
+                {
+                    string pallet = dr["PalletNum"].ToString();
+                }
+            }
+            finally
+            {
+                if (sConnMod.State != ConnectionState.Closed)
+                    sConnMod.Close();
+            }
+        }
+
         public void ErrorInsert(string salesId, string pickingId, string errorString, string fullTrace, DateTime errorDate, string projectName,
             string username, string deviceName, string methodName)
         {
