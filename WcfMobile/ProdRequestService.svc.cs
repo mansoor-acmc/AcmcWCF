@@ -50,6 +50,18 @@ namespace WcfMobile
             return client.GetProdRequestListBySize(context, customerId, size, int.Parse(pageNum), int.Parse(pageSize));
         }
 
+        public ProdRequestContract[] GetProdRequestListBySizeAndMonth(string customerId, string size, string _month)
+        {
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            ProdRequestServiceClient client = new ProdRequestServiceClient();
+            return client.GetProdRequestByMonthAndSize(context, customerId, size, int.Parse(_month));
+        }
+
         public ProdRequestContract[] GetProdRequestListByItem(string customerId, string itemId, string pageNum, string pageSize)
         {
             CallContext context = new CallContext()

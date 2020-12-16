@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd9" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd12" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd2" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd3" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd8" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd11" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesOrder?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SOPickServiceSaveHistoryRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceSaveHistoryRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceSaveHistoryRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceSaveHistoryResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceSaveHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_SaveHistory_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetPalletInfoRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetPalletInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetPalletInfoRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetPalletInfoResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetPalletInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetPalletInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReadRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceUnreservePalletRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceUnreservePalletRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceUnreservePalletRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceUnreservePalletResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceUnreservePalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_UnreservePallet_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReceivePickingListRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReceivePickingListRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReceivePickingListRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReceivePickingListResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReceivePickingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_ReceivePickingList_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReservePalletsRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReservePalletsRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReservePalletsRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceReservePalletsResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceReservePalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_ReservePallets_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceSavePickingLoadRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceSavePickingLoadRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceSavePickingLoadRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceSavePickingLoadResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceSavePickingLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_SavePickingLoad_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrdersListRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindSalesOrdersListRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrdersListRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrdersListResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindSalesOrdersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_findSalesOrdersList_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDailyDeliverySummaryByCustRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDailyDeliverySummaryByCustRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDailyDeliverySummaryByCustRequest_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q17:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDailyDeliverySummaryByCustResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDailyDeliverySummaryByCustResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetDailyDeliverySummaryByCust_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q18:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetLatestPalletsRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetLatestPalletsRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetLatestPalletsRequest_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetLatestPalletsResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetLatestPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetLatestPallets_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q20:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceChangeTruckLoadingLineRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceChangeTruckLoadingLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceChangeTruckLoadingLineRequest_Headers">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q21:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceChangeTruckLoadingLineResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceChangeTruckLoadingLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_ChangeTruckLoadingLine_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q22:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByTrucksRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCustomersDeliveryByTrucksRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByTrucksRequest_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q23:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByTrucksResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCustomersDeliveryByTrucksResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_CustomersDeliveryByTrucks_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q24:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindRequest_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_find_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q26:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetCustomerDeliveriesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesRequest_Headers">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q27:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetCustomerDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetCustomerDeliveries_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q28:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesByStatusRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetCustomerDeliveriesByStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesByStatusRequest_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q29:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetCustomerDeliveriesByStatusResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetCustomerDeliveriesByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetCustomerDeliveriesByStatus_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q30:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveryStatusLookupRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliveryStatusLookupRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveryStatusLookupRequest_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveryStatusLookupResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliveryStatusLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetDeliveryStatusLookup_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q32:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliverySummaryByCustRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliverySummaryByCustRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliverySummaryByCustRequest_Headers">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q33:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliverySummaryByCustResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliverySummaryByCustResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetDeliverySummaryByCust_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q34:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetFGLinesRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetFGLinesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetFGLinesRequest_Headers">
+    <wsdl:part xmlns:q35="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q35:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetFGLinesResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetFGLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetFGLines_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q36:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetOpenPickingListByCustByItemRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetOpenPickingListByCustByItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetOpenPickingListByCustByItemRequest_Headers">
+    <wsdl:part xmlns:q37="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q37:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetOpenPickingListByCustByItemResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetOpenPickingListByCustByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetOpenPickingListByCustByItem_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q38:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCheckPalletAvailableRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableRequest_Headers">
+    <wsdl:part xmlns:q39="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q39:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCheckPalletAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_CheckPalletAvailable_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q40:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableMultiRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCheckPalletAvailableMultiRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableMultiRequest_Headers">
+    <wsdl:part xmlns:q41="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q41:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCheckPalletAvailableMultiResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCheckPalletAvailableMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_CheckPalletAvailableMulti_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q42:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetSingleDeliveryRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetSingleDeliveryRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetSingleDeliveryRequest_Headers">
+    <wsdl:part xmlns:q43="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q43:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetSingleDeliveryResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetSingleDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetSingleDelivery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q44:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindPickingListRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindPickingListRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindPickingListRequest_Headers">
+    <wsdl:part xmlns:q45="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q45:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindPickingListResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindPickingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_findPickingList_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q46:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrderRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindSalesOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrderRequest_Headers">
+    <wsdl:part xmlns:q47="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q47:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceFindSalesOrderResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceFindSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_findSalesOrder_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q48:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceLoginDeviceRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceLoginDeviceRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceLoginDeviceRequest_Headers">
+    <wsdl:part xmlns:q49="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q49:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceLoginDeviceResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceLoginDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_LoginDevice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q50:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveriesRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliveriesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveriesRequest_Headers">
+    <wsdl:part xmlns:q51="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q51:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceGetDeliveriesResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceGetDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_GetDeliveries_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q52:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByQtyRequest">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCustomersDeliveryByQtyRequest" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByQtyRequest_Headers">
+    <wsdl:part xmlns:q53="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q53:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SOPickServiceCustomersDeliveryByQtyResponse">
+    <wsdl:part name="parameters" element="tns:SOPickServiceCustomersDeliveryByQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_CustomersDeliveryByQty_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q54:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="SOPickService">
+    <wsdl:operation name="SaveHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/SaveHistory" name="SOPickServiceSaveHistoryRequest" message="tns:SOPickServiceSaveHistoryRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/SaveHistoryResponse" name="SOPickServiceSaveHistoryResponse" message="tns:SOPickServiceSaveHistoryResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/SaveHistoryAifFaultFault" name="AifFaultFault" message="tns:SOPickService_SaveHistory_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetPalletInfo" name="SOPickServiceGetPalletInfoRequest" message="tns:SOPickServiceGetPalletInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetPalletInfoResponse" name="SOPickServiceGetPalletInfoResponse" message="tns:SOPickServiceGetPalletInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetPalletInfoAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetPalletInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/read" name="SOPickServiceReadRequest" message="tns:SOPickServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/readResponse" name="SOPickServiceReadResponse" message="tns:SOPickServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/readAifFaultFault" name="AifFaultFault" message="tns:SOPickService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnreservePallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/UnreservePallet" name="SOPickServiceUnreservePalletRequest" message="tns:SOPickServiceUnreservePalletRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/UnreservePalletResponse" name="SOPickServiceUnreservePalletResponse" message="tns:SOPickServiceUnreservePalletResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/UnreservePalletAifFaultFault" name="AifFaultFault" message="tns:SOPickService_UnreservePallet_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePickingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/ReceivePickingList" name="SOPickServiceReceivePickingListRequest" message="tns:SOPickServiceReceivePickingListRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/ReceivePickingListResponse" name="SOPickServiceReceivePickingListResponse" message="tns:SOPickServiceReceivePickingListResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/ReceivePickingListAifFaultFault" name="AifFaultFault" message="tns:SOPickService_ReceivePickingList_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReservePallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/ReservePallets" name="SOPickServiceReservePalletsRequest" message="tns:SOPickServiceReservePalletsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/ReservePalletsResponse" name="SOPickServiceReservePalletsResponse" message="tns:SOPickServiceReservePalletsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/ReservePalletsAifFaultFault" name="AifFaultFault" message="tns:SOPickService_ReservePallets_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePickingLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/SavePickingLoad" name="SOPickServiceSavePickingLoadRequest" message="tns:SOPickServiceSavePickingLoadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/SavePickingLoadResponse" name="SOPickServiceSavePickingLoadResponse" message="tns:SOPickServiceSavePickingLoadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/SavePickingLoadAifFaultFault" name="AifFaultFault" message="tns:SOPickService_SavePickingLoad_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findSalesOrdersList">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/findSalesOrdersList" name="SOPickServiceFindSalesOrdersListRequest" message="tns:SOPickServiceFindSalesOrdersListRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/findSalesOrdersListResponse" name="SOPickServiceFindSalesOrdersListResponse" message="tns:SOPickServiceFindSalesOrdersListResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/findSalesOrdersListAifFaultFault" name="AifFaultFault" message="tns:SOPickService_findSalesOrdersList_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyDeliverySummaryByCust">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust" name="SOPickServiceGetDailyDeliverySummaryByCustRequest" message="tns:SOPickServiceGetDailyDeliverySummaryByCustRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse" name="SOPickServiceGetDailyDeliverySummaryByCustResponse" message="tns:SOPickServiceGetDailyDeliverySummaryByCustResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetDailyDeliverySummaryByCust_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestPallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetLatestPallets" name="SOPickServiceGetLatestPalletsRequest" message="tns:SOPickServiceGetLatestPalletsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetLatestPalletsResponse" name="SOPickServiceGetLatestPalletsResponse" message="tns:SOPickServiceGetLatestPalletsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetLatestPalletsAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetLatestPallets_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeTruckLoadingLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine" name="SOPickServiceChangeTruckLoadingLineRequest" message="tns:SOPickServiceChangeTruckLoadingLineRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse" name="SOPickServiceChangeTruckLoadingLineResponse" message="tns:SOPickServiceChangeTruckLoadingLineResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLineAifFaultFault" name="AifFaultFault" message="tns:SOPickService_ChangeTruckLoadingLine_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByTrucks">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks" name="SOPickServiceCustomersDeliveryByTrucksRequest" message="tns:SOPickServiceCustomersDeliveryByTrucksRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse" name="SOPickServiceCustomersDeliveryByTrucksResponse" message="tns:SOPickServiceCustomersDeliveryByTrucksResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksAifFaultFault" name="AifFaultFault" message="tns:SOPickService_CustomersDeliveryByTrucks_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/find" name="SOPickServiceFindRequest" message="tns:SOPickServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/findResponse" name="SOPickServiceFindResponse" message="tns:SOPickServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/findAifFaultFault" name="AifFaultFault" message="tns:SOPickService_find_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveries" name="SOPickServiceGetCustomerDeliveriesRequest" message="tns:SOPickServiceGetCustomerDeliveriesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse" name="SOPickServiceGetCustomerDeliveriesResponse" message="tns:SOPickServiceGetCustomerDeliveriesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetCustomerDeliveries_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDeliveriesByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus" name="SOPickServiceGetCustomerDeliveriesByStatusRequest" message="tns:SOPickServiceGetCustomerDeliveriesByStatusRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse" name="SOPickServiceGetCustomerDeliveriesByStatusResponse" message="tns:SOPickServiceGetCustomerDeliveriesByStatusResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetCustomerDeliveriesByStatus_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryStatusLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookup" name="SOPickServiceGetDeliveryStatusLookupRequest" message="tns:SOPickServiceGetDeliveryStatusLookupRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookupResponse" name="SOPickServiceGetDeliveryStatusLookupResponse" message="tns:SOPickServiceGetDeliveryStatusLookupResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookupAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetDeliveryStatusLookup_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliverySummaryByCust">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCust" name="SOPickServiceGetDeliverySummaryByCustRequest" message="tns:SOPickServiceGetDeliverySummaryByCustRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCustResponse" name="SOPickServiceGetDeliverySummaryByCustResponse" message="tns:SOPickServiceGetDeliverySummaryByCustResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCustAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetDeliverySummaryByCust_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGLines">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetFGLines" name="SOPickServiceGetFGLinesRequest" message="tns:SOPickServiceGetFGLinesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetFGLinesResponse" name="SOPickServiceGetFGLinesResponse" message="tns:SOPickServiceGetFGLinesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetFGLinesAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetFGLines_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenPickingListByCustByItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem" name="SOPickServiceGetOpenPickingListByCustByItemRequest" message="tns:SOPickServiceGetOpenPickingListByCustByItemRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse" name="SOPickServiceGetOpenPickingListByCustByItemResponse" message="tns:SOPickServiceGetOpenPickingListByCustByItemResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetOpenPickingListByCustByItem_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailable" name="SOPickServiceCheckPalletAvailableRequest" message="tns:SOPickServiceCheckPalletAvailableRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailableResponse" name="SOPickServiceCheckPalletAvailableResponse" message="tns:SOPickServiceCheckPalletAvailableResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailableAifFaultFault" name="AifFaultFault" message="tns:SOPickService_CheckPalletAvailable_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailableMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti" name="SOPickServiceCheckPalletAvailableMultiRequest" message="tns:SOPickServiceCheckPalletAvailableMultiRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse" name="SOPickServiceCheckPalletAvailableMultiResponse" message="tns:SOPickServiceCheckPalletAvailableMultiResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiAifFaultFault" name="AifFaultFault" message="tns:SOPickService_CheckPalletAvailableMulti_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetSingleDelivery" name="SOPickServiceGetSingleDeliveryRequest" message="tns:SOPickServiceGetSingleDeliveryRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetSingleDeliveryResponse" name="SOPickServiceGetSingleDeliveryResponse" message="tns:SOPickServiceGetSingleDeliveryResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetSingleDeliveryAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetSingleDelivery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findPickingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/findPickingList" name="SOPickServiceFindPickingListRequest" message="tns:SOPickServiceFindPickingListRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/findPickingListResponse" name="SOPickServiceFindPickingListResponse" message="tns:SOPickServiceFindPickingListResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/findPickingListAifFaultFault" name="AifFaultFault" message="tns:SOPickService_findPickingList_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findSalesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/findSalesOrder" name="SOPickServiceFindSalesOrderRequest" message="tns:SOPickServiceFindSalesOrderRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/findSalesOrderResponse" name="SOPickServiceFindSalesOrderResponse" message="tns:SOPickServiceFindSalesOrderResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/findSalesOrderAifFaultFault" name="AifFaultFault" message="tns:SOPickService_findSalesOrder_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/LoginDevice" name="SOPickServiceLoginDeviceRequest" message="tns:SOPickServiceLoginDeviceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/LoginDeviceResponse" name="SOPickServiceLoginDeviceResponse" message="tns:SOPickServiceLoginDeviceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/LoginDeviceAifFaultFault" name="AifFaultFault" message="tns:SOPickService_LoginDevice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/GetDeliveries" name="SOPickServiceGetDeliveriesRequest" message="tns:SOPickServiceGetDeliveriesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/GetDeliveriesResponse" name="SOPickServiceGetDeliveriesResponse" message="tns:SOPickServiceGetDeliveriesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/GetDeliveriesAifFaultFault" name="AifFaultFault" message="tns:SOPickService_GetDeliveries_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty" name="SOPickServiceCustomersDeliveryByQtyRequest" message="tns:SOPickServiceCustomersDeliveryByQtyRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse" name="SOPickServiceCustomersDeliveryByQtyResponse" message="tns:SOPickServiceCustomersDeliveryByQtyResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyAifFaultFault" name="AifFaultFault" message="tns:SOPickService_CustomersDeliveryByQty_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

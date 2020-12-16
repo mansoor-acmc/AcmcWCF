@@ -30,6 +30,10 @@ namespace WcfMobile
         ProdRequestContract[] GetProdRequestListBySize(string customerId, string size, string pageNum, string pageSize);
 
         [OperationContract]
+        [WebGet(UriTemplate = "GetProdRequestListBySizeMonth/{customerId}/{size}/{_month}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        ProdRequestContract[] GetProdRequestListBySizeAndMonth(string customerId, string size, string _month);
+
+        [OperationContract]
         [WebGet(UriTemplate = "GetProdRequestListByItem/{customerId}/{itemId}/{pageNum}/{pageSize}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         ProdRequestContract[] GetProdRequestListByItem(string customerId, string itemId, string pageNum, string pageSize);
 

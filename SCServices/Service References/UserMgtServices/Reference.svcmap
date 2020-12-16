@@ -18,19 +18,19 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://FAC-STAGE-AX04:8101/DynamicsAx/Services/UserMgtServices" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/UserMgtServices" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UserMgtServices.xsd" MetadataType="Schema" ID="c2be381b-b623-4c5b-8a4f-76d93cf95a20" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd2" />
-    <MetadataFile FileName="UserMgtServices.wsdl" MetadataType="Wsdl" ID="5eb75d23-22d1-4c17-a52b-22e9661d8baa" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?wsdl=wsdl0" />
-    <MetadataFile FileName="UserMgtServices1.xsd" MetadataType="Schema" ID="2de397b0-638f-4a63-8767-488553751c3f" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd1" />
-    <MetadataFile FileName="UserMgtServices2.xsd" MetadataType="Schema" ID="58b51407-4074-4da0-8401-d0db83bf278a" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd3" />
-    <MetadataFile FileName="UserMgtServices3.xsd" MetadataType="Schema" ID="f17ce80f-af4f-4085-b9d0-def4ff2b6997" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd7" />
-    <MetadataFile FileName="UserMgtServices4.xsd" MetadataType="Schema" ID="e4e1f6eb-e46d-4687-9688-6e75c964cd7e" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd0" />
-    <MetadataFile FileName="UserMgtServices5.xsd" MetadataType="Schema" ID="7ebba587-067c-4291-9938-21987ae1291a" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd4" />
-    <MetadataFile FileName="UserMgtServices6.xsd" MetadataType="Schema" ID="4ec40430-37e7-49dd-82fa-b98d4725f85b" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd6" />
-    <MetadataFile FileName="UserMgtServices1.wsdl" MetadataType="Wsdl" ID="88cddcaa-c621-4b99-98d2-e2b86ebc8173" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices" />
-    <MetadataFile FileName="UserMgtServices7.xsd" MetadataType="Schema" ID="3bd2dbc3-4632-439d-b2c5-bc356a9c1f3f" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd5" />
+    <MetadataFile FileName="UserMgtServices8.xsd" MetadataType="Schema" ID="e5728a77-fb6d-405a-9551-5057bec09c9e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd6" />
+    <MetadataFile FileName="UserMgtServices81.xsd" MetadataType="Schema" ID="d0c23e6b-e3d3-40fb-b677-11d65b08a32b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd7" />
+    <MetadataFile FileName="UserMgtServices82.xsd" MetadataType="Schema" ID="e5e7999e-db34-489b-b357-179954a4ea1e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd4" />
+    <MetadataFile FileName="UserMgtServices83.xsd" MetadataType="Schema" ID="3dd03341-02d1-4d60-b3f6-1de60fd333ad" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd5" />
+    <MetadataFile FileName="UserMgtServices84.xsd" MetadataType="Schema" ID="5ec11bcb-e2bc-40ae-b626-57b5e9956db2" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd2" />
+    <MetadataFile FileName="UserMgtServices85.xsd" MetadataType="Schema" ID="732fbacf-633a-4c1c-bf47-3a757859c7b9" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd3" />
+    <MetadataFile FileName="UserMgtServices86.xsd" MetadataType="Schema" ID="56ae75f7-f775-4729-b486-863032146e58" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd0" />
+    <MetadataFile FileName="UserMgtServices87.xsd" MetadataType="Schema" ID="37153a3b-ef9b-472e-8196-ddba64b7a09f" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?xsd=xsd1" />
+    <MetadataFile FileName="UserMgtServices2.wsdl" MetadataType="Wsdl" ID="92adf53b-ea16-41c8-adb6-f57f0549a511" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices?wsdl=wsdl0" />
+    <MetadataFile FileName="UserMgtServices21.wsdl" MetadataType="Wsdl" ID="90f75647-fa8f-4237-aed8-03ad93c2de21" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/UserMgtServices" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

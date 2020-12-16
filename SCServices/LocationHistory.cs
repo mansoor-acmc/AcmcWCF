@@ -16,6 +16,8 @@ namespace SyncServices
         [DataMember]
         public string PalletNum { get; set; }
         [DataMember]
+        public string Quantity { get; set; }
+        [DataMember]
         public string Message { get; set; }
         [DataMember]
         public int ID { get; set; }

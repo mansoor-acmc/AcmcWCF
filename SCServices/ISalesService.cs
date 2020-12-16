@@ -60,6 +60,10 @@ namespace SyncServices
         [OperationContract]
         FGDeliveryContract[] GetDeliveries(DateTime dateSearch);
 
-        
+        [OperationContract]
+        List<UserData> GetUserData();
+
+        [OperationContract]
+        string ChangeLoadingLine(string pickingId, int loadingLineNum);
     }
 }

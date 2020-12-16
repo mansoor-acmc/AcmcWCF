@@ -166,34 +166,34 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDMExportContract" nillable="true" type="tns:ArrayOfDMExportContract" />
-  <xs:complexType name="ArrayOfDMForTransfer">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMForTransfer" nillable="true" type="tns:DMForTransfer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDMForTransfer" nillable="true" type="tns:ArrayOfDMForTransfer" />
-  <xs:complexType name="ArrayOfItemCodeContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemCodeContract" nillable="true" type="tns:ItemCodeContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfItemCodeContract" nillable="true" type="tns:ArrayOfItemCodeContract" />
-  <xs:complexType name="ArrayOfDMExportMiniContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDMExportMiniContract" nillable="true" type="tns:ArrayOfDMExportMiniContract" />
   <xs:complexType name="ArrayOfDMSummaryContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDMSummaryContract" nillable="true" type="tns:ArrayOfDMSummaryContract" />
+  <xs:complexType name="ArrayOfDMForTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMForTransfer" nillable="true" type="tns:DMForTransfer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMForTransfer" nillable="true" type="tns:ArrayOfDMForTransfer" />
+  <xs:complexType name="ArrayOfDMExportMiniContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportMiniContract" nillable="true" type="tns:ArrayOfDMExportMiniContract" />
   <xs:complexType name="ArrayOfWmsLocationContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="ArrayOfItemCodeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemCodeContract" nillable="true" type="tns:ItemCodeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemCodeContract" nillable="true" type="tns:ArrayOfItemCodeContract" />
 </xs:schema>

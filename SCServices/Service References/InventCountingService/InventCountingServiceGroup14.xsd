@@ -73,9 +73,25 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="InventSumContract" nillable="true" type="tns:InventSumContract" />
-  <xs:complexType name="WarehouseContract">
+  <xs:complexType name="SCForTransfer">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTransferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemLocationFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemLocationTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+  <xs:complexType name="WarehouseContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="parmLocationId" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmLocationName" nillable="true" type="xs:string" />
@@ -85,6 +101,16 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
+  <xs:complexType name="WmsLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
   <xs:complexType name="ArrayOfInventSumContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InventSumContract" nillable="true" type="tns:InventSumContract" />
@@ -109,16 +135,28 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfInventForItemUnit" nillable="true" type="tns:ArrayOfInventForItemUnit" />
-  <xs:complexType name="ArrayOfWarehouseContract">
+  <xs:complexType name="ArrayOfWmsLocationContract">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfWarehouseContract" nillable="true" type="tns:ArrayOfWarehouseContract" />
+  <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="ArrayOfSCForTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSCForTransfer" nillable="true" type="tns:ArrayOfSCForTransfer" />
   <xs:complexType name="ArrayOfInventAvailContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InventAvailContract" nillable="true" type="tns:InventAvailContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfInventAvailContract" nillable="true" type="tns:ArrayOfInventAvailContract" />
+  <xs:complexType name="ArrayOfWarehouseContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarehouseContract" nillable="true" type="tns:ArrayOfWarehouseContract" />
 </xs:schema>

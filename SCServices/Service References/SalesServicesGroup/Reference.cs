@@ -140,54 +140,15 @@ namespace SyncServices.SalesServicesGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    [System.SerializableAttribute()]
-    public partial class LookupContract : SyncServices.SalesServicesGroup.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LookupIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LookupStringField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int LookupId {
-            get {
-                return this.LookupIdField;
-            }
-            set {
-                if ((this.LookupIdField.Equals(value) != true)) {
-                    this.LookupIdField = value;
-                    this.RaisePropertyChanged("LookupId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LookupString {
-            get {
-                return this.LookupStringField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
-                    this.LookupStringField = value;
-                    this.RaisePropertyChanged("LookupString");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.CategoryTypeLookup))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.CustForcastPlanContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.CustomerCaseContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.CustomerInvoiceContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.InvoiceLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.ForcastSummaryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.ItemSizeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.LookupContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.OlderStockContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.OnhandByGradeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.OnhandByGradeSizeColorContract))]
@@ -200,7 +161,7 @@ namespace SyncServices.SalesServicesGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.ProductContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.SLCapacityContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.SummaryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesServicesGroup.CustomerCaseContract))]
     public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -386,160 +347,15 @@ namespace SyncServices.SalesServicesGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerCaseContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    [System.SerializableAttribute()]
-    public partial class CustomerCaseContract : SyncServices.SalesServicesGroup.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseDescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseMemoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long CategoryTypeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerAccountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PriorityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ResolutionTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StatusField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseDescription {
-            get {
-                return this.CaseDescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseDescriptionField, value) != true)) {
-                    this.CaseDescriptionField = value;
-                    this.RaisePropertyChanged("CaseDescription");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseMemo {
-            get {
-                return this.CaseMemoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseMemoField, value) != true)) {
-                    this.CaseMemoField = value;
-                    this.RaisePropertyChanged("CaseMemo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseNum {
-            get {
-                return this.CaseNumField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseNumField, value) != true)) {
-                    this.CaseNumField = value;
-                    this.RaisePropertyChanged("CaseNum");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long CategoryTypeId {
-            get {
-                return this.CategoryTypeIdField;
-            }
-            set {
-                if ((this.CategoryTypeIdField.Equals(value) != true)) {
-                    this.CategoryTypeIdField = value;
-                    this.RaisePropertyChanged("CategoryTypeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerAccount {
-            get {
-                return this.CustomerAccountField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
-                    this.CustomerAccountField = value;
-                    this.RaisePropertyChanged("CustomerAccount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerName {
-            get {
-                return this.CustomerNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
-                    this.CustomerNameField = value;
-                    this.RaisePropertyChanged("CustomerName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority {
-            get {
-                return this.PriorityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
-                    this.PriorityField = value;
-                    this.RaisePropertyChanged("Priority");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ResolutionType {
-            get {
-                return this.ResolutionTypeField;
-            }
-            set {
-                if ((this.ResolutionTypeField.Equals(value) != true)) {
-                    this.ResolutionTypeField = value;
-                    this.RaisePropertyChanged("ResolutionType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((this.StatusField.Equals(value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CustomerInvoiceContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     [System.SerializableAttribute()]
     public partial class CustomerInvoiceContract : SyncServices.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DeliveryNameField;
@@ -570,6 +386,44 @@ namespace SyncServices.SalesServicesGroup {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal SalesTaxAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SettlementAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime SettlementDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SyncServices.SalesServicesGroup.NoYes SettlementDoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SettlementVoucherField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DeliveryName {
@@ -697,6 +551,58 @@ namespace SyncServices.SalesServicesGroup {
                 if ((this.SalesTaxAmountField.Equals(value) != true)) {
                     this.SalesTaxAmountField = value;
                     this.RaisePropertyChanged("SalesTaxAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SettlementAmount {
+            get {
+                return this.SettlementAmountField;
+            }
+            set {
+                if ((this.SettlementAmountField.Equals(value) != true)) {
+                    this.SettlementAmountField = value;
+                    this.RaisePropertyChanged("SettlementAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime SettlementDate {
+            get {
+                return this.SettlementDateField;
+            }
+            set {
+                if ((this.SettlementDateField.Equals(value) != true)) {
+                    this.SettlementDateField = value;
+                    this.RaisePropertyChanged("SettlementDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SyncServices.SalesServicesGroup.NoYes SettlementDone {
+            get {
+                return this.SettlementDoneField;
+            }
+            set {
+                if ((this.SettlementDoneField.Equals(value) != true)) {
+                    this.SettlementDoneField = value;
+                    this.RaisePropertyChanged("SettlementDone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SettlementVoucher {
+            get {
+                return this.SettlementVoucherField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SettlementVoucherField, value) != true)) {
+                    this.SettlementVoucherField = value;
+                    this.RaisePropertyChanged("SettlementVoucher");
                 }
             }
         }
@@ -1086,6 +992,45 @@ namespace SyncServices.SalesServicesGroup {
                 if ((object.ReferenceEquals(this.ItemSizeField, value) != true)) {
                     this.ItemSizeField = value;
                     this.RaisePropertyChanged("ItemSize");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class LookupContract : SyncServices.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LookupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LookupStringField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LookupId {
+            get {
+                return this.LookupIdField;
+            }
+            set {
+                if ((this.LookupIdField.Equals(value) != true)) {
+                    this.LookupIdField = value;
+                    this.RaisePropertyChanged("LookupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LookupString {
+            get {
+                return this.LookupStringField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
+                    this.LookupStringField = value;
+                    this.RaisePropertyChanged("LookupString");
                 }
             }
         }
@@ -2453,6 +2398,9 @@ namespace SyncServices.SalesServicesGroup {
         private string ClassificationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DownTimeDescField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int DowntimeHoursField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2463,6 +2411,9 @@ namespace SyncServices.SalesServicesGroup {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string GlazingTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasChangedInRowField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool HasDowntimeUsedField;
@@ -2526,6 +2477,19 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DownTimeDesc {
+            get {
+                return this.DownTimeDescField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DownTimeDescField, value) != true)) {
+                    this.DownTimeDescField = value;
+                    this.RaisePropertyChanged("DownTimeDesc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int DowntimeHours {
             get {
                 return this.DowntimeHoursField;
@@ -2573,6 +2537,19 @@ namespace SyncServices.SalesServicesGroup {
                 if ((object.ReferenceEquals(this.GlazingTypeField, value) != true)) {
                     this.GlazingTypeField = value;
                     this.RaisePropertyChanged("GlazingType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasChangedInRow {
+            get {
+                return this.HasChangedInRowField;
+            }
+            set {
+                if ((this.HasChangedInRowField.Equals(value) != true)) {
+                    this.HasChangedInRowField = value;
+                    this.RaisePropertyChanged("HasChangedInRow");
                 }
             }
         }
@@ -3026,6 +3003,157 @@ namespace SyncServices.SalesServicesGroup {
                 if ((this.SummaryValueField.Equals(value) != true)) {
                     this.SummaryValueField = value;
                     this.RaisePropertyChanged("SummaryValue");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerCaseContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class CustomerCaseContract : SyncServices.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseMemoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long CategoryTypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerAccountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ResolutionTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StatusField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseDescription {
+            get {
+                return this.CaseDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseDescriptionField, value) != true)) {
+                    this.CaseDescriptionField = value;
+                    this.RaisePropertyChanged("CaseDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseMemo {
+            get {
+                return this.CaseMemoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseMemoField, value) != true)) {
+                    this.CaseMemoField = value;
+                    this.RaisePropertyChanged("CaseMemo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseNum {
+            get {
+                return this.CaseNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseNumField, value) != true)) {
+                    this.CaseNumField = value;
+                    this.RaisePropertyChanged("CaseNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long CategoryTypeId {
+            get {
+                return this.CategoryTypeIdField;
+            }
+            set {
+                if ((this.CategoryTypeIdField.Equals(value) != true)) {
+                    this.CategoryTypeIdField = value;
+                    this.RaisePropertyChanged("CategoryTypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerAccount {
+            get {
+                return this.CustomerAccountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
+                    this.CustomerAccountField = value;
+                    this.RaisePropertyChanged("CustomerAccount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ResolutionType {
+            get {
+                return this.ResolutionTypeField;
+            }
+            set {
+                if ((this.ResolutionTypeField.Equals(value) != true)) {
+                    this.ResolutionTypeField = value;
+                    this.RaisePropertyChanged("ResolutionType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((this.StatusField.Equals(value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
@@ -3500,30 +3628,25 @@ namespace SyncServices.SalesServicesGroup {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.CaseService")]
     public interface CaseService {
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetResolutionLookupRequest) of message CaseServiceGetResolutionLookupRequest does not match the default value (GetResolutionLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetResolutionLookup", ReplyAction="http://tempuri.org/CaseService/GetResolutionLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetResolutionLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse GetResolutionLookup(SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceUpdateCustomerCaseRequest) of message CaseServiceUpdateCustomerCaseRequest does not match the default value (UpdateCustomerCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/UpdateCustomerCase", ReplyAction="http://tempuri.org/CaseService/UpdateCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/UpdateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse UpdateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCategoryTypeLookupRequest) of message CaseServiceGetCategoryTypeLookupRequest does not match the default value (GetCategoryTypeLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCategoryTypeLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCaseRequest) of message CaseServiceGetCaseRequest does not match the default value (GetCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse GetCase(SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetStatusLookupRequest) of message CaseServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetStatusLookup", ReplyAction="http://tempuri.org/CaseService/GetStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse GetStatusLookup(SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceCreateCustomerCaseRequest) of message CaseServiceCreateCustomerCaseRequest does not match the default value (CreateCustomerCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/CreateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse CreateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceDeleteCustomerCaseRequest) of message CaseServiceDeleteCustomerCaseRequest does not match the default value (DeleteCustomerCase)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/DeleteCustomerCase", ReplyAction="http://tempuri.org/CaseService/DeleteCustomerCaseResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/DeleteCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse DeleteCustomerCase(SyncServices.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCaseRequest) of message CaseServiceGetCaseRequest does not match the default value (GetCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse GetCase(SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCasesSummaryByCustRequest) of message CaseServiceGetCasesSummaryByCustRequest does not match the default value (GetCasesSummaryByCust)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCasesSummaryByCust", ReplyAction="http://tempuri.org/CaseService/GetCasesSummaryByCustResponse")]
@@ -3535,107 +3658,48 @@ namespace SyncServices.SalesServicesGroup {
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCustomerCasesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.CaseServiceGetCustomerCasesResponse GetCustomerCases(SyncServices.SalesServicesGroup.CaseServiceGetCustomerCasesRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceUpdateCustomerCaseRequest) of message CaseServiceUpdateCustomerCaseRequest does not match the default value (UpdateCustomerCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/UpdateCustomerCase", ReplyAction="http://tempuri.org/CaseService/UpdateCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/UpdateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse UpdateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetStatusLookupRequest) of message CaseServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetStatusLookup", ReplyAction="http://tempuri.org/CaseService/GetStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse GetStatusLookup(SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetPriorityLookupRequest) of message CaseServiceGetPriorityLookupRequest does not match the default value (GetPriorityLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetPriorityLookup", ReplyAction="http://tempuri.org/CaseService/GetPriorityLookupResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetPriorityLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.CaseServiceGetPriorityLookupResponse GetPriorityLookup(SyncServices.SalesServicesGroup.CaseServiceGetPriorityLookupRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceCreateCustomerCaseRequest) of message CaseServiceCreateCustomerCaseRequest does not match the default value (CreateCustomerCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/CreateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse CreateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetResolutionLookupRequest) of message CaseServiceGetResolutionLookupRequest does not match the default value (GetResolutionLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetResolutionLookup", ReplyAction="http://tempuri.org/CaseService/GetResolutionLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetResolutionLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse GetResolutionLookup(SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCategoryTypeLookupRequest) of message CaseServiceGetCategoryTypeLookupRequest does not match the default value (GetCategoryTypeLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCategoryTypeLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetResolutionLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetResolutionLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public CaseServiceGetResolutionLookupRequest() {
-        }
-        
-        public CaseServiceGetResolutionLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetResolutionLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetResolutionLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.LookupContract[] response;
-        
-        public CaseServiceGetResolutionLookupResponse() {
-        }
-        
-        public CaseServiceGetResolutionLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCategoryTypeLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public CaseServiceGetCategoryTypeLookupRequest() {
-        }
-        
-        public CaseServiceGetCategoryTypeLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCategoryTypeLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CategoryTypeLookup[] response;
-        
-        public CaseServiceGetCategoryTypeLookupResponse() {
-        }
-        
-        public CaseServiceGetCategoryTypeLookupResponse(SyncServices.SalesServicesGroup.CategoryTypeLookup[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCaseRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceUpdateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceUpdateCustomerCaseRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerCaseContract row;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public string _caseId;
         
-        public CaseServiceGetCaseRequest() {
+        public CaseServiceUpdateCustomerCaseRequest() {
         }
         
-        public CaseServiceGetCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _caseId) {
+        public CaseServiceUpdateCustomerCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row, string _caseId) {
             this.CallContext = CallContext;
+            this.row = row;
             this._caseId = _caseId;
         }
     }
@@ -3643,16 +3707,16 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCaseResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceUpdateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceUpdateCustomerCaseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustomerCaseContract response;
+        public bool response;
         
-        public CaseServiceGetCaseResponse() {
+        public CaseServiceUpdateCustomerCaseResponse() {
         }
         
-        public CaseServiceGetCaseResponse(SyncServices.SalesServicesGroup.CustomerCaseContract response) {
+        public CaseServiceUpdateCustomerCaseResponse(bool response) {
             this.response = response;
         }
     }
@@ -3660,33 +3724,37 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetStatusLookupRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceCreateCustomerCaseRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
-        public CaseServiceGetStatusLookupRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerCaseContract row;
+        
+        public CaseServiceCreateCustomerCaseRequest() {
         }
         
-        public CaseServiceGetStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
+        public CaseServiceCreateCustomerCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row) {
             this.CallContext = CallContext;
+            this.row = row;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetStatusLookupResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceCreateCustomerCaseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.LookupContract[] response;
+        public string response;
         
-        public CaseServiceGetStatusLookupResponse() {
+        public CaseServiceCreateCustomerCaseResponse() {
         }
         
-        public CaseServiceGetStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
+        public CaseServiceCreateCustomerCaseResponse(string response) {
             this.response = response;
         }
     }
@@ -3725,6 +3793,44 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public CaseServiceDeleteCustomerCaseResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCaseRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _caseId;
+        
+        public CaseServiceGetCaseRequest() {
+        }
+        
+        public CaseServiceGetCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerCaseContract response;
+        
+        public CaseServiceGetCaseResponse() {
+        }
+        
+        public CaseServiceGetCaseResponse(SyncServices.SalesServicesGroup.CustomerCaseContract response) {
             this.response = response;
         }
     }
@@ -3808,41 +3914,33 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceUpdateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceUpdateCustomerCaseRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetStatusLookupRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustomerCaseContract row;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _caseId;
-        
-        public CaseServiceUpdateCustomerCaseRequest() {
+        public CaseServiceGetStatusLookupRequest() {
         }
         
-        public CaseServiceUpdateCustomerCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row, string _caseId) {
+        public CaseServiceGetStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
-            this.row = row;
-            this._caseId = _caseId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceUpdateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceUpdateCustomerCaseResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetStatusLookupResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
+        public SyncServices.SalesServicesGroup.LookupContract[] response;
         
-        public CaseServiceUpdateCustomerCaseResponse() {
+        public CaseServiceGetStatusLookupResponse() {
         }
         
-        public CaseServiceUpdateCustomerCaseResponse(bool response) {
+        public CaseServiceGetStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
             this.response = response;
         }
     }
@@ -3884,37 +3982,67 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceCreateCustomerCaseRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetResolutionLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetResolutionLookupRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustomerCaseContract row;
-        
-        public CaseServiceCreateCustomerCaseRequest() {
+        public CaseServiceGetResolutionLookupRequest() {
         }
         
-        public CaseServiceCreateCustomerCaseRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row) {
+        public CaseServiceGetResolutionLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
-            this.row = row;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceCreateCustomerCaseResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetResolutionLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetResolutionLookupResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
+        public SyncServices.SalesServicesGroup.LookupContract[] response;
         
-        public CaseServiceCreateCustomerCaseResponse() {
+        public CaseServiceGetResolutionLookupResponse() {
         }
         
-        public CaseServiceCreateCustomerCaseResponse(string response) {
+        public CaseServiceGetResolutionLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCategoryTypeLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        public CaseServiceGetCategoryTypeLookupRequest() {
+        }
+        
+        public CaseServiceGetCategoryTypeLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCategoryTypeLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CategoryTypeLookup[] response;
+        
+        public CaseServiceGetCategoryTypeLookupResponse() {
+        }
+        
+        public CaseServiceGetCategoryTypeLookupResponse(SyncServices.SalesServicesGroup.CategoryTypeLookup[] response) {
             this.response = response;
         }
     }
@@ -3947,51 +4075,29 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse SyncServices.SalesServicesGroup.CaseService.GetResolutionLookup(SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request) {
-            return base.Channel.GetResolutionLookup(request);
+        SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse SyncServices.SalesServicesGroup.CaseService.UpdateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest request) {
+            return base.Channel.UpdateCustomerCase(request);
         }
         
-        public SyncServices.SalesServicesGroup.LookupContract[] GetResolutionLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest();
+        public bool UpdateCustomerCase(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row, string _caseId) {
+            SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest();
             inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetResolutionLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse SyncServices.SalesServicesGroup.CaseService.GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
-            return base.Channel.GetCategoryTypeLookup(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.CategoryTypeLookup[] GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse SyncServices.SalesServicesGroup.CaseService.GetCase(SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest request) {
-            return base.Channel.GetCase(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.CustomerCaseContract GetCase(SyncServices.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest();
-            inValue.CallContext = CallContext;
+            inValue.row = row;
             inValue._caseId = _caseId;
-            SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
+            SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).UpdateCustomerCase(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse SyncServices.SalesServicesGroup.CaseService.GetStatusLookup(SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookup(request);
+        SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse SyncServices.SalesServicesGroup.CaseService.CreateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
+            return base.Channel.CreateCustomerCase(request);
         }
         
-        public SyncServices.SalesServicesGroup.LookupContract[] GetStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
+        public string CreateCustomerCase(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row) {
+            SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
             inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
+            inValue.row = row;
+            SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
             return retVal.response;
         }
         
@@ -4005,6 +4111,19 @@ namespace SyncServices.SalesServicesGroup {
             inValue.CallContext = CallContext;
             inValue._caseId = _caseId;
             SyncServices.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).DeleteCustomerCase(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse SyncServices.SalesServicesGroup.CaseService.GetCase(SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest request) {
+            return base.Channel.GetCase(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.CustomerCaseContract GetCase(SyncServices.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            SyncServices.SalesServicesGroup.CaseServiceGetCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
             return retVal.response;
         }
         
@@ -4035,16 +4154,14 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse SyncServices.SalesServicesGroup.CaseService.UpdateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest request) {
-            return base.Channel.UpdateCustomerCase(request);
+        SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse SyncServices.SalesServicesGroup.CaseService.GetStatusLookup(SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookup(request);
         }
         
-        public bool UpdateCustomerCase(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row, string _caseId) {
-            SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest();
+        public SyncServices.SalesServicesGroup.LookupContract[] GetStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            inValue._caseId = _caseId;
-            SyncServices.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).UpdateCustomerCase(inValue);
+            SyncServices.SalesServicesGroup.CaseServiceGetStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
             return retVal.response;
         }
         
@@ -4061,15 +4178,26 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse SyncServices.SalesServicesGroup.CaseService.CreateCustomerCase(SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
-            return base.Channel.CreateCustomerCase(request);
+        SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse SyncServices.SalesServicesGroup.CaseService.GetResolutionLookup(SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request) {
+            return base.Channel.GetResolutionLookup(request);
         }
         
-        public string CreateCustomerCase(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustomerCaseContract row) {
-            SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
+        public SyncServices.SalesServicesGroup.LookupContract[] GetResolutionLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            SyncServices.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
+            SyncServices.SalesServicesGroup.CaseServiceGetResolutionLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetResolutionLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse SyncServices.SalesServicesGroup.CaseService.GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
+            return base.Channel.GetCategoryTypeLookup(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.CategoryTypeLookup[] GetCategoryTypeLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse retVal = ((SyncServices.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
             return retVal.response;
         }
     }
@@ -4078,85 +4206,304 @@ namespace SyncServices.SalesServicesGroup {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.InventOnHandService")]
     public interface InventOnHandService {
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerRequest) of message InventOnHandServiceGetOnHandByCustomerRequest does not match the default value (GetOnHandByCustomer)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse GetOnHandByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoiceRequest) of message InventOnHandServiceGetInvoiceRequest does not match the default value (GetInvoice)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoiceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse GetInvoice(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesByDateRequest) of message InventOnHandServiceGetCustomerInvoicesByDateRequest does not match the default value (GetCustomerInvoicesByDate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse GetCustomerInvoicesByDate(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnhandQueryByCustomerRequest) of message InventOnHandServiceGetOnhandQueryByCustomerRequest does not match the default value (GetOnhandQueryByCustomer)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerZeroStockRequest) of message InventOnHandServiceGetOnHandByCustomerZeroStockRequest does not match the default value (GetOnHandByCustomerZeroStock)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse GetOnHandByCustomerZeroStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductInfoRequest) of message InventOnHandServiceGetProductInfoRequest does not match the default value (GetProductInfo)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse GetProductInfo(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoicesByDateRequest) of message InventOnHandServiceGetInvoicesByDateRequest does not match the default value (GetInvoicesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse GetInvoicesByDate(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockRequest) of message InventOnHandServiceGetCustomerOlderStockRequest does not match the default value (GetCustomerOlderStock)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse GetCustomerOlderStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesRequest) of message InventOnHandServiceGetCustomerInvoicesRequest does not match the default value (GetCustomerInvoices)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse GetCustomerInvoices(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockOverallRequest) of message InventOnHandServiceGetCustomerOlderStockOverallRequest does not match the default value (GetCustomerOlderStockOverall)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse GetCustomerOlderStockOverall(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoiceRequest) of message InventOnHandServiceGetInvoiceRequest does not match the default value (GetInvoice)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoiceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse GetInvoice(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoicesBySalesIdRequest) of message InventOnHandServiceGetInvoicesBySalesIdRequest does not match the default value (GetInvoicesBySalesId)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesId", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesBySalesIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse GetInvoicesBySalesId(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerRequest) of message InventOnHandServiceGetOnHandByCustomerRequest does not match the default value (GetOnHandByCustomer)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse GetOnHandByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesByDateRequest) of message InventOnHandServiceGetCustomerInvoicesByDateRequest does not match the default value (GetCustomerInvoicesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse GetCustomerInvoicesByDate(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesRequest) of message InventOnHandServiceGetCustomerInvoicesRequest does not match the default value (GetCustomerInvoices)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse GetCustomerInvoices(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByItemRequest) of message InventOnHandServiceGetOnHandByItemRequest does not match the default value (GetOnHandByItem)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByItem", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByItemResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse GetOnHandByItem(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsBySizeRequest) of message InventOnHandServiceGetProductsBySizeRequest does not match the default value (GetProductsBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse GetProductsBySize(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockOverallRequest) of message InventOnHandServiceGetCustomerOlderStockOverallRequest does not match the default value (GetCustomerOlderStockOverall)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse GetCustomerOlderStockOverall(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductInfoRequest) of message InventOnHandServiceGetProductInfoRequest does not match the default value (GetProductInfo)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse GetProductInfo(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByCustomerAllRequest) of message InventOnHandServiceGetProductsByCustomerAllRequest does not match the default value (GetProductsByCustomerAll)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse GetProductsByCustomerAll(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByModelRequest) of message InventOnHandServiceGetProductsByModelRequest does not match the default value (GetProductsByModel)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByModelAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse GetProductsByModel(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsBySizeRequest) of message InventOnHandServiceGetProductsBySizeRequest does not match the default value (GetProductsBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse GetProductsBySize(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceOutstandingBalanceRequest) of message InventOnHandServiceOutstandingBalanceRequest does not match the default value (OutstandingBalance)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/OutstandingBalance", ReplyAction="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/OutstandingBalanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse OutstandingBalance(SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnhandQueryByCustomerRequest) of message InventOnHandServiceGetOnhandQueryByCustomerRequest does not match the default value (GetOnhandQueryByCustomer)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByModelRequest) of message InventOnHandServiceGetProductsByModelRequest does not match the default value (GetProductsByModel)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByModelAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse GetProductsByModel(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductionRequestsRequest) of message InventOnHandServiceGetProductionRequestsRequest does not match the default value (getProductionRequests)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/getProductionRequests", ReplyAction="http://tempuri.org/InventOnHandService/getProductionRequestsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/getProductionRequestsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse getProductionRequests(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string accountId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest() {
+        }
+        
+        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this.accountId = accountId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.OnHandContract[] response;
+        
+        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse() {
+        }
+        
+        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesByDateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime _dateSearch;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetInvoicesByDateRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoicesByDateRequest(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._dateSearch = _dateSearch;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesByDateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response;
+        
+        public InventOnHandServiceGetInvoicesByDateResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoicesByDateResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerOlderStockRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string accountId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetCustomerOlderStockRequest() {
+        }
+        
+        public InventOnHandServiceGetCustomerOlderStockRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this.accountId = accountId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerOlderStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.OlderStockContract[] response;
+        
+        public InventOnHandServiceGetCustomerOlderStockResponse() {
+        }
+        
+        public InventOnHandServiceGetCustomerOlderStockResponse(SyncServices.SalesServicesGroup.OlderStockContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoiceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _invoiceId;
+        
+        public InventOnHandServiceGetInvoiceRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoiceRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
+            this.CallContext = CallContext;
+            this._invoiceId = _invoiceId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoiceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerInvoiceContract response;
+        
+        public InventOnHandServiceGetInvoiceResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoiceResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesBySalesIdRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string salesId;
+        
+        public InventOnHandServiceGetInvoicesBySalesIdRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoicesBySalesIdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string salesId) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesBySalesIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response;
+        
+        public InventOnHandServiceGetInvoicesBySalesIdResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoicesBySalesIdResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response) {
+            this.response = response;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4201,44 +4548,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public InventOnHandServiceGetOnHandByCustomerResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoiceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _invoiceId;
-        
-        public InventOnHandServiceGetInvoiceRequest() {
-        }
-        
-        public InventOnHandServiceGetInvoiceRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
-            this.CallContext = CallContext;
-            this._invoiceId = _invoiceId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoiceResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustomerInvoiceContract response;
-        
-        public InventOnHandServiceGetInvoiceResponse() {
-        }
-        
-        public InventOnHandServiceGetInvoiceResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract response) {
             this.response = response;
         }
     }
@@ -4296,182 +4605,6 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnhandQueryByCustomerRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnhandQueryByCustomerRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetOnhandQueryByCustomerRequest() {
-        }
-        
-        public InventOnHandServiceGetOnhandQueryByCustomerRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnhandQueryByCustomerResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnhandQueryByCustomerResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.OnHandContract[] response;
-        
-        public InventOnHandServiceGetOnhandQueryByCustomerResponse() {
-        }
-        
-        public InventOnHandServiceGetOnhandQueryByCustomerResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string accountId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest() {
-        }
-        
-        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this.accountId = accountId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.OnHandContract[] response;
-        
-        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse() {
-        }
-        
-        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductInfoRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _itemId;
-        
-        public InventOnHandServiceGetProductInfoRequest() {
-        }
-        
-        public InventOnHandServiceGetProductInfoRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            this.CallContext = CallContext;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductInfoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProductContract response;
-        
-        public InventOnHandServiceGetProductInfoResponse() {
-        }
-        
-        public InventOnHandServiceGetProductInfoResponse(SyncServices.SalesServicesGroup.ProductContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerOlderStockRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string accountId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetCustomerOlderStockRequest() {
-        }
-        
-        public InventOnHandServiceGetCustomerOlderStockRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this.accountId = accountId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerOlderStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.OlderStockContract[] response;
-        
-        public InventOnHandServiceGetCustomerOlderStockResponse() {
-        }
-        
-        public InventOnHandServiceGetCustomerOlderStockResponse(SyncServices.SalesServicesGroup.OlderStockContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class InventOnHandServiceGetCustomerInvoicesRequest {
         
@@ -4511,6 +4644,44 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public InventOnHandServiceGetCustomerInvoicesResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _itemId;
+        
+        public InventOnHandServiceGetOnHandByItemRequest() {
+        }
+        
+        public InventOnHandServiceGetOnHandByItemRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            this.CallContext = CallContext;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.OnHandContract[] response;
+        
+        public InventOnHandServiceGetOnHandByItemResponse() {
+        }
+        
+        public InventOnHandServiceGetOnHandByItemResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
             this.response = response;
         }
     }
@@ -4560,46 +4731,8 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoicesBySalesIdRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string salesId;
-        
-        public InventOnHandServiceGetInvoicesBySalesIdRequest() {
-        }
-        
-        public InventOnHandServiceGetInvoicesBySalesIdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string salesId) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoicesBySalesIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response;
-        
-        public InventOnHandServiceGetInvoicesBySalesIdResponse() {
-        }
-        
-        public InventOnHandServiceGetInvoicesBySalesIdResponse(SyncServices.SalesServicesGroup.CustomerInvoiceContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByItemRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductInfoRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
@@ -4607,10 +4740,10 @@ namespace SyncServices.SalesServicesGroup {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public string _itemId;
         
-        public InventOnHandServiceGetOnHandByItemRequest() {
+        public InventOnHandServiceGetProductInfoRequest() {
         }
         
-        public InventOnHandServiceGetOnHandByItemRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
+        public InventOnHandServiceGetProductInfoRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
             this._itemId = _itemId;
         }
@@ -4619,16 +4752,58 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByItemResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.OnHandContract[] response;
+        public SyncServices.SalesServicesGroup.ProductContract response;
         
-        public InventOnHandServiceGetOnHandByItemResponse() {
+        public InventOnHandServiceGetProductInfoResponse() {
         }
         
-        public InventOnHandServiceGetOnHandByItemResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
+        public InventOnHandServiceGetProductInfoResponse(SyncServices.SalesServicesGroup.ProductContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductsByCustomerAllRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string accountId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string sortField;
+        
+        public InventOnHandServiceGetProductsByCustomerAllRequest() {
+        }
+        
+        public InventOnHandServiceGetProductsByCustomerAllRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
+            this.CallContext = CallContext;
+            this.accountId = accountId;
+            this.sortField = sortField;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductsByCustomerAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProductContract[] response;
+        
+        public InventOnHandServiceGetProductsByCustomerAllResponse() {
+        }
+        
+        public InventOnHandServiceGetProductsByCustomerAllResponse(SyncServices.SalesServicesGroup.ProductContract[] response) {
             this.response = response;
         }
     }
@@ -4690,41 +4865,83 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductsByCustomerAllRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceOutstandingBalanceRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string accountId;
+        public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string sortField;
-        
-        public InventOnHandServiceGetProductsByCustomerAllRequest() {
+        public InventOnHandServiceOutstandingBalanceRequest() {
         }
         
-        public InventOnHandServiceGetProductsByCustomerAllRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
+        public InventOnHandServiceOutstandingBalanceRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
             this.CallContext = CallContext;
-            this.accountId = accountId;
-            this.sortField = sortField;
+            this._custAccount = _custAccount;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductsByCustomerAllResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceOutstandingBalanceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProductContract[] response;
+        public decimal response;
         
-        public InventOnHandServiceGetProductsByCustomerAllResponse() {
+        public InventOnHandServiceOutstandingBalanceResponse() {
         }
         
-        public InventOnHandServiceGetProductsByCustomerAllResponse(SyncServices.SalesServicesGroup.ProductContract[] response) {
+        public InventOnHandServiceOutstandingBalanceResponse(decimal response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnhandQueryByCustomerRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnhandQueryByCustomerRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetOnhandQueryByCustomerRequest() {
+        }
+        
+        public InventOnHandServiceGetOnhandQueryByCustomerRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnhandQueryByCustomerResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnhandQueryByCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.OnHandContract[] response;
+        
+        public InventOnHandServiceGetOnhandQueryByCustomerResponse() {
+        }
+        
+        public InventOnHandServiceGetOnhandQueryByCustomerResponse(SyncServices.SalesServicesGroup.OnHandContract[] response) {
             this.response = response;
         }
     }
@@ -4779,44 +4996,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public InventOnHandServiceGetProductsByModelResponse(SyncServices.SalesServicesGroup.ProductContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceOutstandingBalanceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        public InventOnHandServiceOutstandingBalanceRequest() {
-        }
-        
-        public InventOnHandServiceOutstandingBalanceRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceOutstandingBalanceResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public decimal response;
-        
-        public InventOnHandServiceOutstandingBalanceResponse() {
-        }
-        
-        public InventOnHandServiceOutstandingBalanceResponse(decimal response) {
             this.response = response;
         }
     }
@@ -4895,17 +5074,47 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
-            return base.Channel.GetOnHandByCustomer(request);
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
+            return base.Channel.GetOnHandByCustomerZeroStock(request);
         }
         
-        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByCustomer(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
+        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByCustomerZeroStock(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
             inValue.CallContext = CallContext;
             inValue.accountId = accountId;
             inValue.pageNo = pageNo;
             inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomer(inValue);
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStock(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse SyncServices.SalesServicesGroup.InventOnHandService.GetInvoicesByDate(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request) {
+            return base.Channel.GetInvoicesByDate(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesByDate(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest();
+            inValue.CallContext = CallContext;
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesByDate(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse SyncServices.SalesServicesGroup.InventOnHandService.GetCustomerOlderStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request) {
+            return base.Channel.GetCustomerOlderStock(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.OlderStockContract[] GetCustomerOlderStock(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest();
+            inValue.CallContext = CallContext;
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStock(inValue);
             return retVal.response;
         }
         
@@ -4919,6 +5128,34 @@ namespace SyncServices.SalesServicesGroup {
             inValue.CallContext = CallContext;
             inValue._invoiceId = _invoiceId;
             SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetInvoice(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse SyncServices.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesId(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
+            return base.Channel.GetInvoicesBySalesId(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesBySalesId(SyncServices.SalesServicesGroup.CallContext CallContext, string salesId) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesId(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
+            return base.Channel.GetOnHandByCustomer(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByCustomer(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
+            inValue.CallContext = CallContext;
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomer(inValue);
             return retVal.response;
         }
         
@@ -4939,64 +5176,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request) {
-            return base.Channel.GetOnhandQueryByCustomer(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnhandQueryByCustomer(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
-            return base.Channel.GetOnHandByCustomerZeroStock(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByCustomerZeroStock(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStock(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse SyncServices.SalesServicesGroup.InventOnHandService.GetProductInfo(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
-            return base.Channel.GetProductInfo(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProductContract GetProductInfo(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetProductInfo(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse SyncServices.SalesServicesGroup.InventOnHandService.GetCustomerOlderStock(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request) {
-            return base.Channel.GetCustomerOlderStock(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.OlderStockContract[] GetCustomerOlderStock(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStock(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse SyncServices.SalesServicesGroup.InventOnHandService.GetCustomerInvoices(SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request) {
             return base.Channel.GetCustomerInvoices(request);
         }
@@ -5008,6 +5187,19 @@ namespace SyncServices.SalesServicesGroup {
             inValue.pageNo = pageNo;
             inValue.pageSize = pageSize;
             SyncServices.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoices(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByItem(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
+            return base.Channel.GetOnHandByItem(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByItem(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
+            inValue.CallContext = CallContext;
+            inValue._itemId = _itemId;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItem(inValue);
             return retVal.response;
         }
         
@@ -5026,28 +5218,29 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse SyncServices.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesId(SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
-            return base.Channel.GetInvoicesBySalesId(request);
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse SyncServices.SalesServicesGroup.InventOnHandService.GetProductInfo(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
+            return base.Channel.GetProductInfo(request);
         }
         
-        public SyncServices.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesBySalesId(SyncServices.SalesServicesGroup.CallContext CallContext, string salesId) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+        public SyncServices.SalesServicesGroup.ProductContract GetProductInfo(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
             inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesId(inValue);
+            inValue._itemId = _itemId;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetProductInfo(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnHandByItem(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
-            return base.Channel.GetOnHandByItem(request);
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse SyncServices.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAll(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
+            return base.Channel.GetProductsByCustomerAll(request);
         }
         
-        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnHandByItem(SyncServices.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
+        public SyncServices.SalesServicesGroup.ProductContract[] GetProductsByCustomerAll(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
             inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItem(inValue);
+            inValue.accountId = accountId;
+            inValue.sortField = sortField;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAll(inValue);
             return retVal.response;
         }
         
@@ -5069,16 +5262,30 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse SyncServices.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAll(SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
-            return base.Channel.GetProductsByCustomerAll(request);
+        SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse SyncServices.SalesServicesGroup.InventOnHandService.OutstandingBalance(SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
+            return base.Channel.OutstandingBalance(request);
         }
         
-        public SyncServices.SalesServicesGroup.ProductContract[] GetProductsByCustomerAll(SyncServices.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
+        public decimal OutstandingBalance(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
             inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.sortField = sortField;
-            SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAll(inValue);
+            inValue._custAccount = _custAccount;
+            SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalance(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse SyncServices.SalesServicesGroup.InventOnHandService.GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request) {
+            return base.Channel.GetOnhandQueryByCustomer(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.OnHandContract[] GetOnhandQueryByCustomer(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetOnhandQueryByCustomer(inValue);
             return retVal.response;
         }
         
@@ -5096,19 +5303,6 @@ namespace SyncServices.SalesServicesGroup {
             inValue.pageNo = pageNo;
             inValue.pageSize = pageSize;
             SyncServices.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).GetProductsByModel(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse SyncServices.SalesServicesGroup.InventOnHandService.OutstandingBalance(SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
-            return base.Channel.OutstandingBalance(request);
-        }
-        
-        public decimal OutstandingBalance(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            SyncServices.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse retVal = ((SyncServices.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalance(inValue);
             return retVal.response;
         }
         
@@ -5132,30 +5326,30 @@ namespace SyncServices.SalesServicesGroup {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.PrePickingService")]
     public interface PrePickingService {
         
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetStatusLookupRequest) of message PrePickingServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse GetStatusLookup(SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeSizeRequest) of message PrePickingServiceGetOnhandByGradeSizeRequest does not match the default value (GetOnhandByGradeSize)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse GetOnhandByGradeSize(SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceCreatePrePickingRequest) of message PrePickingServiceCreatePrePickingRequest does not match the default value (CreatePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/CreatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/CreatePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/CreatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse CreatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetSinglePrePickingRequest) of message PrePickingServiceGetSinglePrePickingRequest does not match the default value (GetSinglePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetSinglePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse GetSinglePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceDeletePrePickingRequest) of message PrePickingServiceDeletePrePickingRequest does not match the default value (DeletePrePicking)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/DeletePrePicking", ReplyAction="http://tempuri.org/PrePickingService/DeletePrePickingResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/DeletePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse DeletePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceUpdatePrePickingRequest) of message PrePickingServiceUpdatePrePickingRequest does not match the default value (UpdatePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/UpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/UpdatePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/UpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse UpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceStatusUpdatePrePickingRequest) of message PrePickingServiceStatusUpdatePrePickingRequest does not match the default value (StatusUpdatePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/StatusUpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse StatusUpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetPrePickingsRequest) of message PrePickingServiceGetPrePickingsRequest does not match the default value (GetPrePickings)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetPrePickingsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse GetPrePickings(SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest) of message PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest does not match the default value (GetOnhandByGradeSizeWithOnOrder)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrder", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrderResponse")]
@@ -5163,25 +5357,59 @@ namespace SyncServices.SalesServicesGroup {
             "", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse GetOnhandByGradeSizeWithOnOrder(SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetSinglePrePickingRequest) of message PrePickingServiceGetSinglePrePickingRequest does not match the default value (GetSinglePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetSinglePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse GetSinglePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetStatusLookupRequest) of message PrePickingServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse GetStatusLookup(SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetPrePickingsRequest) of message PrePickingServiceGetPrePickingsRequest does not match the default value (GetPrePickings)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetPrePickingsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse GetPrePickings(SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeRequest) of message PrePickingServiceGetOnhandByGradeRequest does not match the default value (GetOnhandByGrade)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGrade", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse GetOnhandByGrade(SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceStatusUpdatePrePickingRequest) of message PrePickingServiceStatusUpdatePrePickingRequest does not match the default value (StatusUpdatePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/StatusUpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse StatusUpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceCreatePrePickingRequest) of message PrePickingServiceCreatePrePickingRequest does not match the default value (CreatePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/CreatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/CreatePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/CreatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse CreatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceUpdatePrePickingRequest) of message PrePickingServiceUpdatePrePickingRequest does not match the default value (UpdatePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/UpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/UpdatePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/UpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse UpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        public PrePickingServiceGetStatusLookupRequest() {
+        }
+        
+        public PrePickingServiceGetStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.LookupContract[] response;
+        
+        public PrePickingServiceGetStatusLookupResponse() {
+        }
+        
+        public PrePickingServiceGetStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
+            this.response = response;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5229,37 +5457,37 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceCreatePrePickingRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetSinglePrePickingRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.PrePickingContract row;
+        public string _prePickId;
         
-        public PrePickingServiceCreatePrePickingRequest() {
+        public PrePickingServiceGetSinglePrePickingRequest() {
         }
         
-        public PrePickingServiceCreatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.PrePickingContract row) {
+        public PrePickingServiceGetSinglePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _prePickId) {
             this.CallContext = CallContext;
-            this.row = row;
+            this._prePickId = _prePickId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceCreatePrePickingResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetSinglePrePickingResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
+        public SyncServices.SalesServicesGroup.PrePickingContract response;
         
-        public PrePickingServiceCreatePrePickingResponse() {
+        public PrePickingServiceGetSinglePrePickingResponse() {
         }
         
-        public PrePickingServiceCreatePrePickingResponse(string response) {
+        public PrePickingServiceGetSinglePrePickingResponse(SyncServices.SalesServicesGroup.PrePickingContract response) {
             this.response = response;
         }
     }
@@ -5305,83 +5533,37 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceUpdatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceUpdatePrePickingRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetPrePickingsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string pickingId;
+        public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public SyncServices.SalesServicesGroup.PrePickingContract row;
-        
-        public PrePickingServiceUpdatePrePickingRequest() {
+        public PrePickingServiceGetPrePickingsRequest() {
         }
         
-        public PrePickingServiceUpdatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, SyncServices.SalesServicesGroup.PrePickingContract row) {
+        public PrePickingServiceGetPrePickingsRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
             this.CallContext = CallContext;
-            this.pickingId = pickingId;
-            this.row = row;
+            this._custAccount = _custAccount;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceUpdatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceUpdatePrePickingResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetPrePickingsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
+        public SyncServices.SalesServicesGroup.PrePickingContract[] response;
         
-        public PrePickingServiceUpdatePrePickingResponse() {
+        public PrePickingServiceGetPrePickingsResponse() {
         }
         
-        public PrePickingServiceUpdatePrePickingResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceStatusUpdatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceStatusUpdatePrePickingRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int statusId;
-        
-        public PrePickingServiceStatusUpdatePrePickingRequest() {
-        }
-        
-        public PrePickingServiceStatusUpdatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, int statusId) {
-            this.CallContext = CallContext;
-            this.pickingId = pickingId;
-            this.statusId = statusId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceStatusUpdatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceStatusUpdatePrePickingResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public PrePickingServiceStatusUpdatePrePickingResponse() {
-        }
-        
-        public PrePickingServiceStatusUpdatePrePickingResponse(bool response) {
+        public PrePickingServiceGetPrePickingsResponse(SyncServices.SalesServicesGroup.PrePickingContract[] response) {
             this.response = response;
         }
     }
@@ -5431,116 +5613,6 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetSinglePrePickingRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _prePickId;
-        
-        public PrePickingServiceGetSinglePrePickingRequest() {
-        }
-        
-        public PrePickingServiceGetSinglePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _prePickId) {
-            this.CallContext = CallContext;
-            this._prePickId = _prePickId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetSinglePrePickingResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.PrePickingContract response;
-        
-        public PrePickingServiceGetSinglePrePickingResponse() {
-        }
-        
-        public PrePickingServiceGetSinglePrePickingResponse(SyncServices.SalesServicesGroup.PrePickingContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetStatusLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public PrePickingServiceGetStatusLookupRequest() {
-        }
-        
-        public PrePickingServiceGetStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetStatusLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.LookupContract[] response;
-        
-        public PrePickingServiceGetStatusLookupResponse() {
-        }
-        
-        public PrePickingServiceGetStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetPrePickingsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        public PrePickingServiceGetPrePickingsRequest() {
-        }
-        
-        public PrePickingServiceGetPrePickingsRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetPrePickingsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.PrePickingContract[] response;
-        
-        public PrePickingServiceGetPrePickingsResponse() {
-        }
-        
-        public PrePickingServiceGetPrePickingsResponse(SyncServices.SalesServicesGroup.PrePickingContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class PrePickingServiceGetOnhandByGradeRequest {
         
@@ -5576,6 +5648,128 @@ namespace SyncServices.SalesServicesGroup {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceStatusUpdatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceStatusUpdatePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int statusId;
+        
+        public PrePickingServiceStatusUpdatePrePickingRequest() {
+        }
+        
+        public PrePickingServiceStatusUpdatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, int statusId) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+            this.statusId = statusId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceStatusUpdatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceStatusUpdatePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public PrePickingServiceStatusUpdatePrePickingResponse() {
+        }
+        
+        public PrePickingServiceStatusUpdatePrePickingResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceCreatePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.PrePickingContract row;
+        
+        public PrePickingServiceCreatePrePickingRequest() {
+        }
+        
+        public PrePickingServiceCreatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.PrePickingContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceCreatePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string response;
+        
+        public PrePickingServiceCreatePrePickingResponse() {
+        }
+        
+        public PrePickingServiceCreatePrePickingResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceUpdatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceUpdatePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public SyncServices.SalesServicesGroup.PrePickingContract row;
+        
+        public PrePickingServiceUpdatePrePickingRequest() {
+        }
+        
+        public PrePickingServiceUpdatePrePickingRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, SyncServices.SalesServicesGroup.PrePickingContract row) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceUpdatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceUpdatePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public PrePickingServiceUpdatePrePickingResponse() {
+        }
+        
+        public PrePickingServiceUpdatePrePickingResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PrePickingServiceChannel : SyncServices.SalesServicesGroup.PrePickingService, System.ServiceModel.IClientChannel {
     }
@@ -5604,6 +5798,18 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse SyncServices.SalesServicesGroup.PrePickingService.GetStatusLookup(SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookup(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.LookupContract[] GetStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse SyncServices.SalesServicesGroup.PrePickingService.GetOnhandByGradeSize(SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request) {
             return base.Channel.GetOnhandByGradeSize(request);
         }
@@ -5618,15 +5824,15 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.CreatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
-            return base.Channel.CreatePrePicking(request);
+        SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.GetSinglePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
+            return base.Channel.GetSinglePrePicking(request);
         }
         
-        public string CreatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.PrePickingContract row) {
-            SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
+        public SyncServices.SalesServicesGroup.PrePickingContract GetSinglePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string _prePickId) {
+            SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).CreatePrePicking(inValue);
+            inValue._prePickId = _prePickId;
+            SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePicking(inValue);
             return retVal.response;
         }
         
@@ -5644,30 +5850,15 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.UpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request) {
-            return base.Channel.UpdatePrePicking(request);
+        SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse SyncServices.SalesServicesGroup.PrePickingService.GetPrePickings(SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
+            return base.Channel.GetPrePickings(request);
         }
         
-        public bool UpdatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, SyncServices.SalesServicesGroup.PrePickingContract row) {
-            SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest();
+        public SyncServices.SalesServicesGroup.PrePickingContract[] GetPrePickings(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
             inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            inValue.row = row;
-            SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).UpdatePrePicking(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.StatusUpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request) {
-            return base.Channel.StatusUpdatePrePicking(request);
-        }
-        
-        public bool StatusUpdatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, int statusId) {
-            SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            inValue.statusId = statusId;
-            SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).StatusUpdatePrePicking(inValue);
+            inValue._custAccount = _custAccount;
+            SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetPrePickings(inValue);
             return retVal.response;
         }
         
@@ -5686,44 +5877,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.GetSinglePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
-            return base.Channel.GetSinglePrePicking(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.PrePickingContract GetSinglePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string _prePickId) {
-            SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue._prePickId = _prePickId;
-            SyncServices.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePicking(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse SyncServices.SalesServicesGroup.PrePickingService.GetStatusLookup(SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookup(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.LookupContract[] GetStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse SyncServices.SalesServicesGroup.PrePickingService.GetPrePickings(SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
-            return base.Channel.GetPrePickings(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.PrePickingContract[] GetPrePickings(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            SyncServices.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetPrePickings(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse SyncServices.SalesServicesGroup.PrePickingService.GetOnhandByGrade(SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request) {
             return base.Channel.GetOnhandByGrade(request);
         }
@@ -5735,51 +5888,92 @@ namespace SyncServices.SalesServicesGroup {
             SyncServices.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGrade(inValue);
             return retVal.response;
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.StatusUpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request) {
+            return base.Channel.StatusUpdatePrePicking(request);
+        }
+        
+        public bool StatusUpdatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, int statusId) {
+            SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            inValue.statusId = statusId;
+            SyncServices.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).StatusUpdatePrePicking(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.CreatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
+            return base.Channel.CreatePrePicking(request);
+        }
+        
+        public string CreatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.PrePickingContract row) {
+            SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            SyncServices.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).CreatePrePicking(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse SyncServices.SalesServicesGroup.PrePickingService.UpdatePrePicking(SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request) {
+            return base.Channel.UpdatePrePicking(request);
+        }
+        
+        public bool UpdatePrePicking(SyncServices.SalesServicesGroup.CallContext CallContext, string pickingId, SyncServices.SalesServicesGroup.PrePickingContract row) {
+            SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest inValue = new SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            inValue.row = row;
+            SyncServices.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse retVal = ((SyncServices.SalesServicesGroup.PrePickingService)(this)).UpdatePrePicking(inValue);
+            return retVal.response;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.ProdPlanService")]
     public interface ProdPlanService {
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastBySizeRequest) of message ProdPlanServiceGetMonthlyForcastBySizeRequest does not match the default value (GetMonthlyForcastBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse GetMonthlyForcastBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthRequest) of message ProdPlanServiceGetCustPlanByMonthRequest does not match the default value (GetCustPlanByMonth)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse GetCustPlanByMonth(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthSizeRequest) of message ProdPlanServiceGetCustPlanByMonthSizeRequest does not match the default value (GetCustPlanByMonthSize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthSizeResponse GetCustPlanByMonthSize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthSizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanBySizeRequest) of message ProdPlanServiceGetCustPlanBySizeRequest does not match the default value (GetCustPlanBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse GetCustPlanBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetItemSizesRequest) of message ProdPlanServiceGetItemSizesRequest does not match the default value (GetItemSizes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetItemSizesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse GetItemSizes(SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetSortingLinesRequest) of message ProdPlanServiceGetSortingLinesRequest does not match the default value (GetSortingLines)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetSortingLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse GetSortingLines(SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceUpdateCustPlanRequest) of message ProdPlanServiceUpdateCustPlanRequest does not match the default value (UpdateCustPlan)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/UpdateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/UpdateCustPlanResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/UpdateCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse UpdateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceCreateCustPlanRequest) of message ProdPlanServiceCreateCustPlanRequest does not match the default value (CreateCustPlan)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/CreateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/CreateCustPlanResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/CreateCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse CreateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanRequest) of message ProdPlanServiceGetCustPlanRequest does not match the default value (GetCustPlan)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse GetCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastBySizeRequest) of message ProdPlanServiceGetMonthlyForcastBySizeRequest does not match the default value (GetMonthlyForcastBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse GetMonthlyForcastBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthSizeRequest) of message ProdPlanServiceGetCustPlanByMonthSizeRequest does not match the default value (GetCustPlanByMonthSize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthSizeResponse GetCustPlanByMonthSize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthSizeRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceDeleteCustPlanRequest) of message ProdPlanServiceDeleteCustPlanRequest does not match the default value (DeleteCustPlan)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/DeleteCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/DeleteCustPlanResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/DeleteCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse DeleteCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthRequest) of message ProdPlanServiceGetCustPlanByMonthRequest does not match the default value (GetCustPlanByMonth)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse GetCustPlanByMonth(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetSortingLinesRequest) of message ProdPlanServiceGetSortingLinesRequest does not match the default value (GetSortingLines)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetSortingLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse GetSortingLines(SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetYearlyForcastBySizeRequest) of message ProdPlanServiceGetYearlyForcastBySizeRequest does not match the default value (GetYearlyForcastBySize)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse")]
@@ -5791,15 +5985,130 @@ namespace SyncServices.SalesServicesGroup {
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse GetMonthlyForcastSummary(SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanRequest) of message ProdPlanServiceGetCustPlanRequest does not match the default value (GetCustPlan)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse GetCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanBySizeRequest) of message ProdPlanServiceGetCustPlanBySizeRequest does not match the default value (GetCustPlanBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse GetCustPlanBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceUpdateCustPlanRequest) of message ProdPlanServiceUpdateCustPlanRequest does not match the default value (UpdateCustPlan)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/UpdateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/UpdateCustPlanResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/UpdateCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse UpdateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetItemSizesRequest) of message ProdPlanServiceGetItemSizesRequest does not match the default value (GetItemSizes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetItemSizesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse GetItemSizes(SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceUpdateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceUpdateCustPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract row;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long recordId;
+        
+        public ProdPlanServiceUpdateCustPlanRequest() {
+        }
+        
+        public ProdPlanServiceUpdateCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row, long recordId) {
+            this.CallContext = CallContext;
+            this.row = row;
+            this.recordId = recordId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceUpdateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceUpdateCustPlanResponse {
+        
+        public ProdPlanServiceUpdateCustPlanResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceCreateCustPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract row;
+        
+        public ProdPlanServiceCreateCustPlanRequest() {
+        }
+        
+        public ProdPlanServiceCreateCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceCreateCustPlanResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long response;
+        
+        public ProdPlanServiceCreateCustPlanResponse() {
+        }
+        
+        public ProdPlanServiceCreateCustPlanResponse(long response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string custId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int yearId;
+        
+        public ProdPlanServiceGetCustPlanRequest() {
+        }
+        
+        public ProdPlanServiceGetCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId) {
+            this.CallContext = CallContext;
+            this.custId = custId;
+            this.yearId = yearId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] response;
+        
+        public ProdPlanServiceGetCustPlanResponse() {
+        }
+        
+        public ProdPlanServiceGetCustPlanResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
+            this.response = response;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5848,52 +6157,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public ProdPlanServiceGetMonthlyForcastBySizeResponse(SyncServices.SalesServicesGroup.ForcastSummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanByMonthRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string custId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int yearId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string monthId;
-        
-        public ProdPlanServiceGetCustPlanByMonthRequest() {
-        }
-        
-        public ProdPlanServiceGetCustPlanByMonthRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            this.CallContext = CallContext;
-            this.custId = custId;
-            this.yearId = yearId;
-            this.monthId = monthId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanByMonthResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] response;
-        
-        public ProdPlanServiceGetCustPlanByMonthResponse() {
-        }
-        
-        public ProdPlanServiceGetCustPlanByMonthResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
             this.response = response;
         }
     }
@@ -5951,8 +6214,46 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanBySizeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceDeleteCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceDeleteCustPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long recordId;
+        
+        public ProdPlanServiceDeleteCustPlanRequest() {
+        }
+        
+        public ProdPlanServiceDeleteCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, long recordId) {
+            this.CallContext = CallContext;
+            this.recordId = recordId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceDeleteCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceDeleteCustPlanResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdPlanServiceDeleteCustPlanResponse() {
+        }
+        
+        public ProdPlanServiceDeleteCustPlanResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanByMonthRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
@@ -5964,66 +6265,32 @@ namespace SyncServices.SalesServicesGroup {
         public int yearId;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string sizeId;
+        public string monthId;
         
-        public ProdPlanServiceGetCustPlanBySizeRequest() {
+        public ProdPlanServiceGetCustPlanByMonthRequest() {
         }
         
-        public ProdPlanServiceGetCustPlanBySizeRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string sizeId) {
+        public ProdPlanServiceGetCustPlanByMonthRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
             this.CallContext = CallContext;
             this.custId = custId;
             this.yearId = yearId;
-            this.sizeId = sizeId;
+            this.monthId = monthId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanBySizeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanByMonthResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public SyncServices.SalesServicesGroup.CustForcastPlanContract[] response;
         
-        public ProdPlanServiceGetCustPlanBySizeResponse() {
+        public ProdPlanServiceGetCustPlanByMonthResponse() {
         }
         
-        public ProdPlanServiceGetCustPlanBySizeResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetItemSizesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public ProdPlanServiceGetItemSizesRequest() {
-        }
-        
-        public ProdPlanServiceGetItemSizesRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetItemSizesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ItemSizeContract[] response;
-        
-        public ProdPlanServiceGetItemSizesResponse() {
-        }
-        
-        public ProdPlanServiceGetItemSizesResponse(SyncServices.SalesServicesGroup.ItemSizeContract[] response) {
+        public ProdPlanServiceGetCustPlanByMonthResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
             this.response = response;
         }
     }
@@ -6058,82 +6325,6 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public ProdPlanServiceGetSortingLinesResponse(string[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceCreateCustPlanRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract row;
-        
-        public ProdPlanServiceCreateCustPlanRequest() {
-        }
-        
-        public ProdPlanServiceCreateCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row) {
-            this.CallContext = CallContext;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceCreateCustPlanResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long response;
-        
-        public ProdPlanServiceCreateCustPlanResponse() {
-        }
-        
-        public ProdPlanServiceCreateCustPlanResponse(long response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceDeleteCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceDeleteCustPlanRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long recordId;
-        
-        public ProdPlanServiceDeleteCustPlanRequest() {
-        }
-        
-        public ProdPlanServiceDeleteCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, long recordId) {
-            this.CallContext = CallContext;
-            this.recordId = recordId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceDeleteCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceDeleteCustPlanResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public ProdPlanServiceDeleteCustPlanResponse() {
-        }
-        
-        public ProdPlanServiceDeleteCustPlanResponse(bool response) {
             this.response = response;
         }
     }
@@ -6233,8 +6424,8 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanBySizeRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
@@ -6245,29 +6436,33 @@ namespace SyncServices.SalesServicesGroup {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public int yearId;
         
-        public ProdPlanServiceGetCustPlanRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string sizeId;
+        
+        public ProdPlanServiceGetCustPlanBySizeRequest() {
         }
         
-        public ProdPlanServiceGetCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId) {
+        public ProdPlanServiceGetCustPlanBySizeRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string sizeId) {
             this.CallContext = CallContext;
             this.custId = custId;
             this.yearId = yearId;
+            this.sizeId = sizeId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanBySizeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public SyncServices.SalesServicesGroup.CustForcastPlanContract[] response;
         
-        public ProdPlanServiceGetCustPlanResponse() {
+        public ProdPlanServiceGetCustPlanBySizeResponse() {
         }
         
-        public ProdPlanServiceGetCustPlanResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
+        public ProdPlanServiceGetCustPlanBySizeResponse(SyncServices.SalesServicesGroup.CustForcastPlanContract[] response) {
             this.response = response;
         }
     }
@@ -6275,35 +6470,34 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceUpdateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceUpdateCustPlanRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetItemSizesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract row;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public long recordId;
-        
-        public ProdPlanServiceUpdateCustPlanRequest() {
+        public ProdPlanServiceGetItemSizesRequest() {
         }
         
-        public ProdPlanServiceUpdateCustPlanRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row, long recordId) {
+        public ProdPlanServiceGetItemSizesRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
-            this.row = row;
-            this.recordId = recordId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceUpdateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceUpdateCustPlanResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetItemSizesResponse {
         
-        public ProdPlanServiceUpdateCustPlanResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ItemSizeContract[] response;
+        
+        public ProdPlanServiceGetItemSizesResponse() {
+        }
+        
+        public ProdPlanServiceGetItemSizesResponse(SyncServices.SalesServicesGroup.ItemSizeContract[] response) {
+            this.response = response;
         }
     }
     
@@ -6335,6 +6529,46 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.UpdateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest request) {
+            return base.Channel.UpdateCustPlan(request);
+        }
+        
+        public void UpdateCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row, long recordId) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            inValue.recordId = recordId;
+            SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).UpdateCustPlan(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.CreateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
+            return base.Channel.CreateCustPlan(request);
+        }
+        
+        public long CreateCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlan(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest request) {
+            return base.Channel.GetCustPlan(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlan(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse SyncServices.SalesServicesGroup.ProdPlanService.GetMonthlyForcastBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request) {
             return base.Channel.GetMonthlyForcastBySize(request);
         }
@@ -6347,21 +6581,6 @@ namespace SyncServices.SalesServicesGroup {
             inValue.yearId = yearId;
             inValue.monthId = monthId;
             SyncServices.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastBySize(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlanByMonth(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
-            return base.Channel.GetCustPlanByMonth(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanByMonth(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonth(inValue);
             return retVal.response;
         }
         
@@ -6382,29 +6601,30 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlanBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest request) {
-            return base.Channel.GetCustPlanBySize(request);
+        SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.DeleteCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest request) {
+            return base.Channel.DeleteCustPlan(request);
         }
         
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanBySize(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string sizeId) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest();
+        public bool DeleteCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, long recordId) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest();
             inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.sizeId = sizeId;
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanBySize(inValue);
+            inValue.recordId = recordId;
+            SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).DeleteCustPlan(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse SyncServices.SalesServicesGroup.ProdPlanService.GetItemSizes(SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
-            return base.Channel.GetItemSizes(request);
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlanByMonth(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
+            return base.Channel.GetCustPlanByMonth(request);
         }
         
-        public SyncServices.SalesServicesGroup.ItemSizeContract[] GetItemSizes(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanByMonth(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
             inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetItemSizes(inValue);
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonth(inValue);
             return retVal.response;
         }
         
@@ -6417,32 +6637,6 @@ namespace SyncServices.SalesServicesGroup {
             SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest();
             inValue.CallContext = CallContext;
             SyncServices.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetSortingLines(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.CreateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
-            return base.Channel.CreateCustPlan(request);
-        }
-        
-        public long CreateCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            SyncServices.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlan(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.DeleteCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest request) {
-            return base.Channel.DeleteCustPlan(request);
-        }
-        
-        public bool DeleteCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, long recordId) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanRequest();
-            inValue.CallContext = CallContext;
-            inValue.recordId = recordId;
-            SyncServices.SalesServicesGroup.ProdPlanServiceDeleteCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).DeleteCustPlan(inValue);
             return retVal.response;
         }
         
@@ -6477,101 +6671,36 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest request) {
-            return base.Channel.GetCustPlan(request);
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse SyncServices.SalesServicesGroup.ProdPlanService.GetCustPlanBySize(SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest request) {
+            return base.Channel.GetCustPlanBySize(request);
         }
         
-        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest();
+        public SyncServices.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanBySize(SyncServices.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string sizeId) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest();
             inValue.CallContext = CallContext;
             inValue.custId = custId;
             inValue.yearId = yearId;
-            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlan(inValue);
+            inValue.sizeId = sizeId;
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanBySize(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse SyncServices.SalesServicesGroup.ProdPlanService.UpdateCustPlan(SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest request) {
-            return base.Channel.UpdateCustPlan(request);
+        SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse SyncServices.SalesServicesGroup.ProdPlanService.GetItemSizes(SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
+            return base.Channel.GetItemSizes(request);
         }
         
-        public void UpdateCustPlan(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.CustForcastPlanContract row, long recordId) {
-            SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest();
+        public SyncServices.SalesServicesGroup.ItemSizeContract[] GetItemSizes(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            inValue.recordId = recordId;
-            SyncServices.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).UpdateCustPlan(inValue);
+            SyncServices.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse retVal = ((SyncServices.SalesServicesGroup.ProdPlanService)(this)).GetItemSizes(inValue);
+            return retVal.response;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.ProdRequestService")]
     public interface ProdRequestService {
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceDeleteProdRequestRequest) of message ProdRequestServiceDeleteProdRequestRequest does not match the default value (DeleteProdRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/DeleteProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/DeleteProdRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/DeleteProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse DeleteProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetAllProductionLinesRequest) of message ProdRequestServiceGetAllProductionLinesRequest does not match the default value (GetAllProductionLines)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetAllProductionLines", ReplyAction="http://tempuri.org/ProdRequestService/GetAllProductionLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetAllProductionLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse GetAllProductionLines(SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetLineCapacitiesRequest) of message ProdRequestServiceGetLineCapacitiesRequest does not match the default value (GetLineCapacities)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetLineCapacities", ReplyAction="http://tempuri.org/ProdRequestService/GetLineCapacitiesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetLineCapacitiesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse GetLineCapacities(SyncServices.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetNewProdSchedulesRequest) of message ProdRequestServiceGetNewProdSchedulesRequest does not match the default value (GetNewProdSchedules)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetNewProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetNewProdSchedulesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetNewProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse GetNewProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByStatusListRequest) of message ProdRequestServiceGetProdRequestByStatusListRequest does not match the default value (GetProdRequestByStatusList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse GetProdRequestByStatusList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestSummaryByCustRequest) of message ProdRequestServiceGetProdRequestSummaryByCustRequest does not match the default value (GetProdRequestSummaryByCust)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestListRequest) of message ProdRequestServiceGetProductionRequestListRequest does not match the default value (GetProductionRequestList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse GetProductionRequestList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceUpdateProdRequestRequest) of message ProdRequestServiceUpdateProdRequestRequest does not match the default value (UpdateProdRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/UpdateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse UpdateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRearrangeRequest) of message ProdRequestServiceGetProdSchedulesRearrangeRequest does not match the default value (GetProdSchedulesRearrange)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestRequest) of message ProdRequestServiceGetProductionRequestRequest does not match the default value (GetProductionRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse GetProductionRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdReqStatusLookupRequest) of message ProdRequestServiceGetProdReqStatusLookupRequest does not match the default value (GetProdReqStatusLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup", ReplyAction="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse GetProdReqStatusLookup(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByDateRequest) of message ProdRequestServiceGetProdSchedulesByDateRequest does not match the default value (GetProdSchedulesByDate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse GetProdSchedulesByDate(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRequest) of message ProdRequestServiceGetProdSchedulesRequest does not match the default value (GetProdSchedules)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse GetProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListByItemNotFinishedRequest) of message ProdRequestServiceGetProdRequestListByItemNotFinishedRequest does not match the default value (GetProdRequestListByItemNotFinished)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinished", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinishedResponse" +
@@ -6580,578 +6709,110 @@ namespace SyncServices.SalesServicesGroup {
             "Fault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse GetProdRequestListByItemNotFinished(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetLineCapacitiesRequest) of message ProdRequestServiceGetLineCapacitiesRequest does not match the default value (GetLineCapacities)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetLineCapacities", ReplyAction="http://tempuri.org/ProdRequestService/GetLineCapacitiesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetLineCapacitiesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse GetLineCapacities(SyncServices.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListBySizeRequest) of message ProdRequestServiceGetProdRequestListBySizeRequest does not match the default value (GetProdRequestListBySize)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse GetProdRequestListBySize(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceUpdateProdRequestRequest) of message ProdRequestServiceUpdateProdRequestRequest does not match the default value (UpdateProdRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/UpdateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse UpdateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByRequestRequest) of message ProdRequestServiceGetProdSchedulesByRequestRequest does not match the default value (GetProdSchedulesByRequest)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse GetProdSchedulesByRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceCreateProdRequestRequest) of message ProdRequestServiceCreateProdRequestRequest does not match the default value (CreateProdRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/CreateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse CreateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByItemRequest) of message ProdRequestServiceGetProdSchedulesByItemRequest does not match the default value (GetProdSchedulesByItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse GetProdSchedulesByItem(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceSaveProdSchedulesRequest) of message ProdRequestServiceSaveProdSchedulesRequest does not match the default value (SaveProdSchedules)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/SaveProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/SaveProdSchedulesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/SaveProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse SaveProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestRequest) of message ProdRequestServiceGetProductionRequestRequest does not match the default value (GetProductionRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse GetProductionRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListByItemRequest) of message ProdRequestServiceGetProdRequestListByItemRequest does not match the default value (GetProdRequestListByItem)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse GetProdRequestListByItem(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRearrangeRequest) of message ProdRequestServiceGetProdSchedulesRearrangeRequest does not match the default value (GetProdSchedulesRearrange)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRequest) of message ProdRequestServiceGetProdSchedulesRequest does not match the default value (GetProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse GetProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestSummaryByCustRequest) of message ProdRequestServiceGetProdRequestSummaryByCustRequest does not match the default value (GetProdRequestSummaryByCust)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceSaveProdSchedulesRequest) of message ProdRequestServiceSaveProdSchedulesRequest does not match the default value (SaveProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/SaveProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/SaveProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/SaveProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse SaveProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestListRequest) of message ProdRequestServiceGetProductionRequestListRequest does not match the default value (GetProductionRequestList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse GetProductionRequestList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByItemRequest) of message ProdRequestServiceGetProdSchedulesByItemRequest does not match the default value (GetProdSchedulesByItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse GetProdSchedulesByItem(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByDateRequest) of message ProdRequestServiceGetProdSchedulesByDateRequest does not match the default value (GetProdSchedulesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse GetProdSchedulesByDate(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByDateListRequest) of message ProdRequestServiceGetProdRequestByDateListRequest does not match the default value (GetProdRequestByDateList)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse GetProdRequestByDateList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceDeleteProdRequestRequest {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custReqId;
-        
-        public ProdRequestServiceDeleteProdRequestRequest() {
-        }
-        
-        public ProdRequestServiceDeleteProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            this.CallContext = CallContext;
-            this._custReqId = _custReqId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceDeleteProdRequestResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public ProdRequestServiceDeleteProdRequestResponse() {
-        }
-        
-        public ProdRequestServiceDeleteProdRequestResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetAllProductionLinesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public ProdRequestServiceGetAllProductionLinesRequest() {
-        }
-        
-        public ProdRequestServiceGetAllProductionLinesRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetAllProductionLinesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string[] response;
-        
-        public ProdRequestServiceGetAllProductionLinesResponse() {
-        }
-        
-        public ProdRequestServiceGetAllProductionLinesResponse(string[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetLineCapacitiesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _prodLineId;
-        
-        public ProdRequestServiceGetLineCapacitiesRequest() {
-        }
-        
-        public ProdRequestServiceGetLineCapacitiesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _prodLineId) {
-            this.CallContext = CallContext;
-            this._prodLineId = _prodLineId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetLineCapacitiesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.SLCapacityContract[] response;
-        
-        public ProdRequestServiceGetLineCapacitiesResponse() {
-        }
-        
-        public ProdRequestServiceGetLineCapacitiesResponse(SyncServices.SalesServicesGroup.SLCapacityContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetNewProdSchedulesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime dateStart;
-        
-        public ProdRequestServiceGetNewProdSchedulesRequest() {
-        }
-        
-        public ProdRequestServiceGetNewProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
-            this.CallContext = CallContext;
-            this.dateStart = dateStart;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetNewProdSchedulesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response;
-        
-        public ProdRequestServiceGetNewProdSchedulesResponse() {
-        }
-        
-        public ProdRequestServiceGetNewProdSchedulesResponse(SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestByStatusListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int _reqStatus;
-        
-        public ProdRequestServiceGetProdRequestByStatusListRequest() {
-        }
-        
-        public ProdRequestServiceGetProdRequestByStatusListRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-            this._reqStatus = _reqStatus;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestByStatusListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdRequestContract[] response;
-        
-        public ProdRequestServiceGetProdRequestByStatusListResponse() {
-        }
-        
-        public ProdRequestServiceGetProdRequestByStatusListResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestSummaryByCustRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustRequest() {
-        }
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestSummaryByCustResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.SummaryContract[] response;
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustResponse() {
-        }
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustResponse(SyncServices.SalesServicesGroup.SummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNum;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProductionRequestListRequest() {
-        }
-        
-        public ProdRequestServiceGetProductionRequestListRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNum = pageNum;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdRequestContract[] response;
-        
-        public ProdRequestServiceGetProductionRequestListResponse() {
-        }
-        
-        public ProdRequestServiceGetProductionRequestListResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceUpdateProdRequestRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdRequestContract row;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _custReqId;
-        
-        public ProdRequestServiceUpdateProdRequestRequest() {
-        }
-        
-        public ProdRequestServiceUpdateProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
-            this.CallContext = CallContext;
-            this.row = row;
-            this._custReqId = _custReqId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceUpdateProdRequestResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public ProdRequestServiceUpdateProdRequestResponse() {
-        }
-        
-        public ProdRequestServiceUpdateProdRequestResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRearrangeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime dateStart;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime dateEnd;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string _prodLineId;
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeRequest(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
-            this.CallContext = CallContext;
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
-            this._prodLineId = _prodLineId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRearrangeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeResponse(SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custReqId;
-        
-        public ProdRequestServiceGetProductionRequestRequest() {
-        }
-        
-        public ProdRequestServiceGetProductionRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            this.CallContext = CallContext;
-            this._custReqId = _custReqId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdRequestContract response;
-        
-        public ProdRequestServiceGetProductionRequestResponse() {
-        }
-        
-        public ProdRequestServiceGetProductionRequestResponse(SyncServices.SalesServicesGroup.ProdRequestContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdReqStatusLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        public ProdRequestServiceGetProdReqStatusLookupRequest() {
-        }
-        
-        public ProdRequestServiceGetProdReqStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdReqStatusLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.LookupContract[] response;
-        
-        public ProdRequestServiceGetProdReqStatusLookupResponse() {
-        }
-        
-        public ProdRequestServiceGetProdReqStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByDateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime _dateSearch;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProdSchedulesByDateRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByDateRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this._dateSearch = _dateSearch;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByDateResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesByDateResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByDateResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProdSchedulesRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
-            this.response = response;
-        }
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByMonthAndSizeRequest) of message ProdRequestServiceGetProdRequestByMonthAndSizeRequest does not match the default value (GetProdRequestByMonthAndSize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse GetProdRequestByMonthAndSize(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByStatusListRequest) of message ProdRequestServiceGetProdRequestByStatusListRequest does not match the default value (GetProdRequestByStatusList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse GetProdRequestByStatusList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetAllProductionLinesRequest) of message ProdRequestServiceGetAllProductionLinesRequest does not match the default value (GetAllProductionLines)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetAllProductionLines", ReplyAction="http://tempuri.org/ProdRequestService/GetAllProductionLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetAllProductionLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse GetAllProductionLines(SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdReqStatusLookupRequest) of message ProdRequestServiceGetProdReqStatusLookupRequest does not match the default value (GetProdReqStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup", ReplyAction="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse GetProdReqStatusLookup(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetNewProdSchedulesRequest) of message ProdRequestServiceGetNewProdSchedulesRequest does not match the default value (GetNewProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetNewProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetNewProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetNewProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse GetNewProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceCreateProdRequestRequest) of message ProdRequestServiceCreateProdRequestRequest does not match the default value (CreateProdRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/CreateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse CreateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceDeleteProdRequestRequest) of message ProdRequestServiceDeleteProdRequestRequest does not match the default value (DeleteProdRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/DeleteProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/DeleteProdRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/DeleteProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse DeleteProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -7200,6 +6861,44 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         public ProdRequestServiceGetProdRequestListByItemNotFinishedResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetLineCapacitiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _prodLineId;
+        
+        public ProdRequestServiceGetLineCapacitiesRequest() {
+        }
+        
+        public ProdRequestServiceGetLineCapacitiesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _prodLineId) {
+            this.CallContext = CallContext;
+            this._prodLineId = _prodLineId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetLineCapacitiesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.SLCapacityContract[] response;
+        
+        public ProdRequestServiceGetLineCapacitiesResponse() {
+        }
+        
+        public ProdRequestServiceGetLineCapacitiesResponse(SyncServices.SalesServicesGroup.SLCapacityContract[] response) {
             this.response = response;
         }
     }
@@ -7257,6 +6956,48 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceUpdateProdRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdRequestContract row;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _custReqId;
+        
+        public ProdRequestServiceUpdateProdRequestRequest() {
+        }
+        
+        public ProdRequestServiceUpdateProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
+            this.CallContext = CallContext;
+            this.row = row;
+            this._custReqId = _custReqId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceUpdateProdRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdRequestServiceUpdateProdRequestResponse() {
+        }
+        
+        public ProdRequestServiceUpdateProdRequestResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class ProdRequestServiceGetProdSchedulesByRequestRequest {
         
@@ -7295,125 +7036,37 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceCreateProdRequestRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdRequestContract row;
+        public string _custReqId;
         
-        public ProdRequestServiceCreateProdRequestRequest() {
+        public ProdRequestServiceGetProductionRequestRequest() {
         }
         
-        public ProdRequestServiceCreateProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row) {
+        public ProdRequestServiceGetProductionRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
             this.CallContext = CallContext;
-            this.row = row;
+            this._custReqId = _custReqId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceCreateProdRequestResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
+        public SyncServices.SalesServicesGroup.ProdRequestContract response;
         
-        public ProdRequestServiceCreateProdRequestResponse() {
+        public ProdRequestServiceGetProductionRequestResponse() {
         }
         
-        public ProdRequestServiceCreateProdRequestResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByItemRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProdSchedulesByItemRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByItemRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this._itemId = _itemId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesByItemResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByItemResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceSaveProdSchedulesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public SyncServices.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines;
-        
-        public ProdRequestServiceSaveProdSchedulesRequest() {
-        }
-        
-        public ProdRequestServiceSaveProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
-            this.CallContext = CallContext;
-            this.lines = lines;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceSaveProdSchedulesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public ProdRequestServiceSaveProdSchedulesResponse() {
-        }
-        
-        public ProdRequestServiceSaveProdSchedulesResponse(bool response) {
+        public ProdRequestServiceGetProductionRequestResponse(SyncServices.SalesServicesGroup.ProdRequestContract response) {
             this.response = response;
         }
     }
@@ -7471,6 +7124,320 @@ namespace SyncServices.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRearrangeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime dateStart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime dateEnd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string _prodLineId;
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeRequest(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
+            this.CallContext = CallContext;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+            this._prodLineId = _prodLineId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRearrangeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeResponse(SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProdSchedulesRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestSummaryByCustRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestSummaryByCustResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.SummaryContract[] response;
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustResponse(SyncServices.SalesServicesGroup.SummaryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceSaveProdSchedulesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines;
+        
+        public ProdRequestServiceSaveProdSchedulesRequest() {
+        }
+        
+        public ProdRequestServiceSaveProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceSaveProdSchedulesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdRequestServiceSaveProdSchedulesResponse() {
+        }
+        
+        public ProdRequestServiceSaveProdSchedulesResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProductionRequestListRequest() {
+        }
+        
+        public ProdRequestServiceGetProductionRequestListRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNum = pageNum;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] response;
+        
+        public ProdRequestServiceGetProductionRequestListResponse() {
+        }
+        
+        public ProdRequestServiceGetProductionRequestListResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProdSchedulesByItemRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByItemRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._itemId = _itemId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesByItemResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByItemResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByDateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime _dateSearch;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProdSchedulesByDateRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByDateRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._dateSearch = _dateSearch;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByDateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesByDateResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByDateResponse(SyncServices.SalesServicesGroup.ProdScheduleContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByDateListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class ProdRequestServiceGetProdRequestByDateListRequest {
         
@@ -7518,6 +7485,284 @@ namespace SyncServices.SalesServicesGroup {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByMonthAndSizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByMonthAndSizeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemSize;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int _monthOfYear;
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemSize, int _monthOfYear) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._itemSize = _itemSize;
+            this._monthOfYear = _monthOfYear;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByMonthAndSizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByMonthAndSizeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] response;
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByStatusListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int _reqStatus;
+        
+        public ProdRequestServiceGetProdRequestByStatusListRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByStatusListRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+            this._reqStatus = _reqStatus;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByStatusListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] response;
+        
+        public ProdRequestServiceGetProdRequestByStatusListResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByStatusListResponse(SyncServices.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetAllProductionLinesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdRequestServiceGetAllProductionLinesRequest() {
+        }
+        
+        public ProdRequestServiceGetAllProductionLinesRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetAllProductionLinesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string[] response;
+        
+        public ProdRequestServiceGetAllProductionLinesResponse() {
+        }
+        
+        public ProdRequestServiceGetAllProductionLinesResponse(string[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdReqStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdRequestServiceGetProdReqStatusLookupRequest() {
+        }
+        
+        public ProdRequestServiceGetProdReqStatusLookupRequest(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdReqStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.LookupContract[] response;
+        
+        public ProdRequestServiceGetProdReqStatusLookupResponse() {
+        }
+        
+        public ProdRequestServiceGetProdReqStatusLookupResponse(SyncServices.SalesServicesGroup.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetNewProdSchedulesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime dateStart;
+        
+        public ProdRequestServiceGetNewProdSchedulesRequest() {
+        }
+        
+        public ProdRequestServiceGetNewProdSchedulesRequest(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
+            this.CallContext = CallContext;
+            this.dateStart = dateStart;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetNewProdSchedulesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response;
+        
+        public ProdRequestServiceGetNewProdSchedulesResponse() {
+        }
+        
+        public ProdRequestServiceGetNewProdSchedulesResponse(SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceCreateProdRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.SalesServicesGroup.ProdRequestContract row;
+        
+        public ProdRequestServiceCreateProdRequestRequest() {
+        }
+        
+        public ProdRequestServiceCreateProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceCreateProdRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string response;
+        
+        public ProdRequestServiceCreateProdRequestResponse() {
+        }
+        
+        public ProdRequestServiceCreateProdRequestResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceDeleteProdRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custReqId;
+        
+        public ProdRequestServiceDeleteProdRequestRequest() {
+        }
+        
+        public ProdRequestServiceDeleteProdRequestRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            this.CallContext = CallContext;
+            this._custReqId = _custReqId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceDeleteProdRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdRequestServiceDeleteProdRequestResponse() {
+        }
+        
+        public ProdRequestServiceDeleteProdRequestResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProdRequestServiceChannel : SyncServices.SalesServicesGroup.ProdRequestService, System.ServiceModel.IClientChannel {
     }
@@ -7546,27 +7791,18 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.DeleteProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
-            return base.Channel.DeleteProdRequest(request);
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinished(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
+            return base.Channel.GetProdRequestListByItemNotFinished(request);
         }
         
-        public bool DeleteProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProdRequestListByItemNotFinished(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
             inValue.CallContext = CallContext;
-            inValue._custReqId = _custReqId;
-            SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetAllProductionLines(SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request) {
-            return base.Channel.GetAllProductionLines(request);
-        }
-        
-        public string[] GetAllProductionLines(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetAllProductionLines(inValue);
+            inValue._custAccount = _custAccount;
+            inValue._itemId = _itemId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinished(inValue);
             return retVal.response;
         }
         
@@ -7580,164 +7816,6 @@ namespace SyncServices.SalesServicesGroup {
             inValue.CallContext = CallContext;
             inValue._prodLineId = _prodLineId;
             SyncServices.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetLineCapacities(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetNewProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request) {
-            return base.Channel.GetNewProdSchedules(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] GetNewProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest();
-            inValue.CallContext = CallContext;
-            inValue.dateStart = dateStart;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetNewProdSchedules(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
-            return base.Channel.GetProdRequestByStatusList(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProdRequestByStatusList(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            inValue._reqStatus = _reqStatus;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
-            return base.Channel.GetProdRequestSummaryByCust(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.SummaryContract[] GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCust(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProductionRequestList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request) {
-            return base.Channel.GetProductionRequestList(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProductionRequestList(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNum = pageNum;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequestList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.UpdateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
-            return base.Channel.UpdateProdRequest(request);
-        }
-        
-        public bool UpdateProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            inValue._custReqId = _custReqId;
-            SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
-            return base.Channel.GetProdSchedulesRearrange(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
-            inValue.CallContext = CallContext;
-            inValue.dateStart = dateStart;
-            inValue.dateEnd = dateEnd;
-            inValue._prodLineId = _prodLineId;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrange(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProductionRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
-            return base.Channel.GetProductionRequest(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdRequestContract GetProductionRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue._custReqId = _custReqId;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookup(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
-            return base.Channel.GetProdReqStatusLookup(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.LookupContract[] GetProdReqStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesByDate(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request) {
-            return base.Channel.GetProdSchedulesByDate(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedulesByDate(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._dateSearch = _dateSearch;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByDate(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
-            return base.Channel.GetProdSchedules(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedules(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinished(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
-            return base.Channel.GetProdRequestListByItemNotFinished(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProdRequestListByItemNotFinished(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinished(inValue);
             return retVal.response;
         }
         
@@ -7758,6 +7836,20 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.UpdateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
+            return base.Channel.UpdateProdRequest(request);
+        }
+        
+        public bool UpdateProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            inValue._custReqId = _custReqId;
+            SyncServices.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesByRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request) {
             return base.Channel.GetProdSchedulesByRequest(request);
         }
@@ -7771,44 +7863,15 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.CreateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
-            return base.Channel.CreateProdRequest(request);
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProductionRequest(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
+            return base.Channel.GetProductionRequest(request);
         }
         
-        public string CreateProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
+        public SyncServices.SalesServicesGroup.ProdRequestContract GetProductionRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesByItem(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request) {
-            return base.Channel.GetProdSchedulesByItem(request);
-        }
-        
-        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedulesByItem(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByItem(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.SaveProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request) {
-            return base.Channel.SaveProdSchedules(request);
-        }
-        
-        public bool SaveProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
-            SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).SaveProdSchedules(inValue);
+            inValue._custReqId = _custReqId;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequest(inValue);
             return retVal.response;
         }
         
@@ -7829,6 +7892,109 @@ namespace SyncServices.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
+            return base.Channel.GetProdSchedulesRearrange(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] GetProdSchedulesRearrange(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
+            inValue.CallContext = CallContext;
+            inValue.dateStart = dateStart;
+            inValue.dateEnd = dateEnd;
+            inValue._prodLineId = _prodLineId;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrange(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
+            return base.Channel.GetProdSchedules(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedules(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
+            return base.Channel.GetProdRequestSummaryByCust(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.SummaryContract[] GetProdRequestSummaryByCust(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCust(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.SaveProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request) {
+            return base.Channel.SaveProdSchedules(request);
+        }
+        
+        public bool SaveProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).SaveProdSchedules(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProductionRequestList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request) {
+            return base.Channel.GetProductionRequestList(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProductionRequestList(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNum = pageNum;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequestList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesByItem(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request) {
+            return base.Channel.GetProdSchedulesByItem(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedulesByItem(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._itemId = _itemId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByItem(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdSchedulesByDate(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request) {
+            return base.Channel.GetProdSchedulesByDate(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdScheduleContract[] GetProdSchedulesByDate(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByDate(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestByDateList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request) {
             return base.Channel.GetProdRequestByDateList(request);
         }
@@ -7841,6 +8007,100 @@ namespace SyncServices.SalesServicesGroup {
             inValue.pageSize = pageSize;
             inValue._reqDate = _reqDate;
             SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByDateList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestByMonthAndSize(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request) {
+            return base.Channel.GetProdRequestByMonthAndSize(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProdRequestByMonthAndSize(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemSize, int _monthOfYear) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._itemSize = _itemSize;
+            inValue._monthOfYear = _monthOfYear;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByMonthAndSize(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusList(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
+            return base.Channel.GetProdRequestByStatusList(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdRequestContract[] GetProdRequestByStatusList(SyncServices.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            inValue._reqStatus = _reqStatus;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetAllProductionLines(SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request) {
+            return base.Channel.GetAllProductionLines(request);
+        }
+        
+        public string[] GetAllProductionLines(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetAllProductionLines(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse SyncServices.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookup(SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
+            return base.Channel.GetProdReqStatusLookup(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.LookupContract[] GetProdReqStatusLookup(SyncServices.SalesServicesGroup.CallContext CallContext) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse SyncServices.SalesServicesGroup.ProdRequestService.GetNewProdSchedules(SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request) {
+            return base.Channel.GetNewProdSchedules(request);
+        }
+        
+        public SyncServices.SalesServicesGroup.ProdScheduleDragDropContract[] GetNewProdSchedules(SyncServices.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest();
+            inValue.CallContext = CallContext;
+            inValue.dateStart = dateStart;
+            SyncServices.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).GetNewProdSchedules(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.CreateProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
+            return base.Channel.CreateProdRequest(request);
+        }
+        
+        public string CreateProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, SyncServices.SalesServicesGroup.ProdRequestContract row) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            SyncServices.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse SyncServices.SalesServicesGroup.ProdRequestService.DeleteProdRequest(SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
+            return base.Channel.DeleteProdRequest(request);
+        }
+        
+        public bool DeleteProdRequest(SyncServices.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue._custReqId = _custReqId;
+            SyncServices.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse retVal = ((SyncServices.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequest(inValue);
             return retVal.response;
         }
     }

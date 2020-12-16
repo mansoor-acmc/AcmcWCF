@@ -13,6 +13,9 @@ namespace SyncServices
     public interface ISCSyncService
     {
         [OperationContract]
+        string GetPing();
+
+        [OperationContract]
         List<ItemEntity> ResetData();
 
         [OperationContract]
@@ -27,10 +30,14 @@ namespace SyncServices
         [OperationContract]
         long UpdateSCDesktop(List<ItemEntity> dt);
 
-        [OperationContract]
-        string GetPing();
+        /*-------------------------------------18/10/2020------------------------------------------------------*/
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        List<WmsLocationContract> GetWHLocations();
+
+        [OperationContract]
+        List<SCForTransfer> TransferItemsToNewLocation(List<SCForTransfer> lines);
+                
     }
 
     [DataContract]

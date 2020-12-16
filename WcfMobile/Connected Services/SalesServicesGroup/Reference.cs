@@ -140,54 +140,15 @@ namespace WcfMobile.SalesServicesGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    [System.SerializableAttribute()]
-    public partial class LookupContract : WcfMobile.SalesServicesGroup.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LookupIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LookupStringField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int LookupId {
-            get {
-                return this.LookupIdField;
-            }
-            set {
-                if ((this.LookupIdField.Equals(value) != true)) {
-                    this.LookupIdField = value;
-                    this.RaisePropertyChanged("LookupId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LookupString {
-            get {
-                return this.LookupStringField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
-                    this.LookupStringField = value;
-                    this.RaisePropertyChanged("LookupString");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.CategoryTypeLookup))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.CustForcastPlanContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.CustomerCaseContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.CustomerInvoiceContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.InvoiceLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.ForcastSummaryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.ItemSizeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.LookupContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.OlderStockContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.OnhandByGradeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract))]
@@ -198,8 +159,9 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.ProdScheduleContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.ProductContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.SLCapacityContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.SummaryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.SalesServicesGroup.CustomerCaseContract))]
     public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -385,160 +347,15 @@ namespace WcfMobile.SalesServicesGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerCaseContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    [System.SerializableAttribute()]
-    public partial class CustomerCaseContract : WcfMobile.SalesServicesGroup.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseDescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseMemoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CaseNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long CategoryTypeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerAccountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PriorityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ResolutionTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StatusField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseDescription {
-            get {
-                return this.CaseDescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseDescriptionField, value) != true)) {
-                    this.CaseDescriptionField = value;
-                    this.RaisePropertyChanged("CaseDescription");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseMemo {
-            get {
-                return this.CaseMemoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseMemoField, value) != true)) {
-                    this.CaseMemoField = value;
-                    this.RaisePropertyChanged("CaseMemo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CaseNum {
-            get {
-                return this.CaseNumField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CaseNumField, value) != true)) {
-                    this.CaseNumField = value;
-                    this.RaisePropertyChanged("CaseNum");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long CategoryTypeId {
-            get {
-                return this.CategoryTypeIdField;
-            }
-            set {
-                if ((this.CategoryTypeIdField.Equals(value) != true)) {
-                    this.CategoryTypeIdField = value;
-                    this.RaisePropertyChanged("CategoryTypeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerAccount {
-            get {
-                return this.CustomerAccountField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
-                    this.CustomerAccountField = value;
-                    this.RaisePropertyChanged("CustomerAccount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerName {
-            get {
-                return this.CustomerNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
-                    this.CustomerNameField = value;
-                    this.RaisePropertyChanged("CustomerName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority {
-            get {
-                return this.PriorityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
-                    this.PriorityField = value;
-                    this.RaisePropertyChanged("Priority");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ResolutionType {
-            get {
-                return this.ResolutionTypeField;
-            }
-            set {
-                if ((this.ResolutionTypeField.Equals(value) != true)) {
-                    this.ResolutionTypeField = value;
-                    this.RaisePropertyChanged("ResolutionType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((this.StatusField.Equals(value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CustomerInvoiceContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     [System.SerializableAttribute()]
     public partial class CustomerInvoiceContract : WcfMobile.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DeliveryNameField;
@@ -569,6 +386,44 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal SalesTaxAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SettlementAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime SettlementDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WcfMobile.SalesServicesGroup.NoYes SettlementDoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SettlementVoucherField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DeliveryName {
@@ -696,6 +551,58 @@ namespace WcfMobile.SalesServicesGroup {
                 if ((this.SalesTaxAmountField.Equals(value) != true)) {
                     this.SalesTaxAmountField = value;
                     this.RaisePropertyChanged("SalesTaxAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SettlementAmount {
+            get {
+                return this.SettlementAmountField;
+            }
+            set {
+                if ((this.SettlementAmountField.Equals(value) != true)) {
+                    this.SettlementAmountField = value;
+                    this.RaisePropertyChanged("SettlementAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime SettlementDate {
+            get {
+                return this.SettlementDateField;
+            }
+            set {
+                if ((this.SettlementDateField.Equals(value) != true)) {
+                    this.SettlementDateField = value;
+                    this.RaisePropertyChanged("SettlementDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WcfMobile.SalesServicesGroup.NoYes SettlementDone {
+            get {
+                return this.SettlementDoneField;
+            }
+            set {
+                if ((this.SettlementDoneField.Equals(value) != true)) {
+                    this.SettlementDoneField = value;
+                    this.RaisePropertyChanged("SettlementDone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SettlementVoucher {
+            get {
+                return this.SettlementVoucherField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SettlementVoucherField, value) != true)) {
+                    this.SettlementVoucherField = value;
+                    this.RaisePropertyChanged("SettlementVoucher");
                 }
             }
         }
@@ -1085,6 +992,45 @@ namespace WcfMobile.SalesServicesGroup {
                 if ((object.ReferenceEquals(this.ItemSizeField, value) != true)) {
                     this.ItemSizeField = value;
                     this.RaisePropertyChanged("ItemSize");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class LookupContract : WcfMobile.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LookupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LookupStringField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LookupId {
+            get {
+                return this.LookupIdField;
+            }
+            set {
+                if ((this.LookupIdField.Equals(value) != true)) {
+                    this.LookupIdField = value;
+                    this.RaisePropertyChanged("LookupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LookupString {
+            get {
+                return this.LookupStringField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
+                    this.LookupStringField = value;
+                    this.RaisePropertyChanged("LookupString");
                 }
             }
         }
@@ -2452,10 +2398,25 @@ namespace WcfMobile.SalesServicesGroup {
         private string ClassificationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DownTimeDescField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DowntimeHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DowntimeReasonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime EndTimeProductionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string GlazingTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasChangedInRowField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasDowntimeUsedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool HasTimeSlotUsedField;
@@ -2516,6 +2477,45 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DownTimeDesc {
+            get {
+                return this.DownTimeDescField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DownTimeDescField, value) != true)) {
+                    this.DownTimeDescField = value;
+                    this.RaisePropertyChanged("DownTimeDesc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DowntimeHours {
+            get {
+                return this.DowntimeHoursField;
+            }
+            set {
+                if ((this.DowntimeHoursField.Equals(value) != true)) {
+                    this.DowntimeHoursField = value;
+                    this.RaisePropertyChanged("DowntimeHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DowntimeReason {
+            get {
+                return this.DowntimeReasonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DowntimeReasonField, value) != true)) {
+                    this.DowntimeReasonField = value;
+                    this.RaisePropertyChanged("DowntimeReason");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime EndTimeProduction {
             get {
                 return this.EndTimeProductionField;
@@ -2537,6 +2537,32 @@ namespace WcfMobile.SalesServicesGroup {
                 if ((object.ReferenceEquals(this.GlazingTypeField, value) != true)) {
                     this.GlazingTypeField = value;
                     this.RaisePropertyChanged("GlazingType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasChangedInRow {
+            get {
+                return this.HasChangedInRowField;
+            }
+            set {
+                if ((this.HasChangedInRowField.Equals(value) != true)) {
+                    this.HasChangedInRowField = value;
+                    this.RaisePropertyChanged("HasChangedInRow");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasDowntimeUsed {
+            get {
+                return this.HasDowntimeUsedField;
+            }
+            set {
+                if ((this.HasDowntimeUsedField.Equals(value) != true)) {
+                    this.HasDowntimeUsedField = value;
+                    this.RaisePropertyChanged("HasDowntimeUsed");
                 }
             }
         }
@@ -2874,6 +2900,61 @@ namespace WcfMobile.SalesServicesGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SLCapacityContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class SLCapacityContract : WcfMobile.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemSizeThicknessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal LineCapacitySLField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductionLineField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemSizeThickness {
+            get {
+                return this.ItemSizeThicknessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemSizeThicknessField, value) != true)) {
+                    this.ItemSizeThicknessField = value;
+                    this.RaisePropertyChanged("ItemSizeThickness");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal LineCapacitySL {
+            get {
+                return this.LineCapacitySLField;
+            }
+            set {
+                if ((this.LineCapacitySLField.Equals(value) != true)) {
+                    this.LineCapacitySLField = value;
+                    this.RaisePropertyChanged("LineCapacitySL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductionLine {
+            get {
+                return this.ProductionLineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductionLineField, value) != true)) {
+                    this.ProductionLineField = value;
+                    this.RaisePropertyChanged("ProductionLine");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SummaryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     [System.SerializableAttribute()]
     public partial class SummaryContract : WcfMobile.SalesServicesGroup.XppObjectBase {
@@ -2922,6 +3003,157 @@ namespace WcfMobile.SalesServicesGroup {
                 if ((this.SummaryValueField.Equals(value) != true)) {
                     this.SummaryValueField = value;
                     this.RaisePropertyChanged("SummaryValue");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerCaseContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class CustomerCaseContract : WcfMobile.SalesServicesGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseMemoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CaseNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long CategoryTypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerAccountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ResolutionTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StatusField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseDescription {
+            get {
+                return this.CaseDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseDescriptionField, value) != true)) {
+                    this.CaseDescriptionField = value;
+                    this.RaisePropertyChanged("CaseDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseMemo {
+            get {
+                return this.CaseMemoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseMemoField, value) != true)) {
+                    this.CaseMemoField = value;
+                    this.RaisePropertyChanged("CaseMemo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CaseNum {
+            get {
+                return this.CaseNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CaseNumField, value) != true)) {
+                    this.CaseNumField = value;
+                    this.RaisePropertyChanged("CaseNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long CategoryTypeId {
+            get {
+                return this.CategoryTypeIdField;
+            }
+            set {
+                if ((this.CategoryTypeIdField.Equals(value) != true)) {
+                    this.CategoryTypeIdField = value;
+                    this.RaisePropertyChanged("CategoryTypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerAccount {
+            get {
+                return this.CustomerAccountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
+                    this.CustomerAccountField = value;
+                    this.RaisePropertyChanged("CustomerAccount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ResolutionType {
+            get {
+                return this.ResolutionTypeField;
+            }
+            set {
+                if ((this.ResolutionTypeField.Equals(value) != true)) {
+                    this.ResolutionTypeField = value;
+                    this.RaisePropertyChanged("ResolutionType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((this.StatusField.Equals(value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
@@ -3396,6 +3628,30 @@ namespace WcfMobile.SalesServicesGroup {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.CaseService")]
     public interface CaseService {
         
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceCreateCustomerCaseRequest) of message CaseServiceCreateCustomerCaseRequest does not match the default value (CreateCustomerCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/CreateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse CreateCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceDeleteCustomerCaseRequest) of message CaseServiceDeleteCustomerCaseRequest does not match the default value (DeleteCustomerCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/DeleteCustomerCase", ReplyAction="http://tempuri.org/CaseService/DeleteCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/DeleteCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse DeleteCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/DeleteCustomerCase", ReplyAction="http://tempuri.org/CaseService/DeleteCustomerCaseResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCaseRequest) of message CaseServiceGetCaseRequest does not match the default value (GetCase)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse GetCase(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> GetCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetPriorityLookupRequest) of message CaseServiceGetPriorityLookupRequest does not match the default value (GetPriorityLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetPriorityLookup", ReplyAction="http://tempuri.org/CaseService/GetPriorityLookupResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetPriorityLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -3412,14 +3668,6 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/UpdateCustomerCase", ReplyAction="http://tempuri.org/CaseService/UpdateCustomerCaseResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceUpdateCustomerCaseResponse> UpdateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceUpdateCustomerCaseRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCategoryTypeLookupRequest) of message CaseServiceGetCategoryTypeLookupRequest does not match the default value (GetCategoryTypeLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCategoryTypeLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetResolutionLookupRequest) of message CaseServiceGetResolutionLookupRequest does not match the default value (GetResolutionLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetResolutionLookup", ReplyAction="http://tempuri.org/CaseService/GetResolutionLookupResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetResolutionLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -3427,22 +3675,6 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetResolutionLookup", ReplyAction="http://tempuri.org/CaseService/GetResolutionLookupResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupResponse> GetResolutionLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCustomerCasesRequest) of message CaseServiceGetCustomerCasesRequest does not match the default value (GetCustomerCases)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCustomerCases", ReplyAction="http://tempuri.org/CaseService/GetCustomerCasesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCustomerCasesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesResponse GetCustomerCases(WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCustomerCases", ReplyAction="http://tempuri.org/CaseService/GetCustomerCasesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesResponse> GetCustomerCasesAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceDeleteCustomerCaseRequest) of message CaseServiceDeleteCustomerCaseRequest does not match the default value (DeleteCustomerCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/DeleteCustomerCase", ReplyAction="http://tempuri.org/CaseService/DeleteCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/DeleteCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse DeleteCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/DeleteCustomerCase", ReplyAction="http://tempuri.org/CaseService/DeleteCustomerCaseResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetStatusLookupRequest) of message CaseServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetStatusLookup", ReplyAction="http://tempuri.org/CaseService/GetStatusLookupResponse")]
@@ -3452,21 +3684,13 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetStatusLookup", ReplyAction="http://tempuri.org/CaseService/GetStatusLookupResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceCreateCustomerCaseRequest) of message CaseServiceCreateCustomerCaseRequest does not match the default value (CreateCustomerCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/CreateCustomerCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse CreateCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCustomerCasesRequest) of message CaseServiceGetCustomerCasesRequest does not match the default value (GetCustomerCases)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCustomerCases", ReplyAction="http://tempuri.org/CaseService/GetCustomerCasesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCustomerCasesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesResponse GetCustomerCases(WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/CreateCustomerCase", ReplyAction="http://tempuri.org/CaseService/CreateCustomerCaseResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCaseRequest) of message CaseServiceGetCaseRequest does not match the default value (GetCase)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCaseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse GetCase(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCase", ReplyAction="http://tempuri.org/CaseService/GetCaseResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> GetCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCustomerCases", ReplyAction="http://tempuri.org/CaseService/GetCustomerCasesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesResponse> GetCustomerCasesAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCustomerCasesRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCasesSummaryByCustRequest) of message CaseServiceGetCasesSummaryByCustRequest does not match the default value (GetCasesSummaryByCust)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCasesSummaryByCust", ReplyAction="http://tempuri.org/CaseService/GetCasesSummaryByCustResponse")]
@@ -3475,6 +3699,128 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCasesSummaryByCust", ReplyAction="http://tempuri.org/CaseService/GetCasesSummaryByCustResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCasesSummaryByCustResponse> GetCasesSummaryByCustAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCasesSummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CaseServiceGetCategoryTypeLookupRequest) of message CaseServiceGetCategoryTypeLookupRequest does not match the default value (GetCategoryTypeLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/CaseService/GetCategoryTypeLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CaseService/GetCategoryTypeLookup", ReplyAction="http://tempuri.org/CaseService/GetCategoryTypeLookupResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceCreateCustomerCaseRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustomerCaseContract row;
+        
+        public CaseServiceCreateCustomerCaseRequest() {
+        }
+        
+        public CaseServiceCreateCustomerCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceCreateCustomerCaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string response;
+        
+        public CaseServiceCreateCustomerCaseResponse() {
+        }
+        
+        public CaseServiceCreateCustomerCaseResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceDeleteCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceDeleteCustomerCaseRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _caseId;
+        
+        public CaseServiceDeleteCustomerCaseRequest() {
+        }
+        
+        public CaseServiceDeleteCustomerCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceDeleteCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceDeleteCustomerCaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public CaseServiceDeleteCustomerCaseResponse() {
+        }
+        
+        public CaseServiceDeleteCustomerCaseResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCaseRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _caseId;
+        
+        public CaseServiceGetCaseRequest() {
+        }
+        
+        public CaseServiceGetCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustomerCaseContract response;
+        
+        public CaseServiceGetCaseResponse() {
+        }
+        
+        public CaseServiceGetCaseResponse(WcfMobile.SalesServicesGroup.CustomerCaseContract response) {
+            this.response = response;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3556,40 +3902,6 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCategoryTypeLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        public CaseServiceGetCategoryTypeLookupRequest() {
-        }
-        
-        public CaseServiceGetCategoryTypeLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCategoryTypeLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CategoryTypeLookup[] response;
-        
-        public CaseServiceGetCategoryTypeLookupResponse() {
-        }
-        
-        public CaseServiceGetCategoryTypeLookupResponse(WcfMobile.SalesServicesGroup.CategoryTypeLookup[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetResolutionLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class CaseServiceGetResolutionLookupRequest {
         
@@ -3617,6 +3929,40 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         public CaseServiceGetResolutionLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public CaseServiceGetStatusLookupRequest() {
+        }
+        
+        public CaseServiceGetStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.LookupContract[] response;
+        
+        public CaseServiceGetStatusLookupResponse() {
+        }
+        
+        public CaseServiceGetStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
             this.response = response;
         }
     }
@@ -3662,154 +4008,6 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceDeleteCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceDeleteCustomerCaseRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _caseId;
-        
-        public CaseServiceDeleteCustomerCaseRequest() {
-        }
-        
-        public CaseServiceDeleteCustomerCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            this.CallContext = CallContext;
-            this._caseId = _caseId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceDeleteCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceDeleteCustomerCaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public CaseServiceDeleteCustomerCaseResponse() {
-        }
-        
-        public CaseServiceDeleteCustomerCaseResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetStatusLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        public CaseServiceGetStatusLookupRequest() {
-        }
-        
-        public CaseServiceGetStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetStatusLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.LookupContract[] response;
-        
-        public CaseServiceGetStatusLookupResponse() {
-        }
-        
-        public CaseServiceGetStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceCreateCustomerCaseRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerCaseContract row;
-        
-        public CaseServiceCreateCustomerCaseRequest() {
-        }
-        
-        public CaseServiceCreateCustomerCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
-            this.CallContext = CallContext;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceCreateCustomerCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceCreateCustomerCaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
-        
-        public CaseServiceCreateCustomerCaseResponse() {
-        }
-        
-        public CaseServiceCreateCustomerCaseResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCaseRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _caseId;
-        
-        public CaseServiceGetCaseRequest() {
-        }
-        
-        public CaseServiceGetCaseRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            this.CallContext = CallContext;
-            this._caseId = _caseId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCaseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class CaseServiceGetCaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerCaseContract response;
-        
-        public CaseServiceGetCaseResponse() {
-        }
-        
-        public CaseServiceGetCaseResponse(WcfMobile.SalesServicesGroup.CustomerCaseContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCasesSummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class CaseServiceGetCasesSummaryByCustRequest {
         
@@ -3845,6 +4043,40 @@ namespace WcfMobile.SalesServicesGroup {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCategoryTypeLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public CaseServiceGetCategoryTypeLookupRequest() {
+        }
+        
+        public CaseServiceGetCategoryTypeLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CaseServiceGetCategoryTypeLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class CaseServiceGetCategoryTypeLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CategoryTypeLookup[] response;
+        
+        public CaseServiceGetCategoryTypeLookupResponse() {
+        }
+        
+        public CaseServiceGetCategoryTypeLookupResponse(WcfMobile.SalesServicesGroup.CategoryTypeLookup[] response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CaseServiceChannel : WcfMobile.SalesServicesGroup.CaseService, System.ServiceModel.IClientChannel {
     }
@@ -3870,6 +4102,81 @@ namespace WcfMobile.SalesServicesGroup {
         
         public CaseServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse WcfMobile.SalesServicesGroup.CaseService.CreateCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
+            return base.Channel.CreateCustomerCase(request);
+        }
+        
+        public string CreateCustomerCase(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
+            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> WcfMobile.SalesServicesGroup.CaseService.CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
+            return base.Channel.CreateCustomerCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
+            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).CreateCustomerCaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse WcfMobile.SalesServicesGroup.CaseService.DeleteCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request) {
+            return base.Channel.DeleteCustomerCase(request);
+        }
+        
+        public bool DeleteCustomerCase(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).DeleteCustomerCase(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> WcfMobile.SalesServicesGroup.CaseService.DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request) {
+            return base.Channel.DeleteCustomerCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).DeleteCustomerCaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse WcfMobile.SalesServicesGroup.CaseService.GetCase(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request) {
+            return base.Channel.GetCase(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CustomerCaseContract GetCase(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> WcfMobile.SalesServicesGroup.CaseService.GetCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request) {
+            return base.Channel.GetCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> GetCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCaseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3923,29 +4230,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse WcfMobile.SalesServicesGroup.CaseService.GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
-            return base.Channel.GetCategoryTypeLookup(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.CategoryTypeLookup[] GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> WcfMobile.SalesServicesGroup.CaseService.GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
-            return base.Channel.GetCategoryTypeLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupResponse WcfMobile.SalesServicesGroup.CaseService.GetResolutionLookup(WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupRequest request) {
             return base.Channel.GetResolutionLookup(request);
         }
@@ -3966,6 +4250,29 @@ namespace WcfMobile.SalesServicesGroup {
             WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetResolutionLookupRequest();
             inValue.CallContext = CallContext;
             return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetResolutionLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse WcfMobile.SalesServicesGroup.CaseService.GetStatusLookup(WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookup(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.LookupContract[] GetStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse> WcfMobile.SalesServicesGroup.CaseService.GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetStatusLookupAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3994,104 +4301,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse WcfMobile.SalesServicesGroup.CaseService.DeleteCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request) {
-            return base.Channel.DeleteCustomerCase(request);
-        }
-        
-        public bool DeleteCustomerCase(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).DeleteCustomerCase(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> WcfMobile.SalesServicesGroup.CaseService.DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest request) {
-            return base.Channel.DeleteCustomerCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseResponse> DeleteCustomerCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceDeleteCustomerCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).DeleteCustomerCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse WcfMobile.SalesServicesGroup.CaseService.GetStatusLookup(WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookup(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.LookupContract[] GetStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse> WcfMobile.SalesServicesGroup.CaseService.GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetStatusLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse WcfMobile.SalesServicesGroup.CaseService.CreateCustomerCase(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
-            return base.Channel.CreateCustomerCase(request);
-        }
-        
-        public string CreateCustomerCase(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
-            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> WcfMobile.SalesServicesGroup.CaseService.CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest request) {
-            return base.Channel.CreateCustomerCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseResponse> CreateCustomerCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustomerCaseContract row) {
-            WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceCreateCustomerCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).CreateCustomerCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse WcfMobile.SalesServicesGroup.CaseService.GetCase(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request) {
-            return base.Channel.GetCase(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.CustomerCaseContract GetCase(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> WcfMobile.SalesServicesGroup.CaseService.GetCaseAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest request) {
-            return base.Channel.GetCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCaseResponse> GetCaseAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCaseRequest();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.CaseServiceGetCasesSummaryByCustResponse WcfMobile.SalesServicesGroup.CaseService.GetCasesSummaryByCust(WcfMobile.SalesServicesGroup.CaseServiceGetCasesSummaryByCustRequest request) {
             return base.Channel.GetCasesSummaryByCust(request);
         }
@@ -4115,107 +4324,34 @@ namespace WcfMobile.SalesServicesGroup {
             inValue._custAccount = _custAccount;
             return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCasesSummaryByCustAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse WcfMobile.SalesServicesGroup.CaseService.GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
+            return base.Channel.GetCategoryTypeLookup(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CategoryTypeLookup[] GetCategoryTypeLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse retVal = ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> WcfMobile.SalesServicesGroup.CaseService.GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest request) {
+            return base.Channel.GetCategoryTypeLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest inValue = new WcfMobile.SalesServicesGroup.CaseServiceGetCategoryTypeLookupRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookupAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.InventOnHandService")]
     public interface InventOnHandService {
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockOverallRequest) of message InventOnHandServiceGetCustomerOlderStockOverallRequest does not match the default value (GetCustomerOlderStockOverall)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesRequest) of message InventOnHandServiceGetCustomerInvoicesRequest does not match the default value (GetCustomerInvoices)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse GetCustomerInvoices(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesByDateRequest) of message InventOnHandServiceGetCustomerInvoicesByDateRequest does not match the default value (GetCustomerInvoicesByDate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerZeroStockRequest) of message InventOnHandServiceGetOnHandByCustomerZeroStockRequest does not match the default value (GetOnHandByCustomerZeroStock)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerRequest) of message InventOnHandServiceGetOnHandByCustomerRequest does not match the default value (GetOnHandByCustomer)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse GetOnHandByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnhandQueryByCustomerRequest) of message InventOnHandServiceGetOnhandQueryByCustomerRequest does not match the default value (GetOnhandQueryByCustomer)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse GetOnhandQueryByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse> GetOnhandQueryByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoiceRequest) of message InventOnHandServiceGetInvoiceRequest does not match the default value (GetInvoice)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoiceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse GetInvoice(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> GetInvoiceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductInfoRequest) of message InventOnHandServiceGetProductInfoRequest does not match the default value (GetProductInfo)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse GetProductInfo(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> GetProductInfoAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockRequest) of message InventOnHandServiceGetCustomerOlderStockRequest does not match the default value (GetCustomerOlderStock)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse GetCustomerOlderStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse> GetCustomerOlderStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductionRequestsRequest) of message InventOnHandServiceGetProductionRequestsRequest does not match the default value (getProductionRequests)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/getProductionRequests", ReplyAction="http://tempuri.org/InventOnHandService/getProductionRequestsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/getProductionRequestsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse getProductionRequests(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/getProductionRequests", ReplyAction="http://tempuri.org/InventOnHandService/getProductionRequestsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> getProductionRequestsAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByModelRequest) of message InventOnHandServiceGetProductsByModelRequest does not match the default value (GetProductsByModel)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByModelAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse GetProductsByModel(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse> GetProductsByModelAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceOutstandingBalanceRequest) of message InventOnHandServiceOutstandingBalanceRequest does not match the default value (OutstandingBalance)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/OutstandingBalance", ReplyAction="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/OutstandingBalanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse OutstandingBalance(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/OutstandingBalance", ReplyAction="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByItemRequest) of message InventOnHandServiceGetOnHandByItemRequest does not match the default value (GetOnHandByItem)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByItem", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByItemResponse")]
@@ -4225,13 +4361,85 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByItem", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByItemResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse> GetOnHandByItemAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsBySizeRequest) of message InventOnHandServiceGetProductsBySizeRequest does not match the default value (GetProductsBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse GetProductsBySize(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByCustomerAllRequest) of message InventOnHandServiceGetProductsByCustomerAllRequest does not match the default value (GetProductsByCustomerAll)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse> GetProductsBySizeAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductInfoRequest) of message InventOnHandServiceGetProductInfoRequest does not match the default value (GetProductInfo)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse GetProductInfo(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductInfo", ReplyAction="http://tempuri.org/InventOnHandService/GetProductInfoResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> GetProductInfoAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnhandQueryByCustomerRequest) of message InventOnHandServiceGetOnhandQueryByCustomerRequest does not match the default value (GetOnhandQueryByCustomer)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse GetOnhandQueryByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerResponse> GetOnhandQueryByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnhandQueryByCustomerRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerZeroStockRequest) of message InventOnHandServiceGetOnHandByCustomerZeroStockRequest does not match the default value (GetOnHandByCustomerZeroStock)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductionRequestsRequest) of message InventOnHandServiceGetProductionRequestsRequest does not match the default value (getProductionRequests)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/getProductionRequests", ReplyAction="http://tempuri.org/InventOnHandService/getProductionRequestsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/getProductionRequestsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse getProductionRequests(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/getProductionRequests", ReplyAction="http://tempuri.org/InventOnHandService/getProductionRequestsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> getProductionRequestsAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetOnHandByCustomerRequest) of message InventOnHandServiceGetOnHandByCustomerRequest does not match the default value (GetOnHandByCustomer)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse GetOnHandByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer", ReplyAction="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockRequest) of message InventOnHandServiceGetCustomerOlderStockRequest does not match the default value (GetCustomerOlderStock)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse GetCustomerOlderStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockResponse> GetCustomerOlderStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerOlderStockOverallRequest) of message InventOnHandServiceGetCustomerOlderStockOverallRequest does not match the default value (GetCustomerOlderStockOverall)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoiceRequest) of message InventOnHandServiceGetInvoiceRequest does not match the default value (GetInvoice)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoiceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse GetInvoice(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoice", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoiceResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> GetInvoiceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoicesByDateRequest) of message InventOnHandServiceGetInvoicesByDateRequest does not match the default value (GetInvoicesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse GetInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesByDateResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse> GetInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetInvoicesBySalesIdRequest) of message InventOnHandServiceGetInvoicesBySalesIdRequest does not match the default value (GetInvoicesBySalesId)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesId", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesBySalesIdResponse")]
@@ -4241,36 +4449,64 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesId", ReplyAction="http://tempuri.org/InventOnHandService/GetInvoicesBySalesIdResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse> GetInvoicesBySalesIdAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByCustomerAllRequest) of message InventOnHandServiceGetProductsByCustomerAllRequest does not match the default value (GetProductsByCustomerAll)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesRequest) of message InventOnHandServiceGetCustomerInvoicesRequest does not match the default value (GetCustomerInvoices)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse GetCustomerInvoices(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsByModelRequest) of message InventOnHandServiceGetProductsByModelRequest does not match the default value (GetProductsByModel)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsByModelAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse GetProductsByModel(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsByModel", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsByModelResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelResponse> GetProductsByModelAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByModelRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetCustomerInvoicesByDateRequest) of message InventOnHandServiceGetCustomerInvoicesByDateRequest does not match the default value (GetCustomerInvoicesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate", ReplyAction="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceGetProductsBySizeRequest) of message InventOnHandServiceGetProductsBySizeRequest does not match the default value (GetProductsBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/GetProductsBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse GetProductsBySize(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/GetProductsBySize", ReplyAction="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeResponse> GetProductsBySizeAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (InventOnHandServiceOutstandingBalanceRequest) of message InventOnHandServiceOutstandingBalanceRequest does not match the default value (OutstandingBalance)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/OutstandingBalance", ReplyAction="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/InventOnHandService/OutstandingBalanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse OutstandingBalance(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InventOnHandService/OutstandingBalance", ReplyAction="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockOverallRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerOlderStockOverallRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByItemRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _accountId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public string _itemId;
         
-        public InventOnHandServiceGetCustomerOlderStockOverallRequest() {
+        public InventOnHandServiceGetOnHandByItemRequest() {
         }
         
-        public InventOnHandServiceGetCustomerOlderStockOverallRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
+        public InventOnHandServiceGetOnHandByItemRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
-            this._accountId = _accountId;
             this._itemId = _itemId;
         }
     }
@@ -4278,16 +4514,16 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockOverallResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerOlderStockOverallResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByItemResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OlderStockContract[] response;
+        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
         
-        public InventOnHandServiceGetCustomerOlderStockOverallResponse() {
+        public InventOnHandServiceGetOnHandByItemResponse() {
         }
         
-        public InventOnHandServiceGetCustomerOlderStockOverallResponse(WcfMobile.SalesServicesGroup.OlderStockContract[] response) {
+        public InventOnHandServiceGetOnHandByItemResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
             this.response = response;
         }
     }
@@ -4295,104 +4531,8 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerInvoicesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetCustomerInvoicesRequest() {
-        }
-        
-        public InventOnHandServiceGetCustomerInvoicesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerInvoicesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
-        
-        public InventOnHandServiceGetCustomerInvoicesResponse() {
-        }
-        
-        public InventOnHandServiceGetCustomerInvoicesResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerInvoicesByDateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime _dateSearch;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetCustomerInvoicesByDateRequest() {
-        }
-        
-        public InventOnHandServiceGetCustomerInvoicesByDateRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this._dateSearch = _dateSearch;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetCustomerInvoicesByDateResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
-        
-        public InventOnHandServiceGetCustomerInvoicesByDateResponse() {
-        }
-        
-        public InventOnHandServiceGetCustomerInvoicesByDateResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductsByCustomerAllRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
@@ -4401,35 +4541,31 @@ namespace WcfMobile.SalesServicesGroup {
         public string accountId;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
+        public string sortField;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest() {
+        public InventOnHandServiceGetProductsByCustomerAllRequest() {
         }
         
-        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+        public InventOnHandServiceGetProductsByCustomerAllRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
             this.CallContext = CallContext;
             this.accountId = accountId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
+            this.sortField = sortField;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductsByCustomerAllResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
+        public WcfMobile.SalesServicesGroup.ProductContract[] response;
         
-        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse() {
+        public InventOnHandServiceGetProductsByCustomerAllResponse() {
         }
         
-        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
+        public InventOnHandServiceGetProductsByCustomerAllResponse(WcfMobile.SalesServicesGroup.ProductContract[] response) {
             this.response = response;
         }
     }
@@ -4437,45 +4573,37 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductInfoRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string accountId;
+        public string _itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public InventOnHandServiceGetOnHandByCustomerRequest() {
+        public InventOnHandServiceGetProductInfoRequest() {
         }
         
-        public InventOnHandServiceGetOnHandByCustomerRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+        public InventOnHandServiceGetProductInfoRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
-            this.accountId = accountId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
+            this._itemId = _itemId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByCustomerResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
+        public WcfMobile.SalesServicesGroup.ProductContract response;
         
-        public InventOnHandServiceGetOnHandByCustomerResponse() {
+        public InventOnHandServiceGetProductInfoResponse() {
         }
         
-        public InventOnHandServiceGetOnHandByCustomerResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
+        public InventOnHandServiceGetProductInfoResponse(WcfMobile.SalesServicesGroup.ProductContract response) {
             this.response = response;
         }
     }
@@ -4529,37 +4657,45 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoiceRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _invoiceId;
+        public string accountId;
         
-        public InventOnHandServiceGetInvoiceRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest() {
         }
         
-        public InventOnHandServiceGetInvoiceRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
+        public InventOnHandServiceGetOnHandByCustomerZeroStockRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
             this.CallContext = CallContext;
-            this._invoiceId = _invoiceId;
+            this.accountId = accountId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoiceResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerZeroStockResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerZeroStockResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract response;
+        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
         
-        public InventOnHandServiceGetInvoiceResponse() {
+        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse() {
         }
         
-        public InventOnHandServiceGetInvoiceResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract response) {
+        public InventOnHandServiceGetOnHandByCustomerZeroStockResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
             this.response = response;
         }
     }
@@ -4567,37 +4703,91 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductInfoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductionRequestsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductionRequestsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _itemId;
+        public string _custAccount;
         
-        public InventOnHandServiceGetProductInfoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetProductionRequestsRequest() {
         }
         
-        public InventOnHandServiceGetProductInfoRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
+        public InventOnHandServiceGetProductionRequestsRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
             this.CallContext = CallContext;
-            this._itemId = _itemId;
+            this._custAccount = _custAccount;
+            this.pageNum = pageNum;
+            this.pageSize = pageSize;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductInfoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductionRequestsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetProductionRequestsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProductContract response;
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
         
-        public InventOnHandServiceGetProductInfoResponse() {
+        public InventOnHandServiceGetProductionRequestsResponse() {
         }
         
-        public InventOnHandServiceGetProductInfoResponse(WcfMobile.SalesServicesGroup.ProductContract response) {
+        public InventOnHandServiceGetProductionRequestsResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string accountId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetOnHandByCustomerRequest() {
+        }
+        
+        public InventOnHandServiceGetOnHandByCustomerRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this.accountId = accountId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByCustomerResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetOnHandByCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
+        
+        public InventOnHandServiceGetOnHandByCustomerResponse() {
+        }
+        
+        public InventOnHandServiceGetOnHandByCustomerResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
             this.response = response;
         }
     }
@@ -4651,8 +4841,172 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductionRequestsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductionRequestsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockOverallRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerOlderStockOverallRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _accountId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemId;
+        
+        public InventOnHandServiceGetCustomerOlderStockOverallRequest() {
+        }
+        
+        public InventOnHandServiceGetCustomerOlderStockOverallRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
+            this.CallContext = CallContext;
+            this._accountId = _accountId;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerOlderStockOverallResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerOlderStockOverallResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.OlderStockContract[] response;
+        
+        public InventOnHandServiceGetCustomerOlderStockOverallResponse() {
+        }
+        
+        public InventOnHandServiceGetCustomerOlderStockOverallResponse(WcfMobile.SalesServicesGroup.OlderStockContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoiceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _invoiceId;
+        
+        public InventOnHandServiceGetInvoiceRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoiceRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
+            this.CallContext = CallContext;
+            this._invoiceId = _invoiceId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoiceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoiceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract response;
+        
+        public InventOnHandServiceGetInvoiceResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoiceResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesByDateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime _dateSearch;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetInvoicesByDateRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoicesByDateRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._dateSearch = _dateSearch;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesByDateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
+        
+        public InventOnHandServiceGetInvoicesByDateResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoicesByDateResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesBySalesIdRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string salesId;
+        
+        public InventOnHandServiceGetInvoicesBySalesIdRequest() {
+        }
+        
+        public InventOnHandServiceGetInvoicesBySalesIdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetInvoicesBySalesIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
+        
+        public InventOnHandServiceGetInvoicesBySalesIdResponse() {
+        }
+        
+        public InventOnHandServiceGetInvoicesBySalesIdResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerInvoicesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
@@ -4661,18 +5015,18 @@ namespace WcfMobile.SalesServicesGroup {
         public string _custAccount;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNum;
+        public int pageNo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
         public int pageSize;
         
-        public InventOnHandServiceGetProductionRequestsRequest() {
+        public InventOnHandServiceGetCustomerInvoicesRequest() {
         }
         
-        public InventOnHandServiceGetProductionRequestsRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
+        public InventOnHandServiceGetCustomerInvoicesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
             this.CallContext = CallContext;
             this._custAccount = _custAccount;
-            this.pageNum = pageNum;
+            this.pageNo = pageNo;
             this.pageSize = pageSize;
         }
     }
@@ -4680,16 +5034,16 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductionRequestsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductionRequestsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerInvoicesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
         
-        public InventOnHandServiceGetProductionRequestsResponse() {
+        public InventOnHandServiceGetCustomerInvoicesResponse() {
         }
         
-        public InventOnHandServiceGetProductionRequestsResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
+        public InventOnHandServiceGetCustomerInvoicesResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
             this.response = response;
         }
     }
@@ -4751,8 +5105,8 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceOutstandingBalanceRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesByDateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerInvoicesByDateRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
@@ -4760,66 +5114,40 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public string _custAccount;
         
-        public InventOnHandServiceOutstandingBalanceRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime _dateSearch;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int pageSize;
+        
+        public InventOnHandServiceGetCustomerInvoicesByDateRequest() {
         }
         
-        public InventOnHandServiceOutstandingBalanceRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+        public InventOnHandServiceGetCustomerInvoicesByDateRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
             this.CallContext = CallContext;
             this._custAccount = _custAccount;
+            this._dateSearch = _dateSearch;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceOutstandingBalanceResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetCustomerInvoicesByDateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceGetCustomerInvoicesByDateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public decimal response;
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
         
-        public InventOnHandServiceOutstandingBalanceResponse() {
+        public InventOnHandServiceGetCustomerInvoicesByDateResponse() {
         }
         
-        public InventOnHandServiceOutstandingBalanceResponse(decimal response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByItemRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _itemId;
-        
-        public InventOnHandServiceGetOnHandByItemRequest() {
-        }
-        
-        public InventOnHandServiceGetOnHandByItemRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            this.CallContext = CallContext;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetOnHandByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetOnHandByItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OnHandContract[] response;
-        
-        public InventOnHandServiceGetOnHandByItemResponse() {
-        }
-        
-        public InventOnHandServiceGetOnHandByItemResponse(WcfMobile.SalesServicesGroup.OnHandContract[] response) {
+        public InventOnHandServiceGetCustomerInvoicesByDateResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
             this.response = response;
         }
     }
@@ -4881,79 +5209,37 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoicesBySalesIdRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceOutstandingBalanceRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string salesId;
+        public string _custAccount;
         
-        public InventOnHandServiceGetInvoicesBySalesIdRequest() {
+        public InventOnHandServiceOutstandingBalanceRequest() {
         }
         
-        public InventOnHandServiceGetInvoicesBySalesIdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
+        public InventOnHandServiceOutstandingBalanceRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
             this.CallContext = CallContext;
-            this.salesId = salesId;
+            this._custAccount = _custAccount;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetInvoicesBySalesIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetInvoicesBySalesIdResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceOutstandingBalanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class InventOnHandServiceOutstandingBalanceResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response;
+        public decimal response;
         
-        public InventOnHandServiceGetInvoicesBySalesIdResponse() {
+        public InventOnHandServiceOutstandingBalanceResponse() {
         }
         
-        public InventOnHandServiceGetInvoicesBySalesIdResponse(WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductsByCustomerAllRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string accountId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string sortField;
-        
-        public InventOnHandServiceGetProductsByCustomerAllRequest() {
-        }
-        
-        public InventOnHandServiceGetProductsByCustomerAllRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
-            this.CallContext = CallContext;
-            this.accountId = accountId;
-            this.sortField = sortField;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InventOnHandServiceGetProductsByCustomerAllResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class InventOnHandServiceGetProductsByCustomerAllResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProductContract[] response;
-        
-        public InventOnHandServiceGetProductsByCustomerAllResponse() {
-        }
-        
-        public InventOnHandServiceGetProductsByCustomerAllResponse(WcfMobile.SalesServicesGroup.ProductContract[] response) {
+        public InventOnHandServiceOutstandingBalanceResponse(decimal response) {
             this.response = response;
         }
     }
@@ -4986,148 +5272,80 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request) {
-            return base.Channel.GetCustomerOlderStockOverall(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByItem(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
+            return base.Channel.GetOnHandByItem(request);
         }
         
-        public WcfMobile.SalesServicesGroup.OlderStockContract[] GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest();
+        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByItem(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
             inValue.CallContext = CallContext;
-            inValue._accountId = _accountId;
             inValue._itemId = _itemId;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStockOverall(inValue);
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItem(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request) {
-            return base.Channel.GetCustomerOlderStockOverallAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByItemAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
+            return base.Channel.GetOnHandByItemAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse> GetOnHandByItemAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
             inValue.CallContext = CallContext;
-            inValue._accountId = _accountId;
             inValue._itemId = _itemId;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStockOverallAsync(inValue);
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItemAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoices(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request) {
-            return base.Channel.GetCustomerInvoices(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
+            return base.Channel.GetProductsByCustomerAll(request);
         }
         
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetCustomerInvoices(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest();
+        public WcfMobile.SalesServicesGroup.ProductContract[] GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoices(inValue);
+            inValue.accountId = accountId;
+            inValue.sortField = sortField;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAll(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request) {
-            return base.Channel.GetCustomerInvoicesAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
+            return base.Channel.GetProductsByCustomerAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesAsync(inValue);
+            inValue.accountId = accountId;
+            inValue.sortField = sortField;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAllAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request) {
-            return base.Channel.GetCustomerInvoicesByDate(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetProductInfo(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
+            return base.Channel.GetProductInfo(request);
         }
         
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest();
+        public WcfMobile.SalesServicesGroup.ProductContract GetProductInfo(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._dateSearch = _dateSearch;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesByDate(inValue);
+            inValue._itemId = _itemId;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductInfo(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request) {
-            return base.Channel.GetCustomerInvoicesByDateAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetProductInfoAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
+            return base.Channel.GetProductInfoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> GetProductInfoAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._dateSearch = _dateSearch;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesByDateAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
-            return base.Channel.GetOnHandByCustomerZeroStock(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStock(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
-            return base.Channel.GetOnHandByCustomerZeroStockAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStockAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
-            return base.Channel.GetOnHandByCustomer(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByCustomer(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomer(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
-            return base.Channel.GetOnHandByCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerAsync(inValue);
+            inValue._itemId = _itemId;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5160,53 +5378,90 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoice(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request) {
-            return base.Channel.GetInvoice(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
+            return base.Channel.GetOnHandByCustomerZeroStock(request);
         }
         
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract GetInvoice(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest();
+        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByCustomerZeroStock(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
             inValue.CallContext = CallContext;
-            inValue._invoiceId = _invoiceId;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoice(inValue);
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStock(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoiceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request) {
-            return base.Channel.GetInvoiceAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest request) {
+            return base.Channel.GetOnHandByCustomerZeroStockAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> GetInvoiceAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockResponse> GetOnHandByCustomerZeroStockAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerZeroStockRequest();
             inValue.CallContext = CallContext;
-            inValue._invoiceId = _invoiceId;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoiceAsync(inValue);
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerZeroStockAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetProductInfo(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
-            return base.Channel.GetProductInfo(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse WcfMobile.SalesServicesGroup.InventOnHandService.getProductionRequests(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request) {
+            return base.Channel.getProductionRequests(request);
         }
         
-        public WcfMobile.SalesServicesGroup.ProductContract GetProductInfo(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] getProductionRequests(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest();
             inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductInfo(inValue);
+            inValue._custAccount = _custAccount;
+            inValue.pageNum = pageNum;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).getProductionRequests(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetProductInfoAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest request) {
-            return base.Channel.GetProductInfoAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> WcfMobile.SalesServicesGroup.InventOnHandService.getProductionRequestsAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request) {
+            return base.Channel.getProductionRequestsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoResponse> GetProductInfoAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductInfoRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> getProductionRequestsAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest();
             inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductInfoAsync(inValue);
+            inValue._custAccount = _custAccount;
+            inValue.pageNum = pageNum;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).getProductionRequestsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomer(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
+            return base.Channel.GetOnHandByCustomer(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByCustomer(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
+            inValue.CallContext = CallContext;
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomer(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest request) {
+            return base.Channel.GetOnHandByCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerResponse> GetOnHandByCustomerAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByCustomerRequest();
+            inValue.CallContext = CallContext;
+            inValue.accountId = accountId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByCustomerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5239,32 +5494,138 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse WcfMobile.SalesServicesGroup.InventOnHandService.getProductionRequests(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request) {
-            return base.Channel.getProductionRequests(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request) {
+            return base.Channel.GetCustomerOlderStockOverall(request);
         }
         
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] getProductionRequests(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest();
+        public WcfMobile.SalesServicesGroup.OlderStockContract[] GetCustomerOlderStockOverall(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNum = pageNum;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).getProductionRequests(inValue);
+            inValue._accountId = _accountId;
+            inValue._itemId = _itemId;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStockOverall(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> WcfMobile.SalesServicesGroup.InventOnHandService.getProductionRequestsAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest request) {
-            return base.Channel.getProductionRequestsAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest request) {
+            return base.Channel.GetCustomerOlderStockOverallAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsResponse> getProductionRequestsAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNum, int pageSize) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductionRequestsRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse> GetCustomerOlderStockOverallAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallRequest();
+            inValue.CallContext = CallContext;
+            inValue._accountId = _accountId;
+            inValue._itemId = _itemId;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerOlderStockOverallAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoice(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request) {
+            return base.Channel.GetInvoice(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract GetInvoice(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest();
+            inValue.CallContext = CallContext;
+            inValue._invoiceId = _invoiceId;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoice(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoiceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest request) {
+            return base.Channel.GetInvoiceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceResponse> GetInvoiceAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _invoiceId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoiceRequest();
+            inValue.CallContext = CallContext;
+            inValue._invoiceId = _invoiceId;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoiceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request) {
+            return base.Channel.GetInvoicesByDate(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesByDate(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest();
+            inValue.CallContext = CallContext;
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesByDate(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest request) {
+            return base.Channel.GetInvoicesByDateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse> GetInvoicesByDateAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateRequest();
+            inValue.CallContext = CallContext;
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesByDateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesId(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
+            return base.Channel.GetInvoicesBySalesId(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesBySalesId(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesId(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesIdAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
+            return base.Channel.GetInvoicesBySalesIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse> GetInvoicesBySalesIdAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoices(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request) {
+            return base.Channel.GetCustomerInvoices(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetCustomerInvoices(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest();
             inValue.CallContext = CallContext;
             inValue._custAccount = _custAccount;
-            inValue.pageNum = pageNum;
+            inValue.pageNo = pageNo;
             inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).getProductionRequestsAsync(inValue);
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoices(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest request) {
+            return base.Channel.GetCustomerInvoicesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesResponse> GetCustomerInvoicesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5301,53 +5662,34 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse WcfMobile.SalesServicesGroup.InventOnHandService.OutstandingBalance(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
-            return base.Channel.OutstandingBalance(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request) {
+            return base.Channel.GetCustomerInvoicesByDate(request);
         }
         
-        public decimal OutstandingBalance(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
+        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetCustomerInvoicesByDate(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest();
             inValue.CallContext = CallContext;
             inValue._custAccount = _custAccount;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalance(inValue);
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesByDate(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> WcfMobile.SalesServicesGroup.InventOnHandService.OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
-            return base.Channel.OutstandingBalanceAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest request) {
+            return base.Channel.GetCustomerInvoicesByDateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateResponse> GetCustomerInvoicesByDateAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, System.DateTime _dateSearch, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerInvoicesByDateRequest();
             inValue.CallContext = CallContext;
             inValue._custAccount = _custAccount;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalanceAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByItem(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
-            return base.Channel.GetOnHandByItem(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.OnHandContract[] GetOnHandByItem(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItem(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetOnHandByItemAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest request) {
-            return base.Channel.GetOnHandByItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemResponse> GetOnHandByItemAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _itemId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetOnHandByItemRequest();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetOnHandByItemAsync(inValue);
+            inValue._dateSearch = _dateSearch;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetCustomerInvoicesByDateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5384,69 +5726,34 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesId(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
-            return base.Channel.GetInvoicesBySalesId(request);
+        WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse WcfMobile.SalesServicesGroup.InventOnHandService.OutstandingBalance(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
+            return base.Channel.OutstandingBalance(request);
         }
         
-        public WcfMobile.SalesServicesGroup.CustomerInvoiceContract[] GetInvoicesBySalesId(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+        public decimal OutstandingBalance(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
             inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesId(inValue);
+            inValue._custAccount = _custAccount;
+            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalance(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetInvoicesBySalesIdAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest request) {
-            return base.Channel.GetInvoicesBySalesIdAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> WcfMobile.SalesServicesGroup.InventOnHandService.OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest request) {
+            return base.Channel.OutstandingBalanceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdResponse> GetInvoicesBySalesIdAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string salesId) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesBySalesIdRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceResponse> OutstandingBalanceAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceOutstandingBalanceRequest();
             inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetInvoicesBySalesIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse WcfMobile.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
-            return base.Channel.GetProductsByCustomerAll(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProductContract[] GetProductsByCustomerAll(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.sortField = sortField;
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse retVal = ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAll(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> WcfMobile.SalesServicesGroup.InventOnHandService.GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest request) {
-            return base.Channel.GetProductsByCustomerAllAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllResponse> GetProductsByCustomerAllAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string accountId, string sortField) {
-            WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest inValue = new WcfMobile.SalesServicesGroup.InventOnHandServiceGetProductsByCustomerAllRequest();
-            inValue.CallContext = CallContext;
-            inValue.accountId = accountId;
-            inValue.sortField = sortField;
-            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).GetProductsByCustomerAllAsync(inValue);
+            inValue._custAccount = _custAccount;
+            return ((WcfMobile.SalesServicesGroup.InventOnHandService)(this)).OutstandingBalanceAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.PrePickingService")]
     public interface PrePickingService {
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetStatusLookupRequest) of message PrePickingServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse GetStatusLookup(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceUpdatePrePickingRequest) of message PrePickingServiceUpdatePrePickingRequest does not match the default value (UpdatePrePicking)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/UpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/UpdatePrePickingResponse")]
@@ -5455,6 +5762,54 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/UpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/UpdatePrePickingResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse> UpdatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceDeletePrePickingRequest) of message PrePickingServiceDeletePrePickingRequest does not match the default value (DeletePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/DeletePrePicking", ReplyAction="http://tempuri.org/PrePickingService/DeletePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/DeletePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse DeletePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/DeletePrePicking", ReplyAction="http://tempuri.org/PrePickingService/DeletePrePickingResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> DeletePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeRequest) of message PrePickingServiceGetOnhandByGradeRequest does not match the default value (GetOnhandByGrade)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGrade", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse GetOnhandByGrade(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGrade", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetSinglePrePickingRequest) of message PrePickingServiceGetSinglePrePickingRequest does not match the default value (GetSinglePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetSinglePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse GetSinglePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetPrePickingsRequest) of message PrePickingServiceGetPrePickingsRequest does not match the default value (GetPrePickings)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetPrePickingsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse GetPrePickings(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> GetPrePickingsAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceStatusUpdatePrePickingRequest) of message PrePickingServiceStatusUpdatePrePickingRequest does not match the default value (StatusUpdatePrePicking)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/StatusUpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse StatusUpdatePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse> StatusUpdatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeSizeRequest) of message PrePickingServiceGetOnhandByGradeSizeRequest does not match the default value (GetOnhandByGradeSize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse GetOnhandByGradeSize(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse> GetOnhandByGradeSizeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest) of message PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest does not match the default value (GetOnhandByGradeSizeWithOnOrder)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrder", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrderResponse")]
@@ -5465,13 +5820,13 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrder", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrderResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse> GetOnhandByGradeSizeWithOnOrderAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceStatusUpdatePrePickingRequest) of message PrePickingServiceStatusUpdatePrePickingRequest does not match the default value (StatusUpdatePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/StatusUpdatePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse StatusUpdatePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetStatusLookupRequest) of message PrePickingServiceGetStatusLookupRequest does not match the default value (GetStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse GetStatusLookup(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingResponse> StatusUpdatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceStatusUpdatePrePickingRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceCreatePrePickingRequest) of message PrePickingServiceCreatePrePickingRequest does not match the default value (CreatePrePicking)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/CreatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/CreatePrePickingResponse")]
@@ -5480,80 +5835,6 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/CreatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/CreatePrePickingResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse> CreatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeRequest) of message PrePickingServiceGetOnhandByGradeRequest does not match the default value (GetOnhandByGrade)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGrade", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse GetOnhandByGrade(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGrade", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceDeletePrePickingRequest) of message PrePickingServiceDeletePrePickingRequest does not match the default value (DeletePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/DeletePrePicking", ReplyAction="http://tempuri.org/PrePickingService/DeletePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/DeletePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse DeletePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/DeletePrePicking", ReplyAction="http://tempuri.org/PrePickingService/DeletePrePickingResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> DeletePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetOnhandByGradeSizeRequest) of message PrePickingServiceGetOnhandByGradeSizeRequest does not match the default value (GetOnhandByGradeSize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse GetOnhandByGradeSize(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize", ReplyAction="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse> GetOnhandByGradeSizeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetPrePickingsRequest) of message PrePickingServiceGetPrePickingsRequest does not match the default value (GetPrePickings)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetPrePickingsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse GetPrePickings(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetPrePickings", ReplyAction="http://tempuri.org/PrePickingService/GetPrePickingsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> GetPrePickingsAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (PrePickingServiceGetSinglePrePickingRequest) of message PrePickingServiceGetSinglePrePickingRequest does not match the default value (GetSinglePrePicking)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/PrePickingService/GetSinglePrePickingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse GetSinglePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetSinglePrePicking", ReplyAction="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetStatusLookupRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        public PrePickingServiceGetStatusLookupRequest() {
-        }
-        
-        public PrePickingServiceGetStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetStatusLookupResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.LookupContract[] response;
-        
-        public PrePickingServiceGetStatusLookupResponse() {
-        }
-        
-        public PrePickingServiceGetStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
-            this.response = response;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5601,8 +5882,46 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceDeletePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceDeletePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string pickingId;
+        
+        public PrePickingServiceDeletePrePickingRequest() {
+        }
+        
+        public PrePickingServiceDeletePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceDeletePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceDeletePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public PrePickingServiceDeletePrePickingResponse() {
+        }
+        
+        public PrePickingServiceDeletePrePickingResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetOnhandByGradeRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
@@ -5610,32 +5929,104 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public string _accountId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _itemNumber;
-        
-        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest() {
+        public PrePickingServiceGetOnhandByGradeRequest() {
         }
         
-        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
+        public PrePickingServiceGetOnhandByGradeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
             this.CallContext = CallContext;
             this._accountId = _accountId;
-            this._itemNumber = _itemNumber;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetOnhandByGradeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] response;
+        public WcfMobile.SalesServicesGroup.OnhandByGradeContract[] response;
         
-        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse() {
+        public PrePickingServiceGetOnhandByGradeResponse() {
         }
         
-        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse(WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] response) {
+        public PrePickingServiceGetOnhandByGradeResponse(WcfMobile.SalesServicesGroup.OnhandByGradeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetSinglePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _prePickId;
+        
+        public PrePickingServiceGetSinglePrePickingRequest() {
+        }
+        
+        public PrePickingServiceGetSinglePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
+            this.CallContext = CallContext;
+            this._prePickId = _prePickId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetSinglePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.PrePickingContract response;
+        
+        public PrePickingServiceGetSinglePrePickingResponse() {
+        }
+        
+        public PrePickingServiceGetSinglePrePickingResponse(WcfMobile.SalesServicesGroup.PrePickingContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetPrePickingsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        public PrePickingServiceGetPrePickingsRequest() {
+        }
+        
+        public PrePickingServiceGetPrePickingsRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetPrePickingsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.PrePickingContract[] response;
+        
+        public PrePickingServiceGetPrePickingsResponse() {
+        }
+        
+        public PrePickingServiceGetPrePickingsResponse(WcfMobile.SalesServicesGroup.PrePickingContract[] response) {
             this.response = response;
         }
     }
@@ -5685,120 +6076,6 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceCreatePrePickingRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.PrePickingContract row;
-        
-        public PrePickingServiceCreatePrePickingRequest() {
-        }
-        
-        public PrePickingServiceCreatePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
-            this.CallContext = CallContext;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceCreatePrePickingResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
-        
-        public PrePickingServiceCreatePrePickingResponse() {
-        }
-        
-        public PrePickingServiceCreatePrePickingResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetOnhandByGradeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _accountId;
-        
-        public PrePickingServiceGetOnhandByGradeRequest() {
-        }
-        
-        public PrePickingServiceGetOnhandByGradeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
-            this.CallContext = CallContext;
-            this._accountId = _accountId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetOnhandByGradeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.OnhandByGradeContract[] response;
-        
-        public PrePickingServiceGetOnhandByGradeResponse() {
-        }
-        
-        public PrePickingServiceGetOnhandByGradeResponse(WcfMobile.SalesServicesGroup.OnhandByGradeContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceDeletePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceDeletePrePickingRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string pickingId;
-        
-        public PrePickingServiceDeletePrePickingRequest() {
-        }
-        
-        public PrePickingServiceDeletePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
-            this.CallContext = CallContext;
-            this.pickingId = pickingId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceDeletePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceDeletePrePickingResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public PrePickingServiceDeletePrePickingResponse() {
-        }
-        
-        public PrePickingServiceDeletePrePickingResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeSizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class PrePickingServiceGetOnhandByGradeSizeRequest {
         
@@ -5841,37 +6118,41 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetPrePickingsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
+        public string _accountId;
         
-        public PrePickingServiceGetPrePickingsRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemNumber;
+        
+        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest() {
         }
         
-        public PrePickingServiceGetPrePickingsRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
             this.CallContext = CallContext;
-            this._custAccount = _custAccount;
+            this._accountId = _accountId;
+            this._itemNumber = _itemNumber;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetPrePickingsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetPrePickingsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.PrePickingContract[] response;
+        public WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] response;
         
-        public PrePickingServiceGetPrePickingsResponse() {
+        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse() {
         }
         
-        public PrePickingServiceGetPrePickingsResponse(WcfMobile.SalesServicesGroup.PrePickingContract[] response) {
+        public PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse(WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] response) {
             this.response = response;
         }
     }
@@ -5879,37 +6160,71 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetSinglePrePickingRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetStatusLookupRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _prePickId;
-        
-        public PrePickingServiceGetSinglePrePickingRequest() {
+        public PrePickingServiceGetStatusLookupRequest() {
         }
         
-        public PrePickingServiceGetSinglePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
+        public PrePickingServiceGetStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
-            this._prePickId = _prePickId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetSinglePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class PrePickingServiceGetSinglePrePickingResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceGetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceGetStatusLookupResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.PrePickingContract response;
+        public WcfMobile.SalesServicesGroup.LookupContract[] response;
         
-        public PrePickingServiceGetSinglePrePickingResponse() {
+        public PrePickingServiceGetStatusLookupResponse() {
         }
         
-        public PrePickingServiceGetSinglePrePickingResponse(WcfMobile.SalesServicesGroup.PrePickingContract response) {
+        public PrePickingServiceGetStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceCreatePrePickingRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.PrePickingContract row;
+        
+        public PrePickingServiceCreatePrePickingRequest() {
+        }
+        
+        public PrePickingServiceCreatePrePickingRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrePickingServiceCreatePrePickingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PrePickingServiceCreatePrePickingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string response;
+        
+        public PrePickingServiceCreatePrePickingResponse() {
+        }
+        
+        public PrePickingServiceCreatePrePickingResponse(string response) {
             this.response = response;
         }
     }
@@ -5942,29 +6257,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse WcfMobile.SalesServicesGroup.PrePickingService.GetStatusLookup(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookup(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.LookupContract[] GetStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetStatusLookupAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
-            return base.Channel.GetStatusLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetStatusLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.PrePickingServiceUpdatePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.UpdatePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceUpdatePrePickingRequest request) {
             return base.Channel.UpdatePrePicking(request);
         }
@@ -5992,30 +6284,103 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeSizeWithOnOrder(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request) {
-            return base.Channel.GetOnhandByGradeSizeWithOnOrder(request);
+        WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.DeletePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request) {
+            return base.Channel.DeletePrePicking(request);
         }
         
-        public WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] GetOnhandByGradeSizeWithOnOrder(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest();
+        public bool DeletePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest();
             inValue.CallContext = CallContext;
-            inValue._accountId = _accountId;
-            inValue._itemNumber = _itemNumber;
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeSizeWithOnOrder(inValue);
+            inValue.pickingId = pickingId;
+            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).DeletePrePicking(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeSizeWithOnOrderAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request) {
-            return base.Channel.GetOnhandByGradeSizeWithOnOrderAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.DeletePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request) {
+            return base.Channel.DeletePrePickingAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse> GetOnhandByGradeSizeWithOnOrderAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> DeletePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).DeletePrePickingAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGrade(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request) {
+            return base.Channel.GetOnhandByGrade(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.OnhandByGradeContract[] GetOnhandByGrade(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest();
             inValue.CallContext = CallContext;
             inValue._accountId = _accountId;
-            inValue._itemNumber = _itemNumber;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeSizeWithOnOrderAsync(inValue);
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGrade(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request) {
+            return base.Channel.GetOnhandByGradeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest();
+            inValue.CallContext = CallContext;
+            inValue._accountId = _accountId;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.GetSinglePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
+            return base.Channel.GetSinglePrePicking(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.PrePickingContract GetSinglePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue._prePickId = _prePickId;
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePicking(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
+            return base.Channel.GetSinglePrePickingAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue._prePickId = _prePickId;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePickingAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse WcfMobile.SalesServicesGroup.PrePickingService.GetPrePickings(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
+            return base.Channel.GetPrePickings(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.PrePickingContract[] GetPrePickings(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetPrePickings(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetPrePickingsAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
+            return base.Channel.GetPrePickingsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> GetPrePickingsAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetPrePickingsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6046,81 +6411,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.CreatePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
-            return base.Channel.CreatePrePicking(request);
-        }
-        
-        public string CreatePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).CreatePrePicking(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.CreatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
-            return base.Channel.CreatePrePickingAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse> CreatePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).CreatePrePickingAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGrade(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request) {
-            return base.Channel.GetOnhandByGrade(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.OnhandByGradeContract[] GetOnhandByGrade(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest();
-            inValue.CallContext = CallContext;
-            inValue._accountId = _accountId;
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGrade(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest request) {
-            return base.Channel.GetOnhandByGradeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeResponse> GetOnhandByGradeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeRequest();
-            inValue.CallContext = CallContext;
-            inValue._accountId = _accountId;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.DeletePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request) {
-            return base.Channel.DeletePrePicking(request);
-        }
-        
-        public bool DeletePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).DeletePrePicking(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.DeletePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest request) {
-            return base.Channel.DeletePrePickingAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingResponse> DeletePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string pickingId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceDeletePrePickingRequest();
-            inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).DeletePrePickingAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeResponse WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeSize(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeRequest request) {
             return base.Channel.GetOnhandByGradeSize(request);
         }
@@ -6148,59 +6438,92 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse WcfMobile.SalesServicesGroup.PrePickingService.GetPrePickings(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
-            return base.Channel.GetPrePickings(request);
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeSizeWithOnOrder(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request) {
+            return base.Channel.GetOnhandByGradeSizeWithOnOrder(request);
         }
         
-        public WcfMobile.SalesServicesGroup.PrePickingContract[] GetPrePickings(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
+        public WcfMobile.SalesServicesGroup.OnhandByGradeSizeColorContract[] GetOnhandByGradeSizeWithOnOrder(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetPrePickings(inValue);
+            inValue._accountId = _accountId;
+            inValue._itemNumber = _itemNumber;
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeSizeWithOnOrder(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetPrePickingsAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest request) {
-            return base.Channel.GetPrePickingsAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetOnhandByGradeSizeWithOnOrderAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest request) {
+            return base.Channel.GetOnhandByGradeSizeWithOnOrderAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsResponse> GetPrePickingsAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetPrePickingsRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderResponse> GetOnhandByGradeSizeWithOnOrderAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _accountId, string _itemNumber) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetOnhandByGradeSizeWithOnOrderRequest();
             inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetPrePickingsAsync(inValue);
+            inValue._accountId = _accountId;
+            inValue._itemNumber = _itemNumber;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetOnhandByGradeSizeWithOnOrderAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.GetSinglePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
-            return base.Channel.GetSinglePrePicking(request);
+        WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse WcfMobile.SalesServicesGroup.PrePickingService.GetStatusLookup(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookup(request);
         }
         
-        public WcfMobile.SalesServicesGroup.PrePickingContract GetSinglePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
+        public WcfMobile.SalesServicesGroup.LookupContract[] GetStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
             inValue.CallContext = CallContext;
-            inValue._prePickId = _prePickId;
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePicking(inValue);
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest request) {
-            return base.Channel.GetSinglePrePickingAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> WcfMobile.SalesServicesGroup.PrePickingService.GetStatusLookupAsync(WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest request) {
+            return base.Channel.GetStatusLookupAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingResponse> GetSinglePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prePickId) {
-            WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetSinglePrePickingRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupResponse> GetStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceGetStatusLookupRequest();
             inValue.CallContext = CallContext;
-            inValue._prePickId = _prePickId;
-            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetSinglePrePickingAsync(inValue);
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).GetStatusLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse WcfMobile.SalesServicesGroup.PrePickingService.CreatePrePicking(WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
+            return base.Channel.CreatePrePicking(request);
+        }
+        
+        public string CreatePrePicking(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse retVal = ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).CreatePrePicking(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse> WcfMobile.SalesServicesGroup.PrePickingService.CreatePrePickingAsync(WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest request) {
+            return base.Channel.CreatePrePickingAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingResponse> CreatePrePickingAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.PrePickingContract row) {
+            WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest inValue = new WcfMobile.SalesServicesGroup.PrePickingServiceCreatePrePickingRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            return ((WcfMobile.SalesServicesGroup.PrePickingService)(this)).CreatePrePickingAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.ProdPlanService")]
     public interface ProdPlanService {
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceCreateCustPlanRequest) of message ProdPlanServiceCreateCustPlanRequest does not match the default value (CreateCustPlan)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/CreateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/CreateCustPlanResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/CreateCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse CreateCustPlan(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/CreateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/CreateCustPlanResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> CreateCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceDeleteCustPlanRequest) of message ProdPlanServiceDeleteCustPlanRequest does not match the default value (DeleteCustPlan)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/DeleteCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/DeleteCustPlanResponse")]
@@ -6218,54 +6541,6 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanResponse> GetCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthRequest) of message ProdPlanServiceGetCustPlanByMonthRequest does not match the default value (GetCustPlanByMonth)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse GetCustPlanByMonth(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastSummaryRequest) of message ProdPlanServiceGetMonthlyForcastSummaryRequest does not match the default value (GetMonthlyForcastSummary)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetSortingLinesRequest) of message ProdPlanServiceGetSortingLinesRequest does not match the default value (GetSortingLines)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetSortingLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse GetSortingLines(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> GetSortingLinesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastBySizeRequest) of message ProdPlanServiceGetMonthlyForcastBySizeRequest does not match the default value (GetMonthlyForcastBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetItemSizesRequest) of message ProdPlanServiceGetItemSizesRequest does not match the default value (GetItemSizes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetItemSizesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse GetItemSizes(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> GetItemSizesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetYearlyForcastBySizeRequest) of message ProdPlanServiceGetYearlyForcastBySizeRequest does not match the default value (GetYearlyForcastBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthSizeRequest) of message ProdPlanServiceGetCustPlanByMonthSizeRequest does not match the default value (GetCustPlanByMonthSize)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -6282,13 +6557,29 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/UpdateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/UpdateCustPlanResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceUpdateCustPlanResponse> UpdateCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceUpdateCustPlanRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceCreateCustPlanRequest) of message ProdPlanServiceCreateCustPlanRequest does not match the default value (CreateCustPlan)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/CreateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/CreateCustPlanResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/CreateCustPlanAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse CreateCustPlan(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanByMonthRequest) of message ProdPlanServiceGetCustPlanByMonthRequest does not match the default value (GetCustPlanByMonth)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse GetCustPlanByMonth(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/CreateCustPlan", ReplyAction="http://tempuri.org/ProdPlanService/CreateCustPlanResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> CreateCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastBySizeRequest) of message ProdPlanServiceGetMonthlyForcastBySizeRequest does not match the default value (GetMonthlyForcastBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetMonthlyForcastSummaryRequest) of message ProdPlanServiceGetMonthlyForcastSummaryRequest does not match the default value (GetMonthlyForcastSummary)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary", ReplyAction="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetCustPlanBySizeRequest) of message ProdPlanServiceGetCustPlanBySizeRequest does not match the default value (GetCustPlanBySize)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanBySizeResponse")]
@@ -6297,6 +6588,68 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetCustPlanBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetCustPlanBySizeResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeResponse> GetCustPlanBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetYearlyForcastBySizeRequest) of message ProdPlanServiceGetYearlyForcastBySizeRequest does not match the default value (GetYearlyForcastBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize", ReplyAction="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetSortingLinesRequest) of message ProdPlanServiceGetSortingLinesRequest does not match the default value (GetSortingLines)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetSortingLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse GetSortingLines(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetSortingLines", ReplyAction="http://tempuri.org/ProdPlanService/GetSortingLinesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> GetSortingLinesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdPlanServiceGetItemSizesRequest) of message ProdPlanServiceGetItemSizesRequest does not match the default value (GetItemSizes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdPlanService/GetItemSizesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse GetItemSizes(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdPlanService/GetItemSizes", ReplyAction="http://tempuri.org/ProdPlanService/GetItemSizesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> GetItemSizesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceCreateCustPlanRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.CustForcastPlanContract row;
+        
+        public ProdPlanServiceCreateCustPlanRequest() {
+        }
+        
+        public ProdPlanServiceCreateCustPlanRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceCreateCustPlanResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long response;
+        
+        public ProdPlanServiceCreateCustPlanResponse() {
+        }
+        
+        public ProdPlanServiceCreateCustPlanResponse(long response) {
+            this.response = response;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6375,262 +6728,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         public ProdPlanServiceGetCustPlanResponse(WcfMobile.SalesServicesGroup.CustForcastPlanContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanByMonthRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string custId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int yearId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string monthId;
-        
-        public ProdPlanServiceGetCustPlanByMonthRequest() {
-        }
-        
-        public ProdPlanServiceGetCustPlanByMonthRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            this.CallContext = CallContext;
-            this.custId = custId;
-            this.yearId = yearId;
-            this.monthId = monthId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetCustPlanByMonthResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustForcastPlanContract[] response;
-        
-        public ProdPlanServiceGetCustPlanByMonthResponse() {
-        }
-        
-        public ProdPlanServiceGetCustPlanByMonthResponse(WcfMobile.SalesServicesGroup.CustForcastPlanContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastSummaryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetMonthlyForcastSummaryRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string custId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int yearId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string monthId;
-        
-        public ProdPlanServiceGetMonthlyForcastSummaryRequest() {
-        }
-        
-        public ProdPlanServiceGetMonthlyForcastSummaryRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            this.CallContext = CallContext;
-            this.custId = custId;
-            this.yearId = yearId;
-            this.monthId = monthId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastSummaryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetMonthlyForcastSummaryResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
-        
-        public ProdPlanServiceGetMonthlyForcastSummaryResponse() {
-        }
-        
-        public ProdPlanServiceGetMonthlyForcastSummaryResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetSortingLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetSortingLinesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        public ProdPlanServiceGetSortingLinesRequest() {
-        }
-        
-        public ProdPlanServiceGetSortingLinesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetSortingLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetSortingLinesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string[] response;
-        
-        public ProdPlanServiceGetSortingLinesResponse() {
-        }
-        
-        public ProdPlanServiceGetSortingLinesResponse(string[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetMonthlyForcastBySizeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string custId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _itemSize;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int yearId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public string monthId;
-        
-        public ProdPlanServiceGetMonthlyForcastBySizeRequest() {
-        }
-        
-        public ProdPlanServiceGetMonthlyForcastBySizeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
-            this.CallContext = CallContext;
-            this.custId = custId;
-            this._itemSize = _itemSize;
-            this.yearId = yearId;
-            this.monthId = monthId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetMonthlyForcastBySizeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
-        
-        public ProdPlanServiceGetMonthlyForcastBySizeResponse() {
-        }
-        
-        public ProdPlanServiceGetMonthlyForcastBySizeResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetItemSizesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        public ProdPlanServiceGetItemSizesRequest() {
-        }
-        
-        public ProdPlanServiceGetItemSizesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetItemSizesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ItemSizeContract[] response;
-        
-        public ProdPlanServiceGetItemSizesResponse() {
-        }
-        
-        public ProdPlanServiceGetItemSizesResponse(WcfMobile.SalesServicesGroup.ItemSizeContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetYearlyForcastBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetYearlyForcastBySizeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string custId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int yearId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string _itemSize;
-        
-        public ProdPlanServiceGetYearlyForcastBySizeRequest() {
-        }
-        
-        public ProdPlanServiceGetYearlyForcastBySizeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
-            this.CallContext = CallContext;
-            this.custId = custId;
-            this.yearId = yearId;
-            this._itemSize = _itemSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetYearlyForcastBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceGetYearlyForcastBySizeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
-        
-        public ProdPlanServiceGetYearlyForcastBySizeResponse() {
-        }
-        
-        public ProdPlanServiceGetYearlyForcastBySizeResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
             this.response = response;
         }
     }
@@ -6723,37 +6820,141 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceCreateCustPlanRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanByMonthRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.CustForcastPlanContract row;
+        public string custId;
         
-        public ProdPlanServiceCreateCustPlanRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int yearId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string monthId;
+        
+        public ProdPlanServiceGetCustPlanByMonthRequest() {
         }
         
-        public ProdPlanServiceCreateCustPlanRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
+        public ProdPlanServiceGetCustPlanByMonthRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
             this.CallContext = CallContext;
-            this.row = row;
+            this.custId = custId;
+            this.yearId = yearId;
+            this.monthId = monthId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceCreateCustPlanResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdPlanServiceCreateCustPlanResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetCustPlanByMonthResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetCustPlanByMonthResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long response;
+        public WcfMobile.SalesServicesGroup.CustForcastPlanContract[] response;
         
-        public ProdPlanServiceCreateCustPlanResponse() {
+        public ProdPlanServiceGetCustPlanByMonthResponse() {
         }
         
-        public ProdPlanServiceCreateCustPlanResponse(long response) {
+        public ProdPlanServiceGetCustPlanByMonthResponse(WcfMobile.SalesServicesGroup.CustForcastPlanContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetMonthlyForcastBySizeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string custId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemSize;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int yearId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public string monthId;
+        
+        public ProdPlanServiceGetMonthlyForcastBySizeRequest() {
+        }
+        
+        public ProdPlanServiceGetMonthlyForcastBySizeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
+            this.CallContext = CallContext;
+            this.custId = custId;
+            this._itemSize = _itemSize;
+            this.yearId = yearId;
+            this.monthId = monthId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetMonthlyForcastBySizeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
+        
+        public ProdPlanServiceGetMonthlyForcastBySizeResponse() {
+        }
+        
+        public ProdPlanServiceGetMonthlyForcastBySizeResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastSummaryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetMonthlyForcastSummaryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string custId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int yearId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string monthId;
+        
+        public ProdPlanServiceGetMonthlyForcastSummaryRequest() {
+        }
+        
+        public ProdPlanServiceGetMonthlyForcastSummaryRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            this.CallContext = CallContext;
+            this.custId = custId;
+            this.yearId = yearId;
+            this.monthId = monthId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetMonthlyForcastSummaryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetMonthlyForcastSummaryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
+        
+        public ProdPlanServiceGetMonthlyForcastSummaryResponse() {
+        }
+        
+        public ProdPlanServiceGetMonthlyForcastSummaryResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
             this.response = response;
         }
     }
@@ -6804,6 +7005,120 @@ namespace WcfMobile.SalesServicesGroup {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetYearlyForcastBySizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetYearlyForcastBySizeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string custId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int yearId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string _itemSize;
+        
+        public ProdPlanServiceGetYearlyForcastBySizeRequest() {
+        }
+        
+        public ProdPlanServiceGetYearlyForcastBySizeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
+            this.CallContext = CallContext;
+            this.custId = custId;
+            this.yearId = yearId;
+            this._itemSize = _itemSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetYearlyForcastBySizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetYearlyForcastBySizeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response;
+        
+        public ProdPlanServiceGetYearlyForcastBySizeResponse() {
+        }
+        
+        public ProdPlanServiceGetYearlyForcastBySizeResponse(WcfMobile.SalesServicesGroup.ForcastSummaryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetSortingLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetSortingLinesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdPlanServiceGetSortingLinesRequest() {
+        }
+        
+        public ProdPlanServiceGetSortingLinesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetSortingLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetSortingLinesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string[] response;
+        
+        public ProdPlanServiceGetSortingLinesResponse() {
+        }
+        
+        public ProdPlanServiceGetSortingLinesResponse(string[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetItemSizesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdPlanServiceGetItemSizesRequest() {
+        }
+        
+        public ProdPlanServiceGetItemSizesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdPlanServiceGetItemSizesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdPlanServiceGetItemSizesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ItemSizeContract[] response;
+        
+        public ProdPlanServiceGetItemSizesResponse() {
+        }
+        
+        public ProdPlanServiceGetItemSizesResponse(WcfMobile.SalesServicesGroup.ItemSizeContract[] response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProdPlanServiceChannel : WcfMobile.SalesServicesGroup.ProdPlanService, System.ServiceModel.IClientChannel {
     }
@@ -6829,6 +7144,31 @@ namespace WcfMobile.SalesServicesGroup {
         
         public ProdPlanServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse WcfMobile.SalesServicesGroup.ProdPlanService.CreateCustPlan(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
+            return base.Channel.CreateCustPlan(request);
+        }
+        
+        public long CreateCustPlan(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlan(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> WcfMobile.SalesServicesGroup.ProdPlanService.CreateCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
+            return base.Channel.CreateCustPlanAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> CreateCustPlanAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlanAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6881,170 +7221,6 @@ namespace WcfMobile.SalesServicesGroup {
             inValue.custId = custId;
             inValue.yearId = yearId;
             return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetCustPlanByMonth(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
-            return base.Channel.GetCustPlanByMonth(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanByMonth(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonth(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
-            return base.Channel.GetCustPlanByMonthAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonthAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request) {
-            return base.Channel.GetMonthlyForcastSummary(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastSummary(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request) {
-            return base.Channel.GetMonthlyForcastSummaryAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastSummaryAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetSortingLines(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request) {
-            return base.Channel.GetSortingLines(request);
-        }
-        
-        public string[] GetSortingLines(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetSortingLines(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetSortingLinesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request) {
-            return base.Channel.GetSortingLinesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> GetSortingLinesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetSortingLinesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request) {
-            return base.Channel.GetMonthlyForcastBySize(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue._itemSize = _itemSize;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastBySize(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request) {
-            return base.Channel.GetMonthlyForcastBySizeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue._itemSize = _itemSize;
-            inValue.yearId = yearId;
-            inValue.monthId = monthId;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastBySizeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetItemSizes(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
-            return base.Channel.GetItemSizes(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ItemSizeContract[] GetItemSizes(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetItemSizes(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetItemSizesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
-            return base.Channel.GetItemSizesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> GetItemSizesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetItemSizesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request) {
-            return base.Channel.GetYearlyForcastBySize(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue._itemSize = _itemSize;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetYearlyForcastBySize(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request) {
-            return base.Channel.GetYearlyForcastBySizeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest();
-            inValue.CallContext = CallContext;
-            inValue.custId = custId;
-            inValue.yearId = yearId;
-            inValue._itemSize = _itemSize;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetYearlyForcastBySizeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7105,28 +7281,92 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse WcfMobile.SalesServicesGroup.ProdPlanService.CreateCustPlan(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
-            return base.Channel.CreateCustPlan(request);
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetCustPlanByMonth(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
+            return base.Channel.GetCustPlanByMonth(request);
         }
         
-        public long CreateCustPlan(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
+        public WcfMobile.SalesServicesGroup.CustForcastPlanContract[] GetCustPlanByMonth(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlan(inValue);
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonth(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> WcfMobile.SalesServicesGroup.ProdPlanService.CreateCustPlanAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest request) {
-            return base.Channel.CreateCustPlanAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest request) {
+            return base.Channel.GetCustPlanByMonthAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanResponse> CreateCustPlanAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.CustForcastPlanContract row) {
-            WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceCreateCustPlanRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthResponse> GetCustPlanByMonthAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetCustPlanByMonthRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).CreateCustPlanAsync(inValue);
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanByMonthAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request) {
+            return base.Channel.GetMonthlyForcastBySize(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetMonthlyForcastBySize(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue._itemSize = _itemSize;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastBySize(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest request) {
+            return base.Channel.GetMonthlyForcastBySizeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeResponse> GetMonthlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, string _itemSize, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastBySizeRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue._itemSize = _itemSize;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastBySizeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request) {
+            return base.Channel.GetMonthlyForcastSummary(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetMonthlyForcastSummary(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastSummary(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest request) {
+            return base.Channel.GetMonthlyForcastSummaryAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryResponse> GetMonthlyForcastSummaryAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string monthId) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetMonthlyForcastSummaryRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue.monthId = monthId;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetMonthlyForcastSummaryAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7157,11 +7397,182 @@ namespace WcfMobile.SalesServicesGroup {
             inValue.sizeId = sizeId;
             return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetCustPlanBySizeAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request) {
+            return base.Channel.GetYearlyForcastBySize(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ForcastSummaryContract[] GetYearlyForcastBySize(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue._itemSize = _itemSize;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetYearlyForcastBySize(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest request) {
+            return base.Channel.GetYearlyForcastBySizeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeResponse> GetYearlyForcastBySizeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string custId, int yearId, string _itemSize) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetYearlyForcastBySizeRequest();
+            inValue.CallContext = CallContext;
+            inValue.custId = custId;
+            inValue.yearId = yearId;
+            inValue._itemSize = _itemSize;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetYearlyForcastBySizeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetSortingLines(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request) {
+            return base.Channel.GetSortingLines(request);
+        }
+        
+        public string[] GetSortingLines(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetSortingLines(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetSortingLinesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest request) {
+            return base.Channel.GetSortingLinesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesResponse> GetSortingLinesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetSortingLinesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetSortingLinesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse WcfMobile.SalesServicesGroup.ProdPlanService.GetItemSizes(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
+            return base.Channel.GetItemSizes(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ItemSizeContract[] GetItemSizes(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetItemSizes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> WcfMobile.SalesServicesGroup.ProdPlanService.GetItemSizesAsync(WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest request) {
+            return base.Channel.GetItemSizesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesResponse> GetItemSizesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest inValue = new WcfMobile.SalesServicesGroup.ProdPlanServiceGetItemSizesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.ProdPlanService)(this)).GetItemSizesAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.ProdRequestService")]
     public interface ProdRequestService {
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceUpdateProdRequestRequest) of message ProdRequestServiceUpdateProdRequestRequest does not match the default value (UpdateProdRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/UpdateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse UpdateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestSummaryByCustRequest) of message ProdRequestServiceGetProdRequestSummaryByCustRequest does not match the default value (GetProdRequestSummaryByCust)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRearrangeRequest) of message ProdRequestServiceGetProdSchedulesRearrangeRequest does not match the default value (GetProdSchedulesRearrange)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRequest) of message ProdRequestServiceGetProdSchedulesRequest does not match the default value (GetProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse GetProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByDateRequest) of message ProdRequestServiceGetProdSchedulesByDateRequest does not match the default value (GetProdSchedulesByDate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse GetProdSchedulesByDate(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse> GetProdSchedulesByDateAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByItemRequest) of message ProdRequestServiceGetProdSchedulesByItemRequest does not match the default value (GetProdSchedulesByItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse GetProdSchedulesByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse> GetProdSchedulesByItemAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestRequest) of message ProdRequestServiceGetProductionRequestRequest does not match the default value (GetProductionRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse GetProductionRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> GetProductionRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByRequestRequest) of message ProdRequestServiceGetProdSchedulesByRequestRequest does not match the default value (GetProdSchedulesByRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListBySizeRequest) of message ProdRequestServiceGetProdRequestListBySizeRequest does not match the default value (GetProdRequestListBySize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse GetProdRequestListBySize(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse> GetProdRequestListBySizeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestListRequest) of message ProdRequestServiceGetProductionRequestListRequest does not match the default value (GetProductionRequestList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse GetProductionRequestList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse> GetProductionRequestListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceSaveProdSchedulesRequest) of message ProdRequestServiceSaveProdSchedulesRequest does not match the default value (SaveProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/SaveProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/SaveProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/SaveProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse SaveProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/SaveProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/SaveProdSchedulesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse> SaveProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceCreateProdRequestRequest) of message ProdRequestServiceCreateProdRequestRequest does not match the default value (CreateProdRequest)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/CreateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse CreateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> CreateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceDeleteProdRequestRequest) of message ProdRequestServiceDeleteProdRequestRequest does not match the default value (DeleteProdRequest)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/DeleteProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/DeleteProdRequestResponse")]
@@ -7171,13 +7582,53 @@ namespace WcfMobile.SalesServicesGroup {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/DeleteProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/DeleteProdRequestResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse> DeleteProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByDateRequest) of message ProdRequestServiceGetProdSchedulesByDateRequest does not match the default value (GetProdSchedulesByDate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse GetProdSchedulesByDate(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetAllProductionLinesRequest) of message ProdRequestServiceGetAllProductionLinesRequest does not match the default value (GetAllProductionLines)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetAllProductionLines", ReplyAction="http://tempuri.org/ProdRequestService/GetAllProductionLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetAllProductionLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse GetAllProductionLines(WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateResponse> GetProdSchedulesByDateAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByDateRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetAllProductionLines", ReplyAction="http://tempuri.org/ProdRequestService/GetAllProductionLinesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse> GetAllProductionLinesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByDateListRequest) of message ProdRequestServiceGetProdRequestByDateListRequest does not match the default value (GetProdRequestByDateList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse GetProdRequestByDateList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse> GetProdRequestByDateListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByStatusListRequest) of message ProdRequestServiceGetProdRequestByStatusListRequest does not match the default value (GetProdRequestByStatusList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetLineCapacitiesRequest) of message ProdRequestServiceGetLineCapacitiesRequest does not match the default value (GetLineCapacities)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetLineCapacities", ReplyAction="http://tempuri.org/ProdRequestService/GetLineCapacitiesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetLineCapacitiesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse GetLineCapacities(WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetLineCapacities", ReplyAction="http://tempuri.org/ProdRequestService/GetLineCapacitiesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse> GetLineCapacitiesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListByItemRequest) of message ProdRequestServiceGetProdRequestListByItemRequest does not match the default value (GetProdRequestListByItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse GetProdRequestListByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse> GetProdRequestListByItemAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetNewProdSchedulesRequest) of message ProdRequestServiceGetNewProdSchedulesRequest does not match the default value (GetNewProdSchedules)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetNewProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetNewProdSchedulesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetNewProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse GetNewProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetNewProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetNewProdSchedulesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse> GetNewProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListByItemNotFinishedRequest) of message ProdRequestServiceGetProdRequestListByItemNotFinishedRequest does not match the default value (GetProdRequestListByItemNotFinished)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinished", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinishedResponse" +
@@ -7190,77 +7641,13 @@ namespace WcfMobile.SalesServicesGroup {
             "")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse> GetProdRequestListByItemNotFinishedAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByStatusListRequest) of message ProdRequestServiceGetProdRequestByStatusListRequest does not match the default value (GetProdRequestByStatusList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByMonthAndSizeRequest) of message ProdRequestServiceGetProdRequestByMonthAndSizeRequest does not match the default value (GetProdRequestByMonthAndSize)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse GetProdRequestByMonthAndSize(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestSummaryByCustRequest) of message ProdRequestServiceGetProdRequestSummaryByCustRequest does not match the default value (GetProdRequestSummaryByCust)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRequest) of message ProdRequestServiceGetProdSchedulesRequest does not match the default value (GetProdSchedules)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse GetProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedules", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByItemRequest) of message ProdRequestServiceGetProdSchedulesByItemRequest does not match the default value (GetProdSchedulesByItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse GetProdSchedulesByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse> GetProdSchedulesByItemAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListBySizeRequest) of message ProdRequestServiceGetProdRequestListBySizeRequest does not match the default value (GetProdRequestListBySize)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse GetProdRequestListBySize(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeResponse> GetProdRequestListBySizeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListBySizeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesByRequestRequest) of message ProdRequestServiceGetProdSchedulesByRequestRequest does not match the default value (GetProdSchedulesByRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceCreateProdRequestRequest) of message ProdRequestServiceCreateProdRequestRequest does not match the default value (CreateProdRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/CreateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse CreateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/CreateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/CreateProdRequestResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> CreateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdSchedulesRearrangeRequest) of message ProdRequestServiceGetProdSchedulesRearrangeRequest does not match the default value (GetProdSchedulesRearrange)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange", ReplyAction="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestListRequest) of message ProdRequestServiceGetProductionRequestListRequest does not match the default value (GetProductionRequestList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse GetProductionRequestList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequestList", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse> GetProductionRequestListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSize", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse> GetProdRequestByMonthAndSizeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdReqStatusLookupRequest) of message ProdRequestServiceGetProdReqStatusLookupRequest does not match the default value (GetProdReqStatusLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup", ReplyAction="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupResponse")]
@@ -7269,57 +7656,29 @@ namespace WcfMobile.SalesServicesGroup {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup", ReplyAction="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse> GetProdReqStatusLookupAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestByDateListRequest) of message ProdRequestServiceGetProdRequestByDateListRequest does not match the default value (GetProdRequestByDateList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse GetProdRequestByDateList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListResponse> GetProdRequestByDateListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByDateListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProdRequestListByItemRequest) of message ProdRequestServiceGetProdRequestListByItemRequest does not match the default value (GetProdRequestListByItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse GetProdRequestListByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem", ReplyAction="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse> GetProdRequestListByItemAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceUpdateProdRequestRequest) of message ProdRequestServiceUpdateProdRequestRequest does not match the default value (UpdateProdRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/UpdateProdRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse UpdateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/UpdateProdRequest", ReplyAction="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (ProdRequestServiceGetProductionRequestRequest) of message ProdRequestServiceGetProductionRequestRequest does not match the default value (GetProductionRequest)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesServicesGroup.AifFault), Action="http://tempuri.org/ProdRequestService/GetProductionRequestAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse GetProductionRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProdRequestService/GetProductionRequest", ReplyAction="http://tempuri.org/ProdRequestService/GetProductionRequestResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> GetProductionRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceDeleteProdRequestRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceUpdateProdRequestRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdRequestContract row;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public string _custReqId;
         
-        public ProdRequestServiceDeleteProdRequestRequest() {
+        public ProdRequestServiceUpdateProdRequestRequest() {
         }
         
-        public ProdRequestServiceDeleteProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+        public ProdRequestServiceUpdateProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
             this.CallContext = CallContext;
+            this.row = row;
             this._custReqId = _custReqId;
         }
     }
@@ -7327,16 +7686,146 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceDeleteProdRequestResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceUpdateProdRequestResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public bool response;
         
-        public ProdRequestServiceDeleteProdRequestResponse() {
+        public ProdRequestServiceUpdateProdRequestResponse() {
         }
         
-        public ProdRequestServiceDeleteProdRequestResponse(bool response) {
+        public ProdRequestServiceUpdateProdRequestResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestSummaryByCustRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestSummaryByCustResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.SummaryContract[] response;
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestSummaryByCustResponse(WcfMobile.SalesServicesGroup.SummaryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRearrangeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime dateStart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime dateEnd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public string _prodLineId;
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
+            this.CallContext = CallContext;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+            this._prodLineId = _prodLineId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRearrangeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRearrangeResponse(WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProdSchedulesRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdScheduleContract[] response;
+        
+        public ProdRequestServiceGetProdSchedulesResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesResponse(WcfMobile.SalesServicesGroup.ProdScheduleContract[] response) {
             this.response = response;
         }
     }
@@ -7394,190 +7883,6 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestListByItemNotFinishedRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestListByItemNotFinishedRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProdRequestListByItemNotFinishedRequest() {
-        }
-        
-        public ProdRequestServiceGetProdRequestListByItemNotFinishedRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this._itemId = _itemId;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestListByItemNotFinishedResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestListByItemNotFinishedResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
-        
-        public ProdRequestServiceGetProdRequestListByItemNotFinishedResponse() {
-        }
-        
-        public ProdRequestServiceGetProdRequestListByItemNotFinishedResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestByStatusListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public int _reqStatus;
-        
-        public ProdRequestServiceGetProdRequestByStatusListRequest() {
-        }
-        
-        public ProdRequestServiceGetProdRequestByStatusListRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-            this._reqStatus = _reqStatus;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestByStatusListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
-        
-        public ProdRequestServiceGetProdRequestByStatusListResponse() {
-        }
-        
-        public ProdRequestServiceGetProdRequestByStatusListResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestSummaryByCustRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustRequest() {
-        }
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestSummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdRequestSummaryByCustResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.SummaryContract[] response;
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustResponse() {
-        }
-        
-        public ProdRequestServiceGetProdRequestSummaryByCustResponse(WcfMobile.SalesServicesGroup.SummaryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int pageNo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int pageSize;
-        
-        public ProdRequestServiceGetProdSchedulesRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.pageNo = pageNo;
-            this.pageSize = pageSize;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdScheduleContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesResponse(WcfMobile.SalesServicesGroup.ProdScheduleContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class ProdRequestServiceGetProdSchedulesByItemRequest {
         
@@ -7621,6 +7926,82 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         public ProdRequestServiceGetProdSchedulesByItemResponse(WcfMobile.SalesServicesGroup.ProdScheduleContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custReqId;
+        
+        public ProdRequestServiceGetProductionRequestRequest() {
+        }
+        
+        public ProdRequestServiceGetProductionRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            this.CallContext = CallContext;
+            this._custReqId = _custReqId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProductionRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdRequestContract response;
+        
+        public ProdRequestServiceGetProductionRequestResponse() {
+        }
+        
+        public ProdRequestServiceGetProductionRequestResponse(WcfMobile.SalesServicesGroup.ProdRequestContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string requestId;
+        
+        public ProdRequestServiceGetProdSchedulesByRequestRequest() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
+            this.CallContext = CallContext;
+            this.requestId = requestId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdSchedulesByRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdScheduleContract response;
+        
+        public ProdRequestServiceGetProdSchedulesByRequestResponse() {
+        }
+        
+        public ProdRequestServiceGetProdSchedulesByRequestResponse(WcfMobile.SalesServicesGroup.ProdScheduleContract response) {
             this.response = response;
         }
     }
@@ -7678,128 +8059,6 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByRequestRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string requestId;
-        
-        public ProdRequestServiceGetProdSchedulesByRequestRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
-            this.CallContext = CallContext;
-            this.requestId = requestId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesByRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesByRequestResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdScheduleContract response;
-        
-        public ProdRequestServiceGetProdSchedulesByRequestResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesByRequestResponse(WcfMobile.SalesServicesGroup.ProdScheduleContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceCreateProdRequestRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract row;
-        
-        public ProdRequestServiceCreateProdRequestRequest() {
-        }
-        
-        public ProdRequestServiceCreateProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
-            this.CallContext = CallContext;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceCreateProdRequestResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string response;
-        
-        public ProdRequestServiceCreateProdRequestResponse() {
-        }
-        
-        public ProdRequestServiceCreateProdRequestResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRearrangeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        public WcfMobile.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime dateStart;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime dateEnd;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public string _prodLineId;
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeRequest() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
-            this.CallContext = CallContext;
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
-            this._prodLineId = _prodLineId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdSchedulesRearrangeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdSchedulesRearrangeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response;
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeResponse() {
-        }
-        
-        public ProdRequestServiceGetProdSchedulesRearrangeResponse(WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class ProdRequestServiceGetProductionRequestListRequest {
         
@@ -7846,16 +8105,130 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdReqStatusLookupRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceSaveProdSchedulesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
-        public ProdRequestServiceGetProdReqStatusLookupRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] lines;
+        
+        public ProdRequestServiceSaveProdSchedulesRequest() {
         }
         
-        public ProdRequestServiceGetProdReqStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+        public ProdRequestServiceSaveProdSchedulesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceSaveProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceSaveProdSchedulesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdRequestServiceSaveProdSchedulesResponse() {
+        }
+        
+        public ProdRequestServiceSaveProdSchedulesResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceCreateProdRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdRequestContract row;
+        
+        public ProdRequestServiceCreateProdRequestRequest() {
+        }
+        
+        public ProdRequestServiceCreateProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceCreateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceCreateProdRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string response;
+        
+        public ProdRequestServiceCreateProdRequestResponse() {
+        }
+        
+        public ProdRequestServiceCreateProdRequestResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceDeleteProdRequestRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custReqId;
+        
+        public ProdRequestServiceDeleteProdRequestRequest() {
+        }
+        
+        public ProdRequestServiceDeleteProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            this.CallContext = CallContext;
+            this._custReqId = _custReqId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceDeleteProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceDeleteProdRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public ProdRequestServiceDeleteProdRequestResponse() {
+        }
+        
+        public ProdRequestServiceDeleteProdRequestResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetAllProductionLinesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdRequestServiceGetAllProductionLinesRequest() {
+        }
+        
+        public ProdRequestServiceGetAllProductionLinesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -7863,16 +8236,16 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProdReqStatusLookupResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetAllProductionLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetAllProductionLinesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.LookupContract[] response;
+        public string[] response;
         
-        public ProdRequestServiceGetProdReqStatusLookupResponse() {
+        public ProdRequestServiceGetAllProductionLinesResponse() {
         }
         
-        public ProdRequestServiceGetProdReqStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
+        public ProdRequestServiceGetAllProductionLinesResponse(string[] response) {
             this.response = response;
         }
     }
@@ -7930,6 +8303,94 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByStatusListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageSize;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int _reqStatus;
+        
+        public ProdRequestServiceGetProdRequestByStatusListRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByStatusListRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
+            this._reqStatus = _reqStatus;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByStatusListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByStatusListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
+        
+        public ProdRequestServiceGetProdRequestByStatusListResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByStatusListResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetLineCapacitiesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _prodLineId;
+        
+        public ProdRequestServiceGetLineCapacitiesRequest() {
+        }
+        
+        public ProdRequestServiceGetLineCapacitiesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prodLineId) {
+            this.CallContext = CallContext;
+            this._prodLineId = _prodLineId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetLineCapacitiesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetLineCapacitiesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.SLCapacityContract[] response;
+        
+        public ProdRequestServiceGetLineCapacitiesResponse() {
+        }
+        
+        public ProdRequestServiceGetLineCapacitiesResponse(WcfMobile.SalesServicesGroup.SLCapacityContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestListByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class ProdRequestServiceGetProdRequestListByItemRequest {
         
@@ -7980,41 +8441,37 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceUpdateProdRequestRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetNewProdSchedulesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract row;
+        public System.DateTime dateStart;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public string _custReqId;
-        
-        public ProdRequestServiceUpdateProdRequestRequest() {
+        public ProdRequestServiceGetNewProdSchedulesRequest() {
         }
         
-        public ProdRequestServiceUpdateProdRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
+        public ProdRequestServiceGetNewProdSchedulesRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
             this.CallContext = CallContext;
-            this.row = row;
-            this._custReqId = _custReqId;
+            this.dateStart = dateStart;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceUpdateProdRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceUpdateProdRequestResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetNewProdSchedulesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetNewProdSchedulesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
+        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response;
         
-        public ProdRequestServiceUpdateProdRequestResponse() {
+        public ProdRequestServiceGetNewProdSchedulesResponse() {
         }
         
-        public ProdRequestServiceUpdateProdRequestResponse(bool response) {
+        public ProdRequestServiceGetNewProdSchedulesResponse(WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] response) {
             this.response = response;
         }
     }
@@ -8022,37 +8479,129 @@ namespace WcfMobile.SalesServicesGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestListByItemNotFinishedRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestListByItemNotFinishedRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.SalesServicesGroup.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _custReqId;
+        public string _custAccount;
         
-        public ProdRequestServiceGetProductionRequestRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int pageNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public int pageSize;
+        
+        public ProdRequestServiceGetProdRequestListByItemNotFinishedRequest() {
         }
         
-        public ProdRequestServiceGetProductionRequestRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+        public ProdRequestServiceGetProdRequestListByItemNotFinishedRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
             this.CallContext = CallContext;
-            this._custReqId = _custReqId;
+            this._custAccount = _custAccount;
+            this._itemId = _itemId;
+            this.pageNo = pageNo;
+            this.pageSize = pageSize;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProductionRequestResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class ProdRequestServiceGetProductionRequestResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestListByItemNotFinishedResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestListByItemNotFinishedResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.SalesServicesGroup.ProdRequestContract response;
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
         
-        public ProdRequestServiceGetProductionRequestResponse() {
+        public ProdRequestServiceGetProdRequestListByItemNotFinishedResponse() {
         }
         
-        public ProdRequestServiceGetProductionRequestResponse(WcfMobile.SalesServicesGroup.ProdRequestContract response) {
+        public ProdRequestServiceGetProdRequestListByItemNotFinishedResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByMonthAndSizeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByMonthAndSizeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string _itemSize;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int _monthOfYear;
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeRequest() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemSize, int _monthOfYear) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._itemSize = _itemSize;
+            this._monthOfYear = _monthOfYear;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdRequestByMonthAndSizeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdRequestByMonthAndSizeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] response;
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeResponse() {
+        }
+        
+        public ProdRequestServiceGetProdRequestByMonthAndSizeResponse(WcfMobile.SalesServicesGroup.ProdRequestContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdReqStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.SalesServicesGroup.CallContext CallContext;
+        
+        public ProdRequestServiceGetProdReqStatusLookupRequest() {
+        }
+        
+        public ProdRequestServiceGetProdReqStatusLookupRequest(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProdRequestServiceGetProdReqStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class ProdRequestServiceGetProdReqStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.SalesServicesGroup.LookupContract[] response;
+        
+        public ProdRequestServiceGetProdReqStatusLookupResponse() {
+        }
+        
+        public ProdRequestServiceGetProdReqStatusLookupResponse(WcfMobile.SalesServicesGroup.LookupContract[] response) {
             this.response = response;
         }
     }
@@ -8085,28 +8634,113 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.DeleteProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
-            return base.Channel.DeleteProdRequest(request);
+        WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.UpdateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
+            return base.Channel.UpdateProdRequest(request);
         }
         
-        public bool DeleteProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+        public bool UpdateProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
             inValue.CallContext = CallContext;
+            inValue.row = row;
             inValue._custReqId = _custReqId;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequest(inValue);
+            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequest(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.DeleteProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
-            return base.Channel.DeleteProdRequestAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
+            return base.Channel.UpdateProdRequestAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse> DeleteProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
             inValue.CallContext = CallContext;
+            inValue.row = row;
             inValue._custReqId = _custReqId;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequestAsync(inValue);
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequestAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
+            return base.Channel.GetProdRequestSummaryByCust(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.SummaryContract[] GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCust(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
+            return base.Channel.GetProdRequestSummaryByCustAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCustAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
+            return base.Channel.GetProdSchedulesRearrange(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
+            inValue.CallContext = CallContext;
+            inValue.dateStart = dateStart;
+            inValue.dateEnd = dateEnd;
+            inValue._prodLineId = _prodLineId;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrange(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
+            return base.Channel.GetProdSchedulesRearrangeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
+            inValue.CallContext = CallContext;
+            inValue.dateStart = dateStart;
+            inValue.dateEnd = dateEnd;
+            inValue._prodLineId = _prodLineId;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrangeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
+            return base.Channel.GetProdSchedules(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdScheduleContract[] GetProdSchedules(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedules(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
+            return base.Channel.GetProdSchedulesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8141,122 +8775,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinished(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
-            return base.Channel.GetProdRequestListByItemNotFinished(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] GetProdRequestListByItemNotFinished(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinished(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinishedAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
-            return base.Channel.GetProdRequestListByItemNotFinishedAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse> GetProdRequestListByItemNotFinishedAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinishedAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
-            return base.Channel.GetProdRequestByStatusList(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProdRequestContract[] GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            inValue._reqStatus = _reqStatus;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
-            return base.Channel.GetProdRequestByStatusListAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            inValue._reqStatus = _reqStatus;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusListAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
-            return base.Channel.GetProdRequestSummaryByCust(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.SummaryContract[] GetProdRequestSummaryByCust(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCust(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest request) {
-            return base.Channel.GetProdRequestSummaryByCustAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustResponse> GetProdRequestSummaryByCustAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestSummaryByCustRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestSummaryByCustAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
-            return base.Channel.GetProdSchedules(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProdScheduleContract[] GetProdSchedules(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedules(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest request) {
-            return base.Channel.GetProdSchedulesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesResponse> GetProdSchedulesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.pageNo = pageNo;
-            inValue.pageSize = pageSize;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByItemRequest request) {
             return base.Channel.GetProdSchedulesByItem(request);
         }
@@ -8285,6 +8803,56 @@ namespace WcfMobile.SalesServicesGroup {
             inValue.pageNo = pageNo;
             inValue.pageSize = pageSize;
             return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProductionRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
+            return base.Channel.GetProductionRequest(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdRequestContract GetProductionRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue._custReqId = _custReqId;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProductionRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
+            return base.Channel.GetProductionRequestAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> GetProductionRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue._custReqId = _custReqId;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequestAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request) {
+            return base.Channel.GetProdSchedulesByRequest(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdScheduleContract GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.requestId = requestId;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request) {
+            return base.Channel.GetProdSchedulesByRequestAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.requestId = requestId;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByRequestAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8319,85 +8887,6 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request) {
-            return base.Channel.GetProdSchedulesByRequest(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProdScheduleContract GetProdSchedulesByRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue.requestId = requestId;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest request) {
-            return base.Channel.GetProdSchedulesByRequestAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestResponse> GetProdSchedulesByRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string requestId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesByRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue.requestId = requestId;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesByRequestAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.CreateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
-            return base.Channel.CreateProdRequest(request);
-        }
-        
-        public string CreateProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequest(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.CreateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
-            return base.Channel.CreateProdRequestAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> CreateProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequestAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
-            return base.Channel.GetProdSchedulesRearrange(request);
-        }
-        
-        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] GetProdSchedulesRearrange(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
-            inValue.CallContext = CallContext;
-            inValue.dateStart = dateStart;
-            inValue.dateEnd = dateEnd;
-            inValue._prodLineId = _prodLineId;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrange(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest request) {
-            return base.Channel.GetProdSchedulesRearrangeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeResponse> GetProdSchedulesRearrangeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string _prodLineId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdSchedulesRearrangeRequest();
-            inValue.CallContext = CallContext;
-            inValue.dateStart = dateStart;
-            inValue.dateEnd = dateEnd;
-            inValue._prodLineId = _prodLineId;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdSchedulesRearrangeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProductionRequestList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestListRequest request) {
             return base.Channel.GetProductionRequestList(request);
         }
@@ -8427,26 +8916,101 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookup(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
-            return base.Channel.GetProdReqStatusLookup(request);
+        WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse WcfMobile.SalesServicesGroup.ProdRequestService.SaveProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request) {
+            return base.Channel.SaveProdSchedules(request);
         }
         
-        public WcfMobile.SalesServicesGroup.LookupContract[] GetProdReqStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
+        public bool SaveProdSchedules(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest();
             inValue.CallContext = CallContext;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookup(inValue);
+            inValue.lines = lines;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).SaveProdSchedules(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookupAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
-            return base.Channel.GetProdReqStatusLookupAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.SaveProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest request) {
+            return base.Channel.SaveProdSchedulesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse> GetProdReqStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse> SaveProdSchedulesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] lines) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesRequest();
             inValue.CallContext = CallContext;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookupAsync(inValue);
+            inValue.lines = lines;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).SaveProdSchedulesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.CreateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
+            return base.Channel.CreateProdRequest(request);
+        }
+        
+        public string CreateProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.CreateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest request) {
+            return base.Channel.CreateProdRequestAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestResponse> CreateProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceCreateProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).CreateProdRequestAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.DeleteProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
+            return base.Channel.DeleteProdRequest(request);
+        }
+        
+        public bool DeleteProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue._custReqId = _custReqId;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequest(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.DeleteProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest request) {
+            return base.Channel.DeleteProdRequestAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestResponse> DeleteProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceDeleteProdRequestRequest();
+            inValue.CallContext = CallContext;
+            inValue._custReqId = _custReqId;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).DeleteProdRequestAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetAllProductionLines(WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request) {
+            return base.Channel.GetAllProductionLines(request);
+        }
+        
+        public string[] GetAllProductionLines(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetAllProductionLines(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetAllProductionLinesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest request) {
+            return base.Channel.GetAllProductionLinesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse> GetAllProductionLinesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetAllProductionLinesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8481,6 +9045,62 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
+            return base.Channel.GetProdRequestByStatusList(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] GetProdRequestByStatusList(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            inValue._reqStatus = _reqStatus;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest request) {
+            return base.Channel.GetProdRequestByStatusListAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListResponse> GetProdRequestByStatusListAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, int pageNo, int pageSize, int _reqStatus) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByStatusListRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            inValue._reqStatus = _reqStatus;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByStatusListAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetLineCapacities(WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request) {
+            return base.Channel.GetLineCapacities(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.SLCapacityContract[] GetLineCapacities(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prodLineId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest();
+            inValue.CallContext = CallContext;
+            inValue._prodLineId = _prodLineId;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetLineCapacities(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetLineCapacitiesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest request) {
+            return base.Channel.GetLineCapacitiesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse> GetLineCapacitiesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _prodLineId) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesRequest();
+            inValue.CallContext = CallContext;
+            inValue._prodLineId = _prodLineId;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetLineCapacitiesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestListByItem(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemRequest request) {
             return base.Channel.GetProdRequestListByItem(request);
         }
@@ -8512,55 +9132,111 @@ namespace WcfMobile.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.UpdateProdRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
-            return base.Channel.UpdateProdRequest(request);
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetNewProdSchedules(WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request) {
+            return base.Channel.GetNewProdSchedules(request);
         }
         
-        public bool UpdateProdRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
+        public WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract[] GetNewProdSchedules(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            inValue._custReqId = _custReqId;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequest(inValue);
+            inValue.dateStart = dateStart;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetNewProdSchedules(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest request) {
-            return base.Channel.UpdateProdRequestAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetNewProdSchedulesAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest request) {
+            return base.Channel.GetNewProdSchedulesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestResponse> UpdateProdRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, WcfMobile.SalesServicesGroup.ProdRequestContract row, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceUpdateProdRequestRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse> GetNewProdSchedulesAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, System.DateTime dateStart) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesRequest();
             inValue.CallContext = CallContext;
-            inValue.row = row;
-            inValue._custReqId = _custReqId;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequestAsync(inValue);
+            inValue.dateStart = dateStart;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetNewProdSchedulesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProductionRequest(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
-            return base.Channel.GetProductionRequest(request);
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinished(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
+            return base.Channel.GetProdRequestListByItemNotFinished(request);
         }
         
-        public WcfMobile.SalesServicesGroup.ProdRequestContract GetProductionRequest(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] GetProdRequestListByItemNotFinished(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
             inValue.CallContext = CallContext;
-            inValue._custReqId = _custReqId;
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequest(inValue);
+            inValue._custAccount = _custAccount;
+            inValue._itemId = _itemId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinished(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProductionRequestAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest request) {
-            return base.Channel.GetProductionRequestAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestListByItemNotFinishedAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest request) {
+            return base.Channel.GetProdRequestListByItemNotFinishedAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestResponse> GetProductionRequestAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custReqId) {
-            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProductionRequestRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedResponse> GetProdRequestListByItemNotFinishedAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemId, int pageNo, int pageSize) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestListByItemNotFinishedRequest();
             inValue.CallContext = CallContext;
-            inValue._custReqId = _custReqId;
-            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProductionRequestAsync(inValue);
+            inValue._custAccount = _custAccount;
+            inValue._itemId = _itemId;
+            inValue.pageNo = pageNo;
+            inValue.pageSize = pageSize;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestListByItemNotFinishedAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByMonthAndSize(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request) {
+            return base.Channel.GetProdRequestByMonthAndSize(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.ProdRequestContract[] GetProdRequestByMonthAndSize(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemSize, int _monthOfYear) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._itemSize = _itemSize;
+            inValue._monthOfYear = _monthOfYear;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByMonthAndSize(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdRequestByMonthAndSizeAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest request) {
+            return base.Channel.GetProdRequestByMonthAndSizeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse> GetProdRequestByMonthAndSizeAsync(WcfMobile.SalesServicesGroup.CallContext CallContext, string _custAccount, string _itemSize, int _monthOfYear) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._itemSize = _itemSize;
+            inValue._monthOfYear = _monthOfYear;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdRequestByMonthAndSizeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse WcfMobile.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookup(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
+            return base.Channel.GetProdReqStatusLookup(request);
+        }
+        
+        public WcfMobile.SalesServicesGroup.LookupContract[] GetProdReqStatusLookup(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse retVal = ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse> WcfMobile.SalesServicesGroup.ProdRequestService.GetProdReqStatusLookupAsync(WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest request) {
+            return base.Channel.GetProdReqStatusLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupResponse> GetProdReqStatusLookupAsync(WcfMobile.SalesServicesGroup.CallContext CallContext) {
+            WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest inValue = new WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdReqStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.SalesServicesGroup.ProdRequestService)(this)).GetProdReqStatusLookupAsync(inValue);
         }
     }
 }

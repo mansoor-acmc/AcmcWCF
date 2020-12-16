@@ -1,0 +1,2 @@
+﻿http://FAC-PROD-AX03:8101/DynamicsAx
+http://FAC-STAGE-AX04:8101/DynamicsAx

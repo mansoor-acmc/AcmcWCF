@@ -403,6 +403,8 @@ namespace WcfMobile.SalesOrderServices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventByGrLocContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryLineContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerDeliveryContract))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
@@ -429,6 +431,10 @@ namespace WcfMobile.SalesOrderServices {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class SalesTableContract : XppObjectBase {
+        
+        private string customerIdField;
+        
+        private string customerNameField;
         
         private System.DateTime deliveryDateField;
         
@@ -472,10 +478,40 @@ namespace WcfMobile.SalesOrderServices {
         
         private bool stopLoadFieldSpecified;
         
+        private int truckLoadLineField;
+        
+        private bool truckLoadLineFieldSpecified;
+        
         private string truckPlateField;
         
+        private string truckTicketField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+                this.RaisePropertyChanged("CustomerId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+                this.RaisePropertyChanged("CustomerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public System.DateTime DeliveryDate {
             get {
                 return this.deliveryDateField;
@@ -499,7 +535,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
         public string DeliveryMode {
             get {
                 return this.deliveryModeField;
@@ -511,7 +547,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
         public string DeliveryName {
             get {
                 return this.deliveryNameField;
@@ -523,7 +559,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
         public string DriverName {
             get {
                 return this.driverNameField;
@@ -535,7 +571,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public NoYes HalfPallet {
             get {
                 return this.halfPalletField;
@@ -559,7 +595,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
         public string PickingId {
             get {
                 return this.pickingIdField;
@@ -571,7 +607,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
         public string SalesId {
             get {
                 return this.salesIdField;
@@ -583,7 +619,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=7)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=9)]
         public SalesLineContract[] SalesLines {
             get {
                 return this.salesLinesField;
@@ -595,7 +631,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public string SalesName {
             get {
                 return this.salesNameField;
@@ -607,7 +643,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public SalesStatus SalesStatus {
             get {
                 return this.salesStatusField;
@@ -631,7 +667,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public SalesType SalesType {
             get {
                 return this.salesTypeField;
@@ -655,7 +691,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public NoYes SameConfiguration {
             get {
                 return this.sameConfigurationField;
@@ -679,7 +715,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public System.DateTime StartLoad {
             get {
                 return this.startLoadField;
@@ -703,7 +739,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public System.DateTime StopLoad {
             get {
                 return this.stopLoadField;
@@ -727,7 +763,31 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public int TruckLoadLine {
+            get {
+                return this.truckLoadLineField;
+            }
+            set {
+                this.truckLoadLineField = value;
+                this.RaisePropertyChanged("TruckLoadLine");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TruckLoadLineSpecified {
+            get {
+                return this.truckLoadLineFieldSpecified;
+            }
+            set {
+                this.truckLoadLineFieldSpecified = value;
+                this.RaisePropertyChanged("TruckLoadLineSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public string TruckPlate {
             get {
                 return this.truckPlateField;
@@ -735,6 +795,18 @@ namespace WcfMobile.SalesOrderServices {
             set {
                 this.truckPlateField = value;
                 this.RaisePropertyChanged("TruckPlate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        public string TruckTicket {
+            get {
+                return this.truckTicketField;
+            }
+            set {
+                this.truckTicketField = value;
+                this.RaisePropertyChanged("TruckTicket");
             }
         }
     }
@@ -1887,15 +1959,557 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class PalletContract : XppObjectBase {
+        
+        private string gradeField;
+        
+        private string itemIdField;
+        
+        private string nameField;
+        
+        private decimal salesQtyField;
+        
+        private bool salesQtyFieldSpecified;
+        
+        private string serialField;
+        
+        private string shadeField;
+        
+        private string sizeField;
+        
+        private string warehouseLocationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ItemId {
+            get {
+                return this.itemIdField;
+            }
+            set {
+                this.itemIdField = value;
+                this.RaisePropertyChanged("ItemId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+                this.RaisePropertyChanged("SalesQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string Serial {
+            get {
+                return this.serialField;
+            }
+            set {
+                this.serialField = value;
+                this.RaisePropertyChanged("Serial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+                this.RaisePropertyChanged("Shade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+                this.RaisePropertyChanged("Size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string WarehouseLocation {
+            get {
+                return this.warehouseLocationField;
+            }
+            set {
+                this.warehouseLocationField = value;
+                this.RaisePropertyChanged("WarehouseLocation");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class FGDeliveryLineContract : XppObjectBase {
+        
+        private string gradeField;
+        
+        private string itemIdField;
+        
+        private string nameField;
+        
+        private PalletContract[] palletsField;
+        
+        private decimal reservedPercentField;
+        
+        private bool reservedPercentFieldSpecified;
+        
+        private decimal reservedQtyField;
+        
+        private bool reservedQtyFieldSpecified;
+        
+        private string salesIdField;
+        
+        private decimal salesQtyField;
+        
+        private bool salesQtyFieldSpecified;
+        
+        private decimal salesQtyBoxField;
+        
+        private bool salesQtyBoxFieldSpecified;
+        
+        private decimal salesQtyPalletField;
+        
+        private bool salesQtyPalletFieldSpecified;
+        
+        private decimal salesQtySQMField;
+        
+        private bool salesQtySQMFieldSpecified;
+        
+        private decimal salesQtySQMRemainingField;
+        
+        private bool salesQtySQMRemainingFieldSpecified;
+        
+        private decimal salesQtySQMReservedField;
+        
+        private bool salesQtySQMReservedFieldSpecified;
+        
+        private string salesUnitField;
+        
+        private string serialField;
+        
+        private string shadeField;
+        
+        private string sizeField;
+        
+        private string warehouseField;
+        
+        private string wLocationIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ItemId {
+            get {
+                return this.itemIdField;
+            }
+            set {
+                this.itemIdField = value;
+                this.RaisePropertyChanged("ItemId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=3)]
+        public PalletContract[] Pallets {
+            get {
+                return this.palletsField;
+            }
+            set {
+                this.palletsField = value;
+                this.RaisePropertyChanged("Pallets");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public decimal ReservedPercent {
+            get {
+                return this.reservedPercentField;
+            }
+            set {
+                this.reservedPercentField = value;
+                this.RaisePropertyChanged("ReservedPercent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReservedPercentSpecified {
+            get {
+                return this.reservedPercentFieldSpecified;
+            }
+            set {
+                this.reservedPercentFieldSpecified = value;
+                this.RaisePropertyChanged("ReservedPercentSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public decimal ReservedQty {
+            get {
+                return this.reservedQtyField;
+            }
+            set {
+                this.reservedQtyField = value;
+                this.RaisePropertyChanged("ReservedQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReservedQtySpecified {
+            get {
+                return this.reservedQtyFieldSpecified;
+            }
+            set {
+                this.reservedQtyFieldSpecified = value;
+                this.RaisePropertyChanged("ReservedQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+                this.RaisePropertyChanged("SalesId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+                this.RaisePropertyChanged("SalesQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public decimal SalesQtyBox {
+            get {
+                return this.salesQtyBoxField;
+            }
+            set {
+                this.salesQtyBoxField = value;
+                this.RaisePropertyChanged("SalesQtyBox");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyBoxSpecified {
+            get {
+                return this.salesQtyBoxFieldSpecified;
+            }
+            set {
+                this.salesQtyBoxFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtyBoxSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public decimal SalesQtyPallet {
+            get {
+                return this.salesQtyPalletField;
+            }
+            set {
+                this.salesQtyPalletField = value;
+                this.RaisePropertyChanged("SalesQtyPallet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyPalletSpecified {
+            get {
+                return this.salesQtyPalletFieldSpecified;
+            }
+            set {
+                this.salesQtyPalletFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtyPalletSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public decimal SalesQtySQM {
+            get {
+                return this.salesQtySQMField;
+            }
+            set {
+                this.salesQtySQMField = value;
+                this.RaisePropertyChanged("SalesQtySQM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMSpecified {
+            get {
+                return this.salesQtySQMFieldSpecified;
+            }
+            set {
+                this.salesQtySQMFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public decimal SalesQtySQMRemaining {
+            get {
+                return this.salesQtySQMRemainingField;
+            }
+            set {
+                this.salesQtySQMRemainingField = value;
+                this.RaisePropertyChanged("SalesQtySQMRemaining");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMRemainingSpecified {
+            get {
+                return this.salesQtySQMRemainingFieldSpecified;
+            }
+            set {
+                this.salesQtySQMRemainingFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMRemainingSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public decimal SalesQtySQMReserved {
+            get {
+                return this.salesQtySQMReservedField;
+            }
+            set {
+                this.salesQtySQMReservedField = value;
+                this.RaisePropertyChanged("SalesQtySQMReserved");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMReservedSpecified {
+            get {
+                return this.salesQtySQMReservedFieldSpecified;
+            }
+            set {
+                this.salesQtySQMReservedFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMReservedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        public string SalesUnit {
+            get {
+                return this.salesUnitField;
+            }
+            set {
+                this.salesUnitField = value;
+                this.RaisePropertyChanged("SalesUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public string Serial {
+            get {
+                return this.serialField;
+            }
+            set {
+                this.serialField = value;
+                this.RaisePropertyChanged("Serial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+                this.RaisePropertyChanged("Shade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        public string Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+                this.RaisePropertyChanged("Size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
+        public string Warehouse {
+            get {
+                return this.warehouseField;
+            }
+            set {
+                this.warehouseField = value;
+                this.RaisePropertyChanged("Warehouse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        public string wLocationId {
+            get {
+                return this.wLocationIdField;
+            }
+            set {
+                this.wLocationIdField = value;
+                this.RaisePropertyChanged("wLocationId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class FGDeliveryContract : XppObjectBase {
+        
+        private string barcode_Code128Field;
+        
+        private string customerIdField;
+        
+        private string customerNameField;
+        
+        private string deliveryAddressField;
         
         private System.DateTime deliveryDateField;
         
         private bool deliveryDateFieldSpecified;
         
+        private FGDeliveryLineContract[] deliveryItemsField;
+        
+        private PickingListStatus deliveryStatusField;
+        
+        private bool deliveryStatusFieldSpecified;
+        
         private int lineNumField;
         
         private bool lineNumFieldSpecified;
+        
+        private string mobileField;
+        
+        private System.DateTime packingSlipGenerateField;
+        
+        private bool packingSlipGenerateFieldSpecified;
         
         private string packingSlipNumField;
         
@@ -1907,6 +2521,14 @@ namespace WcfMobile.SalesOrderServices {
         
         private string salesIdField;
         
+        private System.DateTime startLoadTruckField;
+        
+        private bool startLoadTruckFieldSpecified;
+        
+        private System.DateTime stopLoadTruckField;
+        
+        private bool stopLoadTruckFieldSpecified;
+        
         private string ticketField;
         
         private string truckDriverField;
@@ -1914,7 +2536,55 @@ namespace WcfMobile.SalesOrderServices {
         private string truckPlateNumField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Barcode_Code128 {
+            get {
+                return this.barcode_Code128Field;
+            }
+            set {
+                this.barcode_Code128Field = value;
+                this.RaisePropertyChanged("Barcode_Code128");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+                this.RaisePropertyChanged("CustomerId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+                this.RaisePropertyChanged("CustomerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string DeliveryAddress {
+            get {
+                return this.deliveryAddressField;
+            }
+            set {
+                this.deliveryAddressField = value;
+                this.RaisePropertyChanged("DeliveryAddress");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public System.DateTime DeliveryDate {
             get {
                 return this.deliveryDateField;
@@ -1938,7 +2608,43 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
+        public FGDeliveryLineContract[] DeliveryItems {
+            get {
+                return this.deliveryItemsField;
+            }
+            set {
+                this.deliveryItemsField = value;
+                this.RaisePropertyChanged("DeliveryItems");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public PickingListStatus DeliveryStatus {
+            get {
+                return this.deliveryStatusField;
+            }
+            set {
+                this.deliveryStatusField = value;
+                this.RaisePropertyChanged("DeliveryStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryStatusSpecified {
+            get {
+                return this.deliveryStatusFieldSpecified;
+            }
+            set {
+                this.deliveryStatusFieldSpecified = value;
+                this.RaisePropertyChanged("DeliveryStatusSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int LineNum {
             get {
                 return this.lineNumField;
@@ -1962,7 +2668,43 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string Mobile {
+            get {
+                return this.mobileField;
+            }
+            set {
+                this.mobileField = value;
+                this.RaisePropertyChanged("Mobile");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public System.DateTime PackingSlipGenerate {
+            get {
+                return this.packingSlipGenerateField;
+            }
+            set {
+                this.packingSlipGenerateField = value;
+                this.RaisePropertyChanged("PackingSlipGenerate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PackingSlipGenerateSpecified {
+            get {
+                return this.packingSlipGenerateFieldSpecified;
+            }
+            set {
+                this.packingSlipGenerateFieldSpecified = value;
+                this.RaisePropertyChanged("PackingSlipGenerateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public string PackingSlipNum {
             get {
                 return this.packingSlipNumField;
@@ -1974,7 +2716,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
         public string PickingId {
             get {
                 return this.pickingIdField;
@@ -1986,7 +2728,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
         public string QuantityInPallets {
             get {
                 return this.quantityInPalletsField;
@@ -1998,7 +2740,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
         public string QuantityInSQM {
             get {
                 return this.quantityInSQMField;
@@ -2010,7 +2752,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
         public string SalesId {
             get {
                 return this.salesIdField;
@@ -2022,7 +2764,55 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public System.DateTime StartLoadTruck {
+            get {
+                return this.startLoadTruckField;
+            }
+            set {
+                this.startLoadTruckField = value;
+                this.RaisePropertyChanged("StartLoadTruck");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StartLoadTruckSpecified {
+            get {
+                return this.startLoadTruckFieldSpecified;
+            }
+            set {
+                this.startLoadTruckFieldSpecified = value;
+                this.RaisePropertyChanged("StartLoadTruckSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public System.DateTime StopLoadTruck {
+            get {
+                return this.stopLoadTruckField;
+            }
+            set {
+                this.stopLoadTruckField = value;
+                this.RaisePropertyChanged("StopLoadTruck");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StopLoadTruckSpecified {
+            get {
+                return this.stopLoadTruckFieldSpecified;
+            }
+            set {
+                this.stopLoadTruckFieldSpecified = value;
+                this.RaisePropertyChanged("StopLoadTruckSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public string Ticket {
             get {
                 return this.ticketField;
@@ -2034,7 +2824,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
         public string TruckDriver {
             get {
                 return this.truckDriverField;
@@ -2046,7 +2836,7 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
         public string TruckPlateNum {
             get {
                 return this.truckPlateNumField;
@@ -2056,6 +2846,22 @@ namespace WcfMobile.SalesOrderServices {
                 this.RaisePropertyChanged("TruckPlateNum");
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public enum PickingListStatus {
+        
+        /// <remarks/>
+        Opened,
+        
+        /// <remarks/>
+        Closed,
+        
+        /// <remarks/>
+        Cancelled,
     }
     
     /// <remarks/>
@@ -2169,26 +2975,6 @@ namespace WcfMobile.SalesOrderServices {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesOrderServices.SOPickService")]
     public interface SOPickService {
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReservePalletsRequest) of message SOPickServiceReservePalletsRequest does not match the default value (ReservePallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/ReservePalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceReservePalletsResponse ReservePallets(WcfMobile.SalesOrderServices.SOPickServiceReservePalletsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReservePalletsResponse> ReservePalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceReservePalletsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindPickingListRequest) of message SOPickServiceFindPickingListRequest does not match the default value (findPickingList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findPickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse findPickingList(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> findPickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSaveHistoryRequest) of message SOPickServiceSaveHistoryRequest does not match the default value (SaveHistory)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SaveHistory", ReplyAction="http://tempuri.org/SOPickService/SaveHistoryResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/SaveHistoryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -2199,105 +2985,25 @@ namespace WcfMobile.SalesOrderServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SaveHistory", ReplyAction="http://tempuri.org/SOPickService/SaveHistoryResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse> SaveHistoryAsync(WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceLoginDeviceRequest) of message SOPickServiceLoginDeviceRequest does not match the default value (LoginDevice)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/LoginDeviceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetPalletInfoRequest) of message SOPickServiceGetPalletInfoRequest does not match the default value (GetPalletInfo)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetPalletInfo", ReplyAction="http://tempuri.org/SOPickService/GetPalletInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetPalletInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse LoginDevice(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse GetPalletInfo(WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> LoginDeviceAsync(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetPalletInfo", ReplyAction="http://tempuri.org/SOPickService/GetPalletInfoResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse> GetPalletInfoAsync(WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableMultiRequest) of message SOPickServiceCheckPalletAvailableMultiRequest does not match the default value (CheckPalletAvailableMulti)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReadRequest) of message SOPickServiceReadRequest does not match the default value (read)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceReadResponse read(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableRequest) of message SOPickServiceCheckPalletAvailableRequest does not match the default value (CheckPalletAvailable)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse CheckPalletAvailable(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByQtyRequest) of message SOPickServiceCustomersDeliveryByQtyRequest does not match the default value (CustomersDeliveryByQty)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse CustomersDeliveryByQty(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliveriesRequest) of message SOPickServiceGetDeliveriesRequest does not match the default value (GetDeliveries)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetDeliveriesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse GetDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> GetDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetOpenPickingListByCustByItemRequest) of message SOPickServiceGetOpenPickingListByCustByItemRequest does not match the default value (GetOpenPickingListByCustByItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReceivePickingListRequest) of message SOPickServiceReceivePickingListRequest does not match the default value (ReceivePickingList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/ReceivePickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse ReceivePickingList(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> ReceivePickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrdersListRequest) of message SOPickServiceFindSalesOrdersListRequest does not match the default value (findSalesOrdersList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrdersListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListResponse findSalesOrdersList(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListResponse> findSalesOrdersListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesRequest) of message SOPickServiceGetCustomerDeliveriesRequest does not match the default value (GetCustomerDeliveries)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse GetCustomerDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSavePickingLoadRequest) of message SOPickServiceSavePickingLoadRequest does not match the default value (SavePickingLoad)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/SavePickingLoadAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse SavePickingLoad(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> SavePickingLoadAsync(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> readAsync(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceUnreservePalletRequest) of message SOPickServiceUnreservePalletRequest does not match the default value (UnreservePallet)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/UnreservePallet", ReplyAction="http://tempuri.org/SOPickService/UnreservePalletResponse")]
@@ -2309,6 +3015,76 @@ namespace WcfMobile.SalesOrderServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/UnreservePallet", ReplyAction="http://tempuri.org/SOPickService/UnreservePalletResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse> UnreservePalletAsync(WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReceivePickingListRequest) of message SOPickServiceReceivePickingListRequest does not match the default value (ReceivePickingList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/ReceivePickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse ReceivePickingList(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> ReceivePickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReservePalletsRequest) of message SOPickServiceReservePalletsRequest does not match the default value (ReservePallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/ReservePalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceReservePalletsResponse ReservePallets(WcfMobile.SalesOrderServices.SOPickServiceReservePalletsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReservePalletsResponse> ReservePalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceReservePalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSavePickingLoadRequest) of message SOPickServiceSavePickingLoadRequest does not match the default value (SavePickingLoad)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/SavePickingLoadAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse SavePickingLoad(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> SavePickingLoadAsync(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrdersListRequest) of message SOPickServiceFindSalesOrdersListRequest does not match the default value (findSalesOrdersList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrdersListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListResponse findSalesOrdersList(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListResponse> findSalesOrdersListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrdersListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDailyDeliverySummaryByCustRequest) of message SOPickServiceGetDailyDeliverySummaryByCustRequest does not match the default value (GetDailyDeliverySummaryByCust)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetLatestPalletsRequest) of message SOPickServiceGetLatestPalletsRequest does not match the default value (GetLatestPallets)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetLatestPallets", ReplyAction="http://tempuri.org/SOPickService/GetLatestPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetLatestPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse GetLatestPallets(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetLatestPallets", ReplyAction="http://tempuri.org/SOPickService/GetLatestPalletsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> GetLatestPalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceChangeTruckLoadingLineRequest) of message SOPickServiceChangeTruckLoadingLineRequest does not match the default value (ChangeTruckLoadingLine)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine", ReplyAction="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse ChangeTruckLoadingLine(WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine", ReplyAction="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse> ChangeTruckLoadingLineAsync(WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByTrucksRequest) of message SOPickServiceCustomersDeliveryByTrucksRequest does not match the default value (CustomersDeliveryByTrucks)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -2319,25 +3095,35 @@ namespace WcfMobile.SalesOrderServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByTrucksResponse> CustomersDeliveryByTrucksAsync(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByTrucksRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrderRequest) of message SOPickServiceFindSalesOrderRequest does not match the default value (findSalesOrder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindRequest) of message SOPickServiceFindRequest does not match the default value (find)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse findSalesOrder(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceFindResponse find(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> findSalesOrderAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> findAsync(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReadRequest) of message SOPickServiceReadRequest does not match the default value (read)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesRequest) of message SOPickServiceGetCustomerDeliveriesRequest does not match the default value (GetCustomerDeliveries)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceReadResponse read(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse GetCustomerDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> readAsync(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesByStatusRequest) of message SOPickServiceGetCustomerDeliveriesByStatusRequest does not match the default value (GetCustomerDeliveriesByStatus)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliveryStatusLookupRequest) of message SOPickServiceGetDeliveryStatusLookupRequest does not match the default value (GetDeliveryStatusLookup)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookup", ReplyAction="http://tempuri.org/SOPickService/GetDeliveryStatusLookupResponse")]
@@ -2359,16 +3145,6 @@ namespace WcfMobile.SalesOrderServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDeliverySummaryByCustResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliverySummaryByCustResponse> GetDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDeliverySummaryByCustRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDailyDeliverySummaryByCustRequest) of message SOPickServiceGetDailyDeliverySummaryByCustRequest does not match the default value (GetDailyDeliverySummaryByCust)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetFGLinesRequest) of message SOPickServiceGetFGLinesRequest does not match the default value (GetFGLines)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetFGLines", ReplyAction="http://tempuri.org/SOPickService/GetFGLinesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetFGLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -2379,35 +3155,95 @@ namespace WcfMobile.SalesOrderServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetFGLines", ReplyAction="http://tempuri.org/SOPickService/GetFGLinesResponse")]
         System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetFGLinesResponse> GetFGLinesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetFGLinesRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetLatestPalletsRequest) of message SOPickServiceGetLatestPalletsRequest does not match the default value (GetLatestPallets)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetLatestPallets", ReplyAction="http://tempuri.org/SOPickService/GetLatestPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetLatestPalletsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetOpenPickingListByCustByItemRequest) of message SOPickServiceGetOpenPickingListByCustByItemRequest does not match the default value (GetOpenPickingListByCustByItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse GetLatestPallets(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetLatestPallets", ReplyAction="http://tempuri.org/SOPickService/GetLatestPalletsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> GetLatestPalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesByStatusRequest) of message SOPickServiceGetCustomerDeliveriesByStatusRequest does not match the default value (GetCustomerDeliveriesByStatus)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableRequest) of message SOPickServiceCheckPalletAvailableRequest does not match the default value (CheckPalletAvailable)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse CheckPalletAvailable(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindRequest) of message SOPickServiceFindRequest does not match the default value (find)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableMultiRequest) of message SOPickServiceCheckPalletAvailableMultiRequest does not match the default value (CheckPalletAvailableMulti)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.SalesOrderServices.SOPickServiceFindResponse find(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request);
+        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> findAsync(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetSingleDeliveryRequest) of message SOPickServiceGetSingleDeliveryRequest does not match the default value (GetSingleDelivery)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetSingleDelivery", ReplyAction="http://tempuri.org/SOPickService/GetSingleDeliveryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetSingleDeliveryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse GetSingleDelivery(WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetSingleDelivery", ReplyAction="http://tempuri.org/SOPickService/GetSingleDeliveryResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse> GetSingleDeliveryAsync(WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindPickingListRequest) of message SOPickServiceFindPickingListRequest does not match the default value (findPickingList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findPickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse findPickingList(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> findPickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrderRequest) of message SOPickServiceFindSalesOrderRequest does not match the default value (findSalesOrder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse findSalesOrder(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> findSalesOrderAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceLoginDeviceRequest) of message SOPickServiceLoginDeviceRequest does not match the default value (LoginDevice)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/LoginDeviceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse LoginDevice(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> LoginDeviceAsync(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliveriesRequest) of message SOPickServiceGetDeliveriesRequest does not match the default value (GetDeliveries)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/GetDeliveriesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse GetDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> GetDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByQtyRequest) of message SOPickServiceCustomersDeliveryByQtyRequest does not match the default value (CustomersDeliveryByQty)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.SalesOrderServices.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse CustomersDeliveryByQty(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request);
     }
     
     /// <remarks/>
@@ -2562,124 +3398,6 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReservePalletsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string configId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string device;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
-        public long lineRecId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.SalesLineContract[] pallets;
-        
-        public SOPickServiceReservePalletsRequest() {
-        }
-        
-        public SOPickServiceReservePalletsRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.SalesLineContract[] pallets) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-            this.itemId = itemId;
-            this.configId = configId;
-            this.pickingId = pickingId;
-            this.userName = userName;
-            this.device = device;
-            this.lineRecId = lineRecId;
-            this.pallets = pallets;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReservePalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.SalesLineContract[] response;
-        
-        public SOPickServiceReservePalletsResponse() {
-        }
-        
-        public SOPickServiceReservePalletsResponse(WcfMobile.SalesOrderServices.SalesLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindPickingListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        public SOPickServiceFindPickingListRequest() {
-        }
-        
-        public SOPickServiceFindPickingListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
-            this.CallContext = CallContext;
-            this.pickingId = pickingId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindPickingListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.SalesTableContract response;
-        
-        public SOPickServiceFindPickingListResponse() {
-        }
-        
-        public SOPickServiceFindPickingListResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSaveHistoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class SOPickServiceSaveHistoryRequest {
         
@@ -2713,8 +3431,8 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceLoginDeviceRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetPalletInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetPalletInfoRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2722,622 +3440,31 @@ namespace WcfMobile.SalesOrderServices {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
+        public string _serialId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceIP;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string projectName;
-        
-        public SOPickServiceLoginDeviceRequest() {
+        public SOPickServiceGetPalletInfoRequest() {
         }
         
-        public SOPickServiceLoginDeviceRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+        public SOPickServiceGetPalletInfoRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _serialId) {
             this.CallContext = CallContext;
-            this.deviceName = deviceName;
-            this.deviceIP = deviceIP;
-            this.userName = userName;
-            this.projectName = projectName;
+            this._serialId = _serialId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceLoginDeviceResponse {
-        
-        public SOPickServiceLoginDeviceResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableMultiRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableMultiRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetPalletInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetPalletInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesId;
+        public WcfMobile.SalesOrderServices.PalletContract response;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string configId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string device;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
-        public long lineRecId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.PalletItemContract[] serials;
-        
-        public SOPickServiceCheckPalletAvailableMultiRequest() {
+        public SOPickServiceGetPalletInfoResponse() {
         }
         
-        public SOPickServiceCheckPalletAvailableMultiRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-            this.itemId = itemId;
-            this.configId = configId;
-            this.pickingId = pickingId;
-            this.userName = userName;
-            this.device = device;
-            this.lineRecId = lineRecId;
-            this.serials = serials;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableMultiResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableMultiResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.SalesLineContract[] response;
-        
-        public SOPickServiceCheckPalletAvailableMultiResponse() {
-        }
-        
-        public SOPickServiceCheckPalletAvailableMultiResponse(WcfMobile.SalesOrderServices.SalesLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string configId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
-        public long lineRecId;
-        
-        public SOPickServiceCheckPalletAvailableRequest() {
-        }
-        
-        public SOPickServiceCheckPalletAvailableRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-            this.itemId = itemId;
-            this.configId = configId;
-            this.pickingId = pickingId;
-            this.serialId = serialId;
-            this.lineRecId = lineRecId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.SalesLineContract response;
-        
-        public SOPickServiceCheckPalletAvailableResponse() {
-        }
-        
-        public SOPickServiceCheckPalletAvailableResponse(WcfMobile.SalesOrderServices.SalesLineContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByQtyRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByQtyRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime startDate;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime endDate;
-        
-        public SOPickServiceCustomersDeliveryByQtyRequest() {
-        }
-        
-        public SOPickServiceCustomersDeliveryByQtyRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            this.CallContext = CallContext;
-            this.startDate = startDate;
-            this.endDate = endDate;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByQtyResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByQtyResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
-        
-        public SOPickServiceCustomersDeliveryByQtyResponse() {
-        }
-        
-        public SOPickServiceCustomersDeliveryByQtyResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveriesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime theDate;
-        
-        public SOPickServiceGetDeliveriesRequest() {
-        }
-        
-        public SOPickServiceGetDeliveriesRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
-            this.CallContext = CallContext;
-            this.theDate = theDate;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveriesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
-        
-        public SOPickServiceGetDeliveriesResponse() {
-        }
-        
-        public SOPickServiceGetDeliveriesResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetOpenPickingListByCustByItemRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _custAccount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _itemId;
-        
-        public SOPickServiceGetOpenPickingListByCustByItemRequest() {
-        }
-        
-        public SOPickServiceGetOpenPickingListByCustByItemRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetOpenPickingListByCustByItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.PLNotDeliveredContract[] response;
-        
-        public SOPickServiceGetOpenPickingListByCustByItemResponse() {
-        }
-        
-        public SOPickServiceGetOpenPickingListByCustByItemResponse(WcfMobile.SalesOrderServices.PLNotDeliveredContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReceivePickingListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        public SOPickServiceReceivePickingListRequest() {
-        }
-        
-        public SOPickServiceReceivePickingListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
-            this.CallContext = CallContext;
-            this.userName = userName;
-            this.deviceName = deviceName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReceivePickingListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.SalesTableContract response;
-        
-        public SOPickServiceReceivePickingListResponse() {
-        }
-        
-        public SOPickServiceReceivePickingListResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindSalesOrdersListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime dateStart;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime dateEnd;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerAccount;
-        
-        public SOPickServiceFindSalesOrdersListRequest() {
-        }
-        
-        public SOPickServiceFindSalesOrdersListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string customerAccount) {
-            this.CallContext = CallContext;
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
-            this.customerAccount = customerAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindSalesOrdersListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.SalesTableContract[] response;
-        
-        public SOPickServiceFindSalesOrdersListResponse() {
-        }
-        
-        public SOPickServiceFindSalesOrdersListResponse(WcfMobile.SalesOrderServices.SalesTableContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetCustomerDeliveriesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime theDate;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerAccount;
-        
-        public SOPickServiceGetCustomerDeliveriesRequest() {
-        }
-        
-        public SOPickServiceGetCustomerDeliveriesRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
-            this.CallContext = CallContext;
-            this.theDate = theDate;
-            this.customerAccount = customerAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetCustomerDeliveriesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
-        
-        public SOPickServiceGetCustomerDeliveriesResponse() {
-        }
-        
-        public SOPickServiceGetCustomerDeliveriesResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSavePickingLoadRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime startLoad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public System.DateTime stopLoad;
-        
-        public SOPickServiceSavePickingLoadRequest() {
-        }
-        
-        public SOPickServiceSavePickingLoadRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
-            this.CallContext = CallContext;
-            this._pickingId = _pickingId;
-            this.startLoad = startLoad;
-            this.stopLoad = stopLoad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSavePickingLoadResponse {
-        
-        public SOPickServiceSavePickingLoadResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceUnreservePalletRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialId;
-        
-        public SOPickServiceUnreservePalletRequest() {
-        }
-        
-        public SOPickServiceUnreservePalletRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
-            this.CallContext = CallContext;
-            this.serialId = serialId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceUnreservePalletResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public SOPickServiceUnreservePalletResponse() {
-        }
-        
-        public SOPickServiceUnreservePalletResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByTrucksRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime startDate;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime endDate;
-        
-        public SOPickServiceCustomersDeliveryByTrucksRequest() {
-        }
-        
-        public SOPickServiceCustomersDeliveryByTrucksRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            this.CallContext = CallContext;
-            this.startDate = startDate;
-            this.endDate = endDate;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByTrucksResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
-        
-        public SOPickServiceCustomersDeliveryByTrucksResponse() {
-        }
-        
-        public SOPickServiceCustomersDeliveryByTrucksResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindSalesOrderRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesId;
-        
-        public SOPickServiceFindSalesOrderRequest() {
-        }
-        
-        public SOPickServiceFindSalesOrderRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindSalesOrderResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.SalesTableContract response;
-        
-        public SOPickServiceFindSalesOrderResponse() {
-        }
-        
-        public SOPickServiceFindSalesOrderResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
+        public SOPickServiceGetPalletInfoResponse(WcfMobile.SalesOrderServices.PalletContract response) {
             this.response = response;
         }
     }
@@ -4354,36 +4481,39 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveryStatusLookupRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceUnreservePalletRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public WcfMobile.SalesOrderServices.CallContext CallContext;
         
-        public SOPickServiceGetDeliveryStatusLookupRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string serialId;
+        
+        public SOPickServiceUnreservePalletRequest() {
         }
         
-        public SOPickServiceGetDeliveryStatusLookupRequest(WcfMobile.SalesOrderServices.CallContext CallContext) {
+        public SOPickServiceUnreservePalletRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
             this.CallContext = CallContext;
+            this.serialId = serialId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveryStatusLookupResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceUnreservePalletResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.LookupContract[] response;
+        public bool response;
         
-        public SOPickServiceGetDeliveryStatusLookupResponse() {
+        public SOPickServiceUnreservePalletResponse() {
         }
         
-        public SOPickServiceGetDeliveryStatusLookupResponse(WcfMobile.SalesOrderServices.LookupContract[] response) {
+        public SOPickServiceUnreservePalletResponse(bool response) {
             this.response = response;
         }
     }
@@ -4391,8 +4521,8 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliverySummaryByCustRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReceivePickingListRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4400,40 +4530,204 @@ namespace WcfMobile.SalesOrderServices {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _custAccount;
+        public string userName;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime startDate;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public System.DateTime endDate;
-        
-        public SOPickServiceGetDeliverySummaryByCustRequest() {
+        public SOPickServiceReceivePickingListRequest() {
         }
         
-        public SOPickServiceGetDeliverySummaryByCustRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate, System.DateTime endDate) {
+        public SOPickServiceReceivePickingListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
             this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-            this.startDate = startDate;
-            this.endDate = endDate;
+            this.userName = userName;
+            this.deviceName = deviceName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliverySummaryByCustResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReceivePickingListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.SalesTableContract response;
+        
+        public SOPickServiceReceivePickingListResponse() {
+        }
+        
+        public SOPickServiceReceivePickingListResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReservePalletsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string salesId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string configId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string device;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
+        public long lineRecId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.SalesLineContract[] pallets;
+        
+        public SOPickServiceReservePalletsRequest() {
+        }
+        
+        public SOPickServiceReservePalletsRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.SalesLineContract[] pallets) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+            this.itemId = itemId;
+            this.configId = configId;
+            this.pickingId = pickingId;
+            this.userName = userName;
+            this.device = device;
+            this.lineRecId = lineRecId;
+            this.pallets = pallets;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReservePalletsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
+        public WcfMobile.SalesOrderServices.SalesLineContract[] response;
         
-        public SOPickServiceGetDeliverySummaryByCustResponse() {
+        public SOPickServiceReservePalletsResponse() {
         }
         
-        public SOPickServiceGetDeliverySummaryByCustResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
+        public SOPickServiceReservePalletsResponse(WcfMobile.SalesOrderServices.SalesLineContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSavePickingLoadRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime startLoad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public System.DateTime stopLoad;
+        
+        public SOPickServiceSavePickingLoadRequest() {
+        }
+        
+        public SOPickServiceSavePickingLoadRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
+            this.CallContext = CallContext;
+            this._pickingId = _pickingId;
+            this.startLoad = startLoad;
+            this.stopLoad = stopLoad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSavePickingLoadResponse {
+        
+        public SOPickServiceSavePickingLoadResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrdersListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime dateStart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime dateEnd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customerAccount;
+        
+        public SOPickServiceFindSalesOrdersListRequest() {
+        }
+        
+        public SOPickServiceFindSalesOrdersListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string customerAccount) {
+            this.CallContext = CallContext;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+            this.customerAccount = customerAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrdersListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.SalesTableContract[] response;
+        
+        public SOPickServiceFindSalesOrdersListResponse() {
+        }
+        
+        public SOPickServiceFindSalesOrdersListResponse(WcfMobile.SalesOrderServices.SalesTableContract[] response) {
             this.response = response;
         }
     }
@@ -4487,43 +4781,6 @@ namespace WcfMobile.SalesOrderServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetFGLinesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.SalesOrderServices.CallContext CallContext;
-        
-        public SOPickServiceGetFGLinesRequest() {
-        }
-        
-        public SOPickServiceGetFGLinesRequest(WcfMobile.SalesOrderServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetFGLinesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.FGLineContract[] response;
-        
-        public SOPickServiceGetFGLinesResponse() {
-        }
-        
-        public SOPickServiceGetFGLinesResponse(WcfMobile.SalesOrderServices.FGLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetLatestPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class SOPickServiceGetLatestPalletsRequest {
         
@@ -4568,68 +4825,92 @@ namespace WcfMobile.SalesOrderServices {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    public enum PickingListStatus {
-        
-        /// <remarks/>
-        Opened,
-        
-        /// <remarks/>
-        Closed,
-        
-        /// <remarks/>
-        Cancelled,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetCustomerDeliveriesByStatusRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceChangeTruckLoadingLineRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceChangeTruckLoadingLineRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public WcfMobile.SalesOrderServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime theDate;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingNum;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _customerAccount;
+        public int lineNum;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public WcfMobile.SalesOrderServices.PickingListStatus _status;
-        
-        public SOPickServiceGetCustomerDeliveriesByStatusRequest() {
+        public SOPickServiceChangeTruckLoadingLineRequest() {
         }
         
-        public SOPickServiceGetCustomerDeliveriesByStatusRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
+        public SOPickServiceChangeTruckLoadingLineRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingNum, int lineNum) {
             this.CallContext = CallContext;
-            this.theDate = theDate;
-            this._customerAccount = _customerAccount;
-            this._status = _status;
+            this.pickingNum = pickingNum;
+            this.lineNum = lineNum;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetCustomerDeliveriesByStatusResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceChangeTruckLoadingLineResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceChangeTruckLoadingLineResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string response;
+        
+        public SOPickServiceChangeTruckLoadingLineResponse() {
+        }
+        
+        public SOPickServiceChangeTruckLoadingLineResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByTrucksRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime endDate;
+        
+        public SOPickServiceCustomersDeliveryByTrucksRequest() {
+        }
+        
+        public SOPickServiceCustomersDeliveryByTrucksRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            this.CallContext = CallContext;
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByTrucksResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
+        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
         
-        public SOPickServiceGetCustomerDeliveriesByStatusResponse() {
+        public SOPickServiceCustomersDeliveryByTrucksResponse() {
         }
         
-        public SOPickServiceGetCustomerDeliveriesByStatusResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
+        public SOPickServiceCustomersDeliveryByTrucksResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
             this.response = response;
         }
     }
@@ -4823,6 +5104,672 @@ namespace WcfMobile.SalesOrderServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customerAccount;
+        
+        public SOPickServiceGetCustomerDeliveriesRequest() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+            this.customerAccount = customerAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetCustomerDeliveriesResponse() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesByStatusRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _customerAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public WcfMobile.SalesOrderServices.PickingListStatus _status;
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusRequest() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+            this._customerAccount = _customerAccount;
+            this._status = _status;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesByStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusResponse() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveryStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        public SOPickServiceGetDeliveryStatusLookupRequest() {
+        }
+        
+        public SOPickServiceGetDeliveryStatusLookupRequest(WcfMobile.SalesOrderServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveryStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.LookupContract[] response;
+        
+        public SOPickServiceGetDeliveryStatusLookupResponse() {
+        }
+        
+        public SOPickServiceGetDeliveryStatusLookupResponse(WcfMobile.SalesOrderServices.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliverySummaryByCustRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public System.DateTime endDate;
+        
+        public SOPickServiceGetDeliverySummaryByCustRequest() {
+        }
+        
+        public SOPickServiceGetDeliverySummaryByCustRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate, System.DateTime endDate) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliverySummaryByCustResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
+        
+        public SOPickServiceGetDeliverySummaryByCustResponse() {
+        }
+        
+        public SOPickServiceGetDeliverySummaryByCustResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetFGLinesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        public SOPickServiceGetFGLinesRequest() {
+        }
+        
+        public SOPickServiceGetFGLinesRequest(WcfMobile.SalesOrderServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetFGLinesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.FGLineContract[] response;
+        
+        public SOPickServiceGetFGLinesResponse() {
+        }
+        
+        public SOPickServiceGetFGLinesResponse(WcfMobile.SalesOrderServices.FGLineContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetOpenPickingListByCustByItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _itemId;
+        
+        public SOPickServiceGetOpenPickingListByCustByItemRequest() {
+        }
+        
+        public SOPickServiceGetOpenPickingListByCustByItemRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetOpenPickingListByCustByItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.PLNotDeliveredContract[] response;
+        
+        public SOPickServiceGetOpenPickingListByCustByItemResponse() {
+        }
+        
+        public SOPickServiceGetOpenPickingListByCustByItemResponse(WcfMobile.SalesOrderServices.PLNotDeliveredContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string salesId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string configId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string serialId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        public long lineRecId;
+        
+        public SOPickServiceCheckPalletAvailableRequest() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+            this.itemId = itemId;
+            this.configId = configId;
+            this.pickingId = pickingId;
+            this.serialId = serialId;
+            this.lineRecId = lineRecId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.SalesLineContract response;
+        
+        public SOPickServiceCheckPalletAvailableResponse() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableResponse(WcfMobile.SalesOrderServices.SalesLineContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableMultiRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableMultiRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string salesId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string configId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string device;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
+        public long lineRecId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.PalletItemContract[] serials;
+        
+        public SOPickServiceCheckPalletAvailableMultiRequest() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableMultiRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+            this.itemId = itemId;
+            this.configId = configId;
+            this.pickingId = pickingId;
+            this.userName = userName;
+            this.device = device;
+            this.lineRecId = lineRecId;
+            this.serials = serials;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableMultiResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableMultiResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.SalesLineContract[] response;
+        
+        public SOPickServiceCheckPalletAvailableMultiResponse() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableMultiResponse(WcfMobile.SalesOrderServices.SalesLineContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetSingleDeliveryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetSingleDeliveryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        public SOPickServiceGetSingleDeliveryRequest() {
+        }
+        
+        public SOPickServiceGetSingleDeliveryRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetSingleDeliveryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetSingleDeliveryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.FGDeliveryContract response;
+        
+        public SOPickServiceGetSingleDeliveryResponse() {
+        }
+        
+        public SOPickServiceGetSingleDeliveryResponse(WcfMobile.SalesOrderServices.FGDeliveryContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindPickingListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        public SOPickServiceFindPickingListRequest() {
+        }
+        
+        public SOPickServiceFindPickingListRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindPickingListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.SalesTableContract response;
+        
+        public SOPickServiceFindPickingListResponse() {
+        }
+        
+        public SOPickServiceFindPickingListResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrderRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string salesId;
+        
+        public SOPickServiceFindSalesOrderRequest() {
+        }
+        
+        public SOPickServiceFindSalesOrderRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrderResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.SalesTableContract response;
+        
+        public SOPickServiceFindSalesOrderResponse() {
+        }
+        
+        public SOPickServiceFindSalesOrderResponse(WcfMobile.SalesOrderServices.SalesTableContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceLoginDeviceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceIP;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string projectName;
+        
+        public SOPickServiceLoginDeviceRequest() {
+        }
+        
+        public SOPickServiceLoginDeviceRequest(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+            this.CallContext = CallContext;
+            this.deviceName = deviceName;
+            this.deviceIP = deviceIP;
+            this.userName = userName;
+            this.projectName = projectName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceLoginDeviceResponse {
+        
+        public SOPickServiceLoginDeviceResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveriesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        public SOPickServiceGetDeliveriesRequest() {
+        }
+        
+        public SOPickServiceGetDeliveriesRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveriesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetDeliveriesResponse() {
+        }
+        
+        public SOPickServiceGetDeliveriesResponse(WcfMobile.SalesOrderServices.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByQtyRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByQtyRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.SalesOrderServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime endDate;
+        
+        public SOPickServiceCustomersDeliveryByQtyRequest() {
+        }
+        
+        public SOPickServiceCustomersDeliveryByQtyRequest(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            this.CallContext = CallContext;
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByQtyResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByQtyResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response;
+        
+        public SOPickServiceCustomersDeliveryByQtyResponse() {
+        }
+        
+        public SOPickServiceCustomersDeliveryByQtyResponse(WcfMobile.SalesOrderServices.CustomerDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SOPickServiceChannel : WcfMobile.SalesOrderServices.SOPickService, System.ServiceModel.IClientChannel {
     }
@@ -4848,6 +5795,132 @@ namespace WcfMobile.SalesOrderServices {
         
         public SOPickServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse WcfMobile.SalesOrderServices.SOPickService.SaveHistory(WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest request) {
+            return base.Channel.SaveHistory(request);
+        }
+        
+        public void SaveHistory(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.PickHistoryContract history) {
+            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest();
+            inValue.CallContext = CallContext;
+            inValue.history = history;
+            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).SaveHistory(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse> WcfMobile.SalesOrderServices.SOPickService.SaveHistoryAsync(WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest request) {
+            return base.Channel.SaveHistoryAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse> SaveHistoryAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.PickHistoryContract history) {
+            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest();
+            inValue.CallContext = CallContext;
+            inValue.history = history;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).SaveHistoryAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse WcfMobile.SalesOrderServices.SOPickService.GetPalletInfo(WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest request) {
+            return base.Channel.GetPalletInfo(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.PalletContract GetPalletInfo(WcfMobile.SalesOrderServices.CallContext CallContext, string _serialId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest();
+            inValue.CallContext = CallContext;
+            inValue._serialId = _serialId;
+            WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetPalletInfo(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse> WcfMobile.SalesOrderServices.SOPickService.GetPalletInfoAsync(WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest request) {
+            return base.Channel.GetPalletInfoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse> GetPalletInfoAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _serialId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoRequest();
+            inValue.CallContext = CallContext;
+            inValue._serialId = _serialId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetPalletInfoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceReadResponse WcfMobile.SalesOrderServices.SOPickService.read(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request) {
+            return base.Channel.read(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.AxdSOPick read(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.EntityKey[] EntityKeyList) {
+            WcfMobile.SalesOrderServices.SOPickServiceReadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            WcfMobile.SalesOrderServices.SOPickServiceReadResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).read(inValue);
+            return retVal.SOPick;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> WcfMobile.SalesOrderServices.SOPickService.readAsync(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request) {
+            return base.Channel.readAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> readAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.EntityKey[] EntityKeyList) {
+            WcfMobile.SalesOrderServices.SOPickServiceReadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).readAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse WcfMobile.SalesOrderServices.SOPickService.UnreservePallet(WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest request) {
+            return base.Channel.UnreservePallet(request);
+        }
+        
+        public bool UnreservePallet(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
+            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest();
+            inValue.CallContext = CallContext;
+            inValue.serialId = serialId;
+            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).UnreservePallet(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse> WcfMobile.SalesOrderServices.SOPickService.UnreservePalletAsync(WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest request) {
+            return base.Channel.UnreservePalletAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse> UnreservePalletAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
+            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest();
+            inValue.CallContext = CallContext;
+            inValue.serialId = serialId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).UnreservePalletAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse WcfMobile.SalesOrderServices.SOPickService.ReceivePickingList(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request) {
+            return base.Channel.ReceivePickingList(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.SalesTableContract ReceivePickingList(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
+            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.userName = userName;
+            inValue.deviceName = deviceName;
+            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).ReceivePickingList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> WcfMobile.SalesOrderServices.SOPickService.ReceivePickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request) {
+            return base.Channel.ReceivePickingListAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> ReceivePickingListAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
+            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.userName = userName;
+            inValue.deviceName = deviceName;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).ReceivePickingListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4890,262 +5963,31 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse WcfMobile.SalesOrderServices.SOPickService.findPickingList(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request) {
-            return base.Channel.findPickingList(request);
+        WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse WcfMobile.SalesOrderServices.SOPickService.SavePickingLoad(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request) {
+            return base.Channel.SavePickingLoad(request);
         }
         
-        public WcfMobile.SalesOrderServices.SalesTableContract findPickingList(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest();
+        public void SavePickingLoad(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
+            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest();
             inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).findPickingList(inValue);
-            return retVal.response;
+            inValue._pickingId = _pickingId;
+            inValue.startLoad = startLoad;
+            inValue.stopLoad = stopLoad;
+            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).SavePickingLoad(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> WcfMobile.SalesOrderServices.SOPickService.findPickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request) {
-            return base.Channel.findPickingListAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> WcfMobile.SalesOrderServices.SOPickService.SavePickingLoadAsync(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request) {
+            return base.Channel.SavePickingLoadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> findPickingListAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> SavePickingLoadAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
+            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest();
             inValue.CallContext = CallContext;
-            inValue.pickingId = pickingId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findPickingListAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse WcfMobile.SalesOrderServices.SOPickService.SaveHistory(WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest request) {
-            return base.Channel.SaveHistory(request);
-        }
-        
-        public void SaveHistory(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.PickHistoryContract history) {
-            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest();
-            inValue.CallContext = CallContext;
-            inValue.history = history;
-            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).SaveHistory(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse> WcfMobile.SalesOrderServices.SOPickService.SaveHistoryAsync(WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest request) {
-            return base.Channel.SaveHistoryAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryResponse> SaveHistoryAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.PickHistoryContract history) {
-            WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSaveHistoryRequest();
-            inValue.CallContext = CallContext;
-            inValue.history = history;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).SaveHistoryAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse WcfMobile.SalesOrderServices.SOPickService.LoginDevice(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request) {
-            return base.Channel.LoginDevice(request);
-        }
-        
-        public void LoginDevice(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
-            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest();
-            inValue.CallContext = CallContext;
-            inValue.deviceName = deviceName;
-            inValue.deviceIP = deviceIP;
-            inValue.userName = userName;
-            inValue.projectName = projectName;
-            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).LoginDevice(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> WcfMobile.SalesOrderServices.SOPickService.LoginDeviceAsync(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request) {
-            return base.Channel.LoginDeviceAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> LoginDeviceAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
-            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest();
-            inValue.CallContext = CallContext;
-            inValue.deviceName = deviceName;
-            inValue.deviceIP = deviceIP;
-            inValue.userName = userName;
-            inValue.projectName = projectName;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).LoginDeviceAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request) {
-            return base.Channel.CheckPalletAvailableMulti(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.SalesLineContract[] CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.userName = userName;
-            inValue.device = device;
-            inValue.lineRecId = lineRecId;
-            inValue.serials = serials;
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableMulti(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request) {
-            return base.Channel.CheckPalletAvailableMultiAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.userName = userName;
-            inValue.device = device;
-            inValue.lineRecId = lineRecId;
-            inValue.serials = serials;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableMultiAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailable(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request) {
-            return base.Channel.CheckPalletAvailable(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.SalesLineContract CheckPalletAvailable(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.serialId = serialId;
-            inValue.lineRecId = lineRecId;
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailable(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request) {
-            return base.Channel.CheckPalletAvailableAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
-            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.serialId = serialId;
-            inValue.lineRecId = lineRecId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse WcfMobile.SalesOrderServices.SOPickService.CustomersDeliveryByQty(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request) {
-            return base.Channel.CustomersDeliveryByQty(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] CustomersDeliveryByQty(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CustomersDeliveryByQty(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> WcfMobile.SalesOrderServices.SOPickService.CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request) {
-            return base.Channel.CustomersDeliveryByQtyAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CustomersDeliveryByQtyAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse WcfMobile.SalesOrderServices.SOPickService.GetDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request) {
-            return base.Channel.GetDeliveries(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetDeliveries(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest();
-            inValue.CallContext = CallContext;
-            inValue.theDate = theDate;
-            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDeliveries(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> WcfMobile.SalesOrderServices.SOPickService.GetDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request) {
-            return base.Channel.GetDeliveriesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> GetDeliveriesAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest();
-            inValue.CallContext = CallContext;
-            inValue.theDate = theDate;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDeliveriesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse WcfMobile.SalesOrderServices.SOPickService.GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request) {
-            return base.Channel.GetOpenPickingListByCustByItem(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.PLNotDeliveredContract[] GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetOpenPickingListByCustByItem(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> WcfMobile.SalesOrderServices.SOPickService.GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request) {
-            return base.Channel.GetOpenPickingListByCustByItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue._itemId = _itemId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetOpenPickingListByCustByItemAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse WcfMobile.SalesOrderServices.SOPickService.ReceivePickingList(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request) {
-            return base.Channel.ReceivePickingList(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.SalesTableContract ReceivePickingList(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
-            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest();
-            inValue.CallContext = CallContext;
-            inValue.userName = userName;
-            inValue.deviceName = deviceName;
-            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).ReceivePickingList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> WcfMobile.SalesOrderServices.SOPickService.ReceivePickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest request) {
-            return base.Channel.ReceivePickingListAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListResponse> ReceivePickingListAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string userName, string deviceName) {
-            WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReceivePickingListRequest();
-            inValue.CallContext = CallContext;
-            inValue.userName = userName;
-            inValue.deviceName = deviceName;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).ReceivePickingListAsync(inValue);
+            inValue._pickingId = _pickingId;
+            inValue.startLoad = startLoad;
+            inValue.stopLoad = stopLoad;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).SavePickingLoadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5178,83 +6020,84 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request) {
-            return base.Channel.GetCustomerDeliveries(request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse WcfMobile.SalesOrderServices.SOPickService.GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request) {
+            return base.Channel.GetDailyDeliverySummaryByCust(request);
         }
         
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetCustomerDeliveries(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest();
+        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest();
             inValue.CallContext = CallContext;
-            inValue.theDate = theDate;
-            inValue.customerAccount = customerAccount;
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveries(inValue);
+            inValue._custAccount = _custAccount;
+            inValue.startDate = startDate;
+            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDailyDeliverySummaryByCust(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request) {
-            return base.Channel.GetCustomerDeliveriesAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> WcfMobile.SalesOrderServices.SOPickService.GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request) {
+            return base.Channel.GetDailyDeliverySummaryByCustAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest();
             inValue.CallContext = CallContext;
-            inValue.theDate = theDate;
-            inValue.customerAccount = customerAccount;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesAsync(inValue);
+            inValue._custAccount = _custAccount;
+            inValue.startDate = startDate;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDailyDeliverySummaryByCustAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse WcfMobile.SalesOrderServices.SOPickService.SavePickingLoad(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request) {
-            return base.Channel.SavePickingLoad(request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse WcfMobile.SalesOrderServices.SOPickService.GetLatestPallets(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request) {
+            return base.Channel.GetLatestPallets(request);
         }
         
-        public void SavePickingLoad(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
-            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest();
+        public WcfMobile.SalesOrderServices.SalesLineContract[] GetLatestPallets(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, string _itemId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest();
             inValue.CallContext = CallContext;
             inValue._pickingId = _pickingId;
-            inValue.startLoad = startLoad;
-            inValue.stopLoad = stopLoad;
-            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).SavePickingLoad(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> WcfMobile.SalesOrderServices.SOPickService.SavePickingLoadAsync(WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest request) {
-            return base.Channel.SavePickingLoadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadResponse> SavePickingLoadAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
-            WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceSavePickingLoadRequest();
-            inValue.CallContext = CallContext;
-            inValue._pickingId = _pickingId;
-            inValue.startLoad = startLoad;
-            inValue.stopLoad = stopLoad;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).SavePickingLoadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse WcfMobile.SalesOrderServices.SOPickService.UnreservePallet(WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest request) {
-            return base.Channel.UnreservePallet(request);
-        }
-        
-        public bool UnreservePallet(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
-            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest();
-            inValue.CallContext = CallContext;
-            inValue.serialId = serialId;
-            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).UnreservePallet(inValue);
+            inValue._itemId = _itemId;
+            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetLatestPallets(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse> WcfMobile.SalesOrderServices.SOPickService.UnreservePalletAsync(WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest request) {
-            return base.Channel.UnreservePalletAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> WcfMobile.SalesOrderServices.SOPickService.GetLatestPalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request) {
+            return base.Channel.GetLatestPalletsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletResponse> UnreservePalletAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string serialId) {
-            WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceUnreservePalletRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> GetLatestPalletsAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, string _itemId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest();
             inValue.CallContext = CallContext;
-            inValue.serialId = serialId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).UnreservePalletAsync(inValue);
+            inValue._pickingId = _pickingId;
+            inValue._itemId = _itemId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetLatestPalletsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse WcfMobile.SalesOrderServices.SOPickService.ChangeTruckLoadingLine(WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest request) {
+            return base.Channel.ChangeTruckLoadingLine(request);
+        }
+        
+        public string ChangeTruckLoadingLine(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingNum, int lineNum) {
+            WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingNum = pickingNum;
+            inValue.lineNum = lineNum;
+            WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).ChangeTruckLoadingLine(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse> WcfMobile.SalesOrderServices.SOPickService.ChangeTruckLoadingLineAsync(WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest request) {
+            return base.Channel.ChangeTruckLoadingLineAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse> ChangeTruckLoadingLineAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingNum, int lineNum) {
+            WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingNum = pickingNum;
+            inValue.lineNum = lineNum;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).ChangeTruckLoadingLineAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5285,53 +6128,84 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse WcfMobile.SalesOrderServices.SOPickService.findSalesOrder(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request) {
-            return base.Channel.findSalesOrder(request);
+        WcfMobile.SalesOrderServices.SOPickServiceFindResponse WcfMobile.SalesOrderServices.SOPickService.find(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request) {
+            return base.Channel.find(request);
         }
         
-        public WcfMobile.SalesOrderServices.SalesTableContract findSalesOrder(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest();
+        public WcfMobile.SalesOrderServices.AxdSOPick find(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.QueryCriteria QueryCriteria) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindRequest();
             inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).findSalesOrder(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> WcfMobile.SalesOrderServices.SOPickService.findSalesOrderAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request) {
-            return base.Channel.findSalesOrderAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> findSalesOrderAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findSalesOrderAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceReadResponse WcfMobile.SalesOrderServices.SOPickService.read(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request) {
-            return base.Channel.read(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.AxdSOPick read(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.EntityKey[] EntityKeyList) {
-            WcfMobile.SalesOrderServices.SOPickServiceReadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReadRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            WcfMobile.SalesOrderServices.SOPickServiceReadResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).read(inValue);
+            inValue.QueryCriteria = QueryCriteria;
+            WcfMobile.SalesOrderServices.SOPickServiceFindResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).find(inValue);
             return retVal.SOPick;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> WcfMobile.SalesOrderServices.SOPickService.readAsync(WcfMobile.SalesOrderServices.SOPickServiceReadRequest request) {
-            return base.Channel.readAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> WcfMobile.SalesOrderServices.SOPickService.findAsync(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request) {
+            return base.Channel.findAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceReadResponse> readAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.EntityKey[] EntityKeyList) {
-            WcfMobile.SalesOrderServices.SOPickServiceReadRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceReadRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> findAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.QueryCriteria QueryCriteria) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindRequest();
             inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).readAsync(inValue);
+            inValue.QueryCriteria = QueryCriteria;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request) {
+            return base.Channel.GetCustomerDeliveries(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetCustomerDeliveries(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue.customerAccount = customerAccount;
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveries(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest request) {
+            return base.Channel.GetCustomerDeliveriesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesResponse> GetCustomerDeliveriesAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string customerAccount) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue.customerAccount = customerAccount;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request) {
+            return base.Channel.GetCustomerDeliveriesByStatus(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue._customerAccount = _customerAccount;
+            inValue._status = _status;
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesByStatus(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request) {
+            return base.Channel.GetCustomerDeliveriesByStatusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue._customerAccount = _customerAccount;
+            inValue._status = _status;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesByStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5387,33 +6261,6 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse WcfMobile.SalesOrderServices.SOPickService.GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request) {
-            return base.Channel.GetDailyDeliverySummaryByCust(request);
-        }
-        
-        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] GetDailyDeliverySummaryByCust(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.startDate = startDate;
-            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDailyDeliverySummaryByCust(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> WcfMobile.SalesOrderServices.SOPickService.GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest request) {
-            return base.Channel.GetDailyDeliverySummaryByCustAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustResponse> GetDailyDeliverySummaryByCustAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, System.DateTime startDate) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDailyDeliverySummaryByCustRequest();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            inValue.startDate = startDate;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDailyDeliverySummaryByCustAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.SalesOrderServices.SOPickServiceGetFGLinesResponse WcfMobile.SalesOrderServices.SOPickService.GetFGLines(WcfMobile.SalesOrderServices.SOPickServiceGetFGLinesRequest request) {
             return base.Channel.GetFGLines(request);
         }
@@ -5437,84 +6284,261 @@ namespace WcfMobile.SalesOrderServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse WcfMobile.SalesOrderServices.SOPickService.GetLatestPallets(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request) {
-            return base.Channel.GetLatestPallets(request);
+        WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse WcfMobile.SalesOrderServices.SOPickService.GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request) {
+            return base.Channel.GetOpenPickingListByCustByItem(request);
         }
         
-        public WcfMobile.SalesOrderServices.SalesLineContract[] GetLatestPallets(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, string _itemId) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest();
+        public WcfMobile.SalesOrderServices.PLNotDeliveredContract[] GetOpenPickingListByCustByItem(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest();
             inValue.CallContext = CallContext;
-            inValue._pickingId = _pickingId;
+            inValue._custAccount = _custAccount;
             inValue._itemId = _itemId;
-            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetLatestPallets(inValue);
+            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetOpenPickingListByCustByItem(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> WcfMobile.SalesOrderServices.SOPickService.GetLatestPalletsAsync(WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest request) {
-            return base.Channel.GetLatestPalletsAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> WcfMobile.SalesOrderServices.SOPickService.GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest request) {
+            return base.Channel.GetOpenPickingListByCustByItemAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsResponse> GetLatestPalletsAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _pickingId, string _itemId) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetLatestPalletsRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse> GetOpenPickingListByCustByItemAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string _custAccount, string _itemId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemRequest();
             inValue.CallContext = CallContext;
-            inValue._pickingId = _pickingId;
+            inValue._custAccount = _custAccount;
             inValue._itemId = _itemId;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetLatestPalletsAsync(inValue);
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetOpenPickingListByCustByItemAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request) {
-            return base.Channel.GetCustomerDeliveriesByStatus(request);
+        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailable(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request) {
+            return base.Channel.CheckPalletAvailable(request);
         }
         
-        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetCustomerDeliveriesByStatus(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest();
+        public WcfMobile.SalesOrderServices.SalesLineContract CheckPalletAvailable(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest();
             inValue.CallContext = CallContext;
-            inValue.theDate = theDate;
-            inValue._customerAccount = _customerAccount;
-            inValue._status = _status;
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesByStatus(inValue);
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.serialId = serialId;
+            inValue.lineRecId = lineRecId;
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailable(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> WcfMobile.SalesOrderServices.SOPickService.GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest request) {
-            return base.Channel.GetCustomerDeliveriesByStatusAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest request) {
+            return base.Channel.CheckPalletAvailableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusResponse> GetCustomerDeliveriesByStatusAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate, string _customerAccount, WcfMobile.SalesOrderServices.PickingListStatus _status) {
-            WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetCustomerDeliveriesByStatusRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableResponse> CheckPalletAvailableAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.serialId = serialId;
+            inValue.lineRecId = lineRecId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request) {
+            return base.Channel.CheckPalletAvailableMulti(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.SalesLineContract[] CheckPalletAvailableMulti(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.userName = userName;
+            inValue.device = device;
+            inValue.lineRecId = lineRecId;
+            inValue.serials = serials;
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableMulti(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> WcfMobile.SalesOrderServices.SOPickService.CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest request) {
+            return base.Channel.CheckPalletAvailableMultiAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiResponse> CheckPalletAvailableMultiAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, WcfMobile.SalesOrderServices.PalletItemContract[] serials) {
+            WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCheckPalletAvailableMultiRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.userName = userName;
+            inValue.device = device;
+            inValue.lineRecId = lineRecId;
+            inValue.serials = serials;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CheckPalletAvailableMultiAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse WcfMobile.SalesOrderServices.SOPickService.GetSingleDelivery(WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest request) {
+            return base.Channel.GetSingleDelivery(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.FGDeliveryContract GetSingleDelivery(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetSingleDelivery(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse> WcfMobile.SalesOrderServices.SOPickService.GetSingleDeliveryAsync(WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest request) {
+            return base.Channel.GetSingleDeliveryAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse> GetSingleDeliveryAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetSingleDeliveryAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse WcfMobile.SalesOrderServices.SOPickService.findPickingList(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request) {
+            return base.Channel.findPickingList(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.SalesTableContract findPickingList(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).findPickingList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> WcfMobile.SalesOrderServices.SOPickService.findPickingListAsync(WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest request) {
+            return base.Channel.findPickingListAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindPickingListResponse> findPickingListAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string pickingId) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindPickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findPickingListAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse WcfMobile.SalesOrderServices.SOPickService.findSalesOrder(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request) {
+            return base.Channel.findSalesOrder(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.SalesTableContract findSalesOrder(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).findSalesOrder(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> WcfMobile.SalesOrderServices.SOPickService.findSalesOrderAsync(WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest request) {
+            return base.Channel.findSalesOrderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderResponse> findSalesOrderAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string salesId) {
+            WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindSalesOrderRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findSalesOrderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse WcfMobile.SalesOrderServices.SOPickService.LoginDevice(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request) {
+            return base.Channel.LoginDevice(request);
+        }
+        
+        public void LoginDevice(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest();
+            inValue.CallContext = CallContext;
+            inValue.deviceName = deviceName;
+            inValue.deviceIP = deviceIP;
+            inValue.userName = userName;
+            inValue.projectName = projectName;
+            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).LoginDevice(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> WcfMobile.SalesOrderServices.SOPickService.LoginDeviceAsync(WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest request) {
+            return base.Channel.LoginDeviceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceResponse> LoginDeviceAsync(WcfMobile.SalesOrderServices.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+            WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceLoginDeviceRequest();
+            inValue.CallContext = CallContext;
+            inValue.deviceName = deviceName;
+            inValue.deviceIP = deviceIP;
+            inValue.userName = userName;
+            inValue.projectName = projectName;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).LoginDeviceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse WcfMobile.SalesOrderServices.SOPickService.GetDeliveries(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request) {
+            return base.Channel.GetDeliveries(request);
+        }
+        
+        public WcfMobile.SalesOrderServices.FGDeliveryContract[] GetDeliveries(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest();
             inValue.CallContext = CallContext;
             inValue.theDate = theDate;
-            inValue._customerAccount = _customerAccount;
-            inValue._status = _status;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetCustomerDeliveriesByStatusAsync(inValue);
+            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDeliveries(inValue);
+            return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.SalesOrderServices.SOPickServiceFindResponse WcfMobile.SalesOrderServices.SOPickService.find(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request) {
-            return base.Channel.find(request);
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> WcfMobile.SalesOrderServices.SOPickService.GetDeliveriesAsync(WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest request) {
+            return base.Channel.GetDeliveriesAsync(request);
         }
         
-        public WcfMobile.SalesOrderServices.AxdSOPick find(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.QueryCriteria QueryCriteria) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindRequest();
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesResponse> GetDeliveriesAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime theDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceGetDeliveriesRequest();
             inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            WcfMobile.SalesOrderServices.SOPickServiceFindResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).find(inValue);
-            return retVal.SOPick;
+            inValue.theDate = theDate;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).GetDeliveriesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> WcfMobile.SalesOrderServices.SOPickService.findAsync(WcfMobile.SalesOrderServices.SOPickServiceFindRequest request) {
-            return base.Channel.findAsync(request);
+        WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse WcfMobile.SalesOrderServices.SOPickService.CustomersDeliveryByQty(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request) {
+            return base.Channel.CustomersDeliveryByQty(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceFindResponse> findAsync(WcfMobile.SalesOrderServices.CallContext CallContext, WcfMobile.SalesOrderServices.QueryCriteria QueryCriteria) {
-            WcfMobile.SalesOrderServices.SOPickServiceFindRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceFindRequest();
+        public WcfMobile.SalesOrderServices.CustomerDeliveryContract[] CustomersDeliveryByQty(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest();
             inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).findAsync(inValue);
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse retVal = ((WcfMobile.SalesOrderServices.SOPickService)(this)).CustomersDeliveryByQty(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> WcfMobile.SalesOrderServices.SOPickService.CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest request) {
+            return base.Channel.CustomersDeliveryByQtyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyResponse> CustomersDeliveryByQtyAsync(WcfMobile.SalesOrderServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest inValue = new WcfMobile.SalesOrderServices.SOPickServiceCustomersDeliveryByQtyRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            return ((WcfMobile.SalesOrderServices.SOPickService)(this)).CustomersDeliveryByQtyAsync(inValue);
         }
     }
 }

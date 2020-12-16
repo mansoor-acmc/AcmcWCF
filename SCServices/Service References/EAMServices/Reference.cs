@@ -395,379 +395,6 @@ namespace SyncServices.EAMServices {
         Error,
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="EAMServices.WorkItemsService")]
-    public interface WorkItemsService {
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemRequest) of message WorkItemsServiceDeleteWorkItemRequest does not match the default value (DeleteWorkItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse DeleteWorkItem(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipLocationsRequest) of message WorkItemsServiceGetEquipLocationsRequest does not match the default value (GetEquipLocations)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse GetEquipLocations(SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetRepaireCodesRequest) of message WorkItemsServiceGetRepaireCodesRequest does not match the default value (GetRepaireCodes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetRepaireCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetRepaireCodesResponse GetRepaireCodes(SyncServices.EAMServices.WorkItemsServiceGetRepaireCodesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetAllEquipmentsRequest) of message WorkItemsServiceGetAllEquipmentsRequest does not match the default value (GetAllEquipments)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsResponse GetAllEquipments(SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceFindRequest) of message WorkItemsServiceFindRequest does not match the default value (find)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceFindResponse find(SyncServices.EAMServices.WorkItemsServiceFindRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentRequest) of message WorkItemsServiceGetEquipmentRequest does not match the default value (GetEquipment)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetEquipmentResponse GetEquipment(SyncServices.EAMServices.WorkItemsServiceGetEquipmentRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetFailureCodesRequest) of message WorkItemsServiceGetFailureCodesRequest does not match the default value (GetFailureCodes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetFailureCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetFailureCodesResponse GetFailureCodes(SyncServices.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetInlineWorkItemsRequest) of message WorkItemsServiceGetInlineWorkItemsRequest does not match the default value (GetInlineWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse GetInlineWorkItems(SyncServices.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteRequest) of message WorkItemsServiceDeleteRequest does not match the default value (delete)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/deleteAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceDeleteResponse delete(SyncServices.EAMServices.WorkItemsServiceDeleteRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateRequest) of message WorkItemsServiceCreateRequest does not match the default value (create)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceCreateResponse create(SyncServices.EAMServices.WorkItemsServiceCreateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateOrUpdateRequest) of message WorkItemsServiceCreateOrUpdateRequest does not match the default value (CreateOrUpdate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/CreateOrUpdateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse CreateOrUpdate(SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetMaxIdRequest) of message WorkItemsServiceGetMaxIdRequest does not match the default value (getMaxId)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/getMaxIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse getMaxId(SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWOPoolCodeRequest) of message WorkItemsServiceGetWOPoolCodeRequest does not match the default value (GetWOPoolCode)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse GetWOPoolCode(SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetLatestWorkorderRequest) of message WorkItemsServiceGetLatestWorkorderRequest does not match the default value (GetLatestWorkorder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetLatestWorkorderResponse GetLatestWorkorder(SyncServices.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceReadRequest) of message WorkItemsServiceReadRequest does not match the default value (read)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceReadResponse read(SyncServices.EAMServices.WorkItemsServiceReadRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderTypesRequest) of message WorkItemsServiceGetWorkOrderTypesRequest does not match the default value (GetWorkOrderTypes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse GetWorkOrderTypes(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSetWOStatusRequest) of message WorkItemsServiceSetWOStatusRequest does not match the default value (SetWOStatus)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SetWOStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse SetWOStatus(SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceMainCostByProdLineRequest) of message WorkItemsServiceMainCostByProdLineRequest does not match the default value (MainCostByProdLine)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/MainCostByProdLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse MainCostByProdLine(SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceUpdateRequest) of message WorkItemsServiceUpdateRequest does not match the default value (update)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/update", ReplyAction="http://tempuri.org/WorkItemsService/updateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/updateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceUpdateResponse update(SyncServices.EAMServices.WorkItemsServiceUpdateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServicePostedWorkItemsRequest) of message WorkItemsServicePostedWorkItemsRequest does not match the default value (PostedWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/PostedWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse PostedWorkItems(SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOtherWorkItemsRequest) of message WorkItemsServiceGetOtherWorkItemsRequest does not match the default value (GetOtherWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse GetOtherWorkItems(SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSaveWorkOrderRequest) of message WorkItemsServiceSaveWorkOrderRequest does not match the default value (SaveWorkOrder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SaveWorkOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderResponse SaveWorkOrder(SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSearchEquipmentsRequest) of message WorkItemsServiceSearchEquipmentsRequest does not match the default value (SearchEquipments)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SearchEquipments", ReplyAction="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SearchEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse SearchEquipments(SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-    public partial class CallContext : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string companyField;
-        
-        private string languageField;
-        
-        private string logonAsUserField;
-        
-        private string messageIdField;
-        
-        private string partitionKeyField;
-        
-        private ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] propertyBagField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string Company {
-            get {
-                return this.companyField;
-            }
-            set {
-                this.companyField = value;
-                this.RaisePropertyChanged("Company");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string Language {
-            get {
-                return this.languageField;
-            }
-            set {
-                this.languageField = value;
-                this.RaisePropertyChanged("Language");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string LogonAsUser {
-            get {
-                return this.logonAsUserField;
-            }
-            set {
-                this.logonAsUserField = value;
-                this.RaisePropertyChanged("LogonAsUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string MessageId {
-            get {
-                return this.messageIdField;
-            }
-            set {
-                this.messageIdField = value;
-                this.RaisePropertyChanged("MessageId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string PartitionKey {
-            get {
-                return this.partitionKeyField;
-            }
-            set {
-                this.partitionKeyField = value;
-                this.RaisePropertyChanged("PartitionKey");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfstringstring", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
-        public ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] PropertyBag {
-            get {
-                return this.propertyBagField;
-            }
-            set {
-                this.propertyBagField = value;
-                this.RaisePropertyChanged("PropertyBag");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-    public partial class ArrayOfKeyValueOfstringstringKeyValueOfstringstring : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string keyField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string Key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("Key");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int sto_id;
-        
-        public WorkItemsServiceDeleteWorkItemRequest() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemRequest(SyncServices.EAMServices.CallContext CallContext, string woId, int sto_id) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.sto_id = sto_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public WorkItemsServiceDeleteWorkItemResponse() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-    public partial class WOLocationContract : XppObjectBase {
-        
-        private string assetLocationIdField;
-        
-        private string assetLocationNameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string AssetLocationId {
-            get {
-                return this.assetLocationIdField;
-            }
-            set {
-                this.assetLocationIdField = value;
-                this.RaisePropertyChanged("AssetLocationId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string AssetLocationName {
-            get {
-                return this.assetLocationNameField;
-            }
-            set {
-                this.assetLocationNameField = value;
-                this.RaisePropertyChanged("AssetLocationName");
-            }
-        }
-    }
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WOTypeContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WOPoolContract))]
@@ -776,6 +403,8 @@ namespace SyncServices.EAMServices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PMWorkOrderContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PMWorkItemContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PMLineCostContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnHandContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FailureCodeContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquipContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquipCatalogContract))]
@@ -895,6 +524,43 @@ namespace SyncServices.EAMServices {
             set {
                 this.wOPoolCodeField = value;
                 this.RaisePropertyChanged("WOPoolCode");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class WOLocationContract : XppObjectBase {
+        
+        private string assetLocationIdField;
+        
+        private string assetLocationNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string AssetLocationId {
+            get {
+                return this.assetLocationIdField;
+            }
+            set {
+                this.assetLocationIdField = value;
+                this.RaisePropertyChanged("AssetLocationId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string AssetLocationName {
+            get {
+                return this.assetLocationNameField;
+            }
+            set {
+                this.assetLocationNameField = value;
+                this.RaisePropertyChanged("AssetLocationName");
             }
         }
     }
@@ -1505,6 +1171,136 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class OnHandContract : XppObjectBase {
+        
+        private string gradeField;
+        
+        private string itemDescriptionField;
+        
+        private string itemNumberField;
+        
+        private decimal onHandQtyField;
+        
+        private bool onHandQtyFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ItemDescription {
+            get {
+                return this.itemDescriptionField;
+            }
+            set {
+                this.itemDescriptionField = value;
+                this.RaisePropertyChanged("ItemDescription");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string ItemNumber {
+            get {
+                return this.itemNumberField;
+            }
+            set {
+                this.itemNumberField = value;
+                this.RaisePropertyChanged("ItemNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal OnHandQty {
+            get {
+                return this.onHandQtyField;
+            }
+            set {
+                this.onHandQtyField = value;
+                this.RaisePropertyChanged("OnHandQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OnHandQtySpecified {
+            get {
+                return this.onHandQtyFieldSpecified;
+            }
+            set {
+                this.onHandQtyFieldSpecified = value;
+                this.RaisePropertyChanged("OnHandQtySpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class LookupContract : XppObjectBase {
+        
+        private int lookupIdField;
+        
+        private bool lookupIdFieldSpecified;
+        
+        private string lookupStringField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int LookupId {
+            get {
+                return this.lookupIdField;
+            }
+            set {
+                this.lookupIdField = value;
+                this.RaisePropertyChanged("LookupId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LookupIdSpecified {
+            get {
+                return this.lookupIdFieldSpecified;
+            }
+            set {
+                this.lookupIdFieldSpecified = value;
+                this.RaisePropertyChanged("LookupIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string LookupString {
+            get {
+                return this.lookupStringField;
+            }
+            set {
+                this.lookupStringField = value;
+                this.RaisePropertyChanged("LookupString");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class FailureCodeContract : XppObjectBase {
         
         private string descriptionField;
@@ -1927,39 +1723,407 @@ namespace SyncServices.EAMServices {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipLocationsRequest {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="EAMServices.WorkItemsService")]
+    public interface WorkItemsService {
         
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOnhandRequest) of message WorkItemsServiceGetOnhandRequest does not match the default value (GetOnhand)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOnhand", ReplyAction="http://tempuri.org/WorkItemsService/GetOnhandResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOnhandAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetOnhandResponse GetOnhand(SyncServices.EAMServices.WorkItemsServiceGetOnhandRequest request);
         
-        public WorkItemsServiceGetEquipLocationsRequest() {
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSearchEquipmentsRequest) of message WorkItemsServiceSearchEquipmentsRequest does not match the default value (SearchEquipments)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SearchEquipments", ReplyAction="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SearchEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse SearchEquipments(SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceUpdateRequest) of message WorkItemsServiceUpdateRequest does not match the default value (update)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/update", ReplyAction="http://tempuri.org/WorkItemsService/updateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/updateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceUpdateResponse update(SyncServices.EAMServices.WorkItemsServiceUpdateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetMaxIdRequest) of message WorkItemsServiceGetMaxIdRequest does not match the default value (getMaxId)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/getMaxIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse getMaxId(SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceMainCostByProdLineRequest) of message WorkItemsServiceMainCostByProdLineRequest does not match the default value (MainCostByProdLine)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/MainCostByProdLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse MainCostByProdLine(SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderTypesRequest) of message WorkItemsServiceGetWorkOrderTypesRequest does not match the default value (GetWorkOrderTypes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse GetWorkOrderTypes(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateOrUpdateRequest) of message WorkItemsServiceCreateOrUpdateRequest does not match the default value (CreateOrUpdate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/CreateOrUpdateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse CreateOrUpdate(SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetRepaireCodesRequest) of message WorkItemsServiceGetRepaireCodesRequest does not match the default value (GetRepaireCodes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetRepaireCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetRepaireCodesResponse GetRepaireCodes(SyncServices.EAMServices.WorkItemsServiceGetRepaireCodesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWOPoolCodeRequest) of message WorkItemsServiceGetWOPoolCodeRequest does not match the default value (GetWOPoolCode)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse GetWOPoolCode(SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderStatusLookupRequest) of message WorkItemsServiceGetWorkOrderStatusLookupRequest does not match the default value (GetWorkOrderStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse GetWorkOrderStatusLookup(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetAllEquipmentsRequest) of message WorkItemsServiceGetAllEquipmentsRequest does not match the default value (GetAllEquipments)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsResponse GetAllEquipments(SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipLocationsRequest) of message WorkItemsServiceGetEquipLocationsRequest does not match the default value (GetEquipLocations)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse GetEquipLocations(SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOtherWorkItemsRequest) of message WorkItemsServiceGetOtherWorkItemsRequest does not match the default value (GetOtherWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse GetOtherWorkItems(SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServicePostedWorkItemsRequest) of message WorkItemsServicePostedWorkItemsRequest does not match the default value (PostedWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/PostedWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse PostedWorkItems(SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceFindRequest) of message WorkItemsServiceFindRequest does not match the default value (find)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceFindResponse find(SyncServices.EAMServices.WorkItemsServiceFindRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateRequest) of message WorkItemsServiceCreateRequest does not match the default value (create)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceCreateResponse create(SyncServices.EAMServices.WorkItemsServiceCreateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemRequest) of message WorkItemsServiceDeleteWorkItemRequest does not match the default value (DeleteWorkItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse DeleteWorkItem(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentsByCostCenterRequest) of message WorkItemsServiceGetEquipmentsByCostCenterRequest does not match the default value (GetEquipmentsByCostCenter)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse GetEquipmentsByCostCenter(SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentRequest) of message WorkItemsServiceGetEquipmentRequest does not match the default value (GetEquipment)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetEquipmentResponse GetEquipment(SyncServices.EAMServices.WorkItemsServiceGetEquipmentRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteRequest) of message WorkItemsServiceDeleteRequest does not match the default value (delete)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/deleteAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceDeleteResponse delete(SyncServices.EAMServices.WorkItemsServiceDeleteRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetSingleWorkorderWithItemsRequest) of message WorkItemsServiceGetSingleWorkorderWithItemsRequest does not match the default value (GetSingleWorkorderWithItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse GetSingleWorkorderWithItems(SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkordersByEquipmentRequest) of message WorkItemsServiceGetWorkordersByEquipmentRequest does not match the default value (GetWorkordersByEquipment)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentResponse GetWorkordersByEquipment(SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceReadRequest) of message WorkItemsServiceReadRequest does not match the default value (read)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceReadResponse read(SyncServices.EAMServices.WorkItemsServiceReadRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSetWOStatusRequest) of message WorkItemsServiceSetWOStatusRequest does not match the default value (SetWOStatus)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SetWOStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse SetWOStatus(SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetFailureCodesRequest) of message WorkItemsServiceGetFailureCodesRequest does not match the default value (GetFailureCodes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetFailureCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetFailureCodesResponse GetFailureCodes(SyncServices.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetInlineWorkItemsRequest) of message WorkItemsServiceGetInlineWorkItemsRequest does not match the default value (GetInlineWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse GetInlineWorkItems(SyncServices.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemByRecIdRequest) of message WorkItemsServiceDeleteWorkItemByRecIdRequest does not match the default value (DeleteWorkItemByRecId)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse DeleteWorkItemByRecId(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetLatestWorkorderRequest) of message WorkItemsServiceGetLatestWorkorderRequest does not match the default value (GetLatestWorkorder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetLatestWorkorderResponse GetLatestWorkorder(SyncServices.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSaveWorkOrderRequest) of message WorkItemsServiceSaveWorkOrderRequest does not match the default value (SaveWorkOrder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SaveWorkOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderResponse SaveWorkOrder(SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkordersByDatesRequest) of message WorkItemsServiceGetWorkordersByDatesRequest does not match the default value (GetWorkordersByDates)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse GetWorkordersByDates(SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+    public partial class CallContext : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string companyField;
+        
+        private string languageField;
+        
+        private string logonAsUserField;
+        
+        private string messageIdField;
+        
+        private string partitionKeyField;
+        
+        private ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] propertyBagField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Company {
+            get {
+                return this.companyField;
+            }
+            set {
+                this.companyField = value;
+                this.RaisePropertyChanged("Company");
+            }
         }
         
-        public WorkItemsServiceGetEquipLocationsRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+                this.RaisePropertyChanged("Language");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string LogonAsUser {
+            get {
+                return this.logonAsUserField;
+            }
+            set {
+                this.logonAsUserField = value;
+                this.RaisePropertyChanged("LogonAsUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string MessageId {
+            get {
+                return this.messageIdField;
+            }
+            set {
+                this.messageIdField = value;
+                this.RaisePropertyChanged("MessageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string PartitionKey {
+            get {
+                return this.partitionKeyField;
+            }
+            set {
+                this.partitionKeyField = value;
+                this.RaisePropertyChanged("PartitionKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfstringstring", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
+        public ArrayOfKeyValueOfstringstringKeyValueOfstringstring[] PropertyBag {
+            get {
+                return this.propertyBagField;
+            }
+            set {
+                this.propertyBagField = value;
+                this.RaisePropertyChanged("PropertyBag");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+    public partial class ArrayOfKeyValueOfstringstringKeyValueOfstringstring : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("Key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipLocationsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOnhandRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.WOLocationContract[] response;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _itemId;
         
-        public WorkItemsServiceGetEquipLocationsResponse() {
+        public WorkItemsServiceGetOnhandRequest() {
         }
         
-        public WorkItemsServiceGetEquipLocationsResponse(SyncServices.EAMServices.WOLocationContract[] response) {
+        public WorkItemsServiceGetOnhandRequest(SyncServices.EAMServices.CallContext CallContext, string _itemId) {
+            this.CallContext = CallContext;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOnhandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.OnHandContract response;
+        
+        public WorkItemsServiceGetOnhandResponse() {
+        }
+        
+        public WorkItemsServiceGetOnhandResponse(SyncServices.EAMServices.OnHandContract response) {
             this.response = response;
         }
     }
@@ -1967,73 +2131,41 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetRepaireCodesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSearchEquipmentsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetRepaireCodesRequest() {
-        }
-        
-        public WorkItemsServiceGetRepaireCodesRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetRepaireCodesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.RepairCodeContract[] response;
-        
-        public WorkItemsServiceGetRepaireCodesResponse() {
-        }
-        
-        public WorkItemsServiceGetRepaireCodesResponse(SyncServices.EAMServices.RepairCodeContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetAllEquipmentsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
+        public string equipName;
         
-        public WorkItemsServiceGetAllEquipmentsRequest() {
+        public WorkItemsServiceSearchEquipmentsRequest() {
         }
         
-        public WorkItemsServiceGetAllEquipmentsRequest(SyncServices.EAMServices.CallContext CallContext) {
+        public WorkItemsServiceSearchEquipmentsRequest(SyncServices.EAMServices.CallContext CallContext, string equipName) {
             this.CallContext = CallContext;
+            this.equipName = equipName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetAllEquipmentsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSearchEquipmentsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
         public SyncServices.EAMServices.EquipContract[] response;
         
-        public WorkItemsServiceGetAllEquipmentsResponse() {
+        public WorkItemsServiceSearchEquipmentsResponse() {
         }
         
-        public WorkItemsServiceGetAllEquipmentsResponse(SyncServices.EAMServices.EquipContract[] response) {
+        public WorkItemsServiceSearchEquipmentsResponse(SyncServices.EAMServices.EquipContract[] response) {
             this.response = response;
         }
     }
@@ -2043,20 +2175,21 @@ namespace SyncServices.EAMServices {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private CriteriaElement[] criteriaElementField;
+        private KeyField[] keyDataField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
-        public CriteriaElement[] CriteriaElement {
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public KeyField[] KeyData {
             get {
-                return this.criteriaElementField;
+                return this.keyDataField;
             }
             set {
-                this.criteriaElementField = value;
-                this.RaisePropertyChanged("CriteriaElement");
+                this.keyDataField = value;
+                this.RaisePropertyChanged("KeyData");
             }
         }
         
@@ -2075,76 +2208,34 @@ namespace SyncServices.EAMServices {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string dataSourceNameField;
+        private string fieldField;
         
-        private string fieldNameField;
-        
-        private Operator operatorField;
-        
-        private string value1Field;
-        
-        private string value2Field;
+        private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DataSourceName {
+        public string Field {
             get {
-                return this.dataSourceNameField;
+                return this.fieldField;
             }
             set {
-                this.dataSourceNameField = value;
-                this.RaisePropertyChanged("DataSourceName");
+                this.fieldField = value;
+                this.RaisePropertyChanged("Field");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string FieldName {
+        public string Value {
             get {
-                return this.fieldNameField;
+                return this.valueField;
             }
             set {
-                this.fieldNameField = value;
-                this.RaisePropertyChanged("FieldName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public Operator Operator {
-            get {
-                return this.operatorField;
-            }
-            set {
-                this.operatorField = value;
-                this.RaisePropertyChanged("Operator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Value1 {
-            get {
-                return this.value1Field;
-            }
-            set {
-                this.value1Field = value;
-                this.RaisePropertyChanged("Value1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Value2 {
-            get {
-                return this.value2Field;
-            }
-            set {
-                this.value2Field = value;
-                this.RaisePropertyChanged("Value2");
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -2156,34 +2247,6 @@ namespace SyncServices.EAMServices {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public enum Operator {
-        
-        /// <remarks/>
-        Equal,
-        
-        /// <remarks/>
-        NotEqual,
-        
-        /// <remarks/>
-        Greater,
-        
-        /// <remarks/>
-        GreaterOrEqual,
-        
-        /// <remarks/>
-        Less,
-        
-        /// <remarks/>
-        LessOrEqual,
-        
-        /// <remarks/>
-        Range,
     }
     
     /// <remarks/>
@@ -3662,6 +3725,628 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceUpdateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public SyncServices.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceUpdateRequest() {
+        }
+        
+        public WorkItemsServiceUpdateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList, SyncServices.EAMServices.AxdWorkItems WorkItems) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceUpdateResponse {
+        
+        public WorkItemsServiceUpdateResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetMaxIdRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetMaxIdRequest() {
+        }
+        
+        public WorkItemsServiceGetMaxIdRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetMaxIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long response;
+        
+        public WorkItemsServiceGetMaxIdResponse() {
+        }
+        
+        public WorkItemsServiceGetMaxIdResponse(long response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceMainCostByProdLineRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceMainCostByProdLineRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime endDate;
+        
+        public WorkItemsServiceMainCostByProdLineRequest() {
+        }
+        
+        public WorkItemsServiceMainCostByProdLineRequest(SyncServices.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            this.CallContext = CallContext;
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceMainCostByProdLineResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceMainCostByProdLineResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.PMLineCostContract[] response;
+        
+        public WorkItemsServiceMainCostByProdLineResponse() {
+        }
+        
+        public WorkItemsServiceMainCostByProdLineResponse(SyncServices.EAMServices.PMLineCostContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetWorkOrderTypesRequest() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderTypesRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderTypesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.WOTypeContract[] response;
+        
+        public WorkItemsServiceGetWorkOrderTypesResponse() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderTypesResponse(SyncServices.EAMServices.WOTypeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateOrUpdateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.EamWorkitemsContract[] lines;
+        
+        public WorkItemsServiceCreateOrUpdateRequest() {
+        }
+        
+        public WorkItemsServiceCreateOrUpdateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EamWorkitemsContract[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateOrUpdateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string response;
+        
+        public WorkItemsServiceCreateOrUpdateResponse() {
+        }
+        
+        public WorkItemsServiceCreateOrUpdateResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetRepaireCodesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetRepaireCodesRequest() {
+        }
+        
+        public WorkItemsServiceGetRepaireCodesRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetRepaireCodesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.RepairCodeContract[] response;
+        
+        public WorkItemsServiceGetRepaireCodesResponse() {
+        }
+        
+        public WorkItemsServiceGetRepaireCodesResponse(SyncServices.EAMServices.RepairCodeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWOPoolCodeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetWOPoolCodeRequest() {
+        }
+        
+        public WorkItemsServiceGetWOPoolCodeRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWOPoolCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.WOPoolContract[] response;
+        
+        public WorkItemsServiceGetWOPoolCodeResponse() {
+        }
+        
+        public WorkItemsServiceGetWOPoolCodeResponse(SyncServices.EAMServices.WOPoolContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetWorkOrderStatusLookupRequest() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderStatusLookupRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.LookupContract[] response;
+        
+        public WorkItemsServiceGetWorkOrderStatusLookupResponse() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderStatusLookupResponse(SyncServices.EAMServices.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetAllEquipmentsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetAllEquipmentsRequest() {
+        }
+        
+        public WorkItemsServiceGetAllEquipmentsRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetAllEquipmentsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.EquipContract[] response;
+        
+        public WorkItemsServiceGetAllEquipmentsResponse() {
+        }
+        
+        public WorkItemsServiceGetAllEquipmentsResponse(SyncServices.EAMServices.EquipContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipLocationsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetEquipLocationsRequest() {
+        }
+        
+        public WorkItemsServiceGetEquipLocationsRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipLocationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.WOLocationContract[] response;
+        
+        public WorkItemsServiceGetEquipLocationsResponse() {
+        }
+        
+        public WorkItemsServiceGetEquipLocationsResponse(SyncServices.EAMServices.WOLocationContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOtherWorkItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string search;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int topRecords;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public bool isItemCode;
+        
+        public WorkItemsServiceGetOtherWorkItemsRequest() {
+        }
+        
+        public WorkItemsServiceGetOtherWorkItemsRequest(SyncServices.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+            this.search = search;
+            this.topRecords = topRecords;
+            this.isItemCode = isItemCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOtherWorkItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.PMWorkItemContract[] response;
+        
+        public WorkItemsServiceGetOtherWorkItemsResponse() {
+        }
+        
+        public WorkItemsServiceGetOtherWorkItemsResponse(SyncServices.EAMServices.PMWorkItemContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServicePostedWorkItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServicePostedWorkItemsRequest() {
+        }
+        
+        public WorkItemsServicePostedWorkItemsRequest(SyncServices.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServicePostedWorkItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Data.DataSet response;
+        
+        public WorkItemsServicePostedWorkItemsResponse() {
+        }
+        
+        public WorkItemsServicePostedWorkItemsResponse(System.Data.DataSet response) {
+            this.response = response;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CriteriaElement[] criteriaElementField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
+        public CriteriaElement[] CriteriaElement {
+            get {
+                return this.criteriaElementField;
+            }
+            set {
+                this.criteriaElementField = value;
+                this.RaisePropertyChanged("CriteriaElement");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataSourceNameField;
+        
+        private string fieldNameField;
+        
+        private Operator operatorField;
+        
+        private string value1Field;
+        
+        private string value2Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DataSourceName {
+            get {
+                return this.dataSourceNameField;
+            }
+            set {
+                this.dataSourceNameField = value;
+                this.RaisePropertyChanged("DataSourceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string FieldName {
+            get {
+                return this.fieldNameField;
+            }
+            set {
+                this.fieldNameField = value;
+                this.RaisePropertyChanged("FieldName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Operator Operator {
+            get {
+                return this.operatorField;
+            }
+            set {
+                this.operatorField = value;
+                this.RaisePropertyChanged("Operator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Value1 {
+            get {
+                return this.value1Field;
+            }
+            set {
+                this.value1Field = value;
+                this.RaisePropertyChanged("Value1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Value2 {
+            get {
+                return this.value2Field;
+            }
+            set {
+                this.value2Field = value;
+                this.RaisePropertyChanged("Value2");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public enum Operator {
+        
+        /// <remarks/>
+        Equal,
+        
+        /// <remarks/>
+        NotEqual,
+        
+        /// <remarks/>
+        Greater,
+        
+        /// <remarks/>
+        GreaterOrEqual,
+        
+        /// <remarks/>
+        Less,
+        
+        /// <remarks/>
+        LessOrEqual,
+        
+        /// <remarks/>
+        Range,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class WorkItemsServiceFindRequest {
         
@@ -3703,6 +4388,134 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public SyncServices.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceCreateRequest() {
+        }
+        
+        public WorkItemsServiceCreateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.AxdWorkItems WorkItems) {
+            this.CallContext = CallContext;
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceCreateResponse() {
+        }
+        
+        public WorkItemsServiceCreateResponse(SyncServices.EAMServices.EntityKey[] EntityKeyList) {
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int sto_id;
+        
+        public WorkItemsServiceDeleteWorkItemRequest() {
+        }
+        
+        public WorkItemsServiceDeleteWorkItemRequest(SyncServices.EAMServices.CallContext CallContext, string woId, int sto_id) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+            this.sto_id = sto_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public WorkItemsServiceDeleteWorkItemResponse() {
+        }
+        
+        public WorkItemsServiceDeleteWorkItemResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentsByCostCenterRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string dimValueStr;
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterRequest() {
+        }
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterRequest(SyncServices.EAMServices.CallContext CallContext, string dimValueStr) {
+            this.CallContext = CallContext;
+            this.dimValueStr = dimValueStr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentsByCostCenterResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.EquipContract[] response;
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterResponse() {
+        }
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterResponse(SyncServices.EAMServices.EquipContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class WorkItemsServiceGetEquipmentRequest {
         
@@ -3737,6 +4550,209 @@ namespace SyncServices.EAMServices {
         }
         
         public WorkItemsServiceGetEquipmentResponse(SyncServices.EAMServices.EquipContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceDeleteRequest() {
+        }
+        
+        public WorkItemsServiceDeleteRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteResponse {
+        
+        public WorkItemsServiceDeleteResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetSingleWorkorderWithItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsRequest() {
+        }
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsRequest(SyncServices.EAMServices.CallContext CallContext, string woId) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetSingleWorkorderWithItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.PMWorkOrderContract response;
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsResponse() {
+        }
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsResponse(SyncServices.EAMServices.PMWorkOrderContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByEquipmentRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string equipId;
+        
+        public WorkItemsServiceGetWorkordersByEquipmentRequest() {
+        }
+        
+        public WorkItemsServiceGetWorkordersByEquipmentRequest(SyncServices.EAMServices.CallContext CallContext, string equipId) {
+            this.CallContext = CallContext;
+            this.equipId = equipId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByEquipmentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.EAMServices.PMWorkOrderContract[] response;
+        
+        public WorkItemsServiceGetWorkordersByEquipmentResponse() {
+        }
+        
+        public WorkItemsServiceGetWorkordersByEquipmentResponse(SyncServices.EAMServices.PMWorkOrderContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceReadRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceReadRequest() {
+        }
+        
+        public WorkItemsServiceReadRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceReadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public SyncServices.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceReadResponse() {
+        }
+        
+        public WorkItemsServiceReadResponse(SyncServices.EAMServices.AxdWorkItems WorkItems) {
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSetWOStatusRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int statusId;
+        
+        public WorkItemsServiceSetWOStatusRequest() {
+        }
+        
+        public WorkItemsServiceSetWOStatusRequest(SyncServices.EAMServices.CallContext CallContext, string woId, int statusId) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+            this.statusId = statusId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSetWOStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public WorkItemsServiceSetWOStatusResponse() {
+        }
+        
+        public WorkItemsServiceSetWOStatusResponse(bool response) {
             this.response = response;
         }
     }
@@ -3820,271 +4836,46 @@ namespace SyncServices.EAMServices {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private KeyField[] keyDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public KeyField[] KeyData {
-            get {
-                return this.keyDataField;
-            }
-            set {
-                this.keyDataField = value;
-                this.RaisePropertyChanged("KeyData");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fieldField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Field {
-            get {
-                return this.fieldField;
-            }
-            set {
-                this.fieldField = value;
-                this.RaisePropertyChanged("Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
-        
-        public WorkItemsServiceDeleteRequest() {
-        }
-        
-        public WorkItemsServiceDeleteRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteResponse {
-        
-        public WorkItemsServiceDeleteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public SyncServices.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceCreateRequest() {
-        }
-        
-        public WorkItemsServiceCreateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.AxdWorkItems WorkItems) {
-            this.CallContext = CallContext;
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
-        
-        public WorkItemsServiceCreateResponse() {
-        }
-        
-        public WorkItemsServiceCreateResponse(SyncServices.EAMServices.EntityKey[] EntityKeyList) {
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateOrUpdateRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemByRecIdRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.EamWorkitemsContract[] lines;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
         
-        public WorkItemsServiceCreateOrUpdateRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long rec_id;
+        
+        public WorkItemsServiceDeleteWorkItemByRecIdRequest() {
         }
         
-        public WorkItemsServiceCreateOrUpdateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EamWorkitemsContract[] lines) {
+        public WorkItemsServiceDeleteWorkItemByRecIdRequest(SyncServices.EAMServices.CallContext CallContext, string woId, long rec_id) {
             this.CallContext = CallContext;
-            this.lines = lines;
+            this.woId = woId;
+            this.rec_id = rec_id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateOrUpdateResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemByRecIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string response;
+        public bool response;
         
-        public WorkItemsServiceCreateOrUpdateResponse() {
+        public WorkItemsServiceDeleteWorkItemByRecIdResponse() {
         }
         
-        public WorkItemsServiceCreateOrUpdateResponse(string response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetMaxIdRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetMaxIdRequest() {
-        }
-        
-        public WorkItemsServiceGetMaxIdRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetMaxIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long response;
-        
-        public WorkItemsServiceGetMaxIdResponse() {
-        }
-        
-        public WorkItemsServiceGetMaxIdResponse(long response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWOPoolCodeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetWOPoolCodeRequest() {
-        }
-        
-        public WorkItemsServiceGetWOPoolCodeRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWOPoolCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.WOPoolContract[] response;
-        
-        public WorkItemsServiceGetWOPoolCodeResponse() {
-        }
-        
-        public WorkItemsServiceGetWOPoolCodeResponse(SyncServices.EAMServices.WOPoolContract[] response) {
+        public WorkItemsServiceDeleteWorkItemByRecIdResponse(bool response) {
             this.response = response;
         }
     }
@@ -4133,304 +4924,6 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceReadRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
-        
-        public WorkItemsServiceReadRequest() {
-        }
-        
-        public WorkItemsServiceReadRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceReadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public SyncServices.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceReadResponse() {
-        }
-        
-        public WorkItemsServiceReadResponse(SyncServices.EAMServices.AxdWorkItems WorkItems) {
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkOrderTypesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetWorkOrderTypesRequest() {
-        }
-        
-        public WorkItemsServiceGetWorkOrderTypesRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkOrderTypesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.WOTypeContract[] response;
-        
-        public WorkItemsServiceGetWorkOrderTypesResponse() {
-        }
-        
-        public WorkItemsServiceGetWorkOrderTypesResponse(SyncServices.EAMServices.WOTypeContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSetWOStatusRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int statusId;
-        
-        public WorkItemsServiceSetWOStatusRequest() {
-        }
-        
-        public WorkItemsServiceSetWOStatusRequest(SyncServices.EAMServices.CallContext CallContext, string woId, int statusId) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.statusId = statusId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSetWOStatusResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public WorkItemsServiceSetWOStatusResponse() {
-        }
-        
-        public WorkItemsServiceSetWOStatusResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceMainCostByProdLineRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceMainCostByProdLineRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime startDate;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime endDate;
-        
-        public WorkItemsServiceMainCostByProdLineRequest() {
-        }
-        
-        public WorkItemsServiceMainCostByProdLineRequest(SyncServices.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            this.CallContext = CallContext;
-            this.startDate = startDate;
-            this.endDate = endDate;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceMainCostByProdLineResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceMainCostByProdLineResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.PMLineCostContract[] response;
-        
-        public WorkItemsServiceMainCostByProdLineResponse() {
-        }
-        
-        public WorkItemsServiceMainCostByProdLineResponse(SyncServices.EAMServices.PMLineCostContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceUpdateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public SyncServices.EAMServices.EntityKey[] EntityKeyList;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public SyncServices.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceUpdateRequest() {
-        }
-        
-        public WorkItemsServiceUpdateRequest(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList, SyncServices.EAMServices.AxdWorkItems WorkItems) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceUpdateResponse {
-        
-        public WorkItemsServiceUpdateResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServicePostedWorkItemsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServicePostedWorkItemsRequest() {
-        }
-        
-        public WorkItemsServicePostedWorkItemsRequest(SyncServices.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServicePostedWorkItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Data.DataSet response;
-        
-        public WorkItemsServicePostedWorkItemsResponse() {
-        }
-        
-        public WorkItemsServicePostedWorkItemsResponse(System.Data.DataSet response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOtherWorkItemsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string search;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int topRecords;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public bool isItemCode;
-        
-        public WorkItemsServiceGetOtherWorkItemsRequest() {
-        }
-        
-        public WorkItemsServiceGetOtherWorkItemsRequest(SyncServices.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.search = search;
-            this.topRecords = topRecords;
-            this.isItemCode = isItemCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOtherWorkItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.PMWorkItemContract[] response;
-        
-        public WorkItemsServiceGetOtherWorkItemsResponse() {
-        }
-        
-        public WorkItemsServiceGetOtherWorkItemsResponse(SyncServices.EAMServices.PMWorkItemContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSaveWorkOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class WorkItemsServiceSaveWorkOrderRequest {
         
@@ -4472,41 +4965,44 @@ namespace SyncServices.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSearchEquipmentsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByDatesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string equipName;
+        public System.DateTime _dateStart;
         
-        public WorkItemsServiceSearchEquipmentsRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime _dateEnd;
+        
+        public WorkItemsServiceGetWorkordersByDatesRequest() {
         }
         
-        public WorkItemsServiceSearchEquipmentsRequest(SyncServices.EAMServices.CallContext CallContext, string equipName) {
+        public WorkItemsServiceGetWorkordersByDatesRequest(SyncServices.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
             this.CallContext = CallContext;
-            this.equipName = equipName;
+            this._dateStart = _dateStart;
+            this._dateEnd = _dateEnd;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSearchEquipmentsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByDatesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.EAMServices.EquipContract[] response;
+        public SyncServices.EAMServices.PMWorkOrderContract[] response;
         
-        public WorkItemsServiceSearchEquipmentsResponse() {
+        public WorkItemsServiceGetWorkordersByDatesResponse() {
         }
         
-        public WorkItemsServiceSearchEquipmentsResponse(SyncServices.EAMServices.EquipContract[] response) {
+        public WorkItemsServiceGetWorkordersByDatesResponse(SyncServices.EAMServices.PMWorkOrderContract[] response) {
             this.response = response;
         }
     }
@@ -4539,28 +5035,92 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse SyncServices.EAMServices.WorkItemsService.DeleteWorkItem(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
-            return base.Channel.DeleteWorkItem(request);
+        SyncServices.EAMServices.WorkItemsServiceGetOnhandResponse SyncServices.EAMServices.WorkItemsService.GetOnhand(SyncServices.EAMServices.WorkItemsServiceGetOnhandRequest request) {
+            return base.Channel.GetOnhand(request);
         }
         
-        public bool DeleteWorkItem(SyncServices.EAMServices.CallContext CallContext, string woId, int sto_id) {
-            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
+        public SyncServices.EAMServices.OnHandContract GetOnhand(SyncServices.EAMServices.CallContext CallContext, string _itemId) {
+            SyncServices.EAMServices.WorkItemsServiceGetOnhandRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetOnhandRequest();
             inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.sto_id = sto_id;
-            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).DeleteWorkItem(inValue);
+            inValue._itemId = _itemId;
+            SyncServices.EAMServices.WorkItemsServiceGetOnhandResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetOnhand(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse SyncServices.EAMServices.WorkItemsService.GetEquipLocations(SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
-            return base.Channel.GetEquipLocations(request);
+        SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse SyncServices.EAMServices.WorkItemsService.SearchEquipments(SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest request) {
+            return base.Channel.SearchEquipments(request);
         }
         
-        public SyncServices.EAMServices.WOLocationContract[] GetEquipLocations(SyncServices.EAMServices.CallContext CallContext) {
-            SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
+        public SyncServices.EAMServices.EquipContract[] SearchEquipments(SyncServices.EAMServices.CallContext CallContext, string equipName) {
+            SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest();
             inValue.CallContext = CallContext;
-            SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
+            inValue.equipName = equipName;
+            SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).SearchEquipments(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceUpdateResponse SyncServices.EAMServices.WorkItemsService.update(SyncServices.EAMServices.WorkItemsServiceUpdateRequest request) {
+            return base.Channel.update(request);
+        }
+        
+        public void update(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList, SyncServices.EAMServices.AxdWorkItems WorkItems) {
+            SyncServices.EAMServices.WorkItemsServiceUpdateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceUpdateRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            inValue.WorkItems = WorkItems;
+            SyncServices.EAMServices.WorkItemsServiceUpdateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).update(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse SyncServices.EAMServices.WorkItemsService.getMaxId(SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
+            return base.Channel.getMaxId(request);
+        }
+        
+        public long getMaxId(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).getMaxId(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse SyncServices.EAMServices.WorkItemsService.MainCostByProdLine(SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
+            return base.Channel.MainCostByProdLine(request);
+        }
+        
+        public SyncServices.EAMServices.PMLineCostContract[] MainCostByProdLine(SyncServices.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).MainCostByProdLine(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse SyncServices.EAMServices.WorkItemsService.GetWorkOrderTypes(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
+            return base.Channel.GetWorkOrderTypes(request);
+        }
+        
+        public SyncServices.EAMServices.WOTypeContract[] GetWorkOrderTypes(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse SyncServices.EAMServices.WorkItemsService.CreateOrUpdate(SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
+            return base.Channel.CreateOrUpdate(request);
+        }
+        
+        public string CreateOrUpdate(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EamWorkitemsContract[] lines) {
+            SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).CreateOrUpdate(inValue);
             return retVal.response;
         }
         
@@ -4577,6 +5137,30 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse SyncServices.EAMServices.WorkItemsService.GetWOPoolCode(SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request) {
+            return base.Channel.GetWOPoolCode(request);
+        }
+        
+        public SyncServices.EAMServices.WOPoolContract[] GetWOPoolCode(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWOPoolCode(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse SyncServices.EAMServices.WorkItemsService.GetWorkOrderStatusLookup(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request) {
+            return base.Channel.GetWorkOrderStatusLookup(request);
+        }
+        
+        public SyncServices.EAMServices.LookupContract[] GetWorkOrderStatusLookup(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsResponse SyncServices.EAMServices.WorkItemsService.GetAllEquipments(SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request) {
             return base.Channel.GetAllEquipments(request);
         }
@@ -4585,6 +5169,46 @@ namespace SyncServices.EAMServices {
             SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsRequest();
             inValue.CallContext = CallContext;
             SyncServices.EAMServices.WorkItemsServiceGetAllEquipmentsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetAllEquipments(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse SyncServices.EAMServices.WorkItemsService.GetEquipLocations(SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
+            return base.Channel.GetEquipLocations(request);
+        }
+        
+        public SyncServices.EAMServices.WOLocationContract[] GetEquipLocations(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServiceGetEquipLocationsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse SyncServices.EAMServices.WorkItemsService.GetOtherWorkItems(SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request) {
+            return base.Channel.GetOtherWorkItems(request);
+        }
+        
+        public SyncServices.EAMServices.PMWorkItemContract[] GetOtherWorkItems(SyncServices.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
+            SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.search = search;
+            inValue.topRecords = topRecords;
+            inValue.isItemCode = isItemCode;
+            SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetOtherWorkItems(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse SyncServices.EAMServices.WorkItemsService.PostedWorkItems(SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
+            return base.Channel.PostedWorkItems(request);
+        }
+        
+        public System.Data.DataSet PostedWorkItems(SyncServices.EAMServices.CallContext CallContext) {
+            SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).PostedWorkItems(inValue);
             return retVal.response;
         }
         
@@ -4602,6 +5226,46 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceCreateResponse SyncServices.EAMServices.WorkItemsService.create(SyncServices.EAMServices.WorkItemsServiceCreateRequest request) {
+            return base.Channel.create(request);
+        }
+        
+        public SyncServices.EAMServices.EntityKey[] create(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.AxdWorkItems WorkItems) {
+            SyncServices.EAMServices.WorkItemsServiceCreateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceCreateRequest();
+            inValue.CallContext = CallContext;
+            inValue.WorkItems = WorkItems;
+            SyncServices.EAMServices.WorkItemsServiceCreateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).create(inValue);
+            return retVal.EntityKeyList;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse SyncServices.EAMServices.WorkItemsService.DeleteWorkItem(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
+            return base.Channel.DeleteWorkItem(request);
+        }
+        
+        public bool DeleteWorkItem(SyncServices.EAMServices.CallContext CallContext, string woId, int sto_id) {
+            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.sto_id = sto_id;
+            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).DeleteWorkItem(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse SyncServices.EAMServices.WorkItemsService.GetEquipmentsByCostCenter(SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request) {
+            return base.Channel.GetEquipmentsByCostCenter(request);
+        }
+        
+        public SyncServices.EAMServices.EquipContract[] GetEquipmentsByCostCenter(SyncServices.EAMServices.CallContext CallContext, string dimValueStr) {
+            SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest();
+            inValue.CallContext = CallContext;
+            inValue.dimValueStr = dimValueStr;
+            SyncServices.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenter(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.EAMServices.WorkItemsServiceGetEquipmentResponse SyncServices.EAMServices.WorkItemsService.GetEquipment(SyncServices.EAMServices.WorkItemsServiceGetEquipmentRequest request) {
             return base.Channel.GetEquipment(request);
         }
@@ -4611,6 +5275,71 @@ namespace SyncServices.EAMServices {
             inValue.CallContext = CallContext;
             inValue.equipmentID = equipmentID;
             SyncServices.EAMServices.WorkItemsServiceGetEquipmentResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetEquipment(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceDeleteResponse SyncServices.EAMServices.WorkItemsService.delete(SyncServices.EAMServices.WorkItemsServiceDeleteRequest request) {
+            return base.Channel.delete(request);
+        }
+        
+        public void delete(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
+            SyncServices.EAMServices.WorkItemsServiceDeleteRequest inValue = new SyncServices.EAMServices.WorkItemsServiceDeleteRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            SyncServices.EAMServices.WorkItemsServiceDeleteResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).delete(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse SyncServices.EAMServices.WorkItemsService.GetSingleWorkorderWithItems(SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request) {
+            return base.Channel.GetSingleWorkorderWithItems(request);
+        }
+        
+        public SyncServices.EAMServices.PMWorkOrderContract GetSingleWorkorderWithItems(SyncServices.EAMServices.CallContext CallContext, string woId) {
+            SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            SyncServices.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItems(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentResponse SyncServices.EAMServices.WorkItemsService.GetWorkordersByEquipment(SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentRequest request) {
+            return base.Channel.GetWorkordersByEquipment(request);
+        }
+        
+        public SyncServices.EAMServices.PMWorkOrderContract[] GetWorkordersByEquipment(SyncServices.EAMServices.CallContext CallContext, string equipId) {
+            SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentRequest();
+            inValue.CallContext = CallContext;
+            inValue.equipId = equipId;
+            SyncServices.EAMServices.WorkItemsServiceGetWorkordersByEquipmentResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWorkordersByEquipment(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceReadResponse SyncServices.EAMServices.WorkItemsService.read(SyncServices.EAMServices.WorkItemsServiceReadRequest request) {
+            return base.Channel.read(request);
+        }
+        
+        public SyncServices.EAMServices.AxdWorkItems read(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
+            SyncServices.EAMServices.WorkItemsServiceReadRequest inValue = new SyncServices.EAMServices.WorkItemsServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            SyncServices.EAMServices.WorkItemsServiceReadResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).read(inValue);
+            return retVal.WorkItems;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse SyncServices.EAMServices.WorkItemsService.SetWOStatus(SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
+            return base.Channel.SetWOStatus(request);
+        }
+        
+        public bool SetWOStatus(SyncServices.EAMServices.CallContext CallContext, string woId, int statusId) {
+            SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.statusId = statusId;
+            SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
             return retVal.response;
         }
         
@@ -4640,64 +5369,16 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceDeleteResponse SyncServices.EAMServices.WorkItemsService.delete(SyncServices.EAMServices.WorkItemsServiceDeleteRequest request) {
-            return base.Channel.delete(request);
+        SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse SyncServices.EAMServices.WorkItemsService.DeleteWorkItemByRecId(SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request) {
+            return base.Channel.DeleteWorkItemByRecId(request);
         }
         
-        public void delete(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
-            SyncServices.EAMServices.WorkItemsServiceDeleteRequest inValue = new SyncServices.EAMServices.WorkItemsServiceDeleteRequest();
+        public bool DeleteWorkItemByRecId(SyncServices.EAMServices.CallContext CallContext, string woId, long rec_id) {
+            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest inValue = new SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest();
             inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            SyncServices.EAMServices.WorkItemsServiceDeleteResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).delete(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceCreateResponse SyncServices.EAMServices.WorkItemsService.create(SyncServices.EAMServices.WorkItemsServiceCreateRequest request) {
-            return base.Channel.create(request);
-        }
-        
-        public SyncServices.EAMServices.EntityKey[] create(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.AxdWorkItems WorkItems) {
-            SyncServices.EAMServices.WorkItemsServiceCreateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceCreateRequest();
-            inValue.CallContext = CallContext;
-            inValue.WorkItems = WorkItems;
-            SyncServices.EAMServices.WorkItemsServiceCreateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).create(inValue);
-            return retVal.EntityKeyList;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse SyncServices.EAMServices.WorkItemsService.CreateOrUpdate(SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
-            return base.Channel.CreateOrUpdate(request);
-        }
-        
-        public string CreateOrUpdate(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EamWorkitemsContract[] lines) {
-            SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.EAMServices.WorkItemsServiceCreateOrUpdateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).CreateOrUpdate(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse SyncServices.EAMServices.WorkItemsService.getMaxId(SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
-            return base.Channel.getMaxId(request);
-        }
-        
-        public long getMaxId(SyncServices.EAMServices.CallContext CallContext) {
-            SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetMaxIdRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.EAMServices.WorkItemsServiceGetMaxIdResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).getMaxId(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse SyncServices.EAMServices.WorkItemsService.GetWOPoolCode(SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request) {
-            return base.Channel.GetWOPoolCode(request);
-        }
-        
-        public SyncServices.EAMServices.WOPoolContract[] GetWOPoolCode(SyncServices.EAMServices.CallContext CallContext) {
-            SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.EAMServices.WorkItemsServiceGetWOPoolCodeResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWOPoolCode(inValue);
+            inValue.woId = woId;
+            inValue.rec_id = rec_id;
+            SyncServices.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecId(inValue);
             return retVal.response;
         }
         
@@ -4715,100 +5396,6 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceReadResponse SyncServices.EAMServices.WorkItemsService.read(SyncServices.EAMServices.WorkItemsServiceReadRequest request) {
-            return base.Channel.read(request);
-        }
-        
-        public SyncServices.EAMServices.AxdWorkItems read(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList) {
-            SyncServices.EAMServices.WorkItemsServiceReadRequest inValue = new SyncServices.EAMServices.WorkItemsServiceReadRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            SyncServices.EAMServices.WorkItemsServiceReadResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).read(inValue);
-            return retVal.WorkItems;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse SyncServices.EAMServices.WorkItemsService.GetWorkOrderTypes(SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
-            return base.Channel.GetWorkOrderTypes(request);
-        }
-        
-        public SyncServices.EAMServices.WOTypeContract[] GetWorkOrderTypes(SyncServices.EAMServices.CallContext CallContext) {
-            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse SyncServices.EAMServices.WorkItemsService.SetWOStatus(SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
-            return base.Channel.SetWOStatus(request);
-        }
-        
-        public bool SetWOStatus(SyncServices.EAMServices.CallContext CallContext, string woId, int statusId) {
-            SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new SyncServices.EAMServices.WorkItemsServiceSetWOStatusRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.statusId = statusId;
-            SyncServices.EAMServices.WorkItemsServiceSetWOStatusResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse SyncServices.EAMServices.WorkItemsService.MainCostByProdLine(SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
-            return base.Channel.MainCostByProdLine(request);
-        }
-        
-        public SyncServices.EAMServices.PMLineCostContract[] MainCostByProdLine(SyncServices.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            SyncServices.EAMServices.WorkItemsServiceMainCostByProdLineResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).MainCostByProdLine(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceUpdateResponse SyncServices.EAMServices.WorkItemsService.update(SyncServices.EAMServices.WorkItemsServiceUpdateRequest request) {
-            return base.Channel.update(request);
-        }
-        
-        public void update(SyncServices.EAMServices.CallContext CallContext, SyncServices.EAMServices.EntityKey[] EntityKeyList, SyncServices.EAMServices.AxdWorkItems WorkItems) {
-            SyncServices.EAMServices.WorkItemsServiceUpdateRequest inValue = new SyncServices.EAMServices.WorkItemsServiceUpdateRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            inValue.WorkItems = WorkItems;
-            SyncServices.EAMServices.WorkItemsServiceUpdateResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).update(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse SyncServices.EAMServices.WorkItemsService.PostedWorkItems(SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
-            return base.Channel.PostedWorkItems(request);
-        }
-        
-        public System.Data.DataSet PostedWorkItems(SyncServices.EAMServices.CallContext CallContext) {
-            SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new SyncServices.EAMServices.WorkItemsServicePostedWorkItemsRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.EAMServices.WorkItemsServicePostedWorkItemsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).PostedWorkItems(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse SyncServices.EAMServices.WorkItemsService.GetOtherWorkItems(SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request) {
-            return base.Channel.GetOtherWorkItems(request);
-        }
-        
-        public SyncServices.EAMServices.PMWorkItemContract[] GetOtherWorkItems(SyncServices.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
-            SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.search = search;
-            inValue.topRecords = topRecords;
-            inValue.isItemCode = isItemCode;
-            SyncServices.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetOtherWorkItems(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderResponse SyncServices.EAMServices.WorkItemsService.SaveWorkOrder(SyncServices.EAMServices.WorkItemsServiceSaveWorkOrderRequest request) {
             return base.Channel.SaveWorkOrder(request);
         }
@@ -4822,15 +5409,16 @@ namespace SyncServices.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse SyncServices.EAMServices.WorkItemsService.SearchEquipments(SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest request) {
-            return base.Channel.SearchEquipments(request);
+        SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse SyncServices.EAMServices.WorkItemsService.GetWorkordersByDates(SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request) {
+            return base.Channel.GetWorkordersByDates(request);
         }
         
-        public SyncServices.EAMServices.EquipContract[] SearchEquipments(SyncServices.EAMServices.CallContext CallContext, string equipName) {
-            SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest inValue = new SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsRequest();
+        public SyncServices.EAMServices.PMWorkOrderContract[] GetWorkordersByDates(SyncServices.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
+            SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest inValue = new SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest();
             inValue.CallContext = CallContext;
-            inValue.equipName = equipName;
-            SyncServices.EAMServices.WorkItemsServiceSearchEquipmentsResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).SearchEquipments(inValue);
+            inValue._dateStart = _dateStart;
+            inValue._dateEnd = _dateEnd;
+            SyncServices.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse retVal = ((SyncServices.EAMServices.WorkItemsService)(this)).GetWorkordersByDates(inValue);
             return retVal.response;
         }
     }

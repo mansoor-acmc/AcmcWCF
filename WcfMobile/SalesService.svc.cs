@@ -61,7 +61,7 @@ namespace WcfMobile
             }
         }
 
-        public FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId)
+        public FGDeliveryContract[] GetDeliveries(string dateSearch)
         {
             SOPickServiceClient client = new SOPickServiceClient();
             CallContext context = new CallContext()
@@ -70,7 +70,62 @@ namespace WcfMobile
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
             
+            return client.GetDeliveries(context, Convert.ToDateTime(dateSearch));
+        }
+
+        public FGDeliveryContract[] GetCustomerDeliveries(string dateSearch, string customerId)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
             return client.GetCustomerDeliveries(context, Convert.ToDateTime(dateSearch), customerId);
+        }
+
+        public PalletContract GetPalletInfo(string palletNum)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            return client.GetPalletInfo(context, palletNum);
+        }
+
+        public string CheckPalletAvailable(string pickingId,string itemId, string pallet, string grade)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            var pick = client.GetSingleDelivery(context, pickingId);
+            if (!string.IsNullOrEmpty(pick.PackingSlipNum) || pick.StartLoadTruck.Year > 1900)
+                return "Already delivered. Cannot check this picking list";
+
+            var isPalletAvail = client.CheckPalletAvailable(context, pick.SalesId, itemId, grade, pickingId, pallet, 0);
+            if (string.IsNullOrEmpty(isPalletAvail.Remarks))
+                return "Available";
+            return isPalletAvail.Remarks;
+        }
+
+        public FGDeliveryContract GetSingleDelivery(string pickingId)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            return client.GetSingleDelivery(context, pickingId);
         }
 
         public FGDeliveryContract[] GetDeliveriesByStatus(string dateSearch, string customerId, string statusId)
@@ -194,6 +249,18 @@ namespace WcfMobile
             };
 
             return client.GetCustomerInvoicesByDate(context, customerId,Convert.ToDateTime(_date), int.Parse(pageNum), int.Parse(pageSize));
+        }
+
+        public salesGroup.CustomerInvoiceContract[] GetInvoicesByDate(string _date, string pageNum, string pageSize)
+        {
+            salesGroup.InventOnHandServiceClient client = new salesGroup.InventOnHandServiceClient();
+            salesGroup.CallContext context = new salesGroup.CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            return client.GetInvoicesByDate(context, Convert.ToDateTime(_date), int.Parse(pageNum), int.Parse(pageSize));
         }
 
 

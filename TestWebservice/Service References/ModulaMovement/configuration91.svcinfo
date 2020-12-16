@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="8bcK+0qOQ/Urs8VZIw7mcEmzRi4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kXjlmj9H2t+VdWaT/JKFPeJwl9g=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IModulaMovement">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IModulaMovement" contract="ModulaMovement.IModulaMovement" bindingType="basicHttpBinding" address="http://172.17.0.50/SyncServices63/ModulaMovement.svc" bindingConfiguration="BasicHttpBinding_IModulaMovement">
+    <endpoint name="BasicHttpBinding_IModulaMovement" contract="ModulaMovement.IModulaMovement" bindingType="basicHttpBinding" address="http://172.17.0.50/HandHeldServices/ModulaMovement.svc" bindingConfiguration="BasicHttpBinding_IModulaMovement">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://172.17.0.50/SyncServices63/ModulaMovement.svc</serializedValue>
+          <serializedValue>http://172.17.0.50/HandHeldServices/ModulaMovement.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

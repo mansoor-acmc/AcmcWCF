@@ -50,15 +50,25 @@ namespace SyncServices
             List<UserData> allUser = new List<UserData>();
 
             //UserType are: Admin, Supervisor, Employee
+            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
 
-            allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });
-            allUser.Add(new UserData() { UserName = "mardini", Password = "mar12345", UserType = "Supervisor" });            
-            allUser.Add(new UserData() { UserName = "hamza", Password = "h2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "ayman", Password = "a2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "hassan", Password = "m2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "bakar", Password = "b2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "omer", Password = "o2019", UserType = "Employee" });
 
+            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
+            var userLogins = client.GetMobileUsers(context, "PalletScan");
+            foreach(var oneUser in userLogins)
+            {
+                allUser.Add(new UserData()
+                {
+                    UserName = oneUser.UserLoginName,
+                    Password = oneUser.UserPassword,
+                    UserType = oneUser.UserRoleType
+                });
+            }
+                        
             return allUser;
         }
 

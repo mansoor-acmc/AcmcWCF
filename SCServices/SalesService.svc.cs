@@ -119,6 +119,8 @@ namespace SyncServices
                 PickingId = contract.PickingId,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
+                TruckTicketNum = contract.TruckTicket,
+                LoadingLine = contract.TruckLoadLine,
                 DeliveryDate = contract.DeliveryDate,
                 DeliveryMode = contract.DeliveryMode,
                 DeliveryName = contract.DeliveryName,
@@ -529,7 +531,9 @@ namespace SyncServices
                 HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
                 PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
                 StartLoading = contract.StartLoad,
-                StopLoading = contract.StopLoad
+                StopLoading = contract.StopLoad,
+                TruckTicketNum = contract.TruckTicket,
+                LoadingLine = contract.TruckLoadLine
             };
 
             salesTable.Lines = new List<SalesLine>();
@@ -603,6 +607,43 @@ namespace SyncServices
             }
         }
 
+        public List<UserData> GetUserData()
+        {
+            List<UserData> allUser = new List<UserData>();
+
+            //UserType are: Admin, Supervisor, Employee
+            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+
+            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
+            var userLogins = client.GetMobileUsers(context, "SaleService");
+            foreach (var oneUser in userLogins)
+            {
+                allUser.Add(new UserData()
+                {
+                    UserName = oneUser.UserLoginName,
+                    Password = oneUser.UserPassword,
+                    UserType = oneUser.UserRoleType
+                });
+            }
+            return allUser;
+        }
+
+        public string ChangeLoadingLine(string pickingId, int loadingLineNum)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            return client.ChangeTruckLoadingLine(context, pickingId, loadingLineNum).ToString();
+        }
 
         public string GetPing()
         {

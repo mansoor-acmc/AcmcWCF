@@ -20,5 +20,8 @@ namespace SyncServices
         public bool PickSameDimension { get; set; }
         public DateTime StartLoading { get; set; }
         public DateTime StopLoading { get; set; }
+
+        public string TruckTicketNum { get; set; }
+        public int LoadingLine { get; set; }
     }
 }

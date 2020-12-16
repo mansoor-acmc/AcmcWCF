@@ -44,6 +44,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -63,50 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\EAMServices\EAMServices.wsdl" />
-    <None Include="Connected Services\EAMServices\EAMServices.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices1.wsdl" />
-    <None Include="Connected Services\EAMServices\EAMServices1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices10.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices13.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices6.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices7.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EAMServices\EAMServices9.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="1.ServicesURLs.txt" />
     <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.AxdWorkItems.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -236,6 +194,50 @@
     <Content Include="Connected Services\EAMServices\WcfMobile.EAMServices.WorkItemsServiceGetOnhandResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\EAMServices\EAMServices14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices1410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices1411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices1412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices1413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices143.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices144.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices146.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices147.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices148.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EAMServices\EAMServices2.wsdl" />
+    <None Include="Connected Services\EAMServices\EAMServices21.wsdl" />
     <None Include="Connected Services\SalesOrderServices\configuration91.svcinfo" />
     <None Include="Connected Services\SalesOrderServices\configuration.svcinfo" />
     <None Include="Connected Services\SalesOrderServices\Reference.svcmap">
@@ -260,50 +262,6 @@
     <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetOpenPickingListByCustByItemResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder14.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder141.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder1410.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder1411.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder1412.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder1413.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder142.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder143.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder144.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder145.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder146.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder147.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder148.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder149.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesOrderServices\SalesOrder2.wsdl" />
-    <None Include="Connected Services\SalesOrderServices\SalesOrder21.wsdl" />
     <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.LookupContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -313,6 +271,62 @@
     <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetDeliveryStatusLookupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceChangeTruckLoadingLineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.PalletContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetPalletInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesOrderServices\WcfMobile.SalesOrderServices.SOPickServiceGetSingleDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder.wsdl" />
+    <None Include="Connected Services\SalesOrderServices\SalesOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1.wsdl" />
+    <None Include="Connected Services\SalesOrderServices\SalesOrder1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesOrderServices\SalesOrder9.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SalesServicesGroup\configuration91.svcinfo" />
     <None Include="Connected Services\SalesServicesGroup\configuration.svcinfo" />
     <None Include="Connected Services\SalesServicesGroup\Reference.svcmap">
@@ -340,6 +354,53 @@
     <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdScheduleDragDropContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetAllProductionLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetLineCapacitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetNewProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceSaveProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.SLCapacityContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetInvoicesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.ProdRequestServiceGetProdRequestByMonthAndSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup.wsdl" />
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup1.wsdl" />
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup7.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UserServices\configuration91.svcinfo" />
     <None Include="Connected Services\UserServices\configuration.svcinfo" />
     <None Include="Connected Services\UserServices\Reference.svcmap">
@@ -728,58 +789,6 @@
     <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup2.wsdl" />
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup21.wsdl" />
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup87.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices.wsdl" />
-    <None Include="Connected Services\UserServices\UserMgtServices.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices1.wsdl" />
-    <None Include="Connected Services\UserServices\UserMgtServices1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices6.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices7.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Connected Services\UserServices\WcfMobile.UserServices.AttendanceContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -798,9 +807,42 @@
     <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetUserInfoOnLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.MobileUserLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\UserServices\UserMgtServices2.wsdl" />
+    <None Include="Connected Services\UserServices\UserMgtServices21.wsdl" />
+    <None Include="Connected Services\UserServices\UserMgtServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices82.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServices\UserMgtServices87.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\PublishProfiles\AcmcMobileServices.pubxml" />
+    <None Include="Properties\PublishProfiles\ACMCMobileServicesLive.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

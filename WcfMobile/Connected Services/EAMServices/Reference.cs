@@ -1727,126 +1727,6 @@ namespace WcfMobile.EAMServices {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="EAMServices.WorkItemsService")]
     public interface WorkItemsService {
         
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateOrUpdateRequest) of message WorkItemsServiceCreateOrUpdateRequest does not match the default value (CreateOrUpdate)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/CreateOrUpdateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse CreateOrUpdate(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> CreateOrUpdateAsync(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteRequest) of message WorkItemsServiceDeleteRequest does not match the default value (delete)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/deleteAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteResponse delete(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> deleteAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemRequest) of message WorkItemsServiceDeleteWorkItemRequest does not match the default value (DeleteWorkItem)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse DeleteWorkItem(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> DeleteWorkItemAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemByRecIdRequest) of message WorkItemsServiceDeleteWorkItemByRecIdRequest does not match the default value (DeleteWorkItemByRecId)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse DeleteWorkItemByRecId(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceFindRequest) of message WorkItemsServiceFindRequest does not match the default value (find)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceFindResponse find(WcfMobile.EAMServices.WorkItemsServiceFindRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> findAsync(WcfMobile.EAMServices.WorkItemsServiceFindRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipLocationsRequest) of message WorkItemsServiceGetEquipLocationsRequest does not match the default value (GetEquipLocations)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse GetEquipLocations(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> GetEquipLocationsAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateRequest) of message WorkItemsServiceCreateRequest does not match the default value (create)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceCreateResponse create(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> createAsync(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkordersByDatesRequest) of message WorkItemsServiceGetWorkordersByDatesRequest does not match the default value (GetWorkordersByDates)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse GetWorkordersByDates(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> GetWorkordersByDatesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetAllEquipmentsRequest) of message WorkItemsServiceGetAllEquipmentsRequest does not match the default value (GetAllEquipments)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse GetAllEquipments(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> GetAllEquipmentsAsync(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceReadRequest) of message WorkItemsServiceReadRequest does not match the default value (read)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceReadResponse read(WcfMobile.EAMServices.WorkItemsServiceReadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> readAsync(WcfMobile.EAMServices.WorkItemsServiceReadRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceMainCostByProdLineRequest) of message WorkItemsServiceMainCostByProdLineRequest does not match the default value (MainCostByProdLine)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/MainCostByProdLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse MainCostByProdLine(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> MainCostByProdLineAsync(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderStatusLookupRequest) of message WorkItemsServiceGetWorkOrderStatusLookupRequest does not match the default value (GetWorkOrderStatusLookup)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse GetWorkOrderStatusLookup(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOnhandRequest) of message WorkItemsServiceGetOnhandRequest does not match the default value (GetOnhand)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOnhand", ReplyAction="http://tempuri.org/WorkItemsService/GetOnhandResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOnhandAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -1856,66 +1736,6 @@ namespace WcfMobile.EAMServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOnhand", ReplyAction="http://tempuri.org/WorkItemsService/GetOnhandResponse")]
         System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetOnhandResponse> GetOnhandAsync(WcfMobile.EAMServices.WorkItemsServiceGetOnhandRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetFailureCodesRequest) of message WorkItemsServiceGetFailureCodesRequest does not match the default value (GetFailureCodes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetFailureCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse GetFailureCodes(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> GetFailureCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetInlineWorkItemsRequest) of message WorkItemsServiceGetInlineWorkItemsRequest does not match the default value (GetInlineWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse GetInlineWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> GetInlineWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentRequest) of message WorkItemsServiceGetEquipmentRequest does not match the default value (GetEquipment)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse GetEquipment(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> GetEquipmentAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetSingleWorkorderWithItemsRequest) of message WorkItemsServiceGetSingleWorkorderWithItemsRequest does not match the default value (GetSingleWorkorderWithItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse GetSingleWorkorderWithItems(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderTypesRequest) of message WorkItemsServiceGetWorkOrderTypesRequest does not match the default value (GetWorkOrderTypes)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse GetWorkOrderTypes(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> GetWorkOrderTypesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetLatestWorkorderRequest) of message WorkItemsServiceGetLatestWorkorderRequest does not match the default value (GetLatestWorkorder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse GetLatestWorkorder(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> GetLatestWorkorderAsync(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSearchEquipmentsRequest) of message WorkItemsServiceSearchEquipmentsRequest does not match the default value (SearchEquipments)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SearchEquipments", ReplyAction="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse")]
@@ -1937,46 +1757,6 @@ namespace WcfMobile.EAMServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/update", ReplyAction="http://tempuri.org/WorkItemsService/updateResponse")]
         System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceUpdateResponse> updateAsync(WcfMobile.EAMServices.WorkItemsServiceUpdateRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServicePostedWorkItemsRequest) of message WorkItemsServicePostedWorkItemsRequest does not match the default value (PostedWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/PostedWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse PostedWorkItems(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> PostedWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWOPoolCodeRequest) of message WorkItemsServiceGetWOPoolCodeRequest does not match the default value (GetWOPoolCode)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeResponse GetWOPoolCode(WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeResponse> GetWOPoolCodeAsync(WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSaveWorkOrderRequest) of message WorkItemsServiceSaveWorkOrderRequest does not match the default value (SaveWorkOrder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SaveWorkOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse SaveWorkOrder(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> SaveWorkOrderAsync(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSetWOStatusRequest) of message WorkItemsServiceSetWOStatusRequest does not match the default value (SetWOStatus)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SetWOStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse SetWOStatus(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> SetWOStatusAsync(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetMaxIdRequest) of message WorkItemsServiceGetMaxIdRequest does not match the default value (getMaxId)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/getMaxIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -1987,25 +1767,35 @@ namespace WcfMobile.EAMServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
         System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse> getMaxIdAsync(WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentsByCostCenterRequest) of message WorkItemsServiceGetEquipmentsByCostCenterRequest does not match the default value (GetEquipmentsByCostCenter)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceMainCostByProdLineRequest) of message WorkItemsServiceMainCostByProdLineRequest does not match the default value (MainCostByProdLine)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/MainCostByProdLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse GetEquipmentsByCostCenter(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request);
+        WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse MainCostByProdLine(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> MainCostByProdLineAsync(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOtherWorkItemsRequest) of message WorkItemsServiceGetOtherWorkItemsRequest does not match the default value (GetOtherWorkItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderTypesRequest) of message WorkItemsServiceGetWorkOrderTypesRequest does not match the default value (GetWorkOrderTypes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse GetOtherWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse GetWorkOrderTypes(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse> GetOtherWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> GetWorkOrderTypesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateOrUpdateRequest) of message WorkItemsServiceCreateOrUpdateRequest does not match the default value (CreateOrUpdate)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/CreateOrUpdateAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse CreateOrUpdate(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/CreateOrUpdate", ReplyAction="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> CreateOrUpdateAsync(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetRepaireCodesRequest) of message WorkItemsServiceGetRepaireCodesRequest does not match the default value (GetRepaireCodes)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
@@ -2017,6 +1807,136 @@ namespace WcfMobile.EAMServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
         System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse> GetRepaireCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWOPoolCodeRequest) of message WorkItemsServiceGetWOPoolCodeRequest does not match the default value (GetWOPoolCode)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeResponse GetWOPoolCode(WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeResponse> GetWOPoolCodeAsync(WcfMobile.EAMServices.WorkItemsServiceGetWOPoolCodeRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkOrderStatusLookupRequest) of message WorkItemsServiceGetWorkOrderStatusLookupRequest does not match the default value (GetWorkOrderStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse GetWorkOrderStatusLookup(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetAllEquipmentsRequest) of message WorkItemsServiceGetAllEquipmentsRequest does not match the default value (GetAllEquipments)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse GetAllEquipments(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> GetAllEquipmentsAsync(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipLocationsRequest) of message WorkItemsServiceGetEquipLocationsRequest does not match the default value (GetEquipLocations)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipLocationsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse GetEquipLocations(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> GetEquipLocationsAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetOtherWorkItemsRequest) of message WorkItemsServiceGetOtherWorkItemsRequest does not match the default value (GetOtherWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse GetOtherWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsResponse> GetOtherWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetOtherWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServicePostedWorkItemsRequest) of message WorkItemsServicePostedWorkItemsRequest does not match the default value (PostedWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/PostedWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse PostedWorkItems(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> PostedWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceFindRequest) of message WorkItemsServiceFindRequest does not match the default value (find)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceFindResponse find(WcfMobile.EAMServices.WorkItemsServiceFindRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/find", ReplyAction="http://tempuri.org/WorkItemsService/findResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> findAsync(WcfMobile.EAMServices.WorkItemsServiceFindRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceCreateRequest) of message WorkItemsServiceCreateRequest does not match the default value (create)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/createAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceCreateResponse create(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/create", ReplyAction="http://tempuri.org/WorkItemsService/createResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> createAsync(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemRequest) of message WorkItemsServiceDeleteWorkItemRequest does not match the default value (DeleteWorkItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse DeleteWorkItem(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItem", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> DeleteWorkItemAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentsByCostCenterRequest) of message WorkItemsServiceGetEquipmentsByCostCenterRequest does not match the default value (GetEquipmentsByCostCenter)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse GetEquipmentsByCostCenter(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetEquipmentRequest) of message WorkItemsServiceGetEquipmentRequest does not match the default value (GetEquipment)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse GetEquipment(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> GetEquipmentAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteRequest) of message WorkItemsServiceDeleteRequest does not match the default value (delete)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/deleteAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteResponse delete(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/delete", ReplyAction="http://tempuri.org/WorkItemsService/deleteResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> deleteAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetSingleWorkorderWithItemsRequest) of message WorkItemsServiceGetSingleWorkorderWithItemsRequest does not match the default value (GetSingleWorkorderWithItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse GetSingleWorkorderWithItems(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkordersByEquipmentRequest) of message WorkItemsServiceGetWorkordersByEquipmentRequest does not match the default value (GetWorkordersByEquipment)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -2026,6 +1946,86 @@ namespace WcfMobile.EAMServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse")]
         System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByEquipmentResponse> GetWorkordersByEquipmentAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByEquipmentRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceReadRequest) of message WorkItemsServiceReadRequest does not match the default value (read)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceReadResponse read(WcfMobile.EAMServices.WorkItemsServiceReadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/read", ReplyAction="http://tempuri.org/WorkItemsService/readResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> readAsync(WcfMobile.EAMServices.WorkItemsServiceReadRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSetWOStatusRequest) of message WorkItemsServiceSetWOStatusRequest does not match the default value (SetWOStatus)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SetWOStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse SetWOStatus(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> SetWOStatusAsync(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetFailureCodesRequest) of message WorkItemsServiceGetFailureCodesRequest does not match the default value (GetFailureCodes)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetFailureCodesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse GetFailureCodes(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> GetFailureCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetInlineWorkItemsRequest) of message WorkItemsServiceGetInlineWorkItemsRequest does not match the default value (GetInlineWorkItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse GetInlineWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> GetInlineWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceDeleteWorkItemByRecIdRequest) of message WorkItemsServiceDeleteWorkItemByRecIdRequest does not match the default value (DeleteWorkItemByRecId)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse DeleteWorkItemByRecId(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetLatestWorkorderRequest) of message WorkItemsServiceGetLatestWorkorderRequest does not match the default value (GetLatestWorkorder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse GetLatestWorkorder(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> GetLatestWorkorderAsync(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceSaveWorkOrderRequest) of message WorkItemsServiceSaveWorkOrderRequest does not match the default value (SaveWorkOrder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/SaveWorkOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse SaveWorkOrder(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SaveWorkOrder", ReplyAction="http://tempuri.org/WorkItemsService/SaveWorkOrderResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> SaveWorkOrderAsync(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (WorkItemsServiceGetWorkordersByDatesRequest) of message WorkItemsServiceGetWorkordersByDatesRequest does not match the default value (GetWorkordersByDates)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.EAMServices.AifFault), Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse GetWorkordersByDates(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> GetWorkordersByDatesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request);
     }
     
     /// <remarks/>
@@ -2180,41 +2180,82 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateOrUpdateRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOnhandRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public WcfMobile.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.EamWorkitemsContract[] lines;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _itemId;
         
-        public WorkItemsServiceCreateOrUpdateRequest() {
+        public WorkItemsServiceGetOnhandRequest() {
         }
         
-        public WorkItemsServiceCreateOrUpdateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
+        public WorkItemsServiceGetOnhandRequest(WcfMobile.EAMServices.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
-            this.lines = lines;
+            this._itemId = _itemId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateOrUpdateResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOnhandResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string response;
+        public WcfMobile.EAMServices.OnHandContract response;
         
-        public WorkItemsServiceCreateOrUpdateResponse() {
+        public WorkItemsServiceGetOnhandResponse() {
         }
         
-        public WorkItemsServiceCreateOrUpdateResponse(string response) {
+        public WorkItemsServiceGetOnhandResponse(WcfMobile.EAMServices.OnHandContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSearchEquipmentsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string equipName;
+        
+        public WorkItemsServiceSearchEquipmentsRequest() {
+        }
+        
+        public WorkItemsServiceSearchEquipmentsRequest(WcfMobile.EAMServices.CallContext CallContext, string equipName) {
+            this.CallContext = CallContext;
+            this.equipName = equipName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSearchEquipmentsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.EquipContract[] response;
+        
+        public WorkItemsServiceSearchEquipmentsResponse() {
+        }
+        
+        public WorkItemsServiceSearchEquipmentsResponse(WcfMobile.EAMServices.EquipContract[] response) {
             this.response = response;
         }
     }
@@ -2296,276 +2337,6 @@ namespace WcfMobile.EAMServices {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
-        
-        public WorkItemsServiceDeleteRequest() {
-        }
-        
-        public WorkItemsServiceDeleteRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteResponse {
-        
-        public WorkItemsServiceDeleteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int sto_id;
-        
-        public WorkItemsServiceDeleteWorkItemRequest() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.sto_id = sto_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public WorkItemsServiceDeleteWorkItemResponse() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemByRecIdRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public long rec_id;
-        
-        public WorkItemsServiceDeleteWorkItemByRecIdRequest() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemByRecIdRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.rec_id = rec_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceDeleteWorkItemByRecIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public WorkItemsServiceDeleteWorkItemByRecIdResponse() {
-        }
-        
-        public WorkItemsServiceDeleteWorkItemByRecIdResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CriteriaElement[] criteriaElementField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
-        public CriteriaElement[] CriteriaElement {
-            get {
-                return this.criteriaElementField;
-            }
-            set {
-                this.criteriaElementField = value;
-                this.RaisePropertyChanged("CriteriaElement");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string dataSourceNameField;
-        
-        private string fieldNameField;
-        
-        private Operator operatorField;
-        
-        private string value1Field;
-        
-        private string value2Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DataSourceName {
-            get {
-                return this.dataSourceNameField;
-            }
-            set {
-                this.dataSourceNameField = value;
-                this.RaisePropertyChanged("DataSourceName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string FieldName {
-            get {
-                return this.fieldNameField;
-            }
-            set {
-                this.fieldNameField = value;
-                this.RaisePropertyChanged("FieldName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public Operator Operator {
-            get {
-                return this.operatorField;
-            }
-            set {
-                this.operatorField = value;
-                this.RaisePropertyChanged("Operator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Value1 {
-            get {
-                return this.value1Field;
-            }
-            set {
-                this.value1Field = value;
-                this.RaisePropertyChanged("Value1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Value2 {
-            get {
-                return this.value2Field;
-            }
-            set {
-                this.value2Field = value;
-                this.RaisePropertyChanged("Value2");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public enum Operator {
-        
-        /// <remarks/>
-        Equal,
-        
-        /// <remarks/>
-        NotEqual,
-        
-        /// <remarks/>
-        Greater,
-        
-        /// <remarks/>
-        GreaterOrEqual,
-        
-        /// <remarks/>
-        Less,
-        
-        /// <remarks/>
-        LessOrEqual,
-        
-        /// <remarks/>
-        Range,
     }
     
     /// <remarks/>
@@ -4044,210 +3815,8 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceFindRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-        public WcfMobile.EAMServices.QueryCriteria QueryCriteria;
-        
-        public WorkItemsServiceFindRequest() {
-        }
-        
-        public WorkItemsServiceFindRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
-            this.CallContext = CallContext;
-            this.QueryCriteria = QueryCriteria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceFindResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceFindResponse() {
-        }
-        
-        public WorkItemsServiceFindResponse(WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipLocationsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetEquipLocationsRequest() {
-        }
-        
-        public WorkItemsServiceGetEquipLocationsRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipLocationsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.WOLocationContract[] response;
-        
-        public WorkItemsServiceGetEquipLocationsResponse() {
-        }
-        
-        public WorkItemsServiceGetEquipLocationsResponse(WcfMobile.EAMServices.WOLocationContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceCreateRequest() {
-        }
-        
-        public WorkItemsServiceCreateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            this.CallContext = CallContext;
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceCreateResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
-        
-        public WorkItemsServiceCreateResponse() {
-        }
-        
-        public WorkItemsServiceCreateResponse(WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            this.EntityKeyList = EntityKeyList;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkordersByDatesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime _dateStart;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime _dateEnd;
-        
-        public WorkItemsServiceGetWorkordersByDatesRequest() {
-        }
-        
-        public WorkItemsServiceGetWorkordersByDatesRequest(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
-            this.CallContext = CallContext;
-            this._dateStart = _dateStart;
-            this._dateEnd = _dateEnd;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkordersByDatesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.PMWorkOrderContract[] response;
-        
-        public WorkItemsServiceGetWorkordersByDatesResponse() {
-        }
-        
-        public WorkItemsServiceGetWorkordersByDatesResponse(WcfMobile.EAMServices.PMWorkOrderContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetAllEquipmentsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetAllEquipmentsRequest() {
-        }
-        
-        public WorkItemsServiceGetAllEquipmentsRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetAllEquipmentsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.EquipContract[] response;
-        
-        public WorkItemsServiceGetAllEquipmentsResponse() {
-        }
-        
-        public WorkItemsServiceGetAllEquipmentsResponse(WcfMobile.EAMServices.EquipContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceReadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceUpdateRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4258,30 +3827,62 @@ namespace WcfMobile.EAMServices {
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
         public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
         
-        public WorkItemsServiceReadRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceUpdateRequest() {
         }
         
-        public WorkItemsServiceReadRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+        public WorkItemsServiceUpdateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
             this.CallContext = CallContext;
             this.EntityKeyList = EntityKeyList;
+            this.WorkItems = WorkItems;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceReadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceUpdateResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
+        public WorkItemsServiceUpdateResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetMaxIdRequest {
         
-        public WorkItemsServiceReadResponse() {
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetMaxIdRequest() {
         }
         
-        public WorkItemsServiceReadResponse(WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            this.WorkItems = WorkItems;
+        public WorkItemsServiceGetMaxIdRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetMaxIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public long response;
+        
+        public WorkItemsServiceGetMaxIdResponse() {
+        }
+        
+        public WorkItemsServiceGetMaxIdResponse(long response) {
+            this.response = response;
         }
     }
     
@@ -4333,6 +3934,159 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderTypesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetWorkOrderTypesRequest() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderTypesRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkOrderTypesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.WOTypeContract[] response;
+        
+        public WorkItemsServiceGetWorkOrderTypesResponse() {
+        }
+        
+        public WorkItemsServiceGetWorkOrderTypesResponse(WcfMobile.EAMServices.WOTypeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateOrUpdateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.EamWorkitemsContract[] lines;
+        
+        public WorkItemsServiceCreateOrUpdateRequest() {
+        }
+        
+        public WorkItemsServiceCreateOrUpdateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateOrUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateOrUpdateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string response;
+        
+        public WorkItemsServiceCreateOrUpdateResponse() {
+        }
+        
+        public WorkItemsServiceCreateOrUpdateResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetRepaireCodesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetRepaireCodesRequest() {
+        }
+        
+        public WorkItemsServiceGetRepaireCodesRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetRepaireCodesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.RepairCodeContract[] response;
+        
+        public WorkItemsServiceGetRepaireCodesResponse() {
+        }
+        
+        public WorkItemsServiceGetRepaireCodesResponse(WcfMobile.EAMServices.RepairCodeContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWOPoolCodeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetWOPoolCodeRequest() {
+        }
+        
+        public WorkItemsServiceGetWOPoolCodeRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWOPoolCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.WOPoolContract[] response;
+        
+        public WorkItemsServiceGetWOPoolCodeResponse() {
+        }
+        
+        public WorkItemsServiceGetWOPoolCodeResponse(WcfMobile.EAMServices.WOPoolContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class WorkItemsServiceGetWorkOrderStatusLookupRequest {
         
@@ -4370,8 +4124,82 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOnhandRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetAllEquipmentsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetAllEquipmentsRequest() {
+        }
+        
+        public WorkItemsServiceGetAllEquipmentsRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetAllEquipmentsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.EquipContract[] response;
+        
+        public WorkItemsServiceGetAllEquipmentsResponse() {
+        }
+        
+        public WorkItemsServiceGetAllEquipmentsResponse(WcfMobile.EAMServices.EquipContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipLocationsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServiceGetEquipLocationsRequest() {
+        }
+        
+        public WorkItemsServiceGetEquipLocationsRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipLocationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.WOLocationContract[] response;
+        
+        public WorkItemsServiceGetEquipLocationsResponse() {
+        }
+        
+        public WorkItemsServiceGetEquipLocationsResponse(WcfMobile.EAMServices.WOLocationContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOtherWorkItemsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4379,31 +4207,642 @@ namespace WcfMobile.EAMServices {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _itemId;
+        public string woId;
         
-        public WorkItemsServiceGetOnhandRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string search;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public int topRecords;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        public bool isItemCode;
+        
+        public WorkItemsServiceGetOtherWorkItemsRequest() {
         }
         
-        public WorkItemsServiceGetOnhandRequest(WcfMobile.EAMServices.CallContext CallContext, string _itemId) {
+        public WorkItemsServiceGetOtherWorkItemsRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
             this.CallContext = CallContext;
-            this._itemId = _itemId;
+            this.woId = woId;
+            this.search = search;
+            this.topRecords = topRecords;
+            this.isItemCode = isItemCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOnhandResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOnhandResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetOtherWorkItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.PMWorkItemContract[] response;
+        
+        public WorkItemsServiceGetOtherWorkItemsResponse() {
+        }
+        
+        public WorkItemsServiceGetOtherWorkItemsResponse(WcfMobile.EAMServices.PMWorkItemContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServicePostedWorkItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        public WorkItemsServicePostedWorkItemsRequest() {
+        }
+        
+        public WorkItemsServicePostedWorkItemsRequest(WcfMobile.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServicePostedWorkItemsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.OnHandContract response;
+        public System.Data.DataSet response;
         
-        public WorkItemsServiceGetOnhandResponse() {
+        public WorkItemsServicePostedWorkItemsResponse() {
         }
         
-        public WorkItemsServiceGetOnhandResponse(WcfMobile.EAMServices.OnHandContract response) {
+        public WorkItemsServicePostedWorkItemsResponse(System.Data.DataSet response) {
+            this.response = response;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CriteriaElement[] criteriaElementField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
+        public CriteriaElement[] CriteriaElement {
+            get {
+                return this.criteriaElementField;
+            }
+            set {
+                this.criteriaElementField = value;
+                this.RaisePropertyChanged("CriteriaElement");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataSourceNameField;
+        
+        private string fieldNameField;
+        
+        private Operator operatorField;
+        
+        private string value1Field;
+        
+        private string value2Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DataSourceName {
+            get {
+                return this.dataSourceNameField;
+            }
+            set {
+                this.dataSourceNameField = value;
+                this.RaisePropertyChanged("DataSourceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string FieldName {
+            get {
+                return this.fieldNameField;
+            }
+            set {
+                this.fieldNameField = value;
+                this.RaisePropertyChanged("FieldName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Operator Operator {
+            get {
+                return this.operatorField;
+            }
+            set {
+                this.operatorField = value;
+                this.RaisePropertyChanged("Operator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Value1 {
+            get {
+                return this.value1Field;
+            }
+            set {
+                this.value1Field = value;
+                this.RaisePropertyChanged("Value1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Value2 {
+            get {
+                return this.value2Field;
+            }
+            set {
+                this.value2Field = value;
+                this.RaisePropertyChanged("Value2");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public enum Operator {
+        
+        /// <remarks/>
+        Equal,
+        
+        /// <remarks/>
+        NotEqual,
+        
+        /// <remarks/>
+        Greater,
+        
+        /// <remarks/>
+        GreaterOrEqual,
+        
+        /// <remarks/>
+        Less,
+        
+        /// <remarks/>
+        LessOrEqual,
+        
+        /// <remarks/>
+        Range,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceFindRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+        public WcfMobile.EAMServices.QueryCriteria QueryCriteria;
+        
+        public WorkItemsServiceFindRequest() {
+        }
+        
+        public WorkItemsServiceFindRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
+            this.CallContext = CallContext;
+            this.QueryCriteria = QueryCriteria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceFindResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceFindResponse() {
+        }
+        
+        public WorkItemsServiceFindResponse(WcfMobile.EAMServices.AxdWorkItems WorkItems) {
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceCreateRequest() {
+        }
+        
+        public WorkItemsServiceCreateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
+            this.CallContext = CallContext;
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceCreateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceCreateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceCreateResponse() {
+        }
+        
+        public WorkItemsServiceCreateResponse(WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int sto_id;
+        
+        public WorkItemsServiceDeleteWorkItemRequest() {
+        }
+        
+        public WorkItemsServiceDeleteWorkItemRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+            this.sto_id = sto_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public WorkItemsServiceDeleteWorkItemResponse() {
+        }
+        
+        public WorkItemsServiceDeleteWorkItemResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentsByCostCenterRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string dimValueStr;
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterRequest() {
+        }
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterRequest(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
+            this.CallContext = CallContext;
+            this.dimValueStr = dimValueStr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentsByCostCenterResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.EquipContract[] response;
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterResponse() {
+        }
+        
+        public WorkItemsServiceGetEquipmentsByCostCenterResponse(WcfMobile.EAMServices.EquipContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string equipmentID;
+        
+        public WorkItemsServiceGetEquipmentRequest() {
+        }
+        
+        public WorkItemsServiceGetEquipmentRequest(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
+            this.CallContext = CallContext;
+            this.equipmentID = equipmentID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetEquipmentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.EquipContract response;
+        
+        public WorkItemsServiceGetEquipmentResponse() {
+        }
+        
+        public WorkItemsServiceGetEquipmentResponse(WcfMobile.EAMServices.EquipContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceDeleteRequest() {
+        }
+        
+        public WorkItemsServiceDeleteRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteResponse {
+        
+        public WorkItemsServiceDeleteResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetSingleWorkorderWithItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsRequest() {
+        }
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsRequest(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetSingleWorkorderWithItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.PMWorkOrderContract response;
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsResponse() {
+        }
+        
+        public WorkItemsServiceGetSingleWorkorderWithItemsResponse(WcfMobile.EAMServices.PMWorkOrderContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByEquipmentRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string equipId;
+        
+        public WorkItemsServiceGetWorkordersByEquipmentRequest() {
+        }
+        
+        public WorkItemsServiceGetWorkordersByEquipmentRequest(WcfMobile.EAMServices.CallContext CallContext, string equipId) {
+            this.CallContext = CallContext;
+            this.equipId = equipId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByEquipmentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public WcfMobile.EAMServices.PMWorkOrderContract[] response;
+        
+        public WorkItemsServiceGetWorkordersByEquipmentResponse() {
+        }
+        
+        public WorkItemsServiceGetWorkordersByEquipmentResponse(WcfMobile.EAMServices.PMWorkOrderContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceReadRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
+        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
+        
+        public WorkItemsServiceReadRequest() {
+        }
+        
+        public WorkItemsServiceReadRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            this.CallContext = CallContext;
+            this.EntityKeyList = EntityKeyList;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceReadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceReadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
+        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
+        
+        public WorkItemsServiceReadResponse() {
+        }
+        
+        public WorkItemsServiceReadResponse(WcfMobile.EAMServices.AxdWorkItems WorkItems) {
+            this.WorkItems = WorkItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSetWOStatusRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public WcfMobile.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string woId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int statusId;
+        
+        public WorkItemsServiceSetWOStatusRequest() {
+        }
+        
+        public WorkItemsServiceSetWOStatusRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
+            this.CallContext = CallContext;
+            this.woId = woId;
+            this.statusId = statusId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceSetWOStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public WorkItemsServiceSetWOStatusResponse() {
+        }
+        
+        public WorkItemsServiceSetWOStatusResponse(bool response) {
             this.response = response;
         }
     }
@@ -4490,49 +4929,8 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipmentRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string equipmentID;
-        
-        public WorkItemsServiceGetEquipmentRequest() {
-        }
-        
-        public WorkItemsServiceGetEquipmentRequest(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
-            this.CallContext = CallContext;
-            this.equipmentID = equipmentID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipmentResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.EquipContract response;
-        
-        public WorkItemsServiceGetEquipmentResponse() {
-        }
-        
-        public WorkItemsServiceGetEquipmentResponse(WcfMobile.EAMServices.EquipContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetSingleWorkorderWithItemsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemByRecIdRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4542,66 +4940,32 @@ namespace WcfMobile.EAMServices {
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string woId;
         
-        public WorkItemsServiceGetSingleWorkorderWithItemsRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public long rec_id;
+        
+        public WorkItemsServiceDeleteWorkItemByRecIdRequest() {
         }
         
-        public WorkItemsServiceGetSingleWorkorderWithItemsRequest(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+        public WorkItemsServiceDeleteWorkItemByRecIdRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
             this.CallContext = CallContext;
             this.woId = woId;
+            this.rec_id = rec_id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetSingleWorkorderWithItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetSingleWorkorderWithItemsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceDeleteWorkItemByRecIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceDeleteWorkItemByRecIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.PMWorkOrderContract response;
+        public bool response;
         
-        public WorkItemsServiceGetSingleWorkorderWithItemsResponse() {
+        public WorkItemsServiceDeleteWorkItemByRecIdResponse() {
         }
         
-        public WorkItemsServiceGetSingleWorkorderWithItemsResponse(WcfMobile.EAMServices.PMWorkOrderContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkOrderTypesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetWorkOrderTypesRequest() {
-        }
-        
-        public WorkItemsServiceGetWorkOrderTypesRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkOrderTypesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.WOTypeContract[] response;
-        
-        public WorkItemsServiceGetWorkOrderTypesResponse() {
-        }
-        
-        public WorkItemsServiceGetWorkOrderTypesResponse(WcfMobile.EAMServices.WOTypeContract[] response) {
+        public WorkItemsServiceDeleteWorkItemByRecIdResponse(bool response) {
             this.response = response;
         }
     }
@@ -4650,160 +5014,6 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSearchEquipmentsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string equipName;
-        
-        public WorkItemsServiceSearchEquipmentsRequest() {
-        }
-        
-        public WorkItemsServiceSearchEquipmentsRequest(WcfMobile.EAMServices.CallContext CallContext, string equipName) {
-            this.CallContext = CallContext;
-            this.equipName = equipName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSearchEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSearchEquipmentsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.EquipContract[] response;
-        
-        public WorkItemsServiceSearchEquipmentsResponse() {
-        }
-        
-        public WorkItemsServiceSearchEquipmentsResponse(WcfMobile.EAMServices.EquipContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceUpdateRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList")]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey", IsNullable=false)]
-        public WcfMobile.EAMServices.EntityKey[] EntityKeyList;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems")]
-        public WcfMobile.EAMServices.AxdWorkItems WorkItems;
-        
-        public WorkItemsServiceUpdateRequest() {
-        }
-        
-        public WorkItemsServiceUpdateRequest(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            this.CallContext = CallContext;
-            this.EntityKeyList = EntityKeyList;
-            this.WorkItems = WorkItems;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceUpdateResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceUpdateResponse {
-        
-        public WorkItemsServiceUpdateResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServicePostedWorkItemsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServicePostedWorkItemsRequest() {
-        }
-        
-        public WorkItemsServicePostedWorkItemsRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServicePostedWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServicePostedWorkItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Data.DataSet response;
-        
-        public WorkItemsServicePostedWorkItemsResponse() {
-        }
-        
-        public WorkItemsServicePostedWorkItemsResponse(System.Data.DataSet response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWOPoolCodeRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetWOPoolCodeRequest() {
-        }
-        
-        public WorkItemsServiceGetWOPoolCodeRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWOPoolCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.WOPoolContract[] response;
-        
-        public WorkItemsServiceGetWOPoolCodeResponse() {
-        }
-        
-        public WorkItemsServiceGetWOPoolCodeResponse(WcfMobile.EAMServices.WOPoolContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSaveWorkOrderRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class WorkItemsServiceSaveWorkOrderRequest {
         
@@ -4845,254 +5055,44 @@ namespace WcfMobile.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSetWOStatusRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByDatesRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public WcfMobile.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
+        public System.DateTime _dateStart;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public int statusId;
+        public System.DateTime _dateEnd;
         
-        public WorkItemsServiceSetWOStatusRequest() {
+        public WorkItemsServiceGetWorkordersByDatesRequest() {
         }
         
-        public WorkItemsServiceSetWOStatusRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
+        public WorkItemsServiceGetWorkordersByDatesRequest(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
             this.CallContext = CallContext;
-            this.woId = woId;
-            this.statusId = statusId;
+            this._dateStart = _dateStart;
+            this._dateEnd = _dateEnd;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceSetWOStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceSetWOStatusResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public WorkItemsServiceSetWOStatusResponse() {
-        }
-        
-        public WorkItemsServiceSetWOStatusResponse(bool response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetMaxIdRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetMaxIdRequest() {
-        }
-        
-        public WorkItemsServiceGetMaxIdRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetMaxIdResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetMaxIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public long response;
-        
-        public WorkItemsServiceGetMaxIdResponse() {
-        }
-        
-        public WorkItemsServiceGetMaxIdResponse(long response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipmentsByCostCenterRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string dimValueStr;
-        
-        public WorkItemsServiceGetEquipmentsByCostCenterRequest() {
-        }
-        
-        public WorkItemsServiceGetEquipmentsByCostCenterRequest(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
-            this.CallContext = CallContext;
-            this.dimValueStr = dimValueStr;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetEquipmentsByCostCenterResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetEquipmentsByCostCenterResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.EquipContract[] response;
-        
-        public WorkItemsServiceGetEquipmentsByCostCenterResponse() {
-        }
-        
-        public WorkItemsServiceGetEquipmentsByCostCenterResponse(WcfMobile.EAMServices.EquipContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOtherWorkItemsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string woId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string search;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public int topRecords;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        public bool isItemCode;
-        
-        public WorkItemsServiceGetOtherWorkItemsRequest() {
-        }
-        
-        public WorkItemsServiceGetOtherWorkItemsRequest(WcfMobile.EAMServices.CallContext CallContext, string woId, string search, int topRecords, bool isItemCode) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-            this.search = search;
-            this.topRecords = topRecords;
-            this.isItemCode = isItemCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetOtherWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetOtherWorkItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.PMWorkItemContract[] response;
-        
-        public WorkItemsServiceGetOtherWorkItemsResponse() {
-        }
-        
-        public WorkItemsServiceGetOtherWorkItemsResponse(WcfMobile.EAMServices.PMWorkItemContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetRepaireCodesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        public WorkItemsServiceGetRepaireCodesRequest() {
-        }
-        
-        public WorkItemsServiceGetRepaireCodesRequest(WcfMobile.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetRepaireCodesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public WcfMobile.EAMServices.RepairCodeContract[] response;
-        
-        public WorkItemsServiceGetRepaireCodesResponse() {
-        }
-        
-        public WorkItemsServiceGetRepaireCodesResponse(WcfMobile.EAMServices.RepairCodeContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkordersByEquipmentRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public WcfMobile.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string equipId;
-        
-        public WorkItemsServiceGetWorkordersByEquipmentRequest() {
-        }
-        
-        public WorkItemsServiceGetWorkordersByEquipmentRequest(WcfMobile.EAMServices.CallContext CallContext, string equipId) {
-            this.CallContext = CallContext;
-            this.equipId = equipId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class WorkItemsServiceGetWorkordersByEquipmentResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsServiceGetWorkordersByDatesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class WorkItemsServiceGetWorkordersByDatesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
         public WcfMobile.EAMServices.PMWorkOrderContract[] response;
         
-        public WorkItemsServiceGetWorkordersByEquipmentResponse() {
+        public WorkItemsServiceGetWorkordersByDatesResponse() {
         }
         
-        public WorkItemsServiceGetWorkordersByEquipmentResponse(WcfMobile.EAMServices.PMWorkOrderContract[] response) {
+        public WorkItemsServiceGetWorkordersByDatesResponse(WcfMobile.EAMServices.PMWorkOrderContract[] response) {
             this.response = response;
         }
     }
@@ -5125,307 +5125,6 @@ namespace WcfMobile.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse WcfMobile.EAMServices.WorkItemsService.CreateOrUpdate(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
-            return base.Channel.CreateOrUpdate(request);
-        }
-        
-        public string CreateOrUpdate(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
-            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).CreateOrUpdate(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> WcfMobile.EAMServices.WorkItemsService.CreateOrUpdateAsync(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
-            return base.Channel.CreateOrUpdateAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> CreateOrUpdateAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
-            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).CreateOrUpdateAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteResponse WcfMobile.EAMServices.WorkItemsService.delete(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request) {
-            return base.Channel.delete(request);
-        }
-        
-        public void delete(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            WcfMobile.EAMServices.WorkItemsServiceDeleteResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).delete(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> WcfMobile.EAMServices.WorkItemsService.deleteAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request) {
-            return base.Channel.deleteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> deleteAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).deleteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse WcfMobile.EAMServices.WorkItemsService.DeleteWorkItem(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
-            return base.Channel.DeleteWorkItem(request);
-        }
-        
-        public bool DeleteWorkItem(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.sto_id = sto_id;
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItem(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
-            return base.Channel.DeleteWorkItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> DeleteWorkItemAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.sto_id = sto_id;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemByRecId(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request) {
-            return base.Channel.DeleteWorkItemByRecId(request);
-        }
-        
-        public bool DeleteWorkItemByRecId(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.rec_id = rec_id;
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecId(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request) {
-            return base.Channel.DeleteWorkItemByRecIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
-            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.rec_id = rec_id;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceFindResponse WcfMobile.EAMServices.WorkItemsService.find(WcfMobile.EAMServices.WorkItemsServiceFindRequest request) {
-            return base.Channel.find(request);
-        }
-        
-        public WcfMobile.EAMServices.AxdWorkItems find(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
-            WcfMobile.EAMServices.WorkItemsServiceFindRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceFindRequest();
-            inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            WcfMobile.EAMServices.WorkItemsServiceFindResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).find(inValue);
-            return retVal.WorkItems;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> WcfMobile.EAMServices.WorkItemsService.findAsync(WcfMobile.EAMServices.WorkItemsServiceFindRequest request) {
-            return base.Channel.findAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> findAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
-            WcfMobile.EAMServices.WorkItemsServiceFindRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceFindRequest();
-            inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).findAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse WcfMobile.EAMServices.WorkItemsService.GetEquipLocations(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
-            return base.Channel.GetEquipLocations(request);
-        }
-        
-        public WcfMobile.EAMServices.WOLocationContract[] GetEquipLocations(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipLocationsAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
-            return base.Channel.GetEquipLocationsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> GetEquipLocationsAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipLocationsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceCreateResponse WcfMobile.EAMServices.WorkItemsService.create(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request) {
-            return base.Channel.create(request);
-        }
-        
-        public WcfMobile.EAMServices.EntityKey[] create(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            WcfMobile.EAMServices.WorkItemsServiceCreateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateRequest();
-            inValue.CallContext = CallContext;
-            inValue.WorkItems = WorkItems;
-            WcfMobile.EAMServices.WorkItemsServiceCreateResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).create(inValue);
-            return retVal.EntityKeyList;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> WcfMobile.EAMServices.WorkItemsService.createAsync(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request) {
-            return base.Channel.createAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> createAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
-            WcfMobile.EAMServices.WorkItemsServiceCreateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateRequest();
-            inValue.CallContext = CallContext;
-            inValue.WorkItems = WorkItems;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).createAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse WcfMobile.EAMServices.WorkItemsService.GetWorkordersByDates(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request) {
-            return base.Channel.GetWorkordersByDates(request);
-        }
-        
-        public WcfMobile.EAMServices.PMWorkOrderContract[] GetWorkordersByDates(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest();
-            inValue.CallContext = CallContext;
-            inValue._dateStart = _dateStart;
-            inValue._dateEnd = _dateEnd;
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkordersByDates(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkordersByDatesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request) {
-            return base.Channel.GetWorkordersByDatesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> GetWorkordersByDatesAsync(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest();
-            inValue.CallContext = CallContext;
-            inValue._dateStart = _dateStart;
-            inValue._dateEnd = _dateEnd;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkordersByDatesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse WcfMobile.EAMServices.WorkItemsService.GetAllEquipments(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request) {
-            return base.Channel.GetAllEquipments(request);
-        }
-        
-        public WcfMobile.EAMServices.EquipContract[] GetAllEquipments(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetAllEquipments(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> WcfMobile.EAMServices.WorkItemsService.GetAllEquipmentsAsync(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request) {
-            return base.Channel.GetAllEquipmentsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> GetAllEquipmentsAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetAllEquipmentsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceReadResponse WcfMobile.EAMServices.WorkItemsService.read(WcfMobile.EAMServices.WorkItemsServiceReadRequest request) {
-            return base.Channel.read(request);
-        }
-        
-        public WcfMobile.EAMServices.AxdWorkItems read(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            WcfMobile.EAMServices.WorkItemsServiceReadRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceReadRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            WcfMobile.EAMServices.WorkItemsServiceReadResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).read(inValue);
-            return retVal.WorkItems;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> WcfMobile.EAMServices.WorkItemsService.readAsync(WcfMobile.EAMServices.WorkItemsServiceReadRequest request) {
-            return base.Channel.readAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> readAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
-            WcfMobile.EAMServices.WorkItemsServiceReadRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceReadRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).readAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse WcfMobile.EAMServices.WorkItemsService.MainCostByProdLine(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
-            return base.Channel.MainCostByProdLine(request);
-        }
-        
-        public WcfMobile.EAMServices.PMLineCostContract[] MainCostByProdLine(WcfMobile.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).MainCostByProdLine(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> WcfMobile.EAMServices.WorkItemsService.MainCostByProdLineAsync(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
-            return base.Channel.MainCostByProdLineAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> MainCostByProdLineAsync(WcfMobile.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).MainCostByProdLineAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse WcfMobile.EAMServices.WorkItemsService.GetWorkOrderStatusLookup(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request) {
-            return base.Channel.GetWorkOrderStatusLookup(request);
-        }
-        
-        public WcfMobile.EAMServices.LookupContract[] GetWorkOrderStatusLookup(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookup(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request) {
-            return base.Channel.GetWorkOrderStatusLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WcfMobile.EAMServices.WorkItemsServiceGetOnhandResponse WcfMobile.EAMServices.WorkItemsService.GetOnhand(WcfMobile.EAMServices.WorkItemsServiceGetOnhandRequest request) {
             return base.Channel.GetOnhand(request);
         }
@@ -5448,152 +5147,6 @@ namespace WcfMobile.EAMServices {
             inValue.CallContext = CallContext;
             inValue._itemId = _itemId;
             return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetOnhandAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse WcfMobile.EAMServices.WorkItemsService.GetFailureCodes(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request) {
-            return base.Channel.GetFailureCodes(request);
-        }
-        
-        public WcfMobile.EAMServices.FailureCodeContract[] GetFailureCodes(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetFailureCodes(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> WcfMobile.EAMServices.WorkItemsService.GetFailureCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request) {
-            return base.Channel.GetFailureCodesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> GetFailureCodesAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetFailureCodesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse WcfMobile.EAMServices.WorkItemsService.GetInlineWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request) {
-            return base.Channel.GetInlineWorkItems(request);
-        }
-        
-        public WcfMobile.EAMServices.PMWorkItemContract[] GetInlineWorkItems(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetInlineWorkItems(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> WcfMobile.EAMServices.WorkItemsService.GetInlineWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request) {
-            return base.Channel.GetInlineWorkItemsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> GetInlineWorkItemsAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetInlineWorkItemsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse WcfMobile.EAMServices.WorkItemsService.GetEquipment(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request) {
-            return base.Channel.GetEquipment(request);
-        }
-        
-        public WcfMobile.EAMServices.EquipContract GetEquipment(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest();
-            inValue.CallContext = CallContext;
-            inValue.equipmentID = equipmentID;
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipment(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipmentAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request) {
-            return base.Channel.GetEquipmentAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> GetEquipmentAsync(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest();
-            inValue.CallContext = CallContext;
-            inValue.equipmentID = equipmentID;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse WcfMobile.EAMServices.WorkItemsService.GetSingleWorkorderWithItems(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request) {
-            return base.Channel.GetSingleWorkorderWithItems(request);
-        }
-        
-        public WcfMobile.EAMServices.PMWorkOrderContract GetSingleWorkorderWithItems(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItems(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> WcfMobile.EAMServices.WorkItemsService.GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request) {
-            return base.Channel.GetSingleWorkorderWithItemsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItemsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse WcfMobile.EAMServices.WorkItemsService.GetWorkOrderTypes(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
-            return base.Channel.GetWorkOrderTypes(request);
-        }
-        
-        public WcfMobile.EAMServices.WOTypeContract[] GetWorkOrderTypes(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
-            inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkOrderTypesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
-            return base.Channel.GetWorkOrderTypesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> GetWorkOrderTypesAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
-            inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderTypesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse WcfMobile.EAMServices.WorkItemsService.GetLatestWorkorder(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request) {
-            return base.Channel.GetLatestWorkorder(request);
-        }
-        
-        public WcfMobile.EAMServices.PMWorkOrderContract GetLatestWorkorder(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetLatestWorkorder(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> WcfMobile.EAMServices.WorkItemsService.GetLatestWorkorderAsync(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request) {
-            return base.Channel.GetLatestWorkorderAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> GetLatestWorkorderAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
-            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetLatestWorkorderAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5648,26 +5201,124 @@ namespace WcfMobile.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse WcfMobile.EAMServices.WorkItemsService.PostedWorkItems(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
-            return base.Channel.PostedWorkItems(request);
+        WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse WcfMobile.EAMServices.WorkItemsService.getMaxId(WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
+            return base.Channel.getMaxId(request);
         }
         
-        public System.Data.DataSet PostedWorkItems(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest();
+        public long getMaxId(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest();
             inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).PostedWorkItems(inValue);
+            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).getMaxId(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> WcfMobile.EAMServices.WorkItemsService.PostedWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
-            return base.Channel.PostedWorkItemsAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse> WcfMobile.EAMServices.WorkItemsService.getMaxIdAsync(WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
+            return base.Channel.getMaxIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> PostedWorkItemsAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest();
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse> getMaxIdAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest();
             inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).PostedWorkItemsAsync(inValue);
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).getMaxIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse WcfMobile.EAMServices.WorkItemsService.MainCostByProdLine(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
+            return base.Channel.MainCostByProdLine(request);
+        }
+        
+        public WcfMobile.EAMServices.PMLineCostContract[] MainCostByProdLine(WcfMobile.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).MainCostByProdLine(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> WcfMobile.EAMServices.WorkItemsService.MainCostByProdLineAsync(WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest request) {
+            return base.Channel.MainCostByProdLineAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineResponse> MainCostByProdLineAsync(WcfMobile.EAMServices.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceMainCostByProdLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).MainCostByProdLineAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse WcfMobile.EAMServices.WorkItemsService.GetWorkOrderTypes(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
+            return base.Channel.GetWorkOrderTypes(request);
+        }
+        
+        public WcfMobile.EAMServices.WOTypeContract[] GetWorkOrderTypes(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkOrderTypesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest request) {
+            return base.Channel.GetWorkOrderTypesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesResponse> GetWorkOrderTypesAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderTypesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderTypesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse WcfMobile.EAMServices.WorkItemsService.CreateOrUpdate(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
+            return base.Channel.CreateOrUpdate(request);
+        }
+        
+        public string CreateOrUpdate(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
+            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).CreateOrUpdate(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> WcfMobile.EAMServices.WorkItemsService.CreateOrUpdateAsync(WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest request) {
+            return base.Channel.CreateOrUpdateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateResponse> CreateOrUpdateAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EamWorkitemsContract[] lines) {
+            WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateOrUpdateRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).CreateOrUpdateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse WcfMobile.EAMServices.WorkItemsService.GetRepaireCodes(WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest request) {
+            return base.Channel.GetRepaireCodes(request);
+        }
+        
+        public WcfMobile.EAMServices.RepairCodeContract[] GetRepaireCodes(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetRepaireCodes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse> WcfMobile.EAMServices.WorkItemsService.GetRepaireCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest request) {
+            return base.Channel.GetRepaireCodesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse> GetRepaireCodesAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetRepaireCodesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5694,103 +5345,72 @@ namespace WcfMobile.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse WcfMobile.EAMServices.WorkItemsService.SaveWorkOrder(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request) {
-            return base.Channel.SaveWorkOrder(request);
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse WcfMobile.EAMServices.WorkItemsService.GetWorkOrderStatusLookup(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request) {
+            return base.Channel.GetWorkOrderStatusLookup(request);
         }
         
-        public WcfMobile.EAMServices.PMWorkOrderContract SaveWorkOrder(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.PMWorkOrderContract woEntity) {
-            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest();
+        public WcfMobile.EAMServices.LookupContract[] GetWorkOrderStatusLookup(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest();
             inValue.CallContext = CallContext;
-            inValue.woEntity = woEntity;
-            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).SaveWorkOrder(inValue);
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookup(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> WcfMobile.EAMServices.WorkItemsService.SaveWorkOrderAsync(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request) {
-            return base.Channel.SaveWorkOrderAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest request) {
+            return base.Channel.GetWorkOrderStatusLookupAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> SaveWorkOrderAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.PMWorkOrderContract woEntity) {
-            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest();
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupResponse> GetWorkOrderStatusLookupAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkOrderStatusLookupRequest();
             inValue.CallContext = CallContext;
-            inValue.woEntity = woEntity;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).SaveWorkOrderAsync(inValue);
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookupAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse WcfMobile.EAMServices.WorkItemsService.SetWOStatus(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
-            return base.Channel.SetWOStatus(request);
+        WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse WcfMobile.EAMServices.WorkItemsService.GetAllEquipments(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request) {
+            return base.Channel.GetAllEquipments(request);
         }
         
-        public bool SetWOStatus(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
-            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest();
+        public WcfMobile.EAMServices.EquipContract[] GetAllEquipments(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest();
             inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.statusId = statusId;
-            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
+            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetAllEquipments(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> WcfMobile.EAMServices.WorkItemsService.SetWOStatusAsync(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
-            return base.Channel.SetWOStatusAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> WcfMobile.EAMServices.WorkItemsService.GetAllEquipmentsAsync(WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest request) {
+            return base.Channel.GetAllEquipmentsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> SetWOStatusAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
-            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest();
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsResponse> GetAllEquipmentsAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetAllEquipmentsRequest();
             inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            inValue.statusId = statusId;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).SetWOStatusAsync(inValue);
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetAllEquipmentsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse WcfMobile.EAMServices.WorkItemsService.getMaxId(WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
-            return base.Channel.getMaxId(request);
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse WcfMobile.EAMServices.WorkItemsService.GetEquipLocations(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
+            return base.Channel.GetEquipLocations(request);
         }
         
-        public long getMaxId(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest();
+        public WcfMobile.EAMServices.WOLocationContract[] GetEquipLocations(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
             inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).getMaxId(inValue);
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse> WcfMobile.EAMServices.WorkItemsService.getMaxIdAsync(WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest request) {
-            return base.Channel.getMaxIdAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipLocationsAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest request) {
+            return base.Channel.GetEquipLocationsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetMaxIdResponse> getMaxIdAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetMaxIdRequest();
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsResponse> GetEquipLocationsAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipLocationsRequest();
             inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).getMaxIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse WcfMobile.EAMServices.WorkItemsService.GetEquipmentsByCostCenter(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request) {
-            return base.Channel.GetEquipmentsByCostCenter(request);
-        }
-        
-        public WcfMobile.EAMServices.EquipContract[] GetEquipmentsByCostCenter(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest();
-            inValue.CallContext = CallContext;
-            inValue.dimValueStr = dimValueStr;
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenter(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request) {
-            return base.Channel.GetEquipmentsByCostCenterAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
-            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest();
-            inValue.CallContext = CallContext;
-            inValue.dimValueStr = dimValueStr;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenterAsync(inValue);
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipLocationsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5825,26 +5445,202 @@ namespace WcfMobile.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse WcfMobile.EAMServices.WorkItemsService.GetRepaireCodes(WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest request) {
-            return base.Channel.GetRepaireCodes(request);
+        WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse WcfMobile.EAMServices.WorkItemsService.PostedWorkItems(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
+            return base.Channel.PostedWorkItems(request);
         }
         
-        public WcfMobile.EAMServices.RepairCodeContract[] GetRepaireCodes(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest();
+        public System.Data.DataSet PostedWorkItems(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest();
             inValue.CallContext = CallContext;
-            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetRepaireCodes(inValue);
+            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).PostedWorkItems(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse> WcfMobile.EAMServices.WorkItemsService.GetRepaireCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest request) {
-            return base.Channel.GetRepaireCodesAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> WcfMobile.EAMServices.WorkItemsService.PostedWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest request) {
+            return base.Channel.PostedWorkItemsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesResponse> GetRepaireCodesAsync(WcfMobile.EAMServices.CallContext CallContext) {
-            WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetRepaireCodesRequest();
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsResponse> PostedWorkItemsAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServicePostedWorkItemsRequest();
             inValue.CallContext = CallContext;
-            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetRepaireCodesAsync(inValue);
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).PostedWorkItemsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceFindResponse WcfMobile.EAMServices.WorkItemsService.find(WcfMobile.EAMServices.WorkItemsServiceFindRequest request) {
+            return base.Channel.find(request);
+        }
+        
+        public WcfMobile.EAMServices.AxdWorkItems find(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
+            WcfMobile.EAMServices.WorkItemsServiceFindRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceFindRequest();
+            inValue.CallContext = CallContext;
+            inValue.QueryCriteria = QueryCriteria;
+            WcfMobile.EAMServices.WorkItemsServiceFindResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).find(inValue);
+            return retVal.WorkItems;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> WcfMobile.EAMServices.WorkItemsService.findAsync(WcfMobile.EAMServices.WorkItemsServiceFindRequest request) {
+            return base.Channel.findAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceFindResponse> findAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.QueryCriteria QueryCriteria) {
+            WcfMobile.EAMServices.WorkItemsServiceFindRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceFindRequest();
+            inValue.CallContext = CallContext;
+            inValue.QueryCriteria = QueryCriteria;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).findAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceCreateResponse WcfMobile.EAMServices.WorkItemsService.create(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request) {
+            return base.Channel.create(request);
+        }
+        
+        public WcfMobile.EAMServices.EntityKey[] create(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
+            WcfMobile.EAMServices.WorkItemsServiceCreateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateRequest();
+            inValue.CallContext = CallContext;
+            inValue.WorkItems = WorkItems;
+            WcfMobile.EAMServices.WorkItemsServiceCreateResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).create(inValue);
+            return retVal.EntityKeyList;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> WcfMobile.EAMServices.WorkItemsService.createAsync(WcfMobile.EAMServices.WorkItemsServiceCreateRequest request) {
+            return base.Channel.createAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceCreateResponse> createAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.AxdWorkItems WorkItems) {
+            WcfMobile.EAMServices.WorkItemsServiceCreateRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceCreateRequest();
+            inValue.CallContext = CallContext;
+            inValue.WorkItems = WorkItems;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).createAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse WcfMobile.EAMServices.WorkItemsService.DeleteWorkItem(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
+            return base.Channel.DeleteWorkItem(request);
+        }
+        
+        public bool DeleteWorkItem(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.sto_id = sto_id;
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItem(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest request) {
+            return base.Channel.DeleteWorkItemAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemResponse> DeleteWorkItemAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, int sto_id) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.sto_id = sto_id;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse WcfMobile.EAMServices.WorkItemsService.GetEquipmentsByCostCenter(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request) {
+            return base.Channel.GetEquipmentsByCostCenter(request);
+        }
+        
+        public WcfMobile.EAMServices.EquipContract[] GetEquipmentsByCostCenter(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest();
+            inValue.CallContext = CallContext;
+            inValue.dimValueStr = dimValueStr;
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenter(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest request) {
+            return base.Channel.GetEquipmentsByCostCenterAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterResponse> GetEquipmentsByCostCenterAsync(WcfMobile.EAMServices.CallContext CallContext, string dimValueStr) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentsByCostCenterRequest();
+            inValue.CallContext = CallContext;
+            inValue.dimValueStr = dimValueStr;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenterAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse WcfMobile.EAMServices.WorkItemsService.GetEquipment(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request) {
+            return base.Channel.GetEquipment(request);
+        }
+        
+        public WcfMobile.EAMServices.EquipContract GetEquipment(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest();
+            inValue.CallContext = CallContext;
+            inValue.equipmentID = equipmentID;
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipment(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> WcfMobile.EAMServices.WorkItemsService.GetEquipmentAsync(WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest request) {
+            return base.Channel.GetEquipmentAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetEquipmentResponse> GetEquipmentAsync(WcfMobile.EAMServices.CallContext CallContext, string equipmentID) {
+            WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetEquipmentRequest();
+            inValue.CallContext = CallContext;
+            inValue.equipmentID = equipmentID;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetEquipmentAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteResponse WcfMobile.EAMServices.WorkItemsService.delete(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request) {
+            return base.Channel.delete(request);
+        }
+        
+        public void delete(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            WcfMobile.EAMServices.WorkItemsServiceDeleteResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).delete(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> WcfMobile.EAMServices.WorkItemsService.deleteAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteRequest request) {
+            return base.Channel.deleteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteResponse> deleteAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).deleteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse WcfMobile.EAMServices.WorkItemsService.GetSingleWorkorderWithItems(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request) {
+            return base.Channel.GetSingleWorkorderWithItems(request);
+        }
+        
+        public WcfMobile.EAMServices.PMWorkOrderContract GetSingleWorkorderWithItems(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItems(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> WcfMobile.EAMServices.WorkItemsService.GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest request) {
+            return base.Channel.GetSingleWorkorderWithItemsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsResponse> GetSingleWorkorderWithItemsAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetSingleWorkorderWithItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItemsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5870,6 +5666,210 @@ namespace WcfMobile.EAMServices {
             inValue.CallContext = CallContext;
             inValue.equipId = equipId;
             return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkordersByEquipmentAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceReadResponse WcfMobile.EAMServices.WorkItemsService.read(WcfMobile.EAMServices.WorkItemsServiceReadRequest request) {
+            return base.Channel.read(request);
+        }
+        
+        public WcfMobile.EAMServices.AxdWorkItems read(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            WcfMobile.EAMServices.WorkItemsServiceReadRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            WcfMobile.EAMServices.WorkItemsServiceReadResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).read(inValue);
+            return retVal.WorkItems;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> WcfMobile.EAMServices.WorkItemsService.readAsync(WcfMobile.EAMServices.WorkItemsServiceReadRequest request) {
+            return base.Channel.readAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceReadResponse> readAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.EntityKey[] EntityKeyList) {
+            WcfMobile.EAMServices.WorkItemsServiceReadRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).readAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse WcfMobile.EAMServices.WorkItemsService.SetWOStatus(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
+            return base.Channel.SetWOStatus(request);
+        }
+        
+        public bool SetWOStatus(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
+            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.statusId = statusId;
+            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> WcfMobile.EAMServices.WorkItemsService.SetWOStatusAsync(WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest request) {
+            return base.Channel.SetWOStatusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSetWOStatusResponse> SetWOStatusAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, int statusId) {
+            WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSetWOStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.statusId = statusId;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).SetWOStatusAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse WcfMobile.EAMServices.WorkItemsService.GetFailureCodes(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request) {
+            return base.Channel.GetFailureCodes(request);
+        }
+        
+        public WcfMobile.EAMServices.FailureCodeContract[] GetFailureCodes(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest();
+            inValue.CallContext = CallContext;
+            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetFailureCodes(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> WcfMobile.EAMServices.WorkItemsService.GetFailureCodesAsync(WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest request) {
+            return base.Channel.GetFailureCodesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesResponse> GetFailureCodesAsync(WcfMobile.EAMServices.CallContext CallContext) {
+            WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetFailureCodesRequest();
+            inValue.CallContext = CallContext;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetFailureCodesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse WcfMobile.EAMServices.WorkItemsService.GetInlineWorkItems(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request) {
+            return base.Channel.GetInlineWorkItems(request);
+        }
+        
+        public WcfMobile.EAMServices.PMWorkItemContract[] GetInlineWorkItems(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetInlineWorkItems(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> WcfMobile.EAMServices.WorkItemsService.GetInlineWorkItemsAsync(WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest request) {
+            return base.Channel.GetInlineWorkItemsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsResponse> GetInlineWorkItemsAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetInlineWorkItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetInlineWorkItemsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemByRecId(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request) {
+            return base.Channel.DeleteWorkItemByRecId(request);
+        }
+        
+        public bool DeleteWorkItemByRecId(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.rec_id = rec_id;
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecId(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> WcfMobile.EAMServices.WorkItemsService.DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest request) {
+            return base.Channel.DeleteWorkItemByRecIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdResponse> DeleteWorkItemByRecIdAsync(WcfMobile.EAMServices.CallContext CallContext, string woId, long rec_id) {
+            WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceDeleteWorkItemByRecIdRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            inValue.rec_id = rec_id;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse WcfMobile.EAMServices.WorkItemsService.GetLatestWorkorder(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request) {
+            return base.Channel.GetLatestWorkorder(request);
+        }
+        
+        public WcfMobile.EAMServices.PMWorkOrderContract GetLatestWorkorder(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetLatestWorkorder(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> WcfMobile.EAMServices.WorkItemsService.GetLatestWorkorderAsync(WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest request) {
+            return base.Channel.GetLatestWorkorderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderResponse> GetLatestWorkorderAsync(WcfMobile.EAMServices.CallContext CallContext, string woId) {
+            WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetLatestWorkorderRequest();
+            inValue.CallContext = CallContext;
+            inValue.woId = woId;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetLatestWorkorderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse WcfMobile.EAMServices.WorkItemsService.SaveWorkOrder(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request) {
+            return base.Channel.SaveWorkOrder(request);
+        }
+        
+        public WcfMobile.EAMServices.PMWorkOrderContract SaveWorkOrder(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.PMWorkOrderContract woEntity) {
+            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest();
+            inValue.CallContext = CallContext;
+            inValue.woEntity = woEntity;
+            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).SaveWorkOrder(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> WcfMobile.EAMServices.WorkItemsService.SaveWorkOrderAsync(WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest request) {
+            return base.Channel.SaveWorkOrderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderResponse> SaveWorkOrderAsync(WcfMobile.EAMServices.CallContext CallContext, WcfMobile.EAMServices.PMWorkOrderContract woEntity) {
+            WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceSaveWorkOrderRequest();
+            inValue.CallContext = CallContext;
+            inValue.woEntity = woEntity;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).SaveWorkOrderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse WcfMobile.EAMServices.WorkItemsService.GetWorkordersByDates(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request) {
+            return base.Channel.GetWorkordersByDates(request);
+        }
+        
+        public WcfMobile.EAMServices.PMWorkOrderContract[] GetWorkordersByDates(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest();
+            inValue.CallContext = CallContext;
+            inValue._dateStart = _dateStart;
+            inValue._dateEnd = _dateEnd;
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse retVal = ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkordersByDates(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> WcfMobile.EAMServices.WorkItemsService.GetWorkordersByDatesAsync(WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest request) {
+            return base.Channel.GetWorkordersByDatesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesResponse> GetWorkordersByDatesAsync(WcfMobile.EAMServices.CallContext CallContext, System.DateTime _dateStart, System.DateTime _dateEnd) {
+            WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest inValue = new WcfMobile.EAMServices.WorkItemsServiceGetWorkordersByDatesRequest();
+            inValue.CallContext = CallContext;
+            inValue._dateStart = _dateStart;
+            inValue._dateEnd = _dateEnd;
+            return ((WcfMobile.EAMServices.WorkItemsService)(this)).GetWorkordersByDatesAsync(inValue);
         }
     }
 }

@@ -140,10 +140,82 @@ namespace SyncServices.UserMgtServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MobileUserLogin", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class MobileUserLogin : SyncServices.UserMgtServices.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProjectNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserLoginNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserRoleTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProjectName {
+            get {
+                return this.ProjectNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProjectNameField, value) != true)) {
+                    this.ProjectNameField = value;
+                    this.RaisePropertyChanged("ProjectName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserLoginName {
+            get {
+                return this.UserLoginNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLoginNameField, value) != true)) {
+                    this.UserLoginNameField = value;
+                    this.RaisePropertyChanged("UserLoginName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPassword {
+            get {
+                return this.UserPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPasswordField, value) != true)) {
+                    this.UserPasswordField = value;
+                    this.RaisePropertyChanged("UserPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserRoleType {
+            get {
+                return this.UserRoleTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserRoleTypeField, value) != true)) {
+                    this.UserRoleTypeField = value;
+                    this.RaisePropertyChanged("UserRoleType");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.UserMgtServices.AttendanceContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.UserMgtServices.UserInfoContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.UserMgtServices.MobileUserLogin))]
     public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -984,56 +1056,66 @@ namespace SyncServices.UserMgtServices {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="UserMgtServices.UserManagementService")]
     public interface UserManagementService {
         
-        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceLoginUserRequest) of message UserManagementServiceLoginUserRequest does not match the default value (LoginUser)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/LoginUser", ReplyAction="http://tempuri.org/UserManagementService/LoginUserResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/LoginUserAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse LoginUser(SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetMobileUsersRequest) of message UserManagementServiceGetMobileUsersRequest does not match the default value (GetMobileUsers)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetMobileUsers", ReplyAction="http://tempuri.org/UserManagementService/GetMobileUsersResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/GetMobileUsersAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersResponse GetMobileUsers(SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetUserInfoRequest) of message UserManagementServiceGetUserInfoRequest does not match the default value (GetUserInfo)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetUserInfo", ReplyAction="http://tempuri.org/UserManagementService/GetUserInfoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/GetUserInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.UserMgtServices.UserManagementServiceGetUserInfoResponse GetUserInfo(SyncServices.UserMgtServices.UserManagementServiceGetUserInfoRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceLoginUserRequest) of message UserManagementServiceLoginUserRequest does not match the default value (LoginUser)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/LoginUser", ReplyAction="http://tempuri.org/UserManagementService/LoginUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/LoginUserAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse LoginUser(SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetCCAttendanceRequest) of message UserManagementServiceGetCCAttendanceRequest does not match the default value (GetCCAttendance)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetCCAttendance", ReplyAction="http://tempuri.org/UserManagementService/GetCCAttendanceResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/GetCCAttendanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         SyncServices.UserMgtServices.UserManagementServiceGetCCAttendanceResponse GetCCAttendance(SyncServices.UserMgtServices.UserManagementServiceGetCCAttendanceRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetUserInfoOnLoginRequest) of message UserManagementServiceGetUserInfoOnLoginRequest does not match the default value (GetUserInfoOnLogin)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetUserInfoOnLogin", ReplyAction="http://tempuri.org/UserManagementService/GetUserInfoOnLoginResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.UserMgtServices.AifFault), Action="http://tempuri.org/UserManagementService/GetUserInfoOnLoginAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginResponse GetUserInfoOnLogin(SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceLoginUserRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class UserManagementServiceLoginUserRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetMobileUsersRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetMobileUsersRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public SyncServices.UserMgtServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SyncServices.UserMgtServices.UserInfoContract ui;
+        public string projectName;
         
-        public UserManagementServiceLoginUserRequest() {
+        public UserManagementServiceGetMobileUsersRequest() {
         }
         
-        public UserManagementServiceLoginUserRequest(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui) {
+        public UserManagementServiceGetMobileUsersRequest(SyncServices.UserMgtServices.CallContext CallContext, string projectName) {
             this.CallContext = CallContext;
-            this.ui = ui;
+            this.projectName = projectName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceLoginUserResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class UserManagementServiceLoginUserResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetMobileUsersResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetMobileUsersResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
+        public SyncServices.UserMgtServices.MobileUserLogin[] response;
         
-        public UserManagementServiceLoginUserResponse() {
+        public UserManagementServiceGetMobileUsersResponse() {
         }
         
-        public UserManagementServiceLoginUserResponse(bool response) {
+        public UserManagementServiceGetMobileUsersResponse(SyncServices.UserMgtServices.MobileUserLogin[] response) {
             this.response = response;
         }
     }
@@ -1083,6 +1165,44 @@ namespace SyncServices.UserMgtServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceLoginUserRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceLoginUserRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.UserMgtServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.UserMgtServices.UserInfoContract ui;
+        
+        public UserManagementServiceLoginUserRequest() {
+        }
+        
+        public UserManagementServiceLoginUserRequest(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui) {
+            this.CallContext = CallContext;
+            this.ui = ui;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceLoginUserResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceLoginUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public UserManagementServiceLoginUserResponse() {
+        }
+        
+        public UserManagementServiceLoginUserResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetCCAttendanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class UserManagementServiceGetCCAttendanceRequest {
         
@@ -1122,6 +1242,48 @@ namespace SyncServices.UserMgtServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetUserInfoOnLoginRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetUserInfoOnLoginRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public SyncServices.UserMgtServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.UserMgtServices.UserInfoContract ui;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public bool hasPersonDetail;
+        
+        public UserManagementServiceGetUserInfoOnLoginRequest() {
+        }
+        
+        public UserManagementServiceGetUserInfoOnLoginRequest(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui, bool hasPersonDetail) {
+            this.CallContext = CallContext;
+            this.ui = ui;
+            this.hasPersonDetail = hasPersonDetail;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetUserInfoOnLoginResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetUserInfoOnLoginResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SyncServices.UserMgtServices.UserInfoContract response;
+        
+        public UserManagementServiceGetUserInfoOnLoginResponse() {
+        }
+        
+        public UserManagementServiceGetUserInfoOnLoginResponse(SyncServices.UserMgtServices.UserInfoContract response) {
+            this.response = response;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UserManagementServiceChannel : SyncServices.UserMgtServices.UserManagementService, System.ServiceModel.IClientChannel {
     }
@@ -1150,15 +1312,15 @@ namespace SyncServices.UserMgtServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse SyncServices.UserMgtServices.UserManagementService.LoginUser(SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest request) {
-            return base.Channel.LoginUser(request);
+        SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersResponse SyncServices.UserMgtServices.UserManagementService.GetMobileUsers(SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersRequest request) {
+            return base.Channel.GetMobileUsers(request);
         }
         
-        public bool LoginUser(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui) {
-            SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest inValue = new SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest();
+        public SyncServices.UserMgtServices.MobileUserLogin[] GetMobileUsers(SyncServices.UserMgtServices.CallContext CallContext, string projectName) {
+            SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersRequest inValue = new SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersRequest();
             inValue.CallContext = CallContext;
-            inValue.ui = ui;
-            SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse retVal = ((SyncServices.UserMgtServices.UserManagementService)(this)).LoginUser(inValue);
+            inValue.projectName = projectName;
+            SyncServices.UserMgtServices.UserManagementServiceGetMobileUsersResponse retVal = ((SyncServices.UserMgtServices.UserManagementService)(this)).GetMobileUsers(inValue);
             return retVal.response;
         }
         
@@ -1177,6 +1339,19 @@ namespace SyncServices.UserMgtServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse SyncServices.UserMgtServices.UserManagementService.LoginUser(SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest request) {
+            return base.Channel.LoginUser(request);
+        }
+        
+        public bool LoginUser(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui) {
+            SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest inValue = new SyncServices.UserMgtServices.UserManagementServiceLoginUserRequest();
+            inValue.CallContext = CallContext;
+            inValue.ui = ui;
+            SyncServices.UserMgtServices.UserManagementServiceLoginUserResponse retVal = ((SyncServices.UserMgtServices.UserManagementService)(this)).LoginUser(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.UserMgtServices.UserManagementServiceGetCCAttendanceResponse SyncServices.UserMgtServices.UserManagementService.GetCCAttendance(SyncServices.UserMgtServices.UserManagementServiceGetCCAttendanceRequest request) {
             return base.Channel.GetCCAttendance(request);
         }
@@ -1187,6 +1362,20 @@ namespace SyncServices.UserMgtServices {
             inValue.ui = ui;
             inValue.whichDate = whichDate;
             SyncServices.UserMgtServices.UserManagementServiceGetCCAttendanceResponse retVal = ((SyncServices.UserMgtServices.UserManagementService)(this)).GetCCAttendance(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginResponse SyncServices.UserMgtServices.UserManagementService.GetUserInfoOnLogin(SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginRequest request) {
+            return base.Channel.GetUserInfoOnLogin(request);
+        }
+        
+        public SyncServices.UserMgtServices.UserInfoContract GetUserInfoOnLogin(SyncServices.UserMgtServices.CallContext CallContext, SyncServices.UserMgtServices.UserInfoContract ui, bool hasPersonDetail) {
+            SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginRequest inValue = new SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginRequest();
+            inValue.CallContext = CallContext;
+            inValue.ui = ui;
+            inValue.hasPersonDetail = hasPersonDetail;
+            SyncServices.UserMgtServices.UserManagementServiceGetUserInfoOnLoginResponse retVal = ((SyncServices.UserMgtServices.UserManagementService)(this)).GetUserInfoOnLogin(inValue);
             return retVal.response;
         }
     }

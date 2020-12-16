@@ -86,13 +86,39 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="GetWarehouse">
-      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetWarehouse" style="document" />
-      <wsdl:input name="JournalCountingServiceGetWarehouseRequest">
-        <soap12:header message="i0:JournalCountingServiceGetWarehouseRequest_Headers" part="context" use="literal" />
+    <wsdl:operation name="GetWHLocations">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetWHLocations" style="document" />
+      <wsdl:input name="JournalCountingServiceGetWHLocationsRequest">
+        <soap12:header message="i0:JournalCountingServiceGetWHLocationsRequest_Headers" part="context" use="literal" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="JournalCountingServiceGetWarehouseResponse">
+      <wsdl:output name="JournalCountingServiceGetWHLocationsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/read" style="document" />
+      <wsdl:input name="JournalCountingServiceReadRequest">
+        <soap12:header message="i0:JournalCountingServiceReadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceReadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferItems">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/UpdateTransferItems" style="document" />
+      <wsdl:input name="JournalCountingServiceUpdateTransferItemsRequest">
+        <soap12:header message="i0:JournalCountingServiceUpdateTransferItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceUpdateTransferItemsResponse">
         <soap12:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="AifFaultFault">
@@ -112,13 +138,13 @@
         <soap12:fault use="literal" name="AifFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="read">
-      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/read" style="document" />
-      <wsdl:input name="JournalCountingServiceReadRequest">
-        <soap12:header message="i0:JournalCountingServiceReadRequest_Headers" part="context" use="literal" />
+    <wsdl:operation name="GetWarehouse">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetWarehouse" style="document" />
+      <wsdl:input name="JournalCountingServiceGetWarehouseRequest">
+        <soap12:header message="i0:JournalCountingServiceGetWarehouseRequest_Headers" part="context" use="literal" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="JournalCountingServiceReadResponse">
+      <wsdl:output name="JournalCountingServiceGetWarehouseResponse">
         <soap12:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="AifFaultFault">
@@ -145,7 +171,7 @@
       <wsa10:EndpointReference>
         <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/InventCountingServiceGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>AX2@kabholding.com</Upn>
+          <Upn>ax2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

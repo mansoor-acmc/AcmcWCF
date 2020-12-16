@@ -60,8 +60,8 @@ namespace SyncServices
 
             ProdRequestServiceClient client = new ProdRequestServiceClient();
             var items = client.GetProdSchedulesRearrange(context, startDate, endDate, lineName);
-            if (items != null && items.Count() > 0)
-                items = items.Where(t=>t.RecordId>0).OrderBy(t=>t.ProductionLine).ThenBy(t => t.StartTimeProduction).ToArray();
+            //if (items != null && items.Count() > 0)
+              //  items = items.Where(t=>t.RecordId>0).OrderBy(t=>t.ProductionLine).ThenBy(t => t.StartTimeProduction).ToArray();
 
             return items;
         }

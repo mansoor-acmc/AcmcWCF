@@ -58,17 +58,36 @@ namespace SyncServices
             List<UserData> allUser = new List<UserData>();
 
             //UserType are: Admin, Supervisor, Employee
+            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
 
-            allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });            
-            allUser.Add(new UserData() { UserName = "usman", Password = "us12345", UserType = "Supervisor" });
-            allUser.Add(new UserData() { UserName = "emran", Password = "em2019", UserType = "Supervisor" });
-            allUser.Add(new UserData() { UserName = "abdullah", Password = "ab2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "zaid", Password = "za2019", UserType = "Employee" });
-            allUser.Add(new UserData() { UserName = "basem", Password = "ba2019", UserType = "Supervisor" });
-            allUser.Add(new UserData() { UserName = "oliver", Password = "ol2019", UserType = "Employee" });
+
+            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
+            var userLogins = client.GetMobileUsers(context, "SCCounting");
+            foreach (var oneUser in userLogins)
+            {
+                allUser.Add(new UserData()
+                {
+                    UserName = oneUser.UserLoginName,
+                    Password = oneUser.UserPassword,
+                    UserType = oneUser.UserRoleType
+                });
+            }
+
+            //allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });
+            //allUser.Add(new UserData() { UserName = "usman", Password = "us12345", UserType = "Supervisor" });
+            //allUser.Add(new UserData() { UserName = "emran", Password = "em2019", UserType = "Supervisor" });
+            //allUser.Add(new UserData() { UserName = "abdullah", Password = "ab2019", UserType = "Employee" });
+            //allUser.Add(new UserData() { UserName = "zaid", Password = "za2019", UserType = "Employee" });
+            //allUser.Add(new UserData() { UserName = "basem", Password = "ba2019", UserType = "Supervisor" });
+            //allUser.Add(new UserData() { UserName = "oliver", Password = "ol2019", UserType = "Employee" });
 
             return allUser;
         }
+        
 
         public string GetPing()
         {
@@ -81,6 +100,36 @@ namespace SyncServices
                 }
             }
             return "Sorry";
+        }
+
+
+        /*-------------------------------------18/10/2020------------------------------------------------------*/
+
+        
+        public List<WmsLocationContract> GetWHLocations()
+        {
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            JournalCountingServiceClient client = new JournalCountingServiceClient();
+            return client.GetWHLocations(context).ToList();
+        }
+
+        public List<SCForTransfer> TransferItemsToNewLocation(List<SCForTransfer> lines)
+        {
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            JournalCountingServiceClient client = new JournalCountingServiceClient();
+            var linesFromAX = client.UpdateTransferItems(context, lines.ToArray());
+
+            return linesFromAX.ToList();
         }
     }
 }

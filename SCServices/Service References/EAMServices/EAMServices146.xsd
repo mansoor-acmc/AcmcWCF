@@ -1,152 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
-  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
-  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" />
   <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
-  <xs:element name="WorkItemsServiceDeleteWorkItemRequest">
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" />
+  <xs:import schemaLocation="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+  <xs:element name="WorkItemsServiceGetOnhandRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="sto_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceDeleteWorkItemResponse">
+  <xs:element name="WorkItemsServiceGetOnhandResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:OnHandContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceGetEquipLocationsRequest">
+  <xs:element name="WorkItemsServiceSearchEquipmentsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="equipName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceSearchEquipmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:ArrayOfEquipContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceUpdateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q3:EntityKeyList" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q4:WorkItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceUpdateResponse">
     <xs:complexType>
       <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetEquipLocationsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:ArrayOfWOLocationContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetRepaireCodesRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetRepaireCodesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:ArrayOfRepairCodeContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetAllEquipmentsRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetAllEquipmentsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q3:ArrayOfEquipContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceFindRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q4:QueryCriteria" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceFindResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q5:WorkItems" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetEquipmentRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="equipmentID" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetEquipmentResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q6:EquipContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetFailureCodesRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetFailureCodesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q7:ArrayOfFailureCodeContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetInlineWorkItemsRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetInlineWorkItemsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q8:ArrayOfPMWorkItemContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceDeleteRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q9:EntityKeyList" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceDeleteResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceCreateRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q10:WorkItems" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceCreateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q11:EntityKeyList" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceCreateOrUpdateRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="lines" nillable="true" type="q12:ArrayOfEamWorkitemsContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceCreateOrUpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
-      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WorkItemsServiceGetMaxIdRequest">
@@ -161,73 +57,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceGetWOPoolCodeRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetWOPoolCodeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q13:ArrayOfWOPoolContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetLatestWorkorderRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetLatestWorkorderResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q14:PMWorkOrderContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceReadRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q15:EntityKeyList" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceReadResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q16:WorkItems" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetWorkOrderTypesRequest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceGetWorkOrderTypesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q17:ArrayOfWOTypeContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceSetWOStatusRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="statusId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceSetWOStatusResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="response" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="WorkItemsServiceMainCostByProdLineRequest">
     <xs:complexType>
       <xs:sequence>
@@ -239,21 +68,111 @@
   <xs:element name="WorkItemsServiceMainCostByProdLineResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q18:ArrayOfPMLineCostContract" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfPMLineCostContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceUpdateRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q19:EntityKeyList" />
-        <xs:element xmlns:q20="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q20:WorkItems" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WorkItemsServiceUpdateResponse">
+  <xs:element name="WorkItemsServiceGetWorkOrderTypesRequest">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWorkOrderTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q6:ArrayOfWOTypeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceCreateOrUpdateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfEamWorkitemsContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceCreateOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetRepaireCodesRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetRepaireCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q8:ArrayOfRepairCodeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWOPoolCodeRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWOPoolCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q9:ArrayOfWOPoolContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWorkOrderStatusLookupRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWorkOrderStatusLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q10:ArrayOfLookupContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetAllEquipmentsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetAllEquipmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q11:ArrayOfEquipContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipLocationsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q12:ArrayOfWOLocationContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetOtherWorkItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="topRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="isItemCode" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetOtherWorkItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q13:ArrayOfPMWorkItemContract" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WorkItemsServicePostedWorkItemsRequest">
@@ -280,48 +199,227 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceGetOtherWorkItemsRequest">
+  <xs:element name="WorkItemsServiceFindRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="topRecords" type="xs:int" />
-        <xs:element minOccurs="0" name="isItemCode" type="xs:boolean" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" minOccurs="0" ref="q14:QueryCriteria" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceGetOtherWorkItemsResponse">
+  <xs:element name="WorkItemsServiceFindResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q21:ArrayOfPMWorkItemContract" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q15:WorkItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceCreateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q16:WorkItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q17:EntityKeyList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteWorkItemRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sto_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteWorkItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipmentsByCostCenterRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dimValueStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipmentsByCostCenterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q18:ArrayOfEquipContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipmentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="equipmentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q19:EquipContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q20:EntityKeyList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetSingleWorkorderWithItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetSingleWorkorderWithItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q21:PMWorkOrderContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWorkordersByEquipmentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="equipId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetWorkordersByEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q22:ArrayOfPMWorkOrderContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceReadRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" minOccurs="0" ref="q23:EntityKeyList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/dynamics/2008/01/documents/WorkItems" minOccurs="0" ref="q24:WorkItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceSetWOStatusRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceSetWOStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetFailureCodesRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetFailureCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q25:ArrayOfFailureCodeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetInlineWorkItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetInlineWorkItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q26:ArrayOfPMWorkItemContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteWorkItemByRecIdRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rec_id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceDeleteWorkItemByRecIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetLatestWorkorderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="woId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItemsServiceGetLatestWorkorderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q27:PMWorkOrderContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WorkItemsServiceSaveWorkOrderRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="woEntity" nillable="true" type="q22:PMWorkOrderContract" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="woEntity" nillable="true" type="q28:PMWorkOrderContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WorkItemsServiceSaveWorkOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q23:PMWorkOrderContract" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q29:PMWorkOrderContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceSearchEquipmentsRequest">
+  <xs:element name="WorkItemsServiceGetWorkordersByDatesRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="equipName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dateStart" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_dateEnd" type="xs:dateTime" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WorkItemsServiceSearchEquipmentsResponse">
+  <xs:element name="WorkItemsServiceGetWorkordersByDatesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q24:ArrayOfEquipContract" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q30:ArrayOfPMWorkOrderContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

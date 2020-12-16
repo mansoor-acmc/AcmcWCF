@@ -13109,11 +13109,11 @@
   </xs:simpleType>
   <xs:simpleType name="AxdType_Str">
     <xs:annotation>
-      <xs:documentation xml:lang="EN-US">Items' Description:</xs:documentation>
+      <xs:documentation xml:lang="EN-US">STO_ActualRequester:</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:minLength value="0" />
-      <xs:maxLength value="200" />
+      <xs:maxLength value="25" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="AxdExtType_InventJournalId">

@@ -37,11 +37,27 @@ namespace WcfMobile
 
         [OperationContract]
         [WebGet(UriTemplate = "GetDeliveryStatusLookup", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
-        WcfMobile.SalesOrderServices.LookupContract[] GetDeliveryStatus();
+        SalesOrderServices.LookupContract[] GetDeliveryStatus();
 
         [OperationContract]
-        [WebGet(UriTemplate = "GetDeliveries/{customerId}/{dateSearch}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
-        FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId);
+        [WebGet(UriTemplate = "GetDeliveries/{dateSearch}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        FGDeliveryContract[] GetDeliveries(string dateSearch);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "GetCustomerDeliveries/{customerId}/{dateSearch}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        FGDeliveryContract[] GetCustomerDeliveries(string dateSearch, string customerId);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "GetPalletInfo/{palletNum}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        PalletContract GetPalletInfo(string palletNum);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "CheckPalletAvailable/{pickingId}/{itemId}/{pallet}/{grade}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        string CheckPalletAvailable(string pickingId, string itemId, string pallet, string grade);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "GetSingleDelivery/{pickingId}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        FGDeliveryContract GetSingleDelivery(string pickingId);
 
         [OperationContract]
         [WebGet(UriTemplate = "GetDeliveriesByStatus/{customerId}/{dateSearch}/{statusId}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
@@ -80,8 +96,12 @@ namespace WcfMobile
         CustomerInvoiceContract[] GetInvoicesBySales(string salesId);
 
         [OperationContract]
-        [WebGet(UriTemplate = "GetInvoicesByDate/{customerId}/{_date}/{pageNum}/{pageSize}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "GetCustInvoicesByDate/{customerId}/{_date}/{pageNum}/{pageSize}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         CustomerInvoiceContract[] GetCustomerInvoicesByDate(string customerId, string _date, string pageNum, string pageSize);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "GetInvoicesByDate/{_date}/{pageNum}/{pageSize}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        CustomerInvoiceContract[] GetInvoicesByDate(string _date, string pageNum, string pageSize);
 
         [OperationContract]
         [WebGet(UriTemplate = "GetInvoice/{invoiceId}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]

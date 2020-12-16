@@ -140,10 +140,82 @@ namespace WcfMobile.UserServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MobileUserLogin", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    [System.SerializableAttribute()]
+    public partial class MobileUserLogin : WcfMobile.UserServices.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProjectNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserLoginNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserRoleTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProjectName {
+            get {
+                return this.ProjectNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProjectNameField, value) != true)) {
+                    this.ProjectNameField = value;
+                    this.RaisePropertyChanged("ProjectName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserLoginName {
+            get {
+                return this.UserLoginNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLoginNameField, value) != true)) {
+                    this.UserLoginNameField = value;
+                    this.RaisePropertyChanged("UserLoginName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPassword {
+            get {
+                return this.UserPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPasswordField, value) != true)) {
+                    this.UserPasswordField = value;
+                    this.RaisePropertyChanged("UserPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserRoleType {
+            get {
+                return this.UserRoleTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserRoleTypeField, value) != true)) {
+                    this.UserRoleTypeField = value;
+                    this.RaisePropertyChanged("UserRoleType");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.UserServices.AttendanceContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.UserServices.UserInfoContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfMobile.UserServices.MobileUserLogin))]
     public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -984,13 +1056,13 @@ namespace WcfMobile.UserServices {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="UserServices.UserManagementService")]
     public interface UserManagementService {
         
-        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetCCAttendanceRequest) of message UserManagementServiceGetCCAttendanceRequest does not match the default value (GetCCAttendance)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetCCAttendance", ReplyAction="http://tempuri.org/UserManagementService/GetCCAttendanceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.UserServices.AifFault), Action="http://tempuri.org/UserManagementService/GetCCAttendanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse GetCCAttendance(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request);
+        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetMobileUsersRequest) of message UserManagementServiceGetMobileUsersRequest does not match the default value (GetMobileUsers)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetMobileUsers", ReplyAction="http://tempuri.org/UserManagementService/GetMobileUsersResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.UserServices.AifFault), Action="http://tempuri.org/UserManagementService/GetMobileUsersAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse GetMobileUsers(WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetCCAttendance", ReplyAction="http://tempuri.org/UserManagementService/GetCCAttendanceResponse")]
-        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> GetCCAttendanceAsync(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetMobileUsers", ReplyAction="http://tempuri.org/UserManagementService/GetMobileUsersResponse")]
+        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse> GetMobileUsersAsync(WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetUserInfoRequest) of message UserManagementServiceGetUserInfoRequest does not match the default value (GetUserInfo)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetUserInfo", ReplyAction="http://tempuri.org/UserManagementService/GetUserInfoResponse")]
@@ -1008,6 +1080,14 @@ namespace WcfMobile.UserServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/LoginUser", ReplyAction="http://tempuri.org/UserManagementService/LoginUserResponse")]
         System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceLoginUserResponse> LoginUserAsync(WcfMobile.UserServices.UserManagementServiceLoginUserRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetCCAttendanceRequest) of message UserManagementServiceGetCCAttendanceRequest does not match the default value (GetCCAttendance)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetCCAttendance", ReplyAction="http://tempuri.org/UserManagementService/GetCCAttendanceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.UserServices.AifFault), Action="http://tempuri.org/UserManagementService/GetCCAttendanceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse GetCCAttendance(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetCCAttendance", ReplyAction="http://tempuri.org/UserManagementService/GetCCAttendanceResponse")]
+        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> GetCCAttendanceAsync(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (UserManagementServiceGetUserInfoOnLoginRequest) of message UserManagementServiceGetUserInfoOnLoginRequest does not match the default value (GetUserInfoOnLogin)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UserManagementService/GetUserInfoOnLogin", ReplyAction="http://tempuri.org/UserManagementService/GetUserInfoOnLoginResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WcfMobile.UserServices.AifFault), Action="http://tempuri.org/UserManagementService/GetUserInfoOnLoginAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -1020,41 +1100,37 @@ namespace WcfMobile.UserServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetCCAttendanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class UserManagementServiceGetCCAttendanceRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetMobileUsersRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetMobileUsersRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         public WcfMobile.UserServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.UserServices.UserInfoContract ui;
+        public string projectName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime whichDate;
-        
-        public UserManagementServiceGetCCAttendanceRequest() {
+        public UserManagementServiceGetMobileUsersRequest() {
         }
         
-        public UserManagementServiceGetCCAttendanceRequest(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
+        public UserManagementServiceGetMobileUsersRequest(WcfMobile.UserServices.CallContext CallContext, string projectName) {
             this.CallContext = CallContext;
-            this.ui = ui;
-            this.whichDate = whichDate;
+            this.projectName = projectName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetCCAttendanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class UserManagementServiceGetCCAttendanceResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetMobileUsersResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetMobileUsersResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public WcfMobile.UserServices.AttendanceContract[] response;
+        public WcfMobile.UserServices.MobileUserLogin[] response;
         
-        public UserManagementServiceGetCCAttendanceResponse() {
+        public UserManagementServiceGetMobileUsersResponse() {
         }
         
-        public UserManagementServiceGetCCAttendanceResponse(WcfMobile.UserServices.AttendanceContract[] response) {
+        public UserManagementServiceGetMobileUsersResponse(WcfMobile.UserServices.MobileUserLogin[] response) {
             this.response = response;
         }
     }
@@ -1142,6 +1218,48 @@ namespace WcfMobile.UserServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetCCAttendanceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetCCAttendanceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        public WcfMobile.UserServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.UserServices.UserInfoContract ui;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime whichDate;
+        
+        public UserManagementServiceGetCCAttendanceRequest() {
+        }
+        
+        public UserManagementServiceGetCCAttendanceRequest(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
+            this.CallContext = CallContext;
+            this.ui = ui;
+            this.whichDate = whichDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetCCAttendanceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class UserManagementServiceGetCCAttendanceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public WcfMobile.UserServices.AttendanceContract[] response;
+        
+        public UserManagementServiceGetCCAttendanceResponse() {
+        }
+        
+        public UserManagementServiceGetCCAttendanceResponse(WcfMobile.UserServices.AttendanceContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="UserManagementServiceGetUserInfoOnLoginRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class UserManagementServiceGetUserInfoOnLoginRequest {
         
@@ -1209,30 +1327,28 @@ namespace WcfMobile.UserServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse WcfMobile.UserServices.UserManagementService.GetCCAttendance(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request) {
-            return base.Channel.GetCCAttendance(request);
+        WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse WcfMobile.UserServices.UserManagementService.GetMobileUsers(WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest request) {
+            return base.Channel.GetMobileUsers(request);
         }
         
-        public WcfMobile.UserServices.AttendanceContract[] GetCCAttendance(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
-            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest();
+        public WcfMobile.UserServices.MobileUserLogin[] GetMobileUsers(WcfMobile.UserServices.CallContext CallContext, string projectName) {
+            WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest();
             inValue.CallContext = CallContext;
-            inValue.ui = ui;
-            inValue.whichDate = whichDate;
-            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse retVal = ((WcfMobile.UserServices.UserManagementService)(this)).GetCCAttendance(inValue);
+            inValue.projectName = projectName;
+            WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse retVal = ((WcfMobile.UserServices.UserManagementService)(this)).GetMobileUsers(inValue);
             return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> WcfMobile.UserServices.UserManagementService.GetCCAttendanceAsync(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request) {
-            return base.Channel.GetCCAttendanceAsync(request);
+        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse> WcfMobile.UserServices.UserManagementService.GetMobileUsersAsync(WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest request) {
+            return base.Channel.GetMobileUsersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> GetCCAttendanceAsync(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
-            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest();
+        public System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse> GetMobileUsersAsync(WcfMobile.UserServices.CallContext CallContext, string projectName) {
+            WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetMobileUsersRequest();
             inValue.CallContext = CallContext;
-            inValue.ui = ui;
-            inValue.whichDate = whichDate;
-            return ((WcfMobile.UserServices.UserManagementService)(this)).GetCCAttendanceAsync(inValue);
+            inValue.projectName = projectName;
+            return ((WcfMobile.UserServices.UserManagementService)(this)).GetMobileUsersAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1285,6 +1401,33 @@ namespace WcfMobile.UserServices {
             inValue.CallContext = CallContext;
             inValue.ui = ui;
             return ((WcfMobile.UserServices.UserManagementService)(this)).LoginUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse WcfMobile.UserServices.UserManagementService.GetCCAttendance(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request) {
+            return base.Channel.GetCCAttendance(request);
+        }
+        
+        public WcfMobile.UserServices.AttendanceContract[] GetCCAttendance(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
+            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest();
+            inValue.CallContext = CallContext;
+            inValue.ui = ui;
+            inValue.whichDate = whichDate;
+            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse retVal = ((WcfMobile.UserServices.UserManagementService)(this)).GetCCAttendance(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> WcfMobile.UserServices.UserManagementService.GetCCAttendanceAsync(WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest request) {
+            return base.Channel.GetCCAttendanceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse> GetCCAttendanceAsync(WcfMobile.UserServices.CallContext CallContext, WcfMobile.UserServices.UserInfoContract ui, System.DateTime whichDate) {
+            WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest inValue = new WcfMobile.UserServices.UserManagementServiceGetCCAttendanceRequest();
+            inValue.CallContext = CallContext;
+            inValue.ui = ui;
+            inValue.whichDate = whichDate;
+            return ((WcfMobile.UserServices.UserManagementService)(this)).GetCCAttendanceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

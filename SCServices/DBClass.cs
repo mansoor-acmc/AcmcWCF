@@ -1023,5 +1023,25 @@ namespace SyncServices
 
             return false;
         }
+
+
+        #region Movement
+
+        public DataTable ItemsNotUsed()
+        {            
+            DataTable dtReturn = new DataTable("WorkOrders");
+            
+            string sqlText = "SELECT STO_ID,STO_TIME 'TransDate',STO_ITEM 'Item',STO_QUANTITY 'Quantity',STO_WMSLOCID 'WMS Loc ID',STO_COSTCENTER 'CostCenter',STO_HOSTRIF,STO_OPERATOR 'Operator' FROM EamWorkItems wi WHERE wi.IsUsed=0 AND wi.isposted=0;";
+
+            SqlCommand comm = new SqlCommand(sqlText, conn);
+            comm.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(comm);
+
+            da.Fill(dtReturn);
+
+            return dtReturn;
+        }
+
+        #endregion
     }
 }

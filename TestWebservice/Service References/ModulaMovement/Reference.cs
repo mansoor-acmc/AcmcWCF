@@ -15,17 +15,17 @@ namespace TestWebservice.ModulaMovement {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ModulaMovement.IModulaMovement")]
     public interface IModulaMovement {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/OpenItemCode", ReplyAction="http://tempuri.org/IModulaMovement/OpenItemCodeResponse")]
+        bool OpenItemCode(int itemId, string time);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/ItemsNotUsed", ReplyAction="http://tempuri.org/IModulaMovement/ItemsNotUsedResponse")]
         System.Data.DataTable ItemsNotUsed();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/ItemsUsedButNotPosted", ReplyAction="http://tempuri.org/IModulaMovement/ItemsUsedButNotPostedResponse")]
-        System.Data.DataTable ItemsUsedButNotPosted();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/ItemsNotUsedWithWOId", ReplyAction="http://tempuri.org/IModulaMovement/ItemsNotUsedWithWOIdResponse")]
         System.Data.DataTable ItemsNotUsedWithWOId();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/OpenItemCode", ReplyAction="http://tempuri.org/IModulaMovement/OpenItemCodeResponse")]
-        bool OpenItemCode(int itemId, string time);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaMovement/ItemsUsedButNotPosted", ReplyAction="http://tempuri.org/IModulaMovement/ItemsUsedButNotPostedResponse")]
+        System.Data.DataTable ItemsUsedButNotPosted();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,20 +55,20 @@ namespace TestWebservice.ModulaMovement {
                 base(binding, remoteAddress) {
         }
         
-        public System.Data.DataTable ItemsNotUsed() {
-            return base.Channel.ItemsNotUsed();
+        public bool OpenItemCode(int itemId, string time) {
+            return base.Channel.OpenItemCode(itemId, time);
         }
         
-        public System.Data.DataTable ItemsUsedButNotPosted() {
-            return base.Channel.ItemsUsedButNotPosted();
+        public System.Data.DataTable ItemsNotUsed() {
+            return base.Channel.ItemsNotUsed();
         }
         
         public System.Data.DataTable ItemsNotUsedWithWOId() {
             return base.Channel.ItemsNotUsedWithWOId();
         }
         
-        public bool OpenItemCode(int itemId, string time) {
-            return base.Channel.OpenItemCode(itemId, time);
+        public System.Data.DataTable ItemsUsedButNotPosted() {
+            return base.Channel.ItemsUsedButNotPosted();
         }
     }
 }

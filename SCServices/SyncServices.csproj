@@ -72,6 +72,7 @@
     <Content Include="DeviceOps.svc" />
     <Content Include="DMCheckService.svc" />
     <Content Include="FGSyncService.svc" />
+    <Content Include="ModulaMovement.svc" />
     <Content Include="ModulaPR.svc" />
     <Content Include="ProdRequestService.svc" />
     <Content Include="SalesOrderService.svc" />
@@ -257,6 +258,12 @@
     <None Include="Service References\EAMServices\SyncServices.EAMServices.FailureCodeContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="Service References\EAMServices\SyncServices.EAMServices.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAMServices\SyncServices.EAMServices.OnHandContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\EAMServices\SyncServices.EAMServices.PMLineCostContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -353,9 +360,15 @@
     <None Include="Service References\InventCountingService\SyncServices.InventCountingService.InventSumContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="Service References\InventCountingService\SyncServices.InventCountingService.SCForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\InventCountingService\SyncServices.InventCountingService.WarehouseContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="Service References\InventCountingService\SyncServices.InventCountingService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\SalesOrderAX\SalesOrder14.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -412,37 +425,20 @@
     <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.FGDeliveryContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.PLNotDeliveredContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.PalletContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesLineContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesTableContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup6.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup7.xsd">
-      <SubType>Designer</SubType>
     </None>
     <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.CategoryTypeLookup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -498,6 +494,32 @@
     <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.SLCapacityContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup21.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup82.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup87.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
     <None Include="Service References\UserMgtServices\configuration.svcinfo" />
     <None Include="Service References\UserMgtServices\Reference.svcmap">
@@ -542,33 +564,36 @@
     <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.AttendanceContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.MobileUserLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.UserInfoContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices2.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices21.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices1.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices1.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices81.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices2.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices82.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices3.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices83.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices4.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices84.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices5.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices85.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices6.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices86.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices7.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices87.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -588,6 +613,7 @@
     <Compile Include="IDeviceOps.cs" />
     <Compile Include="IDMCheckService.cs" />
     <Compile Include="IFGSyncService.cs" />
+    <Compile Include="IModulaMovement.cs" />
     <Compile Include="IModulaPR.cs" />
     <Compile Include="IProdRequestService.cs" />
     <Compile Include="ISalesOrderService.cs" />
@@ -595,6 +621,9 @@
     <Compile Include="ISCSyncService.cs" />
     <Compile Include="IUserMgtService.cs" />
     <Compile Include="LocationHistory.cs" />
+    <Compile Include="ModulaMovement.svc.cs">
+      <DependentUpon>ModulaMovement.svc</DependentUpon>
+    </Compile>
     <Compile Include="ModulaPR.svc.cs">
       <DependentUpon>ModulaPR.svc</DependentUpon>
     </Compile>

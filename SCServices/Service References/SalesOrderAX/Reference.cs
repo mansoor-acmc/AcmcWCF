@@ -397,10 +397,14 @@ namespace SyncServices.SalesOrderAX {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesTableContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PLNotDeliveredContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PickHistoryContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletItemContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventByGrLocContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryLineContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerDeliveryContract))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
@@ -427,6 +431,10 @@ namespace SyncServices.SalesOrderAX {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class SalesTableContract : XppObjectBase {
+        
+        private string customerIdField;
+        
+        private string customerNameField;
         
         private System.DateTime deliveryDateField;
         
@@ -470,10 +478,40 @@ namespace SyncServices.SalesOrderAX {
         
         private bool stopLoadFieldSpecified;
         
+        private int truckLoadLineField;
+        
+        private bool truckLoadLineFieldSpecified;
+        
         private string truckPlateField;
         
+        private string truckTicketField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+                this.RaisePropertyChanged("CustomerId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+                this.RaisePropertyChanged("CustomerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public System.DateTime DeliveryDate {
             get {
                 return this.deliveryDateField;
@@ -497,7 +535,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
         public string DeliveryMode {
             get {
                 return this.deliveryModeField;
@@ -509,7 +547,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
         public string DeliveryName {
             get {
                 return this.deliveryNameField;
@@ -521,7 +559,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
         public string DriverName {
             get {
                 return this.driverNameField;
@@ -533,7 +571,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public NoYes HalfPallet {
             get {
                 return this.halfPalletField;
@@ -557,7 +595,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
         public string PickingId {
             get {
                 return this.pickingIdField;
@@ -569,7 +607,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
         public string SalesId {
             get {
                 return this.salesIdField;
@@ -581,7 +619,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=7)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=9)]
         public SalesLineContract[] SalesLines {
             get {
                 return this.salesLinesField;
@@ -593,7 +631,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public string SalesName {
             get {
                 return this.salesNameField;
@@ -605,7 +643,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public SalesStatus SalesStatus {
             get {
                 return this.salesStatusField;
@@ -629,7 +667,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public SalesType SalesType {
             get {
                 return this.salesTypeField;
@@ -653,7 +691,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public NoYes SameConfiguration {
             get {
                 return this.sameConfigurationField;
@@ -677,7 +715,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public System.DateTime StartLoad {
             get {
                 return this.startLoadField;
@@ -701,7 +739,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public System.DateTime StopLoad {
             get {
                 return this.stopLoadField;
@@ -725,7 +763,31 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public int TruckLoadLine {
+            get {
+                return this.truckLoadLineField;
+            }
+            set {
+                this.truckLoadLineField = value;
+                this.RaisePropertyChanged("TruckLoadLine");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TruckLoadLineSpecified {
+            get {
+                return this.truckLoadLineFieldSpecified;
+            }
+            set {
+                this.truckLoadLineFieldSpecified = value;
+                this.RaisePropertyChanged("TruckLoadLineSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public string TruckPlate {
             get {
                 return this.truckPlateField;
@@ -733,6 +795,18 @@ namespace SyncServices.SalesOrderAX {
             set {
                 this.truckPlateField = value;
                 this.RaisePropertyChanged("TruckPlate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        public string TruckTicket {
+            get {
+                return this.truckTicketField;
+            }
+            set {
+                this.truckTicketField = value;
+                this.RaisePropertyChanged("TruckTicket");
             }
         }
     }
@@ -1420,6 +1494,141 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class PLNotDeliveredContract : XppObjectBase {
+        
+        private string customerAccountField;
+        
+        private System.DateTime deliveryDateField;
+        
+        private bool deliveryDateFieldSpecified;
+        
+        private string gradeField;
+        
+        private string itemNumberField;
+        
+        private string pickingIdField;
+        
+        private string quantityInPalletsField;
+        
+        private string quantityInSQMField;
+        
+        private string salesIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string CustomerAccount {
+            get {
+                return this.customerAccountField;
+            }
+            set {
+                this.customerAccountField = value;
+                this.RaisePropertyChanged("CustomerAccount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime DeliveryDate {
+            get {
+                return this.deliveryDateField;
+            }
+            set {
+                this.deliveryDateField = value;
+                this.RaisePropertyChanged("DeliveryDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryDateSpecified {
+            get {
+                return this.deliveryDateFieldSpecified;
+            }
+            set {
+                this.deliveryDateFieldSpecified = value;
+                this.RaisePropertyChanged("DeliveryDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string ItemNumber {
+            get {
+                return this.itemNumberField;
+            }
+            set {
+                this.itemNumberField = value;
+                this.RaisePropertyChanged("ItemNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string PickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                this.pickingIdField = value;
+                this.RaisePropertyChanged("PickingId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string QuantityInPallets {
+            get {
+                return this.quantityInPalletsField;
+            }
+            set {
+                this.quantityInPalletsField = value;
+                this.RaisePropertyChanged("QuantityInPallets");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string QuantityInSQM {
+            get {
+                return this.quantityInSQMField;
+            }
+            set {
+                this.quantityInSQMField = value;
+                this.RaisePropertyChanged("QuantityInSQM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+                this.RaisePropertyChanged("SalesId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class PickHistoryContract : XppObjectBase {
         
         private string deviceNameField;
@@ -1620,6 +1829,57 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class LookupContract : XppObjectBase {
+        
+        private int lookupIdField;
+        
+        private bool lookupIdFieldSpecified;
+        
+        private string lookupStringField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int LookupId {
+            get {
+                return this.lookupIdField;
+            }
+            set {
+                this.lookupIdField = value;
+                this.RaisePropertyChanged("LookupId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LookupIdSpecified {
+            get {
+                return this.lookupIdFieldSpecified;
+            }
+            set {
+                this.lookupIdFieldSpecified = value;
+                this.RaisePropertyChanged("LookupIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string LookupString {
+            get {
+                return this.lookupStringField;
+            }
+            set {
+                this.lookupStringField = value;
+                this.RaisePropertyChanged("LookupString");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class FGLineContract : XppObjectBase {
         
         private string fGLineNameField;
@@ -1699,17 +1959,575 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class PalletContract : XppObjectBase {
+        
+        private string gradeField;
+        
+        private string itemIdField;
+        
+        private string nameField;
+        
+        private decimal salesQtyField;
+        
+        private bool salesQtyFieldSpecified;
+        
+        private string serialField;
+        
+        private string shadeField;
+        
+        private string sizeField;
+        
+        private string warehouseLocationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ItemId {
+            get {
+                return this.itemIdField;
+            }
+            set {
+                this.itemIdField = value;
+                this.RaisePropertyChanged("ItemId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+                this.RaisePropertyChanged("SalesQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string Serial {
+            get {
+                return this.serialField;
+            }
+            set {
+                this.serialField = value;
+                this.RaisePropertyChanged("Serial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+                this.RaisePropertyChanged("Shade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+                this.RaisePropertyChanged("Size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string WarehouseLocation {
+            get {
+                return this.warehouseLocationField;
+            }
+            set {
+                this.warehouseLocationField = value;
+                this.RaisePropertyChanged("WarehouseLocation");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public partial class FGDeliveryLineContract : XppObjectBase {
+        
+        private string gradeField;
+        
+        private string itemIdField;
+        
+        private string nameField;
+        
+        private PalletContract[] palletsField;
+        
+        private decimal reservedPercentField;
+        
+        private bool reservedPercentFieldSpecified;
+        
+        private decimal reservedQtyField;
+        
+        private bool reservedQtyFieldSpecified;
+        
+        private string salesIdField;
+        
+        private decimal salesQtyField;
+        
+        private bool salesQtyFieldSpecified;
+        
+        private decimal salesQtyBoxField;
+        
+        private bool salesQtyBoxFieldSpecified;
+        
+        private decimal salesQtyPalletField;
+        
+        private bool salesQtyPalletFieldSpecified;
+        
+        private decimal salesQtySQMField;
+        
+        private bool salesQtySQMFieldSpecified;
+        
+        private decimal salesQtySQMRemainingField;
+        
+        private bool salesQtySQMRemainingFieldSpecified;
+        
+        private decimal salesQtySQMReservedField;
+        
+        private bool salesQtySQMReservedFieldSpecified;
+        
+        private string salesUnitField;
+        
+        private string serialField;
+        
+        private string shadeField;
+        
+        private string sizeField;
+        
+        private string warehouseField;
+        
+        private string wLocationIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+                this.RaisePropertyChanged("Grade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ItemId {
+            get {
+                return this.itemIdField;
+            }
+            set {
+                this.itemIdField = value;
+                this.RaisePropertyChanged("ItemId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=3)]
+        public PalletContract[] Pallets {
+            get {
+                return this.palletsField;
+            }
+            set {
+                this.palletsField = value;
+                this.RaisePropertyChanged("Pallets");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public decimal ReservedPercent {
+            get {
+                return this.reservedPercentField;
+            }
+            set {
+                this.reservedPercentField = value;
+                this.RaisePropertyChanged("ReservedPercent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReservedPercentSpecified {
+            get {
+                return this.reservedPercentFieldSpecified;
+            }
+            set {
+                this.reservedPercentFieldSpecified = value;
+                this.RaisePropertyChanged("ReservedPercentSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public decimal ReservedQty {
+            get {
+                return this.reservedQtyField;
+            }
+            set {
+                this.reservedQtyField = value;
+                this.RaisePropertyChanged("ReservedQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReservedQtySpecified {
+            get {
+                return this.reservedQtyFieldSpecified;
+            }
+            set {
+                this.reservedQtyFieldSpecified = value;
+                this.RaisePropertyChanged("ReservedQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+                this.RaisePropertyChanged("SalesId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+                this.RaisePropertyChanged("SalesQty");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public decimal SalesQtyBox {
+            get {
+                return this.salesQtyBoxField;
+            }
+            set {
+                this.salesQtyBoxField = value;
+                this.RaisePropertyChanged("SalesQtyBox");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyBoxSpecified {
+            get {
+                return this.salesQtyBoxFieldSpecified;
+            }
+            set {
+                this.salesQtyBoxFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtyBoxSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public decimal SalesQtyPallet {
+            get {
+                return this.salesQtyPalletField;
+            }
+            set {
+                this.salesQtyPalletField = value;
+                this.RaisePropertyChanged("SalesQtyPallet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyPalletSpecified {
+            get {
+                return this.salesQtyPalletFieldSpecified;
+            }
+            set {
+                this.salesQtyPalletFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtyPalletSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public decimal SalesQtySQM {
+            get {
+                return this.salesQtySQMField;
+            }
+            set {
+                this.salesQtySQMField = value;
+                this.RaisePropertyChanged("SalesQtySQM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMSpecified {
+            get {
+                return this.salesQtySQMFieldSpecified;
+            }
+            set {
+                this.salesQtySQMFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public decimal SalesQtySQMRemaining {
+            get {
+                return this.salesQtySQMRemainingField;
+            }
+            set {
+                this.salesQtySQMRemainingField = value;
+                this.RaisePropertyChanged("SalesQtySQMRemaining");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMRemainingSpecified {
+            get {
+                return this.salesQtySQMRemainingFieldSpecified;
+            }
+            set {
+                this.salesQtySQMRemainingFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMRemainingSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public decimal SalesQtySQMReserved {
+            get {
+                return this.salesQtySQMReservedField;
+            }
+            set {
+                this.salesQtySQMReservedField = value;
+                this.RaisePropertyChanged("SalesQtySQMReserved");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMReservedSpecified {
+            get {
+                return this.salesQtySQMReservedFieldSpecified;
+            }
+            set {
+                this.salesQtySQMReservedFieldSpecified = value;
+                this.RaisePropertyChanged("SalesQtySQMReservedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        public string SalesUnit {
+            get {
+                return this.salesUnitField;
+            }
+            set {
+                this.salesUnitField = value;
+                this.RaisePropertyChanged("SalesUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public string Serial {
+            get {
+                return this.serialField;
+            }
+            set {
+                this.serialField = value;
+                this.RaisePropertyChanged("Serial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+                this.RaisePropertyChanged("Shade");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        public string Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+                this.RaisePropertyChanged("Size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
+        public string Warehouse {
+            get {
+                return this.warehouseField;
+            }
+            set {
+                this.warehouseField = value;
+                this.RaisePropertyChanged("Warehouse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        public string wLocationId {
+            get {
+                return this.wLocationIdField;
+            }
+            set {
+                this.wLocationIdField = value;
+                this.RaisePropertyChanged("wLocationId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
     public partial class FGDeliveryContract : XppObjectBase {
+        
+        private string barcode_Code128Field;
+        
+        private string customerIdField;
+        
+        private string customerNameField;
+        
+        private string deliveryAddressField;
         
         private System.DateTime deliveryDateField;
         
         private bool deliveryDateFieldSpecified;
         
+        private FGDeliveryLineContract[] deliveryItemsField;
+        
+        private PickingListStatus deliveryStatusField;
+        
+        private bool deliveryStatusFieldSpecified;
+        
         private int lineNumField;
         
         private bool lineNumFieldSpecified;
         
+        private string mobileField;
+        
+        private System.DateTime packingSlipGenerateField;
+        
+        private bool packingSlipGenerateFieldSpecified;
+        
+        private string packingSlipNumField;
+        
         private string pickingIdField;
+        
+        private string quantityInPalletsField;
+        
+        private string quantityInSQMField;
+        
+        private string salesIdField;
+        
+        private System.DateTime startLoadTruckField;
+        
+        private bool startLoadTruckFieldSpecified;
+        
+        private System.DateTime stopLoadTruckField;
+        
+        private bool stopLoadTruckFieldSpecified;
         
         private string ticketField;
         
@@ -1718,7 +2536,55 @@ namespace SyncServices.SalesOrderAX {
         private string truckPlateNumField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Barcode_Code128 {
+            get {
+                return this.barcode_Code128Field;
+            }
+            set {
+                this.barcode_Code128Field = value;
+                this.RaisePropertyChanged("Barcode_Code128");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+                this.RaisePropertyChanged("CustomerId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+                this.RaisePropertyChanged("CustomerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string DeliveryAddress {
+            get {
+                return this.deliveryAddressField;
+            }
+            set {
+                this.deliveryAddressField = value;
+                this.RaisePropertyChanged("DeliveryAddress");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public System.DateTime DeliveryDate {
             get {
                 return this.deliveryDateField;
@@ -1742,7 +2608,43 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
+        public FGDeliveryLineContract[] DeliveryItems {
+            get {
+                return this.deliveryItemsField;
+            }
+            set {
+                this.deliveryItemsField = value;
+                this.RaisePropertyChanged("DeliveryItems");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public PickingListStatus DeliveryStatus {
+            get {
+                return this.deliveryStatusField;
+            }
+            set {
+                this.deliveryStatusField = value;
+                this.RaisePropertyChanged("DeliveryStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryStatusSpecified {
+            get {
+                return this.deliveryStatusFieldSpecified;
+            }
+            set {
+                this.deliveryStatusFieldSpecified = value;
+                this.RaisePropertyChanged("DeliveryStatusSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int LineNum {
             get {
                 return this.lineNumField;
@@ -1766,7 +2668,55 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string Mobile {
+            get {
+                return this.mobileField;
+            }
+            set {
+                this.mobileField = value;
+                this.RaisePropertyChanged("Mobile");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public System.DateTime PackingSlipGenerate {
+            get {
+                return this.packingSlipGenerateField;
+            }
+            set {
+                this.packingSlipGenerateField = value;
+                this.RaisePropertyChanged("PackingSlipGenerate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PackingSlipGenerateSpecified {
+            get {
+                return this.packingSlipGenerateFieldSpecified;
+            }
+            set {
+                this.packingSlipGenerateFieldSpecified = value;
+                this.RaisePropertyChanged("PackingSlipGenerateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public string PackingSlipNum {
+            get {
+                return this.packingSlipNumField;
+            }
+            set {
+                this.packingSlipNumField = value;
+                this.RaisePropertyChanged("PackingSlipNum");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
         public string PickingId {
             get {
                 return this.pickingIdField;
@@ -1778,7 +2728,91 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        public string QuantityInPallets {
+            get {
+                return this.quantityInPalletsField;
+            }
+            set {
+                this.quantityInPalletsField = value;
+                this.RaisePropertyChanged("QuantityInPallets");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        public string QuantityInSQM {
+            get {
+                return this.quantityInSQMField;
+            }
+            set {
+                this.quantityInSQMField = value;
+                this.RaisePropertyChanged("QuantityInSQM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+                this.RaisePropertyChanged("SalesId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public System.DateTime StartLoadTruck {
+            get {
+                return this.startLoadTruckField;
+            }
+            set {
+                this.startLoadTruckField = value;
+                this.RaisePropertyChanged("StartLoadTruck");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StartLoadTruckSpecified {
+            get {
+                return this.startLoadTruckFieldSpecified;
+            }
+            set {
+                this.startLoadTruckFieldSpecified = value;
+                this.RaisePropertyChanged("StartLoadTruckSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public System.DateTime StopLoadTruck {
+            get {
+                return this.stopLoadTruckField;
+            }
+            set {
+                this.stopLoadTruckField = value;
+                this.RaisePropertyChanged("StopLoadTruck");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StopLoadTruckSpecified {
+            get {
+                return this.stopLoadTruckFieldSpecified;
+            }
+            set {
+                this.stopLoadTruckFieldSpecified = value;
+                this.RaisePropertyChanged("StopLoadTruckSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public string Ticket {
             get {
                 return this.ticketField;
@@ -1790,7 +2824,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
         public string TruckDriver {
             get {
                 return this.truckDriverField;
@@ -1802,7 +2836,7 @@ namespace SyncServices.SalesOrderAX {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
         public string TruckPlateNum {
             get {
                 return this.truckPlateNumField;
@@ -1812,6 +2846,22 @@ namespace SyncServices.SalesOrderAX {
                 this.RaisePropertyChanged("TruckPlateNum");
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+    public enum PickingListStatus {
+        
+        /// <remarks/>
+        Opened,
+        
+        /// <remarks/>
+        Closed,
+        
+        /// <remarks/>
+        Cancelled,
     }
     
     /// <remarks/>
@@ -1925,61 +2975,12 @@ namespace SyncServices.SalesOrderAX {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesOrderAX.SOPickService")]
     public interface SOPickService {
         
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableRequest) of message SOPickServiceCheckPalletAvailableRequest does not match the default value (CheckPalletAvailable)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetSingleDeliveryRequest) of message SOPickServiceGetSingleDeliveryRequest does not match the default value (GetSingleDelivery)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetSingleDelivery", ReplyAction="http://tempuri.org/SOPickService/GetSingleDeliveryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetSingleDeliveryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse CheckPalletAvailable(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByTrucksRequest) of message SOPickServiceCustomersDeliveryByTrucksRequest does not match the default value (CustomersDeliveryByTrucks)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindRequest) of message SOPickServiceFindRequest does not match the default value (find)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceFindResponse find(SyncServices.SalesOrderAX.SOPickServiceFindRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindPickingListRequest) of message SOPickServiceFindPickingListRequest does not match the default value (findPickingList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findPickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse findPickingList(SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReadRequest) of message SOPickServiceReadRequest does not match the default value (read)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceReadResponse read(SyncServices.SalesOrderAX.SOPickServiceReadRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableMultiRequest) of message SOPickServiceCheckPalletAvailableMultiRequest does not match the default value (CheckPalletAvailableMulti)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse CheckPalletAvailableMulti(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSaveHistoryRequest) of message SOPickServiceSaveHistoryRequest does not match the default value (SaveHistory)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SaveHistory", ReplyAction="http://tempuri.org/SOPickService/SaveHistoryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/SaveHistoryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse SaveHistory(SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrderRequest) of message SOPickServiceFindSalesOrderRequest does not match the default value (findSalesOrder)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse findSalesOrder(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest request);
+        SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryResponse GetSingleDelivery(SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReservePalletsRequest) of message SOPickServiceReservePalletsRequest does not match the default value (ReservePallets)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
@@ -1988,40 +2989,40 @@ namespace SyncServices.SalesOrderAX {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.SalesOrderAX.SOPickServiceReservePalletsResponse ReservePallets(SyncServices.SalesOrderAX.SOPickServiceReservePalletsRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliverySummaryByCustRequest) of message SOPickServiceGetDeliverySummaryByCustRequest does not match the default value (GetDeliverySummaryByCust)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustResponse GetDeliverySummaryByCust(SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSaveHistoryRequest) of message SOPickServiceSaveHistoryRequest does not match the default value (SaveHistory)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SaveHistory", ReplyAction="http://tempuri.org/SOPickService/SaveHistoryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/SaveHistoryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse SaveHistory(SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDailyDeliverySummaryByCustRequest) of message SOPickServiceGetDailyDeliverySummaryByCustRequest does not match the default value (GetDailyDeliverySummaryByCust)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustResponse GetDailyDeliverySummaryByCust(SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetPalletInfoRequest) of message SOPickServiceGetPalletInfoRequest does not match the default value (GetPalletInfo)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetPalletInfo", ReplyAction="http://tempuri.org/SOPickService/GetPalletInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetPalletInfoAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoResponse GetPalletInfo(SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceSavePickingLoadRequest) of message SOPickServiceSavePickingLoadRequest does not match the default value (SavePickingLoad)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/SavePickingLoadAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.SalesOrderAX.SOPickServiceSavePickingLoadResponse SavePickingLoad(SyncServices.SalesOrderAX.SOPickServiceSavePickingLoadRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetFGLinesRequest) of message SOPickServiceGetFGLinesRequest does not match the default value (GetFGLines)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetFGLines", ReplyAction="http://tempuri.org/SOPickService/GetFGLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetFGLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse GetFGLines(SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReceivePickingListRequest) of message SOPickServiceReceivePickingListRequest does not match the default value (ReceivePickingList)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/ReceivePickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse ReceivePickingList(SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceLoginDeviceRequest) of message SOPickServiceLoginDeviceRequest does not match the default value (LoginDevice)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/LoginDeviceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse LoginDevice(SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByQtyRequest) of message SOPickServiceCustomersDeliveryByQtyRequest does not match the default value (CustomersDeliveryByQty)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse CustomersDeliveryByQty(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliveriesRequest) of message SOPickServiceGetDeliveriesRequest does not match the default value (GetDeliveries)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
@@ -2037,12 +3038,131 @@ namespace SyncServices.SalesOrderAX {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.SalesOrderAX.SOPickServiceGetLatestPalletsResponse GetLatestPallets(SyncServices.SalesOrderAX.SOPickServiceGetLatestPalletsRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrdersListRequest) of message SOPickServiceFindSalesOrdersListRequest does not match the default value (findSalesOrdersList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrdersListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListResponse findSalesOrdersList(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesRequest) of message SOPickServiceGetCustomerDeliveriesRequest does not match the default value (GetCustomerDeliveries)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesResponse GetCustomerDeliveries(SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceLoginDeviceRequest) of message SOPickServiceLoginDeviceRequest does not match the default value (LoginDevice)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/LoginDeviceAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse LoginDevice(SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetOpenPickingListByCustByItemRequest) of message SOPickServiceGetOpenPickingListByCustByItemRequest does not match the default value (GetOpenPickingListByCustByItem)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemResponse GetOpenPickingListByCustByItem(SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetFGLinesRequest) of message SOPickServiceGetFGLinesRequest does not match the default value (GetFGLines)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetFGLines", ReplyAction="http://tempuri.org/SOPickService/GetFGLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetFGLinesAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse GetFGLines(SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceChangeTruckLoadingLineRequest) of message SOPickServiceChangeTruckLoadingLineRequest does not match the default value (ChangeTruckLoadingLine)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine", ReplyAction="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLineAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineResponse ChangeTruckLoadingLine(SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetCustomerDeliveriesByStatusRequest) of message SOPickServiceGetCustomerDeliveriesByStatusRequest does not match the default value (GetCustomerDeliveriesByStatus)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusResponse GetCustomerDeliveriesByStatus(SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (SOPickServiceUnreservePalletRequest) of message SOPickServiceUnreservePalletRequest does not match the default value (UnreservePallet)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/UnreservePallet", ReplyAction="http://tempuri.org/SOPickService/UnreservePalletResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/UnreservePalletAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.SalesOrderAX.SOPickServiceUnreservePalletResponse UnreservePallet(SyncServices.SalesOrderAX.SOPickServiceUnreservePalletRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReceivePickingListRequest) of message SOPickServiceReceivePickingListRequest does not match the default value (ReceivePickingList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/ReceivePickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse ReceivePickingList(SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceReadRequest) of message SOPickServiceReadRequest does not match the default value (read)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/read", ReplyAction="http://tempuri.org/SOPickService/readResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/readAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceReadResponse read(SyncServices.SalesOrderAX.SOPickServiceReadRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceGetDeliveryStatusLookupRequest) of message SOPickServiceGetDeliveryStatusLookupRequest does not match the default value (GetDeliveryStatusLookup)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookup", ReplyAction="http://tempuri.org/SOPickService/GetDeliveryStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookupAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupResponse GetDeliveryStatusLookup(SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableRequest) of message SOPickServiceCheckPalletAvailableRequest does not match the default value (CheckPalletAvailable)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse CheckPalletAvailable(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCheckPalletAvailableMultiRequest) of message SOPickServiceCheckPalletAvailableMultiRequest does not match the default value (CheckPalletAvailableMulti)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse CheckPalletAvailableMulti(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByTrucksRequest) of message SOPickServiceCustomersDeliveryByTrucksRequest does not match the default value (CustomersDeliveryByTrucks)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindSalesOrderRequest) of message SOPickServiceFindSalesOrderRequest does not match the default value (findSalesOrder)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findSalesOrderAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse findSalesOrder(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceCustomersDeliveryByQtyRequest) of message SOPickServiceCustomersDeliveryByQtyRequest does not match the default value (CustomersDeliveryByQty)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse CustomersDeliveryByQty(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindRequest) of message SOPickServiceFindRequest does not match the default value (find)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/find", ReplyAction="http://tempuri.org/SOPickService/findResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceFindResponse find(SyncServices.SalesOrderAX.SOPickServiceFindRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (SOPickServiceFindPickingListRequest) of message SOPickServiceFindPickingListRequest does not match the default value (findPickingList)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.SalesOrderAX.AifFault), Action="http://tempuri.org/SOPickService/findPickingListAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse findPickingList(SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest request);
     }
     
     /// <remarks/>
@@ -2197,8 +3317,49 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetSingleDeliveryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetSingleDeliveryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        public SOPickServiceGetSingleDeliveryRequest() {
+        }
+        
+        public SOPickServiceGetSingleDeliveryRequest(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
+            this.CallContext = CallContext;
+            this.pickingId = pickingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetSingleDeliveryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetSingleDeliveryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.FGDeliveryContract response;
+        
+        public SOPickServiceGetSingleDeliveryResponse() {
+        }
+        
+        public SOPickServiceGetSingleDeliveryResponse(SyncServices.SalesOrderAX.FGDeliveryContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReservePalletsRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2222,39 +3383,51 @@ namespace SyncServices.SalesOrderAX {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialId;
+        public string userName;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string device;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
         public long lineRecId;
         
-        public SOPickServiceCheckPalletAvailableRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.SalesLineContract[] pallets;
+        
+        public SOPickServiceReservePalletsRequest() {
         }
         
-        public SOPickServiceCheckPalletAvailableRequest(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+        public SOPickServiceReservePalletsRequest(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, SyncServices.SalesOrderAX.SalesLineContract[] pallets) {
             this.CallContext = CallContext;
             this.salesId = salesId;
             this.itemId = itemId;
             this.configId = configId;
             this.pickingId = pickingId;
-            this.serialId = serialId;
+            this.userName = userName;
+            this.device = device;
             this.lineRecId = lineRecId;
+            this.pallets = pallets;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCheckPalletAvailableResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReservePalletsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.SalesLineContract response;
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.SalesLineContract[] response;
         
-        public SOPickServiceCheckPalletAvailableResponse() {
+        public SOPickServiceReservePalletsResponse() {
         }
         
-        public SOPickServiceCheckPalletAvailableResponse(SyncServices.SalesOrderAX.SalesLineContract response) {
+        public SOPickServiceReservePalletsResponse(SyncServices.SalesOrderAX.SalesLineContract[] response) {
             this.response = response;
         }
     }
@@ -2262,24 +3435,29 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByTrucksRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliverySummaryByCustRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.SalesOrderAX.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime startDate;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _custAccount;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
         public System.DateTime endDate;
         
-        public SOPickServiceCustomersDeliveryByTrucksRequest() {
+        public SOPickServiceGetDeliverySummaryByCustRequest() {
         }
         
-        public SOPickServiceCustomersDeliveryByTrucksRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+        public SOPickServiceGetDeliverySummaryByCustRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, System.DateTime startDate, System.DateTime endDate) {
             this.CallContext = CallContext;
+            this._custAccount = _custAccount;
             this.startDate = startDate;
             this.endDate = endDate;
         }
@@ -2288,18 +3466,676 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceCustomersDeliveryByTrucksResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliverySummaryByCustResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
         public SyncServices.SalesOrderAX.CustomerDeliveryContract[] response;
         
-        public SOPickServiceCustomersDeliveryByTrucksResponse() {
+        public SOPickServiceGetDeliverySummaryByCustResponse() {
         }
         
-        public SOPickServiceCustomersDeliveryByTrucksResponse(SyncServices.SalesOrderAX.CustomerDeliveryContract[] response) {
+        public SOPickServiceGetDeliverySummaryByCustResponse(SyncServices.SalesOrderAX.CustomerDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSaveHistoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSaveHistoryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.PickHistoryContract history;
+        
+        public SOPickServiceSaveHistoryRequest() {
+        }
+        
+        public SOPickServiceSaveHistoryRequest(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.PickHistoryContract history) {
+            this.CallContext = CallContext;
+            this.history = history;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSaveHistoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSaveHistoryResponse {
+        
+        public SOPickServiceSaveHistoryResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDailyDeliverySummaryByCustRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDailyDeliverySummaryByCustRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime startDate;
+        
+        public SOPickServiceGetDailyDeliverySummaryByCustRequest() {
+        }
+        
+        public SOPickServiceGetDailyDeliverySummaryByCustRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, System.DateTime startDate) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this.startDate = startDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDailyDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDailyDeliverySummaryByCustResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] response;
+        
+        public SOPickServiceGetDailyDeliverySummaryByCustResponse() {
+        }
+        
+        public SOPickServiceGetDailyDeliverySummaryByCustResponse(SyncServices.SalesOrderAX.CustomerDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetPalletInfoRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetPalletInfoRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _serialId;
+        
+        public SOPickServiceGetPalletInfoRequest() {
+        }
+        
+        public SOPickServiceGetPalletInfoRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _serialId) {
+            this.CallContext = CallContext;
+            this._serialId = _serialId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetPalletInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetPalletInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.PalletContract response;
+        
+        public SOPickServiceGetPalletInfoResponse() {
+        }
+        
+        public SOPickServiceGetPalletInfoResponse(SyncServices.SalesOrderAX.PalletContract response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSavePickingLoadRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime startLoad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public System.DateTime stopLoad;
+        
+        public SOPickServiceSavePickingLoadRequest() {
+        }
+        
+        public SOPickServiceSavePickingLoadRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
+            this.CallContext = CallContext;
+            this._pickingId = _pickingId;
+            this.startLoad = startLoad;
+            this.stopLoad = stopLoad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceSavePickingLoadResponse {
+        
+        public SOPickServiceSavePickingLoadResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveriesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        public SOPickServiceGetDeliveriesRequest() {
+        }
+        
+        public SOPickServiceGetDeliveriesRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveriesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetDeliveriesResponse() {
+        }
+        
+        public SOPickServiceGetDeliveriesResponse(SyncServices.SalesOrderAX.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetLatestPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetLatestPalletsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _itemId;
+        
+        public SOPickServiceGetLatestPalletsRequest() {
+        }
+        
+        public SOPickServiceGetLatestPalletsRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _pickingId, string _itemId) {
+            this.CallContext = CallContext;
+            this._pickingId = _pickingId;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetLatestPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetLatestPalletsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.SalesLineContract[] response;
+        
+        public SOPickServiceGetLatestPalletsResponse() {
+        }
+        
+        public SOPickServiceGetLatestPalletsResponse(SyncServices.SalesOrderAX.SalesLineContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrdersListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime dateStart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime dateEnd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customerAccount;
+        
+        public SOPickServiceFindSalesOrdersListRequest() {
+        }
+        
+        public SOPickServiceFindSalesOrdersListRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string customerAccount) {
+            this.CallContext = CallContext;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+            this.customerAccount = customerAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindSalesOrdersListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindSalesOrdersListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.SalesTableContract[] response;
+        
+        public SOPickServiceFindSalesOrdersListResponse() {
+        }
+        
+        public SOPickServiceFindSalesOrdersListResponse(SyncServices.SalesOrderAX.SalesTableContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customerAccount;
+        
+        public SOPickServiceGetCustomerDeliveriesRequest() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate, string customerAccount) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+            this.customerAccount = customerAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetCustomerDeliveriesResponse() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesResponse(SyncServices.SalesOrderAX.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceLoginDeviceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceIP;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string projectName;
+        
+        public SOPickServiceLoginDeviceRequest() {
+        }
+        
+        public SOPickServiceLoginDeviceRequest(SyncServices.SalesOrderAX.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+            this.CallContext = CallContext;
+            this.deviceName = deviceName;
+            this.deviceIP = deviceIP;
+            this.userName = userName;
+            this.projectName = projectName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceLoginDeviceResponse {
+        
+        public SOPickServiceLoginDeviceResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetOpenPickingListByCustByItemRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _custAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _itemId;
+        
+        public SOPickServiceGetOpenPickingListByCustByItemRequest() {
+        }
+        
+        public SOPickServiceGetOpenPickingListByCustByItemRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, string _itemId) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetOpenPickingListByCustByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetOpenPickingListByCustByItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.PLNotDeliveredContract[] response;
+        
+        public SOPickServiceGetOpenPickingListByCustByItemResponse() {
+        }
+        
+        public SOPickServiceGetOpenPickingListByCustByItemResponse(SyncServices.SalesOrderAX.PLNotDeliveredContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetFGLinesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        public SOPickServiceGetFGLinesRequest() {
+        }
+        
+        public SOPickServiceGetFGLinesRequest(SyncServices.SalesOrderAX.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetFGLinesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.FGLineContract[] response;
+        
+        public SOPickServiceGetFGLinesResponse() {
+        }
+        
+        public SOPickServiceGetFGLinesResponse(SyncServices.SalesOrderAX.FGLineContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceChangeTruckLoadingLineRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceChangeTruckLoadingLineRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingNum;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public int lineNum;
+        
+        public SOPickServiceChangeTruckLoadingLineRequest() {
+        }
+        
+        public SOPickServiceChangeTruckLoadingLineRequest(SyncServices.SalesOrderAX.CallContext CallContext, string pickingNum, int lineNum) {
+            this.CallContext = CallContext;
+            this.pickingNum = pickingNum;
+            this.lineNum = lineNum;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceChangeTruckLoadingLineResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceChangeTruckLoadingLineResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string response;
+        
+        public SOPickServiceChangeTruckLoadingLineResponse() {
+        }
+        
+        public SOPickServiceChangeTruckLoadingLineResponse(string response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesByStatusRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public System.DateTime theDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string _customerAccount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public SyncServices.SalesOrderAX.PickingListStatus _status;
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusRequest() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate, string _customerAccount, SyncServices.SalesOrderAX.PickingListStatus _status) {
+            this.CallContext = CallContext;
+            this.theDate = theDate;
+            this._customerAccount = _customerAccount;
+            this._status = _status;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetCustomerDeliveriesByStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetCustomerDeliveriesByStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.FGDeliveryContract[] response;
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusResponse() {
+        }
+        
+        public SOPickServiceGetCustomerDeliveriesByStatusResponse(SyncServices.SalesOrderAX.FGDeliveryContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceUnreservePalletRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string serialId;
+        
+        public SOPickServiceUnreservePalletRequest() {
+        }
+        
+        public SOPickServiceUnreservePalletRequest(SyncServices.SalesOrderAX.CallContext CallContext, string serialId) {
+            this.CallContext = CallContext;
+            this.serialId = serialId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceUnreservePalletResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool response;
+        
+        public SOPickServiceUnreservePalletResponse() {
+        }
+        
+        public SOPickServiceUnreservePalletResponse(bool response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReceivePickingListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string userName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string deviceName;
+        
+        public SOPickServiceReceivePickingListRequest() {
+        }
+        
+        public SOPickServiceReceivePickingListRequest(SyncServices.SalesOrderAX.CallContext CallContext, string userName, string deviceName) {
+            this.CallContext = CallContext;
+            this.userName = userName;
+            this.deviceName = deviceName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceReceivePickingListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.SalesTableContract response;
+        
+        public SOPickServiceReceivePickingListResponse() {
+        }
+        
+        public SOPickServiceReceivePickingListResponse(SyncServices.SalesOrderAX.SalesTableContract response) {
             this.response = response;
         }
     }
@@ -2309,20 +4145,21 @@ namespace SyncServices.SalesOrderAX {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private CriteriaElement[] criteriaElementField;
+        private KeyField[] keyDataField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
-        public CriteriaElement[] CriteriaElement {
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public KeyField[] KeyData {
             get {
-                return this.criteriaElementField;
+                return this.keyDataField;
             }
             set {
-                this.criteriaElementField = value;
-                this.RaisePropertyChanged("CriteriaElement");
+                this.keyDataField = value;
+                this.RaisePropertyChanged("KeyData");
             }
         }
         
@@ -2341,76 +4178,34 @@ namespace SyncServices.SalesOrderAX {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
+    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string dataSourceNameField;
+        private string fieldField;
         
-        private string fieldNameField;
-        
-        private Operator operatorField;
-        
-        private string value1Field;
-        
-        private string value2Field;
+        private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DataSourceName {
+        public string Field {
             get {
-                return this.dataSourceNameField;
+                return this.fieldField;
             }
             set {
-                this.dataSourceNameField = value;
-                this.RaisePropertyChanged("DataSourceName");
+                this.fieldField = value;
+                this.RaisePropertyChanged("Field");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string FieldName {
+        public string Value {
             get {
-                return this.fieldNameField;
+                return this.valueField;
             }
             set {
-                this.fieldNameField = value;
-                this.RaisePropertyChanged("FieldName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public Operator Operator {
-            get {
-                return this.operatorField;
-            }
-            set {
-                this.operatorField = value;
-                this.RaisePropertyChanged("Operator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Value1 {
-            get {
-                return this.value1Field;
-            }
-            set {
-                this.value1Field = value;
-                this.RaisePropertyChanged("Value1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Value2 {
-            get {
-                return this.value2Field;
-            }
-            set {
-                this.value2Field = value;
-                this.RaisePropertyChanged("Value2");
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -2422,34 +4217,6 @@ namespace SyncServices.SalesOrderAX {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-    public enum Operator {
-        
-        /// <remarks/>
-        Equal,
-        
-        /// <remarks/>
-        NotEqual,
-        
-        /// <remarks/>
-        Greater,
-        
-        /// <remarks/>
-        GreaterOrEqual,
-        
-        /// <remarks/>
-        Less,
-        
-        /// <remarks/>
-        LessOrEqual,
-        
-        /// <remarks/>
-        Range,
     }
     
     /// <remarks/>
@@ -3343,167 +5110,6 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
-        public SyncServices.SalesOrderAX.QueryCriteria QueryCriteria;
-        
-        public SOPickServiceFindRequest() {
-        }
-        
-        public SOPickServiceFindRequest(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.QueryCriteria QueryCriteria) {
-            this.CallContext = CallContext;
-            this.QueryCriteria = QueryCriteria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick")]
-        public SyncServices.SalesOrderAX.AxdSOPick SOPick;
-        
-        public SOPickServiceFindResponse() {
-        }
-        
-        public SOPickServiceFindResponse(SyncServices.SalesOrderAX.AxdSOPick SOPick) {
-            this.SOPick = SOPick;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindPickingListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        public SOPickServiceFindPickingListRequest() {
-        }
-        
-        public SOPickServiceFindPickingListRequest(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
-            this.CallContext = CallContext;
-            this.pickingId = pickingId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceFindPickingListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.SalesTableContract response;
-        
-        public SOPickServiceFindPickingListResponse() {
-        }
-        
-        public SOPickServiceFindPickingListResponse(SyncServices.SalesOrderAX.SalesTableContract response) {
-            this.response = response;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private KeyField[] keyDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public KeyField[] KeyData {
-            get {
-                return this.keyDataField;
-            }
-            set {
-                this.keyDataField = value;
-                this.RaisePropertyChanged("KeyData");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey")]
-    public partial class KeyField : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fieldField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Field {
-            get {
-                return this.fieldField;
-            }
-            set {
-                this.fieldField = value;
-                this.RaisePropertyChanged("Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class SOPickServiceReadRequest {
         
@@ -3540,6 +5146,108 @@ namespace SyncServices.SalesOrderAX {
         
         public SOPickServiceReadResponse(SyncServices.SalesOrderAX.AxdSOPick SOPick) {
             this.SOPick = SOPick;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveryStatusLookupRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        public SOPickServiceGetDeliveryStatusLookupRequest() {
+        }
+        
+        public SOPickServiceGetDeliveryStatusLookupRequest(SyncServices.SalesOrderAX.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveryStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceGetDeliveryStatusLookupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.LookupContract[] response;
+        
+        public SOPickServiceGetDeliveryStatusLookupResponse() {
+        }
+        
+        public SOPickServiceGetDeliveryStatusLookupResponse(SyncServices.SalesOrderAX.LookupContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string salesId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string itemId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string configId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string serialId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        public long lineRecId;
+        
+        public SOPickServiceCheckPalletAvailableRequest() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableRequest(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+            this.CallContext = CallContext;
+            this.salesId = salesId;
+            this.itemId = itemId;
+            this.configId = configId;
+            this.pickingId = pickingId;
+            this.serialId = serialId;
+            this.lineRecId = lineRecId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCheckPalletAvailableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCheckPalletAvailableResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.SalesLineContract response;
+        
+        public SOPickServiceCheckPalletAvailableResponse() {
+        }
+        
+        public SOPickServiceCheckPalletAvailableResponse(SyncServices.SalesOrderAX.SalesLineContract response) {
+            this.response = response;
         }
     }
     
@@ -3623,33 +5331,45 @@ namespace SyncServices.SalesOrderAX {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSaveHistoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSaveHistoryRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByTrucksRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.SalesOrderAX.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.PickHistoryContract history;
+        public System.DateTime startDate;
         
-        public SOPickServiceSaveHistoryRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public System.DateTime endDate;
+        
+        public SOPickServiceCustomersDeliveryByTrucksRequest() {
         }
         
-        public SOPickServiceSaveHistoryRequest(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.PickHistoryContract history) {
+        public SOPickServiceCustomersDeliveryByTrucksRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
             this.CallContext = CallContext;
-            this.history = history;
+            this.startDate = startDate;
+            this.endDate = endDate;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSaveHistoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSaveHistoryResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceCustomersDeliveryByTrucksResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceCustomersDeliveryByTrucksResponse {
         
-        public SOPickServiceSaveHistoryResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] response;
+        
+        public SOPickServiceCustomersDeliveryByTrucksResponse() {
+        }
+        
+        public SOPickServiceCustomersDeliveryByTrucksResponse(SyncServices.SalesOrderAX.CustomerDeliveryContract[] response) {
+            this.response = response;
         }
     }
     
@@ -3691,255 +5411,6 @@ namespace SyncServices.SalesOrderAX {
         
         public SOPickServiceFindSalesOrderResponse(SyncServices.SalesOrderAX.SalesTableContract response) {
             this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReservePalletsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string configId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string device;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
-        public long lineRecId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.SalesOrderAX.SalesLineContract[] pallets;
-        
-        public SOPickServiceReservePalletsRequest() {
-        }
-        
-        public SOPickServiceReservePalletsRequest(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, SyncServices.SalesOrderAX.SalesLineContract[] pallets) {
-            this.CallContext = CallContext;
-            this.salesId = salesId;
-            this.itemId = itemId;
-            this.configId = configId;
-            this.pickingId = pickingId;
-            this.userName = userName;
-            this.device = device;
-            this.lineRecId = lineRecId;
-            this.pallets = pallets;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReservePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReservePalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.SalesOrderAX.SalesLineContract[] response;
-        
-        public SOPickServiceReservePalletsResponse() {
-        }
-        
-        public SOPickServiceReservePalletsResponse(SyncServices.SalesOrderAX.SalesLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSavePickingLoadRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _pickingId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        public System.DateTime startLoad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        public System.DateTime stopLoad;
-        
-        public SOPickServiceSavePickingLoadRequest() {
-        }
-        
-        public SOPickServiceSavePickingLoadRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _pickingId, System.DateTime startLoad, System.DateTime stopLoad) {
-            this.CallContext = CallContext;
-            this._pickingId = _pickingId;
-            this.startLoad = startLoad;
-            this.stopLoad = stopLoad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceSavePickingLoadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceSavePickingLoadResponse {
-        
-        public SOPickServiceSavePickingLoadResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetFGLinesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        public SOPickServiceGetFGLinesRequest() {
-        }
-        
-        public SOPickServiceGetFGLinesRequest(SyncServices.SalesOrderAX.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetFGLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetFGLinesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.SalesOrderAX.FGLineContract[] response;
-        
-        public SOPickServiceGetFGLinesResponse() {
-        }
-        
-        public SOPickServiceGetFGLinesResponse(SyncServices.SalesOrderAX.FGLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReceivePickingListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        public SOPickServiceReceivePickingListRequest() {
-        }
-        
-        public SOPickServiceReceivePickingListRequest(SyncServices.SalesOrderAX.CallContext CallContext, string userName, string deviceName) {
-            this.CallContext = CallContext;
-            this.userName = userName;
-            this.deviceName = deviceName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceReceivePickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceReceivePickingListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.SalesTableContract response;
-        
-        public SOPickServiceReceivePickingListResponse() {
-        }
-        
-        public SOPickServiceReceivePickingListResponse(SyncServices.SalesOrderAX.SalesTableContract response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceLoginDeviceRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deviceIP;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string userName;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string projectName;
-        
-        public SOPickServiceLoginDeviceRequest() {
-        }
-        
-        public SOPickServiceLoginDeviceRequest(SyncServices.SalesOrderAX.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
-            this.CallContext = CallContext;
-            this.deviceName = deviceName;
-            this.deviceIP = deviceIP;
-            this.userName = userName;
-            this.projectName = projectName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceLoginDeviceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceLoginDeviceResponse {
-        
-        public SOPickServiceLoginDeviceResponse() {
         }
     }
     
@@ -3988,130 +5459,232 @@ namespace SyncServices.SalesOrderAX {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class QueryCriteria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CriteriaElement[] criteriaElementField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CriteriaElement", Order=0)]
+        public CriteriaElement[] CriteriaElement {
+            get {
+                return this.criteriaElementField;
+            }
+            set {
+                this.criteriaElementField = value;
+                this.RaisePropertyChanged("CriteriaElement");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public partial class CriteriaElement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataSourceNameField;
+        
+        private string fieldNameField;
+        
+        private Operator operatorField;
+        
+        private string value1Field;
+        
+        private string value2Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DataSourceName {
+            get {
+                return this.dataSourceNameField;
+            }
+            set {
+                this.dataSourceNameField = value;
+                this.RaisePropertyChanged("DataSourceName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string FieldName {
+            get {
+                return this.fieldNameField;
+            }
+            set {
+                this.fieldNameField = value;
+                this.RaisePropertyChanged("FieldName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Operator Operator {
+            get {
+                return this.operatorField;
+            }
+            set {
+                this.operatorField = value;
+                this.RaisePropertyChanged("Operator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Value1 {
+            get {
+                return this.value1Field;
+            }
+            set {
+                this.value1Field = value;
+                this.RaisePropertyChanged("Value1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Value2 {
+            get {
+                return this.value2Field;
+            }
+            set {
+                this.value2Field = value;
+                this.RaisePropertyChanged("Value2");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+    public enum Operator {
+        
+        /// <remarks/>
+        Equal,
+        
+        /// <remarks/>
+        NotEqual,
+        
+        /// <remarks/>
+        Greater,
+        
+        /// <remarks/>
+        GreaterOrEqual,
+        
+        /// <remarks/>
+        Less,
+        
+        /// <remarks/>
+        LessOrEqual,
+        
+        /// <remarks/>
+        Range,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveriesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.SalesOrderAX.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
+        public SyncServices.SalesOrderAX.QueryCriteria QueryCriteria;
+        
+        public SOPickServiceFindRequest() {
+        }
+        
+        public SOPickServiceFindRequest(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.QueryCriteria QueryCriteria) {
+            this.CallContext = CallContext;
+            this.QueryCriteria = QueryCriteria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/SOPick")]
+        public SyncServices.SalesOrderAX.AxdSOPick SOPick;
+        
+        public SOPickServiceFindResponse() {
+        }
+        
+        public SOPickServiceFindResponse(SyncServices.SalesOrderAX.AxdSOPick SOPick) {
+            this.SOPick = SOPick;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindPickingListRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public SyncServices.SalesOrderAX.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public System.DateTime theDate;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string pickingId;
         
-        public SOPickServiceGetDeliveriesRequest() {
+        public SOPickServiceFindPickingListRequest() {
         }
         
-        public SOPickServiceGetDeliveriesRequest(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate) {
+        public SOPickServiceFindPickingListRequest(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
             this.CallContext = CallContext;
-            this.theDate = theDate;
+            this.pickingId = pickingId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetDeliveriesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.SalesOrderAX.FGDeliveryContract[] response;
-        
-        public SOPickServiceGetDeliveriesResponse() {
-        }
-        
-        public SOPickServiceGetDeliveriesResponse(SyncServices.SalesOrderAX.FGDeliveryContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetLatestPalletsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetLatestPalletsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceFindPickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SOPickServiceFindPickingListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _pickingId;
+        public SyncServices.SalesOrderAX.SalesTableContract response;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string _itemId;
-        
-        public SOPickServiceGetLatestPalletsRequest() {
+        public SOPickServiceFindPickingListResponse() {
         }
         
-        public SOPickServiceGetLatestPalletsRequest(SyncServices.SalesOrderAX.CallContext CallContext, string _pickingId, string _itemId) {
-            this.CallContext = CallContext;
-            this._pickingId = _pickingId;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceGetLatestPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceGetLatestPalletsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.SalesOrderAX.SalesLineContract[] response;
-        
-        public SOPickServiceGetLatestPalletsResponse() {
-        }
-        
-        public SOPickServiceGetLatestPalletsResponse(SyncServices.SalesOrderAX.SalesLineContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceUnreservePalletRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.SalesOrderAX.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialId;
-        
-        public SOPickServiceUnreservePalletRequest() {
-        }
-        
-        public SOPickServiceUnreservePalletRequest(SyncServices.SalesOrderAX.CallContext CallContext, string serialId) {
-            this.CallContext = CallContext;
-            this.serialId = serialId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SOPickServiceUnreservePalletResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class SOPickServiceUnreservePalletResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public bool response;
-        
-        public SOPickServiceUnreservePalletResponse() {
-        }
-        
-        public SOPickServiceUnreservePalletResponse(bool response) {
+        public SOPickServiceFindPickingListResponse(SyncServices.SalesOrderAX.SalesTableContract response) {
             this.response = response;
         }
     }
@@ -4144,118 +5717,15 @@ namespace SyncServices.SalesOrderAX {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse SyncServices.SalesOrderAX.SOPickService.CheckPalletAvailable(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest request) {
-            return base.Channel.CheckPalletAvailable(request);
+        SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryResponse SyncServices.SalesOrderAX.SOPickService.GetSingleDelivery(SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryRequest request) {
+            return base.Channel.GetSingleDelivery(request);
         }
         
-        public SyncServices.SalesOrderAX.SalesLineContract CheckPalletAvailable(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
-            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.serialId = serialId;
-            inValue.lineRecId = lineRecId;
-            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CheckPalletAvailable(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse SyncServices.SalesOrderAX.SOPickService.CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest request) {
-            return base.Channel.CustomersDeliveryByTrucks(request);
-        }
-        
-        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CustomersDeliveryByTrucks(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceFindResponse SyncServices.SalesOrderAX.SOPickService.find(SyncServices.SalesOrderAX.SOPickServiceFindRequest request) {
-            return base.Channel.find(request);
-        }
-        
-        public SyncServices.SalesOrderAX.AxdSOPick find(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.QueryCriteria QueryCriteria) {
-            SyncServices.SalesOrderAX.SOPickServiceFindRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindRequest();
-            inValue.CallContext = CallContext;
-            inValue.QueryCriteria = QueryCriteria;
-            SyncServices.SalesOrderAX.SOPickServiceFindResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).find(inValue);
-            return retVal.SOPick;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse SyncServices.SalesOrderAX.SOPickService.findPickingList(SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest request) {
-            return base.Channel.findPickingList(request);
-        }
-        
-        public SyncServices.SalesOrderAX.SalesTableContract findPickingList(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
-            SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest();
+        public SyncServices.SalesOrderAX.FGDeliveryContract GetSingleDelivery(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
+            SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryRequest();
             inValue.CallContext = CallContext;
             inValue.pickingId = pickingId;
-            SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).findPickingList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceReadResponse SyncServices.SalesOrderAX.SOPickService.read(SyncServices.SalesOrderAX.SOPickServiceReadRequest request) {
-            return base.Channel.read(request);
-        }
-        
-        public SyncServices.SalesOrderAX.AxdSOPick read(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.EntityKey[] EntityKeyList) {
-            SyncServices.SalesOrderAX.SOPickServiceReadRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceReadRequest();
-            inValue.CallContext = CallContext;
-            inValue.EntityKeyList = EntityKeyList;
-            SyncServices.SalesOrderAX.SOPickServiceReadResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).read(inValue);
-            return retVal.SOPick;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse SyncServices.SalesOrderAX.SOPickService.CheckPalletAvailableMulti(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest request) {
-            return base.Channel.CheckPalletAvailableMulti(request);
-        }
-        
-        public SyncServices.SalesOrderAX.SalesLineContract[] CheckPalletAvailableMulti(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, SyncServices.SalesOrderAX.PalletItemContract[] serials) {
-            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            inValue.itemId = itemId;
-            inValue.configId = configId;
-            inValue.pickingId = pickingId;
-            inValue.userName = userName;
-            inValue.device = device;
-            inValue.lineRecId = lineRecId;
-            inValue.serials = serials;
-            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CheckPalletAvailableMulti(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse SyncServices.SalesOrderAX.SOPickService.SaveHistory(SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest request) {
-            return base.Channel.SaveHistory(request);
-        }
-        
-        public void SaveHistory(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.PickHistoryContract history) {
-            SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest();
-            inValue.CallContext = CallContext;
-            inValue.history = history;
-            SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).SaveHistory(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse SyncServices.SalesOrderAX.SOPickService.findSalesOrder(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest request) {
-            return base.Channel.findSalesOrder(request);
-        }
-        
-        public SyncServices.SalesOrderAX.SalesTableContract findSalesOrder(SyncServices.SalesOrderAX.CallContext CallContext, string salesId) {
-            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest();
-            inValue.CallContext = CallContext;
-            inValue.salesId = salesId;
-            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).findSalesOrder(inValue);
+            SyncServices.SalesOrderAX.SOPickServiceGetSingleDeliveryResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetSingleDelivery(inValue);
             return retVal.response;
         }
         
@@ -4280,6 +5750,60 @@ namespace SyncServices.SalesOrderAX {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustResponse SyncServices.SalesOrderAX.SOPickService.GetDeliverySummaryByCust(SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustRequest request) {
+            return base.Channel.GetDeliverySummaryByCust(request);
+        }
+        
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] GetDeliverySummaryByCust(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, System.DateTime startDate, System.DateTime endDate) {
+            SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            SyncServices.SalesOrderAX.SOPickServiceGetDeliverySummaryByCustResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetDeliverySummaryByCust(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse SyncServices.SalesOrderAX.SOPickService.SaveHistory(SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest request) {
+            return base.Channel.SaveHistory(request);
+        }
+        
+        public void SaveHistory(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.PickHistoryContract history) {
+            SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceSaveHistoryRequest();
+            inValue.CallContext = CallContext;
+            inValue.history = history;
+            SyncServices.SalesOrderAX.SOPickServiceSaveHistoryResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).SaveHistory(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustResponse SyncServices.SalesOrderAX.SOPickService.GetDailyDeliverySummaryByCust(SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustRequest request) {
+            return base.Channel.GetDailyDeliverySummaryByCust(request);
+        }
+        
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] GetDailyDeliverySummaryByCust(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, System.DateTime startDate) {
+            SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue.startDate = startDate;
+            SyncServices.SalesOrderAX.SOPickServiceGetDailyDeliverySummaryByCustResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetDailyDeliverySummaryByCust(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoResponse SyncServices.SalesOrderAX.SOPickService.GetPalletInfo(SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoRequest request) {
+            return base.Channel.GetPalletInfo(request);
+        }
+        
+        public SyncServices.SalesOrderAX.PalletContract GetPalletInfo(SyncServices.SalesOrderAX.CallContext CallContext, string _serialId) {
+            SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoRequest();
+            inValue.CallContext = CallContext;
+            inValue._serialId = _serialId;
+            SyncServices.SalesOrderAX.SOPickServiceGetPalletInfoResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetPalletInfo(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesOrderAX.SOPickServiceSavePickingLoadResponse SyncServices.SalesOrderAX.SOPickService.SavePickingLoad(SyncServices.SalesOrderAX.SOPickServiceSavePickingLoadRequest request) {
             return base.Channel.SavePickingLoad(request);
         }
@@ -4291,61 +5815,6 @@ namespace SyncServices.SalesOrderAX {
             inValue.startLoad = startLoad;
             inValue.stopLoad = stopLoad;
             SyncServices.SalesOrderAX.SOPickServiceSavePickingLoadResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).SavePickingLoad(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse SyncServices.SalesOrderAX.SOPickService.GetFGLines(SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest request) {
-            return base.Channel.GetFGLines(request);
-        }
-        
-        public SyncServices.SalesOrderAX.FGLineContract[] GetFGLines(SyncServices.SalesOrderAX.CallContext CallContext) {
-            SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest();
-            inValue.CallContext = CallContext;
-            SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetFGLines(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse SyncServices.SalesOrderAX.SOPickService.ReceivePickingList(SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest request) {
-            return base.Channel.ReceivePickingList(request);
-        }
-        
-        public SyncServices.SalesOrderAX.SalesTableContract ReceivePickingList(SyncServices.SalesOrderAX.CallContext CallContext, string userName, string deviceName) {
-            SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest();
-            inValue.CallContext = CallContext;
-            inValue.userName = userName;
-            inValue.deviceName = deviceName;
-            SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).ReceivePickingList(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse SyncServices.SalesOrderAX.SOPickService.LoginDevice(SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest request) {
-            return base.Channel.LoginDevice(request);
-        }
-        
-        public void LoginDevice(SyncServices.SalesOrderAX.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
-            SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest();
-            inValue.CallContext = CallContext;
-            inValue.deviceName = deviceName;
-            inValue.deviceIP = deviceIP;
-            inValue.userName = userName;
-            inValue.projectName = projectName;
-            SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).LoginDevice(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse SyncServices.SalesOrderAX.SOPickService.CustomersDeliveryByQty(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest request) {
-            return base.Channel.CustomersDeliveryByQty(request);
-        }
-        
-        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByQty(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
-            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest();
-            inValue.CallContext = CallContext;
-            inValue.startDate = startDate;
-            inValue.endDate = endDate;
-            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CustomersDeliveryByQty(inValue);
-            return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4376,6 +5845,105 @@ namespace SyncServices.SalesOrderAX {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListResponse SyncServices.SalesOrderAX.SOPickService.findSalesOrdersList(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListRequest request) {
+            return base.Channel.findSalesOrdersList(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesTableContract[] findSalesOrdersList(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime dateStart, System.DateTime dateEnd, string customerAccount) {
+            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListRequest();
+            inValue.CallContext = CallContext;
+            inValue.dateStart = dateStart;
+            inValue.dateEnd = dateEnd;
+            inValue.customerAccount = customerAccount;
+            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrdersListResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).findSalesOrdersList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesResponse SyncServices.SalesOrderAX.SOPickService.GetCustomerDeliveries(SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesRequest request) {
+            return base.Channel.GetCustomerDeliveries(request);
+        }
+        
+        public SyncServices.SalesOrderAX.FGDeliveryContract[] GetCustomerDeliveries(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate, string customerAccount) {
+            SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue.customerAccount = customerAccount;
+            SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetCustomerDeliveries(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse SyncServices.SalesOrderAX.SOPickService.LoginDevice(SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest request) {
+            return base.Channel.LoginDevice(request);
+        }
+        
+        public void LoginDevice(SyncServices.SalesOrderAX.CallContext CallContext, string deviceName, string deviceIP, string userName, string projectName) {
+            SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceLoginDeviceRequest();
+            inValue.CallContext = CallContext;
+            inValue.deviceName = deviceName;
+            inValue.deviceIP = deviceIP;
+            inValue.userName = userName;
+            inValue.projectName = projectName;
+            SyncServices.SalesOrderAX.SOPickServiceLoginDeviceResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).LoginDevice(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemResponse SyncServices.SalesOrderAX.SOPickService.GetOpenPickingListByCustByItem(SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemRequest request) {
+            return base.Channel.GetOpenPickingListByCustByItem(request);
+        }
+        
+        public SyncServices.SalesOrderAX.PLNotDeliveredContract[] GetOpenPickingListByCustByItem(SyncServices.SalesOrderAX.CallContext CallContext, string _custAccount, string _itemId) {
+            SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemRequest();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            inValue._itemId = _itemId;
+            SyncServices.SalesOrderAX.SOPickServiceGetOpenPickingListByCustByItemResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetOpenPickingListByCustByItem(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse SyncServices.SalesOrderAX.SOPickService.GetFGLines(SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest request) {
+            return base.Channel.GetFGLines(request);
+        }
+        
+        public SyncServices.SalesOrderAX.FGLineContract[] GetFGLines(SyncServices.SalesOrderAX.CallContext CallContext) {
+            SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetFGLinesRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesOrderAX.SOPickServiceGetFGLinesResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetFGLines(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineResponse SyncServices.SalesOrderAX.SOPickService.ChangeTruckLoadingLine(SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineRequest request) {
+            return base.Channel.ChangeTruckLoadingLine(request);
+        }
+        
+        public string ChangeTruckLoadingLine(SyncServices.SalesOrderAX.CallContext CallContext, string pickingNum, int lineNum) {
+            SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingNum = pickingNum;
+            inValue.lineNum = lineNum;
+            SyncServices.SalesOrderAX.SOPickServiceChangeTruckLoadingLineResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).ChangeTruckLoadingLine(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusResponse SyncServices.SalesOrderAX.SOPickService.GetCustomerDeliveriesByStatus(SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusRequest request) {
+            return base.Channel.GetCustomerDeliveriesByStatus(request);
+        }
+        
+        public SyncServices.SalesOrderAX.FGDeliveryContract[] GetCustomerDeliveriesByStatus(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime theDate, string _customerAccount, SyncServices.SalesOrderAX.PickingListStatus _status) {
+            SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusRequest();
+            inValue.CallContext = CallContext;
+            inValue.theDate = theDate;
+            inValue._customerAccount = _customerAccount;
+            inValue._status = _status;
+            SyncServices.SalesOrderAX.SOPickServiceGetCustomerDeliveriesByStatusResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetCustomerDeliveriesByStatus(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.SalesOrderAX.SOPickServiceUnreservePalletResponse SyncServices.SalesOrderAX.SOPickService.UnreservePallet(SyncServices.SalesOrderAX.SOPickServiceUnreservePalletRequest request) {
             return base.Channel.UnreservePallet(request);
         }
@@ -4385,6 +5953,150 @@ namespace SyncServices.SalesOrderAX {
             inValue.CallContext = CallContext;
             inValue.serialId = serialId;
             SyncServices.SalesOrderAX.SOPickServiceUnreservePalletResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).UnreservePallet(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse SyncServices.SalesOrderAX.SOPickService.ReceivePickingList(SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest request) {
+            return base.Channel.ReceivePickingList(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesTableContract ReceivePickingList(SyncServices.SalesOrderAX.CallContext CallContext, string userName, string deviceName) {
+            SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceReceivePickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.userName = userName;
+            inValue.deviceName = deviceName;
+            SyncServices.SalesOrderAX.SOPickServiceReceivePickingListResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).ReceivePickingList(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceReadResponse SyncServices.SalesOrderAX.SOPickService.read(SyncServices.SalesOrderAX.SOPickServiceReadRequest request) {
+            return base.Channel.read(request);
+        }
+        
+        public SyncServices.SalesOrderAX.AxdSOPick read(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.EntityKey[] EntityKeyList) {
+            SyncServices.SalesOrderAX.SOPickServiceReadRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceReadRequest();
+            inValue.CallContext = CallContext;
+            inValue.EntityKeyList = EntityKeyList;
+            SyncServices.SalesOrderAX.SOPickServiceReadResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).read(inValue);
+            return retVal.SOPick;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupResponse SyncServices.SalesOrderAX.SOPickService.GetDeliveryStatusLookup(SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupRequest request) {
+            return base.Channel.GetDeliveryStatusLookup(request);
+        }
+        
+        public SyncServices.SalesOrderAX.LookupContract[] GetDeliveryStatusLookup(SyncServices.SalesOrderAX.CallContext CallContext) {
+            SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupRequest();
+            inValue.CallContext = CallContext;
+            SyncServices.SalesOrderAX.SOPickServiceGetDeliveryStatusLookupResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).GetDeliveryStatusLookup(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse SyncServices.SalesOrderAX.SOPickService.CheckPalletAvailable(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest request) {
+            return base.Channel.CheckPalletAvailable(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesLineContract CheckPalletAvailable(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string serialId, long lineRecId) {
+            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.serialId = serialId;
+            inValue.lineRecId = lineRecId;
+            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CheckPalletAvailable(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse SyncServices.SalesOrderAX.SOPickService.CheckPalletAvailableMulti(SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest request) {
+            return base.Channel.CheckPalletAvailableMulti(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesLineContract[] CheckPalletAvailableMulti(SyncServices.SalesOrderAX.CallContext CallContext, string salesId, string itemId, string configId, string pickingId, string userName, string device, long lineRecId, SyncServices.SalesOrderAX.PalletItemContract[] serials) {
+            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            inValue.itemId = itemId;
+            inValue.configId = configId;
+            inValue.pickingId = pickingId;
+            inValue.userName = userName;
+            inValue.device = device;
+            inValue.lineRecId = lineRecId;
+            inValue.serials = serials;
+            SyncServices.SalesOrderAX.SOPickServiceCheckPalletAvailableMultiResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CheckPalletAvailableMulti(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse SyncServices.SalesOrderAX.SOPickService.CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest request) {
+            return base.Channel.CustomersDeliveryByTrucks(request);
+        }
+        
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByTrucks(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByTrucksResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CustomersDeliveryByTrucks(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse SyncServices.SalesOrderAX.SOPickService.findSalesOrder(SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest request) {
+            return base.Channel.findSalesOrder(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesTableContract findSalesOrder(SyncServices.SalesOrderAX.CallContext CallContext, string salesId) {
+            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderRequest();
+            inValue.CallContext = CallContext;
+            inValue.salesId = salesId;
+            SyncServices.SalesOrderAX.SOPickServiceFindSalesOrderResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).findSalesOrder(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse SyncServices.SalesOrderAX.SOPickService.CustomersDeliveryByQty(SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest request) {
+            return base.Channel.CustomersDeliveryByQty(request);
+        }
+        
+        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByQty(SyncServices.SalesOrderAX.CallContext CallContext, System.DateTime startDate, System.DateTime endDate) {
+            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyRequest();
+            inValue.CallContext = CallContext;
+            inValue.startDate = startDate;
+            inValue.endDate = endDate;
+            SyncServices.SalesOrderAX.SOPickServiceCustomersDeliveryByQtyResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).CustomersDeliveryByQty(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceFindResponse SyncServices.SalesOrderAX.SOPickService.find(SyncServices.SalesOrderAX.SOPickServiceFindRequest request) {
+            return base.Channel.find(request);
+        }
+        
+        public SyncServices.SalesOrderAX.AxdSOPick find(SyncServices.SalesOrderAX.CallContext CallContext, SyncServices.SalesOrderAX.QueryCriteria QueryCriteria) {
+            SyncServices.SalesOrderAX.SOPickServiceFindRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindRequest();
+            inValue.CallContext = CallContext;
+            inValue.QueryCriteria = QueryCriteria;
+            SyncServices.SalesOrderAX.SOPickServiceFindResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).find(inValue);
+            return retVal.SOPick;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse SyncServices.SalesOrderAX.SOPickService.findPickingList(SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest request) {
+            return base.Channel.findPickingList(request);
+        }
+        
+        public SyncServices.SalesOrderAX.SalesTableContract findPickingList(SyncServices.SalesOrderAX.CallContext CallContext, string pickingId) {
+            SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest inValue = new SyncServices.SalesOrderAX.SOPickServiceFindPickingListRequest();
+            inValue.CallContext = CallContext;
+            inValue.pickingId = pickingId;
+            SyncServices.SalesOrderAX.SOPickServiceFindPickingListResponse retVal = ((SyncServices.SalesOrderAX.SOPickService)(this)).findPickingList(inValue);
             return retVal.response;
         }
     }

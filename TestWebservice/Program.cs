@@ -10,9 +10,17 @@ using System.Data;
 using System.IO;
 using System.Diagnostics;
 using TestWebservice.DMCheckService;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
 
 namespace TestWebservice
 {
+    public class Credent
+    {
+        public string email { get; set; }
+        public string password { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -20,12 +28,29 @@ namespace TestWebservice
             bool result11 = false;
             string str = "";
 
+            //var isSuccess = new Program().CheckLoginAsync("am.bagedo@arabian-ceramics.com", "Amro*7894");
+
             DMCheckServiceClient dmClient = new DMCheckServiceClient();
             var locs=dmClient.GetWHLocations();
             int totRows = locs.Count();
             Console.WriteLine(totRows.ToString());
+
+            List<LocationHistory> allOne = new List<LocationHistory>();
+            LocationHistory one = null;
+
+            one = new LocationHistory() { PalletNum = "L194423", Location = "C2", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+            allOne.Add(one);
+            var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+            if (result.Count() > 0)
+                Console.WriteLine("Lines Transferred: " + result.Count().ToString());
+
             dmClient.Close();
 
+            ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
+            var tbl = clientMov.ItemsNotUsed();
+
+            bool isOpened=clientMov.OpenItemCode(167376, "2020-08-12 09:58:34");
+            
             //SalesOrderService.SalesOrderServiceClient soClient = new SalesOrderService.SalesOrderServiceClient();
             ////var salesid = soClient.FindSalesOrder("19SO-05804");
 
@@ -264,6 +289,57 @@ namespace TestWebservice
            Console.Write("Msg Saved");
              */
             Console.Read();
+        }
+
+
+        public async System.Threading.Tasks.Task<bool> CheckLoginAsync(string uName, string uPassword)
+        {
+            string message;
+            bool isSuccess = false;
+
+            var client = new HttpClient();
+
+            
+            string url = "http://productapi.arabian-ceramics.com/api/Account/Login";
+            var item = new Credent
+            {
+                email = uName,
+                password = uPassword
+            };
+            var jSonData = Newtonsoft.Json.JsonConvert.SerializeObject(item);
+            var needToPost = new StringContent(jSonData, Encoding.UTF8, "application/json");
+
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // Get the response.
+            HttpResponseMessage response = await client.PostAsync(url, needToPost);
+
+            // Get the response content.
+            HttpContent responseContent = response.Content;
+
+            // Get the stream of the content.
+            using (var reader = new StreamReader(await responseContent.ReadAsStreamAsync()))
+            {
+                // Write the output.                
+                string result = await reader.ReadToEndAsync();
+
+                var objects = JObject.Parse(result);
+
+                foreach (JProperty p in objects.Properties())
+                {
+                    string name = p.Name;
+                    string value = p.Value.ToString();
+                    //Console.Write(name + ": " + value);
+
+                    if (name.Equals("message"))
+                        message = p.Value.ToString();
+                    else if (name.Equals("isSuccess"))
+                        isSuccess = bool.Parse(p.Value.ToString());
+                }
+
+            }
+
+            return isSuccess;
         }
     }
 }

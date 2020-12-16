@@ -18,14 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://172.17.0.50/SyncServices63/ModulaMovement.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://172.17.0.50/HandHeldServices/ModulaMovement.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ModulaMovement.xsd" MetadataType="Schema" ID="3563a52c-ca9a-465c-9760-9ae8f0b24f4a" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/ModulaMovement.svc?xsd=xsd1" />
-    <MetadataFile FileName="ModulaMovement1.xsd" MetadataType="Schema" ID="7913ca45-818d-4654-8350-a44094171742" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/ModulaMovement.svc?xsd=xsd0" />
-    <MetadataFile FileName="ModulaMovement.disco" MetadataType="Disco" ID="daaf1fcf-ea92-4660-b731-0772aabd6cf3" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/ModulaMovement.svc?disco" />
-    <MetadataFile FileName="ModulaMovement2.xsd" MetadataType="Schema" ID="8b328e98-b9f3-4445-8b10-68d9b6b787a5" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/ModulaMovement.svc?xsd=xsd2" />
-    <MetadataFile FileName="ModulaMovement.wsdl" MetadataType="Wsdl" ID="cf64bacb-54e0-4dc2-8f1c-12ef6993b42c" SourceId="1" SourceUrl="http://172.17.0.50/SyncServices63/ModulaMovement.svc?wsdl" />
+    <MetadataFile FileName="ModulaMovement1.disco" MetadataType="Disco" ID="b4dc0a4e-4bcf-4328-b4e5-fadcf0e719c5" SourceId="1" SourceUrl="http://172.17.0.50/HandHeldServices/ModulaMovement.svc?disco" />
+    <MetadataFile FileName="ModulaMovement3.xsd" MetadataType="Schema" ID="b4b79856-1baf-4ce8-bacc-c40b6bad885f" SourceId="1" SourceUrl="http://172.17.0.50/HandHeldServices/ModulaMovement.svc?xsd=xsd2" />
+    <MetadataFile FileName="ModulaMovement1.wsdl" MetadataType="Wsdl" ID="3a2e0a3d-6115-454b-bc3a-4c798c2ae1a7" SourceId="1" SourceUrl="http://172.17.0.50/HandHeldServices/ModulaMovement.svc?wsdl" />
+    <MetadataFile FileName="ModulaMovement31.xsd" MetadataType="Schema" ID="51abc54c-b7ba-45ac-9f30-6dd19391aad0" SourceId="1" SourceUrl="http://172.17.0.50/HandHeldServices/ModulaMovement.svc?xsd=xsd1" />
+    <MetadataFile FileName="ModulaMovement32.xsd" MetadataType="Schema" ID="ae88e0a6-4e5e-4203-9c24-46104c11e355" SourceId="1" SourceUrl="http://172.17.0.50/HandHeldServices/ModulaMovement.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

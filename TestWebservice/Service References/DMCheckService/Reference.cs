@@ -1500,6 +1500,9 @@ namespace TestWebservice.DMCheckService {
         private string PalletNumField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UserNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -1599,6 +1602,19 @@ namespace TestWebservice.DMCheckService {
                 if ((object.ReferenceEquals(this.PalletNumField, value) != true)) {
                     this.PalletNumField = value;
                     this.RaisePropertyChanged("PalletNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityField, value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
                 }
             }
         }
