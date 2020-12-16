@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2008/01/documents/EcoResProductQuery" xmlns:st="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2008/01/documents/EcoResProductQuery" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+  <xs:element name="EcoResProductQuery" type="tns:AxdEcoResProductQuery" />
+  <xs:complexType name="AxdEcoResProductQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearNilFieldsOnUpdate" nillable="true" type="st:AxdEnum_boolean" />
+      <xs:element minOccurs="0" name="DocPurpose" nillable="true" type="st:AxdEnum_XMLDocPurpose" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="st:AxdExtType_DataAreaId" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EcoResProduct" type="tns:AxdEntity_EcoResProduct_EcoResProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_EcoResProduct_EcoResProduct" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_DocumentHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
+      <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
+      <xs:element minOccurs="1" name="DisplayProductNumber" type="st:AxdExtType_EcoResProductDisplayProductNumber" />
+      <xs:element minOccurs="0" name="SearchName" nillable="true" type="st:AxdExtType_EcoResProductSearchName" />
+      <xs:element minOccurs="1" name="ProductType" type="st:AxdEnum_EcoResProductType" />
+      <xs:element minOccurs="0" name="PdsCWProduct" nillable="true" type="st:AxdExtType_PdsCWProduct" />
+      <xs:element minOccurs="0" name="DMShortDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DMShortDesc2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchArabicName" nillable="true" type="st:AxdExtType_EcoResProductSearchArabicName" />
+    </xs:sequence>
+    <xs:attribute fixed="entity" name="class" use="required" />
+    <xs:attribute name="action" type="st:AxdEnum_AxdEntityAction" />
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_EcoResProduct_EcoResDistinctProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AxdEntity_EcoResProduct_EcoResProduct">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_EcoResProduct_EcoResProductMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AxdEntity_EcoResProduct_EcoResProduct">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="VariantConfigurationTechnology" type="st:AxdEnum_EcoResVariantConfigurationTechnologyType" />
+          <xs:element minOccurs="0" name="RetailColorGroupId" nillable="true" type="st:AxdExtType_RetailColorGroupId" />
+          <xs:element minOccurs="0" name="RetailSizeGroupId" nillable="true" type="st:AxdExtType_RetailSizeGroupId" />
+          <xs:element minOccurs="0" name="RetailStyleGroupId" nillable="true" type="st:AxdExtType_RetailStyleGroupId" />
+          <xs:element minOccurs="0" name="IsProductVariantUnitConversionEnabled" nillable="true" type="st:AxdExtType_WHSProductVariantUnitConversionEnabled" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_EcoResProduct_EcoResDistinctProductVariant">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AxdEntity_EcoResProduct_EcoResDistinctProduct">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ProductMaster" type="st:AxdExtType_EcoResProductDisplayProductNumber" />
+          <xs:element minOccurs="0" name="RetaiTotalWeight" nillable="true" type="st:AxdExtType_RetailWeight" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

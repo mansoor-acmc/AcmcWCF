@@ -31,6 +31,9 @@ namespace SyncServices
             string userName, string device, long lineRecId);
 
         [OperationContract]
+        string SalesDeliveryNote(string _salesId);
+
+        [OperationContract]
         string UnreservePallet(string pallet, string pickingId, string userName, string device);
 
         [OperationContract]

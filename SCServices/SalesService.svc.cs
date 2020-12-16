@@ -117,6 +117,7 @@ namespace SyncServices
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
                 PickingId = contract.PickingId,
+                PackingSlip = contract.PackingSlip,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 TruckTicketNum = contract.TruckTicket,
@@ -163,7 +164,7 @@ namespace SyncServices
                     SalesLineContract row = new SalesLineContract() { Serial = pallet };
                     rows.Add(row);
                 }
-                List<SalesLineContract> result = client.ReservePallets(context, salesId, itemId, configId, pickingId, userName, device, lineRecId, rows.ToArray()).ToList();
+                List<SalesLineContract> result = client.PalletsReserving(context, salesId, itemId, configId, pickingId, userName, device, lineRecId, rows.ToArray()).ToList();
                 client.Close();
 
                 if (result.Count > 0)
@@ -322,6 +323,18 @@ namespace SyncServices
                 returnValue = new SalesLine().ToListConvert(items.ToList());
 
             return returnValue;
+        }
+
+        public string SalesDeliveryNote(string _salesId)
+        {
+            SOPickServiceClient client = new SOPickServiceClient();
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            return client.SalesDeliveryNote(context, _salesId);
         }
 
         public string UnreservePallet(string pallet, string pickingId, string userName, string device)
@@ -523,6 +536,7 @@ namespace SyncServices
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
                 PickingId = contract.PickingId,
+                PackingSlip = contract.PackingSlip,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 DeliveryDate = contract.DeliveryDate,

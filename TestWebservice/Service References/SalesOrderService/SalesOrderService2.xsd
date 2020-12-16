@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
-  <xs:element name="GetSalesOrders">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="dateFrom" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="dateTo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSalesOrdersResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="GetSalesOrdersResult" nillable="true" type="q1:ArrayOfSalesTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="FindSalesOrder">
     <xs:complexType>
       <xs:sequence>
@@ -27,21 +11,7 @@
   <xs:element name="FindSalesOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="FindSalesOrderResult" nillable="true" type="q2:SalesTableContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDeliveries">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="dateSearch" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDeliveriesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="GetDeliveriesResult" nillable="true" type="q3:ArrayOfFGDeliveryContract" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="FindSalesOrderResult" nillable="true" type="q1:SalesTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

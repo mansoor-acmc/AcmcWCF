@@ -9,23 +9,11 @@
       <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ISalesOrderService_GetSalesOrders_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetSalesOrders" />
-  </wsdl:message>
-  <wsdl:message name="ISalesOrderService_GetSalesOrders_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetSalesOrdersResponse" />
-  </wsdl:message>
   <wsdl:message name="ISalesOrderService_FindSalesOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:FindSalesOrder" />
   </wsdl:message>
   <wsdl:message name="ISalesOrderService_FindSalesOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindSalesOrderResponse" />
-  </wsdl:message>
-  <wsdl:message name="ISalesOrderService_GetDeliveries_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDeliveries" />
-  </wsdl:message>
-  <wsdl:message name="ISalesOrderService_GetDeliveries_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDeliveriesResponse" />
   </wsdl:message>
   <wsdl:message name="ISalesOrderService_GetPing_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPing" />
@@ -34,22 +22,39 @@
     <wsdl:part name="parameters" element="tns:GetPingResponse" />
   </wsdl:message>
   <wsdl:portType name="ISalesOrderService">
-    <wsdl:operation name="GetSalesOrders">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetSalesOrders" message="tns:ISalesOrderService_GetSalesOrders_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/GetSalesOrdersResponse" message="tns:ISalesOrderService_GetSalesOrders_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="FindSalesOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/FindSalesOrder" message="tns:ISalesOrderService_FindSalesOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/FindSalesOrderResponse" message="tns:ISalesOrderService_FindSalesOrder_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDeliveries">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetDeliveries" message="tns:ISalesOrderService_GetDeliveries_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/GetDeliveriesResponse" message="tns:ISalesOrderService_GetDeliveries_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPing">
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetPing" message="tns:ISalesOrderService_GetPing_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/GetPingResponse" message="tns:ISalesOrderService_GetPing_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:service name="SalesOrderService" />
+  <wsdl:binding name="BasicHttpBinding_ISalesOrderService" type="tns:ISalesOrderService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindSalesOrder">
+      <soap:operation soapAction="http://tempuri.org/ISalesOrderService/FindSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <soap:operation soapAction="http://tempuri.org/ISalesOrderService/GetPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SalesOrderService">
+    <wsdl:port name="BasicHttpBinding_ISalesOrderService" binding="tns:BasicHttpBinding_ISalesOrderService">
+      <soap:address location="http://localhost:58380/SalesOrderService.svc" />
+    </wsdl:port>
+  </wsdl:service>
 </wsdl:definitions>

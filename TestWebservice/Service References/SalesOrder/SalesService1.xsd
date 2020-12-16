@@ -1,51 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:58380/SalesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-  <xs:complexType name="ArrayOfPalletItemContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPalletItemContract" nillable="true" type="tns:ArrayOfPalletItemContract" />
-  <xs:complexType name="PalletItemContract">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.ComponentModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/SalesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="PropertyChangedEventHandler">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="serialField" nillable="true" type="xs:string" />
-          <xs:element name="updatedByField" nillable="true" type="xs:string" />
-          <xs:element name="updatedDateField" type="xs:dateTime" />
-          <xs:element name="updatedDateFieldSpecified" type="xs:boolean" />
-        </xs:sequence>
-      </xs:extension>
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:MulticastDelegate" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
-  <xs:complexType name="XppObjectBase">
-    <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
-  <xs:complexType name="ArrayOfCustomerDeliveryContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCustomerDeliveryContract" nillable="true" type="tns:ArrayOfCustomerDeliveryContract" />
-  <xs:complexType name="CustomerDeliveryContract">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="customerAccountField" nillable="true" type="xs:string" />
-          <xs:element name="customerNameField" nillable="true" type="xs:string" />
-          <xs:element name="packingSlipNumField" nillable="true" type="xs:string" />
-          <xs:element name="quantityField" type="xs:decimal" />
-          <xs:element name="quantityFieldSpecified" type="xs:boolean" />
-          <xs:element name="trucksField" type="xs:int" />
-          <xs:element name="trucksFieldSpecified" type="xs:boolean" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
+  <xs:element name="PropertyChangedEventHandler" nillable="true" type="tns:PropertyChangedEventHandler" />
 </xs:schema>

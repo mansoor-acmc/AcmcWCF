@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd8" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd9" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd11" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd2" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd3" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/EcoResProductQuery" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd7" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd10" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="EcoResProductQueryServiceGetProductInfoRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceGetProductInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceGetProductInfoRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceGetProductInfoResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceGetProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_GetProductInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductMasterRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreateProductMasterRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductMasterRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductMasterResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreateProductMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_CreateProductMaster_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceReadRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseOrderRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreatePurchaseOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseOrderRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseOrderResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreatePurchaseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_CreatePurchaseOrder_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceGetProductsRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceGetProductsRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceGetProductsRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceGetProductsResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceGetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_GetProducts_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseReqRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreatePurchaseReqRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseReqRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreatePurchaseReqResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreatePurchaseReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_CreatePurchaseReq_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductItemRequest">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreateProductItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductItemRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryServiceCreateProductItemResponse">
+    <wsdl:part name="parameters" element="tns:EcoResProductQueryServiceCreateProductItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcoResProductQueryService_CreateProductItem_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="EcoResProductQueryService">
+    <wsdl:operation name="GetProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProductInfo" name="EcoResProductQueryServiceGetProductInfoRequest" message="tns:EcoResProductQueryServiceGetProductInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProductInfoResponse" name="EcoResProductQueryServiceGetProductInfoResponse" message="tns:EcoResProductQueryServiceGetProductInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProductInfoAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_GetProductInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProductMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductMaster" name="EcoResProductQueryServiceCreateProductMasterRequest" message="tns:EcoResProductQueryServiceCreateProductMasterRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductMasterResponse" name="EcoResProductQueryServiceCreateProductMasterResponse" message="tns:EcoResProductQueryServiceCreateProductMasterResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductMasterAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_CreateProductMaster_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/read" name="EcoResProductQueryServiceReadRequest" message="tns:EcoResProductQueryServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/readResponse" name="EcoResProductQueryServiceReadResponse" message="tns:EcoResProductQueryServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/readAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePurchaseOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseOrder" name="EcoResProductQueryServiceCreatePurchaseOrderRequest" message="tns:EcoResProductQueryServiceCreatePurchaseOrderRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseOrderResponse" name="EcoResProductQueryServiceCreatePurchaseOrderResponse" message="tns:EcoResProductQueryServiceCreatePurchaseOrderResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseOrderAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_CreatePurchaseOrder_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProducts" name="EcoResProductQueryServiceGetProductsRequest" message="tns:EcoResProductQueryServiceGetProductsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProductsResponse" name="EcoResProductQueryServiceGetProductsResponse" message="tns:EcoResProductQueryServiceGetProductsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/GetProductsAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_GetProducts_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePurchaseReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseReq" name="EcoResProductQueryServiceCreatePurchaseReqRequest" message="tns:EcoResProductQueryServiceCreatePurchaseReqRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseReqResponse" name="EcoResProductQueryServiceCreatePurchaseReqResponse" message="tns:EcoResProductQueryServiceCreatePurchaseReqResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreatePurchaseReqAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_CreatePurchaseReq_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProductItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductItem" name="EcoResProductQueryServiceCreateProductItemRequest" message="tns:EcoResProductQueryServiceCreateProductItemRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductItemResponse" name="EcoResProductQueryServiceCreateProductItemResponse" message="tns:EcoResProductQueryServiceCreateProductItemResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/EcoResProductQueryService/CreateProductItemAifFaultFault" name="AifFaultFault" message="tns:EcoResProductQueryService_CreateProductItem_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

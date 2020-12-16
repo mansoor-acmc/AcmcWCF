@@ -23,5 +23,6 @@ namespace SyncServices
 
         public string TruckTicketNum { get; set; }
         public int LoadingLine { get; set; }
+        public string PackingSlip { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f4c33c90-ebde-48d3-b12c-9ba2b3d853c3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://FAC-STAGE-AX04:8101/DynamicsAx/Services/AlohaServicesGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AlohaServicesGroup.xsd" MetadataType="Schema" ID="0dcc8c37-f705-4def-9d41-83f119549c32" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd6" />
+    <MetadataFile FileName="AlohaServicesGroup1.xsd" MetadataType="Schema" ID="290ca35f-f167-4318-87c9-5375342de268" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd2" />
+    <MetadataFile FileName="AlohaServicesGroup2.xsd" MetadataType="Schema" ID="933a9972-0bd2-42e4-8f23-34adee96ef66" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd12" />
+    <MetadataFile FileName="AlohaServicesGroup3.xsd" MetadataType="Schema" ID="dc95a243-c833-4784-82f8-76a43c6a5320" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd9" />
+    <MetadataFile FileName="AlohaServicesGroup4.xsd" MetadataType="Schema" ID="6c126b88-fc5e-4da6-a248-be6fc9680bb7" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd5" />
+    <MetadataFile FileName="AlohaServicesGroup5.xsd" MetadataType="Schema" ID="4cde8a50-58b6-472a-b390-ccb74cb4ee37" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd1" />
+    <MetadataFile FileName="AlohaServicesGroup6.xsd" MetadataType="Schema" ID="715901b0-3743-490b-af5d-a525854987d6" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd11" />
+    <MetadataFile FileName="AlohaServicesGroup.wsdl" MetadataType="Wsdl" ID="1556064c-44b7-4763-97d6-9ce2ec41323e" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="AlohaServicesGroup1.wsdl" MetadataType="Wsdl" ID="f63a63fc-a8ed-4ed7-92b3-96f6f3d28734" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup" />
+    <MetadataFile FileName="AlohaServicesGroup7.xsd" MetadataType="Schema" ID="c80f332e-a9be-4506-b949-78b39688edcb" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd8" />
+    <MetadataFile FileName="AlohaServicesGroup8.xsd" MetadataType="Schema" ID="6a15b828-1319-4d85-9366-05dc3ac86072" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="AlohaServicesGroup9.xsd" MetadataType="Schema" ID="c29ba15a-acd5-4b1d-bd1e-002d23479e11" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd0" />
+    <MetadataFile FileName="AlohaServicesGroup10.xsd" MetadataType="Schema" ID="e8b9ef61-93ea-46da-97b8-f77c508cc824" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd7" />
+    <MetadataFile FileName="AlohaServicesGroup11.xsd" MetadataType="Schema" ID="191ee78e-5e17-4cd8-8891-2057608773bb" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd3" />
+    <MetadataFile FileName="AlohaServicesGroup12.xsd" MetadataType="Schema" ID="81e5917c-82b8-4530-a9de-014088e810f1" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/AlohaServicesGroup?xsd=xsd10" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

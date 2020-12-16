@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
   <xs:complexType name="SalesTable">
     <xs:sequence>
       <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
@@ -8,12 +9,16 @@
       <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HalfPallet" type="xs:boolean" />
       <xs:element minOccurs="0" name="Lines" nillable="true" type="tns:ArrayOfSalesLine" />
+      <xs:element minOccurs="0" name="LoadingLine" type="xs:int" />
+      <xs:element minOccurs="0" name="PackingSlip" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PickSameDimension" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SalesName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="StartLoading" type="xs:dateTime" />
       <xs:element minOccurs="0" name="StopLoading" type="xs:dateTime" />
       <xs:element minOccurs="0" name="TruckPlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TruckTicketNum" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SalesTable" nillable="true" type="tns:SalesTable" />
@@ -32,6 +37,7 @@
       <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LineRecId" type="xs:long" />
       <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="Locations" nillable="true" type="q1:ArrayOfInventByGrLocContract" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
@@ -53,4 +59,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SalesLine" nillable="true" type="tns:SalesLine" />
+  <xs:complexType name="ArrayOfUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserData" nillable="true" type="tns:UserData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserData" nillable="true" type="tns:ArrayOfUserData" />
+  <xs:complexType name="UserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserData" nillable="true" type="tns:UserData" />
 </xs:schema>

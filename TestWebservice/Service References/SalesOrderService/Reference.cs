@@ -15,348 +15,10 @@ namespace TestWebservice.SalesOrderService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SalesTableContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
-    [System.SerializableAttribute()]
-    public partial class SalesTableContract : TestWebservice.SalesOrderService.XppObjectBase {
-        
-        private System.DateTime deliveryDateFieldField;
-        
-        private bool deliveryDateFieldSpecifiedField;
-        
-        private string deliveryModeFieldField;
-        
-        private string deliveryNameFieldField;
-        
-        private string driverNameFieldField;
-        
-        private TestWebservice.SalesOrderService.NoYes halfPalletFieldField;
-        
-        private bool halfPalletFieldSpecifiedField;
-        
-        private string pickingIdFieldField;
-        
-        private string salesIdFieldField;
-        
-        private TestWebservice.SalesOrderService.SalesLineContract[] salesLinesFieldField;
-        
-        private string salesNameFieldField;
-        
-        private TestWebservice.SalesOrderService.SalesStatus salesStatusFieldField;
-        
-        private bool salesStatusFieldSpecifiedField;
-        
-        private TestWebservice.SalesOrderService.SalesType salesTypeFieldField;
-        
-        private bool salesTypeFieldSpecifiedField;
-        
-        private TestWebservice.SalesOrderService.NoYes sameConfigurationFieldField;
-        
-        private bool sameConfigurationFieldSpecifiedField;
-        
-        private System.DateTime startLoadFieldField;
-        
-        private bool startLoadFieldSpecifiedField;
-        
-        private System.DateTime stopLoadFieldField;
-        
-        private bool stopLoadFieldSpecifiedField;
-        
-        private string truckPlateFieldField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime deliveryDateField {
-            get {
-                return this.deliveryDateFieldField;
-            }
-            set {
-                if ((this.deliveryDateFieldField.Equals(value) != true)) {
-                    this.deliveryDateFieldField = value;
-                    this.RaisePropertyChanged("deliveryDateField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool deliveryDateFieldSpecified {
-            get {
-                return this.deliveryDateFieldSpecifiedField;
-            }
-            set {
-                if ((this.deliveryDateFieldSpecifiedField.Equals(value) != true)) {
-                    this.deliveryDateFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("deliveryDateFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string deliveryModeField {
-            get {
-                return this.deliveryModeFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.deliveryModeFieldField, value) != true)) {
-                    this.deliveryModeFieldField = value;
-                    this.RaisePropertyChanged("deliveryModeField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string deliveryNameField {
-            get {
-                return this.deliveryNameFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.deliveryNameFieldField, value) != true)) {
-                    this.deliveryNameFieldField = value;
-                    this.RaisePropertyChanged("deliveryNameField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string driverNameField {
-            get {
-                return this.driverNameFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.driverNameFieldField, value) != true)) {
-                    this.driverNameFieldField = value;
-                    this.RaisePropertyChanged("driverNameField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public TestWebservice.SalesOrderService.NoYes halfPalletField {
-            get {
-                return this.halfPalletFieldField;
-            }
-            set {
-                if ((this.halfPalletFieldField.Equals(value) != true)) {
-                    this.halfPalletFieldField = value;
-                    this.RaisePropertyChanged("halfPalletField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool halfPalletFieldSpecified {
-            get {
-                return this.halfPalletFieldSpecifiedField;
-            }
-            set {
-                if ((this.halfPalletFieldSpecifiedField.Equals(value) != true)) {
-                    this.halfPalletFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("halfPalletFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string pickingIdField {
-            get {
-                return this.pickingIdFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.pickingIdFieldField, value) != true)) {
-                    this.pickingIdFieldField = value;
-                    this.RaisePropertyChanged("pickingIdField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string salesIdField {
-            get {
-                return this.salesIdFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesIdFieldField, value) != true)) {
-                    this.salesIdFieldField = value;
-                    this.RaisePropertyChanged("salesIdField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public TestWebservice.SalesOrderService.SalesLineContract[] salesLinesField {
-            get {
-                return this.salesLinesFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesLinesFieldField, value) != true)) {
-                    this.salesLinesFieldField = value;
-                    this.RaisePropertyChanged("salesLinesField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string salesNameField {
-            get {
-                return this.salesNameFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesNameFieldField, value) != true)) {
-                    this.salesNameFieldField = value;
-                    this.RaisePropertyChanged("salesNameField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public TestWebservice.SalesOrderService.SalesStatus salesStatusField {
-            get {
-                return this.salesStatusFieldField;
-            }
-            set {
-                if ((this.salesStatusFieldField.Equals(value) != true)) {
-                    this.salesStatusFieldField = value;
-                    this.RaisePropertyChanged("salesStatusField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool salesStatusFieldSpecified {
-            get {
-                return this.salesStatusFieldSpecifiedField;
-            }
-            set {
-                if ((this.salesStatusFieldSpecifiedField.Equals(value) != true)) {
-                    this.salesStatusFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("salesStatusFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public TestWebservice.SalesOrderService.SalesType salesTypeField {
-            get {
-                return this.salesTypeFieldField;
-            }
-            set {
-                if ((this.salesTypeFieldField.Equals(value) != true)) {
-                    this.salesTypeFieldField = value;
-                    this.RaisePropertyChanged("salesTypeField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool salesTypeFieldSpecified {
-            get {
-                return this.salesTypeFieldSpecifiedField;
-            }
-            set {
-                if ((this.salesTypeFieldSpecifiedField.Equals(value) != true)) {
-                    this.salesTypeFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("salesTypeFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public TestWebservice.SalesOrderService.NoYes sameConfigurationField {
-            get {
-                return this.sameConfigurationFieldField;
-            }
-            set {
-                if ((this.sameConfigurationFieldField.Equals(value) != true)) {
-                    this.sameConfigurationFieldField = value;
-                    this.RaisePropertyChanged("sameConfigurationField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool sameConfigurationFieldSpecified {
-            get {
-                return this.sameConfigurationFieldSpecifiedField;
-            }
-            set {
-                if ((this.sameConfigurationFieldSpecifiedField.Equals(value) != true)) {
-                    this.sameConfigurationFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("sameConfigurationFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime startLoadField {
-            get {
-                return this.startLoadFieldField;
-            }
-            set {
-                if ((this.startLoadFieldField.Equals(value) != true)) {
-                    this.startLoadFieldField = value;
-                    this.RaisePropertyChanged("startLoadField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool startLoadFieldSpecified {
-            get {
-                return this.startLoadFieldSpecifiedField;
-            }
-            set {
-                if ((this.startLoadFieldSpecifiedField.Equals(value) != true)) {
-                    this.startLoadFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("startLoadFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime stopLoadField {
-            get {
-                return this.stopLoadFieldField;
-            }
-            set {
-                if ((this.stopLoadFieldField.Equals(value) != true)) {
-                    this.stopLoadFieldField = value;
-                    this.RaisePropertyChanged("stopLoadField");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool stopLoadFieldSpecified {
-            get {
-                return this.stopLoadFieldSpecifiedField;
-            }
-            set {
-                if ((this.stopLoadFieldSpecifiedField.Equals(value) != true)) {
-                    this.stopLoadFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("stopLoadFieldSpecified");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string truckPlateField {
-            get {
-                return this.truckPlateFieldField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.truckPlateFieldField, value) != true)) {
-                    this.truckPlateFieldField = value;
-                    this.RaisePropertyChanged("truckPlateField");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrderService.SalesLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrderService.InventByGrLocContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrderService.FGDeliveryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrderService.SalesTableContract))]
     public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -409,6 +71,8 @@ namespace TestWebservice.SalesOrderService {
         private bool exclusiveHalfPalletFieldSpecifiedField;
         
         private string gradeFieldField;
+        
+        private string inventTransIDFieldField;
         
         private bool isHalfPalletFieldField;
         
@@ -513,6 +177,19 @@ namespace TestWebservice.SalesOrderService {
                 if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
                     this.gradeFieldField = value;
                     this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string inventTransIDField {
+            get {
+                return this.inventTransIDFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.inventTransIDFieldField, value) != true)) {
+                    this.inventTransIDFieldField = value;
+                    this.RaisePropertyChanged("inventTransIDField");
                 }
             }
         }
@@ -1029,25 +706,91 @@ namespace TestWebservice.SalesOrderService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SalesTableContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
     [System.SerializableAttribute()]
-    public partial class FGDeliveryContract : TestWebservice.SalesOrderService.XppObjectBase {
+    public partial class SalesTableContract : TestWebservice.SalesOrderService.XppObjectBase {
+        
+        private string customerIdFieldField;
+        
+        private string customerNameFieldField;
         
         private System.DateTime deliveryDateFieldField;
         
         private bool deliveryDateFieldSpecifiedField;
         
-        private int lineNumFieldField;
+        private string deliveryModeFieldField;
         
-        private bool lineNumFieldSpecifiedField;
+        private string deliveryNameFieldField;
+        
+        private string driverNameFieldField;
+        
+        private TestWebservice.SalesOrderService.NoYes halfPalletFieldField;
+        
+        private bool halfPalletFieldSpecifiedField;
+        
+        private string packingSlipFieldField;
         
         private string pickingIdFieldField;
         
-        private string ticketFieldField;
+        private string salesIdFieldField;
         
-        private string truckDriverFieldField;
+        private TestWebservice.SalesOrderService.SalesLineContract[] salesLinesFieldField;
         
-        private string truckPlateNumFieldField;
+        private string salesNameFieldField;
+        
+        private TestWebservice.SalesOrderService.SalesStatus salesStatusFieldField;
+        
+        private bool salesStatusFieldSpecifiedField;
+        
+        private TestWebservice.SalesOrderService.SalesType salesTypeFieldField;
+        
+        private bool salesTypeFieldSpecifiedField;
+        
+        private TestWebservice.SalesOrderService.NoYes sameConfigurationFieldField;
+        
+        private bool sameConfigurationFieldSpecifiedField;
+        
+        private System.DateTime startLoadFieldField;
+        
+        private bool startLoadFieldSpecifiedField;
+        
+        private System.DateTime stopLoadFieldField;
+        
+        private bool stopLoadFieldSpecifiedField;
+        
+        private int truckLoadLineFieldField;
+        
+        private bool truckLoadLineFieldSpecifiedField;
+        
+        private string truckPlateFieldField;
+        
+        private string truckTicketFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string customerIdField {
+            get {
+                return this.customerIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.customerIdFieldField, value) != true)) {
+                    this.customerIdFieldField = value;
+                    this.RaisePropertyChanged("customerIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string customerNameField {
+            get {
+                return this.customerNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.customerNameFieldField, value) != true)) {
+                    this.customerNameFieldField = value;
+                    this.RaisePropertyChanged("customerNameField");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
         public System.DateTime deliveryDateField {
@@ -1076,27 +819,79 @@ namespace TestWebservice.SalesOrderService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int lineNumField {
+        public string deliveryModeField {
             get {
-                return this.lineNumFieldField;
+                return this.deliveryModeFieldField;
             }
             set {
-                if ((this.lineNumFieldField.Equals(value) != true)) {
-                    this.lineNumFieldField = value;
-                    this.RaisePropertyChanged("lineNumField");
+                if ((object.ReferenceEquals(this.deliveryModeFieldField, value) != true)) {
+                    this.deliveryModeFieldField = value;
+                    this.RaisePropertyChanged("deliveryModeField");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool lineNumFieldSpecified {
+        public string deliveryNameField {
             get {
-                return this.lineNumFieldSpecifiedField;
+                return this.deliveryNameFieldField;
             }
             set {
-                if ((this.lineNumFieldSpecifiedField.Equals(value) != true)) {
-                    this.lineNumFieldSpecifiedField = value;
-                    this.RaisePropertyChanged("lineNumFieldSpecified");
+                if ((object.ReferenceEquals(this.deliveryNameFieldField, value) != true)) {
+                    this.deliveryNameFieldField = value;
+                    this.RaisePropertyChanged("deliveryNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string driverNameField {
+            get {
+                return this.driverNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.driverNameFieldField, value) != true)) {
+                    this.driverNameFieldField = value;
+                    this.RaisePropertyChanged("driverNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrderService.NoYes halfPalletField {
+            get {
+                return this.halfPalletFieldField;
+            }
+            set {
+                if ((this.halfPalletFieldField.Equals(value) != true)) {
+                    this.halfPalletFieldField = value;
+                    this.RaisePropertyChanged("halfPalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool halfPalletFieldSpecified {
+            get {
+                return this.halfPalletFieldSpecifiedField;
+            }
+            set {
+                if ((this.halfPalletFieldSpecifiedField.Equals(value) != true)) {
+                    this.halfPalletFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("halfPalletFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string packingSlipField {
+            get {
+                return this.packingSlipFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packingSlipFieldField, value) != true)) {
+                    this.packingSlipFieldField = value;
+                    this.RaisePropertyChanged("packingSlipField");
                 }
             }
         }
@@ -1115,40 +910,222 @@ namespace TestWebservice.SalesOrderService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string ticketField {
+        public string salesIdField {
             get {
-                return this.ticketFieldField;
+                return this.salesIdFieldField;
             }
             set {
-                if ((object.ReferenceEquals(this.ticketFieldField, value) != true)) {
-                    this.ticketFieldField = value;
-                    this.RaisePropertyChanged("ticketField");
+                if ((object.ReferenceEquals(this.salesIdFieldField, value) != true)) {
+                    this.salesIdFieldField = value;
+                    this.RaisePropertyChanged("salesIdField");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string truckDriverField {
+        public TestWebservice.SalesOrderService.SalesLineContract[] salesLinesField {
             get {
-                return this.truckDriverFieldField;
+                return this.salesLinesFieldField;
             }
             set {
-                if ((object.ReferenceEquals(this.truckDriverFieldField, value) != true)) {
-                    this.truckDriverFieldField = value;
-                    this.RaisePropertyChanged("truckDriverField");
+                if ((object.ReferenceEquals(this.salesLinesFieldField, value) != true)) {
+                    this.salesLinesFieldField = value;
+                    this.RaisePropertyChanged("salesLinesField");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string truckPlateNumField {
+        public string salesNameField {
             get {
-                return this.truckPlateNumFieldField;
+                return this.salesNameFieldField;
             }
             set {
-                if ((object.ReferenceEquals(this.truckPlateNumFieldField, value) != true)) {
-                    this.truckPlateNumFieldField = value;
-                    this.RaisePropertyChanged("truckPlateNumField");
+                if ((object.ReferenceEquals(this.salesNameFieldField, value) != true)) {
+                    this.salesNameFieldField = value;
+                    this.RaisePropertyChanged("salesNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrderService.SalesStatus salesStatusField {
+            get {
+                return this.salesStatusFieldField;
+            }
+            set {
+                if ((this.salesStatusFieldField.Equals(value) != true)) {
+                    this.salesStatusFieldField = value;
+                    this.RaisePropertyChanged("salesStatusField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesStatusFieldSpecified {
+            get {
+                return this.salesStatusFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesStatusFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesStatusFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesStatusFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrderService.SalesType salesTypeField {
+            get {
+                return this.salesTypeFieldField;
+            }
+            set {
+                if ((this.salesTypeFieldField.Equals(value) != true)) {
+                    this.salesTypeFieldField = value;
+                    this.RaisePropertyChanged("salesTypeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesTypeFieldSpecified {
+            get {
+                return this.salesTypeFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesTypeFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesTypeFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesTypeFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrderService.NoYes sameConfigurationField {
+            get {
+                return this.sameConfigurationFieldField;
+            }
+            set {
+                if ((this.sameConfigurationFieldField.Equals(value) != true)) {
+                    this.sameConfigurationFieldField = value;
+                    this.RaisePropertyChanged("sameConfigurationField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool sameConfigurationFieldSpecified {
+            get {
+                return this.sameConfigurationFieldSpecifiedField;
+            }
+            set {
+                if ((this.sameConfigurationFieldSpecifiedField.Equals(value) != true)) {
+                    this.sameConfigurationFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("sameConfigurationFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime startLoadField {
+            get {
+                return this.startLoadFieldField;
+            }
+            set {
+                if ((this.startLoadFieldField.Equals(value) != true)) {
+                    this.startLoadFieldField = value;
+                    this.RaisePropertyChanged("startLoadField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool startLoadFieldSpecified {
+            get {
+                return this.startLoadFieldSpecifiedField;
+            }
+            set {
+                if ((this.startLoadFieldSpecifiedField.Equals(value) != true)) {
+                    this.startLoadFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("startLoadFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime stopLoadField {
+            get {
+                return this.stopLoadFieldField;
+            }
+            set {
+                if ((this.stopLoadFieldField.Equals(value) != true)) {
+                    this.stopLoadFieldField = value;
+                    this.RaisePropertyChanged("stopLoadField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool stopLoadFieldSpecified {
+            get {
+                return this.stopLoadFieldSpecifiedField;
+            }
+            set {
+                if ((this.stopLoadFieldSpecifiedField.Equals(value) != true)) {
+                    this.stopLoadFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("stopLoadFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int truckLoadLineField {
+            get {
+                return this.truckLoadLineFieldField;
+            }
+            set {
+                if ((this.truckLoadLineFieldField.Equals(value) != true)) {
+                    this.truckLoadLineFieldField = value;
+                    this.RaisePropertyChanged("truckLoadLineField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool truckLoadLineFieldSpecified {
+            get {
+                return this.truckLoadLineFieldSpecifiedField;
+            }
+            set {
+                if ((this.truckLoadLineFieldSpecifiedField.Equals(value) != true)) {
+                    this.truckLoadLineFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("truckLoadLineFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string truckPlateField {
+            get {
+                return this.truckPlateFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.truckPlateFieldField, value) != true)) {
+                    this.truckPlateFieldField = value;
+                    this.RaisePropertyChanged("truckPlateField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string truckTicketField {
+            get {
+                return this.truckTicketFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.truckTicketFieldField, value) != true)) {
+                    this.truckTicketFieldField = value;
+                    this.RaisePropertyChanged("truckTicketField");
                 }
             }
         }
@@ -1235,14 +1212,8 @@ namespace TestWebservice.SalesOrderService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SalesOrderService.ISalesOrderService")]
     public interface ISalesOrderService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesOrderService/GetSalesOrders", ReplyAction="http://tempuri.org/ISalesOrderService/GetSalesOrdersResponse")]
-        TestWebservice.SalesOrderService.SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesOrderService/FindSalesOrder", ReplyAction="http://tempuri.org/ISalesOrderService/FindSalesOrderResponse")]
         TestWebservice.SalesOrderService.SalesTableContract FindSalesOrder(string salesId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesOrderService/GetDeliveries", ReplyAction="http://tempuri.org/ISalesOrderService/GetDeliveriesResponse")]
-        TestWebservice.SalesOrderService.FGDeliveryContract[] GetDeliveries(string dateSearch);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesOrderService/GetPing", ReplyAction="http://tempuri.org/ISalesOrderService/GetPingResponse")]
         string GetPing();
@@ -1275,16 +1246,8 @@ namespace TestWebservice.SalesOrderService {
                 base(binding, remoteAddress) {
         }
         
-        public TestWebservice.SalesOrderService.SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId) {
-            return base.Channel.GetSalesOrders(dateFrom, dateTo, customerId);
-        }
-        
         public TestWebservice.SalesOrderService.SalesTableContract FindSalesOrder(string salesId) {
             return base.Channel.FindSalesOrder(salesId);
-        }
-        
-        public TestWebservice.SalesOrderService.FGDeliveryContract[] GetDeliveries(string dateSearch) {
-            return base.Channel.GetDeliveries(dateSearch);
         }
         
         public string GetPing() {

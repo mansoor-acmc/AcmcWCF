@@ -271,9 +271,6 @@
     <None Include="Service References\SalesOrderService\SalesOrderService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.FGDeliveryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.SalesTableContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -302,10 +299,19 @@
     <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.CustomerDeliveryContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.FGLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesLine.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesTable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.UserData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SCServiceFrom50\SCSyncService.wsdl" />

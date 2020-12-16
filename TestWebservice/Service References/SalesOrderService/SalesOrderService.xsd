@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-  <xs:complexType name="ArrayOfSalesTableContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesTableContract" nillable="true" type="tns:SalesTableContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSalesTableContract" nillable="true" type="tns:ArrayOfSalesTableContract" />
   <xs:complexType name="SalesTableContract">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:XppObjectBase">
         <xs:sequence>
+          <xs:element name="customerIdField" nillable="true" type="xs:string" />
+          <xs:element name="customerNameField" nillable="true" type="xs:string" />
           <xs:element name="deliveryDateField" type="xs:dateTime" />
           <xs:element name="deliveryDateFieldSpecified" type="xs:boolean" />
           <xs:element name="deliveryModeField" nillable="true" type="xs:string" />
@@ -18,6 +14,7 @@
           <xs:element name="driverNameField" nillable="true" type="xs:string" />
           <xs:element name="halfPalletField" type="tns:NoYes" />
           <xs:element name="halfPalletFieldSpecified" type="xs:boolean" />
+          <xs:element name="packingSlipField" nillable="true" type="xs:string" />
           <xs:element name="pickingIdField" nillable="true" type="xs:string" />
           <xs:element name="salesIdField" nillable="true" type="xs:string" />
           <xs:element name="salesLinesField" nillable="true" type="tns:ArrayOfSalesLineContract" />
@@ -32,7 +29,10 @@
           <xs:element name="startLoadFieldSpecified" type="xs:boolean" />
           <xs:element name="stopLoadField" type="xs:dateTime" />
           <xs:element name="stopLoadFieldSpecified" type="xs:boolean" />
+          <xs:element name="truckLoadLineField" type="xs:int" />
+          <xs:element name="truckLoadLineFieldSpecified" type="xs:boolean" />
           <xs:element name="truckPlateField" nillable="true" type="xs:string" />
+          <xs:element name="truckTicketField" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -64,6 +64,7 @@
           <xs:element name="exclusiveHalfPalletField" type="xs:boolean" />
           <xs:element name="exclusiveHalfPalletFieldSpecified" type="xs:boolean" />
           <xs:element name="gradeField" nillable="true" type="xs:string" />
+          <xs:element name="inventTransIDField" nillable="true" type="xs:string" />
           <xs:element name="isHalfPalletField" type="xs:boolean" />
           <xs:element name="isHalfPalletFieldSpecified" type="xs:boolean" />
           <xs:element name="itemIdField" nillable="true" type="xs:string" />
@@ -154,27 +155,4 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="SalesType" nillable="true" type="tns:SalesType" />
-  <xs:complexType name="ArrayOfFGDeliveryContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfFGDeliveryContract" nillable="true" type="tns:ArrayOfFGDeliveryContract" />
-  <xs:complexType name="FGDeliveryContract">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="deliveryDateField" type="xs:dateTime" />
-          <xs:element name="deliveryDateFieldSpecified" type="xs:boolean" />
-          <xs:element name="lineNumField" type="xs:int" />
-          <xs:element name="lineNumFieldSpecified" type="xs:boolean" />
-          <xs:element name="pickingIdField" nillable="true" type="xs:string" />
-          <xs:element name="ticketField" nillable="true" type="xs:string" />
-          <xs:element name="truckDriverField" nillable="true" type="xs:string" />
-          <xs:element name="truckPlateNumField" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
 </xs:schema>

@@ -41,7 +41,16 @@ namespace TestWebservice.SalesOrder {
         private TestWebservice.SalesOrder.SalesLine[] LinesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LoadingLineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PackingSlipField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool PickSameDimensionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SalesIdField;
@@ -57,6 +66,9 @@ namespace TestWebservice.SalesOrder {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TruckPlateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckTicketNumField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -147,6 +159,32 @@ namespace TestWebservice.SalesOrder {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LoadingLine {
+            get {
+                return this.LoadingLineField;
+            }
+            set {
+                if ((this.LoadingLineField.Equals(value) != true)) {
+                    this.LoadingLineField = value;
+                    this.RaisePropertyChanged("LoadingLine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PackingSlip {
+            get {
+                return this.PackingSlipField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackingSlipField, value) != true)) {
+                    this.PackingSlipField = value;
+                    this.RaisePropertyChanged("PackingSlip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public bool PickSameDimension {
             get {
                 return this.PickSameDimensionField;
@@ -155,6 +193,19 @@ namespace TestWebservice.SalesOrder {
                 if ((this.PickSameDimensionField.Equals(value) != true)) {
                     this.PickSameDimensionField = value;
                     this.RaisePropertyChanged("PickSameDimension");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
                 }
             }
         }
@@ -224,6 +275,19 @@ namespace TestWebservice.SalesOrder {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckTicketNum {
+            get {
+                return this.TruckTicketNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckTicketNumField, value) != true)) {
+                    this.TruckTicketNumField = value;
+                    this.RaisePropertyChanged("TruckTicketNum");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -263,6 +327,9 @@ namespace TestWebservice.SalesOrder {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesOrder.InventByGrLocContract[] LocationsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -415,6 +482,19 @@ namespace TestWebservice.SalesOrder {
                 if ((object.ReferenceEquals(this.LocationField, value) != true)) {
                     this.LocationField = value;
                     this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesOrder.InventByGrLocContract[] Locations {
+            get {
+                return this.LocationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationsField, value) != true)) {
+                    this.LocationsField = value;
+                    this.RaisePropertyChanged("Locations");
                 }
             }
         }
@@ -665,6 +745,124 @@ namespace TestWebservice.SalesOrder {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventByGrLocContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    public partial class InventByGrLocContract : TestWebservice.SalesOrder.XppObjectBase {
+        
+        private string gradeFieldField;
+        
+        private string locationIdFieldField;
+        
+        private decimal onHandFieldField;
+        
+        private bool onHandFieldSpecifiedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string locationIdField {
+            get {
+                return this.locationIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.locationIdFieldField, value) != true)) {
+                    this.locationIdFieldField = value;
+                    this.RaisePropertyChanged("locationIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal onHandField {
+            get {
+                return this.onHandFieldField;
+            }
+            set {
+                if ((this.onHandFieldField.Equals(value) != true)) {
+                    this.onHandFieldField = value;
+                    this.RaisePropertyChanged("onHandField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool onHandFieldSpecified {
+            get {
+                return this.onHandFieldSpecifiedField;
+            }
+            set {
+                if ((this.onHandFieldSpecifiedField.Equals(value) != true)) {
+                    this.onHandFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("onHandFieldSpecified");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.PalletItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.CustomerDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.FGLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.FGDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.FGDeliveryLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.PalletContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.InventByGrLocContract))]
+    public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private System.ComponentModel.PropertyChangedEventHandler PropertyChanged1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PropertyChanged", IsRequired=true)]
+        public System.ComponentModel.PropertyChangedEventHandler PropertyChanged1 {
+            get {
+                return this.PropertyChanged1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PropertyChanged1Field, value) != true)) {
+                    this.PropertyChanged1Field = value;
+                    this.RaisePropertyChanged("PropertyChanged1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PalletItemContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
     [System.SerializableAttribute()]
     public partial class PalletItemContract : TestWebservice.SalesOrder.XppObjectBase {
@@ -726,52 +924,6 @@ namespace TestWebservice.SalesOrder {
                     this.updatedDateFieldSpecifiedField = value;
                     this.RaisePropertyChanged("updatedDateFieldSpecified");
                 }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.CustomerDeliveryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesOrder.PalletItemContract))]
-    public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private System.ComponentModel.PropertyChangedEventHandler PropertyChanged1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Name="PropertyChanged", IsRequired=true)]
-        public System.ComponentModel.PropertyChangedEventHandler PropertyChanged1 {
-            get {
-                return this.PropertyChanged1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PropertyChanged1Field, value) != true)) {
-                    this.PropertyChanged1Field = value;
-                    this.RaisePropertyChanged("PropertyChanged1");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -888,6 +1040,1130 @@ namespace TestWebservice.SalesOrder {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FGLineContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    public partial class FGLineContract : TestWebservice.SalesOrder.XppObjectBase {
+        
+        private string fGLineNameFieldField;
+        
+        private int fGLineNumberFieldField;
+        
+        private bool fGLineNumberFieldSpecifiedField;
+        
+        private int onGateNumFieldField;
+        
+        private bool onGateNumFieldSpecifiedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string fGLineNameField {
+            get {
+                return this.fGLineNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.fGLineNameFieldField, value) != true)) {
+                    this.fGLineNameFieldField = value;
+                    this.RaisePropertyChanged("fGLineNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int fGLineNumberField {
+            get {
+                return this.fGLineNumberFieldField;
+            }
+            set {
+                if ((this.fGLineNumberFieldField.Equals(value) != true)) {
+                    this.fGLineNumberFieldField = value;
+                    this.RaisePropertyChanged("fGLineNumberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool fGLineNumberFieldSpecified {
+            get {
+                return this.fGLineNumberFieldSpecifiedField;
+            }
+            set {
+                if ((this.fGLineNumberFieldSpecifiedField.Equals(value) != true)) {
+                    this.fGLineNumberFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("fGLineNumberFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int onGateNumField {
+            get {
+                return this.onGateNumFieldField;
+            }
+            set {
+                if ((this.onGateNumFieldField.Equals(value) != true)) {
+                    this.onGateNumFieldField = value;
+                    this.RaisePropertyChanged("onGateNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool onGateNumFieldSpecified {
+            get {
+                return this.onGateNumFieldSpecifiedField;
+            }
+            set {
+                if ((this.onGateNumFieldSpecifiedField.Equals(value) != true)) {
+                    this.onGateNumFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("onGateNumFieldSpecified");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    public partial class FGDeliveryContract : TestWebservice.SalesOrder.XppObjectBase {
+        
+        private string barcode_Code128FieldField;
+        
+        private string customerIdFieldField;
+        
+        private string customerNameFieldField;
+        
+        private string deliveryAddressFieldField;
+        
+        private System.DateTime deliveryDateFieldField;
+        
+        private bool deliveryDateFieldSpecifiedField;
+        
+        private TestWebservice.SalesOrder.FGDeliveryLineContract[] deliveryItemsFieldField;
+        
+        private TestWebservice.SalesOrder.PickingListStatus deliveryStatusFieldField;
+        
+        private bool deliveryStatusFieldSpecifiedField;
+        
+        private int lineNumFieldField;
+        
+        private bool lineNumFieldSpecifiedField;
+        
+        private string mobileFieldField;
+        
+        private System.DateTime packingSlipGenerateFieldField;
+        
+        private bool packingSlipGenerateFieldSpecifiedField;
+        
+        private string packingSlipNumFieldField;
+        
+        private string pickingIdFieldField;
+        
+        private string quantityInPalletsFieldField;
+        
+        private string quantityInSQMFieldField;
+        
+        private string salesIdFieldField;
+        
+        private System.DateTime startLoadTruckFieldField;
+        
+        private bool startLoadTruckFieldSpecifiedField;
+        
+        private System.DateTime stopLoadTruckFieldField;
+        
+        private bool stopLoadTruckFieldSpecifiedField;
+        
+        private string ticketFieldField;
+        
+        private string truckDriverFieldField;
+        
+        private string truckPlateNumFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string barcode_Code128Field {
+            get {
+                return this.barcode_Code128FieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.barcode_Code128FieldField, value) != true)) {
+                    this.barcode_Code128FieldField = value;
+                    this.RaisePropertyChanged("barcode_Code128Field");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string customerIdField {
+            get {
+                return this.customerIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.customerIdFieldField, value) != true)) {
+                    this.customerIdFieldField = value;
+                    this.RaisePropertyChanged("customerIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string customerNameField {
+            get {
+                return this.customerNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.customerNameFieldField, value) != true)) {
+                    this.customerNameFieldField = value;
+                    this.RaisePropertyChanged("customerNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string deliveryAddressField {
+            get {
+                return this.deliveryAddressFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deliveryAddressFieldField, value) != true)) {
+                    this.deliveryAddressFieldField = value;
+                    this.RaisePropertyChanged("deliveryAddressField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime deliveryDateField {
+            get {
+                return this.deliveryDateFieldField;
+            }
+            set {
+                if ((this.deliveryDateFieldField.Equals(value) != true)) {
+                    this.deliveryDateFieldField = value;
+                    this.RaisePropertyChanged("deliveryDateField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool deliveryDateFieldSpecified {
+            get {
+                return this.deliveryDateFieldSpecifiedField;
+            }
+            set {
+                if ((this.deliveryDateFieldSpecifiedField.Equals(value) != true)) {
+                    this.deliveryDateFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("deliveryDateFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrder.FGDeliveryLineContract[] deliveryItemsField {
+            get {
+                return this.deliveryItemsFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deliveryItemsFieldField, value) != true)) {
+                    this.deliveryItemsFieldField = value;
+                    this.RaisePropertyChanged("deliveryItemsField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrder.PickingListStatus deliveryStatusField {
+            get {
+                return this.deliveryStatusFieldField;
+            }
+            set {
+                if ((this.deliveryStatusFieldField.Equals(value) != true)) {
+                    this.deliveryStatusFieldField = value;
+                    this.RaisePropertyChanged("deliveryStatusField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool deliveryStatusFieldSpecified {
+            get {
+                return this.deliveryStatusFieldSpecifiedField;
+            }
+            set {
+                if ((this.deliveryStatusFieldSpecifiedField.Equals(value) != true)) {
+                    this.deliveryStatusFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("deliveryStatusFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int lineNumField {
+            get {
+                return this.lineNumFieldField;
+            }
+            set {
+                if ((this.lineNumFieldField.Equals(value) != true)) {
+                    this.lineNumFieldField = value;
+                    this.RaisePropertyChanged("lineNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool lineNumFieldSpecified {
+            get {
+                return this.lineNumFieldSpecifiedField;
+            }
+            set {
+                if ((this.lineNumFieldSpecifiedField.Equals(value) != true)) {
+                    this.lineNumFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("lineNumFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string mobileField {
+            get {
+                return this.mobileFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mobileFieldField, value) != true)) {
+                    this.mobileFieldField = value;
+                    this.RaisePropertyChanged("mobileField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime packingSlipGenerateField {
+            get {
+                return this.packingSlipGenerateFieldField;
+            }
+            set {
+                if ((this.packingSlipGenerateFieldField.Equals(value) != true)) {
+                    this.packingSlipGenerateFieldField = value;
+                    this.RaisePropertyChanged("packingSlipGenerateField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool packingSlipGenerateFieldSpecified {
+            get {
+                return this.packingSlipGenerateFieldSpecifiedField;
+            }
+            set {
+                if ((this.packingSlipGenerateFieldSpecifiedField.Equals(value) != true)) {
+                    this.packingSlipGenerateFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("packingSlipGenerateFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string packingSlipNumField {
+            get {
+                return this.packingSlipNumFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packingSlipNumFieldField, value) != true)) {
+                    this.packingSlipNumFieldField = value;
+                    this.RaisePropertyChanged("packingSlipNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string pickingIdField {
+            get {
+                return this.pickingIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pickingIdFieldField, value) != true)) {
+                    this.pickingIdFieldField = value;
+                    this.RaisePropertyChanged("pickingIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string quantityInPalletsField {
+            get {
+                return this.quantityInPalletsFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.quantityInPalletsFieldField, value) != true)) {
+                    this.quantityInPalletsFieldField = value;
+                    this.RaisePropertyChanged("quantityInPalletsField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string quantityInSQMField {
+            get {
+                return this.quantityInSQMFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.quantityInSQMFieldField, value) != true)) {
+                    this.quantityInSQMFieldField = value;
+                    this.RaisePropertyChanged("quantityInSQMField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string salesIdField {
+            get {
+                return this.salesIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesIdFieldField, value) != true)) {
+                    this.salesIdFieldField = value;
+                    this.RaisePropertyChanged("salesIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime startLoadTruckField {
+            get {
+                return this.startLoadTruckFieldField;
+            }
+            set {
+                if ((this.startLoadTruckFieldField.Equals(value) != true)) {
+                    this.startLoadTruckFieldField = value;
+                    this.RaisePropertyChanged("startLoadTruckField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool startLoadTruckFieldSpecified {
+            get {
+                return this.startLoadTruckFieldSpecifiedField;
+            }
+            set {
+                if ((this.startLoadTruckFieldSpecifiedField.Equals(value) != true)) {
+                    this.startLoadTruckFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("startLoadTruckFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime stopLoadTruckField {
+            get {
+                return this.stopLoadTruckFieldField;
+            }
+            set {
+                if ((this.stopLoadTruckFieldField.Equals(value) != true)) {
+                    this.stopLoadTruckFieldField = value;
+                    this.RaisePropertyChanged("stopLoadTruckField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool stopLoadTruckFieldSpecified {
+            get {
+                return this.stopLoadTruckFieldSpecifiedField;
+            }
+            set {
+                if ((this.stopLoadTruckFieldSpecifiedField.Equals(value) != true)) {
+                    this.stopLoadTruckFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("stopLoadTruckFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string ticketField {
+            get {
+                return this.ticketFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ticketFieldField, value) != true)) {
+                    this.ticketFieldField = value;
+                    this.RaisePropertyChanged("ticketField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string truckDriverField {
+            get {
+                return this.truckDriverFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.truckDriverFieldField, value) != true)) {
+                    this.truckDriverFieldField = value;
+                    this.RaisePropertyChanged("truckDriverField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string truckPlateNumField {
+            get {
+                return this.truckPlateNumFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.truckPlateNumFieldField, value) != true)) {
+                    this.truckPlateNumFieldField = value;
+                    this.RaisePropertyChanged("truckPlateNumField");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryLineContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    public partial class FGDeliveryLineContract : TestWebservice.SalesOrder.XppObjectBase {
+        
+        private string gradeFieldField;
+        
+        private string itemIdFieldField;
+        
+        private string nameFieldField;
+        
+        private TestWebservice.SalesOrder.PalletContract[] palletsFieldField;
+        
+        private decimal reservedPercentFieldField;
+        
+        private bool reservedPercentFieldSpecifiedField;
+        
+        private decimal reservedQtyFieldField;
+        
+        private bool reservedQtyFieldSpecifiedField;
+        
+        private string salesIdFieldField;
+        
+        private decimal salesQtyBoxFieldField;
+        
+        private bool salesQtyBoxFieldSpecifiedField;
+        
+        private decimal salesQtyFieldField;
+        
+        private bool salesQtyFieldSpecifiedField;
+        
+        private decimal salesQtyPalletFieldField;
+        
+        private bool salesQtyPalletFieldSpecifiedField;
+        
+        private decimal salesQtySQMFieldField;
+        
+        private bool salesQtySQMFieldSpecifiedField;
+        
+        private decimal salesQtySQMRemainingFieldField;
+        
+        private bool salesQtySQMRemainingFieldSpecifiedField;
+        
+        private decimal salesQtySQMReservedFieldField;
+        
+        private bool salesQtySQMReservedFieldSpecifiedField;
+        
+        private string salesUnitFieldField;
+        
+        private string serialFieldField;
+        
+        private string shadeFieldField;
+        
+        private string sizeFieldField;
+        
+        private string wLocationIdFieldField;
+        
+        private string warehouseFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemIdField {
+            get {
+                return this.itemIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemIdFieldField, value) != true)) {
+                    this.itemIdFieldField = value;
+                    this.RaisePropertyChanged("itemIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string nameField {
+            get {
+                return this.nameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameFieldField, value) != true)) {
+                    this.nameFieldField = value;
+                    this.RaisePropertyChanged("nameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.SalesOrder.PalletContract[] palletsField {
+            get {
+                return this.palletsFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.palletsFieldField, value) != true)) {
+                    this.palletsFieldField = value;
+                    this.RaisePropertyChanged("palletsField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal reservedPercentField {
+            get {
+                return this.reservedPercentFieldField;
+            }
+            set {
+                if ((this.reservedPercentFieldField.Equals(value) != true)) {
+                    this.reservedPercentFieldField = value;
+                    this.RaisePropertyChanged("reservedPercentField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool reservedPercentFieldSpecified {
+            get {
+                return this.reservedPercentFieldSpecifiedField;
+            }
+            set {
+                if ((this.reservedPercentFieldSpecifiedField.Equals(value) != true)) {
+                    this.reservedPercentFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("reservedPercentFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal reservedQtyField {
+            get {
+                return this.reservedQtyFieldField;
+            }
+            set {
+                if ((this.reservedQtyFieldField.Equals(value) != true)) {
+                    this.reservedQtyFieldField = value;
+                    this.RaisePropertyChanged("reservedQtyField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool reservedQtyFieldSpecified {
+            get {
+                return this.reservedQtyFieldSpecifiedField;
+            }
+            set {
+                if ((this.reservedQtyFieldSpecifiedField.Equals(value) != true)) {
+                    this.reservedQtyFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("reservedQtyFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string salesIdField {
+            get {
+                return this.salesIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesIdFieldField, value) != true)) {
+                    this.salesIdFieldField = value;
+                    this.RaisePropertyChanged("salesIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtyBoxField {
+            get {
+                return this.salesQtyBoxFieldField;
+            }
+            set {
+                if ((this.salesQtyBoxFieldField.Equals(value) != true)) {
+                    this.salesQtyBoxFieldField = value;
+                    this.RaisePropertyChanged("salesQtyBoxField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtyBoxFieldSpecified {
+            get {
+                return this.salesQtyBoxFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtyBoxFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtyBoxFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtyBoxFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtyField {
+            get {
+                return this.salesQtyFieldField;
+            }
+            set {
+                if ((this.salesQtyFieldField.Equals(value) != true)) {
+                    this.salesQtyFieldField = value;
+                    this.RaisePropertyChanged("salesQtyField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtyFieldSpecified {
+            get {
+                return this.salesQtyFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtyFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtyFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtyFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtyPalletField {
+            get {
+                return this.salesQtyPalletFieldField;
+            }
+            set {
+                if ((this.salesQtyPalletFieldField.Equals(value) != true)) {
+                    this.salesQtyPalletFieldField = value;
+                    this.RaisePropertyChanged("salesQtyPalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtyPalletFieldSpecified {
+            get {
+                return this.salesQtyPalletFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtyPalletFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtyPalletFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtyPalletFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtySQMField {
+            get {
+                return this.salesQtySQMFieldField;
+            }
+            set {
+                if ((this.salesQtySQMFieldField.Equals(value) != true)) {
+                    this.salesQtySQMFieldField = value;
+                    this.RaisePropertyChanged("salesQtySQMField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtySQMFieldSpecified {
+            get {
+                return this.salesQtySQMFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtySQMFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtySQMFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtySQMFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtySQMRemainingField {
+            get {
+                return this.salesQtySQMRemainingFieldField;
+            }
+            set {
+                if ((this.salesQtySQMRemainingFieldField.Equals(value) != true)) {
+                    this.salesQtySQMRemainingFieldField = value;
+                    this.RaisePropertyChanged("salesQtySQMRemainingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtySQMRemainingFieldSpecified {
+            get {
+                return this.salesQtySQMRemainingFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtySQMRemainingFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtySQMRemainingFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtySQMRemainingFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtySQMReservedField {
+            get {
+                return this.salesQtySQMReservedFieldField;
+            }
+            set {
+                if ((this.salesQtySQMReservedFieldField.Equals(value) != true)) {
+                    this.salesQtySQMReservedFieldField = value;
+                    this.RaisePropertyChanged("salesQtySQMReservedField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtySQMReservedFieldSpecified {
+            get {
+                return this.salesQtySQMReservedFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtySQMReservedFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtySQMReservedFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtySQMReservedFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string salesUnitField {
+            get {
+                return this.salesUnitFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesUnitFieldField, value) != true)) {
+                    this.salesUnitFieldField = value;
+                    this.RaisePropertyChanged("salesUnitField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string serialField {
+            get {
+                return this.serialFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.serialFieldField, value) != true)) {
+                    this.serialFieldField = value;
+                    this.RaisePropertyChanged("serialField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string shadeField {
+            get {
+                return this.shadeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
+                    this.shadeFieldField = value;
+                    this.RaisePropertyChanged("shadeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string sizeField {
+            get {
+                return this.sizeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sizeFieldField, value) != true)) {
+                    this.sizeFieldField = value;
+                    this.RaisePropertyChanged("sizeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string wLocationIdField {
+            get {
+                return this.wLocationIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.wLocationIdFieldField, value) != true)) {
+                    this.wLocationIdFieldField = value;
+                    this.RaisePropertyChanged("wLocationIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string warehouseField {
+            get {
+                return this.warehouseFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.warehouseFieldField, value) != true)) {
+                    this.warehouseFieldField = value;
+                    this.RaisePropertyChanged("warehouseField");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PalletContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.SerializableAttribute()]
+    public partial class PalletContract : TestWebservice.SalesOrder.XppObjectBase {
+        
+        private string gradeFieldField;
+        
+        private string itemIdFieldField;
+        
+        private string nameFieldField;
+        
+        private decimal salesQtyFieldField;
+        
+        private bool salesQtyFieldSpecifiedField;
+        
+        private string serialFieldField;
+        
+        private string shadeFieldField;
+        
+        private string sizeFieldField;
+        
+        private string warehouseLocationFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemIdField {
+            get {
+                return this.itemIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemIdFieldField, value) != true)) {
+                    this.itemIdFieldField = value;
+                    this.RaisePropertyChanged("itemIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string nameField {
+            get {
+                return this.nameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameFieldField, value) != true)) {
+                    this.nameFieldField = value;
+                    this.RaisePropertyChanged("nameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal salesQtyField {
+            get {
+                return this.salesQtyFieldField;
+            }
+            set {
+                if ((this.salesQtyFieldField.Equals(value) != true)) {
+                    this.salesQtyFieldField = value;
+                    this.RaisePropertyChanged("salesQtyField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool salesQtyFieldSpecified {
+            get {
+                return this.salesQtyFieldSpecifiedField;
+            }
+            set {
+                if ((this.salesQtyFieldSpecifiedField.Equals(value) != true)) {
+                    this.salesQtyFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("salesQtyFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string serialField {
+            get {
+                return this.serialFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.serialFieldField, value) != true)) {
+                    this.serialFieldField = value;
+                    this.RaisePropertyChanged("serialField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string shadeField {
+            get {
+                return this.shadeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
+                    this.shadeFieldField = value;
+                    this.RaisePropertyChanged("shadeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string sizeField {
+            get {
+                return this.sizeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sizeFieldField, value) != true)) {
+                    this.sizeFieldField = value;
+                    this.RaisePropertyChanged("sizeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string warehouseLocationField {
+            get {
+                return this.warehouseLocationFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.warehouseLocationFieldField, value) != true)) {
+                    this.warehouseLocationFieldField = value;
+                    this.RaisePropertyChanged("warehouseLocationField");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PickingListStatus", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    public enum PickingListStatus : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Opened = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Closed = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Cancelled = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserData", Namespace="http://schemas.datacontract.org/2004/07/SyncServices")]
+    [System.SerializableAttribute()]
+    public partial class UserData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserType {
+            get {
+                return this.UserTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserTypeField, value) != true)) {
+                    this.UserTypeField = value;
+                    this.RaisePropertyChanged("UserType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SalesOrder.ISalesService")]
     public interface ISalesService {
@@ -906,6 +2182,9 @@ namespace TestWebservice.SalesOrder {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/ISalesService/CheckPalletAvailableMultiResponse")]
         TestWebservice.SalesOrder.SalesLine[] CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, TestWebservice.SalesOrder.PalletItemContract[] pallets, string userName, string device, long lineRecId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/SalesDeliveryNote", ReplyAction="http://tempuri.org/ISalesService/SalesDeliveryNoteResponse")]
+        string SalesDeliveryNote(string _salesId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/UnreservePallet", ReplyAction="http://tempuri.org/ISalesService/UnreservePalletResponse")]
         string UnreservePallet(string pallet, string pickingId, string userName, string device);
@@ -927,6 +2206,21 @@ namespace TestWebservice.SalesOrder {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/ReceivePickingList", ReplyAction="http://tempuri.org/ISalesService/ReceivePickingListResponse")]
         TestWebservice.SalesOrder.SalesTable ReceivePickingList(string userName, string device);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/SaveLoginHistory", ReplyAction="http://tempuri.org/ISalesService/SaveLoginHistoryResponse")]
+        void SaveLoginHistory(string userName, string device, string deviceIp, string projectName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetFGLines", ReplyAction="http://tempuri.org/ISalesService/GetFGLinesResponse")]
+        TestWebservice.SalesOrder.FGLineContract[] GetFGLines();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetDeliveries", ReplyAction="http://tempuri.org/ISalesService/GetDeliveriesResponse")]
+        TestWebservice.SalesOrder.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetUserData", ReplyAction="http://tempuri.org/ISalesService/GetUserDataResponse")]
+        TestWebservice.SalesOrder.UserData[] GetUserData();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/ChangeLoadingLine", ReplyAction="http://tempuri.org/ISalesService/ChangeLoadingLineResponse")]
+        string ChangeLoadingLine(string pickingId, int loadingLineNum);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -976,6 +2270,10 @@ namespace TestWebservice.SalesOrder {
             return base.Channel.CheckPalletAvailableMulti(salesId, itemId, configId, pickingId, pallets, userName, device, lineRecId);
         }
         
+        public string SalesDeliveryNote(string _salesId) {
+            return base.Channel.SalesDeliveryNote(_salesId);
+        }
+        
         public string UnreservePallet(string pallet, string pickingId, string userName, string device) {
             return base.Channel.UnreservePallet(pallet, pickingId, userName, device);
         }
@@ -1002,6 +2300,26 @@ namespace TestWebservice.SalesOrder {
         
         public TestWebservice.SalesOrder.SalesTable ReceivePickingList(string userName, string device) {
             return base.Channel.ReceivePickingList(userName, device);
+        }
+        
+        public void SaveLoginHistory(string userName, string device, string deviceIp, string projectName) {
+            base.Channel.SaveLoginHistory(userName, device, deviceIp, projectName);
+        }
+        
+        public TestWebservice.SalesOrder.FGLineContract[] GetFGLines() {
+            return base.Channel.GetFGLines();
+        }
+        
+        public TestWebservice.SalesOrder.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch) {
+            return base.Channel.GetDeliveries(dateSearch);
+        }
+        
+        public TestWebservice.SalesOrder.UserData[] GetUserData() {
+            return base.Channel.GetUserData();
+        }
+        
+        public string ChangeLoadingLine(string pickingId, int loadingLineNum) {
+            return base.Channel.ChangeLoadingLine(pickingId, loadingLineNum);
         }
     }
 }

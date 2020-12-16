@@ -18,19 +18,19 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/SalesServicesGroup" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://FAC-STAGE-AX04:8101/DynamicsAx/Services/SalesServicesGroup" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SalesServicesGroup8.xsd" MetadataType="Schema" ID="81c7636b-5755-4f2d-847e-31c231ecb87e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd5" />
-    <MetadataFile FileName="SalesServicesGroup81.xsd" MetadataType="Schema" ID="58709545-a37f-45a7-8de3-5f886091c4f5" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd2" />
-    <MetadataFile FileName="SalesServicesGroup82.xsd" MetadataType="Schema" ID="52dc9224-4cb1-4175-b61c-5f69f4ad6875" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd3" />
-    <MetadataFile FileName="SalesServicesGroup83.xsd" MetadataType="Schema" ID="f152f8b9-ab5f-43de-ace7-d9ed8bb7b115" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd0" />
-    <MetadataFile FileName="SalesServicesGroup84.xsd" MetadataType="Schema" ID="5b0724aa-f34a-4b12-89b3-d23cada10353" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd1" />
-    <MetadataFile FileName="SalesServicesGroup2.wsdl" MetadataType="Wsdl" ID="795b8198-1762-4ec4-bf02-e75d360aaaab" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
-    <MetadataFile FileName="SalesServicesGroup21.wsdl" MetadataType="Wsdl" ID="4d2dba52-5f17-47a1-aac8-3864b6ee8f9b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup" />
-    <MetadataFile FileName="SalesServicesGroup85.xsd" MetadataType="Schema" ID="1dd65813-0036-4dd3-9bd2-e5ec41baf4e4" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd6" />
-    <MetadataFile FileName="SalesServicesGroup86.xsd" MetadataType="Schema" ID="1e4a6e65-d37d-4d51-973b-2b05f8770cc0" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd7" />
-    <MetadataFile FileName="SalesServicesGroup87.xsd" MetadataType="Schema" ID="e5940a2e-7df1-4ede-9009-235e863bfa47" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="SalesServicesGroup.wsdl" MetadataType="Wsdl" ID="c188ef49-5ebe-41ef-a69b-bed44dbdc705" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesServicesGroup.xsd" MetadataType="Schema" ID="3bd33597-0d58-407e-9c22-53ef0de1df89" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd1" />
+    <MetadataFile FileName="SalesServicesGroup1.xsd" MetadataType="Schema" ID="b94c2cf0-4b09-40e0-b5eb-dd0cf21b7d29" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd0" />
+    <MetadataFile FileName="SalesServicesGroup2.xsd" MetadataType="Schema" ID="5ce58693-840c-4553-88c5-fd9cdbc397cb" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd3" />
+    <MetadataFile FileName="SalesServicesGroup3.xsd" MetadataType="Schema" ID="f43c07f9-1ba3-4dce-9c45-1400322c4606" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd2" />
+    <MetadataFile FileName="SalesServicesGroup4.xsd" MetadataType="Schema" ID="167664f5-725d-4965-b355-c4cc305dd601" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd5" />
+    <MetadataFile FileName="SalesServicesGroup5.xsd" MetadataType="Schema" ID="77de9f85-5015-463a-b2fe-2c19351cb619" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="SalesServicesGroup1.wsdl" MetadataType="Wsdl" ID="19343fda-c4f7-4333-920f-2d0e7d2d0e3b" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup" />
+    <MetadataFile FileName="SalesServicesGroup6.xsd" MetadataType="Schema" ID="a42a7e8d-eff1-4959-9fa8-435482886dc1" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd6" />
+    <MetadataFile FileName="SalesServicesGroup7.xsd" MetadataType="Schema" ID="9ec7ca9b-65bd-49a2-b99e-43460026eb2e" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?xsd=xsd7" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
