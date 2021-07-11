@@ -370,50 +370,50 @@
     <Content Include="Service References\InventCountingService\SyncServices.InventCountingService.WmsLocationContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\SalesOrderAX\SalesOrder.wsdl" />
-    <None Include="Service References\SalesOrderAX\SalesOrder.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder14.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder1.wsdl" />
-    <None Include="Service References\SalesOrderAX\SalesOrder1.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder141.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder10.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1410.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder11.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1411.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder12.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1412.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder13.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder1413.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder2.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder142.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder3.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder143.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder4.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder144.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder5.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder145.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder6.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder146.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder7.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder147.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder8.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder148.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderAX\SalesOrder9.xsd">
+    <None Include="Service References\SalesOrderAX\SalesOrder149.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SalesOrderAX\SalesOrder2.wsdl" />
+    <None Include="Service References\SalesOrderAX\SalesOrder21.wsdl" />
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.AxdSOPick.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -495,30 +495,30 @@
     <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.SLCapacityContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup21.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup81.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup82.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup83.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup4.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup84.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup5.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup85.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup6.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup86.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup7.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup87.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\UserMgtServices\configuration91.svcinfo" />

@@ -145,7 +145,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="http://tempuri.org" location="http://fac-stage-ax04:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-prod-ax03:8101/DynamicsAx/Services/SalesServicesGroup?wsdl=wsdl0" />
   <wsdl:types />
   <wsdl:binding name="NetTcpBinding_CaseService" type="i0:CaseService">
     <wsp:PolicyReference URI="#NetTcpBinding_CaseService_policy" />
@@ -1092,47 +1092,47 @@
   </wsdl:binding>
   <wsdl:service name="SalesServicesGroup">
     <wsdl:port name="NetTcpBinding_CaseService" binding="tns:NetTcpBinding_CaseService">
-      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_InventOnHandService" binding="tns:NetTcpBinding_InventOnHandService">
-      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_PrePickingService" binding="tns:NetTcpBinding_PrePickingService">
-      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_ProdPlanService" binding="tns:NetTcpBinding_ProdPlanService">
-      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_ProdRequestService" binding="tns:NetTcpBinding_ProdRequestService">
-      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" />
+      <soap12:address location="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
+        <wsa10:Address>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>ax2@kabholding.com</Upn>
+          <Upn>AX2@kabholding.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

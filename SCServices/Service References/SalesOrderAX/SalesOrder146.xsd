@@ -29266,13 +29266,4 @@
       <xs:maxLength value="20" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="AxdExtType_EcoResProductSearchArabicName">
-    <xs:annotation>
-      <xs:documentation xml:lang="EN-US">Search Arabic:</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:minLength value="0" />
-      <xs:maxLength value="500" />
-    </xs:restriction>
-  </xs:simpleType>
 </xs:schema>
