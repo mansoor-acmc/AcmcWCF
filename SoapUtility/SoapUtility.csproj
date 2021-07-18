@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\UserMgtServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="SoapHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -381,9 +386,45 @@
     <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateProdRequestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.AttendanceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.MobileUserLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.UserInfoContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices1.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtServices\UserMgtServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\SalesServicesGroup\" />
+    <WCFMetadataStorage Include="Service References\UserMgtServices\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SalesServicesGroup\SalesServicesGroup.disco" />
@@ -396,6 +437,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SalesServicesGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\UserMgtServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

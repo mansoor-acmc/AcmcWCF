@@ -1,29 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfItemEntity">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/SCSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="ArrayOfInventForItemUnit">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfItemEntity" nillable="true" type="tns:ArrayOfItemEntity" />
-  <xs:complexType name="ItemEntity">
+  <xs:element name="ArrayOfInventForItemUnit" nillable="true" type="tns:ArrayOfInventForItemUnit" />
+  <xs:complexType name="InventForItemUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="itemIdField" nillable="true" type="xs:string" />
+          <xs:element name="unitIdField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
+  <xs:complexType name="XppObjectBase">
     <xs:sequence>
-      <xs:element minOccurs="0" name="AvailableCount" type="xs:decimal" />
-      <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
-      <xs:element minOccurs="0" name="IsManual" type="xs:boolean" />
-      <xs:element minOccurs="0" name="IsMatched" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LockDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="PhysicalCount" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ProcessByIT" type="xs:boolean" />
-      <xs:element minOccurs="0" name="SyncId" type="xs:long" />
-      <xs:element minOccurs="0" name="UoM" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ItemEntity" nillable="true" type="tns:ItemEntity" />
+  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+  <xs:complexType name="ArrayOfWmsLocationContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="WmsLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="locationField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+  <xs:complexType name="ArrayOfSCForTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSCForTransfer" nillable="true" type="tns:ArrayOfSCForTransfer" />
+  <xs:complexType name="SCForTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence>
+          <xs:element name="isPostedField" type="xs:boolean" />
+          <xs:element name="isPostedFieldSpecified" type="xs:boolean" />
+          <xs:element name="isTransferredField" type="xs:boolean" />
+          <xs:element name="isTransferredFieldSpecified" type="xs:boolean" />
+          <xs:element name="itemLocationFromField" nillable="true" type="xs:string" />
+          <xs:element name="itemLocationToField" nillable="true" type="xs:string" />
+          <xs:element name="itemNumberField" nillable="true" type="xs:string" />
+          <xs:element name="itemQuantityField" type="xs:decimal" />
+          <xs:element name="itemQuantityFieldSpecified" type="xs:boolean" />
+          <xs:element name="messageField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
 </xs:schema>

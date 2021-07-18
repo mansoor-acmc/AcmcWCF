@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using SyncServices.UserMgtServices;
+using SoapUtility.UserMgtServices;
 using System.IO;
 
 
@@ -25,6 +25,9 @@ namespace SyncServices
 
         [OperationContract]
         byte[] DownloadFile(ref string fileName,  string filePath);
+
+        [OperationContract]
+        List<UserData> GetUserData(string projectName);
 
         [OperationContract]
         string GetPing();

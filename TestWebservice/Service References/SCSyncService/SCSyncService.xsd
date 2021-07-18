@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/SCSyncService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+  <xs:import schemaLocation="http://localhost:58380/SCSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" />
+  <xs:element name="GetPing">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ResetData">
     <xs:complexType>
       <xs:sequence />
@@ -13,10 +26,48 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetSCUnitOfMeasure">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSCUnitOfMeasureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetSCUnitOfMeasureResult" nillable="true" type="q2:ArrayOfItemEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSCUnitOfMeasureFromAX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="allItems" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSCUnitOfMeasureFromAXResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" minOccurs="0" name="GetSCUnitOfMeasureFromAXResult" nillable="true" type="q3:ArrayOfInventForItemUnit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetUserDataResult" nillable="true" type="q4:ArrayOfUserData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UpdateSCDesktop">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="dt" nillable="true" type="q2:ArrayOfItemEntity" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="dt" nillable="true" type="q5:ArrayOfItemEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -27,15 +78,29 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetPing">
+  <xs:element name="GetWHLocations">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetPingResponse">
+  <xs:element name="GetWHLocationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetPingResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" minOccurs="0" name="GetWHLocationsResult" nillable="true" type="q6:ArrayOfWmsLocationContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferItemsToNewLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfSCForTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferItemsToNewLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" minOccurs="0" name="TransferItemsToNewLocationResult" nillable="true" type="q8:ArrayOfSCForTransfer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

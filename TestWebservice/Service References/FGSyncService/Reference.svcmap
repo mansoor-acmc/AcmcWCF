@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="772745bb-606a-4343-9188-e77ae1074410" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58380/FGSyncService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FGSyncService.wsdl" MetadataType="Wsdl" ID="35114981-bf2e-4bbb-b477-b4bf0405c678" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?wsdl" />
+    <MetadataFile FileName="FGSyncService.xsd" MetadataType="Schema" ID="71a0b32b-9d20-463e-8e9d-0ea5a67b5a6c" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FGSyncService1.xsd" MetadataType="Schema" ID="4c635745-6249-4aa0-a20f-1f4e52b182dd" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FGSyncService2.xsd" MetadataType="Schema" ID="eaaf1726-5072-41c0-a09e-8aa95a3e5fb4" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FGSyncService3.xsd" MetadataType="Schema" ID="91ed5765-0a53-4574-8db8-5bd3ad5138f4" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FGSyncService4.xsd" MetadataType="Schema" ID="42cdda9f-6ec9-4285-9a07-b819e7ee7c26" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd4" />
+    <MetadataFile FileName="FGSyncService5.xsd" MetadataType="Schema" ID="4d2ede7a-627d-431c-9fe6-f50a943537be" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?xsd=xsd5" />
+    <MetadataFile FileName="FGSyncService.disco" MetadataType="Disco" ID="d95206c1-eb28-4971-be4d-991863b9b132" SourceId="1" SourceUrl="http://localhost:58380/FGSyncService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

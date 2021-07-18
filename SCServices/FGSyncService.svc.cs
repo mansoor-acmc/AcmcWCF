@@ -10,6 +10,9 @@ using System.ServiceModel.Web;
 using System.Text;
 using SyncServices.InventCountingService;
 using System.Configuration;
+using SoapUtlUserMgt = SoapUtility.UserMgtServices;
+using AuthenticationUtility;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
@@ -47,29 +50,8 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            List<UserData> allUser = new List<UserData>();
+            return new UserMgtService().GetUserData("PalletScan");
 
-            //UserType are: Admin, Supervisor, Employee
-            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
-
-            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
-            var userLogins = client.GetMobileUsers(context, "PalletScan");
-            foreach(var oneUser in userLogins)
-            {
-                allUser.Add(new UserData()
-                {
-                    UserName = oneUser.UserLoginName,
-                    Password = oneUser.UserPassword,
-                    UserType = oneUser.UserRoleType
-                });
-            }
-                        
-            return allUser;
         }
 
         public string GetPing()

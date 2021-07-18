@@ -464,12 +464,6 @@
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesTableContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
-    <None Include="Service References\UserMgtServices\configuration.svcinfo" />
-    <None Include="Service References\UserMgtServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Service References\SalesOrderAX\configuration91.svcinfo" />
     <None Include="Service References\SalesOrderAX\configuration.svcinfo" />
     <None Include="Service References\SalesOrderAX\Reference.svcmap">
@@ -499,41 +493,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.AttendanceContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.MobileUserLogin.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.UserInfoContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\UserMgtServices\UserMgtServices2.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices21.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices87.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBClass.cs" />
@@ -610,11 +569,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\UserMgtServices\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="UserMgtService.svc.cs">
       <DependentUpon>UserMgtService.svc</DependentUpon>
     </Compile>
@@ -631,7 +585,6 @@
     <WCFMetadataStorage Include="Service References\EAMServices\" />
     <WCFMetadataStorage Include="Service References\InventCountingService\" />
     <WCFMetadataStorage Include="Service References\SalesOrderAX\" />
-    <WCFMetadataStorage Include="Service References\UserMgtServices\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AuthenticationUtility\AuthenticationUtility.csproj">

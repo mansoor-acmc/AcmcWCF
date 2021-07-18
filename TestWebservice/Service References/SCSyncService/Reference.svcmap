@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eeca7a4d-746a-4bda-b1e9-95430c81c53a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0cb07cbd-a43c-42e9-a94b-d8fcc868808a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,11 +21,14 @@
     <MetadataSource Address="http://localhost:58380/SCSyncService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SCSyncService.xsd" MetadataType="Schema" ID="503dc624-f41d-4fec-a663-5922afb9dad5" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SCSyncService.wsdl" MetadataType="Wsdl" ID="0600922b-2523-485b-bdb0-ae9cb49427f5" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?wsdl" />
-    <MetadataFile FileName="SCSyncService.disco" MetadataType="Disco" ID="c4c78f4b-c60b-465c-ad53-77fe940fa895" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?disco" />
-    <MetadataFile FileName="SCSyncService1.xsd" MetadataType="Schema" ID="65623a0e-bd2e-449e-8cec-9eaff4b9d9d9" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SCSyncService2.xsd" MetadataType="Schema" ID="b3a55fb1-d7c2-47cf-92d6-3d57b08afdb4" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SCSyncService.xsd" MetadataType="Schema" ID="7f57d940-da49-4ac2-8f45-8fbbcef40d70" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SCSyncService1.xsd" MetadataType="Schema" ID="cd2d4866-aaf5-4f23-b1dd-ed93148b9535" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SCSyncService2.xsd" MetadataType="Schema" ID="ee3c02e3-d3c7-4036-bfd3-e03b82967fed" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SCSyncService3.xsd" MetadataType="Schema" ID="2ae3f225-3d3f-440d-8fc2-d37883ead657" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SCSyncService.wsdl" MetadataType="Wsdl" ID="e0f14182-3c1e-4611-a6cc-bc897d428c07" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?wsdl" />
+    <MetadataFile FileName="SCSyncService.disco" MetadataType="Disco" ID="cf5a5cea-eab1-4498-a2cd-1421a3cc5a14" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?disco" />
+    <MetadataFile FileName="SCSyncService4.xsd" MetadataType="Schema" ID="9e809c5c-e4d4-417b-bdea-8b2c532d4b93" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SCSyncService5.xsd" MetadataType="Schema" ID="f86f55bb-d016-4fb3-aaa3-73cce04daa64" SourceId="1" SourceUrl="http://localhost:58380/SCSyncService.svc?xsd=xsd5" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

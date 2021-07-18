@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TestWebservice.SCSyncService;
-using TestWebservice.SalesOrder;
-using TestWebservice.ModulaService;
-using TestWebservice.DeviceOps;
 using System.Data;
 using System.IO;
 using System.Diagnostics;
@@ -61,9 +57,33 @@ namespace TestWebservice
 
             //var isSuccess = new Program().CheckLoginAsync("am.bagedo@arabian-ceramics.com", "Amro*7894");
 
+            Console.WriteLine("Sales Users---");
+            SalesService.SalesServiceClient ssClient = new SalesService.SalesServiceClient();
+            var userData = ssClient.GetUserData();
+            
+            
+            foreach (var user in userData)
+            {
+                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+            }
+            
+            Console.WriteLine("");
+            Console.WriteLine("SC Users---");
+            SCSyncService.SCSyncServiceClient scClient = new SCSyncService.SCSyncServiceClient();
+            userData = scClient.GetUserData();
+            foreach (var user in userData)
+            {
+                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+            }
 
-
-
+            Console.WriteLine("");
+            Console.WriteLine("FG Users---");
+            FGSyncService.FGSyncServiceClient fgClient = new FGSyncService.FGSyncServiceClient();
+            userData = fgClient.GetUserData();
+            foreach (var user in userData)
+            {
+                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+            }
 
             /*DMCheckServiceClient dmClient = new DMCheckServiceClient();
             //var locs=dmClient.GetWHLocations();

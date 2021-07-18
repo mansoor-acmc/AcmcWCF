@@ -10,6 +10,9 @@ using System.ServiceModel.Web;
 using System.Text;
 using SyncServices.InventCountingService;
 using System.Configuration;
+using SoapUtlUserMgt = SoapUtility.UserMgtServices;
+using AuthenticationUtility;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
@@ -55,27 +58,7 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            List<UserData> allUser = new List<UserData>();
-
-            //UserType are: Admin, Supervisor, Employee
-            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
-            
-            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
-            var userLogins = client.GetMobileUsers(context, "SCCounting");
-            foreach (var oneUser in userLogins)
-            {
-                allUser.Add(new UserData()
-                {
-                    UserName = oneUser.UserLoginName,
-                    Password = oneUser.UserPassword,
-                    UserType = oneUser.UserRoleType
-                });
-            }
+            return new UserMgtService().GetUserData("SCCounting");            
 
             //allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });
             //allUser.Add(new UserData() { UserName = "usman", Password = "us12345", UserType = "Supervisor" });
@@ -84,8 +67,7 @@ namespace SyncServices
             //allUser.Add(new UserData() { UserName = "zaid", Password = "za2019", UserType = "Employee" });
             //allUser.Add(new UserData() { UserName = "basem", Password = "ba2019", UserType = "Supervisor" });
             //allUser.Add(new UserData() { UserName = "oliver", Password = "ol2019", UserType = "Employee" });
-
-            return allUser;
+                        
         }
         
 

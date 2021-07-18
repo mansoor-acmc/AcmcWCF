@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 using SyncServices.SalesOrderAX;
 using System.Configuration;
 using System.Net;
 using System.Net.Sockets;
+
 namespace SyncServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SalesService" in code, svc and config file together.
@@ -623,28 +622,8 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            List<UserData> allUser = new List<UserData>();
-
-            //UserType are: Admin, Supervisor, Employee
-            UserMgtServices.CallContext context = new UserMgtServices.CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
-
-            UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
-            var userLogins = client.GetMobileUsers(context, "SaleService");
-            foreach (var oneUser in userLogins)
-            {
-                allUser.Add(new UserData()
-                {
-                    UserName = oneUser.UserLoginName,
-                    Password = oneUser.UserPassword,
-                    UserType = oneUser.UserRoleType
-                });
-            }
-            return allUser;
+            return new UserMgtService().GetUserData("SaleService");            
+            
         }
 
         public string ChangeLoadingLine(string pickingId, int loadingLineNum)

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestWebservice</RootNamespace>
     <AssemblyName>TestWebservice</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -68,7 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\FGService\Reference.cs">
+    <Compile Include="Service References\FGSyncService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -93,12 +93,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\SalesOrder\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\SCServiceFrom50\Reference.cs">
+    <Compile Include="Service References\SalesService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -108,7 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\UserMgtServices\Reference.cs">
+    <Compile Include="Service References\UserMgtService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -122,6 +117,35 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SyncServices.DataManagerServices.DMExportContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.DataManagerServices.DMExportMiniContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.DataManagerServices.DMSummaryContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.DataManagerServices.WmsLocationContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.DeviceMessage.datasource" />
+    <None Include="Properties\DataSources\SyncServices.DuplicatePallet.datasource" />
+    <None Include="Properties\DataSources\SyncServices.EAMServices.WOLocationContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.EAMServices.WOTypeContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.InventCountingService.InventAvailContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.InventCountingService.InventForItemUnit.datasource" />
+    <None Include="Properties\DataSources\SyncServices.InventCountingService.SCForTransfer.datasource" />
+    <None Include="Properties\DataSources\SyncServices.InventCountingService.WmsLocationContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.ItemEntity.datasource" />
+    <None Include="Properties\DataSources\SyncServices.ItemForChart.datasource" />
+    <None Include="Properties\DataSources\SyncServices.LocationHistory.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PalletEntity.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PMEquipment.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PMFailureCode.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PMRepairCode.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PMWorkItem.datasource" />
+    <None Include="Properties\DataSources\SyncServices.PMWorkOrder.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesLine.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesOrderAX.CustomerDeliveryContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesOrderAX.FGDeliveryContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesOrderAX.FGLineContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesOrderAX.SalesTableContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.SalesTable.datasource" />
+    <None Include="Properties\DataSources\SyncServices.UserData.datasource" />
+    <None Include="Properties\DataSources\SyncServices.WOPool.datasource" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Service References\DeviceOps\DeviceOps.wsdl" />
     <None Include="Service References\DeviceOps\DeviceOps.xsd">
@@ -132,9 +156,6 @@
     </None>
     <None Include="Service References\DeviceOps\DeviceOps2.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\DeviceOps\TestWebservice.DeviceOps.DeviceMessage.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\DMCheckService\DMCheckService.wsdl" />
     <None Include="Service References\DMCheckService\DMCheckService.xsd">
@@ -155,54 +176,24 @@
     <None Include="Service References\DMCheckService\DMCheckService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportMiniContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMSummaryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DuplicatePallet.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.ItemForChart.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.LocationHistory.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.WmsLocationContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\FGService\FGSyncService.wsdl" />
-    <None Include="Service References\FGService\FGSyncService.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService.wsdl" />
+    <None Include="Service References\FGSyncService\FGSyncService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FGService\FGSyncService1.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FGService\FGSyncService2.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FGService\FGSyncService3.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FGService\FGSyncService31.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FGService\FGSyncService32.xsd">
+    <None Include="Service References\FGSyncService\FGSyncService5.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\FGService\TestWebservice.FGService.InventAvailContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\FGService\TestWebservice.FGService.PalletEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\FGService\TestWebservice.FGService.UserData.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ModulaMovement\ModulaMovement1.wsdl" />
     <None Include="Service References\ModulaMovement\ModulaMovement3.xsd">
@@ -232,33 +223,6 @@
     </None>
     <None Include="Service References\ModulaService\ModulaPR32.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.ItemEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMEquipment.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMFailureCode.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMRepairCode.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMWorkItem.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMWorkOrder.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOLocationContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOPool.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOTypeContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProdRequestService\ProdRequestService.wsdl" />
     <None Include="Service References\ProdRequestService\ProdRequestService.xsd">
@@ -301,61 +265,27 @@
     <None Include="Service References\SalesOrderService\SalesOrderService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.SalesTableContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\SalesService.xsd">
+    <None Include="Service References\SalesService\SalesService.wsdl" />
+    <None Include="Service References\SalesService\SalesService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService1.wsdl" />
-    <None Include="Service References\SalesOrder\SalesService1.xsd">
+    <None Include="Service References\SalesService\SalesService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService2.xsd">
+    <None Include="Service References\SalesService\SalesService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService4.xsd">
+    <None Include="Service References\SalesService\SalesService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService41.xsd">
+    <None Include="Service References\SalesService\SalesService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService42.xsd">
+    <None Include="Service References\SalesService\SalesService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesOrder\SalesService43.xsd">
+    <None Include="Service References\SalesService\SalesService6.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.CustomerDeliveryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.FGDeliveryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.FGLineContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesLine.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.SalesTable.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SalesOrder\TestWebservice.SalesOrder.UserData.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SCServiceFrom50\SCSyncService.wsdl" />
-    <None Include="Service References\SCServiceFrom50\SCSyncService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SCServiceFrom50\SCSyncService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SCServiceFrom50\SCSyncService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SCServiceFrom50\TestWebservice.SCServiceFrom50.ItemEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SCSyncService\SCSyncService.wsdl" />
     <None Include="Service References\SCSyncService\SCSyncService.xsd">
@@ -367,76 +297,46 @@
     <None Include="Service References\SCSyncService\SCSyncService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SCSyncService\TestWebservice.SCSyncService.ItemEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\UserMgtServices\TestWebservice.UserMgtServices.AttendanceContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\UserMgtServices\TestWebservice.UserMgtServices.UserInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\UserMgtServices\UserMgtService.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtService.xsd">
+    <None Include="Service References\SCSyncService\SCSyncService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtService1.xsd">
+    <None Include="Service References\SCSyncService\SCSyncService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtService2.xsd">
+    <None Include="Service References\SCSyncService\SCSyncService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtService3.xsd">
+    <None Include="Service References\UserMgtService\UserMgtService.wsdl" />
+    <None Include="Service References\UserMgtService\UserMgtService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtService4.xsd">
+    <None Include="Service References\UserMgtService\UserMgtService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtService\UserMgtService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtService\UserMgtService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtService\UserMgtService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMgtService\UserMgtService5.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\DeviceOps\" />
     <WCFMetadataStorage Include="Service References\DMCheckService\" />
-    <WCFMetadataStorage Include="Service References\FGService\" />
+    <WCFMetadataStorage Include="Service References\FGSyncService\" />
     <WCFMetadataStorage Include="Service References\ModulaMovement\" />
     <WCFMetadataStorage Include="Service References\ModulaService\" />
     <WCFMetadataStorage Include="Service References\ProdRequestService\" />
     <WCFMetadataStorage Include="Service References\SalesOrderService\" />
-    <WCFMetadataStorage Include="Service References\SalesOrder\" />
-    <WCFMetadataStorage Include="Service References\SCServiceFrom50\" />
+    <WCFMetadataStorage Include="Service References\SalesService\" />
     <WCFMetadataStorage Include="Service References\SCSyncService\" />
-    <WCFMetadataStorage Include="Service References\UserMgtServices\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SalesOrder\configuration91.svcinfo">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SalesOrder\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SalesOrder\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SalesOrder\SalesService1.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCSyncService\SCSyncService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCSyncService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCSyncService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCSyncService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <WCFMetadataStorage Include="Service References\UserMgtService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ModulaService\ModulaPR.disco" />
@@ -449,21 +349,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ModulaService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserMgtServices\UserMgtService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserMgtServices\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserMgtServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -491,36 +376,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\DeviceOps\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FGService\FGSyncService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FGService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FGService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FGService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCServiceFrom50\SCSyncService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCServiceFrom50\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCServiceFrom50\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SCServiceFrom50\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -575,6 +430,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ProdRequestService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\SCSyncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCSyncService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesService\SalesService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtService\UserMgtService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGSyncService\FGSyncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGSyncService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGSyncService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FGSyncService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
