@@ -64,7 +64,7 @@ namespace SyncServices
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
 
-
+            
             UserMgtServices.UserManagementServiceClient client = new UserMgtServices.UserManagementServiceClient();
             var userLogins = client.GetMobileUsers(context, "SCCounting");
             foreach (var oneUser in userLogins)

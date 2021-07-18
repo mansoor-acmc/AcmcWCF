@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/ProdRequestService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:complexType name="ArrayOfSLCapacityContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SLCapacityContract" nillable="true" type="tns:SLCapacityContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSLCapacityContract" nillable="true" type="tns:ArrayOfSLCapacityContract" />
+  <xs:complexType name="SLCapacityContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemSizeThickness" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineCapacitySL" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProductionLine" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SLCapacityContract" nillable="true" type="tns:SLCapacityContract" />
+  <xs:complexType name="SummaryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OtherValue" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SummaryText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SummaryValue" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SummaryContract" nillable="true" type="tns:SummaryContract" />
+  <xs:complexType name="CategoryTypeLookup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+          <xs:element minOccurs="0" name="CategoryType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CategoryTypeLookup" nillable="true" type="tns:CategoryTypeLookup" />
+  <xs:complexType name="LookupContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LookupId" type="xs:int" />
+          <xs:element minOccurs="0" name="LookupString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupContract" nillable="true" type="tns:LookupContract" />
+  <xs:complexType name="CustomerInvoiceContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceLines" nillable="true" type="tns:ArrayOfInvoiceLineContract" />
+          <xs:element minOccurs="0" name="QuantitySold" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesTaxAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SettlementDone" type="q5:NoYes" />
+          <xs:element minOccurs="0" name="SettlementVoucher" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerInvoiceContract" nillable="true" type="tns:CustomerInvoiceContract" />
+  <xs:complexType name="ArrayOfInvoiceLineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceLineContract" nillable="true" type="tns:InvoiceLineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoiceLineContract" nillable="true" type="tns:ArrayOfInvoiceLineContract" />
+  <xs:complexType name="InvoiceLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerItemCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NumOfBoxes" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NumOfPallets" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QtyinSQM" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalAmount" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvoiceLineContract" nillable="true" type="tns:InvoiceLineContract" />
+  <xs:complexType name="OlderStockContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerRequestId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QtyAvailablePhysical" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QtyScheduled" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QtyinSQM" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OlderStockContract" nillable="true" type="tns:OlderStockContract" />
+  <xs:complexType name="OnHandContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnHandQty" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnHandContract" nillable="true" type="tns:OnHandContract" />
+  <xs:complexType name="ProductContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q9:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Classification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Records" nillable="true" type="tns:ArrayOfProductContract" />
+          <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductContract" nillable="true" type="tns:ProductContract" />
+  <xs:complexType name="ArrayOfProductContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductContract" nillable="true" type="tns:ProductContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductContract" nillable="true" type="tns:ArrayOfProductContract" />
+  <xs:complexType name="ProdRequestContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q10:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerItemCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerPONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PPANumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlannedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductionMonth" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductionRequestId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductionStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityG1Produced" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuantityMSProduced" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuantityProduced" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuantityRequested" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RequestedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProdRequestContract" nillable="true" type="tns:ProdRequestContract" />
+  <xs:complexType name="PrePickingContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q11:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasSameDimension" type="q11:NoYes" />
+          <xs:element minOccurs="0" name="MobileNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrePickingLines" nillable="true" type="tns:ArrayOfPrePickingLineContract" />
+          <xs:element minOccurs="0" name="SalesID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="tns:PickingListPreStatus" />
+          <xs:element minOccurs="0" name="TruckPlate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrePickingContract" nillable="true" type="tns:PrePickingContract" />
+  <xs:complexType name="ArrayOfPrePickingLineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrePickingLineContract" nillable="true" type="tns:PrePickingLineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrePickingLineContract" nillable="true" type="tns:ArrayOfPrePickingLineContract" />
+  <xs:complexType name="PrePickingLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q12:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ColorItem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryDimension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SizeItem" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrePickingLineContract" nillable="true" type="tns:PrePickingLineContract" />
+  <xs:complexType name="OnhandByGradeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q13:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalItemNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnhandALL" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OnhandG1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OnhandG2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OnhandG3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OnhandMS" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnhandByGradeContract" nillable="true" type="tns:OnhandByGradeContract" />
+  <xs:complexType name="OnhandByGradeSizeColorContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q14:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalItemNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryDimension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemGrade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnOrdered" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Onhand" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnhandByGradeSizeColorContract" nillable="true" type="tns:OnhandByGradeSizeColorContract" />
+  <xs:complexType name="CustForcastPlanContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q15:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstimatedQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MonthOfYear" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecordId" type="xs:long" />
+          <xs:element minOccurs="0" name="WhichYear" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustForcastPlanContract" nillable="true" type="tns:CustForcastPlanContract" />
+  <xs:complexType name="ItemSizeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q16:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BackGroundColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForeColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ItemSizeContract" nillable="true" type="tns:ItemSizeContract" />
+  <xs:complexType name="ForcastSummaryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q17:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MonthOfYear" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityForcasted" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuantityProduced" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuantityRequested" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WhichYear" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForcastSummaryContract" nillable="true" type="tns:ForcastSummaryContract" />
+  <xs:complexType name="ProdScheduleDragDropContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q18:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Classification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DownTimeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DowntimeHours" type="xs:int" />
+          <xs:element minOccurs="0" name="DowntimeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTimeProduction" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GlazingType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasChangedInRow" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasDowntimeUsed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasTimeSlotUsed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemSizeThickness" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineCapacitySL" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PPANumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlannedProdDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductionDays" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductionHours" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductionLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityRequested" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RecordId" type="xs:long" />
+          <xs:element minOccurs="0" name="ScheduleStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartTimeProduction" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProdScheduleDragDropContract" nillable="true" type="tns:ProdScheduleDragDropContract" />
+  <xs:complexType name="ProdScheduleContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q19:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualProdDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ActualProductionQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Classification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlazingType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PPANumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlannedProdDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductionDays" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductionLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityRequested" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ScheduleStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProdScheduleContract" nillable="true" type="tns:ProdScheduleContract" />
+  <xs:complexType name="CustomerCaseContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q20:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CaseDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CaseMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CaseNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryTypeId" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionType" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerCaseContract" nillable="true" type="tns:CustomerCaseContract" />
+  <xs:simpleType name="PickingListPreStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NewRequest" />
+      <xs:enumeration value="Submitted" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="Generated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PickingListPreStatus" nillable="true" type="tns:PickingListPreStatus" />
+  <xs:complexType name="ArrayOfProdScheduleDragDropContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProdScheduleDragDropContract" nillable="true" type="tns:ProdScheduleDragDropContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProdScheduleDragDropContract" nillable="true" type="tns:ArrayOfProdScheduleDragDropContract" />
+</xs:schema>

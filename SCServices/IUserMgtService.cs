@@ -7,6 +7,7 @@ using System.Text;
 using SyncServices.UserMgtServices;
 using System.IO;
 
+
 namespace SyncServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IUserMgtService" in both code and config file together.
@@ -64,6 +65,7 @@ namespace SyncServices
 
         public UserInfo ToConvert(UserInfoContract axdline)
         {
+            
             if (axdline != null)
             {
                 return new UserInfo()

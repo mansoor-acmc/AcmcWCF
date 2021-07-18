@@ -39,7 +39,7 @@ namespace SyncServices
                 MessageId = Guid.NewGuid().ToString(),
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
-
+            
             SalesTableContract contract = client.findSalesOrder(context, salesId);
             client.Close();
 

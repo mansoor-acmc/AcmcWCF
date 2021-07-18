@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd7" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd2" namespace="CaseService" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerInvoices">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoices_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesResponse">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesResponse_Headers">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q2:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetCustomerInvoices_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q3:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesByDate">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvoicesByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesByDate_Headers">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q4:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesByDateResponse">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvoicesByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInvoicesByDateResponse_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q5:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetCustomerInvoicesByDate_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q6:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStock">
+    <wsdl:part name="parameters" element="tns:GetCustomerOlderStock" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStock_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockResponse">
+    <wsdl:part name="parameters" element="tns:GetCustomerOlderStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockResponse_Headers">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q8:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetCustomerOlderStock_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q9:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockOverall">
+    <wsdl:part name="parameters" element="tns:GetCustomerOlderStockOverall" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockOverall_Headers">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q10:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockOverallResponse">
+    <wsdl:part name="parameters" element="tns:GetCustomerOlderStockOverallResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOlderStockOverallResponse_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q11:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetCustomerOlderStockOverall_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q12:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoice">
+    <wsdl:part name="parameters" element="tns:GetInvoice" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoice_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:GetInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceResponse_Headers">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q14:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetInvoice_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q15:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesByDate">
+    <wsdl:part name="parameters" element="tns:GetInvoicesByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesByDate_Headers">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q16:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesByDateResponse">
+    <wsdl:part name="parameters" element="tns:GetInvoicesByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesByDateResponse_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q17:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetInvoicesByDate_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q18:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesBySalesId">
+    <wsdl:part name="parameters" element="tns:GetInvoicesBySalesId" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesBySalesId_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesBySalesIdResponse">
+    <wsdl:part name="parameters" element="tns:GetInvoicesBySalesIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesBySalesIdResponse_Headers">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q20:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetInvoicesBySalesId_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q21:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomer">
+    <wsdl:part name="parameters" element="tns:GetOnHandByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomer_Headers">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q22:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerResponse">
+    <wsdl:part name="parameters" element="tns:GetOnHandByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerResponse_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q23:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetOnHandByCustomer_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q24:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerZeroStock">
+    <wsdl:part name="parameters" element="tns:GetOnHandByCustomerZeroStock" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerZeroStock_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerZeroStockResponse">
+    <wsdl:part name="parameters" element="tns:GetOnHandByCustomerZeroStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByCustomerZeroStockResponse_Headers">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q26:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetOnHandByCustomerZeroStock_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q27:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByItem">
+    <wsdl:part name="parameters" element="tns:GetOnHandByItem" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByItem_Headers">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q28:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByItemResponse">
+    <wsdl:part name="parameters" element="tns:GetOnHandByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnHandByItemResponse_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q29:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetOnHandByItem_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q30:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandQueryByCustomer">
+    <wsdl:part name="parameters" element="tns:GetOnhandQueryByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandQueryByCustomer_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandQueryByCustomerResponse">
+    <wsdl:part name="parameters" element="tns:GetOnhandQueryByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandQueryByCustomerResponse_Headers">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q32:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetOnhandQueryByCustomer_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q33:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfo">
+    <wsdl:part name="parameters" element="tns:GetProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfo_Headers">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q34:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfoResponse">
+    <wsdl:part name="parameters" element="tns:GetProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfoResponse_Headers">
+    <wsdl:part xmlns:q35="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q35:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetProductInfo_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q36:Fault" />
+  </wsdl:message>
+  <wsdl:message name="getProductionRequests">
+    <wsdl:part name="parameters" element="tns:getProductionRequests" />
+  </wsdl:message>
+  <wsdl:message name="getProductionRequests_Headers">
+    <wsdl:part xmlns:q37="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q37:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="getProductionRequestsResponse">
+    <wsdl:part name="parameters" element="tns:getProductionRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductionRequestsResponse_Headers">
+    <wsdl:part xmlns:q38="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q38:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_getProductionRequests_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q39:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByCustomerAll">
+    <wsdl:part name="parameters" element="tns:GetProductsByCustomerAll" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByCustomerAll_Headers">
+    <wsdl:part xmlns:q40="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q40:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByCustomerAllResponse">
+    <wsdl:part name="parameters" element="tns:GetProductsByCustomerAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByCustomerAllResponse_Headers">
+    <wsdl:part xmlns:q41="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q41:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetProductsByCustomerAll_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q42:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByModel">
+    <wsdl:part name="parameters" element="tns:GetProductsByModel" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByModel_Headers">
+    <wsdl:part xmlns:q43="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q43:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByModelResponse">
+    <wsdl:part name="parameters" element="tns:GetProductsByModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByModelResponse_Headers">
+    <wsdl:part xmlns:q44="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q44:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetProductsByModel_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q45:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsBySize">
+    <wsdl:part name="parameters" element="tns:GetProductsBySize" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsBySize_Headers">
+    <wsdl:part xmlns:q46="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q46:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsBySizeResponse">
+    <wsdl:part name="parameters" element="tns:GetProductsBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsBySizeResponse_Headers">
+    <wsdl:part xmlns:q47="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q47:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_GetProductsBySize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q48:Fault" />
+  </wsdl:message>
+  <wsdl:message name="OutstandingBalance">
+    <wsdl:part name="parameters" element="tns:OutstandingBalance" />
+  </wsdl:message>
+  <wsdl:message name="OutstandingBalance_Headers">
+    <wsdl:part xmlns:q49="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q49:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="OutstandingBalanceResponse">
+    <wsdl:part name="parameters" element="tns:OutstandingBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="OutstandingBalanceResponse_Headers">
+    <wsdl:part xmlns:q50="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q50:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="InventOnHandService_OutstandingBalance_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q51:Fault" />
+  </wsdl:message>
+  <wsdl:message name="CreatePrePicking">
+    <wsdl:part name="parameters" element="tns:CreatePrePicking" />
+  </wsdl:message>
+  <wsdl:message name="CreatePrePicking_Headers">
+    <wsdl:part xmlns:q52="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q52:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreatePrePickingResponse">
+    <wsdl:part name="parameters" element="tns:CreatePrePickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePrePickingResponse_Headers">
+    <wsdl:part xmlns:q53="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q53:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_CreatePrePicking_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q54:Fault" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrePicking">
+    <wsdl:part name="parameters" element="tns:DeletePrePicking" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrePicking_Headers">
+    <wsdl:part xmlns:q55="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q55:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrePickingResponse">
+    <wsdl:part name="parameters" element="tns:DeletePrePickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrePickingResponse_Headers">
+    <wsdl:part xmlns:q56="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q56:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_DeletePrePicking_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q57:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGrade">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGrade" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGrade_Headers">
+    <wsdl:part xmlns:q58="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q58:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeResponse">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeResponse_Headers">
+    <wsdl:part xmlns:q59="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q59:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetOnhandByGrade_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q60:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSize">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGradeSize" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSize_Headers">
+    <wsdl:part xmlns:q61="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q61:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeResponse">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGradeSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeResponse_Headers">
+    <wsdl:part xmlns:q62="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q62:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetOnhandByGradeSize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q63:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeWithOnOrder">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGradeSizeWithOnOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeWithOnOrder_Headers">
+    <wsdl:part xmlns:q64="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q64:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeWithOnOrderResponse">
+    <wsdl:part name="parameters" element="tns:GetOnhandByGradeSizeWithOnOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnhandByGradeSizeWithOnOrderResponse_Headers">
+    <wsdl:part xmlns:q65="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q65:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetOnhandByGradeSizeWithOnOrder_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q66:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetPrePickings">
+    <wsdl:part name="parameters" element="tns:GetPrePickings" />
+  </wsdl:message>
+  <wsdl:message name="GetPrePickings_Headers">
+    <wsdl:part xmlns:q67="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q67:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetPrePickingsResponse">
+    <wsdl:part name="parameters" element="tns:GetPrePickingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrePickingsResponse_Headers">
+    <wsdl:part xmlns:q68="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q68:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetPrePickings_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q69:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetSinglePrePicking">
+    <wsdl:part name="parameters" element="tns:GetSinglePrePicking" />
+  </wsdl:message>
+  <wsdl:message name="GetSinglePrePicking_Headers">
+    <wsdl:part xmlns:q70="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q70:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetSinglePrePickingResponse">
+    <wsdl:part name="parameters" element="tns:GetSinglePrePickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSinglePrePickingResponse_Headers">
+    <wsdl:part xmlns:q71="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q71:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetSinglePrePicking_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q72:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusLookup">
+    <wsdl:part name="parameters" element="tns:GetStatusLookup" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusLookup_Headers">
+    <wsdl:part xmlns:q73="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q73:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusLookupResponse">
+    <wsdl:part name="parameters" element="tns:GetStatusLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusLookupResponse_Headers">
+    <wsdl:part xmlns:q74="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q74:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_GetStatusLookup_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q75:Fault" />
+  </wsdl:message>
+  <wsdl:message name="StatusUpdatePrePicking">
+    <wsdl:part name="parameters" element="tns:StatusUpdatePrePicking" />
+  </wsdl:message>
+  <wsdl:message name="StatusUpdatePrePicking_Headers">
+    <wsdl:part xmlns:q76="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q76:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="StatusUpdatePrePickingResponse">
+    <wsdl:part name="parameters" element="tns:StatusUpdatePrePickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatusUpdatePrePickingResponse_Headers">
+    <wsdl:part xmlns:q77="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q77:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_StatusUpdatePrePicking_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q78:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrePicking">
+    <wsdl:part name="parameters" element="tns:UpdatePrePicking" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrePicking_Headers">
+    <wsdl:part xmlns:q79="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q79:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrePickingResponse">
+    <wsdl:part name="parameters" element="tns:UpdatePrePickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrePickingResponse_Headers">
+    <wsdl:part xmlns:q80="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q80:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="PrePickingService_UpdatePrePicking_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q81:Fault" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustPlan">
+    <wsdl:part name="parameters" element="tns:CreateCustPlan" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustPlan_Headers">
+    <wsdl:part xmlns:q82="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q82:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustPlanResponse">
+    <wsdl:part name="parameters" element="tns:CreateCustPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustPlanResponse_Headers">
+    <wsdl:part xmlns:q83="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q83:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_CreateCustPlan_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q84:Fault" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustPlan">
+    <wsdl:part name="parameters" element="tns:DeleteCustPlan" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustPlan_Headers">
+    <wsdl:part xmlns:q85="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q85:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustPlanResponse">
+    <wsdl:part name="parameters" element="tns:DeleteCustPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustPlanResponse_Headers">
+    <wsdl:part xmlns:q86="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q86:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_DeleteCustPlan_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q87:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlan">
+    <wsdl:part name="parameters" element="tns:GetCustPlan" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlan_Headers">
+    <wsdl:part xmlns:q88="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q88:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanResponse">
+    <wsdl:part name="parameters" element="tns:GetCustPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanResponse_Headers">
+    <wsdl:part xmlns:q89="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q89:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetCustPlan_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q90:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonth">
+    <wsdl:part name="parameters" element="tns:GetCustPlanByMonth" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonth_Headers">
+    <wsdl:part xmlns:q91="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q91:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthResponse">
+    <wsdl:part name="parameters" element="tns:GetCustPlanByMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthResponse_Headers">
+    <wsdl:part xmlns:q92="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q92:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetCustPlanByMonth_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q93:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthSize">
+    <wsdl:part name="parameters" element="tns:GetCustPlanByMonthSize" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthSize_Headers">
+    <wsdl:part xmlns:q94="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q94:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthSizeResponse">
+    <wsdl:part name="parameters" element="tns:GetCustPlanByMonthSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanByMonthSizeResponse_Headers">
+    <wsdl:part xmlns:q95="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q95:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetCustPlanByMonthSize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q96:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanBySize">
+    <wsdl:part name="parameters" element="tns:GetCustPlanBySize" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanBySize_Headers">
+    <wsdl:part xmlns:q97="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q97:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanBySizeResponse">
+    <wsdl:part name="parameters" element="tns:GetCustPlanBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustPlanBySizeResponse_Headers">
+    <wsdl:part xmlns:q98="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q98:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetCustPlanBySize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q99:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSizes">
+    <wsdl:part name="parameters" element="tns:GetItemSizes" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSizes_Headers">
+    <wsdl:part xmlns:q100="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q100:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSizesResponse">
+    <wsdl:part name="parameters" element="tns:GetItemSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSizesResponse_Headers">
+    <wsdl:part xmlns:q101="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q101:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetItemSizes_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q102:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastBySize">
+    <wsdl:part name="parameters" element="tns:GetMonthlyForcastBySize" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastBySize_Headers">
+    <wsdl:part xmlns:q103="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q103:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastBySizeResponse">
+    <wsdl:part name="parameters" element="tns:GetMonthlyForcastBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastBySizeResponse_Headers">
+    <wsdl:part xmlns:q104="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q104:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetMonthlyForcastBySize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q105:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastSummary">
+    <wsdl:part name="parameters" element="tns:GetMonthlyForcastSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastSummary_Headers">
+    <wsdl:part xmlns:q106="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q106:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastSummaryResponse">
+    <wsdl:part name="parameters" element="tns:GetMonthlyForcastSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyForcastSummaryResponse_Headers">
+    <wsdl:part xmlns:q107="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q107:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetMonthlyForcastSummary_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q108:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetSortingLines">
+    <wsdl:part name="parameters" element="tns:GetSortingLines" />
+  </wsdl:message>
+  <wsdl:message name="GetSortingLines_Headers">
+    <wsdl:part xmlns:q109="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q109:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetSortingLinesResponse">
+    <wsdl:part name="parameters" element="tns:GetSortingLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSortingLinesResponse_Headers">
+    <wsdl:part xmlns:q110="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q110:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetSortingLines_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q111:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetYearlyForcastBySize">
+    <wsdl:part name="parameters" element="tns:GetYearlyForcastBySize" />
+  </wsdl:message>
+  <wsdl:message name="GetYearlyForcastBySize_Headers">
+    <wsdl:part xmlns:q112="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q112:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetYearlyForcastBySizeResponse">
+    <wsdl:part name="parameters" element="tns:GetYearlyForcastBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYearlyForcastBySizeResponse_Headers">
+    <wsdl:part xmlns:q113="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q113:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_GetYearlyForcastBySize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q114:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustPlan">
+    <wsdl:part name="parameters" element="tns:UpdateCustPlan" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustPlan_Headers">
+    <wsdl:part xmlns:q115="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q115:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustPlanResponse">
+    <wsdl:part name="parameters" element="tns:UpdateCustPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustPlanResponse_Headers">
+    <wsdl:part xmlns:q116="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q116:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdPlanService_UpdateCustPlan_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q117="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q117:Fault" />
+  </wsdl:message>
+  <wsdl:message name="CreateProdRequest">
+    <wsdl:part name="parameters" element="tns:CreateProdRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateProdRequest_Headers">
+    <wsdl:part xmlns:q118="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q118:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreateProdRequestResponse">
+    <wsdl:part name="parameters" element="tns:CreateProdRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateProdRequestResponse_Headers">
+    <wsdl:part xmlns:q119="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q119:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_CreateProdRequest_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q120="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q120:Fault" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProdRequest">
+    <wsdl:part name="parameters" element="tns:DeleteProdRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProdRequest_Headers">
+    <wsdl:part xmlns:q121="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q121:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProdRequestResponse">
+    <wsdl:part name="parameters" element="tns:DeleteProdRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProdRequestResponse_Headers">
+    <wsdl:part xmlns:q122="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q122:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_DeleteProdRequest_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q123="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q123:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProductionLines">
+    <wsdl:part name="parameters" element="tns:GetAllProductionLines" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProductionLines_Headers">
+    <wsdl:part xmlns:q124="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q124:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProductionLinesResponse">
+    <wsdl:part name="parameters" element="tns:GetAllProductionLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProductionLinesResponse_Headers">
+    <wsdl:part xmlns:q125="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q125:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetAllProductionLines_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q126="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q126:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetLineCapacities">
+    <wsdl:part name="parameters" element="tns:GetLineCapacities" />
+  </wsdl:message>
+  <wsdl:message name="GetLineCapacities_Headers">
+    <wsdl:part xmlns:q127="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q127:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetLineCapacitiesResponse">
+    <wsdl:part name="parameters" element="tns:GetLineCapacitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLineCapacitiesResponse_Headers">
+    <wsdl:part xmlns:q128="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q128:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetLineCapacities_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q129="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q129:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProdSchedules">
+    <wsdl:part name="parameters" element="tns:GetNewProdSchedules" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProdSchedules_Headers">
+    <wsdl:part xmlns:q130="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q130:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProdSchedulesResponse">
+    <wsdl:part name="parameters" element="tns:GetNewProdSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProdSchedulesResponse_Headers">
+    <wsdl:part xmlns:q131="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q131:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetNewProdSchedules_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q132="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q132:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdReqStatusLookup">
+    <wsdl:part name="parameters" element="tns:GetProdReqStatusLookup" />
+  </wsdl:message>
+  <wsdl:message name="GetProdReqStatusLookup_Headers">
+    <wsdl:part xmlns:q133="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q133:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdReqStatusLookupResponse">
+    <wsdl:part name="parameters" element="tns:GetProdReqStatusLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdReqStatusLookupResponse_Headers">
+    <wsdl:part xmlns:q134="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q134:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdReqStatusLookup_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q135="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q135:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByDateList">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByDateList" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByDateList_Headers">
+    <wsdl:part xmlns:q136="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q136:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByDateListResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByDateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByDateListResponse_Headers">
+    <wsdl:part xmlns:q137="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q137:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestByDateList_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q138="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q138:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByMonthAndSize">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByMonthAndSize" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByMonthAndSize_Headers">
+    <wsdl:part xmlns:q139="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q139:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByMonthAndSizeResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByMonthAndSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByMonthAndSizeResponse_Headers">
+    <wsdl:part xmlns:q140="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q140:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestByMonthAndSize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q141="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q141:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByStatusList">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByStatusList" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByStatusList_Headers">
+    <wsdl:part xmlns:q142="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q142:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByStatusListResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestByStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestByStatusListResponse_Headers">
+    <wsdl:part xmlns:q143="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q143:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestByStatusList_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q144="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q144:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItem">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListByItem" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItem_Headers">
+    <wsdl:part xmlns:q145="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q145:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemResponse_Headers">
+    <wsdl:part xmlns:q146="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q146:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestListByItem_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q147="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q147:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemNotFinished">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListByItemNotFinished" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemNotFinished_Headers">
+    <wsdl:part xmlns:q148="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q148:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemNotFinishedResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListByItemNotFinishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListByItemNotFinishedResponse_Headers">
+    <wsdl:part xmlns:q149="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q149:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestListByItemNotFinished_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q150="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q150:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListBySize">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListBySize" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListBySize_Headers">
+    <wsdl:part xmlns:q151="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q151:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListBySizeResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestListBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestListBySizeResponse_Headers">
+    <wsdl:part xmlns:q152="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q152:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestListBySize_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q153="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q153:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestSummaryByCust">
+    <wsdl:part name="parameters" element="tns:GetProdRequestSummaryByCust" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestSummaryByCust_Headers">
+    <wsdl:part xmlns:q154="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q154:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestSummaryByCustResponse">
+    <wsdl:part name="parameters" element="tns:GetProdRequestSummaryByCustResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdRequestSummaryByCustResponse_Headers">
+    <wsdl:part xmlns:q155="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q155:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdRequestSummaryByCust_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q156="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q156:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedules">
+    <wsdl:part name="parameters" element="tns:GetProdSchedules" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedules_Headers">
+    <wsdl:part xmlns:q157="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q157:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesResponse">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesResponse_Headers">
+    <wsdl:part xmlns:q158="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q158:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdSchedules_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q159="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q159:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByDate">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByDate_Headers">
+    <wsdl:part xmlns:q160="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q160:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByDateResponse">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByDateResponse_Headers">
+    <wsdl:part xmlns:q161="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q161:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdSchedulesByDate_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q162="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q162:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByItem">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByItem" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByItem_Headers">
+    <wsdl:part xmlns:q163="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q163:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByItemResponse">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByItemResponse_Headers">
+    <wsdl:part xmlns:q164="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q164:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdSchedulesByItem_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q165="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q165:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByRequest">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByRequest_Headers">
+    <wsdl:part xmlns:q166="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q166:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByRequestResponse">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesByRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesByRequestResponse_Headers">
+    <wsdl:part xmlns:q167="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q167:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdSchedulesByRequest_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q168="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q168:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesRearrange">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesRearrange" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesRearrange_Headers">
+    <wsdl:part xmlns:q169="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q169:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesRearrangeResponse">
+    <wsdl:part name="parameters" element="tns:GetProdSchedulesRearrangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProdSchedulesRearrangeResponse_Headers">
+    <wsdl:part xmlns:q170="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q170:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProdSchedulesRearrange_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q171="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q171:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequest">
+    <wsdl:part name="parameters" element="tns:GetProductionRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequest_Headers">
+    <wsdl:part xmlns:q172="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q172:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestResponse">
+    <wsdl:part name="parameters" element="tns:GetProductionRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestResponse_Headers">
+    <wsdl:part xmlns:q173="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q173:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProductionRequest_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q174="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q174:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestList">
+    <wsdl:part name="parameters" element="tns:GetProductionRequestList" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestList_Headers">
+    <wsdl:part xmlns:q175="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q175:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestListResponse">
+    <wsdl:part name="parameters" element="tns:GetProductionRequestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductionRequestListResponse_Headers">
+    <wsdl:part xmlns:q176="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q176:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_GetProductionRequestList_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q177="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q177:Fault" />
+  </wsdl:message>
+  <wsdl:message name="SaveProdSchedules">
+    <wsdl:part name="parameters" element="tns:SaveProdSchedules" />
+  </wsdl:message>
+  <wsdl:message name="SaveProdSchedules_Headers">
+    <wsdl:part xmlns:q178="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q178:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SaveProdSchedulesResponse">
+    <wsdl:part name="parameters" element="tns:SaveProdSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveProdSchedulesResponse_Headers">
+    <wsdl:part xmlns:q179="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q179:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_SaveProdSchedules_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q180="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q180:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProdRequest">
+    <wsdl:part name="parameters" element="tns:UpdateProdRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProdRequest_Headers">
+    <wsdl:part xmlns:q181="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q181:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProdRequestResponse">
+    <wsdl:part name="parameters" element="tns:UpdateProdRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProdRequestResponse_Headers">
+    <wsdl:part xmlns:q182="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q182:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="ProdRequestService_UpdateProdRequest_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q183="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q183:Fault" />
+  </wsdl:message>
+  <wsdl:portType name="InventOnHandService">
+    <wsdl:operation name="GetCustomerInvoices">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerInvoices" name="GetCustomerInvoices" message="tns:GetCustomerInvoices" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesResponse" name="GetCustomerInvoicesResponse" message="tns:GetCustomerInvoicesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetCustomerInvoices_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInvoicesByDate">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDate" name="GetCustomerInvoicesByDate" message="tns:GetCustomerInvoicesByDate" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerInvoicesByDateResponse" name="GetCustomerInvoicesByDateResponse" message="tns:GetCustomerInvoicesByDateResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetCustomerInvoicesByDate_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOlderStock">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStock" name="GetCustomerOlderStock" message="tns:GetCustomerOlderStock" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockResponse" name="GetCustomerOlderStockResponse" message="tns:GetCustomerOlderStockResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetCustomerOlderStock_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOlderStockOverall">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverall" name="GetCustomerOlderStockOverall" message="tns:GetCustomerOlderStockOverall" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetCustomerOlderStockOverallResponse" name="GetCustomerOlderStockOverallResponse" message="tns:GetCustomerOlderStockOverallResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetCustomerOlderStockOverall_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetInvoice" name="GetInvoice" message="tns:GetInvoice" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetInvoiceResponse" name="GetInvoiceResponse" message="tns:GetInvoiceResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetInvoice_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesByDate">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetInvoicesByDate" name="GetInvoicesByDate" message="tns:GetInvoicesByDate" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetInvoicesByDateResponse" name="GetInvoicesByDateResponse" message="tns:GetInvoicesByDateResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetInvoicesByDate_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesBySalesId">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesId" name="GetInvoicesBySalesId" message="tns:GetInvoicesBySalesId" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetInvoicesBySalesIdResponse" name="GetInvoicesBySalesIdResponse" message="tns:GetInvoicesBySalesIdResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetInvoicesBySalesId_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByCustomer">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomer" name="GetOnHandByCustomer" message="tns:GetOnHandByCustomer" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerResponse" name="GetOnHandByCustomerResponse" message="tns:GetOnHandByCustomerResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetOnHandByCustomer_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByCustomerZeroStock">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStock" name="GetOnHandByCustomerZeroStock" message="tns:GetOnHandByCustomerZeroStock" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByCustomerZeroStockResponse" name="GetOnHandByCustomerZeroStockResponse" message="tns:GetOnHandByCustomerZeroStockResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetOnHandByCustomerZeroStock_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnHandByItem">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByItem" name="GetOnHandByItem" message="tns:GetOnHandByItem" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetOnHandByItemResponse" name="GetOnHandByItemResponse" message="tns:GetOnHandByItemResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetOnHandByItem_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandQueryByCustomer">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomer" name="GetOnhandQueryByCustomer" message="tns:GetOnhandQueryByCustomer" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetOnhandQueryByCustomerResponse" name="GetOnhandQueryByCustomerResponse" message="tns:GetOnhandQueryByCustomerResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetOnhandQueryByCustomer_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetProductInfo" name="GetProductInfo" message="tns:GetProductInfo" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetProductInfoResponse" name="GetProductInfoResponse" message="tns:GetProductInfoResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetProductInfo_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductionRequests">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/getProductionRequests" name="getProductionRequests" message="tns:getProductionRequests" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/getProductionRequestsResponse" name="getProductionRequestsResponse" message="tns:getProductionRequestsResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_getProductionRequests_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByCustomerAll">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAll" name="GetProductsByCustomerAll" message="tns:GetProductsByCustomerAll" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetProductsByCustomerAllResponse" name="GetProductsByCustomerAllResponse" message="tns:GetProductsByCustomerAllResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetProductsByCustomerAll_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByModel">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetProductsByModel" name="GetProductsByModel" message="tns:GetProductsByModel" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetProductsByModelResponse" name="GetProductsByModelResponse" message="tns:GetProductsByModelResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetProductsByModel_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsBySize">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/GetProductsBySize" name="GetProductsBySize" message="tns:GetProductsBySize" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/GetProductsBySizeResponse" name="GetProductsBySizeResponse" message="tns:GetProductsBySizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_GetProductsBySize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OutstandingBalance">
+      <wsdl:input wsam:Action="http://tempuri.org/InventOnHandService/OutstandingBalance" name="OutstandingBalance" message="tns:OutstandingBalance" />
+      <wsdl:output wsam:Action="http://tempuri.org/InventOnHandService/OutstandingBalanceResponse" name="OutstandingBalanceResponse" message="tns:OutstandingBalanceResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/InventOnHandService/Fault" name="SoapServiceFaultFault" message="tns:InventOnHandService_OutstandingBalance_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PrePickingService">
+    <wsdl:operation name="CreatePrePicking">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/CreatePrePicking" name="CreatePrePicking" message="tns:CreatePrePicking" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/CreatePrePickingResponse" name="CreatePrePickingResponse" message="tns:CreatePrePickingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_CreatePrePicking_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrePicking">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/DeletePrePicking" name="DeletePrePicking" message="tns:DeletePrePicking" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/DeletePrePickingResponse" name="DeletePrePickingResponse" message="tns:DeletePrePickingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_DeletePrePicking_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGrade">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGrade" name="GetOnhandByGrade" message="tns:GetOnhandByGrade" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGradeResponse" name="GetOnhandByGradeResponse" message="tns:GetOnhandByGradeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetOnhandByGrade_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGradeSize">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSize" name="GetOnhandByGradeSize" message="tns:GetOnhandByGradeSize" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeResponse" name="GetOnhandByGradeSizeResponse" message="tns:GetOnhandByGradeSizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetOnhandByGradeSize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhandByGradeSizeWithOnOrder">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrder" name="GetOnhandByGradeSizeWithOnOrder" message="tns:GetOnhandByGradeSizeWithOnOrder" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetOnhandByGradeSizeWithOnOrderResponse" name="GetOnhandByGradeSizeWithOnOrderResponse" message="tns:GetOnhandByGradeSizeWithOnOrderResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetOnhandByGradeSizeWithOnOrder_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrePickings">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetPrePickings" name="GetPrePickings" message="tns:GetPrePickings" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetPrePickingsResponse" name="GetPrePickingsResponse" message="tns:GetPrePickingsResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetPrePickings_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinglePrePicking">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetSinglePrePicking" name="GetSinglePrePicking" message="tns:GetSinglePrePicking" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetSinglePrePickingResponse" name="GetSinglePrePickingResponse" message="tns:GetSinglePrePickingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetSinglePrePicking_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusLookup">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/GetStatusLookup" name="GetStatusLookup" message="tns:GetStatusLookup" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/GetStatusLookupResponse" name="GetStatusLookupResponse" message="tns:GetStatusLookupResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_GetStatusLookup_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusUpdatePrePicking">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking" name="StatusUpdatePrePicking" message="tns:StatusUpdatePrePicking" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse" name="StatusUpdatePrePickingResponse" message="tns:StatusUpdatePrePickingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_StatusUpdatePrePicking_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrePicking">
+      <wsdl:input wsam:Action="http://tempuri.org/PrePickingService/UpdatePrePicking" name="UpdatePrePicking" message="tns:UpdatePrePicking" />
+      <wsdl:output wsam:Action="http://tempuri.org/PrePickingService/UpdatePrePickingResponse" name="UpdatePrePickingResponse" message="tns:UpdatePrePickingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/PrePickingService/Fault" name="SoapServiceFaultFault" message="tns:PrePickingService_UpdatePrePicking_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProdPlanService">
+    <wsdl:operation name="CreateCustPlan">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/CreateCustPlan" name="CreateCustPlan" message="tns:CreateCustPlan" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/CreateCustPlanResponse" name="CreateCustPlanResponse" message="tns:CreateCustPlanResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_CreateCustPlan_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustPlan">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/DeleteCustPlan" name="DeleteCustPlan" message="tns:DeleteCustPlan" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/DeleteCustPlanResponse" name="DeleteCustPlanResponse" message="tns:DeleteCustPlanResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_DeleteCustPlan_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlan">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlan" name="GetCustPlan" message="tns:GetCustPlan" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanResponse" name="GetCustPlanResponse" message="tns:GetCustPlanResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetCustPlan_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanByMonth">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonth" name="GetCustPlanByMonth" message="tns:GetCustPlanByMonth" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthResponse" name="GetCustPlanByMonthResponse" message="tns:GetCustPlanByMonthResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetCustPlanByMonth_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanByMonthSize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSize" name="GetCustPlanByMonthSize" message="tns:GetCustPlanByMonthSize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanByMonthSizeResponse" name="GetCustPlanByMonthSizeResponse" message="tns:GetCustPlanByMonthSizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetCustPlanByMonthSize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustPlanBySize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanBySize" name="GetCustPlanBySize" message="tns:GetCustPlanBySize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetCustPlanBySizeResponse" name="GetCustPlanBySizeResponse" message="tns:GetCustPlanBySizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetCustPlanBySize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSizes">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetItemSizes" name="GetItemSizes" message="tns:GetItemSizes" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetItemSizesResponse" name="GetItemSizesResponse" message="tns:GetItemSizesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetItemSizes_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyForcastBySize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySize" name="GetMonthlyForcastBySize" message="tns:GetMonthlyForcastBySize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastBySizeResponse" name="GetMonthlyForcastBySizeResponse" message="tns:GetMonthlyForcastBySizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetMonthlyForcastBySize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyForcastSummary">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummary" name="GetMonthlyForcastSummary" message="tns:GetMonthlyForcastSummary" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetMonthlyForcastSummaryResponse" name="GetMonthlyForcastSummaryResponse" message="tns:GetMonthlyForcastSummaryResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetMonthlyForcastSummary_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingLines">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetSortingLines" name="GetSortingLines" message="tns:GetSortingLines" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetSortingLinesResponse" name="GetSortingLinesResponse" message="tns:GetSortingLinesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetSortingLines_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyForcastBySize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySize" name="GetYearlyForcastBySize" message="tns:GetYearlyForcastBySize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/GetYearlyForcastBySizeResponse" name="GetYearlyForcastBySizeResponse" message="tns:GetYearlyForcastBySizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_GetYearlyForcastBySize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustPlan">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdPlanService/UpdateCustPlan" name="UpdateCustPlan" message="tns:UpdateCustPlan" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdPlanService/UpdateCustPlanResponse" name="UpdateCustPlanResponse" message="tns:UpdateCustPlanResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdPlanService/Fault" name="SoapServiceFaultFault" message="tns:ProdPlanService_UpdateCustPlan_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProdRequestService">
+    <wsdl:operation name="CreateProdRequest">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/CreateProdRequest" name="CreateProdRequest" message="tns:CreateProdRequest" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/CreateProdRequestResponse" name="CreateProdRequestResponse" message="tns:CreateProdRequestResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_CreateProdRequest_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProdRequest">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/DeleteProdRequest" name="DeleteProdRequest" message="tns:DeleteProdRequest" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/DeleteProdRequestResponse" name="DeleteProdRequestResponse" message="tns:DeleteProdRequestResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_DeleteProdRequest_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductionLines">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetAllProductionLines" name="GetAllProductionLines" message="tns:GetAllProductionLines" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetAllProductionLinesResponse" name="GetAllProductionLinesResponse" message="tns:GetAllProductionLinesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetAllProductionLines_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineCapacities">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetLineCapacities" name="GetLineCapacities" message="tns:GetLineCapacities" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetLineCapacitiesResponse" name="GetLineCapacitiesResponse" message="tns:GetLineCapacitiesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetLineCapacities_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewProdSchedules">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetNewProdSchedules" name="GetNewProdSchedules" message="tns:GetNewProdSchedules" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetNewProdSchedulesResponse" name="GetNewProdSchedulesResponse" message="tns:GetNewProdSchedulesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetNewProdSchedules_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdReqStatusLookup">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookup" name="GetProdReqStatusLookup" message="tns:GetProdReqStatusLookup" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdReqStatusLookupResponse" name="GetProdReqStatusLookupResponse" message="tns:GetProdReqStatusLookupResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdReqStatusLookup_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestByDateList">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateList" name="GetProdRequestByDateList" message="tns:GetProdRequestByDateList" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByDateListResponse" name="GetProdRequestByDateListResponse" message="tns:GetProdRequestByDateListResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestByDateList_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestByMonthAndSize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSize" name="GetProdRequestByMonthAndSize" message="tns:GetProdRequestByMonthAndSize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByMonthAndSizeResponse" name="GetProdRequestByMonthAndSizeResponse" message="tns:GetProdRequestByMonthAndSizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestByMonthAndSize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestByStatusList">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusList" name="GetProdRequestByStatusList" message="tns:GetProdRequestByStatusList" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestByStatusListResponse" name="GetProdRequestByStatusListResponse" message="tns:GetProdRequestByStatusListResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestByStatusList_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListByItem">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItem" name="GetProdRequestListByItem" message="tns:GetProdRequestListByItem" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemResponse" name="GetProdRequestListByItemResponse" message="tns:GetProdRequestListByItemResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestListByItem_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListByItemNotFinished">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinished" name="GetProdRequestListByItemNotFinished" message="tns:GetProdRequestListByItemNotFinished" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListByItemNotFinishedResponse" name="GetProdRequestListByItemNotFinishedResponse" message="tns:GetProdRequestListByItemNotFinishedResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestListByItemNotFinished_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestListBySize">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySize" name="GetProdRequestListBySize" message="tns:GetProdRequestListBySize" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestListBySizeResponse" name="GetProdRequestListBySizeResponse" message="tns:GetProdRequestListBySizeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestListBySize_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdRequestSummaryByCust">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCust" name="GetProdRequestSummaryByCust" message="tns:GetProdRequestSummaryByCust" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdRequestSummaryByCustResponse" name="GetProdRequestSummaryByCustResponse" message="tns:GetProdRequestSummaryByCustResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdRequestSummaryByCust_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedules">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedules" name="GetProdSchedules" message="tns:GetProdSchedules" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesResponse" name="GetProdSchedulesResponse" message="tns:GetProdSchedulesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdSchedules_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByDate">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDate" name="GetProdSchedulesByDate" message="tns:GetProdSchedulesByDate" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByDateResponse" name="GetProdSchedulesByDateResponse" message="tns:GetProdSchedulesByDateResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdSchedulesByDate_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByItem">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItem" name="GetProdSchedulesByItem" message="tns:GetProdSchedulesByItem" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByItemResponse" name="GetProdSchedulesByItemResponse" message="tns:GetProdSchedulesByItemResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdSchedulesByItem_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesByRequest">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequest" name="GetProdSchedulesByRequest" message="tns:GetProdSchedulesByRequest" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesByRequestResponse" name="GetProdSchedulesByRequestResponse" message="tns:GetProdSchedulesByRequestResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdSchedulesByRequest_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProdSchedulesRearrange">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrange" name="GetProdSchedulesRearrange" message="tns:GetProdSchedulesRearrange" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProdSchedulesRearrangeResponse" name="GetProdSchedulesRearrangeResponse" message="tns:GetProdSchedulesRearrangeResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProdSchedulesRearrange_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionRequest">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProductionRequest" name="GetProductionRequest" message="tns:GetProductionRequest" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProductionRequestResponse" name="GetProductionRequestResponse" message="tns:GetProductionRequestResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProductionRequest_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionRequestList">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/GetProductionRequestList" name="GetProductionRequestList" message="tns:GetProductionRequestList" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/GetProductionRequestListResponse" name="GetProductionRequestListResponse" message="tns:GetProductionRequestListResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_GetProductionRequestList_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProdSchedules">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/SaveProdSchedules" name="SaveProdSchedules" message="tns:SaveProdSchedules" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/SaveProdSchedulesResponse" name="SaveProdSchedulesResponse" message="tns:SaveProdSchedulesResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_SaveProdSchedules_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProdRequest">
+      <wsdl:input wsam:Action="http://tempuri.org/ProdRequestService/UpdateProdRequest" name="UpdateProdRequest" message="tns:UpdateProdRequest" />
+      <wsdl:output wsam:Action="http://tempuri.org/ProdRequestService/UpdateProdRequestResponse" name="UpdateProdRequestResponse" message="tns:UpdateProdRequestResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/ProdRequestService/Fault" name="SoapServiceFaultFault" message="tns:ProdRequestService_UpdateProdRequest_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

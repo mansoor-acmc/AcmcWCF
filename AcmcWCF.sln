@@ -16,6 +16,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicsTestWin", "Dynamics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlohaAPI", "AlohaAPI\AlohaAPI.csproj", "{254F6E3C-5AF7-4946-9366-D708B8142D68}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{0F1FBC89-C8CA-47A8-9AD1-1C29FD4439AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationUtility", "AuthenticationUtility\AuthenticationUtility.csproj", "{195ED9B3-92AD-417E-B20A-6438DD0E0B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapUtility", "SoapUtility\SoapUtility.csproj", "{1DBAB883-BAB6-4433-8EAB-6E197634F158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,9 +88,37 @@ Global
 		{254F6E3C-5AF7-4946-9366-D708B8142D68}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{254F6E3C-5AF7-4946-9366-D708B8142D68}.Release|x86.ActiveCfg = Release|Any CPU
 		{254F6E3C-5AF7-4946-9366-D708B8142D68}.Release|x86.Build.0 = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Debug|x86.Build.0 = Debug|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|x86.ActiveCfg = Release|Any CPU
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55}.Release|x86.Build.0 = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{195ED9B3-92AD-417E-B20A-6438DD0E0B55} = {0F1FBC89-C8CA-47A8-9AD1-1C29FD4439AE}
+		{1DBAB883-BAB6-4433-8EAB-6E197634F158} = {0F1FBC89-C8CA-47A8-9AD1-1C29FD4439AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E7AA6B9-A7B2-42B0-B8CD-42B85775F2CE}

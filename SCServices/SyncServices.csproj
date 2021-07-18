@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SyncServices</RootNamespace>
     <AssemblyName>SyncServices</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -27,6 +27,7 @@
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,9 +46,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Services" />
     <Reference Include="System.Data.Services.Client" />
@@ -55,7 +59,6 @@
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
@@ -77,11 +80,31 @@
     <Content Include="ProdRequestService.svc" />
     <Content Include="SalesOrderService.svc" />
     <Content Include="SalesService.svc" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.CategoryTypeLookup.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.CustForcastPlanContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.CustomerCaseContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.CustomerInvoiceContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ForcastSummaryContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.Infolog.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ItemSizeContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.LookupContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.OlderStockContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.OnhandByGradeContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.OnhandByGradeSizeColorContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.OnHandContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.PrePickingContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ProdRequestContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ProdScheduleContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ProdScheduleDragDropContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.ProductContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.SLCapacityContract.datasource" />
+    <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.SummaryContract.datasource" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\PublishProfiles\AcmcMobileServices.pubxml" />
     <None Include="Properties\PublishProfiles\HandHeldServices.pubxml" />
     <None Include="Properties\PublishProfiles\HandHeldServicesTest.pubxml" />
     <None Include="Properties\PublishProfiles\LocalSyncServices.pubxml" />
+    <None Include="Properties\PublishProfiles\ServicesD365.pubxml" />
     <None Include="Properties\PublishProfiles\SyncService2020.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServices.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServicesTest.pubxml" />
@@ -441,86 +464,6 @@
     <None Include="Service References\SalesOrderAX\SyncServices.SalesOrderAX.SalesTableContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.CategoryTypeLookup.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.CustForcastPlanContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.CustomerCaseContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.CustomerInvoiceContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ForcastSummaryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ItemSizeContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.LookupContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.OlderStockContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.OnhandByGradeContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.OnhandByGradeSizeColorContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.OnHandContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.PrePickingContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ProdRequestContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ProdScheduleContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ProdScheduleDragDropContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.ProductContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.SummaryContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SalesServicesGroup\SyncServices.SalesServicesGroup.SLCapacityContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup21.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup87.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
     <None Include="Service References\UserMgtServices\configuration.svcinfo" />
     <None Include="Service References\UserMgtServices\Reference.svcmap">
@@ -545,12 +488,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\SalesServicesGroup\configuration91.svcinfo" />
-    <None Include="Service References\SalesServicesGroup\configuration.svcinfo" />
-    <None Include="Service References\SalesServicesGroup\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="ServiceUrls.txt" />
     <Content Include="UserMgtService.svc" />
     <Content Include="Web.config">
@@ -562,15 +499,15 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.AttendanceContract.datasource">
+    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.AttendanceContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    </Content>
     <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.MobileUserLogin.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\UserMgtServices\SyncServices.UserMgtServices.UserInfoContract.datasource">
+    <Content Include="Service References\UserMgtServices\SyncServices.UserMgtServices.UserInfoContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    </Content>
     <None Include="Service References\UserMgtServices\UserMgtServices2.wsdl" />
     <None Include="Service References\UserMgtServices\UserMgtServices21.wsdl" />
     <None Include="Service References\UserMgtServices\UserMgtServices8.xsd">
@@ -673,11 +610,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\SalesServicesGroup\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\UserMgtServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -699,8 +631,17 @@
     <WCFMetadataStorage Include="Service References\EAMServices\" />
     <WCFMetadataStorage Include="Service References\InventCountingService\" />
     <WCFMetadataStorage Include="Service References\SalesOrderAX\" />
-    <WCFMetadataStorage Include="Service References\SalesServicesGroup\" />
     <WCFMetadataStorage Include="Service References\UserMgtServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuthenticationUtility\AuthenticationUtility.csproj">
+      <Project>{195ed9b3-92ad-417e-b20a-6438dd0e0b55}</Project>
+      <Name>AuthenticationUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoapUtility\SoapUtility.csproj">
+      <Project>{1dbab883-bab6-4433-8eab-6e197634f158}</Project>
+      <Name>SoapUtility</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

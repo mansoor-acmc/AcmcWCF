@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetCustomerInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q1:ArrayOfCustomerInvoiceContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerInvoicesByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dateSearch" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerInvoicesByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q2:ArrayOfCustomerInvoiceContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOlderStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOlderStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q3:ArrayOfOlderStockContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOlderStockOverall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOlderStockOverallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q4:ArrayOfOlderStockContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q5:CustomerInvoiceContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoicesByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_dateSearch" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoicesByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q6:ArrayOfCustomerInvoiceContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoicesBySalesId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoicesBySalesIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q7:ArrayOfCustomerInvoiceContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q8:ArrayOfOnHandContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByCustomerZeroStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByCustomerZeroStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q9:ArrayOfOnHandContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnHandByItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q10:ArrayOfOnHandContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandQueryByCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandQueryByCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q11:ArrayOfOnHandContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q12:ProductContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductionRequests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductionRequestsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q13:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByCustomerAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByCustomerAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q14:ArrayOfProductContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q15:ProductContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsBySize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="size" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsBySizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q16:ProductContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutstandingBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutstandingBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePrePicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q17:PrePickingContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePrePickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePrePicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePrePickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_accountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q18:ArrayOfOnhandByGradeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGradeSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGradeSizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q19:ArrayOfOnhandByGradeSizeColorContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGradeSizeWithOnOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnhandByGradeSizeWithOnOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q20:ArrayOfOnhandByGradeSizeColorContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrePickings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrePickingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q21:ArrayOfPrePickingContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSinglePrePicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_prePickId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSinglePrePickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q22:PrePickingContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q23:ArrayOfLookupContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatusUpdatePrePicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatusUpdatePrePickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrePicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q24:PrePickingContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrePickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCustPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q25:CustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCustPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q26:ArrayOfCustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanByMonth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monthId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanByMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q27:ArrayOfCustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanByMonthSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monthId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sizeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanByMonthSizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q28:ArrayOfCustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanBySize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sizeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustPlanBySizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q29:ArrayOfCustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemSizes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemSizesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q30:ArrayOfItemSizeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyForcastBySize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_itemSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monthId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyForcastBySizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q31:ArrayOfForcastSummaryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyForcastSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monthId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyForcastSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q32:ArrayOfForcastSummaryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSortingLines">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSortingLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="result" nillable="true" type="q33:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyForcastBySize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_itemSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="yearId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyForcastBySizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q34:ArrayOfForcastSummaryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordId" type="xs:long" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q35:CustForcastPlanContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustPlanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProdRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q36:ProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProdRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProdRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custReqId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProdRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProductionLines">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProductionLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="result" nillable="true" type="q37:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLineCapacities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_prodLineId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLineCapacitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q38:ArrayOfSLCapacityContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewProdSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dateStart" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewProdSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q39:ArrayOfProdScheduleDragDropContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdReqStatusLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdReqStatusLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q40:ArrayOfLookupContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByDateList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_reqDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByDateListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q41:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByMonthAndSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_monthOfYear" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByMonthAndSizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q42:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByStatusList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_reqStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestByStatusListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q43:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListByItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListByItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q44:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListByItemNotFinished">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListByItemNotFinishedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q45:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListBySize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_size" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestListBySizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q46:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestSummaryByCust">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdRequestSummaryByCustResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q47:ArrayOfSummaryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q48:ArrayOfProdScheduleContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dateSearch" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q49:ArrayOfProdScheduleContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q50:ArrayOfProdScheduleContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesByRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q51:ProdScheduleContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesRearrange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_prodLineId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateEnd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateStart" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProdSchedulesRearrangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q52:ArrayOfProdScheduleDragDropContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custReqId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q53:ProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionRequestList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionRequestListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q54:ArrayOfProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProdSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="lines" nillable="true" type="q55:ArrayOfProdScheduleDragDropContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProdSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProdRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_custReqId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="row" nillable="true" type="q56:ProdRequestContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProdRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

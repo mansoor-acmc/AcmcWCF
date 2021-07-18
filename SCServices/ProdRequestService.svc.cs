@@ -1,11 +1,10 @@
-﻿using SyncServices.SalesServicesGroup;
+﻿using AuthenticationUtility;
+using SoapUtility.SalesServicesGroup;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Runtime.Serialization;
+using System.Net;
 using System.ServiceModel;
-using System.Text;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
@@ -13,69 +12,110 @@ namespace SyncServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select ProdRequestService.svc or ProdRequestService.svc.cs at the Solution Explorer and start debugging.
     public class ProdRequestService : IProdRequestService
     {
+        public const string D365ServiceName = "SalesServicesGroup";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
 
-        public string[] GetAllProductionLines()
+        public ProdRequestService()
         {
-            CallContext context = new CallContext()
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+            
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new ProdRequestServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
             {
                 MessageId = Guid.NewGuid().ToString(),
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
+        }
 
-            ProdRequestServiceClient client = new ProdRequestServiceClient();
-            return client.GetAllProductionLines(context);
+        public string[] GetAllProductionLines()
+        {
+            string[] allProdLines = null;
+
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                allProdLines = ((SoapUtility.SalesServicesGroup.ProdRequestService)channel).GetAllProductionLines(new GetAllProductionLines(context)).result;
+            }
+
+            return allProdLines;
         }
 
         public SLCapacityContract[] GetLineCapacities(string _prodLineId)
         {
-            CallContext context = new CallContext()
+            SLCapacityContract[] aResult = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;               
 
-            ProdRequestServiceClient client = new ProdRequestServiceClient();
-            return client.GetLineCapacities(context, _prodLineId);
+                aResult = ((SoapUtility.SalesServicesGroup.ProdRequestService)channel).GetLineCapacities(new GetLineCapacities(context,_prodLineId)).result;
+            }
+
+            return aResult;
         }
+
 
         public ProdScheduleDragDropContract[] GetNewProdSchedules(DateTime dateStart)
         {
-            CallContext context = new CallContext()
+            ProdScheduleDragDropContract[] aResult = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            ProdRequestServiceClient client = new ProdRequestServiceClient();
-            return client.GetNewProdSchedules(context, dateStart);
+                aResult = ((SoapUtility.SalesServicesGroup.ProdRequestService)channel).GetNewProdSchedules(new GetNewProdSchedules(context, dateStart)).result;
+            }
+                        
+            return aResult;
         }
 
         public ProdScheduleDragDropContract[] GetProdSchedulesRearrange(string lineName, DateTime startDate, DateTime endDate)
         {
-            CallContext context = new CallContext()
+            ProdScheduleDragDropContract[] aResult = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            ProdRequestServiceClient client = new ProdRequestServiceClient();
-            var items = client.GetProdSchedulesRearrange(context, startDate, endDate, lineName);
+                aResult = ((SoapUtility.SalesServicesGroup.ProdRequestService)channel).GetProdSchedulesRearrange(new GetProdSchedulesRearrange(context, lineName, endDate, startDate)).result;
+            }
+            
             //if (items != null && items.Count() > 0)
-              //  items = items.Where(t=>t.RecordId>0).OrderBy(t=>t.ProductionLine).ThenBy(t => t.StartTimeProduction).ToArray();
+            //  items = items.Where(t=>t.RecordId>0).OrderBy(t=>t.ProductionLine).ThenBy(t => t.StartTimeProduction).ToArray();
 
-            return items;
+            return aResult;
         }
 
         public bool SaveProdSchedule(ProdScheduleDragDropContract[] lines)
         {
-            CallContext context = new CallContext()
+            bool bResult = false;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            ProdRequestServiceClient client = new ProdRequestServiceClient();
-            return client.SaveProdSchedules(context, lines);
+                bResult = ((SoapUtility.SalesServicesGroup.ProdRequestService)channel).SaveProdSchedules(new SaveProdSchedules(context, lines)).result;
+            }
+            
+            return bResult;
         }
     }
 }

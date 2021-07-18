@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad143ed0-fdce-47af-9193-83748710a5f0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesServicesGroup.xsd" MetadataType="Schema" ID="ab2254ca-7a08-445a-a6fd-ace1482635d9" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd3" />
+    <MetadataFile FileName="SalesServicesGroup1.xsd" MetadataType="Schema" ID="3cda8539-03a9-44df-84cb-d5c068f0457d" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd0" />
+    <MetadataFile FileName="SalesServicesGroup2.xsd" MetadataType="Schema" ID="cfad9d40-4d3e-4278-8dea-b88afd33da7d" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd1" />
+    <MetadataFile FileName="SalesServicesGroup.wsdl" MetadataType="Wsdl" ID="1fdf5664-8e0d-407d-992a-1e729d31528b" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesServicesGroup.disco" MetadataType="Disco" ID="e8b32c48-89a8-458f-9522-bf95a6eda348" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?disco" />
+    <MetadataFile FileName="SalesServicesGroup1.wsdl" MetadataType="Wsdl" ID="19ed8637-5912-4b12-ae79-f690e4d93179" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl" />
+    <MetadataFile FileName="SalesServicesGroup2.wsdl" MetadataType="Wsdl" ID="6e26f0d9-2522-42f5-bbac-eb88b84d3a4f" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl1" />
+    <MetadataFile FileName="SalesServicesGroup3.xsd" MetadataType="Schema" ID="877a1757-e21d-4d84-ba8d-389d16d09e65" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd6" />
+    <MetadataFile FileName="SalesServicesGroup4.xsd" MetadataType="Schema" ID="2aae6d64-b343-458f-84a7-c6400a18d357" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd7" />
+    <MetadataFile FileName="SalesServicesGroup5.xsd" MetadataType="Schema" ID="312ed742-7b0a-4a76-ab9b-2c458c4710e8" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="SalesServicesGroup6.xsd" MetadataType="Schema" ID="e22e6993-1552-40be-bf36-9eda7e9ba40e" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd5" />
+    <MetadataFile FileName="SalesServicesGroup7.xsd" MetadataType="Schema" ID="ee8870e5-2186-4598-80da-8ea6dc056e03" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

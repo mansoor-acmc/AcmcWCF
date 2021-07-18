@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DBAB883-BAB6-4433-8EAB-6E197634F158}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoapUtility</RootNamespace>
+    <AssemblyName>SoapUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.8.999, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.13.8.999, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Client, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Client.6.15.0\lib\net40\Microsoft.OData.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.6.15.0\lib\portable-net45+win+wpa81\Microsoft.OData.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.6.15.0\lib\portable-net45+win+wpa81\Microsoft.OData.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.6.15.0\lib\portable-net45+win+wpa81\Microsoft.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Service References\SalesServicesGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SoapHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CategoryTypeLookup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CreateCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CreatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CreateProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CustForcastPlanContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CustomerCaseContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CustomerInvoiceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.DeleteCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.DeletePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.DeleteProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ForcastSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetAllProductionLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustomerCasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustomerInvoicesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustomerInvoicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustomerOlderStockOverallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustomerOlderStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustPlanByMonthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustPlanByMonthSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustPlanBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetInvoicesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetInvoicesBySalesIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetItemSizesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetLineCapacitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetMonthlyForcastBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetMonthlyForcastSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetNewProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnHandByCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnHandByCustomerZeroStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnhandByGradeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnhandByGradeSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnhandByGradeSizeWithOnOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnHandByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetOnhandQueryByCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetPrePickingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetPriorityLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdReqStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestByDateListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestByMonthAndSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestByStatusListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestListByItemNotFinishedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestListByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestListBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdRequestSummaryByCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdSchedulesByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdSchedulesByItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdSchedulesByRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdSchedulesRearrangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductionRequestListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductionRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.getProductionRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductsByCustomerAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductsByModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetProductsBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetResolutionLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetSinglePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetSortingLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetStatusLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetStatusLookupResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.GetYearlyForcastBySizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ItemSizeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.OlderStockContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.OnhandByGradeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.OnhandByGradeSizeColorContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.OnHandContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.OutstandingBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.PrePickingContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ProdRequestContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ProdScheduleContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ProdScheduleDragDropContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.ProductContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.SaveProdSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.SLCapacityContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.StatusUpdatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.SummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateCustPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdatePrePickingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateProdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SalesServicesGroup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesServicesGroup\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesServicesGroup\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesServicesGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

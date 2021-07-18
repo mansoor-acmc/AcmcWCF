@@ -13,6 +13,8 @@ using TestWebservice.DMCheckService;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
+using System.Collections;
+using System.Net;
 
 namespace TestWebservice
 {
@@ -25,6 +27,8 @@ namespace TestWebservice
     {
         static void Main(string[] args)
         {
+
+            ArrayList abc = new ArrayList();
             bool result11 = false;
             string str = "";
             /*string[] pallets = { "M031855"};
@@ -38,12 +42,30 @@ namespace TestWebservice
             }*/
 
 
+            
+            ProdRequestService.ProdRequestServiceClient prodService = new ProdRequestService.ProdRequestServiceClient();
+            //ProdRequestService prodRequestService = new SyncServices.ProdRequestService();
+            var allLines = prodService.GetAllProductionLines();
 
+            foreach (string line in allLines)
+            {
+                Console.WriteLine(line);
+            }
+            Console.WriteLine();
+            Console.Write("Select Line: ");
+            string lineId = Console.ReadLine();
 
+            var lineCaps = prodService.GetLineCapacities(lineId);
+            foreach(var cap in lineCaps)
+                Console.WriteLine(cap.ItemSizeThickness);
 
             //var isSuccess = new Program().CheckLoginAsync("am.bagedo@arabian-ceramics.com", "Amro*7894");
 
-            DMCheckServiceClient dmClient = new DMCheckServiceClient();
+
+
+
+
+            /*DMCheckServiceClient dmClient = new DMCheckServiceClient();
             //var locs=dmClient.GetWHLocations();
             //int totRows = locs.Count();
             //Console.WriteLine(totRows.ToString());
@@ -58,6 +80,12 @@ namespace TestWebservice
                 Console.WriteLine("Lines Transferred: " + result.Count().ToString());
             
             dmClient.Close();
+            */
+
+
+
+
+
             /*
             ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
             var tbl = clientMov.ItemsNotUsed();
