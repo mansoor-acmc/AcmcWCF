@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a68cf23c-d328-43b5-838e-48970eaad8b3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataManagerServiceGroup.disco" MetadataType="Disco" ID="4bb61715-67e9-4163-a3d0-f5642e9dafee" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?disco" />
+    <MetadataFile FileName="DataManagerServiceGroup.xsd" MetadataType="Schema" ID="ad676874-4efe-471c-835b-55acf5880c2a" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="DataManagerServiceGroup.wsdl" MetadataType="Wsdl" ID="87f7570d-3167-4130-936d-58fa49253153" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?wsdl" />
+    <MetadataFile FileName="DataManagerServiceGroup1.xsd" MetadataType="Schema" ID="b2dec2b0-e1f3-41c1-a189-1734fff6929f" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="DataManagerServiceGroup2.xsd" MetadataType="Schema" ID="c0f44c5c-9858-422e-ae62-5edee9443cd3" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd5" />
+    <MetadataFile FileName="DataManagerServiceGroup3.xsd" MetadataType="Schema" ID="2000de19-c3d4-4799-ba40-7164a589d101" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd1" />
+    <MetadataFile FileName="DataManagerServiceGroup4.xsd" MetadataType="Schema" ID="2100618d-9f59-4d41-9191-ec498a42f144" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd0" />
+    <MetadataFile FileName="DataManagerServiceGroup5.xsd" MetadataType="Schema" ID="66fa6183-57ea-46de-b30c-73b1cb96f1df" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd3" />
+    <MetadataFile FileName="DataManagerServiceGroup1.wsdl" MetadataType="Wsdl" ID="787d096c-4fac-472e-92df-886c2956ce1b" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="DataManagerServiceGroup6.xsd" MetadataType="Schema" ID="d3966760-ce96-4faf-b64b-7e7906f8780a" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

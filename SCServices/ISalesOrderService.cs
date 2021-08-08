@@ -1,4 +1,5 @@
-﻿using SyncServices.SalesOrderAX;
+﻿using SoapUtility.SalesServicesGroup;
+using SoapUtility.SOPickServiceGroup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,8 @@ namespace SyncServices
         /// <param name="dateTo">To Date (End Date)</param>
         /// <param name="customrId">Customer account number</param>
         /// <returns></returns>
-        //[OperationContract]        
-        //SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId);
+        [OperationContract]        
+        SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId);
 
         /// <summary>
         /// Get single Sales-order data along with all Sales-lines
@@ -32,9 +33,9 @@ namespace SyncServices
         //[WebInvoke(Method ="Get", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,UriTemplate = "FindSalesOrder")]
         SalesTableContract FindSalesOrder(string salesId);
 
-        //[OperationContract]        
+        [OperationContract]        
         //[WebGet(UriTemplate = "GetDeliveries/{customerId}/{dateSearch}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
-        //FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId);
+        FGDeliveryContract[] GetDeliveries(string dateSearch, string customerId);
 
         [OperationContract]
         [WebGet(UriTemplate = "Ping", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]        

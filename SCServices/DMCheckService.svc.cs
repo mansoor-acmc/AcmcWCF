@@ -6,129 +6,151 @@ using System.ServiceModel;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using SyncServices.DataManagerServices;
+using SoapUtility.DataManagerServices;
 using System.Configuration;
+using AuthenticationUtility;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "DMCheckService" in code, svc and config file together.
     public class DMCheckService : IDMCheckService
     {
-        public string GetPing()
-        {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
-            {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return "Your Sync Web-Service IP Address is: " + ip.ToString();
+        public const string D365ServiceName = "DataManagerServiceGroup";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
 
-                }
-            }
-            return "Sorry";
+        public DMCheckService()
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new DMDataToSaveServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
         }
 
         public DMExportContract GetPalletInfo(string palletNum)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.GetPalletInfo(context,palletNum);
+                return ((DMDataToSaveService)channel).GetPalletInfo(new GetPalletInfo(context, palletNum)).result;
+            }            
         }
 
         public DMExportContract GetPalletInfoByRecordId(long recordId)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.GetPalletInfoByRecordId(context, recordId);
+                return ((DMDataToSaveService)channel).GetPalletInfoByRecordId(new GetPalletInfoByRecordId(context, recordId)).result;
+            }            
         }
 
         public bool ConfirmPalletReceive(string palletNum, long recordId, string deviceName, string deviceUser, bool isFromSL)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.ConfirmPalletReceive(context, palletNum, recordId, deviceName, deviceUser, isFromSL);
+                return ((DMDataToSaveService)channel).ConfirmPalletReceive(new ConfirmPalletReceive(context, deviceName, deviceUser, isFromSL, palletNum, recordId)).result;
+            }
+            
         }
 
         public string ConfirmPalletAndLocationReceive(string palletNum, string locationId, long recordId, string deviceName, string deviceUser, bool isFromSL)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.ConfirmPalletAndLocationReceive(context, palletNum, locationId, recordId, deviceName, deviceUser, isFromSL);
+                return ((DMDataToSaveService)channel).ConfirmPalletAndLocationReceive(new ConfirmPalletAndLocationReceive(context, deviceName, deviceUser, isFromSL, locationId, palletNum, recordId)).result;
+            }            
         }
 
         public bool UpdateAndConfirmPalletReceive(DMExportContract pallet)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.UpdateAndConfirmPalletReceive(context, pallet);
+                return ((DMDataToSaveService)channel).UpdateAndConfirmPalletReceive(new UpdateAndConfirmPalletReceive(context, pallet)).result;
+            }            
         }
 
         public bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser)
         {
             //DBClass db = new DBClass(DBClass.DbName.ImportExportDB);
             //return db.PrintAgainPallet(palletNum, recordId, deviceName, deviceUser);
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            client.DMSetPrintAgain(context, palletNum, recordId, deviceName, deviceUser);
+                ((DMDataToSaveService)channel).DMSetPrintAgain(new DMSetPrintAgain(context, deviceName, deviceUser, palletNum, recordId));
+            }            
 
             return true;
         }
 
         public List<DMExportMiniContract> DMClearPrintAgain()
-        {
-            CallContext context = new CallContext()
+        {            
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.DMClearPrintAgain(context).ToList();
+                return ((DMDataToSaveService)channel).DMClearPrintAgain(new DMClearPrintAgain(context)).result.ToList();                
+            }
+            
         }
 
         public List<DMExportContract> UpdateOfflinePallets(List<DMExportOfflineContract> lines)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.UpdateOfflinePallets(context, lines.ToArray()).ToList();
+                return ((DMDataToSaveService)channel).UpdateOfflinePallets(new UpdateOfflinePallets(context, lines.ToArray())).result.ToList();
+            }            
         }
 
         #region Location Transfer
+        /// <summary>
+        /// Transfer pallets to new location. ***Direct DB interaction***        
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <param name="lines"></param>
+        /// <returns></returns>
         public List<LocationHistory> TransferPalletsToNewLocation(List<LocationHistory> lines)
         {
             DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
@@ -175,16 +197,18 @@ namespace SyncServices
             {
                 try
                 {
-                    CallContext context = new CallContext()
+                    using (OperationContextScope operationContextScope = new OperationContextScope(channel))
                     {
-                        MessageId = Guid.NewGuid().ToString(),
-                        Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-                    };
+                        HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                        requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                        OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-                    var linesFromAX = client.UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray());
-                    if (linesFromAX.Count() > 0)
-                        returnedLines = ConvertFromDMForTransfer(linesFromAX.ToList());
+                        var linesFromAX = ((DMDataToSaveService)channel).UpdateTransferPallets(new UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray())).result;
+
+
+                        if (linesFromAX.Count() > 0)
+                            returnedLines = ConvertFromDMForTransfer(linesFromAX.ToList());
+                    }
                     //if (linesFromAX != null && linesFromAX.Count() > 0)
                     //{
                     //    returnedLines.AddRange(linesFromAX.ToList());
@@ -324,51 +348,50 @@ namespace SyncServices
 
         public List<DMSummaryContract> SummaryPallets(string itemId)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.SummaryNormalPallets(context, itemId).ToList();
+                return ((DMDataToSaveService)channel).SummaryNormalPallets(new SummaryNormalPallets(context, itemId)).result.ToList();
+            }            
         }
 
         public bool CancelPalletReceive(string palletNum, long recordId, string deviceName, string deviceUser)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.CancelPalletReceive(context, palletNum, recordId, deviceName, deviceUser);
-            
+                return ((DMDataToSaveService)channel).CancelPalletReceive(new CancelPalletReceive(context, deviceName, deviceUser, palletNum, recordId)).result;
+            }
         }
 
         public List<DMExportContract> ItemGroupPallets(string itemId, string grade, string shade, string caliber)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.ItemGroupPallets(context, itemId, grade, shade, caliber).ToList();
+                return ((DMDataToSaveService)channel).ItemGroupPallets(new ItemGroupPallets(context, itemId, caliber, grade, shade)).result.ToList();
+            }
         }
 
         public bool CreateDowntimeForMarpak(int whichMarpak)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.CreateDowntimeForMarpak(context, whichMarpak);
+                return ((DMDataToSaveService)channel).CreateDowntimeForMarpak(new CreateDowntimeForMarpak(context, whichMarpak)).result;
+            }
         }
 
         public List<ItemForChart> GetProductionByLinesForChart(DateTime date)
@@ -383,31 +406,58 @@ namespace SyncServices
 
         public List<WmsLocationContract> GetWHLocations()
         {
-             CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-            return client.GetWHLocations(context).ToList();
+                return ((DMDataToSaveService)channel).GetWHLocations(new GetWHLocations(context)).result.ToList();
+            }
         }
 
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <returns></returns>
         public List<DuplicatePallet> GetDuplicatePallets()
         {
             return new DBClass(DBClass.DbName.ImportExportDB).GetDuplicatePallets();
         }
 
-
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <param name="pallet"></param>
+        /// <returns></returns>
         public bool ClearDuplicatePallet(DuplicatePallet pallet)
         {
             return new DBClass(DBClass.DbName.ImportExportDB).ClearDuplicatePallet(pallet);
         }
 
-
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <param name="pallets"></param>
+        /// <returns></returns>
         public bool ClearDuplicatePalletsAll(List<DuplicatePallet> pallets)
         {
             return new DBClass(DBClass.DbName.ImportExportDB).ClearDuplicatePalletsAll(pallets);
+        }
+        
+        
+        public string GetPing()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return "Your Sync Web-Service IP Address is: " + ip.ToString();
+
+                }
+            }
+            return "Sorry";
         }
     }
 }

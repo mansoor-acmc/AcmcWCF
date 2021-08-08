@@ -70,7 +70,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Service References\DataManagerServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EAMServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InventCountingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\SalesServicesGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SOPickServiceGroup\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -89,6 +109,159 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.DMExportContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.DMExportMiniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.DMForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.DMSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.ItemCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices1.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\EAMServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.EquipContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.FailureCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.OnHandContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.PMLineCostContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.PMWorkItemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.PMWorkOrderContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.RepairCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.WOLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.WOPoolContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMServices\SoapUtility.EAMServices.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup.wsdl" />
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1.wsdl" />
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.InventAvailContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.InventForItemUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.InventJournalTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.InventJournalTransContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.InventSumContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.SCForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.WarehouseContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SalesServicesGroup\SalesServicesGroup.wsdl" />
     <None Include="Service References\SalesServicesGroup\SalesServicesGroup.xsd">
       <SubType>Designer</SubType>
@@ -386,6 +559,56 @@
     <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateProdRequestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.CustomerDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.FGLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.LookupContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.PalletContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.PLNotDeliveredContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.SalesLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.SalesTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup.wsdl" />
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup1.wsdl" />
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.AttendanceContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -423,7 +646,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataManagerServices\" />
+    <WCFMetadataStorage Include="Service References\EAMServices\" />
+    <WCFMetadataStorage Include="Service References\InventCountingService\" />
     <WCFMetadataStorage Include="Service References\SalesServicesGroup\" />
+    <WCFMetadataStorage Include="Service References\SOPickServiceGroup\" />
     <WCFMetadataStorage Include="Service References\UserMgtServices\" />
   </ItemGroup>
   <ItemGroup>
@@ -452,6 +679,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\UserMgtServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOPickServiceGroup\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOPickServiceGroup\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOPickServiceGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\EAMServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventCountingService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventCountingService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventCountingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataManagerServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataManagerServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataManagerServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

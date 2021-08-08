@@ -2,27 +2,59 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using SyncServices.SalesOrderAX;
+//using SyncServices.SalesOrderAX;
 using System.Configuration;
 using System.Net;
 using System.Net.Sockets;
+using SoapUtility.SOPickServiceGroup;
+using AuthenticationUtility;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SalesService" in code, svc and config file together.
     public class SalesService : ISalesService
     {
-        public SalesTable FindSalesOrder(string salesId)
+        public const string D365ServiceName = "SOPickServiceGroup";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
+
+        public SalesService()
         {
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new SOPickServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
             {
                 MessageId = Guid.NewGuid().ToString(),
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
+        }
 
-            SalesTableContract contract = client.findSalesOrder(context, salesId);
-            client.Close();
+
+        public SalesTable FindSalesOrder(string salesId)
+        {
+            SalesTableContract contract = null;
+
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                contract = ((SOPickService)channel).findSalesOrder(new findSalesOrder(context,salesId)).result;
+            }
+                         
             
             SalesTable salesTable = new SalesTable()
             {
@@ -51,66 +83,63 @@ namespace SyncServices
         public SalesTable FindPickingList(string pickingId, string userName, string device)
         {
             SalesTableContract contract = null;
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            try
-            {
-                contract = client.findPickingList(context, pickingId);
-            }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
-            {
-                string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
-                if (!string.IsNullOrEmpty(allMsgs))
-                {
-                    string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
-                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
-
-                    throw new Exception(allMsgs);
-                }
-            }
-            catch (Exception exp)
-            {
                 try
                 {
-                    string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
-                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
+                    contract = ((SOPickService)channel).findPickingList(new findPickingList(context, pickingId)).result;
                 }
-                catch { }
-                throw exp;
-            }
-            finally
-            {
-                PickHistoryContract history = new PickHistoryContract()
+                catch (System.ServiceModel.FaultException aifExp)
                 {
-                    PickingId = pickingId,
-                    UpdatedByUser = userName,
-                    UpdatedDateTime = DateTime.Now,
-                    UpdatedDateTimeSpecified = true,
-                    UpdateStatus = PalletStatus.PickingList,
-                    UpdateStatusSpecified = true,
-                    DeviceName = device,
-                    Remarks = "Searching Picking List for: " + pickingId,
-                    PalletNo = string.Empty
-                };
-                client.SaveHistory(new CallContext()
-                {
-                    MessageId = Guid.NewGuid().ToString(),
-                    Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-                }, history);
+                    string allMsgs = string.Empty;
+                    //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                    //foreach (InfologMessage msg in msgs)
+                    //{
+                    //    allMsgs += msg.Message + Environment.NewLine;
+                    //}
+                    allMsgs = aifExp.Message;
+                    if (!string.IsNullOrEmpty(allMsgs))
+                    {
+                        string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+                        new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
 
-                client.Close();
+                        throw new Exception(allMsgs);
+                    }
+                }
+                catch (Exception exp)
+                {
+                    try
+                    {
+                        string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+                        new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "FindPickingList", allParameters);
+                    }
+                    catch { }
+                    throw exp;
+                }
+                finally
+                {
+                    PickHistoryContract history = new PickHistoryContract()
+                    {
+                        PickingId = pickingId,
+                        UpdatedByUser = userName,
+                        UpdatedDateTime = DateTime.Now,
+                        //UpdatedDateTimeSpecified = true,
+                        UpdateStatus = PalletStatus.PickingList,
+                        //UpdateStatusSpecified = true,
+                        DeviceName = device,
+                        Remarks = "Searching Picking List for: " + pickingId,
+                        PalletNo = string.Empty
+                    };
+                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                    
+                }
             }
+
+                        
             SalesTable salesTable = new SalesTable()
             {
                 SalesId = contract.SalesId,
@@ -146,13 +175,7 @@ namespace SyncServices
                 List<string> pallets, string userName, string device, long lineRecId)
         {
             List<SalesLine> returnValue = new List<SalesLine>();
-
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+            SalesLineContract[] result = null;
 
 
             try
@@ -163,21 +186,29 @@ namespace SyncServices
                     SalesLineContract row = new SalesLineContract() { Serial = pallet };
                     rows.Add(row);
                 }
-                List<SalesLineContract> result = client.PalletsReserving(context, salesId, itemId, configId, pickingId, userName, device, lineRecId, rows.ToArray()).ToList();
-                client.Close();
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                if (result.Count > 0)
-                    returnValue = new SalesLine().ToListConvert(result);
+                    result = ((SOPickService)channel).PalletsReserving(new PalletsReserving(context, configId, device, itemId, lineRecId, rows.ToArray(), pickingId, salesId, userName)).result;
+                }
+                
+               
+
+                if (result != null && result.Length > 0)
+                    returnValue = new SalesLine().ToListConvert(result.ToList());
             }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
+            catch (System.ServiceModel.FaultException aifExp)
             {
                 string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
+                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                //foreach (InfologMessage msg in msgs)
+                //{
+                //    allMsgs += msg.Message + Environment.NewLine;
+                //}
+                allMsgs = aifExp.Message;
                 if (!string.IsNullOrEmpty(allMsgs))
                 {
                     string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
@@ -205,26 +236,28 @@ namespace SyncServices
         {
             //SalesLine returnResult = new SalesLine();
             SalesLineContract result = null;
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
+            
             try
             {
-                result = client.CheckPalletAvailable(context, salesId, itemId, configId, pickingId, pallet, lineRecId);
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    result = ((SOPickService)channel).CheckPalletAvailable(new CheckPalletAvailable(context, configId, itemId, lineRecId, pickingId, salesId, pallet)).result;
+                }
+                
             }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
+            catch (System.ServiceModel.FaultException aifExp)
             {
                 string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
+                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                //foreach (InfologMessage msg in msgs)
+                //{
+                //    allMsgs += msg.Message + Environment.NewLine;
+                //}
+                allMsgs = aifExp.Message ;
                 if (!string.IsNullOrEmpty(allMsgs))
                 {                    
                     string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallet:" + pallet + ", Username:" + userName + ", Device:" + device;
@@ -251,19 +284,23 @@ namespace SyncServices
                     PickingId = pickingId,
                     UpdatedByUser = userName,
                     UpdatedDateTime = dtSave,
-                    UpdatedDateTimeSpecified = true,
+                    //UpdatedDateTimeSpecified = true,
                     UpdateStatus = PalletStatus.Search,
-                    UpdateStatusSpecified = true,
+                    //UpdateStatusSpecified = true,
                     DeviceName = device,
                     Remarks = "Search"
                 };
-                client.SaveHistory(new CallContext()
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
                 {
-                    MessageId = Guid.NewGuid().ToString(),
-                    Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-                }, history);
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                }
+                
             }
-            client.Close();
+            
 
             return new SalesLine().ToConvert(result);
         }
@@ -273,31 +310,33 @@ namespace SyncServices
         {
             SalesLineContract[] items=null;
             List<SalesLine> returnValue = new List<SalesLine>();
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+            //CustomersDeliveryByQtyClient client = new CustomersDeliveryByQtyClient();
+            
 
             try
             {
-                items = client.CheckPalletAvailableMulti(context, salesId, itemId, configId, pickingId, userName,
-                    device, lineRecId, pallets.ToArray());
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
+                    items = ((SOPickService)channel).CheckPalletAvailableMulti(new CheckPalletAvailableMulti(context, configId, device, itemId, lineRecId, pickingId, salesId, pallets.ToArray(), userName)).result;
+                }
+               
+               //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
                // new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", "Error", "", DateTime.Now, "SaleService", userName, device, "CheckPalletAvailable", allParameters);
 
             }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
+            catch (System.ServiceModel.FaultException aifExp)
             {
                 string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
+                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                //foreach (InfologMessage msg in msgs)
+                //{
+                //    allMsgs += msg.Message + Environment.NewLine;
+                //}
+                allMsgs = aifExp.Message;
                 if (!string.IsNullOrEmpty(allMsgs))
                 {
                     string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
@@ -316,7 +355,7 @@ namespace SyncServices
                 catch { }
                 throw exp;
             }
-            client.Close();
+            
 
             if (items != null && items.Count() > 0)
                 returnValue = new SalesLine().ToListConvert(items.ToList());
@@ -326,29 +365,34 @@ namespace SyncServices
 
         public string SalesDeliveryNote(string _salesId)
         {
-            SOPickServiceClient client = new SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+            string contractResult = null;
 
-            return client.SalesDeliveryNote(context, _salesId);
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                contractResult = ((SOPickService)channel).SalesDeliveryNote(new SalesDeliveryNote(context, _salesId)).result;
+            }
+
+            return contractResult;
         }
 
         public string UnreservePallet(string pallet, string pickingId, string userName, string device)
         {
             bool result = false;
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
+            
             try
             {
-                result = client.UnreservePallet(context, pallet);
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    result = ((SOPickService)channel).UnreservePallet(new UnreservePallet(context, pallet)).result;
+                }                
             }
             catch (Exception exp)
             {
@@ -368,18 +412,20 @@ namespace SyncServices
                     PickingId = pickingId,
                     UpdatedByUser = userName,
                     UpdatedDateTime = DateTime.Now,
-                    UpdatedDateTimeSpecified = true,
+                    //UpdatedDateTimeSpecified = true,
                     UpdateStatus = PalletStatus.UnReserve,
-                    UpdateStatusSpecified = true,
+                    //UpdateStatusSpecified = true,
                     DeviceName = device,
                     Remarks = "Un-Reserve"
                 };
-                client.SaveHistory(new CallContext()
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
                 {
-                    MessageId = Guid.NewGuid().ToString(),
-                    Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-                }, history);
-                client.Close();
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                }
             }
             if (result)
             {
@@ -396,18 +442,18 @@ namespace SyncServices
         public List<SalesLine> GetLatestPallets(string pickingId, string itemId)
         {
             List<SalesLine> returnValue=new List<SalesLine>();
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
+            SalesLineContract[] items = null;
             try
             {
-                var items = client.GetLatestPallets(context, pickingId, itemId);
-                client.Close();
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
+                    items =((SOPickService)channel).GetLatestPallets(new GetLatestPallets(context, itemId, pickingId)).result;
+                }
+                
                 if (items.Count() > 0)
                     returnValue = new SalesLine().ToListConvert(items.ToList());
             }
@@ -427,69 +473,82 @@ namespace SyncServices
 
         public void SavePickingLoad(string pickingId, DateTime startLoad, DateTime stopLoad)
         {
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            client.SavePickingLoad(context, pickingId, startLoad, stopLoad);
+                 ((SOPickService)channel).SavePickingLoad(new SavePickingLoad(context, pickingId, startLoad, stopLoad));
+            }
+
+            
         }
 
         public CustomerDeliveryContract[] CustomersDeliveryByQty(DateTime startDate, DateTime endDate)
         {
-            SOPickServiceClient client = new SOPickServiceClient();
-            CallContext context = new CallContext()
+            CustomerDeliveryContract[] result = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            return client.CustomersDeliveryByQty(context, startDate, endDate);
+                result = ((SOPickService)channel).CustomersDeliveryByQty(new CustomersDeliveryByQty(context, endDate, startDate)).result;
+            }
+
+            return result;
+
+            
         }
 
 
         public CustomerDeliveryContract[] CustomersDeliveryByTrucks(DateTime startDate, DateTime endDate)
         {
-            SOPickServiceClient client = new SOPickServiceClient();
-            CallContext context = new CallContext()
+            CustomerDeliveryContract[] result = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            return client.CustomersDeliveryByTrucks(context, startDate, endDate);
+                result = ((SOPickService)channel).CustomersDeliveryByTrucks(new CustomersDeliveryByTrucks(context, endDate, startDate)).result;
+            }
+
+            return result;
         }
 
         public SalesTable ReceivePickingList(string userName, string device)
         {
             string pickingId=string.Empty;
             SalesTableContract contract = null;
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+            
 
             try
             {
-                contract = client.ReceivePickingList(context, userName, device);
-                if (contract != null && contract.SalesLines != null && contract.SalesLines.Count() > 0)
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
                 {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    contract =((SOPickService)channel).ReceivePickingList(new ReceivePickingList(context, device, userName)).result;
+                }
+                
+                if (contract != null && contract.SalesLines != null && contract.SalesLines.Count() > 0)
+                {  
                     pickingId = contract.SalesLines[0].PickingId;
                 }
             }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
+            catch (System.ServiceModel.FaultException aifExp)
             {
                 string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
+                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                //foreach (InfologMessage msg in msgs)
+                //{
+                //    allMsgs += msg.Message + Environment.NewLine;
+                //}
+                allMsgs = aifExp.Message;
                 if (!string.IsNullOrEmpty(allMsgs))
                 {
                     string allParameters = "PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
@@ -515,20 +574,21 @@ namespace SyncServices
                     PickingId = pickingId,
                     UpdatedByUser = userName,
                     UpdatedDateTime = DateTime.Now,
-                    UpdatedDateTimeSpecified = true,
+                    //UpdatedDateTimeSpecified = true,
                     UpdateStatus = PalletStatus.PickingList,
-                    UpdateStatusSpecified = true,
+                    //UpdateStatusSpecified = true,
                     DeviceName = device,
                     Remarks = "Searching Picking List for: " + pickingId,
                     PalletNo = string.Empty
                 };
-                client.SaveHistory(new CallContext()
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
                 {
-                    MessageId = Guid.NewGuid().ToString(),
-                    Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-                }, history);
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                client.Close();
+                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                }
             }
             SalesTable salesTable = new SalesTable()
             {
@@ -563,61 +623,45 @@ namespace SyncServices
 
         public void SaveLoginHistory(string userName, string device, string deviceIp, string projectName)
         {
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            try
-            {
-                client.LoginDevice(context, device, deviceIp, userName, projectName);
+                ((SOPickService)channel).LoginDevice(new LoginDevice(context, deviceIp, device, projectName, userName));
             }
-            finally
-            {
-                client.Close();
-            }
+                        
         }
 
         public FGLineContract[] GetFGLines()
         {
-            
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            FGLineContract[] result=null; 
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            try
-            {
-                return client.GetFGLines(context);
+                result = ((SOPickService)channel).GetFGLines(new GetFGLines(context)).result;
             }
-            finally
-            {
-                client.Close();
-            }
+
+            return result;
         }
 
         public FGDeliveryContract[] GetDeliveries(DateTime dateSearch)
         {
-            SOPickServiceClient client = new SalesOrderAX.SOPickServiceClient();
-            CallContext context = new CallContext()
+            FGDeliveryContract[] result = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            try
-            {
-                var deliveries = client.GetDeliveries(context, dateSearch);
-                return deliveries;
+                result = ((SOPickService)channel).GetDeliveries(new GetDeliveries(context, dateSearch)).result;
             }
-            finally
-            {
-                client.Close();
-            }
+
+            return result;
         }
 
         public List<UserData> GetUserData()
@@ -628,14 +672,17 @@ namespace SyncServices
 
         public string ChangeLoadingLine(string pickingId, int loadingLineNum)
         {
-            SOPickServiceClient client = new SOPickServiceClient();
-            CallContext context = new CallContext()
+            string result = string.Empty;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            return client.ChangeTruckLoadingLine(context, pickingId, loadingLineNum).ToString();
+                result = ((SOPickService)channel).ChangeTruckLoadingLine(new ChangeTruckLoadingLine(context, loadingLineNum, pickingId)).result;
+            }
+
+            return result;
         }
 
         public string GetPing()

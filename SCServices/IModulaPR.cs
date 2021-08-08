@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using SyncServices.EAMServices;
+using SoapUtility.EAMServices;
 
 namespace SyncServices
 {
@@ -217,13 +217,13 @@ namespace SyncServices
                 Description = this.Description,
                 WorkOrderPoolCode = this.WOPoolCode,
                 WorkOrderType =(PMWorkOrderType)Enum.Parse(typeof(PMWorkOrderType), this.WOType),
-                WorkOrderTypeSpecified=true,
+                //WorkOrderTypeSpecified=true,
                 EquipmentID = this.WOEquipment,
                 RepairCode = this.RepairCode,
                 WOStartDate = this.StartDate.Value,
-                WOStartDateSpecified=true,
+                //WOStartDateSpecified=true,
                 WorkOrderStatus = (PMWorkOrderStatus)Enum.Parse(typeof(PMWorkOrderStatus), this.WOStatus),
-                WorkOrderStatusSpecified=true,
+                //WorkOrderStatusSpecified=true,
                 WorkOrderItems = new PMWorkItem().FromListConvert(this.WorkItems).ToArray()
             };
         }
@@ -291,15 +291,15 @@ namespace SyncServices
                 PMUnit = item.UoM,
                 Location = item.Location,
                 QuantityConsumed = item.Qty,
-                QuantityConsumedSpecified = true,
+                //QuantityConsumedSpecified = true,
                 ItemRecId = item.ItemRecId,
-                ItemRecIdSpecified = true,
+                //ItemRecIdSpecified = true,
                 Sto_ID = item.Sto_ID,
-                Sto_IDSpecified = true,
+                //Sto_IDSpecified = true,
                 Sto_Requester = item.Sto_Requester,
                 Sto_HostRIF = item.Sto_HostRIF,
                 ItemPKId = item.ID,
-                ItemPKIdSpecified = true
+                //ItemPKIdSpecified = true
             };
         }
         public List<PMWorkItemContract> FromListConvert(List<PMWorkItem> lines)

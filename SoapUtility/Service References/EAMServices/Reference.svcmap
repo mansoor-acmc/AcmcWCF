@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6631edac-3347-42eb-8032-a649eb034465" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EAMServices.wsdl" MetadataType="Wsdl" ID="27bc30b5-7148-40c7-bd9b-c779c9a73f23" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?wsdl" />
+    <MetadataFile FileName="EAMServices1.wsdl" MetadataType="Wsdl" ID="d8928d79-f310-41df-8ffa-f080ec059a3e" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
+    <MetadataFile FileName="EAMServices.xsd" MetadataType="Schema" ID="a3a029c1-ba74-4b3f-947e-efd50cc55081" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd4" />
+    <MetadataFile FileName="EAMServices1.xsd" MetadataType="Schema" ID="4b3d8698-7f8a-4577-879f-3a9d3dd03953" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd6" />
+    <MetadataFile FileName="EAMServices.disco" MetadataType="Disco" ID="9ecf5355-edcf-4534-bc4b-1439d3f905ea" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?disco" />
+    <MetadataFile FileName="EAMServices2.xsd" MetadataType="Schema" ID="70b12c47-1140-476a-aa49-41777692507c" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd1" />
+    <MetadataFile FileName="EAMServices3.xsd" MetadataType="Schema" ID="367a697e-3e21-4121-93a4-dace043361b2" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd2" />
+    <MetadataFile FileName="EAMServices4.xsd" MetadataType="Schema" ID="2e417990-4033-4d1f-9b5c-91c8c093ac4f" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd5" />
+    <MetadataFile FileName="EAMServices5.xsd" MetadataType="Schema" ID="bb4486dd-b6dc-458f-9f02-f63807f281fd" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd0" />
+    <MetadataFile FileName="EAMServices6.xsd" MetadataType="Schema" ID="f77ed75a-5aac-49ed-b737-95e17eea174a" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

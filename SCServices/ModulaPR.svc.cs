@@ -6,15 +6,43 @@ using System.ServiceModel;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using SyncServices.EAMServices;
+using SoapUtility.EAMServices;
 using System.Configuration;
 using System.Data;
+using AuthenticationUtility;
+using System.ServiceModel.Channels;
 
 namespace SyncServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ModulaPR" in code, svc and config file together.
     public class ModulaPR : IModulaPR
     {
+        public const string D365ServiceName = "EAMServices";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
+
+        public ModulaPR()
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new WorkItemsServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+        }
+
         public ItemEntity GetItem(string itemId)
         {
             return new DBClass().GetItem(itemId);
@@ -28,16 +56,18 @@ namespace SyncServices
         public List<WOPool> GetWOPools()
         {
             List<WOPool> items = new List<WOPool>();
+            WOPoolContract[] contract = null;
 
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            List<WOPoolContract> ds = client.GetWOPoolCode(context).ToList();
-            foreach (WOPoolContract dr in ds)
+                contract = ((WorkItemsService)channel).GetWOPoolCode(new GetWOPoolCode(context)).result;
+            }
+                        
+            foreach (WOPoolContract dr in contract)
             {
                 WOPool woEquipment = new WOPool()
                 {
@@ -46,23 +76,25 @@ namespace SyncServices
                 };
                 items.Add(woEquipment);
             }
-            client.Close();
+            
             return items;
         }
 
         public List<PMFailureCode> GetFailureCodes()
         {
             List<PMFailureCode> items = new List<PMFailureCode>();
+            FailureCodeContract[] contract = null;
 
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            List<FailureCodeContract> ds = client.GetFailureCodes(context).ToList();
-            foreach (FailureCodeContract dr in ds)
+                contract = ((WorkItemsService)channel).GetFailureCodes(new GetFailureCodes(context)).result;
+            }
+                        
+            foreach (FailureCodeContract dr in contract)
             {
                 PMFailureCode failureCode = new PMFailureCode()
                 {
@@ -72,23 +104,25 @@ namespace SyncServices
 
                 items.Add(failureCode);
             }
-            client.Close();
-
+           
             return items;
         }
 
         public List<PMRepairCode> GetRepairCodes()
         {
             List<PMRepairCode> items = new List<PMRepairCode>();
+            RepairCodeContract[] contract = null;
 
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-            List<RepairCodeContract> ds = client.GetRepaireCodes(context).ToList();
-            foreach (RepairCodeContract dr in ds)
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                contract = ((WorkItemsService)channel).GetRepaireCodes(new GetRepaireCodes(context)).result;
+            }
+                        
+            foreach (RepairCodeContract dr in contract)
             {
                 PMRepairCode repairCode = new PMRepairCode()
                 {
@@ -99,7 +133,7 @@ namespace SyncServices
 
                 items.Add(repairCode);
             }
-            client.Close();
+            
 
             return items;
         }
@@ -107,17 +141,19 @@ namespace SyncServices
         public List<PMEquipment> GetEquipments()
         {
             List<PMEquipment> items = new List<PMEquipment>();
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            EquipContract[] contract = null;
+
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                contract = ((WorkItemsService)channel).GetAllEquipments(new GetAllEquipments(context)).result;
+            }
 
 
-            List<EquipContract> ds = client.GetAllEquipments(context).ToList();
-
-            foreach (EquipContract dr in ds)
+            foreach (EquipContract dr in contract)
             {
                 PMEquipment woEquipment = new PMEquipment()
                 {
@@ -128,12 +164,9 @@ namespace SyncServices
                     LocationCode = dr.LocationCode
                 };
 
-
                 items.Add(woEquipment);
             }
 
-            
-            client.Close();
 
             return items;
         }
@@ -141,28 +174,30 @@ namespace SyncServices
         public List<PMEquipment> SearchEquipments(string search)
         {
             List<PMEquipment> items = new List<PMEquipment>();
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            if (search.ToUpper().StartsWith("EQPID"))
-            {
-                items.Add(GetEquipment(search));
-            }
-            else
-            {
-                //for bulk search use "*"
-                if (!search.EndsWith("*"))
-                    search = search + "*";
-                else if (!search.StartsWith("*"))
-                    search = "*" + search;
+                EquipContract[] contract;
+                if (search.ToUpper().StartsWith("EQPID"))
+                {
+                    var equip = ((WorkItemsService)channel).GetEquipment(new GetEquipment(context, search)).result;
+                    contract = new EquipContract[1] { equip };
+                }
+                else
+                {
+                    //for bulk search use "*"
+                    if (!search.EndsWith("*"))
+                        search = search + "*";
+                    else if (!search.StartsWith("*"))
+                        search = "*" + search;
 
-                List<EquipContract> ds = client.SearchEquipments(context, search).ToList();
+                    contract = ((WorkItemsService)channel).SearchEquipments(new SearchEquipments(context, search)).result;
+                }
 
-                foreach (EquipContract dr in ds)
+                foreach (EquipContract dr in contract)
                 {
                     PMEquipment woEquipment = new PMEquipment()
                     {
@@ -178,22 +213,22 @@ namespace SyncServices
                 }
             }
 
-            client.Close();
-
             return items;
         }
 
         public PMEquipment GetEquipment(string equipId)
         {
             PMEquipment woEquipment = new PMEquipment();
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            EquipContract equipment;
+
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-            
-            EquipContract equipment = client.GetEquipment(context, equipId);
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                equipment = ((WorkItemsService)channel).GetEquipment(new GetEquipment(context, equipId)).result;
+            }
 
             if (!string.IsNullOrEmpty(equipment.EquipmentID))
             {
@@ -212,58 +247,59 @@ namespace SyncServices
 
         public List<WOTypeContract> GetWorkOrderTypes()
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-
-            return client.GetWorkOrderTypes(context).ToList();
+                return ((WorkItemsService)channel).GetWorkOrderTypes(new GetWorkOrderTypes(context)).result.ToList();
+            }
         }
 
         public List<WOLocationContract> GetEquipLocations()
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
+                return ((WorkItemsService)channel).GetEquipLocations(new GetEquipLocations(context)).result.ToList();
+            }
 
-            return client.GetEquipLocations(context).ToList();
         }
 
         public List<PMWorkItem> GetInlineWorkItems(string workOrderId)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            var items=client.GetInlineWorkItems(context, workOrderId).ToList();
-            return new PMWorkItem().ToListConvert(items);
+                var items =((WorkItemsService)channel).GetInlineWorkItems(new GetInlineWorkItems(context, workOrderId)).result.ToList();
+                return new PMWorkItem().ToListConvert(items);
+            }            
+            
         }
 
         public List<PMWorkItem> GetOtherWorkItems(string workOrderId, string search, int topRecords, bool isItemCode)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-            
-            if (string.IsNullOrEmpty(search))
-                search = "*";
-            else
-                search = "*" + search + "*";
-            var items = client.GetOtherWorkItems(context, workOrderId, search, topRecords, isItemCode).ToList();
-            return new PMWorkItem().ToListConvert(items);
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                if (string.IsNullOrEmpty(search))
+                    search = "*";
+                else
+                    search = "*" + search + "*";
+
+                var items = ((WorkItemsService)channel).GetOtherWorkItems(new GetOtherWorkItems(context, isItemCode, search, topRecords, workOrderId)).result.ToList();
+                return new PMWorkItem().ToListConvert(items);
+            }
         }
 
 
@@ -271,16 +307,17 @@ namespace SyncServices
 
         public PMWorkOrder GetlatestWorkOrder(string workOrderId)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            PMWorkOrderContract contract = client.GetLatestWorkorder(context, workOrderId);
-            PMWorkOrder entity = new PMWorkOrder();
-            return entity.ToConvert(contract);
+                PMWorkOrderContract contract = ((WorkItemsService)channel).GetLatestWorkorder(new GetLatestWorkorder(context, workOrderId)).result;
+                PMWorkOrder entity = new PMWorkOrder();
+                return entity.ToConvert(contract);
+            }            
+            
         }
 
 
@@ -288,60 +325,32 @@ namespace SyncServices
 
         public PMWorkOrder SaveWorkOrder(PMWorkOrder entity)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-
             PMWorkOrderContract contract = entity.FromConvert();
-            var item = client.SaveWorkOrder(context, contract);
+            
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            return entity.ToConvert(item);
+                var item = ((WorkItemsService)channel).SaveWorkOrder(new SaveWorkOrder(context, contract)).result;
+               
+                return entity.ToConvert(contract);
+            }            
         }
 
         public int SetWorkOrderStatus(string workOrderId, int statusId)
         {
             bool item = false;
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            try
-            {
-                item = client.SetWOStatus(context, workOrderId, statusId);
+                item = ((WorkItemsService)channel).SetWOStatus(new SetWOStatus(context, statusId, workOrderId)).result;
             }
-            catch (System.ServiceModel.FaultException<AifFault> aifExp)
-            {
-                string allMsgs = string.Empty;
-                InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                foreach (InfologMessage msg in msgs)
-                {
-                    allMsgs += msg.Message + Environment.NewLine;
-                }
-
-                if (!string.IsNullOrEmpty(allMsgs))
-                {
-                    //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
-                    //new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
-
-                    throw new Exception(allMsgs);
-                }
-            }
-            catch (Exception exp)
-            {
-                try
-                {
-                    //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
-                    //new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
-                }
-                catch { }
-                throw exp;
-            }
+            
             if (item)
                 return 1;
             else
@@ -350,13 +359,16 @@ namespace SyncServices
 
         public int DeleteWorkItem(string workOrderId, int sto_id)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            bool result = false;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
-            Boolean result = client.DeleteWorkItem(context, workOrderId, sto_id);
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                result = ((WorkItemsService)channel).DeleteWorkItem(new DeleteWorkItem(context, sto_id, workOrderId)).result;
+            }
+            
             if (result)
                 return 1;
 
@@ -413,16 +425,14 @@ namespace SyncServices
 
         public PMLineCostContract[] MainCostByProdLine(DateTime startDate, DateTime endDate)
         {
-            WorkItemsServiceClient client = new WorkItemsServiceClient();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            return client.MainCostByProdLine(context, startDate, endDate);
-
-            
+                return ((WorkItemsService)channel).MainCostByProdLine(new MainCostByProdLine(context, endDate, startDate)).result;
+            }
         }
         
         public string GetPing()

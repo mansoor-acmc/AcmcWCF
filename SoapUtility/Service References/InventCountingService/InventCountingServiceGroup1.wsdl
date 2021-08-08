@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd2" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd3" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCountingJournals">
+    <wsdl:part name="parameters" element="tns:GetCountingJournals" />
+  </wsdl:message>
+  <wsdl:message name="GetCountingJournals_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetCountingJournalsResponse">
+    <wsdl:part name="parameters" element="tns:GetCountingJournalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountingJournalsResponse_Headers">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q2:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetCountingJournals_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q3:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsAvailable">
+    <wsdl:part name="parameters" element="tns:GetItemsAvailable" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsAvailable_Headers">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q4:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsAvailableResponse">
+    <wsdl:part name="parameters" element="tns:GetItemsAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsAvailableResponse_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q5:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetItemsAvailable_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q6:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUoM">
+    <wsdl:part name="parameters" element="tns:GetItemUoM" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUoM_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUoMResponse">
+    <wsdl:part name="parameters" element="tns:GetItemUoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUoMResponse_Headers">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q8:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetItemUoM_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q9:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouse">
+    <wsdl:part name="parameters" element="tns:GetWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouse_Headers">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q10:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseResponse">
+    <wsdl:part name="parameters" element="tns:GetWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseResponse_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q11:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetWarehouse_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q12:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocations">
+    <wsdl:part name="parameters" element="tns:GetWHLocations" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocations_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocationsResponse">
+    <wsdl:part name="parameters" element="tns:GetWHLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocationsResponse_Headers">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q14:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetWHLocations_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q15:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetYearFGInventory">
+    <wsdl:part name="parameters" element="tns:GetYearFGInventory" />
+  </wsdl:message>
+  <wsdl:message name="GetYearFGInventory_Headers">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q16:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetYearFGInventoryResponse">
+    <wsdl:part name="parameters" element="tns:GetYearFGInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYearFGInventoryResponse_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q17:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetYearFGInventory_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q18:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCounting">
+    <wsdl:part name="parameters" element="tns:UpdateCounting" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCounting_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCountingResponse">
+    <wsdl:part name="parameters" element="tns:UpdateCountingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCountingResponse_Headers">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q20:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_UpdateCounting_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q21:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferItems">
+    <wsdl:part name="parameters" element="tns:UpdateTransferItems" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferItems_Headers">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q22:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferItemsResponse">
+    <wsdl:part name="parameters" element="tns:UpdateTransferItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferItemsResponse_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q23:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_UpdateTransferItems_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q24:Fault" />
+  </wsdl:message>
+  <wsdl:portType name="JournalCountingService">
+    <wsdl:operation name="GetCountingJournals">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetCountingJournals" name="GetCountingJournals" message="tns:GetCountingJournals" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetCountingJournalsResponse" name="GetCountingJournalsResponse" message="tns:GetCountingJournalsResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetCountingJournals_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsAvailable">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetItemsAvailable" name="GetItemsAvailable" message="tns:GetItemsAvailable" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetItemsAvailableResponse" name="GetItemsAvailableResponse" message="tns:GetItemsAvailableResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetItemsAvailable_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUoM">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetItemUoM" name="GetItemUoM" message="tns:GetItemUoM" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetItemUoMResponse" name="GetItemUoMResponse" message="tns:GetItemUoMResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetItemUoM_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouse">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetWarehouse" name="GetWarehouse" message="tns:GetWarehouse" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetWarehouseResponse" name="GetWarehouseResponse" message="tns:GetWarehouseResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetWarehouse_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHLocations">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetWHLocations" name="GetWHLocations" message="tns:GetWHLocations" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetWHLocationsResponse" name="GetWHLocationsResponse" message="tns:GetWHLocationsResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetWHLocations_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearFGInventory">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetYearFGInventory" name="GetYearFGInventory" message="tns:GetYearFGInventory" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetYearFGInventoryResponse" name="GetYearFGInventoryResponse" message="tns:GetYearFGInventoryResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetYearFGInventory_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCounting">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/UpdateCounting" name="UpdateCounting" message="tns:UpdateCounting" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/UpdateCountingResponse" name="UpdateCountingResponse" message="tns:UpdateCountingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_UpdateCounting_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferItems">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/UpdateTransferItems" name="UpdateTransferItems" message="tns:UpdateTransferItems" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/UpdateTransferItemsResponse" name="UpdateTransferItemsResponse" message="tns:UpdateTransferItemsResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_UpdateTransferItems_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

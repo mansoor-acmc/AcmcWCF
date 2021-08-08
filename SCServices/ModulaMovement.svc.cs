@@ -28,7 +28,12 @@ namespace SyncServices
                 conn.Close();
         }
 
-
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <param name="itemId"></param>
+        /// <param name="time"></param>
+        /// <returns></returns>
         public bool OpenItemCode(int itemId, string time)
         {
             StartConn(true);
@@ -83,6 +88,10 @@ namespace SyncServices
             return false;
         }
 
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <returns></returns>
         public DataTable ItemsNotUsed()
         {
             DataTable dtReturn = new DataTable("WorkOrders");
@@ -101,6 +110,10 @@ namespace SyncServices
             //return new DBClass(DBClass.DbName.DynamicsAX).ItemsNotUsed();
         }
 
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <returns></returns>
         public DataTable ItemsNotUsedWithWOId()
         {
             DataTable dtReturn = new DataTable("WorkOrders");
@@ -120,6 +133,10 @@ namespace SyncServices
             return dtReturn;
         }
 
+        /// <summary>
+        /// ***Convert it to WCF service method***
+        /// </summary>
+        /// <returns></returns>
         public DataTable ItemsUsedButNotPosted()
         {
             DataTable dtReturn = new DataTable("WorkOrders");

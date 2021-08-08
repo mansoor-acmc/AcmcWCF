@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ac50374b-ef5c-4099-9a9b-b9fc01db2150" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SOPickServiceGroup.xsd" MetadataType="Schema" ID="b7f43b73-8670-4b1f-98eb-05311387abeb" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="SOPickServiceGroup1.xsd" MetadataType="Schema" ID="8ce3e5bd-5125-47de-add5-aeae0588e462" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd3" />
+    <MetadataFile FileName="SOPickServiceGroup2.xsd" MetadataType="Schema" ID="253d34ac-6511-41e9-8180-c0a0ab8ca2ad" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd2" />
+    <MetadataFile FileName="SOPickServiceGroup3.xsd" MetadataType="Schema" ID="4c66f5d2-8987-4973-8d1b-4d7e2298c740" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd1" />
+    <MetadataFile FileName="SOPickServiceGroup4.xsd" MetadataType="Schema" ID="a41b007e-8a30-4473-a959-93709ec941b1" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd0" />
+    <MetadataFile FileName="SOPickServiceGroup.wsdl" MetadataType="Wsdl" ID="2ea7287d-9637-41bb-abdc-a1e7be2cac60" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="SOPickServiceGroup.disco" MetadataType="Disco" ID="feac1a53-2ef6-4e66-ae64-a6143bd9ea62" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?disco" />
+    <MetadataFile FileName="SOPickServiceGroup5.xsd" MetadataType="Schema" ID="41d55f80-ea88-405a-aedd-85bdc5b1a2b4" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd5" />
+    <MetadataFile FileName="SOPickServiceGroup6.xsd" MetadataType="Schema" ID="ef6742c9-2227-4713-8239-6c9498df9fbf" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="SOPickServiceGroup1.wsdl" MetadataType="Wsdl" ID="3fed00a7-2930-43e4-8788-67468ff06129" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

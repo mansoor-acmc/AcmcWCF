@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SoapUtility.UserMgtServices;
 using System.Runtime.Serialization;
-using System.Web;
-using WcfMobile.UserServices;
 
 namespace WcfMobile
 {

@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WcfMobile</RootNamespace>
     <AssemblyName>WcfMobile</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -401,12 +402,6 @@
     <None Include="Connected Services\SalesServicesGroup\SalesServicesGroup7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserServices\configuration91.svcinfo" />
-    <None Include="Connected Services\UserServices\configuration.svcinfo" />
-    <None Include="Connected Services\UserServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="CustomerCaseService.svc" />
     <Content Include="EAMService.svc" />
     <Content Include="PrePickingService.svc" />
@@ -432,11 +427,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\SalesServicesGroup\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\UserServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -789,56 +779,6 @@
     <Content Include="Connected Services\SalesServicesGroup\WcfMobile.SalesServicesGroup.InventOnHandServiceGetCustomerOlderStockOverallResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.AttendanceContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserInfoContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetCCAttendanceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetUserInfoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceLoginUserResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetUserInfoOnLoginResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.MobileUserLogin.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\UserServices\WcfMobile.UserServices.UserManagementServiceGetMobileUsersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\UserServices\UserMgtServices2.wsdl" />
-    <None Include="Connected Services\UserServices\UserMgtServices21.wsdl" />
-    <None Include="Connected Services\UserServices\UserMgtServices8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserServices\UserMgtServices87.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\PublishProfiles\AcmcMobileServices.pubxml" />
@@ -857,7 +797,16 @@
     <WCFMetadataStorage Include="Connected Services\EAMServices\" />
     <WCFMetadataStorage Include="Connected Services\SalesOrderServices\" />
     <WCFMetadataStorage Include="Connected Services\SalesServicesGroup\" />
-    <WCFMetadataStorage Include="Connected Services\UserServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuthenticationUtility\AuthenticationUtility.csproj">
+      <Project>{195ed9b3-92ad-417e-b20a-6438dd0e0b55}</Project>
+      <Name>AuthenticationUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoapUtility\SoapUtility.csproj">
+      <Project>{1dbab883-bab6-4433-8eab-6e197634f158}</Project>
+      <Name>SoapUtility</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

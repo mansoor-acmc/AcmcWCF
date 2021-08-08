@@ -1,85 +1,108 @@
-﻿using System;
+﻿using AuthenticationUtility;
+using SoapUtility.UserMgtServices;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Text;
-using WcfMobile.UserServices;
 
 namespace WcfMobile
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "UserInfoService" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select UserInfoService.svc or UserInfoService.svc.cs at the Solution Explorer and start debugging.
     public class UserInfoService : IUserInfoService
     {
-        public bool LoginUser(string userId, string password)
-        {
-            bool bolReturn = false;
-            UserManagementServiceClient client = new UserManagementServiceClient();
+        public const string D365ServiceName = "UserMgtServices";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
 
-            CallContext context = new CallContext()
+        public UserInfoService()
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new UserManagementServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
             {
                 MessageId = Guid.NewGuid().ToString(),
                 Company = ConfigurationManager.AppSettings["DynamicsCompany"]
             };
+        }
 
-            //client.ChannelFactory.Credentials.UserName.UserName = @"kabholding.com\ax2";
-            //client.ChannelFactory.Credentials.UserName.Password = "Dyn@n1c5Ax";
-
-            bolReturn = client.LoginUser(context, new UserInfoContract()
+        public bool LoginUser(string userId, string password)
+        {
+            bool bolReturn = false;            
+            
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                UserId = userId,
-                UserPassword = password,
-                NetworkDomain = "kabholding.com"
-            });
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+                var contract = new UserInfoContract()
+                {
+                    UserId = userId,
+                    UserPassword = password,
+                    NetworkDomain = "kabholding.com"
+                };
 
-            client.Close();
+                bolReturn = ((UserManagementService)channel).LoginUser(new LoginUser(context, contract)).result;                
+            }
 
             return bolReturn;
-
         }
 
         public UserInfo GetUserInfo(string userId)
         {
-            UserManagementServiceClient client = new UserManagementServiceClient();
-            CallContext context = new CallContext()
+            UserInfoContract user = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+                var contract = new UserInfoContract()
+                {
+                    UserId = userId,
+                    UserPassword = "",
+                    NetworkDomain = "kabholding.com"
+                };
 
-            UserInfoContract user = client.GetUserInfo(context, new UserInfoContract()
-            {
-                UserId = userId,
-                UserPassword = "",
-                NetworkDomain = "kabholding.com"
-            }, false);
-            client.Close();
+                user = ((UserManagementService)channel).GetUserInfo(new GetUserInfo(context, false, contract)).result;
+            }
 
             if (user != null)
                 return new UserInfo().ToConvert(user);
             else
                 return null;
-
         }
 
         public UserInfo GetUserInfoOnLogin(string userId, string password)
-        {
-            UserManagementServiceClient client = new UserManagementServiceClient();
-            CallContext context = new CallContext()
+        {            
+            UserInfoContract user = null;
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+                var contract = new UserInfoContract()
+                {
+                    UserId = userId,
+                    UserPassword = password,
+                    NetworkDomain = "kabholding.com"
+                };
 
-            UserInfoContract user = client.GetUserInfoOnLogin(context, new UserInfoContract()
-            {
-                UserId = userId,
-                UserPassword = password,
-                NetworkDomain = "kabholding.com"
-            }, false);
-            client.Close();
+                user = ((UserManagementService)channel).GetUserInfoOnLogin(new GetUserInfoOnLogin(context, false, contract)).result;
+            }
 
             if (user != null)
                 return new UserInfo().ToConvert(user);

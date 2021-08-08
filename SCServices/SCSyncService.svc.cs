@@ -8,7 +8,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
-using SyncServices.InventCountingService;
+using SoapUtility.InventCountingService;
 using System.Configuration;
 using SoapUtlUserMgt = SoapUtility.UserMgtServices;
 using AuthenticationUtility;
@@ -21,7 +21,33 @@ namespace SyncServices
     [AspNetCompatibilityRequirements(
         RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class SCSyncService : ISCSyncService
-    {          
+    {
+        public const string D365ServiceName = "InventCountingServiceGroup";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
+
+        public SCSyncService()
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new JournalCountingServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+        }
+
         public long UpdateSCDesktop(List<ItemEntity> dt)
         {
             return new DBClass().UpdateSupplyChainDesktop(dt);
@@ -42,16 +68,17 @@ namespace SyncServices
         public List<InventForItemUnit> GetSCUnitOfMeasureFromAX(string allItems)
         {
             List<InventForItemUnit> allRows = new List<InventForItemUnit>();
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            InventCountingService.JournalCountingServiceClient client = new  JournalCountingServiceClient();
-            var items = client.GetItemUoM(context, allItems);
-            if (items.Count() > 0)
-                allRows = items.ToList();
+                var items = ((JournalCountingService)channel).GetItemUoM(new GetItemUoM(context, allItems)).result;
+                if (items.Count() > 0)
+                    allRows = items.ToList();
+            }
+                       
 
             return allRows;
         }
@@ -87,31 +114,30 @@ namespace SyncServices
 
         /*-------------------------------------18/10/2020------------------------------------------------------*/
 
-        
+
         public List<WmsLocationContract> GetWHLocations()
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            JournalCountingServiceClient client = new JournalCountingServiceClient();
-            return client.GetWHLocations(context).ToList();
+                return ((JournalCountingService)channel).GetWHLocations(new GetWHLocations(context)).result.ToList();
+            }
+
         }
 
         public List<SCForTransfer> TransferItemsToNewLocation(List<SCForTransfer> lines)
         {
-            CallContext context = new CallContext()
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-            JournalCountingServiceClient client = new JournalCountingServiceClient();
-            var linesFromAX = client.UpdateTransferItems(context, lines.ToArray());
-
-            return linesFromAX.ToList();
+                return ((JournalCountingService)channel).UpdateTransferItems(new UpdateTransferItems(context, lines.ToArray())).result.ToList();
+            }            
         }
     }
 }

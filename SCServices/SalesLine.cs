@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SyncServices.SalesOrderAX;
+//using SyncServices.SalesOrderAX;
+using SoapUtility.SOPickServiceGroup;
 
 namespace SyncServices
 {
@@ -43,17 +44,17 @@ namespace SyncServices
                 ItemId = axdline.ItemId,
                 Name = axdline.Name,
                 SalesQty = axdline.SalesQty.GetValueOrDefault(),
-                SalesQtySpecified = true,
+                //SalesQtySpecified = true,
                 SalesQtyBox = axdline.SalesQtyBox.GetValueOrDefault(),
-                SalesQtyBoxSpecified = true,
+                //SalesQtyBoxSpecified = true,
                 SalesQtyPallet = axdline.SalesQtyPallet.GetValueOrDefault(),
-                SalesQtyPalletSpecified = true,
+                //SalesQtyPalletSpecified = true,
                 SalesQtySQM = axdline.SalesQtySQM.GetValueOrDefault(),
-                SalesQtySQMSpecified = true,
+                //SalesQtySQMSpecified = true,
                 SalesQtySQMReserved = axdline.SalesQtySQMReserved.GetValueOrDefault(),
-                SalesQtySQMReservedSpecified = true,
+                //SalesQtySQMReservedSpecified = true,
                 SalesQtySQMRemaining = axdline.SalesQtySQMRemaining.GetValueOrDefault(),
-                SalesQtySQMRemainingSpecified = true,
+                //SalesQtySQMRemainingSpecified = true,
                 SalesUnit = axdline.SalesUnit,
                 Grade = axdline.Grade,
                 Shade = axdline.Color,
@@ -65,11 +66,11 @@ namespace SyncServices
                 wLocationId = axdline.Location,
                 Remarks = axdline.Remarks,
                 IsHalfPallet = axdline.IsHalfPallet,
-                IsHalfPalletSpecified = true,
+                //IsHalfPalletSpecified = true,
                 ExclusiveHalfPallet = axdline.ExclusiveHalfPallet,
-                ExclusiveHalfPalletSpecified = true,
+                //ExclusiveHalfPalletSpecified = true,
                 LineRecId=axdline.LineRecId,
-                LineRecIdSpecified=true,
+                //LineRecIdSpecified=true,
                 Locations = axdline.Locations
             };
         }

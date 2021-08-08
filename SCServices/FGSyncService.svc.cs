@@ -8,7 +8,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
-using SyncServices.InventCountingService;
+using SoapUtility.InventCountingService;
 using System.Configuration;
 using SoapUtlUserMgt = SoapUtility.UserMgtServices;
 using AuthenticationUtility;
@@ -21,6 +21,33 @@ namespace SyncServices
         RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class FGSyncService : IFGSyncService
     {
+        public const string D365ServiceName = "InventCountingServiceGroup";
+        IClientChannel channel;
+        string oauthHeader = string.Empty;
+        CallContext context = null;
+
+        public FGSyncService()
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new JournalCountingServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+        }
+
+
         public List<PalletEntity> ResetData()
         {
             return new DBClass().ResetDataFGCount();
@@ -34,16 +61,17 @@ namespace SyncServices
         public List<InventAvailContract> GetFGYearInventory(int startId) 
         {
             List<InventAvailContract> allRows = new List<InventAvailContract>();
-            CallContext context = new CallContext()
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
-            };
 
-            InventCountingService.JournalCountingServiceClient client = new JournalCountingServiceClient();
-            var items = client.GetYearFGInventory(context, startId);
-            if (items.Count() > 0)
-                allRows = items.ToList();
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                var items = ((JournalCountingService)channel).GetYearFGInventory(new GetYearFGInventory(context, startId)).result;
+                if (items.Count() > 0)
+                    allRows = items.ToList();
+            }
 
             return allRows;
         }
