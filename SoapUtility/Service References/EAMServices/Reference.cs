@@ -433,15 +433,15 @@ namespace SoapUtility.EAMServices {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EquipContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EquipCatalogContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOLocationContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.FailureCodeContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.OnHandContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkOrderContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.OnHandContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.RepairCodeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOPoolContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMLineCostContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOTypeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOTypeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMLineCostContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EamWorkitemsContract))]
     public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -475,15 +475,15 @@ namespace SoapUtility.EAMServices {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EquipContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EquipCatalogContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOLocationContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.FailureCodeContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.OnHandContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMWorkOrderContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.OnHandContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.RepairCodeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOPoolContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMLineCostContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOTypeContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.WOTypeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.PMLineCostContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.EAMServices.EamWorkitemsContract))]
     public partial class XppObjectBase : SoapUtility.EAMServices.ProxyBase {
     }
@@ -703,6 +703,45 @@ namespace SoapUtility.EAMServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FailureCodeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class FailureCodeContract : SoapUtility.EAMServices.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FailureCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FailureCode {
+            get {
+                return this.FailureCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FailureCodeField, value) != true)) {
+                    this.FailureCodeField = value;
+                    this.RaisePropertyChanged("FailureCode");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkItemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
     public partial class PMWorkItemContract : SoapUtility.EAMServices.XppObjectBase {
@@ -863,116 +902,6 @@ namespace SoapUtility.EAMServices {
                 if ((object.ReferenceEquals(this.Sto_RequesterField, value) != true)) {
                     this.Sto_RequesterField = value;
                     this.RaisePropertyChanged("Sto_Requester");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FailureCodeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
-    [System.SerializableAttribute()]
-    public partial class FailureCodeContract : SoapUtility.EAMServices.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FailureCodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FailureCode {
-            get {
-                return this.FailureCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FailureCodeField, value) != true)) {
-                    this.FailureCodeField = value;
-                    this.RaisePropertyChanged("FailureCode");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OnHandContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
-    [System.SerializableAttribute()]
-    public partial class OnHandContract : SoapUtility.EAMServices.XppObjectBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GradeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ItemDescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ItemNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal OnHandQtyField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Grade {
-            get {
-                return this.GradeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
-                    this.GradeField = value;
-                    this.RaisePropertyChanged("Grade");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ItemDescription {
-            get {
-                return this.ItemDescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ItemDescriptionField, value) != true)) {
-                    this.ItemDescriptionField = value;
-                    this.RaisePropertyChanged("ItemDescription");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ItemNumber {
-            get {
-                return this.ItemNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
-                    this.ItemNumberField = value;
-                    this.RaisePropertyChanged("ItemNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal OnHandQty {
-            get {
-                return this.OnHandQtyField;
-            }
-            set {
-                if ((this.OnHandQtyField.Equals(value) != true)) {
-                    this.OnHandQtyField = value;
-                    this.RaisePropertyChanged("OnHandQty");
                 }
             }
         }
@@ -1163,6 +1092,77 @@ namespace SoapUtility.EAMServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OnHandContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class OnHandContract : SoapUtility.EAMServices.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OnHandQtyField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemDescription {
+            get {
+                return this.ItemDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemDescriptionField, value) != true)) {
+                    this.ItemDescriptionField = value;
+                    this.RaisePropertyChanged("ItemDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemNumber {
+            get {
+                return this.ItemNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
+                    this.ItemNumberField = value;
+                    this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal OnHandQty {
+            get {
+                return this.OnHandQtyField;
+            }
+            set {
+                if ((this.OnHandQtyField.Equals(value) != true)) {
+                    this.OnHandQtyField = value;
+                    this.RaisePropertyChanged("OnHandQty");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RepairCodeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
     public partial class RepairCodeContract : SoapUtility.EAMServices.XppObjectBase {
@@ -1257,54 +1257,38 @@ namespace SoapUtility.EAMServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PMLineCostContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class PMLineCostContract : SoapUtility.EAMServices.XppObjectBase {
+    public partial class LookupContract : SoapUtility.EAMServices.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ActualCostField;
+        private int LookupIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CostCenterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CostCenterNameField;
+        private string LookupStringField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal ActualCost {
+        public int LookupId {
             get {
-                return this.ActualCostField;
+                return this.LookupIdField;
             }
             set {
-                if ((this.ActualCostField.Equals(value) != true)) {
-                    this.ActualCostField = value;
-                    this.RaisePropertyChanged("ActualCost");
+                if ((this.LookupIdField.Equals(value) != true)) {
+                    this.LookupIdField = value;
+                    this.RaisePropertyChanged("LookupId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CostCenter {
+        public string LookupString {
             get {
-                return this.CostCenterField;
+                return this.LookupStringField;
             }
             set {
-                if ((object.ReferenceEquals(this.CostCenterField, value) != true)) {
-                    this.CostCenterField = value;
-                    this.RaisePropertyChanged("CostCenter");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CostCenterName {
-            get {
-                return this.CostCenterNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CostCenterNameField, value) != true)) {
-                    this.CostCenterNameField = value;
-                    this.RaisePropertyChanged("CostCenterName");
+                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
+                    this.LookupStringField = value;
+                    this.RaisePropertyChanged("LookupString");
                 }
             }
         }
@@ -1367,38 +1351,54 @@ namespace SoapUtility.EAMServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMLineCostContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class LookupContract : SoapUtility.EAMServices.XppObjectBase {
+    public partial class PMLineCostContract : SoapUtility.EAMServices.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LookupIdField;
+        private decimal ActualCostField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LookupStringField;
+        private string CostCenterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CostCenterNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int LookupId {
+        public decimal ActualCost {
             get {
-                return this.LookupIdField;
+                return this.ActualCostField;
             }
             set {
-                if ((this.LookupIdField.Equals(value) != true)) {
-                    this.LookupIdField = value;
-                    this.RaisePropertyChanged("LookupId");
+                if ((this.ActualCostField.Equals(value) != true)) {
+                    this.ActualCostField = value;
+                    this.RaisePropertyChanged("ActualCost");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LookupString {
+        public string CostCenter {
             get {
-                return this.LookupStringField;
+                return this.CostCenterField;
             }
             set {
-                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
-                    this.LookupStringField = value;
-                    this.RaisePropertyChanged("LookupString");
+                if ((object.ReferenceEquals(this.CostCenterField, value) != true)) {
+                    this.CostCenterField = value;
+                    this.RaisePropertyChanged("CostCenter");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CostCenterName {
+            get {
+                return this.CostCenterNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CostCenterNameField, value) != true)) {
+                    this.CostCenterNameField = value;
+                    this.RaisePropertyChanged("CostCenterName");
                 }
             }
         }
@@ -1565,100 +1565,110 @@ namespace SoapUtility.EAMServices {
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.DeleteWorkItemResponse DeleteWorkItem(SoapUtility.EAMServices.DeleteWorkItem request);
         
-        // CODEGEN: Generating message contract since message GetAllEquipments has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetAllEquipmentsResponse GetAllEquipments(SoapUtility.EAMServices.GetAllEquipments request);
-        
         // CODEGEN: Generating message contract since message DeleteWorkItemByRecId has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId", ReplyAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.DeleteWorkItemByRecIdResponse DeleteWorkItemByRecId(SoapUtility.EAMServices.DeleteWorkItemByRecId request);
         
-        // CODEGEN: Generating message contract since message GetEquipment has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
+        // CODEGEN: Generating message contract since message GetAllEquipments has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetAllEquipments", ReplyAction="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetEquipmentResponse GetEquipment(SoapUtility.EAMServices.GetEquipment request);
+        SoapUtility.EAMServices.GetAllEquipmentsResponse GetAllEquipments(SoapUtility.EAMServices.GetAllEquipments request);
         
         // CODEGEN: Generating message contract since message GetEquipLocations has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipLocations", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetEquipLocationsResponse GetEquipLocations(SoapUtility.EAMServices.GetEquipLocations request);
         
-        // CODEGEN: Generating message contract since message GetInlineWorkItems has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
+        // CODEGEN: Generating message contract since message GetEquipment has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetInlineWorkItemsResponse GetInlineWorkItems(SoapUtility.EAMServices.GetInlineWorkItems request);
-        
-        // CODEGEN: Generating message contract since message GetFailureCodes has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetFailureCodesResponse GetFailureCodes(SoapUtility.EAMServices.GetFailureCodes request);
+        SoapUtility.EAMServices.GetEquipmentResponse GetEquipment(SoapUtility.EAMServices.GetEquipment request);
         
         // CODEGEN: Generating message contract since message GetEquipmentsByCostCenter has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter", ReplyAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetEquipmentsByCostCenterResponse GetEquipmentsByCostCenter(SoapUtility.EAMServices.GetEquipmentsByCostCenter request);
         
-        // CODEGEN: Generating message contract since message GetOnhand has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOnhand", ReplyAction="http://tempuri.org/WorkItemsService/GetOnhandResponse")]
+        // CODEGEN: Generating message contract since message GetFailureCodes has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetFailureCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetFailureCodesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetOnhandResponse GetOnhand(SoapUtility.EAMServices.GetOnhand request);
+        SoapUtility.EAMServices.GetFailureCodesResponse GetFailureCodes(SoapUtility.EAMServices.GetFailureCodes request);
         
-        // CODEGEN: Generating message contract since message getMaxId has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
+        // CODEGEN: Generating message contract since message GetInlineWorkItems has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.getMaxIdResponse getMaxId(SoapUtility.EAMServices.getMaxId request);
+        SoapUtility.EAMServices.GetInlineWorkItemsResponse GetInlineWorkItems(SoapUtility.EAMServices.GetInlineWorkItems request);
         
         // CODEGEN: Generating message contract since message GetLatestWorkorder has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder", ReplyAction="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetLatestWorkorderResponse GetLatestWorkorder(SoapUtility.EAMServices.GetLatestWorkorder request);
         
-        // CODEGEN: Generating message contract since message GetSingleWorkorderWithItems has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItems", ReplyAction="http://tempuri.org/WorkItemsService/GetSingleWorkorderWithItemsResponse")]
+        // CODEGEN: Generating message contract since message getMaxId has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/getMaxId", ReplyAction="http://tempuri.org/WorkItemsService/getMaxIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetSingleWorkorderWithItemsResponse GetSingleWorkorderWithItems(SoapUtility.EAMServices.GetSingleWorkorderWithItems request);
+        SoapUtility.EAMServices.getMaxIdResponse getMaxId(SoapUtility.EAMServices.getMaxId request);
         
-        // CODEGEN: Generating message contract since message GetRepaireCodes has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
+        // CODEGEN: Generating message contract since message GetOnhand has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOnhand", ReplyAction="http://tempuri.org/WorkItemsService/GetOnhandResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetRepaireCodesResponse GetRepaireCodes(SoapUtility.EAMServices.GetRepaireCodes request);
+        SoapUtility.EAMServices.GetOnhandResponse GetOnhand(SoapUtility.EAMServices.GetOnhand request);
         
         // CODEGEN: Generating message contract since message GetOtherWorkItems has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetOtherWorkItemsResponse GetOtherWorkItems(SoapUtility.EAMServices.GetOtherWorkItems request);
         
-        // CODEGEN: Generating message contract since message GetWorkordersByEquipment has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse")]
+        // CODEGEN: Generating message contract since message GetRepaireCodes has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetRepaireCodes", ReplyAction="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetWorkordersByEquipmentResponse GetWorkordersByEquipment(SoapUtility.EAMServices.GetWorkordersByEquipment request);
-        
-        // CODEGEN: Generating message contract since message GetWorkordersByDates has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetWorkordersByDatesResponse GetWorkordersByDates(SoapUtility.EAMServices.GetWorkordersByDates request);
+        SoapUtility.EAMServices.GetRepaireCodesResponse GetRepaireCodes(SoapUtility.EAMServices.GetRepaireCodes request);
         
         // CODEGEN: Generating message contract since message GetWOPoolCode has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWOPoolCode", ReplyAction="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetWOPoolCodeResponse GetWOPoolCode(SoapUtility.EAMServices.GetWOPoolCode request);
         
-        // CODEGEN: Generating message contract since message MainCostByProdLine has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
+        // CODEGEN: Generating message contract since message GetWorkordersByDates has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.MainCostByProdLineResponse MainCostByProdLine(SoapUtility.EAMServices.MainCostByProdLine request);
+        SoapUtility.EAMServices.GetWorkordersByDatesResponse GetWorkordersByDates(SoapUtility.EAMServices.GetWorkordersByDates request);
+        
+        // CODEGEN: Generating message contract since message GetWorkordersByEquipment has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.GetWorkordersByEquipmentResponse GetWorkordersByEquipment(SoapUtility.EAMServices.GetWorkordersByEquipment request);
+        
+        // CODEGEN: Generating message contract since message GetWorkOrderStatusLookup has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse GetWorkOrderStatusLookup(SoapUtility.EAMServices.GetWorkOrderStatusLookup request);
         
         // CODEGEN: Generating message contract since message GetWorkOrderTypes has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.GetWorkOrderTypesResponse GetWorkOrderTypes(SoapUtility.EAMServices.GetWorkOrderTypes request);
         
-        // CODEGEN: Generating message contract since message GetWorkOrderStatusLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup", ReplyAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse")]
+        // CODEGEN: Generating message contract since message MainCostByProdLine has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/MainCostByProdLine", ReplyAction="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse GetWorkOrderStatusLookup(SoapUtility.EAMServices.GetWorkOrderStatusLookup request);
+        SoapUtility.EAMServices.MainCostByProdLineResponse MainCostByProdLine(SoapUtility.EAMServices.MainCostByProdLine request);
+        
+        // CODEGEN: Generating message contract since message PostedWorkItems has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/PostedWorkItems", ReplyAction="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.PostedWorkItemsResponse PostedWorkItems(SoapUtility.EAMServices.PostedWorkItems request);
+        
+        // CODEGEN: Generating message contract since message SearchEquipments has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SearchEquipments", ReplyAction="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.SearchEquipmentsResponse SearchEquipments(SoapUtility.EAMServices.SearchEquipments request);
+        
+        // CODEGEN: Generating message contract since message SetWOStatus has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WorkItemsService/SetWOStatus", ReplyAction="http://tempuri.org/WorkItemsService/SetWOStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="http://tempuri.org/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.SetWOStatusResponse SetWOStatus(SoapUtility.EAMServices.SetWOStatus request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1752,44 +1762,6 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllEquipments", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetAllEquipments {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.CallContext CallContext;
-        
-        public GetAllEquipments() {
-        }
-        
-        public GetAllEquipments(SoapUtility.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetAllEquipmentsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.EquipContract[] result;
-        
-        public GetAllEquipmentsResponse() {
-        }
-        
-        public GetAllEquipmentsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.EquipContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteWorkItemByRecId", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
     public partial class DeleteWorkItemByRecId {
         
@@ -1828,6 +1800,82 @@ namespace SoapUtility.EAMServices {
         }
         
         public DeleteWorkItemByRecIdResponse(SoapUtility.EAMServices.Infolog Infolog, bool result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllEquipments", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetAllEquipments {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetAllEquipments() {
+        }
+        
+        public GetAllEquipments(SoapUtility.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetAllEquipmentsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.EquipContract[] result;
+        
+        public GetAllEquipmentsResponse() {
+        }
+        
+        public GetAllEquipmentsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.EquipContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipLocations", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetEquipLocations {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetEquipLocations() {
+        }
+        
+        public GetEquipLocations(SoapUtility.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetEquipLocationsResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.WOLocationContract[] result;
+        
+        public GetEquipLocationsResponse() {
+        }
+        
+        public GetEquipLocationsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOLocationContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -1878,16 +1926,58 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipLocations", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetEquipLocations {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipmentsByCostCenter", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetEquipmentsByCostCenter {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
-        public GetEquipLocations() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string dimValueStr;
+        
+        public GetEquipmentsByCostCenter() {
         }
         
-        public GetEquipLocations(SoapUtility.EAMServices.CallContext CallContext) {
+        public GetEquipmentsByCostCenter(SoapUtility.EAMServices.CallContext CallContext, string dimValueStr) {
+            this.CallContext = CallContext;
+            this.dimValueStr = dimValueStr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipmentsByCostCenterResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetEquipmentsByCostCenterResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.EquipContract[] result;
+        
+        public GetEquipmentsByCostCenterResponse() {
+        }
+        
+        public GetEquipmentsByCostCenterResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.EquipContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFailureCodes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetFailureCodes {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetFailureCodes() {
+        }
+        
+        public GetFailureCodes(SoapUtility.EAMServices.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -1895,19 +1985,19 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipLocationsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetEquipLocationsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFailureCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetFailureCodesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.WOLocationContract[] result;
+        public SoapUtility.EAMServices.FailureCodeContract[] result;
         
-        public GetEquipLocationsResponse() {
+        public GetFailureCodesResponse() {
         }
         
-        public GetEquipLocationsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOLocationContract[] result) {
+        public GetFailureCodesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.FailureCodeContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -1958,120 +2048,40 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFailureCodes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetFailureCodes {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.CallContext CallContext;
-        
-        public GetFailureCodes() {
-        }
-        
-        public GetFailureCodes(SoapUtility.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFailureCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetFailureCodesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.FailureCodeContract[] result;
-        
-        public GetFailureCodesResponse() {
-        }
-        
-        public GetFailureCodesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.FailureCodeContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipmentsByCostCenter", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetEquipmentsByCostCenter {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestWorkorder", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetLatestWorkorder {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string dimValueStr;
+        public string woId;
         
-        public GetEquipmentsByCostCenter() {
+        public GetLatestWorkorder() {
         }
         
-        public GetEquipmentsByCostCenter(SoapUtility.EAMServices.CallContext CallContext, string dimValueStr) {
+        public GetLatestWorkorder(SoapUtility.EAMServices.CallContext CallContext, string woId) {
             this.CallContext = CallContext;
-            this.dimValueStr = dimValueStr;
+            this.woId = woId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetEquipmentsByCostCenterResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetEquipmentsByCostCenterResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestWorkorderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetLatestWorkorderResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.EquipContract[] result;
+        public SoapUtility.EAMServices.PMWorkOrderContract result;
         
-        public GetEquipmentsByCostCenterResponse() {
+        public GetLatestWorkorderResponse() {
         }
         
-        public GetEquipmentsByCostCenterResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.EquipContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOnhand", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetOnhand {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string _itemId;
-        
-        public GetOnhand() {
-        }
-        
-        public GetOnhand(SoapUtility.EAMServices.CallContext CallContext, string _itemId) {
-            this.CallContext = CallContext;
-            this._itemId = _itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOnhandResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetOnhandResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.OnHandContract result;
-        
-        public GetOnhandResponse() {
-        }
-        
-        public GetOnhandResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.OnHandContract result) {
+        public GetLatestWorkorderResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2118,120 +2128,40 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestWorkorder", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetLatestWorkorder {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOnhand", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetOnhand {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string woId;
+        public string _itemId;
         
-        public GetLatestWorkorder() {
+        public GetOnhand() {
         }
         
-        public GetLatestWorkorder(SoapUtility.EAMServices.CallContext CallContext, string woId) {
+        public GetOnhand(SoapUtility.EAMServices.CallContext CallContext, string _itemId) {
             this.CallContext = CallContext;
-            this.woId = woId;
+            this._itemId = _itemId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestWorkorderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetLatestWorkorderResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOnhandResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetOnhandResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.PMWorkOrderContract result;
+        public SoapUtility.EAMServices.OnHandContract result;
         
-        public GetLatestWorkorderResponse() {
+        public GetOnhandResponse() {
         }
         
-        public GetLatestWorkorderResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleWorkorderWithItems", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetSingleWorkorderWithItems {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string woId;
-        
-        public GetSingleWorkorderWithItems() {
-        }
-        
-        public GetSingleWorkorderWithItems(SoapUtility.EAMServices.CallContext CallContext, string woId) {
-            this.CallContext = CallContext;
-            this.woId = woId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleWorkorderWithItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetSingleWorkorderWithItemsResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.PMWorkOrderContract result;
-        
-        public GetSingleWorkorderWithItemsResponse() {
-        }
-        
-        public GetSingleWorkorderWithItemsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRepaireCodes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetRepaireCodes {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.CallContext CallContext;
-        
-        public GetRepaireCodes() {
-        }
-        
-        public GetRepaireCodes(SoapUtility.EAMServices.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetRepaireCodesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.EAMServices.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.RepairCodeContract[] result;
-        
-        public GetRepaireCodesResponse() {
-        }
-        
-        public GetRepaireCodesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.RepairCodeContract[] result) {
+        public GetOnhandResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.OnHandContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2294,40 +2224,74 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkordersByEquipment", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkordersByEquipment {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRepaireCodes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetRepaireCodes {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public string equipId;
-        
-        public GetWorkordersByEquipment() {
+        public GetRepaireCodes() {
         }
         
-        public GetWorkordersByEquipment(SoapUtility.EAMServices.CallContext CallContext, string equipId) {
+        public GetRepaireCodes(SoapUtility.EAMServices.CallContext CallContext) {
             this.CallContext = CallContext;
-            this.equipId = equipId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkordersByEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkordersByEquipmentResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRepaireCodesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetRepaireCodesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.PMWorkOrderContract[] result;
+        public SoapUtility.EAMServices.RepairCodeContract[] result;
         
-        public GetWorkordersByEquipmentResponse() {
+        public GetRepaireCodesResponse() {
         }
         
-        public GetWorkordersByEquipmentResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract[] result) {
+        public GetRepaireCodesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.RepairCodeContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWOPoolCode", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWOPoolCode {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetWOPoolCode() {
+        }
+        
+        public GetWOPoolCode(SoapUtility.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWOPoolCodeResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.WOPoolContract[] result;
+        
+        public GetWOPoolCodeResponse() {
+        }
+        
+        public GetWOPoolCodeResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOPoolContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2382,16 +2346,58 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWOPoolCode", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWOPoolCode {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkordersByEquipment", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkordersByEquipment {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
-        public GetWOPoolCode() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string equipId;
+        
+        public GetWorkordersByEquipment() {
         }
         
-        public GetWOPoolCode(SoapUtility.EAMServices.CallContext CallContext) {
+        public GetWorkordersByEquipment(SoapUtility.EAMServices.CallContext CallContext, string equipId) {
+            this.CallContext = CallContext;
+            this.equipId = equipId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkordersByEquipmentResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkordersByEquipmentResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.PMWorkOrderContract[] result;
+        
+        public GetWorkordersByEquipmentResponse() {
+        }
+        
+        public GetWorkordersByEquipmentResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderStatusLookup", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkOrderStatusLookup {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetWorkOrderStatusLookup() {
+        }
+        
+        public GetWorkOrderStatusLookup(SoapUtility.EAMServices.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -2399,19 +2405,57 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWOPoolCodeResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWOPoolCodeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkOrderStatusLookupResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.WOPoolContract[] result;
+        public SoapUtility.EAMServices.LookupContract[] result;
         
-        public GetWOPoolCodeResponse() {
+        public GetWorkOrderStatusLookupResponse() {
         }
         
-        public GetWOPoolCodeResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOPoolContract[] result) {
+        public GetWorkOrderStatusLookupResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.LookupContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderTypes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkOrderTypes {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        public GetWorkOrderTypes() {
+        }
+        
+        public GetWorkOrderTypes(SoapUtility.EAMServices.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetWorkOrderTypesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.EAMServices.WOTypeContract[] result;
+        
+        public GetWorkOrderTypesResponse() {
+        }
+        
+        public GetWorkOrderTypesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOTypeContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2466,16 +2510,16 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderTypes", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkOrderTypes {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PostedWorkItems", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PostedWorkItems {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
-        public GetWorkOrderTypes() {
+        public PostedWorkItems() {
         }
         
-        public GetWorkOrderTypes(SoapUtility.EAMServices.CallContext CallContext) {
+        public PostedWorkItems(SoapUtility.EAMServices.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -2483,19 +2527,19 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderTypesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkOrderTypesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PostedWorkItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class PostedWorkItemsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.WOTypeContract[] result;
+        public string[] result;
         
-        public GetWorkOrderTypesResponse() {
+        public PostedWorkItemsResponse() {
         }
         
-        public GetWorkOrderTypesResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.WOTypeContract[] result) {
+        public PostedWorkItemsResponse(SoapUtility.EAMServices.Infolog Infolog, string[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2504,36 +2548,86 @@ namespace SoapUtility.EAMServices {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderStatusLookup", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkOrderStatusLookup {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SearchEquipments", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SearchEquipments {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.CallContext CallContext;
         
-        public GetWorkOrderStatusLookup() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public string equipName;
+        
+        public SearchEquipments() {
         }
         
-        public GetWorkOrderStatusLookup(SoapUtility.EAMServices.CallContext CallContext) {
+        public SearchEquipments(SoapUtility.EAMServices.CallContext CallContext, string equipName) {
             this.CallContext = CallContext;
+            this.equipName = equipName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetWorkOrderStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetWorkOrderStatusLookupResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SearchEquipmentsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SearchEquipmentsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.EAMServices.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public SoapUtility.EAMServices.LookupContract[] result;
+        public SoapUtility.EAMServices.EquipContract[] result;
         
-        public GetWorkOrderStatusLookupResponse() {
+        public SearchEquipmentsResponse() {
         }
         
-        public GetWorkOrderStatusLookupResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.LookupContract[] result) {
+        public SearchEquipmentsResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.EquipContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetWOStatus", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SetWOStatus {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public int statusId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        public string woId;
+        
+        public SetWOStatus() {
+        }
+        
+        public SetWOStatus(SoapUtility.EAMServices.CallContext CallContext, int statusId, string woId) {
+            this.CallContext = CallContext;
+            this.statusId = statusId;
+            this.woId = woId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetWOStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class SetWOStatusResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public bool result;
+        
+        public SetWOStatusResponse() {
+        }
+        
+        public SetWOStatusResponse(SoapUtility.EAMServices.Infolog Infolog, bool result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2596,6 +2690,21 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.DeleteWorkItemByRecIdResponse SoapUtility.EAMServices.WorkItemsService.DeleteWorkItemByRecId(SoapUtility.EAMServices.DeleteWorkItemByRecId request) {
+            return base.Channel.DeleteWorkItemByRecId(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog DeleteWorkItemByRecId(SoapUtility.EAMServices.CallContext CallContext, long rec_id, string woId, out bool result) {
+            SoapUtility.EAMServices.DeleteWorkItemByRecId inValue = new SoapUtility.EAMServices.DeleteWorkItemByRecId();
+            inValue.CallContext = CallContext;
+            inValue.rec_id = rec_id;
+            inValue.woId = woId;
+            SoapUtility.EAMServices.DeleteWorkItemByRecIdResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecId(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoapUtility.EAMServices.GetAllEquipmentsResponse SoapUtility.EAMServices.WorkItemsService.GetAllEquipments(SoapUtility.EAMServices.GetAllEquipments request) {
             return base.Channel.GetAllEquipments(request);
         }
@@ -2609,16 +2718,14 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.DeleteWorkItemByRecIdResponse SoapUtility.EAMServices.WorkItemsService.DeleteWorkItemByRecId(SoapUtility.EAMServices.DeleteWorkItemByRecId request) {
-            return base.Channel.DeleteWorkItemByRecId(request);
+        SoapUtility.EAMServices.GetEquipLocationsResponse SoapUtility.EAMServices.WorkItemsService.GetEquipLocations(SoapUtility.EAMServices.GetEquipLocations request) {
+            return base.Channel.GetEquipLocations(request);
         }
         
-        public SoapUtility.EAMServices.Infolog DeleteWorkItemByRecId(SoapUtility.EAMServices.CallContext CallContext, long rec_id, string woId, out bool result) {
-            SoapUtility.EAMServices.DeleteWorkItemByRecId inValue = new SoapUtility.EAMServices.DeleteWorkItemByRecId();
+        public SoapUtility.EAMServices.Infolog GetEquipLocations(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOLocationContract[] result) {
+            SoapUtility.EAMServices.GetEquipLocations inValue = new SoapUtility.EAMServices.GetEquipLocations();
             inValue.CallContext = CallContext;
-            inValue.rec_id = rec_id;
-            inValue.woId = woId;
-            SoapUtility.EAMServices.DeleteWorkItemByRecIdResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).DeleteWorkItemByRecId(inValue);
+            SoapUtility.EAMServices.GetEquipLocationsResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2638,14 +2745,28 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetEquipLocationsResponse SoapUtility.EAMServices.WorkItemsService.GetEquipLocations(SoapUtility.EAMServices.GetEquipLocations request) {
-            return base.Channel.GetEquipLocations(request);
+        SoapUtility.EAMServices.GetEquipmentsByCostCenterResponse SoapUtility.EAMServices.WorkItemsService.GetEquipmentsByCostCenter(SoapUtility.EAMServices.GetEquipmentsByCostCenter request) {
+            return base.Channel.GetEquipmentsByCostCenter(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetEquipLocations(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOLocationContract[] result) {
-            SoapUtility.EAMServices.GetEquipLocations inValue = new SoapUtility.EAMServices.GetEquipLocations();
+        public SoapUtility.EAMServices.Infolog GetEquipmentsByCostCenter(SoapUtility.EAMServices.CallContext CallContext, string dimValueStr, out SoapUtility.EAMServices.EquipContract[] result) {
+            SoapUtility.EAMServices.GetEquipmentsByCostCenter inValue = new SoapUtility.EAMServices.GetEquipmentsByCostCenter();
             inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetEquipLocationsResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetEquipLocations(inValue);
+            inValue.dimValueStr = dimValueStr;
+            SoapUtility.EAMServices.GetEquipmentsByCostCenterResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenter(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.GetFailureCodesResponse SoapUtility.EAMServices.WorkItemsService.GetFailureCodes(SoapUtility.EAMServices.GetFailureCodes request) {
+            return base.Channel.GetFailureCodes(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog GetFailureCodes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.FailureCodeContract[] result) {
+            SoapUtility.EAMServices.GetFailureCodes inValue = new SoapUtility.EAMServices.GetFailureCodes();
+            inValue.CallContext = CallContext;
+            SoapUtility.EAMServices.GetFailureCodesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetFailureCodes(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2665,42 +2786,15 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetFailureCodesResponse SoapUtility.EAMServices.WorkItemsService.GetFailureCodes(SoapUtility.EAMServices.GetFailureCodes request) {
-            return base.Channel.GetFailureCodes(request);
+        SoapUtility.EAMServices.GetLatestWorkorderResponse SoapUtility.EAMServices.WorkItemsService.GetLatestWorkorder(SoapUtility.EAMServices.GetLatestWorkorder request) {
+            return base.Channel.GetLatestWorkorder(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetFailureCodes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.FailureCodeContract[] result) {
-            SoapUtility.EAMServices.GetFailureCodes inValue = new SoapUtility.EAMServices.GetFailureCodes();
+        public SoapUtility.EAMServices.Infolog GetLatestWorkorder(SoapUtility.EAMServices.CallContext CallContext, string woId, out SoapUtility.EAMServices.PMWorkOrderContract result) {
+            SoapUtility.EAMServices.GetLatestWorkorder inValue = new SoapUtility.EAMServices.GetLatestWorkorder();
             inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetFailureCodesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetFailureCodes(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetEquipmentsByCostCenterResponse SoapUtility.EAMServices.WorkItemsService.GetEquipmentsByCostCenter(SoapUtility.EAMServices.GetEquipmentsByCostCenter request) {
-            return base.Channel.GetEquipmentsByCostCenter(request);
-        }
-        
-        public SoapUtility.EAMServices.Infolog GetEquipmentsByCostCenter(SoapUtility.EAMServices.CallContext CallContext, string dimValueStr, out SoapUtility.EAMServices.EquipContract[] result) {
-            SoapUtility.EAMServices.GetEquipmentsByCostCenter inValue = new SoapUtility.EAMServices.GetEquipmentsByCostCenter();
-            inValue.CallContext = CallContext;
-            inValue.dimValueStr = dimValueStr;
-            SoapUtility.EAMServices.GetEquipmentsByCostCenterResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetEquipmentsByCostCenter(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetOnhandResponse SoapUtility.EAMServices.WorkItemsService.GetOnhand(SoapUtility.EAMServices.GetOnhand request) {
-            return base.Channel.GetOnhand(request);
-        }
-        
-        public SoapUtility.EAMServices.Infolog GetOnhand(SoapUtility.EAMServices.CallContext CallContext, string _itemId, out SoapUtility.EAMServices.OnHandContract result) {
-            SoapUtility.EAMServices.GetOnhand inValue = new SoapUtility.EAMServices.GetOnhand();
-            inValue.CallContext = CallContext;
-            inValue._itemId = _itemId;
-            SoapUtility.EAMServices.GetOnhandResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetOnhand(inValue);
+            inValue.woId = woId;
+            SoapUtility.EAMServices.GetLatestWorkorderResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetLatestWorkorder(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2719,42 +2813,15 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetLatestWorkorderResponse SoapUtility.EAMServices.WorkItemsService.GetLatestWorkorder(SoapUtility.EAMServices.GetLatestWorkorder request) {
-            return base.Channel.GetLatestWorkorder(request);
+        SoapUtility.EAMServices.GetOnhandResponse SoapUtility.EAMServices.WorkItemsService.GetOnhand(SoapUtility.EAMServices.GetOnhand request) {
+            return base.Channel.GetOnhand(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetLatestWorkorder(SoapUtility.EAMServices.CallContext CallContext, string woId, out SoapUtility.EAMServices.PMWorkOrderContract result) {
-            SoapUtility.EAMServices.GetLatestWorkorder inValue = new SoapUtility.EAMServices.GetLatestWorkorder();
+        public SoapUtility.EAMServices.Infolog GetOnhand(SoapUtility.EAMServices.CallContext CallContext, string _itemId, out SoapUtility.EAMServices.OnHandContract result) {
+            SoapUtility.EAMServices.GetOnhand inValue = new SoapUtility.EAMServices.GetOnhand();
             inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            SoapUtility.EAMServices.GetLatestWorkorderResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetLatestWorkorder(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetSingleWorkorderWithItemsResponse SoapUtility.EAMServices.WorkItemsService.GetSingleWorkorderWithItems(SoapUtility.EAMServices.GetSingleWorkorderWithItems request) {
-            return base.Channel.GetSingleWorkorderWithItems(request);
-        }
-        
-        public SoapUtility.EAMServices.Infolog GetSingleWorkorderWithItems(SoapUtility.EAMServices.CallContext CallContext, string woId, out SoapUtility.EAMServices.PMWorkOrderContract result) {
-            SoapUtility.EAMServices.GetSingleWorkorderWithItems inValue = new SoapUtility.EAMServices.GetSingleWorkorderWithItems();
-            inValue.CallContext = CallContext;
-            inValue.woId = woId;
-            SoapUtility.EAMServices.GetSingleWorkorderWithItemsResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetSingleWorkorderWithItems(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetRepaireCodesResponse SoapUtility.EAMServices.WorkItemsService.GetRepaireCodes(SoapUtility.EAMServices.GetRepaireCodes request) {
-            return base.Channel.GetRepaireCodes(request);
-        }
-        
-        public SoapUtility.EAMServices.Infolog GetRepaireCodes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.RepairCodeContract[] result) {
-            SoapUtility.EAMServices.GetRepaireCodes inValue = new SoapUtility.EAMServices.GetRepaireCodes();
-            inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetRepaireCodesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetRepaireCodes(inValue);
+            inValue._itemId = _itemId;
+            SoapUtility.EAMServices.GetOnhandResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetOnhand(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2777,15 +2844,27 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetWorkordersByEquipmentResponse SoapUtility.EAMServices.WorkItemsService.GetWorkordersByEquipment(SoapUtility.EAMServices.GetWorkordersByEquipment request) {
-            return base.Channel.GetWorkordersByEquipment(request);
+        SoapUtility.EAMServices.GetRepaireCodesResponse SoapUtility.EAMServices.WorkItemsService.GetRepaireCodes(SoapUtility.EAMServices.GetRepaireCodes request) {
+            return base.Channel.GetRepaireCodes(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetWorkordersByEquipment(SoapUtility.EAMServices.CallContext CallContext, string equipId, out SoapUtility.EAMServices.PMWorkOrderContract[] result) {
-            SoapUtility.EAMServices.GetWorkordersByEquipment inValue = new SoapUtility.EAMServices.GetWorkordersByEquipment();
+        public SoapUtility.EAMServices.Infolog GetRepaireCodes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.RepairCodeContract[] result) {
+            SoapUtility.EAMServices.GetRepaireCodes inValue = new SoapUtility.EAMServices.GetRepaireCodes();
             inValue.CallContext = CallContext;
-            inValue.equipId = equipId;
-            SoapUtility.EAMServices.GetWorkordersByEquipmentResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkordersByEquipment(inValue);
+            SoapUtility.EAMServices.GetRepaireCodesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetRepaireCodes(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.GetWOPoolCodeResponse SoapUtility.EAMServices.WorkItemsService.GetWOPoolCode(SoapUtility.EAMServices.GetWOPoolCode request) {
+            return base.Channel.GetWOPoolCode(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog GetWOPoolCode(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOPoolContract[] result) {
+            SoapUtility.EAMServices.GetWOPoolCode inValue = new SoapUtility.EAMServices.GetWOPoolCode();
+            inValue.CallContext = CallContext;
+            SoapUtility.EAMServices.GetWOPoolCodeResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWOPoolCode(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2806,14 +2885,41 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetWOPoolCodeResponse SoapUtility.EAMServices.WorkItemsService.GetWOPoolCode(SoapUtility.EAMServices.GetWOPoolCode request) {
-            return base.Channel.GetWOPoolCode(request);
+        SoapUtility.EAMServices.GetWorkordersByEquipmentResponse SoapUtility.EAMServices.WorkItemsService.GetWorkordersByEquipment(SoapUtility.EAMServices.GetWorkordersByEquipment request) {
+            return base.Channel.GetWorkordersByEquipment(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetWOPoolCode(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOPoolContract[] result) {
-            SoapUtility.EAMServices.GetWOPoolCode inValue = new SoapUtility.EAMServices.GetWOPoolCode();
+        public SoapUtility.EAMServices.Infolog GetWorkordersByEquipment(SoapUtility.EAMServices.CallContext CallContext, string equipId, out SoapUtility.EAMServices.PMWorkOrderContract[] result) {
+            SoapUtility.EAMServices.GetWorkordersByEquipment inValue = new SoapUtility.EAMServices.GetWorkordersByEquipment();
             inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetWOPoolCodeResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWOPoolCode(inValue);
+            inValue.equipId = equipId;
+            SoapUtility.EAMServices.GetWorkordersByEquipmentResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkordersByEquipment(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse SoapUtility.EAMServices.WorkItemsService.GetWorkOrderStatusLookup(SoapUtility.EAMServices.GetWorkOrderStatusLookup request) {
+            return base.Channel.GetWorkOrderStatusLookup(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog GetWorkOrderStatusLookup(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.LookupContract[] result) {
+            SoapUtility.EAMServices.GetWorkOrderStatusLookup inValue = new SoapUtility.EAMServices.GetWorkOrderStatusLookup();
+            inValue.CallContext = CallContext;
+            SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookup(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.GetWorkOrderTypesResponse SoapUtility.EAMServices.WorkItemsService.GetWorkOrderTypes(SoapUtility.EAMServices.GetWorkOrderTypes request) {
+            return base.Channel.GetWorkOrderTypes(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog GetWorkOrderTypes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOTypeContract[] result) {
+            SoapUtility.EAMServices.GetWorkOrderTypes inValue = new SoapUtility.EAMServices.GetWorkOrderTypes();
+            inValue.CallContext = CallContext;
+            SoapUtility.EAMServices.GetWorkOrderTypesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
@@ -2834,27 +2940,43 @@ namespace SoapUtility.EAMServices {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetWorkOrderTypesResponse SoapUtility.EAMServices.WorkItemsService.GetWorkOrderTypes(SoapUtility.EAMServices.GetWorkOrderTypes request) {
-            return base.Channel.GetWorkOrderTypes(request);
+        SoapUtility.EAMServices.PostedWorkItemsResponse SoapUtility.EAMServices.WorkItemsService.PostedWorkItems(SoapUtility.EAMServices.PostedWorkItems request) {
+            return base.Channel.PostedWorkItems(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetWorkOrderTypes(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.WOTypeContract[] result) {
-            SoapUtility.EAMServices.GetWorkOrderTypes inValue = new SoapUtility.EAMServices.GetWorkOrderTypes();
+        public SoapUtility.EAMServices.Infolog PostedWorkItems(SoapUtility.EAMServices.CallContext CallContext, out string[] result) {
+            SoapUtility.EAMServices.PostedWorkItems inValue = new SoapUtility.EAMServices.PostedWorkItems();
             inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetWorkOrderTypesResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkOrderTypes(inValue);
+            SoapUtility.EAMServices.PostedWorkItemsResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).PostedWorkItems(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse SoapUtility.EAMServices.WorkItemsService.GetWorkOrderStatusLookup(SoapUtility.EAMServices.GetWorkOrderStatusLookup request) {
-            return base.Channel.GetWorkOrderStatusLookup(request);
+        SoapUtility.EAMServices.SearchEquipmentsResponse SoapUtility.EAMServices.WorkItemsService.SearchEquipments(SoapUtility.EAMServices.SearchEquipments request) {
+            return base.Channel.SearchEquipments(request);
         }
         
-        public SoapUtility.EAMServices.Infolog GetWorkOrderStatusLookup(SoapUtility.EAMServices.CallContext CallContext, out SoapUtility.EAMServices.LookupContract[] result) {
-            SoapUtility.EAMServices.GetWorkOrderStatusLookup inValue = new SoapUtility.EAMServices.GetWorkOrderStatusLookup();
+        public SoapUtility.EAMServices.Infolog SearchEquipments(SoapUtility.EAMServices.CallContext CallContext, string equipName, out SoapUtility.EAMServices.EquipContract[] result) {
+            SoapUtility.EAMServices.SearchEquipments inValue = new SoapUtility.EAMServices.SearchEquipments();
             inValue.CallContext = CallContext;
-            SoapUtility.EAMServices.GetWorkOrderStatusLookupResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).GetWorkOrderStatusLookup(inValue);
+            inValue.equipName = equipName;
+            SoapUtility.EAMServices.SearchEquipmentsResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).SearchEquipments(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.SetWOStatusResponse SoapUtility.EAMServices.WorkItemsService.SetWOStatus(SoapUtility.EAMServices.SetWOStatus request) {
+            return base.Channel.SetWOStatus(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog SetWOStatus(SoapUtility.EAMServices.CallContext CallContext, int statusId, string woId, out bool result) {
+            SoapUtility.EAMServices.SetWOStatus inValue = new SoapUtility.EAMServices.SetWOStatus();
+            inValue.CallContext = CallContext;
+            inValue.statusId = statusId;
+            inValue.woId = woId;
+            SoapUtility.EAMServices.SetWOStatusResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

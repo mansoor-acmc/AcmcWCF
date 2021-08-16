@@ -16,4 +16,12 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="NoYes" nillable="true" type="tns:NoYes" />
+  <xs:complexType name="List">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XppObjectBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="List" nillable="true" type="tns:List" />
 </xs:schema>

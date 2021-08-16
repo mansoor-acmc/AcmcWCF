@@ -58,21 +58,21 @@ namespace SyncServices
             
             SalesTable salesTable = new SalesTable()
             {
-                SalesId = contract.SalesId,
-                SalesName = contract.SalesName,
-                DeliveryDate = contract.DeliveryDate,
-                DeliveryMode = contract.DeliveryMode,
-                DeliveryName = contract.DeliveryName,
-                HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
-                PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
-                StartLoading = contract.StartLoad,
-                StopLoading = contract.StopLoad
+                SalesId = contract.salesId,
+                SalesName = contract.salesName,
+                DeliveryDate = contract.__k_parmDeliveryDate,
+                DeliveryMode = contract.__k_parmDlvMode,
+                DeliveryName = contract.deliveryName,
+                HalfPallet = contract.halfPallet == NoYes.No ? false : true,
+                PickSameDimension = contract.sameConfig == NoYes.No ? false : true,
+                StartLoading = contract.__k_parmStartLoad,
+                StopLoading = contract.__k_parmStopLoad
             };
             
             salesTable.Lines = new List<SalesLine>();
-            if (contract.SalesLines.Count() > 0)
+            if (contract.salesLine != null)
             {
-                foreach (SalesLineContract axdline in contract.SalesLines)
+                foreach (SalesLineContract axdline in contract.salesLine)
                 {
                     salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
                 }
@@ -145,7 +145,7 @@ namespace SyncServices
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
                 PickingId = contract.PickingId,
-                PackingSlip = contract.PackingSlip,
+                PackingSlip = contract.__k_parmPackingSlip,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 TruckTicketNum = contract.TruckTicket,
@@ -155,14 +155,14 @@ namespace SyncServices
                 DeliveryName = contract.DeliveryName,
                 HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
                 PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
-                StartLoading = contract.StartLoad,
+                StartLoading = contract.__k_parmStartLoad,
                 StopLoading=contract.StopLoad
             };
 
             salesTable.Lines = new List<SalesLine>();
-            if (contract.SalesLines.Count() > 0)
+            if (contract.__k_parmSalesLines.Count() > 0)                
             {
-                foreach (SalesLineContract axdline in contract.SalesLines)
+                foreach (SalesLineContract axdline in contract.salesLine)
                 {
                     salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
                 }

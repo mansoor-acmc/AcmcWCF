@@ -30,6 +30,7 @@
     <MetadataFile FileName="SOPickServiceGroup.disco" MetadataType="Disco" ID="feac1a53-2ef6-4e66-ae64-a6143bd9ea62" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?disco" />
     <MetadataFile FileName="SOPickServiceGroup5.xsd" MetadataType="Schema" ID="41d55f80-ea88-405a-aedd-85bdc5b1a2b4" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd5" />
     <MetadataFile FileName="SOPickServiceGroup6.xsd" MetadataType="Schema" ID="ef6742c9-2227-4713-8239-6c9498df9fbf" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="SOPickServiceGroup7.xsd" MetadataType="Schema" ID="421813ec-b382-42f9-a63f-803feeb11a95" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd7" />
     <MetadataFile FileName="SOPickServiceGroup1.wsdl" MetadataType="Wsdl" ID="3fed00a7-2930-43e4-8788-67468ff06129" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?wsdl" />
   </Metadata>
   <Extensions>

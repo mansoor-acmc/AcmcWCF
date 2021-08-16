@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="SOPickService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="SOPickService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd2" namespace="http://tempuri.org" />
+    <xsd:schema targetNamespace="SOPickService/Imports">
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd2" namespace="SOPickService" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd3" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp.AxShared" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ChangeTruckLoadingLine">
@@ -416,141 +417,161 @@
   <wsdl:message name="SOPickService_PalletsReserving_SoapServiceFaultFault_FaultMessage">
     <wsdl:part xmlns:q81="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q81:Fault" />
   </wsdl:message>
+  <wsdl:message name="Evs_ServiceMessage">
+    <wsdl:part name="parameters" element="tns:Evs_ServiceMessage" />
+  </wsdl:message>
+  <wsdl:message name="Evs_ServiceMessage_Headers">
+    <wsdl:part xmlns:q82="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q82:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="Evs_ServiceMessageResponse">
+    <wsdl:part name="parameters" element="tns:Evs_ServiceMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="Evs_ServiceMessageResponse_Headers">
+    <wsdl:part xmlns:q83="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q83:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="SOPickService_Evs_ServiceMessage_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q84:Fault" />
+  </wsdl:message>
   <wsdl:portType name="SOPickService">
     <wsdl:operation name="ChangeTruckLoadingLine">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine" name="ChangeTruckLoadingLine" message="tns:ChangeTruckLoadingLine" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse" name="ChangeTruckLoadingLineResponse" message="tns:ChangeTruckLoadingLineResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ChangeTruckLoadingLine_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/ChangeTruckLoadingLine" name="ChangeTruckLoadingLine" message="tns:ChangeTruckLoadingLine" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/ChangeTruckLoadingLineResponse" name="ChangeTruckLoadingLineResponse" message="tns:ChangeTruckLoadingLineResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ChangeTruckLoadingLine_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CheckPalletAvailable">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/CheckPalletAvailable" name="CheckPalletAvailable" message="tns:CheckPalletAvailable" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/CheckPalletAvailableResponse" name="CheckPalletAvailableResponse" message="tns:CheckPalletAvailableResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CheckPalletAvailable_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/CheckPalletAvailable" name="CheckPalletAvailable" message="tns:CheckPalletAvailable" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/CheckPalletAvailableResponse" name="CheckPalletAvailableResponse" message="tns:CheckPalletAvailableResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CheckPalletAvailable_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CheckPalletAvailableMulti">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti" name="CheckPalletAvailableMulti" message="tns:CheckPalletAvailableMulti" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse" name="CheckPalletAvailableMultiResponse" message="tns:CheckPalletAvailableMultiResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CheckPalletAvailableMulti_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/CheckPalletAvailableMulti" name="CheckPalletAvailableMulti" message="tns:CheckPalletAvailableMulti" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/CheckPalletAvailableMultiResponse" name="CheckPalletAvailableMultiResponse" message="tns:CheckPalletAvailableMultiResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CheckPalletAvailableMulti_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CustomersDeliveryByQty">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty" name="CustomersDeliveryByQty" message="tns:CustomersDeliveryByQty" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse" name="CustomersDeliveryByQtyResponse" message="tns:CustomersDeliveryByQtyResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CustomersDeliveryByQty_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/CustomersDeliveryByQty" name="CustomersDeliveryByQty" message="tns:CustomersDeliveryByQty" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/CustomersDeliveryByQtyResponse" name="CustomersDeliveryByQtyResponse" message="tns:CustomersDeliveryByQtyResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CustomersDeliveryByQty_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CustomersDeliveryByTrucks">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks" name="CustomersDeliveryByTrucks" message="tns:CustomersDeliveryByTrucks" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse" name="CustomersDeliveryByTrucksResponse" message="tns:CustomersDeliveryByTrucksResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CustomersDeliveryByTrucks_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/CustomersDeliveryByTrucks" name="CustomersDeliveryByTrucks" message="tns:CustomersDeliveryByTrucks" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/CustomersDeliveryByTrucksResponse" name="CustomersDeliveryByTrucksResponse" message="tns:CustomersDeliveryByTrucksResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_CustomersDeliveryByTrucks_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="findPickingList">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/findPickingList" name="findPickingList" message="tns:findPickingList" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/findPickingListResponse" name="findPickingListResponse" message="tns:findPickingListResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findPickingList_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/findPickingList" name="findPickingList" message="tns:findPickingList" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/findPickingListResponse" name="findPickingListResponse" message="tns:findPickingListResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findPickingList_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="findSalesOrder">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/findSalesOrder" name="findSalesOrder" message="tns:findSalesOrder" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/findSalesOrderResponse" name="findSalesOrderResponse" message="tns:findSalesOrderResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findSalesOrder_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/findSalesOrder" name="findSalesOrder" message="tns:findSalesOrder" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/findSalesOrderResponse" name="findSalesOrderResponse" message="tns:findSalesOrderResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findSalesOrder_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="findSalesOrdersList">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/findSalesOrdersList" name="findSalesOrdersList" message="tns:findSalesOrdersList" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/findSalesOrdersListResponse" name="findSalesOrdersListResponse" message="tns:findSalesOrdersListResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findSalesOrdersList_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/findSalesOrdersList" name="findSalesOrdersList" message="tns:findSalesOrdersList" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/findSalesOrdersListResponse" name="findSalesOrdersListResponse" message="tns:findSalesOrdersListResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_findSalesOrdersList_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCustomerDeliveries">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetCustomerDeliveries" name="GetCustomerDeliveries" message="tns:GetCustomerDeliveries" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse" name="GetCustomerDeliveriesResponse" message="tns:GetCustomerDeliveriesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetCustomerDeliveries_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetCustomerDeliveries" name="GetCustomerDeliveries" message="tns:GetCustomerDeliveries" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetCustomerDeliveriesResponse" name="GetCustomerDeliveriesResponse" message="tns:GetCustomerDeliveriesResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetCustomerDeliveries_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCustomerDeliveriesByStatus">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus" name="GetCustomerDeliveriesByStatus" message="tns:GetCustomerDeliveriesByStatus" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse" name="GetCustomerDeliveriesByStatusResponse" message="tns:GetCustomerDeliveriesByStatusResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetCustomerDeliveriesByStatus_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetCustomerDeliveriesByStatus" name="GetCustomerDeliveriesByStatus" message="tns:GetCustomerDeliveriesByStatus" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetCustomerDeliveriesByStatusResponse" name="GetCustomerDeliveriesByStatusResponse" message="tns:GetCustomerDeliveriesByStatusResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetCustomerDeliveriesByStatus_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDailyDeliverySummaryByCust">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust" name="GetDailyDeliverySummaryByCust" message="tns:GetDailyDeliverySummaryByCust" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse" name="GetDailyDeliverySummaryByCustResponse" message="tns:GetDailyDeliverySummaryByCustResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDailyDeliverySummaryByCust_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetDailyDeliverySummaryByCust" name="GetDailyDeliverySummaryByCust" message="tns:GetDailyDeliverySummaryByCust" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetDailyDeliverySummaryByCustResponse" name="GetDailyDeliverySummaryByCustResponse" message="tns:GetDailyDeliverySummaryByCustResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDailyDeliverySummaryByCust_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDeliveries">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetDeliveries" name="GetDeliveries" message="tns:GetDeliveries" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetDeliveriesResponse" name="GetDeliveriesResponse" message="tns:GetDeliveriesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliveries_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetDeliveries" name="GetDeliveries" message="tns:GetDeliveries" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetDeliveriesResponse" name="GetDeliveriesResponse" message="tns:GetDeliveriesResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliveries_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDeliveryStatusLookup">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookup" name="GetDeliveryStatusLookup" message="tns:GetDeliveryStatusLookup" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookupResponse" name="GetDeliveryStatusLookupResponse" message="tns:GetDeliveryStatusLookupResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliveryStatusLookup_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetDeliveryStatusLookup" name="GetDeliveryStatusLookup" message="tns:GetDeliveryStatusLookup" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetDeliveryStatusLookupResponse" name="GetDeliveryStatusLookupResponse" message="tns:GetDeliveryStatusLookupResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliveryStatusLookup_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDeliverySummaryByCust">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCust" name="GetDeliverySummaryByCust" message="tns:GetDeliverySummaryByCust" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCustResponse" name="GetDeliverySummaryByCustResponse" message="tns:GetDeliverySummaryByCustResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliverySummaryByCust_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetDeliverySummaryByCust" name="GetDeliverySummaryByCust" message="tns:GetDeliverySummaryByCust" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetDeliverySummaryByCustResponse" name="GetDeliverySummaryByCustResponse" message="tns:GetDeliverySummaryByCustResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetDeliverySummaryByCust_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetFGLines">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetFGLines" name="GetFGLines" message="tns:GetFGLines" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetFGLinesResponse" name="GetFGLinesResponse" message="tns:GetFGLinesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetFGLines_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetFGLines" name="GetFGLines" message="tns:GetFGLines" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetFGLinesResponse" name="GetFGLinesResponse" message="tns:GetFGLinesResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetFGLines_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetLatestPallets">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetLatestPallets" name="GetLatestPallets" message="tns:GetLatestPallets" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetLatestPalletsResponse" name="GetLatestPalletsResponse" message="tns:GetLatestPalletsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetLatestPallets_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetLatestPallets" name="GetLatestPallets" message="tns:GetLatestPallets" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetLatestPalletsResponse" name="GetLatestPalletsResponse" message="tns:GetLatestPalletsResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetLatestPallets_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetOpenPickingListByCustByItem">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem" name="GetOpenPickingListByCustByItem" message="tns:GetOpenPickingListByCustByItem" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse" name="GetOpenPickingListByCustByItemResponse" message="tns:GetOpenPickingListByCustByItemResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetOpenPickingListByCustByItem_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetOpenPickingListByCustByItem" name="GetOpenPickingListByCustByItem" message="tns:GetOpenPickingListByCustByItem" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetOpenPickingListByCustByItemResponse" name="GetOpenPickingListByCustByItemResponse" message="tns:GetOpenPickingListByCustByItemResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetOpenPickingListByCustByItem_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPalletInfo">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetPalletInfo" name="GetPalletInfo" message="tns:GetPalletInfo" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetPalletInfoResponse" name="GetPalletInfoResponse" message="tns:GetPalletInfoResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetPalletInfo_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetPalletInfo" name="GetPalletInfo" message="tns:GetPalletInfo" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetPalletInfoResponse" name="GetPalletInfoResponse" message="tns:GetPalletInfoResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetPalletInfo_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSingleDelivery">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/GetSingleDelivery" name="GetSingleDelivery" message="tns:GetSingleDelivery" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/GetSingleDeliveryResponse" name="GetSingleDeliveryResponse" message="tns:GetSingleDeliveryResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetSingleDelivery_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/GetSingleDelivery" name="GetSingleDelivery" message="tns:GetSingleDelivery" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/GetSingleDeliveryResponse" name="GetSingleDeliveryResponse" message="tns:GetSingleDeliveryResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_GetSingleDelivery_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="LoginDevice">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/LoginDevice" name="LoginDevice" message="tns:LoginDevice" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/LoginDeviceResponse" name="LoginDeviceResponse" message="tns:LoginDeviceResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_LoginDevice_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/LoginDevice" name="LoginDevice" message="tns:LoginDevice" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/LoginDeviceResponse" name="LoginDeviceResponse" message="tns:LoginDeviceResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_LoginDevice_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="ReceivePickingList">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/ReceivePickingList" name="ReceivePickingList" message="tns:ReceivePickingList" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/ReceivePickingListResponse" name="ReceivePickingListResponse" message="tns:ReceivePickingListResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ReceivePickingList_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/ReceivePickingList" name="ReceivePickingList" message="tns:ReceivePickingList" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/ReceivePickingListResponse" name="ReceivePickingListResponse" message="tns:ReceivePickingListResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ReceivePickingList_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="ReservePallets">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/ReservePallets" name="ReservePallets" message="tns:ReservePallets" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/ReservePalletsResponse" name="ReservePalletsResponse" message="tns:ReservePalletsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ReservePallets_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/ReservePallets" name="ReservePallets" message="tns:ReservePallets" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/ReservePalletsResponse" name="ReservePalletsResponse" message="tns:ReservePalletsResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_ReservePallets_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SaveHistory">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/SaveHistory" name="SaveHistory" message="tns:SaveHistory" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/SaveHistoryResponse" name="SaveHistoryResponse" message="tns:SaveHistoryResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SaveHistory_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/SaveHistory" name="SaveHistory" message="tns:SaveHistory" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/SaveHistoryResponse" name="SaveHistoryResponse" message="tns:SaveHistoryResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SaveHistory_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SavePickingLoad">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/SavePickingLoad" name="SavePickingLoad" message="tns:SavePickingLoad" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/SavePickingLoadResponse" name="SavePickingLoadResponse" message="tns:SavePickingLoadResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SavePickingLoad_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/SavePickingLoad" name="SavePickingLoad" message="tns:SavePickingLoad" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/SavePickingLoadResponse" name="SavePickingLoadResponse" message="tns:SavePickingLoadResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SavePickingLoad_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="UnreservePallet">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/UnreservePallet" name="UnreservePallet" message="tns:UnreservePallet" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/UnreservePalletResponse" name="UnreservePalletResponse" message="tns:UnreservePalletResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_UnreservePallet_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/UnreservePallet" name="UnreservePallet" message="tns:UnreservePallet" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/UnreservePalletResponse" name="UnreservePalletResponse" message="tns:UnreservePalletResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_UnreservePallet_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SalesDeliveryNote">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/SalesDeliveryNote" name="SalesDeliveryNote" message="tns:SalesDeliveryNote" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/SalesDeliveryNoteResponse" name="SalesDeliveryNoteResponse" message="tns:SalesDeliveryNoteResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SalesDeliveryNote_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/SalesDeliveryNote" name="SalesDeliveryNote" message="tns:SalesDeliveryNote" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/SalesDeliveryNoteResponse" name="SalesDeliveryNoteResponse" message="tns:SalesDeliveryNoteResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_SalesDeliveryNote_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="PalletsReserving">
-      <wsdl:input wsam:Action="http://tempuri.org/SOPickService/PalletsReserving" name="PalletsReserving" message="tns:PalletsReserving" />
-      <wsdl:output wsam:Action="http://tempuri.org/SOPickService/PalletsReservingResponse" name="PalletsReservingResponse" message="tns:PalletsReservingResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_PalletsReserving_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="SOPickService/SOPickService/PalletsReserving" name="PalletsReserving" message="tns:PalletsReserving" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/PalletsReservingResponse" name="PalletsReservingResponse" message="tns:PalletsReservingResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_PalletsReserving_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Evs_ServiceMessage">
+      <wsdl:input wsam:Action="SOPickService/SOPickService/Evs_ServiceMessage" name="Evs_ServiceMessage" message="tns:Evs_ServiceMessage" />
+      <wsdl:output wsam:Action="SOPickService/SOPickService/Evs_ServiceMessageResponse" name="Evs_ServiceMessageResponse" message="tns:Evs_ServiceMessageResponse" />
+      <wsdl:fault wsam:Action="SOPickService/SOPickService/Fault" name="SoapServiceFaultFault" message="tns:SOPickService_Evs_ServiceMessage_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

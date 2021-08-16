@@ -180,7 +180,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                EquipContract[] contract;
+                EquipContract[] contract = null;
                 if (search.ToUpper().StartsWith("EQPID"))
                 {
                     var equip = ((WorkItemsService)channel).GetEquipment(new GetEquipment(context, search)).result;
@@ -193,7 +193,7 @@ namespace SyncServices
                         search = search + "*";
                     else if (!search.StartsWith("*"))
                         search = "*" + search;
-
+                    
                     contract = ((WorkItemsService)channel).SearchEquipments(new SearchEquipments(context, search)).result;
                 }
 
@@ -332,8 +332,8 @@ namespace SyncServices
                 HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
-
-                var item = ((WorkItemsService)channel).SaveWorkOrder(new SaveWorkOrder(context, contract)).result;
+                //***Mansoor*** Uncomment following lines
+                //var item = ((WorkItemsService)channel).SaveWorkOrder(new SaveWorkOrder(context, contract)).result;
                
                 return entity.ToConvert(contract);
             }            
@@ -347,7 +347,7 @@ namespace SyncServices
                 HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
-
+                
                 item = ((WorkItemsService)channel).SetWOStatus(new SetWOStatus(context, statusId, workOrderId)).result;
             }
             

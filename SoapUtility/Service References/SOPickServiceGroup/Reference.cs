@@ -308,6 +308,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract))]
@@ -348,6 +349,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract))]
@@ -360,6 +362,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract))]
     public partial class XppObjectBase : SoapUtility.SOPickServiceGroup.ProxyBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="List", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    [System.SerializableAttribute()]
+    public partial class List : SoapUtility.SOPickServiceGroup.XppObjectBase {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -566,305 +575,641 @@ namespace SoapUtility.SOPickServiceGroup {
     public partial class SalesTableContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerIdField;
+        private string @__k_parmAccountNumField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerNameField;
+        private string @__k_parmCustomerNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DeliveryDateField;
+        private System.DateTime @__k_parmDeliveryDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DeliveryModeField;
+        private string @__k_parmDeliveryNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DeliveryNameField;
+        private string @__k_parmDlvModeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DriverNameField;
+        private string @__k_parmDriverNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes HalfPalletField;
+        private SoapUtility.SOPickServiceGroup.NoYes @__k_parmHalfPalletField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PickingIdField;
+        private string @__k_parmPackingSlipField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SalesIdField;
+        private string @__k_parmPickingIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.SalesLineContract[] SalesLinesField;
+        private string @__k_parmSalesIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SalesNameField;
+        private string[] @__k_parmSalesLinesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SalesStatusField;
+        private string @__k_parmSalesNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SalesTypeField;
+        private string @__k_parmSalesStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes SameConfigurationField;
+        private string @__k_parmSalesTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime StartLoadField;
+        private SoapUtility.SOPickServiceGroup.NoYes @__k_parmSameConfigurationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime StopLoadField;
+        private System.DateTime @__k_parmStartLoadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TruckLoadLineField;
+        private System.DateTime @__k_parmStopLoadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TruckPlateField;
+        private int @__k_parmTruckLoadLineField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TruckTicketField;
+        private string @__k_parmTruckPlateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string @__k_parmTruckTicketField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string accountNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string customerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.Date deliveryDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string deliveryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dlvModeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string driverNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.NoYes halfPalletField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pSlipIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salesIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.List salesLineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salesNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salesStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salesTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.NoYes sameConfigField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.utcdatetime startLoadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SoapUtility.SOPickServiceGroup.utcdatetime stopLoadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ticketNumFGField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int truckLineNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string truckPlateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerId {
+        public string @__k_parmAccountNum {
             get {
-                return this.CustomerIdField;
+                return this.@__k_parmAccountNumField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
-                    this.CustomerIdField = value;
-                    this.RaisePropertyChanged("CustomerId");
+                if ((object.ReferenceEquals(this.@__k_parmAccountNumField, value) != true)) {
+                    this.@__k_parmAccountNumField = value;
+                    this.RaisePropertyChanged("__k_parmAccountNum");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerName {
+        public string @__k_parmCustomerName {
             get {
-                return this.CustomerNameField;
+                return this.@__k_parmCustomerNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
-                    this.CustomerNameField = value;
-                    this.RaisePropertyChanged("CustomerName");
+                if ((object.ReferenceEquals(this.@__k_parmCustomerNameField, value) != true)) {
+                    this.@__k_parmCustomerNameField = value;
+                    this.RaisePropertyChanged("__k_parmCustomerName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DeliveryDate {
+        public System.DateTime @__k_parmDeliveryDate {
             get {
-                return this.DeliveryDateField;
+                return this.@__k_parmDeliveryDateField;
             }
             set {
-                if ((this.DeliveryDateField.Equals(value) != true)) {
-                    this.DeliveryDateField = value;
-                    this.RaisePropertyChanged("DeliveryDate");
+                if ((this.@__k_parmDeliveryDateField.Equals(value) != true)) {
+                    this.@__k_parmDeliveryDateField = value;
+                    this.RaisePropertyChanged("__k_parmDeliveryDate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DeliveryMode {
+        public string @__k_parmDeliveryName {
             get {
-                return this.DeliveryModeField;
+                return this.@__k_parmDeliveryNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.DeliveryModeField, value) != true)) {
-                    this.DeliveryModeField = value;
-                    this.RaisePropertyChanged("DeliveryMode");
+                if ((object.ReferenceEquals(this.@__k_parmDeliveryNameField, value) != true)) {
+                    this.@__k_parmDeliveryNameField = value;
+                    this.RaisePropertyChanged("__k_parmDeliveryName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DeliveryName {
+        public string @__k_parmDlvMode {
             get {
-                return this.DeliveryNameField;
+                return this.@__k_parmDlvModeField;
             }
             set {
-                if ((object.ReferenceEquals(this.DeliveryNameField, value) != true)) {
-                    this.DeliveryNameField = value;
-                    this.RaisePropertyChanged("DeliveryName");
+                if ((object.ReferenceEquals(this.@__k_parmDlvModeField, value) != true)) {
+                    this.@__k_parmDlvModeField = value;
+                    this.RaisePropertyChanged("__k_parmDlvMode");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DriverName {
+        public string @__k_parmDriverName {
             get {
-                return this.DriverNameField;
+                return this.@__k_parmDriverNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.DriverNameField, value) != true)) {
-                    this.DriverNameField = value;
-                    this.RaisePropertyChanged("DriverName");
+                if ((object.ReferenceEquals(this.@__k_parmDriverNameField, value) != true)) {
+                    this.@__k_parmDriverNameField = value;
+                    this.RaisePropertyChanged("__k_parmDriverName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes HalfPallet {
+        public SoapUtility.SOPickServiceGroup.NoYes @__k_parmHalfPallet {
             get {
-                return this.HalfPalletField;
+                return this.@__k_parmHalfPalletField;
             }
             set {
-                if ((this.HalfPalletField.Equals(value) != true)) {
-                    this.HalfPalletField = value;
-                    this.RaisePropertyChanged("HalfPallet");
+                if ((this.@__k_parmHalfPalletField.Equals(value) != true)) {
+                    this.@__k_parmHalfPalletField = value;
+                    this.RaisePropertyChanged("__k_parmHalfPallet");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PickingId {
+        public string @__k_parmPackingSlip {
             get {
-                return this.PickingIdField;
+                return this.@__k_parmPackingSlipField;
             }
             set {
-                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
-                    this.PickingIdField = value;
-                    this.RaisePropertyChanged("PickingId");
+                if ((object.ReferenceEquals(this.@__k_parmPackingSlipField, value) != true)) {
+                    this.@__k_parmPackingSlipField = value;
+                    this.RaisePropertyChanged("__k_parmPackingSlip");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SalesId {
+        public string @__k_parmPickingId {
             get {
-                return this.SalesIdField;
+                return this.@__k_parmPickingIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
-                    this.SalesIdField = value;
-                    this.RaisePropertyChanged("SalesId");
+                if ((object.ReferenceEquals(this.@__k_parmPickingIdField, value) != true)) {
+                    this.@__k_parmPickingIdField = value;
+                    this.RaisePropertyChanged("__k_parmPickingId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] SalesLines {
+        public string @__k_parmSalesId {
             get {
-                return this.SalesLinesField;
+                return this.@__k_parmSalesIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.SalesLinesField, value) != true)) {
-                    this.SalesLinesField = value;
-                    this.RaisePropertyChanged("SalesLines");
+                if ((object.ReferenceEquals(this.@__k_parmSalesIdField, value) != true)) {
+                    this.@__k_parmSalesIdField = value;
+                    this.RaisePropertyChanged("__k_parmSalesId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SalesName {
+        public string[] @__k_parmSalesLines {
             get {
-                return this.SalesNameField;
+                return this.@__k_parmSalesLinesField;
             }
             set {
-                if ((object.ReferenceEquals(this.SalesNameField, value) != true)) {
-                    this.SalesNameField = value;
-                    this.RaisePropertyChanged("SalesName");
+                if ((object.ReferenceEquals(this.@__k_parmSalesLinesField, value) != true)) {
+                    this.@__k_parmSalesLinesField = value;
+                    this.RaisePropertyChanged("__k_parmSalesLines");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string @__k_parmSalesName {
+            get {
+                return this.@__k_parmSalesNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.@__k_parmSalesNameField, value) != true)) {
+                    this.@__k_parmSalesNameField = value;
+                    this.RaisePropertyChanged("__k_parmSalesName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SalesStatus {
+        public string @__k_parmSalesStatus {
             get {
-                return this.SalesStatusField;
+                return this.@__k_parmSalesStatusField;
             }
             set {
-                if ((object.ReferenceEquals(this.SalesStatusField, value) != true)) {
-                    this.SalesStatusField = value;
-                    this.RaisePropertyChanged("SalesStatus");
+                if ((object.ReferenceEquals(this.@__k_parmSalesStatusField, value) != true)) {
+                    this.@__k_parmSalesStatusField = value;
+                    this.RaisePropertyChanged("__k_parmSalesStatus");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SalesType {
+        public string @__k_parmSalesType {
             get {
-                return this.SalesTypeField;
+                return this.@__k_parmSalesTypeField;
             }
             set {
-                if ((object.ReferenceEquals(this.SalesTypeField, value) != true)) {
-                    this.SalesTypeField = value;
-                    this.RaisePropertyChanged("SalesType");
+                if ((object.ReferenceEquals(this.@__k_parmSalesTypeField, value) != true)) {
+                    this.@__k_parmSalesTypeField = value;
+                    this.RaisePropertyChanged("__k_parmSalesType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes SameConfiguration {
+        public SoapUtility.SOPickServiceGroup.NoYes @__k_parmSameConfiguration {
             get {
-                return this.SameConfigurationField;
+                return this.@__k_parmSameConfigurationField;
             }
             set {
-                if ((this.SameConfigurationField.Equals(value) != true)) {
-                    this.SameConfigurationField = value;
-                    this.RaisePropertyChanged("SameConfiguration");
+                if ((this.@__k_parmSameConfigurationField.Equals(value) != true)) {
+                    this.@__k_parmSameConfigurationField = value;
+                    this.RaisePropertyChanged("__k_parmSameConfiguration");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime StartLoad {
+        public System.DateTime @__k_parmStartLoad {
             get {
-                return this.StartLoadField;
+                return this.@__k_parmStartLoadField;
             }
             set {
-                if ((this.StartLoadField.Equals(value) != true)) {
-                    this.StartLoadField = value;
-                    this.RaisePropertyChanged("StartLoad");
+                if ((this.@__k_parmStartLoadField.Equals(value) != true)) {
+                    this.@__k_parmStartLoadField = value;
+                    this.RaisePropertyChanged("__k_parmStartLoad");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime StopLoad {
+        public System.DateTime @__k_parmStopLoad {
             get {
-                return this.StopLoadField;
+                return this.@__k_parmStopLoadField;
             }
             set {
-                if ((this.StopLoadField.Equals(value) != true)) {
-                    this.StopLoadField = value;
-                    this.RaisePropertyChanged("StopLoad");
+                if ((this.@__k_parmStopLoadField.Equals(value) != true)) {
+                    this.@__k_parmStopLoadField = value;
+                    this.RaisePropertyChanged("__k_parmStopLoad");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TruckLoadLine {
+        public int @__k_parmTruckLoadLine {
             get {
-                return this.TruckLoadLineField;
+                return this.@__k_parmTruckLoadLineField;
             }
             set {
-                if ((this.TruckLoadLineField.Equals(value) != true)) {
-                    this.TruckLoadLineField = value;
-                    this.RaisePropertyChanged("TruckLoadLine");
+                if ((this.@__k_parmTruckLoadLineField.Equals(value) != true)) {
+                    this.@__k_parmTruckLoadLineField = value;
+                    this.RaisePropertyChanged("__k_parmTruckLoadLine");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TruckPlate {
+        public string @__k_parmTruckPlate {
             get {
-                return this.TruckPlateField;
+                return this.@__k_parmTruckPlateField;
             }
             set {
-                if ((object.ReferenceEquals(this.TruckPlateField, value) != true)) {
-                    this.TruckPlateField = value;
-                    this.RaisePropertyChanged("TruckPlate");
+                if ((object.ReferenceEquals(this.@__k_parmTruckPlateField, value) != true)) {
+                    this.@__k_parmTruckPlateField = value;
+                    this.RaisePropertyChanged("__k_parmTruckPlate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TruckTicket {
+        public string @__k_parmTruckTicket {
             get {
-                return this.TruckTicketField;
+                return this.@__k_parmTruckTicketField;
             }
             set {
-                if ((object.ReferenceEquals(this.TruckTicketField, value) != true)) {
-                    this.TruckTicketField = value;
-                    this.RaisePropertyChanged("TruckTicket");
+                if ((object.ReferenceEquals(this.@__k_parmTruckTicketField, value) != true)) {
+                    this.@__k_parmTruckTicketField = value;
+                    this.RaisePropertyChanged("__k_parmTruckTicket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string accountNum {
+            get {
+                return this.accountNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.accountNumField, value) != true)) {
+                    this.accountNumField = value;
+                    this.RaisePropertyChanged("accountNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string customerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.customerNameField, value) != true)) {
+                    this.customerNameField = value;
+                    this.RaisePropertyChanged("customerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.Date deliveryDate {
+            get {
+                return this.deliveryDateField;
+            }
+            set {
+                if ((this.deliveryDateField.Equals(value) != true)) {
+                    this.deliveryDateField = value;
+                    this.RaisePropertyChanged("deliveryDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string deliveryName {
+            get {
+                return this.deliveryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deliveryNameField, value) != true)) {
+                    this.deliveryNameField = value;
+                    this.RaisePropertyChanged("deliveryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dlvMode {
+            get {
+                return this.dlvModeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dlvModeField, value) != true)) {
+                    this.dlvModeField = value;
+                    this.RaisePropertyChanged("dlvMode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string driverName {
+            get {
+                return this.driverNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.driverNameField, value) != true)) {
+                    this.driverNameField = value;
+                    this.RaisePropertyChanged("driverName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.NoYes halfPallet {
+            get {
+                return this.halfPalletField;
+            }
+            set {
+                if ((this.halfPalletField.Equals(value) != true)) {
+                    this.halfPalletField = value;
+                    this.RaisePropertyChanged("halfPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pSlipId {
+            get {
+                return this.pSlipIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pSlipIdField, value) != true)) {
+                    this.pSlipIdField = value;
+                    this.RaisePropertyChanged("pSlipId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pickingIdField, value) != true)) {
+                    this.pickingIdField = value;
+                    this.RaisePropertyChanged("pickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string salesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesIdField, value) != true)) {
+                    this.salesIdField = value;
+                    this.RaisePropertyChanged("salesId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.List salesLine {
+            get {
+                return this.salesLineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesLineField, value) != true)) {
+                    this.salesLineField = value;
+                    this.RaisePropertyChanged("salesLine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string salesName {
+            get {
+                return this.salesNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesNameField, value) != true)) {
+                    this.salesNameField = value;
+                    this.RaisePropertyChanged("salesName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string salesStatus {
+            get {
+                return this.salesStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesStatusField, value) != true)) {
+                    this.salesStatusField = value;
+                    this.RaisePropertyChanged("salesStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string salesType {
+            get {
+                return this.salesTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salesTypeField, value) != true)) {
+                    this.salesTypeField = value;
+                    this.RaisePropertyChanged("salesType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.NoYes sameConfig {
+            get {
+                return this.sameConfigField;
+            }
+            set {
+                if ((this.sameConfigField.Equals(value) != true)) {
+                    this.sameConfigField = value;
+                    this.RaisePropertyChanged("sameConfig");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.utcdatetime startLoad {
+            get {
+                return this.startLoadField;
+            }
+            set {
+                if ((this.startLoadField.Equals(value) != true)) {
+                    this.startLoadField = value;
+                    this.RaisePropertyChanged("startLoad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SoapUtility.SOPickServiceGroup.utcdatetime stopLoad {
+            get {
+                return this.stopLoadField;
+            }
+            set {
+                if ((this.stopLoadField.Equals(value) != true)) {
+                    this.stopLoadField = value;
+                    this.RaisePropertyChanged("stopLoad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ticketNumFG {
+            get {
+                return this.ticketNumFGField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ticketNumFGField, value) != true)) {
+                    this.ticketNumFGField = value;
+                    this.RaisePropertyChanged("ticketNumFG");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int truckLineNum {
+            get {
+                return this.truckLineNumField;
+            }
+            set {
+                if ((this.truckLineNumField.Equals(value) != true)) {
+                    this.truckLineNumField = value;
+                    this.RaisePropertyChanged("truckLineNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string truckPlate {
+            get {
+                return this.truckPlateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.truckPlateField, value) != true)) {
+                    this.truckPlateField = value;
+                    this.RaisePropertyChanged("truckPlate");
                 }
             }
         }
@@ -882,8 +1227,10 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InfologType))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.NoYes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
@@ -905,6 +1252,8 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PLNotDeliveredContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Date))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.utcdatetime))]
     public partial class FGDeliveryContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2170,6 +2519,107 @@ namespace SoapUtility.SOPickServiceGroup {
         PickingList = 4,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Date", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp.AxShared")]
+    [System.SerializableAttribute()]
+    public partial struct Date : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private System.DateTime _valueField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime _value {
+            get {
+                return this._valueField;
+            }
+            set {
+                if ((this._valueField.Equals(value) != true)) {
+                    this._valueField = value;
+                    this.RaisePropertyChanged("_value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="utcdatetime", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp.AxShared")]
+    [System.SerializableAttribute()]
+    public partial struct utcdatetime : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private System.DateTime _valueField;
+        
+        private int ruleIdField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime _value {
+            get {
+                return this._valueField;
+            }
+            set {
+                if ((this._valueField.Equals(value) != true)) {
+                    this._valueField = value;
+                    this.RaisePropertyChanged("_value");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ruleId {
+            get {
+                return this.ruleIdField;
+            }
+            set {
+                if ((this.ruleIdField.Equals(value) != true)) {
+                    this.ruleIdField = value;
+                    this.RaisePropertyChanged("ruleId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="NoYes", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     public enum NoYes : int {
@@ -2196,158 +2646,163 @@ namespace SoapUtility.SOPickServiceGroup {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SOPickServiceGroup.SOPickService")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="SOPickService", ConfigurationName="SOPickServiceGroup.SOPickService")]
     public interface SOPickService {
         
         // CODEGEN: Generating message contract since message ChangeTruckLoadingLine has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ChangeTruckLoadingLine", ReplyAction="http://tempuri.org/SOPickService/ChangeTruckLoadingLineResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ChangeTruckLoadingLine", ReplyAction="SOPickService/SOPickService/ChangeTruckLoadingLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse ChangeTruckLoadingLine(SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLine request);
         
         // CODEGEN: Generating message contract since message CheckPalletAvailable has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailable", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CheckPalletAvailable", ReplyAction="SOPickService/SOPickService/CheckPalletAvailableResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CheckPalletAvailable request);
         
         // CODEGEN: Generating message contract since message CheckPalletAvailableMulti has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/SOPickService/CheckPalletAvailableMultiResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CheckPalletAvailableMulti", ReplyAction="SOPickService/SOPickService/CheckPalletAvailableMultiResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti request);
         
         // CODEGEN: Generating message contract since message CustomersDeliveryByQty has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByQtyResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CustomersDeliveryByQty", ReplyAction="SOPickService/SOPickService/CustomersDeliveryByQtyResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse CustomersDeliveryByQty(SoapUtility.SOPickServiceGroup.CustomersDeliveryByQty request);
         
         // CODEGEN: Generating message contract since message CustomersDeliveryByTrucks has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/SOPickService/CustomersDeliveryByTrucksResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CustomersDeliveryByTrucks", ReplyAction="SOPickService/SOPickService/CustomersDeliveryByTrucksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse CustomersDeliveryByTrucks(SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucks request);
         
         // CODEGEN: Generating message contract since message findPickingList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findPickingList", ReplyAction="http://tempuri.org/SOPickService/findPickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findPickingList", ReplyAction="SOPickService/SOPickService/findPickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findPickingListResponse findPickingList(SoapUtility.SOPickServiceGroup.findPickingList request);
         
         // CODEGEN: Generating message contract since message findSalesOrder has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrder", ReplyAction="http://tempuri.org/SOPickService/findSalesOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findSalesOrder", ReplyAction="SOPickService/SOPickService/findSalesOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findSalesOrderResponse findSalesOrder(SoapUtility.SOPickServiceGroup.findSalesOrder request);
         
         // CODEGEN: Generating message contract since message findSalesOrdersList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/findSalesOrdersList", ReplyAction="http://tempuri.org/SOPickService/findSalesOrdersListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findSalesOrdersList", ReplyAction="SOPickService/SOPickService/findSalesOrdersListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse findSalesOrdersList(SoapUtility.SOPickServiceGroup.findSalesOrdersList request);
         
         // CODEGEN: Generating message contract since message GetCustomerDeliveries has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetCustomerDeliveries", ReplyAction="SOPickService/SOPickService/GetCustomerDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse GetCustomerDeliveries(SoapUtility.SOPickServiceGroup.GetCustomerDeliveries request);
         
         // CODEGEN: Generating message contract since message GetCustomerDeliveriesByStatus has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="http://tempuri.org/SOPickService/GetCustomerDeliveriesByStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="SOPickService/SOPickService/GetCustomerDeliveriesByStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse GetCustomerDeliveriesByStatus(SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatus request);
         
         // CODEGEN: Generating message contract since message GetDailyDeliverySummaryByCust has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDailyDeliverySummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="SOPickService/SOPickService/GetDailyDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse GetDailyDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCust request);
         
         // CODEGEN: Generating message contract since message GetDeliveries has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveries", ReplyAction="http://tempuri.org/SOPickService/GetDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliveries", ReplyAction="SOPickService/SOPickService/GetDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliveriesResponse GetDeliveries(SoapUtility.SOPickServiceGroup.GetDeliveries request);
         
         // CODEGEN: Generating message contract since message GetDeliveryStatusLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliveryStatusLookup", ReplyAction="http://tempuri.org/SOPickService/GetDeliveryStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliveryStatusLookup", ReplyAction="SOPickService/SOPickService/GetDeliveryStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse GetDeliveryStatusLookup(SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup request);
         
         // CODEGEN: Generating message contract since message GetDeliverySummaryByCust has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetDeliverySummaryByCust", ReplyAction="http://tempuri.org/SOPickService/GetDeliverySummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliverySummaryByCust", ReplyAction="SOPickService/SOPickService/GetDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse GetDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCust request);
         
         // CODEGEN: Generating message contract since message GetFGLines has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetFGLines", ReplyAction="http://tempuri.org/SOPickService/GetFGLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetFGLines", ReplyAction="SOPickService/SOPickService/GetFGLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetFGLinesResponse GetFGLines(SoapUtility.SOPickServiceGroup.GetFGLines request);
         
         // CODEGEN: Generating message contract since message GetLatestPallets has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetLatestPallets", ReplyAction="http://tempuri.org/SOPickService/GetLatestPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetLatestPallets", ReplyAction="SOPickService/SOPickService/GetLatestPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse GetLatestPallets(SoapUtility.SOPickServiceGroup.GetLatestPallets request);
         
         // CODEGEN: Generating message contract since message GetOpenPickingListByCustByItem has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="http://tempuri.org/SOPickService/GetOpenPickingListByCustByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="SOPickService/SOPickService/GetOpenPickingListByCustByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse GetOpenPickingListByCustByItem(SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItem request);
         
         // CODEGEN: Generating message contract since message GetPalletInfo has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetPalletInfo", ReplyAction="http://tempuri.org/SOPickService/GetPalletInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetPalletInfo", ReplyAction="SOPickService/SOPickService/GetPalletInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetPalletInfoResponse GetPalletInfo(SoapUtility.SOPickServiceGroup.GetPalletInfo request);
         
         // CODEGEN: Generating message contract since message GetSingleDelivery has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/GetSingleDelivery", ReplyAction="http://tempuri.org/SOPickService/GetSingleDeliveryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetSingleDelivery", ReplyAction="SOPickService/SOPickService/GetSingleDeliveryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse GetSingleDelivery(SoapUtility.SOPickServiceGroup.GetSingleDelivery request);
         
         // CODEGEN: Generating message contract since message LoginDevice has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/LoginDevice", ReplyAction="http://tempuri.org/SOPickService/LoginDeviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/LoginDevice", ReplyAction="SOPickService/SOPickService/LoginDeviceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.LoginDeviceResponse LoginDevice(SoapUtility.SOPickServiceGroup.LoginDevice request);
         
         // CODEGEN: Generating message contract since message ReceivePickingList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReceivePickingList", ReplyAction="http://tempuri.org/SOPickService/ReceivePickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ReceivePickingList", ReplyAction="SOPickService/SOPickService/ReceivePickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ReceivePickingListResponse ReceivePickingList(SoapUtility.SOPickServiceGroup.ReceivePickingList request);
         
         // CODEGEN: Generating message contract since message ReservePallets has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/ReservePallets", ReplyAction="http://tempuri.org/SOPickService/ReservePalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ReservePallets", ReplyAction="SOPickService/SOPickService/ReservePalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ReservePalletsResponse ReservePallets(SoapUtility.SOPickServiceGroup.ReservePallets request);
         
         // CODEGEN: Generating message contract since message SaveHistory has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SaveHistory", ReplyAction="http://tempuri.org/SOPickService/SaveHistoryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SaveHistory", ReplyAction="SOPickService/SOPickService/SaveHistoryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SaveHistoryResponse SaveHistory(SoapUtility.SOPickServiceGroup.SaveHistory request);
         
         // CODEGEN: Generating message contract since message SavePickingLoad has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SavePickingLoad", ReplyAction="http://tempuri.org/SOPickService/SavePickingLoadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SavePickingLoad", ReplyAction="SOPickService/SOPickService/SavePickingLoadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SavePickingLoadResponse SavePickingLoad(SoapUtility.SOPickServiceGroup.SavePickingLoad request);
         
         // CODEGEN: Generating message contract since message UnreservePallet has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/UnreservePallet", ReplyAction="http://tempuri.org/SOPickService/UnreservePalletResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/UnreservePallet", ReplyAction="SOPickService/SOPickService/UnreservePalletResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.UnreservePalletResponse UnreservePallet(SoapUtility.SOPickServiceGroup.UnreservePallet request);
         
         // CODEGEN: Generating message contract since message SalesDeliveryNote has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/SalesDeliveryNote", ReplyAction="http://tempuri.org/SOPickService/SalesDeliveryNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SalesDeliveryNote", ReplyAction="SOPickService/SOPickService/SalesDeliveryNoteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse SalesDeliveryNote(SoapUtility.SOPickServiceGroup.SalesDeliveryNote request);
         
         // CODEGEN: Generating message contract since message PalletsReserving has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOPickService/PalletsReserving", ReplyAction="http://tempuri.org/SOPickService/PalletsReservingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="http://tempuri.org/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/PalletsReserving", ReplyAction="SOPickService/SOPickService/PalletsReservingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.PalletsReservingResponse PalletsReserving(SoapUtility.SOPickServiceGroup.PalletsReserving request);
+        
+        // CODEGEN: Generating message contract since message Evs_ServiceMessage has headers
+        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/Evs_ServiceMessage", ReplyAction="SOPickService/SOPickService/Evs_ServiceMessageResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.Evs_ServiceMessage request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLine", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLine", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ChangeTruckLoadingLine {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public int lineNum;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string pickingNum;
         
         public ChangeTruckLoadingLine() {
@@ -2363,13 +2818,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLineResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLineResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ChangeTruckLoadingLineResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string result;
         
         public ChangeTruckLoadingLineResponse() {
@@ -2384,28 +2839,28 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailable", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailable", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailable {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
         public string serialId;
         
         public CheckPalletAvailable() {
@@ -2425,13 +2880,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract result;
         
         public CheckPalletAvailableResponse() {
@@ -2446,34 +2901,34 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMulti", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMulti", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableMulti {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
         public SoapUtility.SOPickServiceGroup.PalletItemContract[] serials;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
         public string userName;
         
         public CheckPalletAvailableMulti() {
@@ -2495,13 +2950,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMultiResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMultiResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableMultiResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
         
         public CheckPalletAvailableMultiResponse() {
@@ -2516,16 +2971,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQty", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQty", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByQty {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime startDate;
         
         public CustomersDeliveryByQty() {
@@ -2541,13 +2996,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQtyResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQtyResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByQtyResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public CustomersDeliveryByQtyResponse() {
@@ -2562,16 +3017,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucks", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucks", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByTrucks {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime startDate;
         
         public CustomersDeliveryByTrucks() {
@@ -2587,13 +3042,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucksResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucksResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByTrucksResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public CustomersDeliveryByTrucksResponse() {
@@ -2608,13 +3063,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingList", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingList", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findPickingList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string pickingId;
         
         public findPickingList() {
@@ -2629,13 +3084,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findPickingListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesTableContract result;
         
         public findPickingListResponse() {
@@ -2650,13 +3105,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrder", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrder", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findSalesOrder {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string salesId;
         
         public findSalesOrder() {
@@ -2671,13 +3126,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrderResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrderResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findSalesOrderResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesTableContract result;
         
         public findSalesOrderResponse() {
@@ -2692,19 +3147,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersList", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersList", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findSalesOrdersList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime dateEnd;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public System.DateTime dateStart;
         
         public findSalesOrdersList() {
@@ -2721,13 +3176,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class findSalesOrdersListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesTableContract[] result;
         
         public findSalesOrdersListResponse() {
@@ -2742,16 +3197,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveries", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveries", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveries {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime theDate;
         
         public GetCustomerDeliveries() {
@@ -2767,13 +3222,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetCustomerDeliveriesResponse() {
@@ -2788,19 +3243,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatus", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatus", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesByStatus {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public SoapUtility.SOPickServiceGroup.PickingListStatus _status;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public System.DateTime theDate;
         
         public GetCustomerDeliveriesByStatus() {
@@ -2817,13 +3272,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatusResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatusResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesByStatusResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetCustomerDeliveriesByStatusResponse() {
@@ -2838,16 +3293,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCust", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCust", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDailyDeliverySummaryByCust {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime startDate;
         
         public GetDailyDeliverySummaryByCust() {
@@ -2863,13 +3318,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCustResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDailyDeliverySummaryByCustResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public GetDailyDeliverySummaryByCustResponse() {
@@ -2884,13 +3339,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveries", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveries", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliveries {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public System.DateTime theDate;
         
         public GetDeliveries() {
@@ -2905,13 +3360,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveriesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveriesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliveriesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetDeliveriesResponse() {
@@ -2926,7 +3381,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookup", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookup", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliveryStatusLookup {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -2943,13 +3398,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookupResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliveryStatusLookupResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.LookupContract[] result;
         
         public GetDeliveryStatusLookupResponse() {
@@ -2964,19 +3419,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCust", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCust", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliverySummaryByCust {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public System.DateTime startDate;
         
         public GetDeliverySummaryByCust() {
@@ -2993,13 +3448,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCustResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCustResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetDeliverySummaryByCustResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public GetDeliverySummaryByCustResponse() {
@@ -3014,7 +3469,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLines", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLines", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetFGLines {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3031,13 +3486,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLinesResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLinesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetFGLinesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGLineContract[] result;
         
         public GetFGLinesResponse() {
@@ -3052,16 +3507,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPallets", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPallets", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetLatestPallets {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string _pickingId;
         
         public GetLatestPallets() {
@@ -3077,13 +3532,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPalletsResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetLatestPalletsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
         
         public GetLatestPalletsResponse() {
@@ -3098,16 +3553,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItem", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItem", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetOpenPickingListByCustByItem {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string _itemId;
         
         public GetOpenPickingListByCustByItem() {
@@ -3123,13 +3578,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItemResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItemResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetOpenPickingListByCustByItemResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PLNotDeliveredContract[] result;
         
         public GetOpenPickingListByCustByItemResponse() {
@@ -3144,13 +3599,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfo", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfo", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetPalletInfo {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _serialId;
         
         public GetPalletInfo() {
@@ -3165,13 +3620,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfoResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfoResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetPalletInfoResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PalletContract result;
         
         public GetPalletInfoResponse() {
@@ -3186,13 +3641,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDelivery", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDelivery", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetSingleDelivery {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string pickingId;
         
         public GetSingleDelivery() {
@@ -3207,13 +3662,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDeliveryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDeliveryResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class GetSingleDeliveryResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract result;
         
         public GetSingleDeliveryResponse() {
@@ -3228,22 +3683,22 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDevice", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDevice", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class LoginDevice {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string deviceIP;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string deviceName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public string projectName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
         public string userName;
         
         public LoginDevice() {
@@ -3261,7 +3716,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDeviceResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDeviceResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class LoginDeviceResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3278,16 +3733,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingList", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingList", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ReceivePickingList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string deviceName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string userName;
         
         public ReceivePickingList() {
@@ -3303,13 +3758,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingListResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ReceivePickingListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesTableContract result;
         
         public ReceivePickingListResponse() {
@@ -3324,34 +3779,34 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePallets", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePallets", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ReservePallets {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
         public string userName;
         
         public ReservePallets() {
@@ -3373,13 +3828,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePalletsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePalletsResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class ReservePalletsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
         
         public ReservePalletsResponse() {
@@ -3394,13 +3849,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistory", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistory", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SaveHistory {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PickHistoryContract history;
         
         public SaveHistory() {
@@ -3415,7 +3870,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistoryResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SaveHistoryResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3432,19 +3887,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoad", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoad", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SavePickingLoad {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public System.DateTime startLoad;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public System.DateTime stopLoad;
         
         public SavePickingLoad() {
@@ -3461,7 +3916,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoadResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoadResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SavePickingLoadResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3478,13 +3933,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePallet", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePallet", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class UnreservePallet {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string serialId;
         
         public UnreservePallet() {
@@ -3499,13 +3954,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePalletResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePalletResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class UnreservePalletResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public bool result;
         
         public UnreservePalletResponse() {
@@ -3520,13 +3975,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNote", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNote", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SalesDeliveryNote {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string _salesId;
         
         public SalesDeliveryNote() {
@@ -3541,13 +3996,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNoteResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNoteResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class SalesDeliveryNoteResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string result;
         
         public SalesDeliveryNoteResponse() {
@@ -3562,34 +4017,34 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReserving", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReserving", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class PalletsReserving {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
         public string userName;
         
         public PalletsReserving() {
@@ -3611,19 +4066,57 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReservingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReservingResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
     public partial class PalletsReservingResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
         
         public PalletsReservingResponse() {
         }
         
         public PalletsReservingResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessage", WrapperNamespace="SOPickService", IsWrapped=true)]
+    public partial class Evs_ServiceMessage {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SOPickServiceGroup.CallContext CallContext;
+        
+        public Evs_ServiceMessage() {
+        }
+        
+        public Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessageResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    public partial class Evs_ServiceMessageResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SOPickServiceGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        public string result;
+        
+        public Evs_ServiceMessageResponse() {
+        }
+        
+        public Evs_ServiceMessageResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, string result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -4070,6 +4563,19 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.salesId = salesId;
             inValue.userName = userName;
             SoapUtility.SOPickServiceGroup.PalletsReservingResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).PalletsReserving(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse SoapUtility.SOPickServiceGroup.SOPickService.Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.Evs_ServiceMessage request) {
+            return base.Channel.Evs_ServiceMessage(request);
+        }
+        
+        public SoapUtility.SOPickServiceGroup.Infolog Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.CallContext CallContext, out string result) {
+            SoapUtility.SOPickServiceGroup.Evs_ServiceMessage inValue = new SoapUtility.SOPickServiceGroup.Evs_ServiceMessage();
+            inValue.CallContext = CallContext;
+            SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).Evs_ServiceMessage(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

@@ -609,6 +609,9 @@
     <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup6.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SOPickServiceGroup\SOPickServiceGroup7.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.AttendanceContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
