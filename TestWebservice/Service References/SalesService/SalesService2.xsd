@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:58380/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
+  <xs:import schemaLocation="http://localhost:58380/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
   <xs:complexType name="SalesTable">
     <xs:sequence>
       <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
@@ -37,7 +37,7 @@
       <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LineRecId" type="xs:long" />
       <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="Locations" nillable="true" type="q1:ArrayOfInventByGrLocContract" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="Locations" nillable="true" type="q1:ArrayOfInventByGrLocContract" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />

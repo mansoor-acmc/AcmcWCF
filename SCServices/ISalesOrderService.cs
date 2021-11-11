@@ -22,7 +22,7 @@ namespace SyncServices
         /// <param name="customrId">Customer account number</param>
         /// <returns></returns>
         [OperationContract]        
-        SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId);
+        EVSSalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId);
 
         /// <summary>
         /// Get single Sales-order data along with all Sales-lines
@@ -31,7 +31,7 @@ namespace SyncServices
         /// <returns></returns>
         [OperationContract]        
         //[WebInvoke(Method ="Get", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,UriTemplate = "FindSalesOrder")]
-        SalesTableContract FindSalesOrder(string salesId);
+        EVSSalesTableContract FindSalesOrder(string salesId);
 
         [OperationContract]        
         //[WebGet(UriTemplate = "GetDeliveries/{customerId}/{dateSearch}", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]

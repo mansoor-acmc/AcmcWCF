@@ -9,7 +9,1465 @@
 //------------------------------------------------------------------------------
 
 namespace TestWebservice.DMCheckService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportMiniContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportOfflineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMSummaryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.WmsLocationContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.DMCheckService.DMExportContract))]
+    public partial class XppObjectBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private System.ComponentModel.PropertyChangedEventHandler PropertyChanged1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PropertyChanged", IsRequired=true)]
+        public System.ComponentModel.PropertyChangedEventHandler PropertyChanged1 {
+            get {
+                return this.PropertyChanged1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PropertyChanged1Field, value) != true)) {
+                    this.PropertyChanged1Field = value;
+                    this.RaisePropertyChanged("PropertyChanged1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DMExportMiniContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    public partial class DMExportMiniContract : TestWebservice.DMCheckService.XppObjectBase {
+        
+        private string barCodePalletFieldField;
+        
+        private string dMShortDesc2FieldField;
+        
+        private string dMShortDescFieldField;
+        
+        private string palletNumFieldField;
+        
+        private long recordIdFieldField;
+        
+        private bool recordIdFieldSpecifiedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string barCodePalletField {
+            get {
+                return this.barCodePalletFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.barCodePalletFieldField, value) != true)) {
+                    this.barCodePalletFieldField = value;
+                    this.RaisePropertyChanged("barCodePalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string dMShortDesc2Field {
+            get {
+                return this.dMShortDesc2FieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dMShortDesc2FieldField, value) != true)) {
+                    this.dMShortDesc2FieldField = value;
+                    this.RaisePropertyChanged("dMShortDesc2Field");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string dMShortDescField {
+            get {
+                return this.dMShortDescFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dMShortDescFieldField, value) != true)) {
+                    this.dMShortDescFieldField = value;
+                    this.RaisePropertyChanged("dMShortDescField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string palletNumField {
+            get {
+                return this.palletNumFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.palletNumFieldField, value) != true)) {
+                    this.palletNumFieldField = value;
+                    this.RaisePropertyChanged("palletNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public long recordIdField {
+            get {
+                return this.recordIdFieldField;
+            }
+            set {
+                if ((this.recordIdFieldField.Equals(value) != true)) {
+                    this.recordIdFieldField = value;
+                    this.RaisePropertyChanged("recordIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool recordIdFieldSpecified {
+            get {
+                return this.recordIdFieldSpecifiedField;
+            }
+            set {
+                if ((this.recordIdFieldSpecifiedField.Equals(value) != true)) {
+                    this.recordIdFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("recordIdFieldSpecified");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DMExportOfflineContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    public partial class DMExportOfflineContract : TestWebservice.DMCheckService.XppObjectBase {
+        
+        private decimal boxesOnPalletFieldField;
+        
+        private bool boxesOnPalletFieldSpecifiedField;
+        
+        private string caliberFieldField;
+        
+        private string deviceNameFieldField;
+        
+        private string deviceUserFieldField;
+        
+        private string gradeFieldField;
+        
+        private bool isApprovedByFGFieldField;
+        
+        private bool isApprovedByFGFieldSpecifiedField;
+        
+        private bool isApprovedBySLFieldField;
+        
+        private bool isApprovedBySLFieldSpecifiedField;
+        
+        private TestWebservice.DMCheckService.NoYes isOfflineModeFieldField;
+        
+        private bool isOfflineModeFieldSpecifiedField;
+        
+        private string palletNumFieldField;
+        
+        private string shadeFieldField;
+        
+        private string whLocationIdFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal boxesOnPalletField {
+            get {
+                return this.boxesOnPalletFieldField;
+            }
+            set {
+                if ((this.boxesOnPalletFieldField.Equals(value) != true)) {
+                    this.boxesOnPalletFieldField = value;
+                    this.RaisePropertyChanged("boxesOnPalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool boxesOnPalletFieldSpecified {
+            get {
+                return this.boxesOnPalletFieldSpecifiedField;
+            }
+            set {
+                if ((this.boxesOnPalletFieldSpecifiedField.Equals(value) != true)) {
+                    this.boxesOnPalletFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("boxesOnPalletFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string caliberField {
+            get {
+                return this.caliberFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.caliberFieldField, value) != true)) {
+                    this.caliberFieldField = value;
+                    this.RaisePropertyChanged("caliberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string deviceNameField {
+            get {
+                return this.deviceNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deviceNameFieldField, value) != true)) {
+                    this.deviceNameFieldField = value;
+                    this.RaisePropertyChanged("deviceNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string deviceUserField {
+            get {
+                return this.deviceUserFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deviceUserFieldField, value) != true)) {
+                    this.deviceUserFieldField = value;
+                    this.RaisePropertyChanged("deviceUserField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedByFGField {
+            get {
+                return this.isApprovedByFGFieldField;
+            }
+            set {
+                if ((this.isApprovedByFGFieldField.Equals(value) != true)) {
+                    this.isApprovedByFGFieldField = value;
+                    this.RaisePropertyChanged("isApprovedByFGField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedByFGFieldSpecified {
+            get {
+                return this.isApprovedByFGFieldSpecifiedField;
+            }
+            set {
+                if ((this.isApprovedByFGFieldSpecifiedField.Equals(value) != true)) {
+                    this.isApprovedByFGFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isApprovedByFGFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedBySLField {
+            get {
+                return this.isApprovedBySLFieldField;
+            }
+            set {
+                if ((this.isApprovedBySLFieldField.Equals(value) != true)) {
+                    this.isApprovedBySLFieldField = value;
+                    this.RaisePropertyChanged("isApprovedBySLField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedBySLFieldSpecified {
+            get {
+                return this.isApprovedBySLFieldSpecifiedField;
+            }
+            set {
+                if ((this.isApprovedBySLFieldSpecifiedField.Equals(value) != true)) {
+                    this.isApprovedBySLFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isApprovedBySLFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.DMCheckService.NoYes isOfflineModeField {
+            get {
+                return this.isOfflineModeFieldField;
+            }
+            set {
+                if ((this.isOfflineModeFieldField.Equals(value) != true)) {
+                    this.isOfflineModeFieldField = value;
+                    this.RaisePropertyChanged("isOfflineModeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isOfflineModeFieldSpecified {
+            get {
+                return this.isOfflineModeFieldSpecifiedField;
+            }
+            set {
+                if ((this.isOfflineModeFieldSpecifiedField.Equals(value) != true)) {
+                    this.isOfflineModeFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isOfflineModeFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string palletNumField {
+            get {
+                return this.palletNumFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.palletNumFieldField, value) != true)) {
+                    this.palletNumFieldField = value;
+                    this.RaisePropertyChanged("palletNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string shadeField {
+            get {
+                return this.shadeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
+                    this.shadeFieldField = value;
+                    this.RaisePropertyChanged("shadeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string whLocationIdField {
+            get {
+                return this.whLocationIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.whLocationIdFieldField, value) != true)) {
+                    this.whLocationIdFieldField = value;
+                    this.RaisePropertyChanged("whLocationIdField");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DMSummaryContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    public partial class DMSummaryContract : TestWebservice.DMCheckService.XppObjectBase {
+        
+        private string caliberFieldField;
+        
+        private string gradeFieldField;
+        
+        private string itemDescriptionFieldField;
+        
+        private string itemNumberFieldField;
+        
+        private int numOfPalletsApprovedFieldField;
+        
+        private bool numOfPalletsApprovedFieldSpecifiedField;
+        
+        private int numOfPalletsFieldField;
+        
+        private bool numOfPalletsFieldSpecifiedField;
+        
+        private int numOfPalletsPostedFieldField;
+        
+        private bool numOfPalletsPostedFieldSpecifiedField;
+        
+        private string shadeFieldField;
+        
+        private decimal totalQtyFieldField;
+        
+        private bool totalQtyFieldSpecifiedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string caliberField {
+            get {
+                return this.caliberFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.caliberFieldField, value) != true)) {
+                    this.caliberFieldField = value;
+                    this.RaisePropertyChanged("caliberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemDescriptionField {
+            get {
+                return this.itemDescriptionFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemDescriptionFieldField, value) != true)) {
+                    this.itemDescriptionFieldField = value;
+                    this.RaisePropertyChanged("itemDescriptionField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemNumberField {
+            get {
+                return this.itemNumberFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemNumberFieldField, value) != true)) {
+                    this.itemNumberFieldField = value;
+                    this.RaisePropertyChanged("itemNumberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int numOfPalletsApprovedField {
+            get {
+                return this.numOfPalletsApprovedFieldField;
+            }
+            set {
+                if ((this.numOfPalletsApprovedFieldField.Equals(value) != true)) {
+                    this.numOfPalletsApprovedFieldField = value;
+                    this.RaisePropertyChanged("numOfPalletsApprovedField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool numOfPalletsApprovedFieldSpecified {
+            get {
+                return this.numOfPalletsApprovedFieldSpecifiedField;
+            }
+            set {
+                if ((this.numOfPalletsApprovedFieldSpecifiedField.Equals(value) != true)) {
+                    this.numOfPalletsApprovedFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("numOfPalletsApprovedFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int numOfPalletsField {
+            get {
+                return this.numOfPalletsFieldField;
+            }
+            set {
+                if ((this.numOfPalletsFieldField.Equals(value) != true)) {
+                    this.numOfPalletsFieldField = value;
+                    this.RaisePropertyChanged("numOfPalletsField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool numOfPalletsFieldSpecified {
+            get {
+                return this.numOfPalletsFieldSpecifiedField;
+            }
+            set {
+                if ((this.numOfPalletsFieldSpecifiedField.Equals(value) != true)) {
+                    this.numOfPalletsFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("numOfPalletsFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int numOfPalletsPostedField {
+            get {
+                return this.numOfPalletsPostedFieldField;
+            }
+            set {
+                if ((this.numOfPalletsPostedFieldField.Equals(value) != true)) {
+                    this.numOfPalletsPostedFieldField = value;
+                    this.RaisePropertyChanged("numOfPalletsPostedField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool numOfPalletsPostedFieldSpecified {
+            get {
+                return this.numOfPalletsPostedFieldSpecifiedField;
+            }
+            set {
+                if ((this.numOfPalletsPostedFieldSpecifiedField.Equals(value) != true)) {
+                    this.numOfPalletsPostedFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("numOfPalletsPostedFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string shadeField {
+            get {
+                return this.shadeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
+                    this.shadeFieldField = value;
+                    this.RaisePropertyChanged("shadeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal totalQtyField {
+            get {
+                return this.totalQtyFieldField;
+            }
+            set {
+                if ((this.totalQtyFieldField.Equals(value) != true)) {
+                    this.totalQtyFieldField = value;
+                    this.RaisePropertyChanged("totalQtyField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool totalQtyFieldSpecified {
+            get {
+                return this.totalQtyFieldSpecifiedField;
+            }
+            set {
+                if ((this.totalQtyFieldSpecifiedField.Equals(value) != true)) {
+                    this.totalQtyFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("totalQtyFieldSpecified");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WmsLocationContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    public partial class WmsLocationContract : TestWebservice.DMCheckService.XppObjectBase {
+        
+        private string locationFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string locationField {
+            get {
+                return this.locationFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.locationFieldField, value) != true)) {
+                    this.locationFieldField = value;
+                    this.RaisePropertyChanged("locationField");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DMExportContract", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    [System.SerializableAttribute()]
+    public partial class DMExportContract : TestWebservice.DMCheckService.XppObjectBase {
+        
+        private string barCodePalletFieldField;
+        
+        private int boxesOnPalletFieldField;
+        
+        private bool boxesOnPalletFieldSpecifiedField;
+        
+        private string caliberFieldField;
+        
+        private System.DateTime cancelDateTimeFieldField;
+        
+        private bool cancelDateTimeFieldSpecifiedField;
+        
+        private bool codeLabelFieldField;
+        
+        private bool codeLabelFieldSpecifiedField;
+        
+        private string dMShortDesc2FieldField;
+        
+        private string dMShortDescFieldField;
+        
+        private string deviceNameFieldField;
+        
+        private string deviceUserFieldField;
+        
+        private System.DateTime fGApprovalTimeFieldField;
+        
+        private bool fGApprovalTimeFieldSpecifiedField;
+        
+        private string gradeFieldField;
+        
+        private bool isApprovedByFGFieldField;
+        
+        private bool isApprovedByFGFieldSpecifiedField;
+        
+        private bool isApprovedBySLFieldField;
+        
+        private bool isApprovedBySLFieldSpecifiedField;
+        
+        private bool isCancelledFieldField;
+        
+        private bool isCancelledFieldSpecifiedField;
+        
+        private bool isPostedFieldField;
+        
+        private bool isPostedFieldSpecifiedField;
+        
+        private string itemDescFieldField;
+        
+        private string itemNumberFieldField;
+        
+        private TestWebservice.DMCheckService.PalletTransportBy lGVOrForkliftFieldField;
+        
+        private bool lGVOrForkliftFieldSpecifiedField;
+        
+        private int lineOfOriginFieldField;
+        
+        private bool lineOfOriginFieldSpecifiedField;
+        
+        private long marpakMovNumFieldField;
+        
+        private bool marpakMovNumFieldSpecifiedField;
+        
+        private long movementNumberFieldField;
+        
+        private bool movementNumberFieldSpecifiedField;
+        
+        private string palletNumFieldField;
+        
+        private int piecesForBoxFieldField;
+        
+        private bool piecesForBoxFieldSpecifiedField;
+        
+        private long recordIdFieldField;
+        
+        private bool recordIdFieldSpecifiedField;
+        
+        private string shadeFieldField;
+        
+        private System.DateTime shiftDateFieldField;
+        
+        private bool shiftDateFieldSpecifiedField;
+        
+        private int shiftFieldField;
+        
+        private bool shiftFieldSpecifiedField;
+        
+        private string sizeFieldField;
+        
+        private decimal surfaceMQBoxFieldField;
+        
+        private bool surfaceMQBoxFieldSpecifiedField;
+        
+        private System.DateTime timeStampFieldField;
+        
+        private bool timeStampFieldSpecifiedField;
+        
+        private int totalPiecesOnPalletFieldField;
+        
+        private bool totalPiecesOnPalletFieldSpecifiedField;
+        
+        private decimal totalSurfaceFieldField;
+        
+        private bool totalSurfaceFieldSpecifiedField;
+        
+        private string whLocationIdFieldField;
+        
+        private int whichMarpakFieldField;
+        
+        private bool whichMarpakFieldSpecifiedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string barCodePalletField {
+            get {
+                return this.barCodePalletFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.barCodePalletFieldField, value) != true)) {
+                    this.barCodePalletFieldField = value;
+                    this.RaisePropertyChanged("barCodePalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int boxesOnPalletField {
+            get {
+                return this.boxesOnPalletFieldField;
+            }
+            set {
+                if ((this.boxesOnPalletFieldField.Equals(value) != true)) {
+                    this.boxesOnPalletFieldField = value;
+                    this.RaisePropertyChanged("boxesOnPalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool boxesOnPalletFieldSpecified {
+            get {
+                return this.boxesOnPalletFieldSpecifiedField;
+            }
+            set {
+                if ((this.boxesOnPalletFieldSpecifiedField.Equals(value) != true)) {
+                    this.boxesOnPalletFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("boxesOnPalletFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string caliberField {
+            get {
+                return this.caliberFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.caliberFieldField, value) != true)) {
+                    this.caliberFieldField = value;
+                    this.RaisePropertyChanged("caliberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime cancelDateTimeField {
+            get {
+                return this.cancelDateTimeFieldField;
+            }
+            set {
+                if ((this.cancelDateTimeFieldField.Equals(value) != true)) {
+                    this.cancelDateTimeFieldField = value;
+                    this.RaisePropertyChanged("cancelDateTimeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool cancelDateTimeFieldSpecified {
+            get {
+                return this.cancelDateTimeFieldSpecifiedField;
+            }
+            set {
+                if ((this.cancelDateTimeFieldSpecifiedField.Equals(value) != true)) {
+                    this.cancelDateTimeFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("cancelDateTimeFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool codeLabelField {
+            get {
+                return this.codeLabelFieldField;
+            }
+            set {
+                if ((this.codeLabelFieldField.Equals(value) != true)) {
+                    this.codeLabelFieldField = value;
+                    this.RaisePropertyChanged("codeLabelField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool codeLabelFieldSpecified {
+            get {
+                return this.codeLabelFieldSpecifiedField;
+            }
+            set {
+                if ((this.codeLabelFieldSpecifiedField.Equals(value) != true)) {
+                    this.codeLabelFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("codeLabelFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string dMShortDesc2Field {
+            get {
+                return this.dMShortDesc2FieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dMShortDesc2FieldField, value) != true)) {
+                    this.dMShortDesc2FieldField = value;
+                    this.RaisePropertyChanged("dMShortDesc2Field");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string dMShortDescField {
+            get {
+                return this.dMShortDescFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dMShortDescFieldField, value) != true)) {
+                    this.dMShortDescFieldField = value;
+                    this.RaisePropertyChanged("dMShortDescField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string deviceNameField {
+            get {
+                return this.deviceNameFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deviceNameFieldField, value) != true)) {
+                    this.deviceNameFieldField = value;
+                    this.RaisePropertyChanged("deviceNameField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string deviceUserField {
+            get {
+                return this.deviceUserFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.deviceUserFieldField, value) != true)) {
+                    this.deviceUserFieldField = value;
+                    this.RaisePropertyChanged("deviceUserField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime fGApprovalTimeField {
+            get {
+                return this.fGApprovalTimeFieldField;
+            }
+            set {
+                if ((this.fGApprovalTimeFieldField.Equals(value) != true)) {
+                    this.fGApprovalTimeFieldField = value;
+                    this.RaisePropertyChanged("fGApprovalTimeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool fGApprovalTimeFieldSpecified {
+            get {
+                return this.fGApprovalTimeFieldSpecifiedField;
+            }
+            set {
+                if ((this.fGApprovalTimeFieldSpecifiedField.Equals(value) != true)) {
+                    this.fGApprovalTimeFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("fGApprovalTimeFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string gradeField {
+            get {
+                return this.gradeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.gradeFieldField, value) != true)) {
+                    this.gradeFieldField = value;
+                    this.RaisePropertyChanged("gradeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedByFGField {
+            get {
+                return this.isApprovedByFGFieldField;
+            }
+            set {
+                if ((this.isApprovedByFGFieldField.Equals(value) != true)) {
+                    this.isApprovedByFGFieldField = value;
+                    this.RaisePropertyChanged("isApprovedByFGField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedByFGFieldSpecified {
+            get {
+                return this.isApprovedByFGFieldSpecifiedField;
+            }
+            set {
+                if ((this.isApprovedByFGFieldSpecifiedField.Equals(value) != true)) {
+                    this.isApprovedByFGFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isApprovedByFGFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedBySLField {
+            get {
+                return this.isApprovedBySLFieldField;
+            }
+            set {
+                if ((this.isApprovedBySLFieldField.Equals(value) != true)) {
+                    this.isApprovedBySLFieldField = value;
+                    this.RaisePropertyChanged("isApprovedBySLField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isApprovedBySLFieldSpecified {
+            get {
+                return this.isApprovedBySLFieldSpecifiedField;
+            }
+            set {
+                if ((this.isApprovedBySLFieldSpecifiedField.Equals(value) != true)) {
+                    this.isApprovedBySLFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isApprovedBySLFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isCancelledField {
+            get {
+                return this.isCancelledFieldField;
+            }
+            set {
+                if ((this.isCancelledFieldField.Equals(value) != true)) {
+                    this.isCancelledFieldField = value;
+                    this.RaisePropertyChanged("isCancelledField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isCancelledFieldSpecified {
+            get {
+                return this.isCancelledFieldSpecifiedField;
+            }
+            set {
+                if ((this.isCancelledFieldSpecifiedField.Equals(value) != true)) {
+                    this.isCancelledFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isCancelledFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isPostedField {
+            get {
+                return this.isPostedFieldField;
+            }
+            set {
+                if ((this.isPostedFieldField.Equals(value) != true)) {
+                    this.isPostedFieldField = value;
+                    this.RaisePropertyChanged("isPostedField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool isPostedFieldSpecified {
+            get {
+                return this.isPostedFieldSpecifiedField;
+            }
+            set {
+                if ((this.isPostedFieldSpecifiedField.Equals(value) != true)) {
+                    this.isPostedFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("isPostedFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemDescField {
+            get {
+                return this.itemDescFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemDescFieldField, value) != true)) {
+                    this.itemDescFieldField = value;
+                    this.RaisePropertyChanged("itemDescField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string itemNumberField {
+            get {
+                return this.itemNumberFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.itemNumberFieldField, value) != true)) {
+                    this.itemNumberFieldField = value;
+                    this.RaisePropertyChanged("itemNumberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public TestWebservice.DMCheckService.PalletTransportBy lGVOrForkliftField {
+            get {
+                return this.lGVOrForkliftFieldField;
+            }
+            set {
+                if ((this.lGVOrForkliftFieldField.Equals(value) != true)) {
+                    this.lGVOrForkliftFieldField = value;
+                    this.RaisePropertyChanged("lGVOrForkliftField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool lGVOrForkliftFieldSpecified {
+            get {
+                return this.lGVOrForkliftFieldSpecifiedField;
+            }
+            set {
+                if ((this.lGVOrForkliftFieldSpecifiedField.Equals(value) != true)) {
+                    this.lGVOrForkliftFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("lGVOrForkliftFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int lineOfOriginField {
+            get {
+                return this.lineOfOriginFieldField;
+            }
+            set {
+                if ((this.lineOfOriginFieldField.Equals(value) != true)) {
+                    this.lineOfOriginFieldField = value;
+                    this.RaisePropertyChanged("lineOfOriginField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool lineOfOriginFieldSpecified {
+            get {
+                return this.lineOfOriginFieldSpecifiedField;
+            }
+            set {
+                if ((this.lineOfOriginFieldSpecifiedField.Equals(value) != true)) {
+                    this.lineOfOriginFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("lineOfOriginFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public long marpakMovNumField {
+            get {
+                return this.marpakMovNumFieldField;
+            }
+            set {
+                if ((this.marpakMovNumFieldField.Equals(value) != true)) {
+                    this.marpakMovNumFieldField = value;
+                    this.RaisePropertyChanged("marpakMovNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool marpakMovNumFieldSpecified {
+            get {
+                return this.marpakMovNumFieldSpecifiedField;
+            }
+            set {
+                if ((this.marpakMovNumFieldSpecifiedField.Equals(value) != true)) {
+                    this.marpakMovNumFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("marpakMovNumFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public long movementNumberField {
+            get {
+                return this.movementNumberFieldField;
+            }
+            set {
+                if ((this.movementNumberFieldField.Equals(value) != true)) {
+                    this.movementNumberFieldField = value;
+                    this.RaisePropertyChanged("movementNumberField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool movementNumberFieldSpecified {
+            get {
+                return this.movementNumberFieldSpecifiedField;
+            }
+            set {
+                if ((this.movementNumberFieldSpecifiedField.Equals(value) != true)) {
+                    this.movementNumberFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("movementNumberFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string palletNumField {
+            get {
+                return this.palletNumFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.palletNumFieldField, value) != true)) {
+                    this.palletNumFieldField = value;
+                    this.RaisePropertyChanged("palletNumField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int piecesForBoxField {
+            get {
+                return this.piecesForBoxFieldField;
+            }
+            set {
+                if ((this.piecesForBoxFieldField.Equals(value) != true)) {
+                    this.piecesForBoxFieldField = value;
+                    this.RaisePropertyChanged("piecesForBoxField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool piecesForBoxFieldSpecified {
+            get {
+                return this.piecesForBoxFieldSpecifiedField;
+            }
+            set {
+                if ((this.piecesForBoxFieldSpecifiedField.Equals(value) != true)) {
+                    this.piecesForBoxFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("piecesForBoxFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public long recordIdField {
+            get {
+                return this.recordIdFieldField;
+            }
+            set {
+                if ((this.recordIdFieldField.Equals(value) != true)) {
+                    this.recordIdFieldField = value;
+                    this.RaisePropertyChanged("recordIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool recordIdFieldSpecified {
+            get {
+                return this.recordIdFieldSpecifiedField;
+            }
+            set {
+                if ((this.recordIdFieldSpecifiedField.Equals(value) != true)) {
+                    this.recordIdFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("recordIdFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string shadeField {
+            get {
+                return this.shadeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shadeFieldField, value) != true)) {
+                    this.shadeFieldField = value;
+                    this.RaisePropertyChanged("shadeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime shiftDateField {
+            get {
+                return this.shiftDateFieldField;
+            }
+            set {
+                if ((this.shiftDateFieldField.Equals(value) != true)) {
+                    this.shiftDateFieldField = value;
+                    this.RaisePropertyChanged("shiftDateField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool shiftDateFieldSpecified {
+            get {
+                return this.shiftDateFieldSpecifiedField;
+            }
+            set {
+                if ((this.shiftDateFieldSpecifiedField.Equals(value) != true)) {
+                    this.shiftDateFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("shiftDateFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int shiftField {
+            get {
+                return this.shiftFieldField;
+            }
+            set {
+                if ((this.shiftFieldField.Equals(value) != true)) {
+                    this.shiftFieldField = value;
+                    this.RaisePropertyChanged("shiftField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool shiftFieldSpecified {
+            get {
+                return this.shiftFieldSpecifiedField;
+            }
+            set {
+                if ((this.shiftFieldSpecifiedField.Equals(value) != true)) {
+                    this.shiftFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("shiftFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string sizeField {
+            get {
+                return this.sizeFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sizeFieldField, value) != true)) {
+                    this.sizeFieldField = value;
+                    this.RaisePropertyChanged("sizeField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal surfaceMQBoxField {
+            get {
+                return this.surfaceMQBoxFieldField;
+            }
+            set {
+                if ((this.surfaceMQBoxFieldField.Equals(value) != true)) {
+                    this.surfaceMQBoxFieldField = value;
+                    this.RaisePropertyChanged("surfaceMQBoxField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool surfaceMQBoxFieldSpecified {
+            get {
+                return this.surfaceMQBoxFieldSpecifiedField;
+            }
+            set {
+                if ((this.surfaceMQBoxFieldSpecifiedField.Equals(value) != true)) {
+                    this.surfaceMQBoxFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("surfaceMQBoxFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime timeStampField {
+            get {
+                return this.timeStampFieldField;
+            }
+            set {
+                if ((this.timeStampFieldField.Equals(value) != true)) {
+                    this.timeStampFieldField = value;
+                    this.RaisePropertyChanged("timeStampField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool timeStampFieldSpecified {
+            get {
+                return this.timeStampFieldSpecifiedField;
+            }
+            set {
+                if ((this.timeStampFieldSpecifiedField.Equals(value) != true)) {
+                    this.timeStampFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("timeStampFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int totalPiecesOnPalletField {
+            get {
+                return this.totalPiecesOnPalletFieldField;
+            }
+            set {
+                if ((this.totalPiecesOnPalletFieldField.Equals(value) != true)) {
+                    this.totalPiecesOnPalletFieldField = value;
+                    this.RaisePropertyChanged("totalPiecesOnPalletField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool totalPiecesOnPalletFieldSpecified {
+            get {
+                return this.totalPiecesOnPalletFieldSpecifiedField;
+            }
+            set {
+                if ((this.totalPiecesOnPalletFieldSpecifiedField.Equals(value) != true)) {
+                    this.totalPiecesOnPalletFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("totalPiecesOnPalletFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public decimal totalSurfaceField {
+            get {
+                return this.totalSurfaceFieldField;
+            }
+            set {
+                if ((this.totalSurfaceFieldField.Equals(value) != true)) {
+                    this.totalSurfaceFieldField = value;
+                    this.RaisePropertyChanged("totalSurfaceField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool totalSurfaceFieldSpecified {
+            get {
+                return this.totalSurfaceFieldSpecifiedField;
+            }
+            set {
+                if ((this.totalSurfaceFieldSpecifiedField.Equals(value) != true)) {
+                    this.totalSurfaceFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("totalSurfaceFieldSpecified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string whLocationIdField {
+            get {
+                return this.whLocationIdFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.whLocationIdFieldField, value) != true)) {
+                    this.whLocationIdFieldField = value;
+                    this.RaisePropertyChanged("whLocationIdField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int whichMarpakField {
+            get {
+                return this.whichMarpakFieldField;
+            }
+            set {
+                if ((this.whichMarpakFieldField.Equals(value) != true)) {
+                    this.whichMarpakFieldField = value;
+                    this.RaisePropertyChanged("whichMarpakField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public bool whichMarpakFieldSpecified {
+            get {
+                return this.whichMarpakFieldSpecifiedField;
+            }
+            set {
+                if ((this.whichMarpakFieldSpecifiedField.Equals(value) != true)) {
+                    this.whichMarpakFieldSpecifiedField = value;
+                    this.RaisePropertyChanged("whichMarpakFieldSpecified");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PalletTransportBy", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    public enum PalletTransportBy : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        LGV = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Forklift = 1,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NoYes", Namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices")]
+    public enum NoYes : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        No = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Yes = 1,
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DMCheckService.IDMCheckService")]
@@ -19,10 +1477,10 @@ namespace TestWebservice.DMCheckService {
         string GetPing();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/GetPalletInfo", ReplyAction="http://tempuri.org/IDMCheckService/GetPalletInfoResponse")]
-        SyncServices.DataManagerServices.DMExportContract GetPalletInfo(string palletNum);
+        TestWebservice.DMCheckService.DMExportContract GetPalletInfo(string palletNum);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/GetPalletInfoByRecordId", ReplyAction="http://tempuri.org/IDMCheckService/GetPalletInfoByRecordIdResponse")]
-        SyncServices.DataManagerServices.DMExportContract GetPalletInfoByRecordId(long recordId);
+        TestWebservice.DMCheckService.DMExportContract GetPalletInfoByRecordId(long recordId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/ConfirmPalletReceive", ReplyAction="http://tempuri.org/IDMCheckService/ConfirmPalletReceiveResponse")]
         bool ConfirmPalletReceive(string palletNum, long recordId, string deviceName, string deviceUser, bool isFromSL);
@@ -34,25 +1492,25 @@ namespace TestWebservice.DMCheckService {
         bool CancelPalletReceive(string palletNum, long recordId, string deviceName, string deviceUser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive", ReplyAction="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceiveResponse")]
-        bool UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMExportContract pallet);
+        bool UpdateAndConfirmPalletReceive(TestWebservice.DMCheckService.DMExportContract pallet);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/PrintAgainPallet", ReplyAction="http://tempuri.org/IDMCheckService/PrintAgainPalletResponse")]
         bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/DMClearPrintAgain", ReplyAction="http://tempuri.org/IDMCheckService/DMClearPrintAgainResponse")]
-        SyncServices.DataManagerServices.DMExportMiniContract[] DMClearPrintAgain();
+        TestWebservice.DMCheckService.DMExportMiniContract[] DMClearPrintAgain();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/UpdateOfflinePallets", ReplyAction="http://tempuri.org/IDMCheckService/UpdateOfflinePalletsResponse")]
-        SyncServices.DataManagerServices.DMExportContract[] UpdateOfflinePallets(SyncServices.DataManagerServices.DMExportOfflineContract[] lines);
+        TestWebservice.DMCheckService.DMExportContract[] UpdateOfflinePallets(TestWebservice.DMCheckService.DMExportOfflineContract[] lines);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocation", ReplyAction="http://tempuri.org/IDMCheckService/TransferPalletsToNewLocationResponse")]
         SyncServices.LocationHistory[] TransferPalletsToNewLocation(SyncServices.LocationHistory[] lines);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/SummaryPallets", ReplyAction="http://tempuri.org/IDMCheckService/SummaryPalletsResponse")]
-        SyncServices.DataManagerServices.DMSummaryContract[] SummaryPallets(string itemId);
+        TestWebservice.DMCheckService.DMSummaryContract[] SummaryPallets(string itemId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/ItemGroupPallets", ReplyAction="http://tempuri.org/IDMCheckService/ItemGroupPalletsResponse")]
-        SyncServices.DataManagerServices.DMExportContract[] ItemGroupPallets(string itemId, string grade, string shade, string caliber);
+        TestWebservice.DMCheckService.DMExportContract[] ItemGroupPallets(string itemId, string grade, string shade, string caliber);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/CreateDowntimeForMarpak", ReplyAction="http://tempuri.org/IDMCheckService/CreateDowntimeForMarpakResponse")]
         bool CreateDowntimeForMarpak(int whichMarpak);
@@ -64,7 +1522,7 @@ namespace TestWebservice.DMCheckService {
         SyncServices.ItemForChart[] GetProductionByItemsForChart(System.DateTime date);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/GetWHLocations", ReplyAction="http://tempuri.org/IDMCheckService/GetWHLocationsResponse")]
-        SyncServices.DataManagerServices.WmsLocationContract[] GetWHLocations();
+        TestWebservice.DMCheckService.WmsLocationContract[] GetWHLocations();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/GetDuplicatePallets", ReplyAction="http://tempuri.org/IDMCheckService/GetDuplicatePalletsResponse")]
         SyncServices.DuplicatePallet[] GetDuplicatePallets();
@@ -107,11 +1565,11 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.GetPing();
         }
         
-        public SyncServices.DataManagerServices.DMExportContract GetPalletInfo(string palletNum) {
+        public TestWebservice.DMCheckService.DMExportContract GetPalletInfo(string palletNum) {
             return base.Channel.GetPalletInfo(palletNum);
         }
         
-        public SyncServices.DataManagerServices.DMExportContract GetPalletInfoByRecordId(long recordId) {
+        public TestWebservice.DMCheckService.DMExportContract GetPalletInfoByRecordId(long recordId) {
             return base.Channel.GetPalletInfoByRecordId(recordId);
         }
         
@@ -127,7 +1585,7 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.CancelPalletReceive(palletNum, recordId, deviceName, deviceUser);
         }
         
-        public bool UpdateAndConfirmPalletReceive(SyncServices.DataManagerServices.DMExportContract pallet) {
+        public bool UpdateAndConfirmPalletReceive(TestWebservice.DMCheckService.DMExportContract pallet) {
             return base.Channel.UpdateAndConfirmPalletReceive(pallet);
         }
         
@@ -135,11 +1593,11 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.PrintAgainPallet(palletNum, recordId, deviceName, deviceUser);
         }
         
-        public SyncServices.DataManagerServices.DMExportMiniContract[] DMClearPrintAgain() {
+        public TestWebservice.DMCheckService.DMExportMiniContract[] DMClearPrintAgain() {
             return base.Channel.DMClearPrintAgain();
         }
         
-        public SyncServices.DataManagerServices.DMExportContract[] UpdateOfflinePallets(SyncServices.DataManagerServices.DMExportOfflineContract[] lines) {
+        public TestWebservice.DMCheckService.DMExportContract[] UpdateOfflinePallets(TestWebservice.DMCheckService.DMExportOfflineContract[] lines) {
             return base.Channel.UpdateOfflinePallets(lines);
         }
         
@@ -147,11 +1605,11 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.TransferPalletsToNewLocation(lines);
         }
         
-        public SyncServices.DataManagerServices.DMSummaryContract[] SummaryPallets(string itemId) {
+        public TestWebservice.DMCheckService.DMSummaryContract[] SummaryPallets(string itemId) {
             return base.Channel.SummaryPallets(itemId);
         }
         
-        public SyncServices.DataManagerServices.DMExportContract[] ItemGroupPallets(string itemId, string grade, string shade, string caliber) {
+        public TestWebservice.DMCheckService.DMExportContract[] ItemGroupPallets(string itemId, string grade, string shade, string caliber) {
             return base.Channel.ItemGroupPallets(itemId, grade, shade, caliber);
         }
         
@@ -167,7 +1625,7 @@ namespace TestWebservice.DMCheckService {
             return base.Channel.GetProductionByItemsForChart(date);
         }
         
-        public SyncServices.DataManagerServices.WmsLocationContract[] GetWHLocations() {
+        public TestWebservice.DMCheckService.WmsLocationContract[] GetWHLocations() {
             return base.Channel.GetWHLocations();
         }
         

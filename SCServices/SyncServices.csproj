@@ -177,6 +177,7 @@
     <Compile Include="SCSyncService.svc.cs">
       <DependentUpon>SCSyncService.svc</DependentUpon>
     </Compile>
+    <Compile Include="SOService.cs" />
     <Compile Include="UserMgtService.svc.cs">
       <DependentUpon>UserMgtService.svc</DependentUpon>
     </Compile>

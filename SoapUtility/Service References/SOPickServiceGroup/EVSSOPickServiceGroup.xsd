@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EVSSOPickServiceGroup?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
   <xs:complexType name="XppObjectBase">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" base="q1:ProxyBase">
@@ -16,12 +16,4 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="NoYes" nillable="true" type="tns:NoYes" />
-  <xs:complexType name="List">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="List" nillable="true" type="tns:List" />
 </xs:schema>

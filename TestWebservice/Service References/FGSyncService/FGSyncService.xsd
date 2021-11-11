@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
-  <xs:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" />
+  <xs:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
   <xs:element name="ResetData">
     <xs:complexType>
       <xs:sequence />
@@ -24,7 +24,7 @@
   <xs:element name="GetFGYearInventoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" minOccurs="0" name="GetFGYearInventoryResult" nillable="true" type="q2:ArrayOfInventAvailContract" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="GetFGYearInventoryResult" nillable="true" type="q2:ArrayOfInventAvailContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

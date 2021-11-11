@@ -15,7 +15,7 @@ namespace SyncServices
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SalesService" in code, svc and config file together.
     public class SalesService : ISalesService
     {
-        public const string D365ServiceName = "SOPickServiceGroup";
+        public const string D365ServiceName = "EVSSOPickServiceGroup";
         IClientChannel channel;
         string oauthHeader = string.Empty;
         CallContext context = null;
@@ -31,7 +31,7 @@ namespace SyncServices
             var endpointAddress = new EndpointAddress(serviceUriString);
             var binding = SoapUtility.SoapHelper.GetBinding();
 
-            var client = new SOPickServiceClient(binding, endpointAddress);
+            var client = new EVSSOPickServiceClient(binding, endpointAddress);
             channel = client.InnerChannel;
 
             context = new CallContext()
@@ -44,7 +44,7 @@ namespace SyncServices
 
         public SalesTable FindSalesOrder(string salesId)
         {
-            SalesTableContract contract = null;
+            EVSSalesTableContract contract = null;
 
             using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
@@ -52,27 +52,27 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                contract = ((SOPickService)channel).findSalesOrder(new findSalesOrder(context,salesId)).result;
+                contract = ((EVSSOPickService)channel).findSalesOrder(new findSalesOrder(context,salesId)).result;
             }
                          
             
             SalesTable salesTable = new SalesTable()
             {
-                SalesId = contract.salesId,
-                SalesName = contract.salesName,
-                DeliveryDate = contract.__k_parmDeliveryDate,
-                DeliveryMode = contract.__k_parmDlvMode,
-                DeliveryName = contract.deliveryName,
-                HalfPallet = contract.halfPallet == NoYes.No ? false : true,
-                PickSameDimension = contract.sameConfig == NoYes.No ? false : true,
-                StartLoading = contract.__k_parmStartLoad,
-                StopLoading = contract.__k_parmStopLoad
+                SalesId = contract.SalesId,
+                SalesName = contract.SalesName,
+                DeliveryDate = contract.DeliveryDate,
+                DeliveryMode = contract.DeliveryMode,
+                DeliveryName = contract.DeliveryName,
+                HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
+                PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
+                StartLoading = contract.StartLoad,
+                StopLoading = contract.StopLoad
             };
             
             salesTable.Lines = new List<SalesLine>();
-            if (contract.salesLine != null)
+            if (contract.SalesLines != null)
             {
-                foreach (SalesLineContract axdline in contract.salesLine)
+                foreach (EVSSalesLineContract axdline in contract.SalesLines)
                 {
                     salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
                 }
@@ -82,7 +82,7 @@ namespace SyncServices
 
         public SalesTable FindPickingList(string pickingId, string userName, string device)
         {
-            SalesTableContract contract = null;
+            EVSSalesTableContract contract = null;
             using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
                 HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
@@ -91,7 +91,7 @@ namespace SyncServices
 
                 try
                 {
-                    contract = ((SOPickService)channel).findPickingList(new findPickingList(context, pickingId)).result;
+                    contract = ((EVSSOPickService)channel).findPickingList(new findPickingList(context, pickingId)).result;
                 }
                 catch (System.ServiceModel.FaultException aifExp)
                 {
@@ -134,7 +134,7 @@ namespace SyncServices
                         Remarks = "Searching Picking List for: " + pickingId,
                         PalletNo = string.Empty
                     };
-                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                    ((EVSSOPickService)channel).SaveHistory(new SaveHistory(context, history));
                     
                 }
             }
@@ -145,7 +145,7 @@ namespace SyncServices
                 SalesId = contract.SalesId,
                 SalesName = contract.SalesName,
                 PickingId = contract.PickingId,
-                PackingSlip = contract.__k_parmPackingSlip,
+                PackingSlip = contract.PackingSlip,
                 DriverName = contract.DriverName,
                 TruckPlate = contract.TruckPlate,
                 TruckTicketNum = contract.TruckTicket,
@@ -155,14 +155,14 @@ namespace SyncServices
                 DeliveryName = contract.DeliveryName,
                 HalfPallet = contract.HalfPallet == NoYes.No ? false : true,
                 PickSameDimension = contract.SameConfiguration == NoYes.No ? false : true,
-                StartLoading = contract.__k_parmStartLoad,
+                StartLoading = contract.StartLoad,
                 StopLoading=contract.StopLoad
             };
 
             salesTable.Lines = new List<SalesLine>();
-            if (contract.__k_parmSalesLines.Count() > 0)                
+            if (contract.SalesLines.Count() > 0)                
             {
-                foreach (SalesLineContract axdline in contract.salesLine)
+                foreach (EVSSalesLineContract axdline in contract.SalesLines)
                 {
                     salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
                 }
@@ -171,71 +171,79 @@ namespace SyncServices
             return salesTable;
         }
 
+        //public List<SalesLine> ValidatePallets(string salesId, string itemId, string configId, string pickingId,
+        //        List<string> pallets, string userName, string device, long lineRecId)
+        //{
+        //    List<SalesLine> returnValue = new List<SalesLine>();
+        //    EVSSalesLineContract[] result = null;
+
+
+        //    try
+        //    {
+        //        List<EVSSalesLineContract> rows = new List<EVSSalesLineContract>();
+        //        foreach (string pallet in pallets)
+        //        {
+        //            EVSSalesLineContract row = new EVSSalesLineContract() { Serial = pallet };
+        //            rows.Add(row);
+        //        }
+        //        using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+        //        {
+        //            HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+        //            requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+        //            OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+        //            result = ((EVSSOPickService)channel).PalletsReserving(new PalletsReserving(context, configId, device, itemId, lineRecId, rows.ToArray(), pickingId, salesId, userName)).result;
+        //        }
+
+
+
+        //        if (result != null && result.Length > 0)
+        //            returnValue = new SalesLine().ToListConvert(result.ToList());
+        //    }
+        //    catch (System.ServiceModel.FaultException aifExp)
+        //    {
+        //        string allMsgs = string.Empty;
+        //        //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+        //        //foreach (InfologMessage msg in msgs)
+        //        //{
+        //        //    allMsgs += msg.Message + Environment.NewLine;
+        //        //}
+        //        allMsgs = aifExp.Message;
+        //        if (!string.IsNullOrEmpty(allMsgs))
+        //        {
+        //            string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
+        //            new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
+
+        //            throw new Exception(allMsgs);
+        //        }
+        //    }
+        //    catch (Exception exp)
+        //    {
+        //        try
+        //        {
+        //            string allParameters = "SalesId: "+salesId+", ItemId:"+itemId+", PickingId:"+pickingId+", Pallets:["+string.Join(";",pallets)+"], Username:"+ userName+", Device:"+device;
+        //            new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
+        //        }
+        //        catch { }
+        //        throw exp;
+        //    }
+
+        //    return returnValue;
+        //}
+
+
         public List<SalesLine> ValidatePallets(string salesId, string itemId, string configId, string pickingId,
                 List<string> pallets, string userName, string device, long lineRecId)
         {
-            List<SalesLine> returnValue = new List<SalesLine>();
-            SalesLineContract[] result = null;
-
-
-            try
-            {
-                List<SalesLineContract> rows = new List<SalesLineContract>();
-                foreach (string pallet in pallets)
-                {
-                    SalesLineContract row = new SalesLineContract() { Serial = pallet };
-                    rows.Add(row);
-                }
-                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
-                {
-                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
-                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
-                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
-
-                    result = ((SOPickService)channel).PalletsReserving(new PalletsReserving(context, configId, device, itemId, lineRecId, rows.ToArray(), pickingId, salesId, userName)).result;
-                }
-                
-               
-
-                if (result != null && result.Length > 0)
-                    returnValue = new SalesLine().ToListConvert(result.ToList());
-            }
-            catch (System.ServiceModel.FaultException aifExp)
-            {
-                string allMsgs = string.Empty;
-                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
-                //foreach (InfologMessage msg in msgs)
-                //{
-                //    allMsgs += msg.Message + Environment.NewLine;
-                //}
-                allMsgs = aifExp.Message;
-                if (!string.IsNullOrEmpty(allMsgs))
-                {
-                    string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
-                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
-
-                    throw new Exception(allMsgs);
-                }
-            }
-            catch (Exception exp)
-            {
-                try
-                {
-                    string allParameters = "SalesId: "+salesId+", ItemId:"+itemId+", PickingId:"+pickingId+", Pallets:["+string.Join(";",pallets)+"], Username:"+ userName+", Device:"+device;
-                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
-                }
-                catch { }
-                throw exp;
-            }
-
-            return returnValue;
+            return new SOService().PalletsReserve(salesId, itemId, configId, pickingId, pallets, userName, device, lineRecId);
         }
+
 
         public SalesLine CheckPalletAvailable(string salesId, string itemId, string configId, string pickingId, 
             string pallet, string userName, string device, DateTime dtSave, long lineRecId)
         {
             //SalesLine returnResult = new SalesLine();
-            SalesLineContract result = null;
+            EVSSalesLineContract result = null;
             
             try
             {
@@ -245,7 +253,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    result = ((SOPickService)channel).CheckPalletAvailable(new CheckPalletAvailable(context, configId, itemId, lineRecId, pickingId, salesId, pallet)).result;
+                    result = ((EVSSOPickService)channel).CheckPalletAvailable(new CheckPalletAvailable(context, configId, itemId, lineRecId, pickingId, salesId, pallet)).result;
                 }
                 
             }
@@ -296,7 +304,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                    ((EVSSOPickService)channel).SaveHistory(new SaveHistory(context, history));
                 }
                 
             }
@@ -308,7 +316,7 @@ namespace SyncServices
         public List<SalesLine> CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, List<PalletItemContract> pallets,
             string userName, string device, long lineRecId)
         {
-            SalesLineContract[] items=null;
+            EVSSalesLineContract[] items=null;
             List<SalesLine> returnValue = new List<SalesLine>();
             //CustomersDeliveryByQtyClient client = new CustomersDeliveryByQtyClient();
             
@@ -321,7 +329,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    items = ((SOPickService)channel).CheckPalletAvailableMulti(new CheckPalletAvailableMulti(context, configId, device, itemId, lineRecId, pickingId, salesId, pallets.ToArray(), userName)).result;
+                    items = ((EVSSOPickService)channel).CheckPalletAvailableMulti(new CheckPalletAvailableMulti(context, configId, device, itemId, lineRecId, pickingId, salesId, pallets.ToArray(), userName)).result;
                 }
                
                //string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Username:" + userName + ", Device:" + device;
@@ -373,7 +381,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                contractResult = ((SOPickService)channel).SalesDeliveryNote(new SalesDeliveryNote(context, _salesId)).result;
+                contractResult = ((EVSSOPickService)channel).SalesDeliveryNote(new SalesDeliveryNote(context, _salesId)).result;
             }
 
             return contractResult;
@@ -391,7 +399,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    result = ((SOPickService)channel).UnreservePallet(new UnreservePallet(context, pallet)).result;
+                    result = ((EVSSOPickService)channel).UnreservePallet(new UnreservePallet(context, pallet)).result;
                 }                
             }
             catch (Exception exp)
@@ -424,7 +432,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                    ((EVSSOPickService)channel).SaveHistory(new SaveHistory(context, history));
                 }
             }
             if (result)
@@ -442,7 +450,7 @@ namespace SyncServices
         public List<SalesLine> GetLatestPallets(string pickingId, string itemId)
         {
             List<SalesLine> returnValue=new List<SalesLine>();
-            SalesLineContract[] items = null;
+            EVSSalesLineContract[] items = null;
             try
             {
                 using (OperationContextScope operationContextScope = new OperationContextScope(channel))
@@ -451,7 +459,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    items =((SOPickService)channel).GetLatestPallets(new GetLatestPallets(context, itemId, pickingId)).result;
+                    items =((EVSSOPickService)channel).GetLatestPallets(new GetLatestPallets(context, itemId, pickingId)).result;
                 }
                 
                 if (items.Count() > 0)
@@ -479,7 +487,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                 ((SOPickService)channel).SavePickingLoad(new SavePickingLoad(context, pickingId, startLoad, stopLoad));
+                 ((EVSSOPickService)channel).SavePickingLoad(new SavePickingLoad(context, pickingId, startLoad, stopLoad));
             }
 
             
@@ -494,7 +502,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                result = ((SOPickService)channel).CustomersDeliveryByQty(new CustomersDeliveryByQty(context, endDate, startDate)).result;
+                result = ((EVSSOPickService)channel).CustomersDeliveryByQty(new CustomersDeliveryByQty(context, endDate, startDate)).result;
             }
 
             return result;
@@ -512,7 +520,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                result = ((SOPickService)channel).CustomersDeliveryByTrucks(new CustomersDeliveryByTrucks(context, endDate, startDate)).result;
+                result = ((EVSSOPickService)channel).CustomersDeliveryByTrucks(new CustomersDeliveryByTrucks(context, endDate, startDate)).result;
             }
 
             return result;
@@ -521,7 +529,7 @@ namespace SyncServices
         public SalesTable ReceivePickingList(string userName, string device)
         {
             string pickingId=string.Empty;
-            SalesTableContract contract = null;
+            EVSSalesTableContract contract = null;
             
 
             try
@@ -532,7 +540,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    contract =((SOPickService)channel).ReceivePickingList(new ReceivePickingList(context, device, userName)).result;
+                    contract =((EVSSOPickService)channel).ReceivePickingList(new ReceivePickingList(context, device, userName)).result;
                 }
                 
                 if (contract != null && contract.SalesLines != null && contract.SalesLines.Count() > 0)
@@ -587,7 +595,7 @@ namespace SyncServices
                     requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                     OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                    ((SOPickService)channel).SaveHistory(new SaveHistory(context, history));
+                    ((EVSSOPickService)channel).SaveHistory(new SaveHistory(context, history));
                 }
             }
             SalesTable salesTable = new SalesTable()
@@ -612,7 +620,7 @@ namespace SyncServices
             salesTable.Lines = new List<SalesLine>();
             if (contract.SalesLines.Count() > 0)
             {
-                foreach (SalesLineContract axdline in contract.SalesLines)
+                foreach (EVSSalesLineContract axdline in contract.SalesLines)
                 {
                     salesTable.Lines.Add(new SalesLine().ToConvert(axdline));
                 }
@@ -629,7 +637,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                ((SOPickService)channel).LoginDevice(new LoginDevice(context, deviceIp, device, projectName, userName));
+                ((EVSSOPickService)channel).LoginDevice(new LoginDevice(context, deviceIp, device, projectName, userName));
             }
                         
         }
@@ -643,7 +651,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                result = ((SOPickService)channel).GetFGLines(new GetFGLines(context)).result;
+                result = ((EVSSOPickService)channel).GetFGLines(new GetFGLines(context)).result;
             }
 
             return result;
@@ -658,7 +666,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                result = ((SOPickService)channel).GetDeliveries(new GetDeliveries(context, dateSearch)).result;
+                result = ((EVSSOPickService)channel).GetDeliveries(new GetDeliveries(context, dateSearch)).result;
             }
 
             return result;
@@ -679,7 +687,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                result = ((SOPickService)channel).ChangeTruckLoadingLine(new ChangeTruckLoadingLine(context, loadingLineNum, pickingId)).result;
+                result = ((EVSSOPickService)channel).ChangeTruckLoadingLine(new ChangeTruckLoadingLine(context, loadingLineNum, pickingId)).result;
             }
 
             return result;

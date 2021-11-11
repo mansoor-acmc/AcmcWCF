@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="UnderstockItemsInfoNewService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="UnderstockItemsInfoNewService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="UnderstockItemsInfoNewService/Imports">
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd7" namespace="UnderstockItemsInfoNewService" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd2" namespace="SOReserve" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateItems">
+    <wsdl:part name="parameters" element="tns:CreateItems" />
+  </wsdl:message>
+  <wsdl:message name="CreateItems_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreateItemsResponse">
+    <wsdl:part name="parameters" element="tns:CreateItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateItemsResponse_Headers">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q2:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="UnderstockItemsInfoNewService_CreateItems_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q3:Fault" />
+  </wsdl:message>
+  <wsdl:message name="deleteOld">
+    <wsdl:part name="parameters" element="tns:deleteOld" />
+  </wsdl:message>
+  <wsdl:message name="deleteOld_Headers">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q4:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="deleteOldResponse">
+    <wsdl:part name="parameters" element="tns:deleteOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteOldResponse_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q5:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="UnderstockItemsInfoNewService_deleteOld_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q6:Fault" />
+  </wsdl:message>
+  <wsdl:portType name="UnderstockItemsInfoNewService">
+    <wsdl:operation name="CreateItems">
+      <wsdl:input wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/CreateItems" name="CreateItems" message="tns:CreateItems" />
+      <wsdl:output wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/CreateItemsResponse" name="CreateItemsResponse" message="tns:CreateItemsResponse" />
+      <wsdl:fault wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/Fault" name="SoapServiceFaultFault" message="tns:UnderstockItemsInfoNewService_CreateItems_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOld">
+      <wsdl:input wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/deleteOld" name="deleteOld" message="tns:deleteOld" />
+      <wsdl:output wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/deleteOldResponse" name="deleteOldResponse" message="tns:deleteOldResponse" />
+      <wsdl:fault wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/Fault" name="SoapServiceFaultFault" message="tns:UnderstockItemsInfoNewService_deleteOld_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

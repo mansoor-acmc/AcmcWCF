@@ -35,10 +35,12 @@ namespace TestWebservice
             foreach(SalesLine line in salesLines)
             {
                 str += line.SerialNumber + "=" + line.Remarks;
-            }*/
+            }
+            var soPick = new SalesService.SalesServiceClient();
+            var salesTable = soPick.FindSalesOrder("21SO-01820");
+            Console.WriteLine(salesTable.PickingId);
+*/
 
-
-            
             ProdRequestService.ProdRequestServiceClient prodService = new ProdRequestService.ProdRequestServiceClient();
             //ProdRequestService prodRequestService = new SyncServices.ProdRequestService();
             var allLines = prodService.GetAllProductionLines();

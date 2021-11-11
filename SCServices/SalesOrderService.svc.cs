@@ -18,7 +18,7 @@ namespace SyncServices
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class SalesOrderService : ISalesOrderService
     {
-        public const string D365ServiceName = "SOPickServiceGroup";
+        public const string D365ServiceName = "EVSSOPickServiceGroup";
         IClientChannel channel;
         string oauthHeader = string.Empty;
         CallContext context = null;
@@ -34,7 +34,7 @@ namespace SyncServices
             var endpointAddress = new EndpointAddress(serviceUriString);
             var binding = SoapUtility.SoapHelper.GetBinding();
 
-            var client = new SOPickServiceClient(binding, endpointAddress);
+            var client = new EVSSOPickServiceClient(binding, endpointAddress);
             channel = client.InnerChannel;
 
             context = new CallContext()
@@ -44,9 +44,9 @@ namespace SyncServices
             };
         }
 
-        public SalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId)
+        public EVSSalesTableContract[] GetSalesOrders(string dateFrom, string dateTo, string customerId)
         {
-            SalesTableContract[] allContract = null;
+            EVSSalesTableContract[] allContract = null;
 
             using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
@@ -54,23 +54,23 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                allContract = ((SOPickService)channel).findSalesOrdersList(new findSalesOrdersList(context, customerId, Convert.ToDateTime(dateTo), Convert.ToDateTime(dateFrom))).result;
+                allContract = ((EVSSOPickService)channel).findSalesOrdersList(new findSalesOrdersList(context, customerId, Convert.ToDateTime(dateTo), Convert.ToDateTime(dateFrom))).result;
             }
                          
 
             return allContract;
         }
 
-        public SalesTableContract FindSalesOrder(string salesId)
+        public EVSSalesTableContract FindSalesOrder(string salesId)
         {
-            SalesTableContract contract = null;
+            EVSSalesTableContract contract = null;
             using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
                 HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                contract = ((SOPickService)channel).findSalesOrder(new findSalesOrder(context, salesId)).result;
+                contract = ((EVSSOPickService)channel).findSalesOrder(new findSalesOrder(context, salesId)).result;
             }
                         
             return contract;
@@ -85,7 +85,7 @@ namespace SyncServices
                 requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                contract = ((SOPickService)channel).GetCustomerDeliveries(new GetCustomerDeliveries(context, customerId, Convert.ToDateTime(dateSearch))).result;
+                contract = ((EVSSOPickService)channel).GetCustomerDeliveries(new GetCustomerDeliveries(context, customerId, Convert.ToDateTime(dateSearch))).result;
             }
 
             return contract;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="eUjBpo5qYgooqhZJFGvvk/APC3se023NiAAIWlytAvw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="DZMQMp9OWxIjmPQI2P1AHWSISY9SjQkmpVW7YGqBaFM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ISalesOrderService1">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ISalesOrderService1" contract="SalesOrderService.ISalesOrderService" bindingType="basicHttpBinding" address="http://localhost:58380/SalesOrderService.svc" bindingConfiguration="BasicHttpBinding_ISalesOrderService1">
+    <endpoint name="BasicHttpBinding_ISalesOrderService" contract="SalesOrderService.ISalesOrderService" bindingType="basicHttpBinding" address="http://localhost:58380/SalesOrderService.svc" bindingConfiguration="BasicHttpBinding_ISalesOrderService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:58380/SalesOrderService.svc</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_ISalesOrderService1</serializedValue>
+          <serializedValue>BasicHttpBinding_ISalesOrderService</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

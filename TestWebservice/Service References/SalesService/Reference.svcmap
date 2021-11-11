@@ -22,6 +22,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="SalesService.xsd" MetadataType="Schema" ID="05ff747f-5a82-49a2-b8c0-1fe9009b3c8e" SourceId="1" SourceUrl="http://localhost:58380/SalesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SalesService7.xsd" MetadataType="Schema" ID="1bb7cca9-b130-43b6-a9cf-e188ec3cc26b" SourceId="1" SourceUrl="http://localhost:58380/SalesService.svc?xsd=xsd7" />
     <MetadataFile FileName="SalesService1.xsd" MetadataType="Schema" ID="6e95361e-5feb-4f62-ae01-2c677d0f4f1d" SourceId="1" SourceUrl="http://localhost:58380/SalesService.svc?xsd=xsd0" />
     <MetadataFile FileName="SalesService2.xsd" MetadataType="Schema" ID="be1d2c86-0c58-4ce5-9922-8cf7e0692e57" SourceId="1" SourceUrl="http://localhost:58380/SalesService.svc?xsd=xsd2" />
     <MetadataFile FileName="SalesService3.xsd" MetadataType="Schema" ID="d185a11d-6ca5-41e8-96dd-17c1d0d84e5a" SourceId="1" SourceUrl="http://localhost:58380/SalesService.svc?xsd=xsd5" />

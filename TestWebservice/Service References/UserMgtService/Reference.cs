@@ -8,3 +8,574 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+namespace TestWebservice.UserMgtService {
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AttendanceContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class AttendanceContract : TestWebservice.UserMgtService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AbsenceTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.UserMgtService.NoYes ApprovedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmployeeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmployeeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GatePassField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MachineNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaidTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProfileField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ProfileDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RegularMinsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WorkEndTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WorkStartTimeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AbsenceTime {
+            get {
+                return this.AbsenceTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AbsenceTimeField, value) != true)) {
+                    this.AbsenceTimeField = value;
+                    this.RaisePropertyChanged("AbsenceTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.UserMgtService.NoYes Approved {
+            get {
+                return this.ApprovedField;
+            }
+            set {
+                if ((this.ApprovedField.Equals(value) != true)) {
+                    this.ApprovedField = value;
+                    this.RaisePropertyChanged("Approved");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EmployeeId {
+            get {
+                return this.EmployeeIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeeIdField, value) != true)) {
+                    this.EmployeeIdField = value;
+                    this.RaisePropertyChanged("EmployeeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EmployeeName {
+            get {
+                return this.EmployeeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeeNameField, value) != true)) {
+                    this.EmployeeNameField = value;
+                    this.RaisePropertyChanged("EmployeeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GatePass {
+            get {
+                return this.GatePassField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GatePassField, value) != true)) {
+                    this.GatePassField = value;
+                    this.RaisePropertyChanged("GatePass");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MachineName {
+            get {
+                return this.MachineNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MachineNameField, value) != true)) {
+                    this.MachineNameField = value;
+                    this.RaisePropertyChanged("MachineName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PaidTime {
+            get {
+                return this.PaidTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaidTimeField, value) != true)) {
+                    this.PaidTimeField = value;
+                    this.RaisePropertyChanged("PaidTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Profile {
+            get {
+                return this.ProfileField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProfileField, value) != true)) {
+                    this.ProfileField = value;
+                    this.RaisePropertyChanged("Profile");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ProfileDate {
+            get {
+                return this.ProfileDateField;
+            }
+            set {
+                if ((this.ProfileDateField.Equals(value) != true)) {
+                    this.ProfileDateField = value;
+                    this.RaisePropertyChanged("ProfileDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RegularMins {
+            get {
+                return this.RegularMinsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RegularMinsField, value) != true)) {
+                    this.RegularMinsField = value;
+                    this.RaisePropertyChanged("RegularMins");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WorkEndTime {
+            get {
+                return this.WorkEndTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkEndTimeField, value) != true)) {
+                    this.WorkEndTimeField = value;
+                    this.RaisePropertyChanged("WorkEndTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WorkStartTime {
+            get {
+                return this.WorkStartTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkStartTimeField, value) != true)) {
+                    this.WorkStartTimeField = value;
+                    this.RaisePropertyChanged("WorkStartTime");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.MobileUserLogin))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.UserInfoContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.AttendanceContract))]
+    public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.MobileUserLogin))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.UserInfoContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.UserMgtService.AttendanceContract))]
+    public partial class XppObjectBase : TestWebservice.UserMgtService.ProxyBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MobileUserLogin", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class MobileUserLogin : TestWebservice.UserMgtService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProjectNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserLoginNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserRoleTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProjectName {
+            get {
+                return this.ProjectNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProjectNameField, value) != true)) {
+                    this.ProjectNameField = value;
+                    this.RaisePropertyChanged("ProjectName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserLoginName {
+            get {
+                return this.UserLoginNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLoginNameField, value) != true)) {
+                    this.UserLoginNameField = value;
+                    this.RaisePropertyChanged("UserLoginName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPassword {
+            get {
+                return this.UserPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPasswordField, value) != true)) {
+                    this.UserPasswordField = value;
+                    this.RaisePropertyChanged("UserPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserRoleType {
+            get {
+                return this.UserRoleTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserRoleTypeField, value) != true)) {
+                    this.UserRoleTypeField = value;
+                    this.RaisePropertyChanged("UserRoleType");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserInfoContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class UserInfoContract : TestWebservice.UserMgtService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmployeeNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorLogField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NetworkAliasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NetworkDomainField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserFullNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long WorkerIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Company {
+            get {
+                return this.CompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
+                    this.CompanyField = value;
+                    this.RaisePropertyChanged("Company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EmployeeNum {
+            get {
+                return this.EmployeeNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeeNumField, value) != true)) {
+                    this.EmployeeNumField = value;
+                    this.RaisePropertyChanged("EmployeeNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorLog {
+            get {
+                return this.ErrorLogField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorLogField, value) != true)) {
+                    this.ErrorLogField = value;
+                    this.RaisePropertyChanged("ErrorLog");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NetworkAlias {
+            get {
+                return this.NetworkAliasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NetworkAliasField, value) != true)) {
+                    this.NetworkAliasField = value;
+                    this.RaisePropertyChanged("NetworkAlias");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NetworkDomain {
+            get {
+                return this.NetworkDomainField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NetworkDomainField, value) != true)) {
+                    this.NetworkDomainField = value;
+                    this.RaisePropertyChanged("NetworkDomain");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserFullName {
+            get {
+                return this.UserFullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserFullNameField, value) != true)) {
+                    this.UserFullNameField = value;
+                    this.RaisePropertyChanged("UserFullName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserIdField, value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPassword {
+            get {
+                return this.UserPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPasswordField, value) != true)) {
+                    this.UserPasswordField = value;
+                    this.RaisePropertyChanged("UserPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long WorkerId {
+            get {
+                return this.WorkerIdField;
+            }
+            set {
+                if ((this.WorkerIdField.Equals(value) != true)) {
+                    this.WorkerIdField = value;
+                    this.RaisePropertyChanged("WorkerId");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NoYes", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    public enum NoYes : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        No = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Yes = 1,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserMgtService.IUserMgtService")]
+    public interface IUserMgtService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/LoginUser", ReplyAction="http://tempuri.org/IUserMgtService/LoginUserResponse")]
+        SyncServices.UserInfo LoginUser(string userId, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/GetUserInfo", ReplyAction="http://tempuri.org/IUserMgtService/GetUserInfoResponse")]
+        SyncServices.UserInfo GetUserInfo(string userId, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/GetAttendances", ReplyAction="http://tempuri.org/IUserMgtService/GetAttendancesResponse")]
+        TestWebservice.UserMgtService.AttendanceContract[] GetAttendances(string userId, string password, System.DateTime profileDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/DownloadFile", ReplyAction="http://tempuri.org/IUserMgtService/DownloadFileResponse")]
+        byte[] DownloadFile(ref string fileName, string filePath);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/GetUserData", ReplyAction="http://tempuri.org/IUserMgtService/GetUserDataResponse")]
+        SyncServices.UserData[] GetUserData(string projectName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserMgtService/GetPing", ReplyAction="http://tempuri.org/IUserMgtService/GetPingResponse")]
+        string GetPing();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IUserMgtServiceChannel : TestWebservice.UserMgtService.IUserMgtService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class UserMgtServiceClient : System.ServiceModel.ClientBase<TestWebservice.UserMgtService.IUserMgtService>, TestWebservice.UserMgtService.IUserMgtService {
+        
+        public UserMgtServiceClient() {
+        }
+        
+        public UserMgtServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public UserMgtServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public UserMgtServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public UserMgtServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public SyncServices.UserInfo LoginUser(string userId, string password) {
+            return base.Channel.LoginUser(userId, password);
+        }
+        
+        public SyncServices.UserInfo GetUserInfo(string userId, string password) {
+            return base.Channel.GetUserInfo(userId, password);
+        }
+        
+        public TestWebservice.UserMgtService.AttendanceContract[] GetAttendances(string userId, string password, System.DateTime profileDate) {
+            return base.Channel.GetAttendances(userId, password, profileDate);
+        }
+        
+        public byte[] DownloadFile(ref string fileName, string filePath) {
+            return base.Channel.DownloadFile(ref fileName, filePath);
+        }
+        
+        public SyncServices.UserData[] GetUserData(string projectName) {
+            return base.Channel.GetUserData(projectName);
+        }
+        
+        public string GetPing() {
+            return base.Channel.GetPing();
+        }
+    }
+}

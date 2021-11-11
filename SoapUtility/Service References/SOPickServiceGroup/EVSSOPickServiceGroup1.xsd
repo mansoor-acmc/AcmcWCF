@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="SOPickService" elementFormDefault="qualified" targetNamespace="SOPickService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+<xs:schema xmlns:tns="EVSSOPickService" elementFormDefault="qualified" targetNamespace="EVSSOPickService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EVSSOPickServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
   <xs:element name="ChangeTruckLoadingLine">
     <xs:complexType>
       <xs:sequence>
@@ -31,7 +31,7 @@
   <xs:element name="CheckPalletAvailableResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q1:SalesLineContract" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q1:EVSSalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -52,7 +52,7 @@
   <xs:element name="CheckPalletAvailableMultiResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q3:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q3:ArrayOfEVSSalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -96,7 +96,7 @@
   <xs:element name="findPickingListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q6:SalesTableContract" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q6:EVSSalesTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -110,7 +110,7 @@
   <xs:element name="findSalesOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q7:SalesTableContract" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q7:EVSSalesTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -126,7 +126,7 @@
   <xs:element name="findSalesOrdersListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q8:ArrayOfSalesTableContract" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q8:ArrayOfEVSSalesTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -241,7 +241,7 @@
   <xs:element name="GetLatestPalletsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q17:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q17:ArrayOfEVSSalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -314,7 +314,7 @@
   <xs:element name="ReceivePickingListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q21:SalesTableContract" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q21:EVSSalesTableContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -325,7 +325,7 @@
         <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="pallets" nillable="true" type="q22:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="pallets" nillable="true" type="q22:ArrayOfEVSSalesLineContract" />
         <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
@@ -335,7 +335,7 @@
   <xs:element name="ReservePalletsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q23:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q23:ArrayOfEVSSalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -400,7 +400,7 @@
         <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="pallets" nillable="true" type="q25:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="pallets" nillable="true" type="q25:ArrayOfEVSSalesLineContract" />
         <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
@@ -410,7 +410,7 @@
   <xs:element name="PalletsReservingResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q26:ArrayOfSalesLineContract" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q26:ArrayOfEVSSalesLineContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

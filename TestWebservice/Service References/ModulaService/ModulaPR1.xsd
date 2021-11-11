@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
-  <xs:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" />
+  <xs:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
   <xs:element name="GetItem">
     <xs:complexType>
       <xs:sequence>
@@ -54,6 +54,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SearchEquipments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchEquipmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="SearchEquipmentsResult" nillable="true" type="q5:ArrayOfPMEquipment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetFailureCodes">
     <xs:complexType>
       <xs:sequence />
@@ -62,7 +76,7 @@
   <xs:element name="GetFailureCodesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetFailureCodesResult" nillable="true" type="q5:ArrayOfPMFailureCode" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetFailureCodesResult" nillable="true" type="q6:ArrayOfPMFailureCode" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -74,7 +88,7 @@
   <xs:element name="GetRepairCodesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetRepairCodesResult" nillable="true" type="q6:ArrayOfPMRepairCode" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetRepairCodesResult" nillable="true" type="q7:ArrayOfPMRepairCode" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -88,7 +102,7 @@
   <xs:element name="GetEquipmentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetEquipmentResult" nillable="true" type="q7:PMEquipment" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetEquipmentResult" nillable="true" type="q8:PMEquipment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -100,7 +114,7 @@
   <xs:element name="GetWorkOrderTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" minOccurs="0" name="GetWorkOrderTypesResult" nillable="true" type="q8:ArrayOfWOTypeContract" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="GetWorkOrderTypesResult" nillable="true" type="q9:ArrayOfWOTypeContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -112,7 +126,7 @@
   <xs:element name="GetEquipLocationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" minOccurs="0" name="GetEquipLocationsResult" nillable="true" type="q9:ArrayOfWOLocationContract" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="GetEquipLocationsResult" nillable="true" type="q10:ArrayOfWOLocationContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -126,7 +140,7 @@
   <xs:element name="GetInlineWorkItemsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetInlineWorkItemsResult" nillable="true" type="q10:ArrayOfPMWorkItem" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetInlineWorkItemsResult" nillable="true" type="q11:ArrayOfPMWorkItem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -136,27 +150,42 @@
         <xs:element minOccurs="0" name="workOrderId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="topRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="isItemCode" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetOtherWorkItemsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetOtherWorkItemsResult" nillable="true" type="q11:ArrayOfPMWorkItem" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetOtherWorkItemsResult" nillable="true" type="q12:ArrayOfPMWorkItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetlatestWorkOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workOrderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetlatestWorkOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetlatestWorkOrderResult" nillable="true" type="q13:PMWorkOrder" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SaveWorkOrder">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="entity" nillable="true" type="q12:PMWorkOrder" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="entity" nillable="true" type="q14:PMWorkOrder" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SaveWorkOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="SaveWorkOrderResult" nillable="true" type="q13:PMWorkOrder" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="SaveWorkOrderResult" nillable="true" type="q15:PMWorkOrder" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -187,6 +216,37 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DeleteWorkItemResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFileResult" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainCostByProdLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainCostByProdLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="MainCostByProdLineResult" nillable="true" type="q16:ArrayOfPMLineCostContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

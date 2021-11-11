@@ -4,16 +4,30 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
-      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="ISalesOrderService_GetSalesOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrders" />
+  </wsdl:message>
+  <wsdl:message name="ISalesOrderService_GetSalesOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrdersResponse" />
+  </wsdl:message>
   <wsdl:message name="ISalesOrderService_FindSalesOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:FindSalesOrder" />
   </wsdl:message>
   <wsdl:message name="ISalesOrderService_FindSalesOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesOrderService_GetDeliveries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveries" />
+  </wsdl:message>
+  <wsdl:message name="ISalesOrderService_GetDeliveries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveriesResponse" />
   </wsdl:message>
   <wsdl:message name="ISalesOrderService_GetPing_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPing" />
@@ -22,9 +36,17 @@
     <wsdl:part name="parameters" element="tns:GetPingResponse" />
   </wsdl:message>
   <wsdl:portType name="ISalesOrderService">
+    <wsdl:operation name="GetSalesOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetSalesOrders" message="tns:ISalesOrderService_GetSalesOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/GetSalesOrdersResponse" message="tns:ISalesOrderService_GetSalesOrders_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="FindSalesOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/FindSalesOrder" message="tns:ISalesOrderService_FindSalesOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/FindSalesOrderResponse" message="tns:ISalesOrderService_FindSalesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetDeliveries" message="tns:ISalesOrderService_GetDeliveries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesOrderService/GetDeliveriesResponse" message="tns:ISalesOrderService_GetDeliveries_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPing">
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesOrderService/GetPing" message="tns:ISalesOrderService_GetPing_InputMessage" />
@@ -33,8 +55,26 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISalesOrderService" type="tns:ISalesOrderService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSalesOrders">
+      <soap:operation soapAction="http://tempuri.org/ISalesOrderService/GetSalesOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="FindSalesOrder">
       <soap:operation soapAction="http://tempuri.org/ISalesOrderService/FindSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <soap:operation soapAction="http://tempuri.org/ISalesOrderService/GetDeliveries" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -9,7 +9,2213 @@
 //------------------------------------------------------------------------------
 
 namespace TestWebservice.SalesService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventByGrLocContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventByGrLocContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OnHandField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal OnHand {
+            get {
+                return this.OnHandField;
+            }
+            set {
+                if ((this.OnHandField.Equals(value) != true)) {
+                    this.OnHandField = value;
+                    this.RaisePropertyChanged("OnHand");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.CustomerDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PLNotDeliveredContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PickHistoryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InventByGrLocContract))]
+    public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.CustomerDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PLNotDeliveredContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PickHistoryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InventByGrLocContract))]
+    public partial class XppObjectBase : TestWebservice.SalesService.ProxyBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PalletItemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PalletItemContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SerialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UpdatedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedDateField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Serial {
+            get {
+                return this.SerialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SerialField, value) != true)) {
+                    this.SerialField = value;
+                    this.RaisePropertyChanged("Serial");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UpdatedBy {
+            get {
+                return this.UpdatedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UpdatedByField, value) != true)) {
+                    this.UpdatedByField = value;
+                    this.RaisePropertyChanged("UpdatedBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedDate {
+            get {
+                return this.UpdatedDateField;
+            }
+            set {
+                if ((this.UpdatedDateField.Equals(value) != true)) {
+                    this.UpdatedDateField = value;
+                    this.RaisePropertyChanged("UpdatedDate");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class CustomerDeliveryContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerAccountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PackingSlipNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TrucksField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerAccount {
+            get {
+                return this.CustomerAccountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
+                    this.CustomerAccountField = value;
+                    this.RaisePropertyChanged("CustomerAccount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PackingSlipNum {
+            get {
+                return this.PackingSlipNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackingSlipNumField, value) != true)) {
+                    this.PackingSlipNumField = value;
+                    this.RaisePropertyChanged("PackingSlipNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Trucks {
+            get {
+                return this.TrucksField;
+            }
+            set {
+                if ((this.TrucksField.Equals(value) != true)) {
+                    this.TrucksField = value;
+                    this.RaisePropertyChanged("Trucks");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EVSSalesTableContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class EVSSalesTableContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DeliveryDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeliveryModeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeliveryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DriverNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.NoYes HalfPalletField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PackingSlipField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.EVSSalesLineContract[] SalesLinesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SalesStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SalesTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.NoYes SameConfigurationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartLoadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StopLoadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TruckLoadLineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckPlateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckTicketField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DeliveryDate {
+            get {
+                return this.DeliveryDateField;
+            }
+            set {
+                if ((this.DeliveryDateField.Equals(value) != true)) {
+                    this.DeliveryDateField = value;
+                    this.RaisePropertyChanged("DeliveryDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeliveryMode {
+            get {
+                return this.DeliveryModeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryModeField, value) != true)) {
+                    this.DeliveryModeField = value;
+                    this.RaisePropertyChanged("DeliveryMode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeliveryName {
+            get {
+                return this.DeliveryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryNameField, value) != true)) {
+                    this.DeliveryNameField = value;
+                    this.RaisePropertyChanged("DeliveryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DriverName {
+            get {
+                return this.DriverNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DriverNameField, value) != true)) {
+                    this.DriverNameField = value;
+                    this.RaisePropertyChanged("DriverName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.NoYes HalfPallet {
+            get {
+                return this.HalfPalletField;
+            }
+            set {
+                if ((this.HalfPalletField.Equals(value) != true)) {
+                    this.HalfPalletField = value;
+                    this.RaisePropertyChanged("HalfPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PackingSlip {
+            get {
+                return this.PackingSlipField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackingSlipField, value) != true)) {
+                    this.PackingSlipField = value;
+                    this.RaisePropertyChanged("PackingSlip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesId {
+            get {
+                return this.SalesIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
+                    this.SalesIdField = value;
+                    this.RaisePropertyChanged("SalesId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.EVSSalesLineContract[] SalesLines {
+            get {
+                return this.SalesLinesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesLinesField, value) != true)) {
+                    this.SalesLinesField = value;
+                    this.RaisePropertyChanged("SalesLines");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesName {
+            get {
+                return this.SalesNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesNameField, value) != true)) {
+                    this.SalesNameField = value;
+                    this.RaisePropertyChanged("SalesName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SalesStatus {
+            get {
+                return this.SalesStatusField;
+            }
+            set {
+                if ((this.SalesStatusField.Equals(value) != true)) {
+                    this.SalesStatusField = value;
+                    this.RaisePropertyChanged("SalesStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SalesType {
+            get {
+                return this.SalesTypeField;
+            }
+            set {
+                if ((this.SalesTypeField.Equals(value) != true)) {
+                    this.SalesTypeField = value;
+                    this.RaisePropertyChanged("SalesType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.NoYes SameConfiguration {
+            get {
+                return this.SameConfigurationField;
+            }
+            set {
+                if ((this.SameConfigurationField.Equals(value) != true)) {
+                    this.SameConfigurationField = value;
+                    this.RaisePropertyChanged("SameConfiguration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartLoad {
+            get {
+                return this.StartLoadField;
+            }
+            set {
+                if ((this.StartLoadField.Equals(value) != true)) {
+                    this.StartLoadField = value;
+                    this.RaisePropertyChanged("StartLoad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StopLoad {
+            get {
+                return this.StopLoadField;
+            }
+            set {
+                if ((this.StopLoadField.Equals(value) != true)) {
+                    this.StopLoadField = value;
+                    this.RaisePropertyChanged("StopLoad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TruckLoadLine {
+            get {
+                return this.TruckLoadLineField;
+            }
+            set {
+                if ((this.TruckLoadLineField.Equals(value) != true)) {
+                    this.TruckLoadLineField = value;
+                    this.RaisePropertyChanged("TruckLoadLine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckPlate {
+            get {
+                return this.TruckPlateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckPlateField, value) != true)) {
+                    this.TruckPlateField = value;
+                    this.RaisePropertyChanged("TruckPlate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckTicket {
+            get {
+                return this.TruckTicketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckTicketField, value) != true)) {
+                    this.TruckTicketField = value;
+                    this.RaisePropertyChanged("TruckTicket");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EVSSalesLineContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class EVSSalesLineContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ExclusiveHalfPalletField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InventTransIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsHalfPalletField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long LineRecIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.InventByGrLocContract[] LocationsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtyBoxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtyPalletField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtySQMField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtySQMRemainingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtySQMReservedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesUnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SerialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ShadeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SiteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.PalletStatus UpdateStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UpdatedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WarehouseField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string wLocationIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ExclusiveHalfPallet {
+            get {
+                return this.ExclusiveHalfPalletField;
+            }
+            set {
+                if ((this.ExclusiveHalfPalletField.Equals(value) != true)) {
+                    this.ExclusiveHalfPalletField = value;
+                    this.RaisePropertyChanged("ExclusiveHalfPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string InventTransID {
+            get {
+                return this.InventTransIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InventTransIDField, value) != true)) {
+                    this.InventTransIDField = value;
+                    this.RaisePropertyChanged("InventTransID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsHalfPallet {
+            get {
+                return this.IsHalfPalletField;
+            }
+            set {
+                if ((this.IsHalfPalletField.Equals(value) != true)) {
+                    this.IsHalfPalletField = value;
+                    this.RaisePropertyChanged("IsHalfPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long LineRecId {
+            get {
+                return this.LineRecIdField;
+            }
+            set {
+                if ((this.LineRecIdField.Equals(value) != true)) {
+                    this.LineRecIdField = value;
+                    this.RaisePropertyChanged("LineRecId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.InventByGrLocContract[] Locations {
+            get {
+                return this.LocationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationsField, value) != true)) {
+                    this.LocationsField = value;
+                    this.RaisePropertyChanged("Locations");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remarks {
+            get {
+                return this.RemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
+                    this.RemarksField = value;
+                    this.RaisePropertyChanged("Remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesId {
+            get {
+                return this.SalesIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
+                    this.SalesIdField = value;
+                    this.RaisePropertyChanged("SalesId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQty {
+            get {
+                return this.SalesQtyField;
+            }
+            set {
+                if ((this.SalesQtyField.Equals(value) != true)) {
+                    this.SalesQtyField = value;
+                    this.RaisePropertyChanged("SalesQty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQtyBox {
+            get {
+                return this.SalesQtyBoxField;
+            }
+            set {
+                if ((this.SalesQtyBoxField.Equals(value) != true)) {
+                    this.SalesQtyBoxField = value;
+                    this.RaisePropertyChanged("SalesQtyBox");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQtyPallet {
+            get {
+                return this.SalesQtyPalletField;
+            }
+            set {
+                if ((this.SalesQtyPalletField.Equals(value) != true)) {
+                    this.SalesQtyPalletField = value;
+                    this.RaisePropertyChanged("SalesQtyPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQtySQM {
+            get {
+                return this.SalesQtySQMField;
+            }
+            set {
+                if ((this.SalesQtySQMField.Equals(value) != true)) {
+                    this.SalesQtySQMField = value;
+                    this.RaisePropertyChanged("SalesQtySQM");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQtySQMRemaining {
+            get {
+                return this.SalesQtySQMRemainingField;
+            }
+            set {
+                if ((this.SalesQtySQMRemainingField.Equals(value) != true)) {
+                    this.SalesQtySQMRemainingField = value;
+                    this.RaisePropertyChanged("SalesQtySQMRemaining");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQtySQMReserved {
+            get {
+                return this.SalesQtySQMReservedField;
+            }
+            set {
+                if ((this.SalesQtySQMReservedField.Equals(value) != true)) {
+                    this.SalesQtySQMReservedField = value;
+                    this.RaisePropertyChanged("SalesQtySQMReserved");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesUnit {
+            get {
+                return this.SalesUnitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesUnitField, value) != true)) {
+                    this.SalesUnitField = value;
+                    this.RaisePropertyChanged("SalesUnit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Serial {
+            get {
+                return this.SerialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SerialField, value) != true)) {
+                    this.SerialField = value;
+                    this.RaisePropertyChanged("Serial");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Shade {
+            get {
+                return this.ShadeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShadeField, value) != true)) {
+                    this.ShadeField = value;
+                    this.RaisePropertyChanged("Shade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Site {
+            get {
+                return this.SiteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SiteField, value) != true)) {
+                    this.SiteField = value;
+                    this.RaisePropertyChanged("Site");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Size {
+            get {
+                return this.SizeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
+                    this.SizeField = value;
+                    this.RaisePropertyChanged("Size");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.PalletStatus UpdateStatus {
+            get {
+                return this.UpdateStatusField;
+            }
+            set {
+                if ((this.UpdateStatusField.Equals(value) != true)) {
+                    this.UpdateStatusField = value;
+                    this.RaisePropertyChanged("UpdateStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UpdatedBy {
+            get {
+                return this.UpdatedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UpdatedByField, value) != true)) {
+                    this.UpdatedByField = value;
+                    this.RaisePropertyChanged("UpdatedBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedDate {
+            get {
+                return this.UpdatedDateField;
+            }
+            set {
+                if ((this.UpdatedDateField.Equals(value) != true)) {
+                    this.UpdatedDateField = value;
+                    this.RaisePropertyChanged("UpdatedDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Warehouse {
+            get {
+                return this.WarehouseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WarehouseField, value) != true)) {
+                    this.WarehouseField = value;
+                    this.RaisePropertyChanged("Warehouse");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string wLocationId {
+            get {
+                return this.wLocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.wLocationIdField, value) != true)) {
+                    this.wLocationIdField = value;
+                    this.RaisePropertyChanged("wLocationId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InventByGrLocContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InventByGrLocContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.CustomerDeliveryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesLineContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletStatus))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PickingListStatus))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PLNotDeliveredContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PickHistoryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PalletItemContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.CustomerDeliveryContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.EVSSalesTableContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGDeliveryContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.LookupContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.FGLineContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.PLNotDeliveredContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.CallContext))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.Infolog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InfologEntry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InfologEntry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.InfologType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.Fault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesTable))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesLine[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.SalesLine))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.UserData[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SyncServices.UserData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.ProxyBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.SalesService.NoYes))]
+    public partial class FGDeliveryContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Barcode_Code128Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeliveryAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DeliveryDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private object[] DeliveryItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.PickingListStatus DeliveryStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LineNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MobileField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime PackingSlipGenerateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PackingSlipNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityInPalletsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityInSQMField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartLoadTruckField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StopLoadTruckField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TicketField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckDriverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckPlateNumField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Barcode_Code128 {
+            get {
+                return this.Barcode_Code128Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Barcode_Code128Field, value) != true)) {
+                    this.Barcode_Code128Field = value;
+                    this.RaisePropertyChanged("Barcode_Code128");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeliveryAddress {
+            get {
+                return this.DeliveryAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryAddressField, value) != true)) {
+                    this.DeliveryAddressField = value;
+                    this.RaisePropertyChanged("DeliveryAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DeliveryDate {
+            get {
+                return this.DeliveryDateField;
+            }
+            set {
+                if ((this.DeliveryDateField.Equals(value) != true)) {
+                    this.DeliveryDateField = value;
+                    this.RaisePropertyChanged("DeliveryDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object[] DeliveryItems {
+            get {
+                return this.DeliveryItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryItemsField, value) != true)) {
+                    this.DeliveryItemsField = value;
+                    this.RaisePropertyChanged("DeliveryItems");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.PickingListStatus DeliveryStatus {
+            get {
+                return this.DeliveryStatusField;
+            }
+            set {
+                if ((this.DeliveryStatusField.Equals(value) != true)) {
+                    this.DeliveryStatusField = value;
+                    this.RaisePropertyChanged("DeliveryStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LineNum {
+            get {
+                return this.LineNumField;
+            }
+            set {
+                if ((this.LineNumField.Equals(value) != true)) {
+                    this.LineNumField = value;
+                    this.RaisePropertyChanged("LineNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mobile {
+            get {
+                return this.MobileField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MobileField, value) != true)) {
+                    this.MobileField = value;
+                    this.RaisePropertyChanged("Mobile");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PackingSlipGenerate {
+            get {
+                return this.PackingSlipGenerateField;
+            }
+            set {
+                if ((this.PackingSlipGenerateField.Equals(value) != true)) {
+                    this.PackingSlipGenerateField = value;
+                    this.RaisePropertyChanged("PackingSlipGenerate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PackingSlipNum {
+            get {
+                return this.PackingSlipNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackingSlipNumField, value) != true)) {
+                    this.PackingSlipNumField = value;
+                    this.RaisePropertyChanged("PackingSlipNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string QuantityInPallets {
+            get {
+                return this.QuantityInPalletsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityInPalletsField, value) != true)) {
+                    this.QuantityInPalletsField = value;
+                    this.RaisePropertyChanged("QuantityInPallets");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string QuantityInSQM {
+            get {
+                return this.QuantityInSQMField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityInSQMField, value) != true)) {
+                    this.QuantityInSQMField = value;
+                    this.RaisePropertyChanged("QuantityInSQM");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesId {
+            get {
+                return this.SalesIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
+                    this.SalesIdField = value;
+                    this.RaisePropertyChanged("SalesId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartLoadTruck {
+            get {
+                return this.StartLoadTruckField;
+            }
+            set {
+                if ((this.StartLoadTruckField.Equals(value) != true)) {
+                    this.StartLoadTruckField = value;
+                    this.RaisePropertyChanged("StartLoadTruck");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StopLoadTruck {
+            get {
+                return this.StopLoadTruckField;
+            }
+            set {
+                if ((this.StopLoadTruckField.Equals(value) != true)) {
+                    this.StopLoadTruckField = value;
+                    this.RaisePropertyChanged("StopLoadTruck");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ticket {
+            get {
+                return this.TicketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TicketField, value) != true)) {
+                    this.TicketField = value;
+                    this.RaisePropertyChanged("Ticket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckDriver {
+            get {
+                return this.TruckDriverField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckDriverField, value) != true)) {
+                    this.TruckDriverField = value;
+                    this.RaisePropertyChanged("TruckDriver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckPlateNum {
+            get {
+                return this.TruckPlateNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckPlateNumField, value) != true)) {
+                    this.TruckPlateNumField = value;
+                    this.RaisePropertyChanged("TruckPlateNum");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class LookupContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LookupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LookupStringField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LookupId {
+            get {
+                return this.LookupIdField;
+            }
+            set {
+                if ((this.LookupIdField.Equals(value) != true)) {
+                    this.LookupIdField = value;
+                    this.RaisePropertyChanged("LookupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LookupString {
+            get {
+                return this.LookupStringField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
+                    this.LookupStringField = value;
+                    this.RaisePropertyChanged("LookupString");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FGLineContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class FGLineContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FGLineNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FGLineNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OnGateNumField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FGLineName {
+            get {
+                return this.FGLineNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FGLineNameField, value) != true)) {
+                    this.FGLineNameField = value;
+                    this.RaisePropertyChanged("FGLineName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FGLineNumber {
+            get {
+                return this.FGLineNumberField;
+            }
+            set {
+                if ((this.FGLineNumberField.Equals(value) != true)) {
+                    this.FGLineNumberField = value;
+                    this.RaisePropertyChanged("FGLineNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OnGateNum {
+            get {
+                return this.OnGateNumField;
+            }
+            set {
+                if ((this.OnGateNumField.Equals(value) != true)) {
+                    this.OnGateNumField = value;
+                    this.RaisePropertyChanged("OnGateNum");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PLNotDeliveredContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PLNotDeliveredContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerAccountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DeliveryDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityInPalletsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityInSQMField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SalesIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerAccount {
+            get {
+                return this.CustomerAccountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerAccountField, value) != true)) {
+                    this.CustomerAccountField = value;
+                    this.RaisePropertyChanged("CustomerAccount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DeliveryDate {
+            get {
+                return this.DeliveryDateField;
+            }
+            set {
+                if ((this.DeliveryDateField.Equals(value) != true)) {
+                    this.DeliveryDateField = value;
+                    this.RaisePropertyChanged("DeliveryDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemNumber {
+            get {
+                return this.ItemNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
+                    this.ItemNumberField = value;
+                    this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string QuantityInPallets {
+            get {
+                return this.QuantityInPalletsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityInPalletsField, value) != true)) {
+                    this.QuantityInPalletsField = value;
+                    this.RaisePropertyChanged("QuantityInPallets");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string QuantityInSQM {
+            get {
+                return this.QuantityInSQMField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityInSQMField, value) != true)) {
+                    this.QuantityInSQMField = value;
+                    this.RaisePropertyChanged("QuantityInSQM");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SalesId {
+            get {
+                return this.SalesIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
+                    this.SalesIdField = value;
+                    this.RaisePropertyChanged("SalesId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PalletContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PalletContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SalesQtyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SerialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ShadeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WarehouseLocationField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SalesQty {
+            get {
+                return this.SalesQtyField;
+            }
+            set {
+                if ((this.SalesQtyField.Equals(value) != true)) {
+                    this.SalesQtyField = value;
+                    this.RaisePropertyChanged("SalesQty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Serial {
+            get {
+                return this.SerialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SerialField, value) != true)) {
+                    this.SerialField = value;
+                    this.RaisePropertyChanged("Serial");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Shade {
+            get {
+                return this.ShadeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShadeField, value) != true)) {
+                    this.ShadeField = value;
+                    this.RaisePropertyChanged("Shade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Size {
+            get {
+                return this.SizeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
+                    this.SizeField = value;
+                    this.RaisePropertyChanged("Size");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WarehouseLocation {
+            get {
+                return this.WarehouseLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WarehouseLocationField, value) != true)) {
+                    this.WarehouseLocationField = value;
+                    this.RaisePropertyChanged("WarehouseLocation");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PickHistoryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PickHistoryContract : TestWebservice.SalesService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeviceNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PalletNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PickingIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.PalletStatus UpdateStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UpdatedByUserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedDateTimeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeviceName {
+            get {
+                return this.DeviceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeviceNameField, value) != true)) {
+                    this.DeviceNameField = value;
+                    this.RaisePropertyChanged("DeviceName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PalletNo {
+            get {
+                return this.PalletNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PalletNoField, value) != true)) {
+                    this.PalletNoField = value;
+                    this.RaisePropertyChanged("PalletNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PickingId {
+            get {
+                return this.PickingIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remarks {
+            get {
+                return this.RemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
+                    this.RemarksField = value;
+                    this.RaisePropertyChanged("Remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.PalletStatus UpdateStatus {
+            get {
+                return this.UpdateStatusField;
+            }
+            set {
+                if ((this.UpdateStatusField.Equals(value) != true)) {
+                    this.UpdateStatusField = value;
+                    this.RaisePropertyChanged("UpdateStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UpdatedByUser {
+            get {
+                return this.UpdatedByUserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UpdatedByUserField, value) != true)) {
+                    this.UpdatedByUserField = value;
+                    this.RaisePropertyChanged("UpdatedByUser");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedDateTime {
+            get {
+                return this.UpdatedDateTimeField;
+            }
+            set {
+                if ((this.UpdatedDateTimeField.Equals(value) != true)) {
+                    this.UpdatedDateTimeField = value;
+                    this.RaisePropertyChanged("UpdatedDateTime");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NoYes", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    public enum NoYes : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        No = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Yes = 1,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PalletStatus", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public enum PalletStatus : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Search = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Remove = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Reserve = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        UnReserve = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        PickingList = 4,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PickingListStatus", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public enum PickingListStatus : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Opened = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Closed = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Cancelled = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CallContext", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    [System.SerializableAttribute()]
+    public partial class CallContext : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LanguageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PartitionKeyField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Company {
+            get {
+                return this.CompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
+                    this.CompanyField = value;
+                    this.RaisePropertyChanged("Company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Language {
+            get {
+                return this.LanguageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LanguageField, value) != true)) {
+                    this.LanguageField = value;
+                    this.RaisePropertyChanged("Language");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MessageId {
+            get {
+                return this.MessageIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageIdField, value) != true)) {
+                    this.MessageIdField = value;
+                    this.RaisePropertyChanged("MessageId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PartitionKey {
+            get {
+                return this.PartitionKeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PartitionKeyField, value) != true)) {
+                    this.PartitionKeyField = value;
+                    this.RaisePropertyChanged("PartitionKey");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Infolog", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    [System.SerializableAttribute()]
+    public partial class Infolog : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.InfologEntry[] EntriesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.InfologEntry[] Entries {
+            get {
+                return this.EntriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntriesField, value) != true)) {
+                    this.EntriesField = value;
+                    this.RaisePropertyChanged("Entries");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InfologEntry", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    [System.SerializableAttribute()]
+    public partial class InfologEntry : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.SalesService.InfologType TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.SalesService.InfologType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InfologType", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public enum InfologType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Info = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Warning = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Error = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    [System.SerializableAttribute()]
+    public partial class Fault : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExceptionMessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExceptionTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid RequestIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExceptionMessage {
+            get {
+                return this.ExceptionMessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExceptionMessageField, value) != true)) {
+                    this.ExceptionMessageField = value;
+                    this.RaisePropertyChanged("ExceptionMessage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExceptionType {
+            get {
+                return this.ExceptionTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExceptionTypeField, value) != true)) {
+                    this.ExceptionTypeField = value;
+                    this.RaisePropertyChanged("ExceptionType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid RequestId {
+            get {
+                return this.RequestIdField;
+            }
+            set {
+                if ((this.RequestIdField.Equals(value) != true)) {
+                    this.RequestIdField = value;
+                    this.RaisePropertyChanged("RequestId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SalesService.ISalesService")]
@@ -28,7 +2234,7 @@ namespace TestWebservice.SalesService {
         SyncServices.SalesLine CheckPalletAvailable(string salesId, string itemId, string configId, string pickingId, string pallet, string userName, string device, System.DateTime dtSave, long lineRecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/CheckPalletAvailableMulti", ReplyAction="http://tempuri.org/ISalesService/CheckPalletAvailableMultiResponse")]
-        SyncServices.SalesLine[] CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, SyncServices.SalesOrderAX.PalletItemContract[] pallets, string userName, string device, long lineRecId);
+        SyncServices.SalesLine[] CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, TestWebservice.SalesService.PalletItemContract[] pallets, string userName, string device, long lineRecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/SalesDeliveryNote", ReplyAction="http://tempuri.org/ISalesService/SalesDeliveryNoteResponse")]
         string SalesDeliveryNote(string _salesId);
@@ -43,10 +2249,10 @@ namespace TestWebservice.SalesService {
         void SavePickingLoad(string pickingId, System.DateTime startLoad, System.DateTime stopLoad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/CustomersDeliveryByQty", ReplyAction="http://tempuri.org/ISalesService/CustomersDeliveryByQtyResponse")]
-        SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByQty(System.DateTime startDate, System.DateTime endDate);
+        TestWebservice.SalesService.CustomerDeliveryContract[] CustomersDeliveryByQty(System.DateTime startDate, System.DateTime endDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/CustomersDeliveryByTrucks", ReplyAction="http://tempuri.org/ISalesService/CustomersDeliveryByTrucksResponse")]
-        SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByTrucks(System.DateTime startDate, System.DateTime endDate);
+        TestWebservice.SalesService.CustomerDeliveryContract[] CustomersDeliveryByTrucks(System.DateTime startDate, System.DateTime endDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetPing", ReplyAction="http://tempuri.org/ISalesService/GetPingResponse")]
         string GetPing();
@@ -58,10 +2264,10 @@ namespace TestWebservice.SalesService {
         void SaveLoginHistory(string userName, string device, string deviceIp, string projectName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetFGLines", ReplyAction="http://tempuri.org/ISalesService/GetFGLinesResponse")]
-        SyncServices.SalesOrderAX.FGLineContract[] GetFGLines();
+        TestWebservice.SalesService.FGLineContract[] GetFGLines();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetDeliveries", ReplyAction="http://tempuri.org/ISalesService/GetDeliveriesResponse")]
-        SyncServices.SalesOrderAX.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch);
+        TestWebservice.SalesService.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesService/GetUserData", ReplyAction="http://tempuri.org/ISalesService/GetUserDataResponse")]
         SyncServices.UserData[] GetUserData();
@@ -113,7 +2319,7 @@ namespace TestWebservice.SalesService {
             return base.Channel.CheckPalletAvailable(salesId, itemId, configId, pickingId, pallet, userName, device, dtSave, lineRecId);
         }
         
-        public SyncServices.SalesLine[] CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, SyncServices.SalesOrderAX.PalletItemContract[] pallets, string userName, string device, long lineRecId) {
+        public SyncServices.SalesLine[] CheckPalletAvailableMulti(string salesId, string itemId, string configId, string pickingId, TestWebservice.SalesService.PalletItemContract[] pallets, string userName, string device, long lineRecId) {
             return base.Channel.CheckPalletAvailableMulti(salesId, itemId, configId, pickingId, pallets, userName, device, lineRecId);
         }
         
@@ -133,11 +2339,11 @@ namespace TestWebservice.SalesService {
             base.Channel.SavePickingLoad(pickingId, startLoad, stopLoad);
         }
         
-        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByQty(System.DateTime startDate, System.DateTime endDate) {
+        public TestWebservice.SalesService.CustomerDeliveryContract[] CustomersDeliveryByQty(System.DateTime startDate, System.DateTime endDate) {
             return base.Channel.CustomersDeliveryByQty(startDate, endDate);
         }
         
-        public SyncServices.SalesOrderAX.CustomerDeliveryContract[] CustomersDeliveryByTrucks(System.DateTime startDate, System.DateTime endDate) {
+        public TestWebservice.SalesService.CustomerDeliveryContract[] CustomersDeliveryByTrucks(System.DateTime startDate, System.DateTime endDate) {
             return base.Channel.CustomersDeliveryByTrucks(startDate, endDate);
         }
         
@@ -153,11 +2359,11 @@ namespace TestWebservice.SalesService {
             base.Channel.SaveLoginHistory(userName, device, deviceIp, projectName);
         }
         
-        public SyncServices.SalesOrderAX.FGLineContract[] GetFGLines() {
+        public TestWebservice.SalesService.FGLineContract[] GetFGLines() {
             return base.Channel.GetFGLines();
         }
         
-        public SyncServices.SalesOrderAX.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch) {
+        public TestWebservice.SalesService.FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch) {
             return base.Channel.GetDeliveries(dateSearch);
         }
         

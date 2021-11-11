@@ -21,13 +21,13 @@
     <MetadataSource Address="http://localhost:58380/ModulaPR.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="ModulaPR31.xsd" MetadataType="Schema" ID="1b74f268-db08-457a-8d77-9752a1748cfe" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd4" />
     <MetadataFile FileName="ModulaPR3.xsd" MetadataType="Schema" ID="e902e965-64d7-439e-8117-7f50f7026b9a" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd5" />
     <MetadataFile FileName="ModulaPR1.xsd" MetadataType="Schema" ID="8c3da4e6-8982-4e3f-83cb-dbee832a3c48" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd0" />
     <MetadataFile FileName="ModulaPR.wsdl" MetadataType="Wsdl" ID="86eb3cf9-824f-4c90-a401-49ecf9c270c3" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?wsdl" />
     <MetadataFile FileName="ModulaPR.xsd" MetadataType="Schema" ID="f923197c-0d97-41ff-aea3-1c74183c6b71" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd2" />
-    <MetadataFile FileName="ModulaPR31.xsd" MetadataType="Schema" ID="1b74f268-db08-457a-8d77-9752a1748cfe" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd4" />
-    <MetadataFile FileName="ModulaPR2.xsd" MetadataType="Schema" ID="c024b3cd-e321-437c-bb1e-1cd2816ea270" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd1" />
     <MetadataFile FileName="ModulaPR.disco" MetadataType="Disco" ID="9450004b-bd7c-4be6-84bd-761c5ecc6a73" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?disco" />
+    <MetadataFile FileName="ModulaPR2.xsd" MetadataType="Schema" ID="c024b3cd-e321-437c-bb1e-1cd2816ea270" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd1" />
     <MetadataFile FileName="ModulaPR32.xsd" MetadataType="Schema" ID="6ac5cdd1-f6ab-401b-95f4-a5c40d64bbb5" SourceId="1" SourceUrl="http://localhost:58380/ModulaPR.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>

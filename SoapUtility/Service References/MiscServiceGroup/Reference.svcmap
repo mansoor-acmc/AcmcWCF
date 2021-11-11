@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6e397227-8e56-4eec-96cc-af307b2db8f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MiscServiceGroup2.xsd" MetadataType="Schema" ID="063b5ebe-e3b7-4965-b0b9-1a9830a1d925" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd1" />
+    <MetadataFile FileName="MiscServiceGroup.wsdl" MetadataType="Wsdl" ID="7f8a5cb9-6e8e-4edc-8e3f-fec45f341c92" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl" />
+    <MetadataFile FileName="MiscServiceGroup3.xsd" MetadataType="Schema" ID="b28bce7d-747b-4185-89a6-48a0b183ed6c" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd3" />
+    <MetadataFile FileName="MiscServiceGroup.disco" MetadataType="Disco" ID="e074ae02-0fa4-4465-891a-ab96f44cc8e0" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?disco" />
+    <MetadataFile FileName="MiscServiceGroup5.xsd" MetadataType="Schema" ID="df082242-91fa-4c54-8b0f-d4a46f0fa8af" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="MiscServiceGroup.xsd" MetadataType="Schema" ID="9dab5c40-d7b3-442c-ac02-9df968a606b0" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd0" />
+    <MetadataFile FileName="MiscServiceGroup1.wsdl" MetadataType="Wsdl" ID="ced66d5f-2b99-4f73-b87e-4298b69177f2" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="MiscServiceGroup2.wsdl" MetadataType="Wsdl" ID="477b0f9a-4045-4952-b5cb-f4eb85d9e721" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl=wsdl1" />
+    <MetadataFile FileName="MiscServiceGroup1.xsd" MetadataType="Schema" ID="81f952ff-45cc-41d9-8a4a-f13f8aa791f0" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="MiscServiceGroup4.xsd" MetadataType="Schema" ID="950b1808-9bb5-48b7-a006-edd89b6b32eb" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd2" />
+    <MetadataFile FileName="MiscServiceGroup7.xsd" MetadataType="Schema" ID="4a656991-5a66-45c8-bbc3-be38f99d3dde" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd7" />
+    <MetadataFile FileName="MiscServiceGroup6.xsd" MetadataType="Schema" ID="54083564-0ad1-4c44-af61-f6085fc5de0f" SourceId="1" SourceUrl="https://acmcuat.sandbox.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

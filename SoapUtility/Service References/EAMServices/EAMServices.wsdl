@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="http://tempuri.org" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EAMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="WorkItemsService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EAMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsp:Policy wsu:Id="BasicHttpBinding_WorkItemsService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -25,13 +25,13 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="http://tempuri.org" location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
+  <wsdl:import namespace="WorkItemsService" location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
   <wsdl:types />
   <wsdl:binding name="BasicHttpBinding_WorkItemsService" type="i0:WorkItemsService">
     <wsp:PolicyReference URI="#BasicHttpBinding_WorkItemsService_policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="CreateOrUpdate">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/CreateOrUpdate" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/CreateOrUpdate" style="document" />
       <wsdl:input name="CreateOrUpdate">
         <soap:header message="i0:CreateOrUpdate_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -45,7 +45,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteWorkItem">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/DeleteWorkItem" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/DeleteWorkItem" style="document" />
       <wsdl:input name="DeleteWorkItem">
         <soap:header message="i0:DeleteWorkItem_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -59,7 +59,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteWorkItemByRecId">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/DeleteWorkItemByRecId" style="document" />
       <wsdl:input name="DeleteWorkItemByRecId">
         <soap:header message="i0:DeleteWorkItemByRecId_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -73,7 +73,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllEquipments">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetAllEquipments" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetAllEquipments" style="document" />
       <wsdl:input name="GetAllEquipments">
         <soap:header message="i0:GetAllEquipments_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -87,7 +87,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetEquipLocations">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetEquipLocations" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipLocations" style="document" />
       <wsdl:input name="GetEquipLocations">
         <soap:header message="i0:GetEquipLocations_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -101,7 +101,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetEquipment">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetEquipment" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipment" style="document" />
       <wsdl:input name="GetEquipment">
         <soap:header message="i0:GetEquipment_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -115,7 +115,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetEquipmentsByCostCenter">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipmentsByCostCenter" style="document" />
       <wsdl:input name="GetEquipmentsByCostCenter">
         <soap:header message="i0:GetEquipmentsByCostCenter_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -129,7 +129,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetFailureCodes">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetFailureCodes" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetFailureCodes" style="document" />
       <wsdl:input name="GetFailureCodes">
         <soap:header message="i0:GetFailureCodes_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -143,7 +143,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetInlineWorkItems">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetInlineWorkItems" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetInlineWorkItems" style="document" />
       <wsdl:input name="GetInlineWorkItems">
         <soap:header message="i0:GetInlineWorkItems_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -157,7 +157,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetLatestWorkorder">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetLatestWorkorder" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetLatestWorkorder" style="document" />
       <wsdl:input name="GetLatestWorkorder">
         <soap:header message="i0:GetLatestWorkorder_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -171,7 +171,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="getMaxId">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/getMaxId" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/getMaxId" style="document" />
       <wsdl:input name="getMaxId">
         <soap:header message="i0:getMaxId_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -185,7 +185,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetOnhand">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetOnhand" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetOnhand" style="document" />
       <wsdl:input name="GetOnhand">
         <soap:header message="i0:GetOnhand_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -199,7 +199,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetOtherWorkItems">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetOtherWorkItems" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetOtherWorkItems" style="document" />
       <wsdl:input name="GetOtherWorkItems">
         <soap:header message="i0:GetOtherWorkItems_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -213,7 +213,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetRepaireCodes">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetRepaireCodes" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetRepaireCodes" style="document" />
       <wsdl:input name="GetRepaireCodes">
         <soap:header message="i0:GetRepaireCodes_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -227,7 +227,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetWOPoolCode">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetWOPoolCode" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWOPoolCode" style="document" />
       <wsdl:input name="GetWOPoolCode">
         <soap:header message="i0:GetWOPoolCode_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -241,7 +241,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetWorkordersByDates">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetWorkordersByDates" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkordersByDates" style="document" />
       <wsdl:input name="GetWorkordersByDates">
         <soap:header message="i0:GetWorkordersByDates_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -255,7 +255,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetWorkordersByEquipment">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkordersByEquipment" style="document" />
       <wsdl:input name="GetWorkordersByEquipment">
         <soap:header message="i0:GetWorkordersByEquipment_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -269,7 +269,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetWorkOrderStatusLookup">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkOrderStatusLookup" style="document" />
       <wsdl:input name="GetWorkOrderStatusLookup">
         <soap:header message="i0:GetWorkOrderStatusLookup_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -283,7 +283,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetWorkOrderTypes">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/GetWorkOrderTypes" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkOrderTypes" style="document" />
       <wsdl:input name="GetWorkOrderTypes">
         <soap:header message="i0:GetWorkOrderTypes_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -297,7 +297,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="MainCostByProdLine">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/MainCostByProdLine" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/MainCostByProdLine" style="document" />
       <wsdl:input name="MainCostByProdLine">
         <soap:header message="i0:MainCostByProdLine_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -311,7 +311,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="PostedWorkItems">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/PostedWorkItems" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/PostedWorkItems" style="document" />
       <wsdl:input name="PostedWorkItems">
         <soap:header message="i0:PostedWorkItems_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -325,7 +325,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SearchEquipments">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/SearchEquipments" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/SearchEquipments" style="document" />
       <wsdl:input name="SearchEquipments">
         <soap:header message="i0:SearchEquipments_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -339,7 +339,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SetWOStatus">
-      <soap:operation soapAction="http://tempuri.org/WorkItemsService/SetWOStatus" style="document" />
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/SetWOStatus" style="document" />
       <wsdl:input name="SetWOStatus">
         <soap:header message="i0:SetWOStatus_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />

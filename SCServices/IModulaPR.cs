@@ -216,14 +216,11 @@ namespace SyncServices
                 WorkOrderID = this.WorkOrderID,
                 Description = this.Description,
                 WorkOrderPoolCode = this.WOPoolCode,
-                WorkOrderType =(PMWorkOrderType)Enum.Parse(typeof(PMWorkOrderType), this.WOType),
-                //WorkOrderTypeSpecified=true,
+                //WorkOrderType =(PMWorkOrderType)Enum.Parse(typeof(PMWorkOrderType), this.WOType), //***Mansoor*** Uncomment this                
                 EquipmentID = this.WOEquipment,
                 RepairCode = this.RepairCode,
-                WOStartDate = this.StartDate.Value,
-                //WOStartDateSpecified=true,
-                WorkOrderStatus = (PMWorkOrderStatus)Enum.Parse(typeof(PMWorkOrderStatus), this.WOStatus),
-                //WorkOrderStatusSpecified=true,
+                WOStartDate = this.StartDate.Value,                
+                //WorkOrderStatus = (PMWorkOrderStatus)Enum.Parse(typeof(PMWorkOrderStatus), this.WOStatus),//***Mansoor*** Uncomment this                
                 WorkOrderItems = new PMWorkItem().FromListConvert(this.WorkItems).ToArray()
             };
         }

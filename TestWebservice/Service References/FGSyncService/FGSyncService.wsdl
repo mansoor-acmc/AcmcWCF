@@ -5,9 +5,9 @@
       <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
-      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.InventCountingService" />
-      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://localhost:58380/FGSyncService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IFGSyncService_ResetData_InputMessage">

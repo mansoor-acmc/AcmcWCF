@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.EAMServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/ModulaPR.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
   <xs:complexType name="ArrayOfWOTypeContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WOTypeContract" nillable="true" type="tns:WOTypeContract" />
@@ -9,38 +9,237 @@
   <xs:element name="ArrayOfWOTypeContract" nillable="true" type="tns:ArrayOfWOTypeContract" />
   <xs:complexType name="WOTypeContract">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
         <xs:sequence>
-          <xs:element name="codeField" nillable="true" type="xs:string" />
-          <xs:element name="labelField" nillable="true" type="xs:string" />
-          <xs:element name="valueField" type="xs:int" />
-          <xs:element name="valueFieldSpecified" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="WOTypeContract" nillable="true" type="tns:WOTypeContract" />
-  <xs:complexType name="XppObjectBase">
+  <xs:complexType name="EquipContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attachments" nillable="true" type="tns:ArrayOfEquipCatalogContract" />
+          <xs:element minOccurs="0" name="EquipmentGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipmentID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EquipContract" nillable="true" type="tns:EquipContract" />
+  <xs:complexType name="ArrayOfEquipCatalogContract">
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipCatalogContract" nillable="true" type="tns:EquipCatalogContract" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
+  <xs:element name="ArrayOfEquipCatalogContract" nillable="true" type="tns:ArrayOfEquipCatalogContract" />
+  <xs:complexType name="EquipCatalogContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileExtension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FilePath" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EquipCatalogContract" nillable="true" type="tns:EquipCatalogContract" />
+  <xs:complexType name="WOLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssetLocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssetLocationName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WOLocationContract" nillable="true" type="tns:WOLocationContract" />
+  <xs:complexType name="FailureCodeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FailureCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FailureCodeContract" nillable="true" type="tns:FailureCodeContract" />
+  <xs:complexType name="PMWorkItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemPKId" type="xs:int" />
+          <xs:element minOccurs="0" name="ItemRecId" type="xs:long" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PMUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityConsumed" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Sto_HostRIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Sto_Requester" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PMWorkItemContract" nillable="true" type="tns:PMWorkItemContract" />
+  <xs:complexType name="PMWorkOrderContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipmentGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipmentID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepairCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WOStartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkOrderID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkOrderItems" nillable="true" type="tns:ArrayOfPMWorkItemContract" />
+          <xs:element minOccurs="0" name="WorkOrderPoolCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkOrderStatus" type="tns:PMWorkOrderStatus" />
+          <xs:element minOccurs="0" name="WorkOrderType" type="tns:PMWorkOrderType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PMWorkOrderContract" nillable="true" type="tns:PMWorkOrderContract" />
+  <xs:complexType name="ArrayOfPMWorkItemContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMWorkItemContract" nillable="true" type="tns:PMWorkItemContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPMWorkItemContract" nillable="true" type="tns:ArrayOfPMWorkItemContract" />
+  <xs:simpleType name="PMWorkOrderStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Created" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Released" />
+      <xs:enumeration value="WorkInProgress" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Posted" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="EPMove" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PMWorkOrderStatus" nillable="true" type="tns:PMWorkOrderStatus" />
+  <xs:simpleType name="PMWorkOrderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MaintenanceOrder" />
+      <xs:enumeration value="Inspection" />
+      <xs:enumeration value="Improvement" />
+      <xs:enumeration value="Installation" />
+      <xs:enumeration value="Troubleshooting" />
+      <xs:enumeration value="Preventive" />
+      <xs:enumeration value="ScheduledMaintenance" />
+      <xs:enumeration value="Consumable" />
+      <xs:enumeration value="ToolsSafetyEquipment" />
+      <xs:enumeration value="Uniform" />
+      <xs:enumeration value="StationeryANDcomputer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PMWorkOrderType" nillable="true" type="tns:PMWorkOrderType" />
+  <xs:complexType name="OnHandContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnHandQty" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnHandContract" nillable="true" type="tns:OnHandContract" />
+  <xs:complexType name="RepairCodeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q9:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FailureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepairCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RepairCodeContract" nillable="true" type="tns:RepairCodeContract" />
+  <xs:complexType name="WOPoolContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q10:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WOPoolCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WOPoolContract" nillable="true" type="tns:WOPoolContract" />
+  <xs:complexType name="LookupContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q11:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LookupId" type="xs:int" />
+          <xs:element minOccurs="0" name="LookupString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupContract" nillable="true" type="tns:LookupContract" />
+  <xs:complexType name="PMLineCostContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q12:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CostCenter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CostCenterName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PMLineCostContract" nillable="true" type="tns:PMLineCostContract" />
+  <xs:complexType name="EamWorkitemsContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q13:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_CostCenter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_HostRIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="parmSto_Item" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Operator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EamWorkitemsContract" nillable="true" type="tns:EamWorkitemsContract" />
   <xs:complexType name="ArrayOfWOLocationContract">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WOLocationContract" nillable="true" type="tns:WOLocationContract" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfWOLocationContract" nillable="true" type="tns:ArrayOfWOLocationContract" />
-  <xs:complexType name="WOLocationContract">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="assetLocationIdField" nillable="true" type="xs:string" />
-          <xs:element name="assetLocationNameField" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="ArrayOfPMLineCostContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PMLineCostContract" nillable="true" type="tns:PMLineCostContract" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:element name="WOLocationContract" nillable="true" type="tns:WOLocationContract" />
+  <xs:element name="ArrayOfPMLineCostContract" nillable="true" type="tns:ArrayOfPMLineCostContract" />
 </xs:schema>

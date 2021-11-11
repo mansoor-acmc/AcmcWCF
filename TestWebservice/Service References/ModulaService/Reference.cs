@@ -9,7 +9,1257 @@
 //------------------------------------------------------------------------------
 
 namespace TestWebservice.ModulaService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WOTypeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class WOTypeContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LabelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ValueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Label {
+            get {
+                return this.LabelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LabelField, value) != true)) {
+                    this.LabelField = value;
+                    this.RaisePropertyChanged("Label");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EquipContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EquipCatalogContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOLocationContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.FailureCodeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMWorkItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMWorkOrderContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.OnHandContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.RepairCodeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOPoolContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMLineCostContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOTypeContract))]
+    public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EquipContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EquipCatalogContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOLocationContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.FailureCodeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMWorkItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMWorkOrderContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.OnHandContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.RepairCodeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOPoolContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.LookupContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.PMLineCostContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.ModulaService.WOTypeContract))]
+    public partial class XppObjectBase : TestWebservice.ModulaService.ProxyBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EquipContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class EquipContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.ModulaService.EquipCatalogContract[] AttachmentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentGroupCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.ModulaService.EquipCatalogContract[] Attachments {
+            get {
+                return this.AttachmentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttachmentsField, value) != true)) {
+                    this.AttachmentsField = value;
+                    this.RaisePropertyChanged("Attachments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentGroupCode {
+            get {
+                return this.EquipmentGroupCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentGroupCodeField, value) != true)) {
+                    this.EquipmentGroupCodeField = value;
+                    this.RaisePropertyChanged("EquipmentGroupCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentID {
+            get {
+                return this.EquipmentIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentIDField, value) != true)) {
+                    this.EquipmentIDField = value;
+                    this.RaisePropertyChanged("EquipmentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentName {
+            get {
+                return this.EquipmentNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentNameField, value) != true)) {
+                    this.EquipmentNameField = value;
+                    this.RaisePropertyChanged("EquipmentName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationCode {
+            get {
+                return this.LocationCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationCodeField, value) != true)) {
+                    this.LocationCodeField = value;
+                    this.RaisePropertyChanged("LocationCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationName {
+            get {
+                return this.LocationNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationNameField, value) != true)) {
+                    this.LocationNameField = value;
+                    this.RaisePropertyChanged("LocationName");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EquipCatalogContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class EquipCatalogContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileExtensionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FilePathField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileDescription {
+            get {
+                return this.FileDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileDescriptionField, value) != true)) {
+                    this.FileDescriptionField = value;
+                    this.RaisePropertyChanged("FileDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileExtension {
+            get {
+                return this.FileExtensionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileExtensionField, value) != true)) {
+                    this.FileExtensionField = value;
+                    this.RaisePropertyChanged("FileExtension");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FilePath {
+            get {
+                return this.FilePathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilePathField, value) != true)) {
+                    this.FilePathField = value;
+                    this.RaisePropertyChanged("FilePath");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WOLocationContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class WOLocationContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssetLocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssetLocationNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AssetLocationId {
+            get {
+                return this.AssetLocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssetLocationIdField, value) != true)) {
+                    this.AssetLocationIdField = value;
+                    this.RaisePropertyChanged("AssetLocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AssetLocationName {
+            get {
+                return this.AssetLocationNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssetLocationNameField, value) != true)) {
+                    this.AssetLocationNameField = value;
+                    this.RaisePropertyChanged("AssetLocationName");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FailureCodeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class FailureCodeContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FailureCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FailureCode {
+            get {
+                return this.FailureCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FailureCodeField, value) != true)) {
+                    this.FailureCodeField = value;
+                    this.RaisePropertyChanged("FailureCode");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkItemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PMWorkItemContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ItemPKIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long ItemRecIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PMUnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal QuantityConsumedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Sto_HostRIFField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Sto_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Sto_RequesterField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemName {
+            get {
+                return this.ItemNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemNameField, value) != true)) {
+                    this.ItemNameField = value;
+                    this.RaisePropertyChanged("ItemName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ItemPKId {
+            get {
+                return this.ItemPKIdField;
+            }
+            set {
+                if ((this.ItemPKIdField.Equals(value) != true)) {
+                    this.ItemPKIdField = value;
+                    this.RaisePropertyChanged("ItemPKId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long ItemRecId {
+            get {
+                return this.ItemRecIdField;
+            }
+            set {
+                if ((this.ItemRecIdField.Equals(value) != true)) {
+                    this.ItemRecIdField = value;
+                    this.RaisePropertyChanged("ItemRecId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PMUnit {
+            get {
+                return this.PMUnitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PMUnitField, value) != true)) {
+                    this.PMUnitField = value;
+                    this.RaisePropertyChanged("PMUnit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal QuantityConsumed {
+            get {
+                return this.QuantityConsumedField;
+            }
+            set {
+                if ((this.QuantityConsumedField.Equals(value) != true)) {
+                    this.QuantityConsumedField = value;
+                    this.RaisePropertyChanged("QuantityConsumed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sto_HostRIF {
+            get {
+                return this.Sto_HostRIFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Sto_HostRIFField, value) != true)) {
+                    this.Sto_HostRIFField = value;
+                    this.RaisePropertyChanged("Sto_HostRIF");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Sto_ID {
+            get {
+                return this.Sto_IDField;
+            }
+            set {
+                if ((this.Sto_IDField.Equals(value) != true)) {
+                    this.Sto_IDField = value;
+                    this.RaisePropertyChanged("Sto_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sto_Requester {
+            get {
+                return this.Sto_RequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Sto_RequesterField, value) != true)) {
+                    this.Sto_RequesterField = value;
+                    this.RaisePropertyChanged("Sto_Requester");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkOrderContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PMWorkOrderContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentGroupCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RepairCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime WOStartDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WorkOrderIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.ModulaService.PMWorkItemContract[] WorkOrderItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WorkOrderPoolCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.ModulaService.PMWorkOrderStatus WorkOrderStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWebservice.ModulaService.PMWorkOrderType WorkOrderTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentGroupCode {
+            get {
+                return this.EquipmentGroupCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentGroupCodeField, value) != true)) {
+                    this.EquipmentGroupCodeField = value;
+                    this.RaisePropertyChanged("EquipmentGroupCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentID {
+            get {
+                return this.EquipmentIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentIDField, value) != true)) {
+                    this.EquipmentIDField = value;
+                    this.RaisePropertyChanged("EquipmentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationCode {
+            get {
+                return this.LocationCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationCodeField, value) != true)) {
+                    this.LocationCodeField = value;
+                    this.RaisePropertyChanged("LocationCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RepairCode {
+            get {
+                return this.RepairCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RepairCodeField, value) != true)) {
+                    this.RepairCodeField = value;
+                    this.RaisePropertyChanged("RepairCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime WOStartDate {
+            get {
+                return this.WOStartDateField;
+            }
+            set {
+                if ((this.WOStartDateField.Equals(value) != true)) {
+                    this.WOStartDateField = value;
+                    this.RaisePropertyChanged("WOStartDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WorkOrderID {
+            get {
+                return this.WorkOrderIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkOrderIDField, value) != true)) {
+                    this.WorkOrderIDField = value;
+                    this.RaisePropertyChanged("WorkOrderID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.ModulaService.PMWorkItemContract[] WorkOrderItems {
+            get {
+                return this.WorkOrderItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkOrderItemsField, value) != true)) {
+                    this.WorkOrderItemsField = value;
+                    this.RaisePropertyChanged("WorkOrderItems");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WorkOrderPoolCode {
+            get {
+                return this.WorkOrderPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkOrderPoolCodeField, value) != true)) {
+                    this.WorkOrderPoolCodeField = value;
+                    this.RaisePropertyChanged("WorkOrderPoolCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.ModulaService.PMWorkOrderStatus WorkOrderStatus {
+            get {
+                return this.WorkOrderStatusField;
+            }
+            set {
+                if ((this.WorkOrderStatusField.Equals(value) != true)) {
+                    this.WorkOrderStatusField = value;
+                    this.RaisePropertyChanged("WorkOrderStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWebservice.ModulaService.PMWorkOrderType WorkOrderType {
+            get {
+                return this.WorkOrderTypeField;
+            }
+            set {
+                if ((this.WorkOrderTypeField.Equals(value) != true)) {
+                    this.WorkOrderTypeField = value;
+                    this.RaisePropertyChanged("WorkOrderType");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OnHandContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class OnHandContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GradeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OnHandQtyField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grade {
+            get {
+                return this.GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GradeField, value) != true)) {
+                    this.GradeField = value;
+                    this.RaisePropertyChanged("Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemDescription {
+            get {
+                return this.ItemDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemDescriptionField, value) != true)) {
+                    this.ItemDescriptionField = value;
+                    this.RaisePropertyChanged("ItemDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemNumber {
+            get {
+                return this.ItemNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
+                    this.ItemNumberField = value;
+                    this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal OnHandQty {
+            get {
+                return this.OnHandQtyField;
+            }
+            set {
+                if ((this.OnHandQtyField.Equals(value) != true)) {
+                    this.OnHandQtyField = value;
+                    this.RaisePropertyChanged("OnHandQty");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RepairCodeContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class RepairCodeContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FailureCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RepairCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FailureCode {
+            get {
+                return this.FailureCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FailureCodeField, value) != true)) {
+                    this.FailureCodeField = value;
+                    this.RaisePropertyChanged("FailureCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RepairCode {
+            get {
+                return this.RepairCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RepairCodeField, value) != true)) {
+                    this.RepairCodeField = value;
+                    this.RaisePropertyChanged("RepairCode");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WOPoolContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class WOPoolContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WOPoolCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WOPoolCode {
+            get {
+                return this.WOPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WOPoolCodeField, value) != true)) {
+                    this.WOPoolCodeField = value;
+                    this.RaisePropertyChanged("WOPoolCode");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LookupContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class LookupContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LookupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LookupStringField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LookupId {
+            get {
+                return this.LookupIdField;
+            }
+            set {
+                if ((this.LookupIdField.Equals(value) != true)) {
+                    this.LookupIdField = value;
+                    this.RaisePropertyChanged("LookupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LookupString {
+            get {
+                return this.LookupStringField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LookupStringField, value) != true)) {
+                    this.LookupStringField = value;
+                    this.RaisePropertyChanged("LookupString");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMLineCostContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class PMLineCostContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ActualCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CostCenterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CostCenterNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal ActualCost {
+            get {
+                return this.ActualCostField;
+            }
+            set {
+                if ((this.ActualCostField.Equals(value) != true)) {
+                    this.ActualCostField = value;
+                    this.RaisePropertyChanged("ActualCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CostCenter {
+            get {
+                return this.CostCenterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CostCenterField, value) != true)) {
+                    this.CostCenterField = value;
+                    this.RaisePropertyChanged("CostCenter");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CostCenterName {
+            get {
+                return this.CostCenterNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CostCenterNameField, value) != true)) {
+                    this.CostCenterNameField = value;
+                    this.RaisePropertyChanged("CostCenterName");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EamWorkitemsContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class EamWorkitemsContract : TestWebservice.ModulaService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_ActualRequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RefRequistNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_CostCenterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_HostRIFField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int parmSto_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ItemField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_OperatorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal parmSto_QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ReqNoteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime parmSto_TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long parmSto_WmsLocIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_ActualRequester {
+            get {
+                return this.parmSTO_ActualRequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_ActualRequesterField, value) != true)) {
+                    this.parmSTO_ActualRequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_ActualRequester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_RefRequistNum {
+            get {
+                return this.parmSTO_RefRequistNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RefRequistNumField, value) != true)) {
+                    this.parmSTO_RefRequistNumField = value;
+                    this.RaisePropertyChanged("parmSTO_RefRequistNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_Requester {
+            get {
+                return this.parmSTO_RequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RequesterField, value) != true)) {
+                    this.parmSTO_RequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_Requester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_CostCenter {
+            get {
+                return this.parmSto_CostCenterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_CostCenterField, value) != true)) {
+                    this.parmSto_CostCenterField = value;
+                    this.RaisePropertyChanged("parmSto_CostCenter");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_HostRIF {
+            get {
+                return this.parmSto_HostRIFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_HostRIFField, value) != true)) {
+                    this.parmSto_HostRIFField = value;
+                    this.RaisePropertyChanged("parmSto_HostRIF");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int parmSto_ID {
+            get {
+                return this.parmSto_IDField;
+            }
+            set {
+                if ((this.parmSto_IDField.Equals(value) != true)) {
+                    this.parmSto_IDField = value;
+                    this.RaisePropertyChanged("parmSto_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Item {
+            get {
+                return this.parmSto_ItemField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ItemField, value) != true)) {
+                    this.parmSto_ItemField = value;
+                    this.RaisePropertyChanged("parmSto_Item");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Operator {
+            get {
+                return this.parmSto_OperatorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_OperatorField, value) != true)) {
+                    this.parmSto_OperatorField = value;
+                    this.RaisePropertyChanged("parmSto_Operator");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal parmSto_Quantity {
+            get {
+                return this.parmSto_QuantityField;
+            }
+            set {
+                if ((this.parmSto_QuantityField.Equals(value) != true)) {
+                    this.parmSto_QuantityField = value;
+                    this.RaisePropertyChanged("parmSto_Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_ReqNote {
+            get {
+                return this.parmSto_ReqNoteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ReqNoteField, value) != true)) {
+                    this.parmSto_ReqNoteField = value;
+                    this.RaisePropertyChanged("parmSto_ReqNote");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime parmSto_Time {
+            get {
+                return this.parmSto_TimeField;
+            }
+            set {
+                if ((this.parmSto_TimeField.Equals(value) != true)) {
+                    this.parmSto_TimeField = value;
+                    this.RaisePropertyChanged("parmSto_Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long parmSto_WmsLocID {
+            get {
+                return this.parmSto_WmsLocIDField;
+            }
+            set {
+                if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
+                    this.parmSto_WmsLocIDField = value;
+                    this.RaisePropertyChanged("parmSto_WmsLocID");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkOrderStatus", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public enum PMWorkOrderStatus : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Created = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Approved = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Released = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WorkInProgress = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Cancelled = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Completed = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Posted = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Closed = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EPMove = 8,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkOrderType", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public enum PMWorkOrderType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        MaintenanceOrder = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Inspection = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Improvement = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Installation = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Troubleshooting = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Preventive = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ScheduledMaintenance = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Consumable = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ToolsSafetyEquipment = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Uniform = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        StationeryANDcomputer = 10,
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ModulaService.IModulaPR")]
@@ -27,6 +1277,9 @@ namespace TestWebservice.ModulaService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetEquipments", ReplyAction="http://tempuri.org/IModulaPR/GetEquipmentsResponse")]
         SyncServices.PMEquipment[] GetEquipments();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/SearchEquipments", ReplyAction="http://tempuri.org/IModulaPR/SearchEquipmentsResponse")]
+        SyncServices.PMEquipment[] SearchEquipments(string search);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetFailureCodes", ReplyAction="http://tempuri.org/IModulaPR/GetFailureCodesResponse")]
         SyncServices.PMFailureCode[] GetFailureCodes();
         
@@ -37,16 +1290,19 @@ namespace TestWebservice.ModulaService {
         SyncServices.PMEquipment GetEquipment(string equipId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetWorkOrderTypes", ReplyAction="http://tempuri.org/IModulaPR/GetWorkOrderTypesResponse")]
-        SyncServices.EAMServices.WOTypeContract[] GetWorkOrderTypes();
+        TestWebservice.ModulaService.WOTypeContract[] GetWorkOrderTypes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetEquipLocations", ReplyAction="http://tempuri.org/IModulaPR/GetEquipLocationsResponse")]
-        SyncServices.EAMServices.WOLocationContract[] GetEquipLocations();
+        TestWebservice.ModulaService.WOLocationContract[] GetEquipLocations();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetInlineWorkItems", ReplyAction="http://tempuri.org/IModulaPR/GetInlineWorkItemsResponse")]
         SyncServices.PMWorkItem[] GetInlineWorkItems(string workOrderId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetOtherWorkItems", ReplyAction="http://tempuri.org/IModulaPR/GetOtherWorkItemsResponse")]
-        SyncServices.PMWorkItem[] GetOtherWorkItems(string workOrderId, string search, int topRecords);
+        SyncServices.PMWorkItem[] GetOtherWorkItems(string workOrderId, string search, int topRecords, bool isItemCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetlatestWorkOrder", ReplyAction="http://tempuri.org/IModulaPR/GetlatestWorkOrderResponse")]
+        SyncServices.PMWorkOrder GetlatestWorkOrder(string workOrderId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/SaveWorkOrder", ReplyAction="http://tempuri.org/IModulaPR/SaveWorkOrderResponse")]
         SyncServices.PMWorkOrder SaveWorkOrder(SyncServices.PMWorkOrder entity);
@@ -56,6 +1312,12 @@ namespace TestWebservice.ModulaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/DeleteWorkItem", ReplyAction="http://tempuri.org/IModulaPR/DeleteWorkItemResponse")]
         int DeleteWorkItem(string workOrderId, int sto_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/DownloadFile", ReplyAction="http://tempuri.org/IModulaPR/DownloadFileResponse")]
+        byte[] DownloadFile(ref string fileName, string filePath);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/MainCostByProdLine", ReplyAction="http://tempuri.org/IModulaPR/MainCostByProdLineResponse")]
+        TestWebservice.ModulaService.PMLineCostContract[] MainCostByProdLine(System.DateTime startDate, System.DateTime endDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IModulaPR/GetPing", ReplyAction="http://tempuri.org/IModulaPR/GetPingResponse")]
         string GetPing();
@@ -104,6 +1366,10 @@ namespace TestWebservice.ModulaService {
             return base.Channel.GetEquipments();
         }
         
+        public SyncServices.PMEquipment[] SearchEquipments(string search) {
+            return base.Channel.SearchEquipments(search);
+        }
+        
         public SyncServices.PMFailureCode[] GetFailureCodes() {
             return base.Channel.GetFailureCodes();
         }
@@ -116,11 +1382,11 @@ namespace TestWebservice.ModulaService {
             return base.Channel.GetEquipment(equipId);
         }
         
-        public SyncServices.EAMServices.WOTypeContract[] GetWorkOrderTypes() {
+        public TestWebservice.ModulaService.WOTypeContract[] GetWorkOrderTypes() {
             return base.Channel.GetWorkOrderTypes();
         }
         
-        public SyncServices.EAMServices.WOLocationContract[] GetEquipLocations() {
+        public TestWebservice.ModulaService.WOLocationContract[] GetEquipLocations() {
             return base.Channel.GetEquipLocations();
         }
         
@@ -128,8 +1394,12 @@ namespace TestWebservice.ModulaService {
             return base.Channel.GetInlineWorkItems(workOrderId);
         }
         
-        public SyncServices.PMWorkItem[] GetOtherWorkItems(string workOrderId, string search, int topRecords) {
-            return base.Channel.GetOtherWorkItems(workOrderId, search, topRecords);
+        public SyncServices.PMWorkItem[] GetOtherWorkItems(string workOrderId, string search, int topRecords, bool isItemCode) {
+            return base.Channel.GetOtherWorkItems(workOrderId, search, topRecords, isItemCode);
+        }
+        
+        public SyncServices.PMWorkOrder GetlatestWorkOrder(string workOrderId) {
+            return base.Channel.GetlatestWorkOrder(workOrderId);
         }
         
         public SyncServices.PMWorkOrder SaveWorkOrder(SyncServices.PMWorkOrder entity) {
@@ -142,6 +1412,14 @@ namespace TestWebservice.ModulaService {
         
         public int DeleteWorkItem(string workOrderId, int sto_id) {
             return base.Channel.DeleteWorkItem(workOrderId, sto_id);
+        }
+        
+        public byte[] DownloadFile(ref string fileName, string filePath) {
+            return base.Channel.DownloadFile(ref fileName, filePath);
+        }
+        
+        public TestWebservice.ModulaService.PMLineCostContract[] MainCostByProdLine(System.DateTime startDate, System.DateTime endDate) {
+            return base.Channel.MainCostByProdLine(startDate, endDate);
         }
         
         public string GetPing() {

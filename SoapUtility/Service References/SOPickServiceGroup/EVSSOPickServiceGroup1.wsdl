@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="SOPickService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SOPickServiceGroup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="BasicHttpBinding_SOPickService_policy">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="EVSSOPickService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EVSSOPickServiceGroup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_EVSSOPickService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -25,13 +25,13 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="SOPickService" location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup?wsdl=wsdl0" />
+  <wsdl:import namespace="EVSSOPickService" location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EVSSOPickServiceGroup?wsdl=wsdl0" />
   <wsdl:types />
-  <wsdl:binding name="BasicHttpBinding_SOPickService" type="i0:SOPickService">
-    <wsp:PolicyReference URI="#BasicHttpBinding_SOPickService_policy" />
+  <wsdl:binding name="BasicHttpBinding_EVSSOPickService" type="i0:EVSSOPickService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_EVSSOPickService_policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ChangeTruckLoadingLine">
-      <soap:operation soapAction="SOPickService/SOPickService/ChangeTruckLoadingLine" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/ChangeTruckLoadingLine" style="document" />
       <wsdl:input name="ChangeTruckLoadingLine">
         <soap:header message="i0:ChangeTruckLoadingLine_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -45,7 +45,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CheckPalletAvailable">
-      <soap:operation soapAction="SOPickService/SOPickService/CheckPalletAvailable" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/CheckPalletAvailable" style="document" />
       <wsdl:input name="CheckPalletAvailable">
         <soap:header message="i0:CheckPalletAvailable_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -59,7 +59,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CheckPalletAvailableMulti">
-      <soap:operation soapAction="SOPickService/SOPickService/CheckPalletAvailableMulti" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/CheckPalletAvailableMulti" style="document" />
       <wsdl:input name="CheckPalletAvailableMulti">
         <soap:header message="i0:CheckPalletAvailableMulti_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -73,7 +73,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CustomersDeliveryByQty">
-      <soap:operation soapAction="SOPickService/SOPickService/CustomersDeliveryByQty" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/CustomersDeliveryByQty" style="document" />
       <wsdl:input name="CustomersDeliveryByQty">
         <soap:header message="i0:CustomersDeliveryByQty_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -87,7 +87,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CustomersDeliveryByTrucks">
-      <soap:operation soapAction="SOPickService/SOPickService/CustomersDeliveryByTrucks" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/CustomersDeliveryByTrucks" style="document" />
       <wsdl:input name="CustomersDeliveryByTrucks">
         <soap:header message="i0:CustomersDeliveryByTrucks_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -101,7 +101,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="findPickingList">
-      <soap:operation soapAction="SOPickService/SOPickService/findPickingList" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/findPickingList" style="document" />
       <wsdl:input name="findPickingList">
         <soap:header message="i0:findPickingList_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -115,7 +115,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="findSalesOrder">
-      <soap:operation soapAction="SOPickService/SOPickService/findSalesOrder" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/findSalesOrder" style="document" />
       <wsdl:input name="findSalesOrder">
         <soap:header message="i0:findSalesOrder_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -129,7 +129,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="findSalesOrdersList">
-      <soap:operation soapAction="SOPickService/SOPickService/findSalesOrdersList" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/findSalesOrdersList" style="document" />
       <wsdl:input name="findSalesOrdersList">
         <soap:header message="i0:findSalesOrdersList_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -143,7 +143,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCustomerDeliveries">
-      <soap:operation soapAction="SOPickService/SOPickService/GetCustomerDeliveries" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetCustomerDeliveries" style="document" />
       <wsdl:input name="GetCustomerDeliveries">
         <soap:header message="i0:GetCustomerDeliveries_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -157,7 +157,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCustomerDeliveriesByStatus">
-      <soap:operation soapAction="SOPickService/SOPickService/GetCustomerDeliveriesByStatus" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetCustomerDeliveriesByStatus" style="document" />
       <wsdl:input name="GetCustomerDeliveriesByStatus">
         <soap:header message="i0:GetCustomerDeliveriesByStatus_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -171,7 +171,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetDailyDeliverySummaryByCust">
-      <soap:operation soapAction="SOPickService/SOPickService/GetDailyDeliverySummaryByCust" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetDailyDeliverySummaryByCust" style="document" />
       <wsdl:input name="GetDailyDeliverySummaryByCust">
         <soap:header message="i0:GetDailyDeliverySummaryByCust_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -185,7 +185,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetDeliveries">
-      <soap:operation soapAction="SOPickService/SOPickService/GetDeliveries" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetDeliveries" style="document" />
       <wsdl:input name="GetDeliveries">
         <soap:header message="i0:GetDeliveries_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -199,7 +199,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetDeliveryStatusLookup">
-      <soap:operation soapAction="SOPickService/SOPickService/GetDeliveryStatusLookup" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetDeliveryStatusLookup" style="document" />
       <wsdl:input name="GetDeliveryStatusLookup">
         <soap:header message="i0:GetDeliveryStatusLookup_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -213,7 +213,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetDeliverySummaryByCust">
-      <soap:operation soapAction="SOPickService/SOPickService/GetDeliverySummaryByCust" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetDeliverySummaryByCust" style="document" />
       <wsdl:input name="GetDeliverySummaryByCust">
         <soap:header message="i0:GetDeliverySummaryByCust_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -227,7 +227,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetFGLines">
-      <soap:operation soapAction="SOPickService/SOPickService/GetFGLines" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetFGLines" style="document" />
       <wsdl:input name="GetFGLines">
         <soap:header message="i0:GetFGLines_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -241,7 +241,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetLatestPallets">
-      <soap:operation soapAction="SOPickService/SOPickService/GetLatestPallets" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetLatestPallets" style="document" />
       <wsdl:input name="GetLatestPallets">
         <soap:header message="i0:GetLatestPallets_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -255,7 +255,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetOpenPickingListByCustByItem">
-      <soap:operation soapAction="SOPickService/SOPickService/GetOpenPickingListByCustByItem" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetOpenPickingListByCustByItem" style="document" />
       <wsdl:input name="GetOpenPickingListByCustByItem">
         <soap:header message="i0:GetOpenPickingListByCustByItem_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -269,7 +269,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetPalletInfo">
-      <soap:operation soapAction="SOPickService/SOPickService/GetPalletInfo" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetPalletInfo" style="document" />
       <wsdl:input name="GetPalletInfo">
         <soap:header message="i0:GetPalletInfo_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -283,7 +283,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetSingleDelivery">
-      <soap:operation soapAction="SOPickService/SOPickService/GetSingleDelivery" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/GetSingleDelivery" style="document" />
       <wsdl:input name="GetSingleDelivery">
         <soap:header message="i0:GetSingleDelivery_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -297,7 +297,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="LoginDevice">
-      <soap:operation soapAction="SOPickService/SOPickService/LoginDevice" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/LoginDevice" style="document" />
       <wsdl:input name="LoginDevice">
         <soap:header message="i0:LoginDevice_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -311,7 +311,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ReceivePickingList">
-      <soap:operation soapAction="SOPickService/SOPickService/ReceivePickingList" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/ReceivePickingList" style="document" />
       <wsdl:input name="ReceivePickingList">
         <soap:header message="i0:ReceivePickingList_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -325,7 +325,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ReservePallets">
-      <soap:operation soapAction="SOPickService/SOPickService/ReservePallets" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/ReservePallets" style="document" />
       <wsdl:input name="ReservePallets">
         <soap:header message="i0:ReservePallets_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -339,7 +339,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SaveHistory">
-      <soap:operation soapAction="SOPickService/SOPickService/SaveHistory" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/SaveHistory" style="document" />
       <wsdl:input name="SaveHistory">
         <soap:header message="i0:SaveHistory_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -353,7 +353,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SavePickingLoad">
-      <soap:operation soapAction="SOPickService/SOPickService/SavePickingLoad" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/SavePickingLoad" style="document" />
       <wsdl:input name="SavePickingLoad">
         <soap:header message="i0:SavePickingLoad_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -367,7 +367,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="UnreservePallet">
-      <soap:operation soapAction="SOPickService/SOPickService/UnreservePallet" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/UnreservePallet" style="document" />
       <wsdl:input name="UnreservePallet">
         <soap:header message="i0:UnreservePallet_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -381,7 +381,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SalesDeliveryNote">
-      <soap:operation soapAction="SOPickService/SOPickService/SalesDeliveryNote" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/SalesDeliveryNote" style="document" />
       <wsdl:input name="SalesDeliveryNote">
         <soap:header message="i0:SalesDeliveryNote_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -395,7 +395,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="PalletsReserving">
-      <soap:operation soapAction="SOPickService/SOPickService/PalletsReserving" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/PalletsReserving" style="document" />
       <wsdl:input name="PalletsReserving">
         <soap:header message="i0:PalletsReserving_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -409,7 +409,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="Evs_ServiceMessage">
-      <soap:operation soapAction="SOPickService/SOPickService/Evs_ServiceMessage" style="document" />
+      <soap:operation soapAction="EVSSOPickService/EVSSOPickService/Evs_ServiceMessage" style="document" />
       <wsdl:input name="Evs_ServiceMessage">
         <soap:header message="i0:Evs_ServiceMessage_Headers" part="callContext" use="literal" />
         <soap:body use="literal" />
@@ -423,9 +423,9 @@
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="SOPickServiceGroup">
-    <wsdl:port name="BasicHttpBinding_SOPickService" binding="tns:BasicHttpBinding_SOPickService">
-      <soap:address location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SOPickServiceGroup" />
+  <wsdl:service name="EVSSOPickServiceGroup">
+    <wsdl:port name="BasicHttpBinding_EVSSOPickService" binding="tns:BasicHttpBinding_EVSSOPickService">
+      <soap:address location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EVSSOPickServiceGroup" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

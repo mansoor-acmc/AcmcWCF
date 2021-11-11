@@ -308,18 +308,17 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesTableContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.FGDeliveryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.LookupContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.FGLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PLNotDeliveredContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesLineContract))]
     public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -349,26 +348,18 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesTableContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.FGDeliveryContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.LookupContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.FGLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PLNotDeliveredContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesLineContract))]
     public partial class XppObjectBase : SoapUtility.SOPickServiceGroup.ProxyBase {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="List", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
-    [System.SerializableAttribute()]
-    public partial class List : SoapUtility.SOPickServiceGroup.XppObjectBase {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -570,646 +561,326 @@ namespace SoapUtility.SOPickServiceGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SalesTableContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EVSSalesTableContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class SalesTableContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
+    public partial class EVSSalesTableContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmAccountNumField;
+        private string CustomerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmCustomerNameField;
+        private string CustomerNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime @__k_parmDeliveryDateField;
+        private System.DateTime DeliveryDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmDeliveryNameField;
+        private string DeliveryModeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmDlvModeField;
+        private string DeliveryNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmDriverNameField;
+        private string DriverNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes @__k_parmHalfPalletField;
+        private SoapUtility.SOPickServiceGroup.NoYes HalfPalletField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmPackingSlipField;
+        private string PackingSlipField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmPickingIdField;
+        private string PickingIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmSalesIdField;
+        private string SalesIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] @__k_parmSalesLinesField;
+        private SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] SalesLinesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmSalesNameField;
+        private string SalesNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmSalesStatusField;
+        private int SalesStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmSalesTypeField;
+        private int SalesTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes @__k_parmSameConfigurationField;
+        private SoapUtility.SOPickServiceGroup.NoYes SameConfigurationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime @__k_parmStartLoadField;
+        private System.DateTime StartLoadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime @__k_parmStopLoadField;
+        private System.DateTime StopLoadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int @__k_parmTruckLoadLineField;
+        private int TruckLoadLineField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmTruckPlateField;
+        private string TruckPlateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string @__k_parmTruckTicketField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string accountNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string customerNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.Date deliveryDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string deliveryNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string dlvModeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string driverNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes halfPalletField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string pSlipIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string pickingIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string salesIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.List salesLineField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string salesNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string salesStatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string salesTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.NoYes sameConfigField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.utcdatetime startLoadField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SoapUtility.SOPickServiceGroup.utcdatetime stopLoadField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ticketNumFGField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int truckLineNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string truckPlateField;
+        private string TruckTicketField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmAccountNum {
+        public string CustomerId {
             get {
-                return this.@__k_parmAccountNumField;
+                return this.CustomerIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmAccountNumField, value) != true)) {
-                    this.@__k_parmAccountNumField = value;
-                    this.RaisePropertyChanged("__k_parmAccountNum");
+                if ((object.ReferenceEquals(this.CustomerIdField, value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmCustomerName {
+        public string CustomerName {
             get {
-                return this.@__k_parmCustomerNameField;
+                return this.CustomerNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmCustomerNameField, value) != true)) {
-                    this.@__k_parmCustomerNameField = value;
-                    this.RaisePropertyChanged("__k_parmCustomerName");
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime @__k_parmDeliveryDate {
+        public System.DateTime DeliveryDate {
             get {
-                return this.@__k_parmDeliveryDateField;
+                return this.DeliveryDateField;
             }
             set {
-                if ((this.@__k_parmDeliveryDateField.Equals(value) != true)) {
-                    this.@__k_parmDeliveryDateField = value;
-                    this.RaisePropertyChanged("__k_parmDeliveryDate");
+                if ((this.DeliveryDateField.Equals(value) != true)) {
+                    this.DeliveryDateField = value;
+                    this.RaisePropertyChanged("DeliveryDate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmDeliveryName {
+        public string DeliveryMode {
             get {
-                return this.@__k_parmDeliveryNameField;
+                return this.DeliveryModeField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmDeliveryNameField, value) != true)) {
-                    this.@__k_parmDeliveryNameField = value;
-                    this.RaisePropertyChanged("__k_parmDeliveryName");
+                if ((object.ReferenceEquals(this.DeliveryModeField, value) != true)) {
+                    this.DeliveryModeField = value;
+                    this.RaisePropertyChanged("DeliveryMode");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmDlvMode {
+        public string DeliveryName {
             get {
-                return this.@__k_parmDlvModeField;
+                return this.DeliveryNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmDlvModeField, value) != true)) {
-                    this.@__k_parmDlvModeField = value;
-                    this.RaisePropertyChanged("__k_parmDlvMode");
+                if ((object.ReferenceEquals(this.DeliveryNameField, value) != true)) {
+                    this.DeliveryNameField = value;
+                    this.RaisePropertyChanged("DeliveryName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmDriverName {
+        public string DriverName {
             get {
-                return this.@__k_parmDriverNameField;
+                return this.DriverNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmDriverNameField, value) != true)) {
-                    this.@__k_parmDriverNameField = value;
-                    this.RaisePropertyChanged("__k_parmDriverName");
+                if ((object.ReferenceEquals(this.DriverNameField, value) != true)) {
+                    this.DriverNameField = value;
+                    this.RaisePropertyChanged("DriverName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes @__k_parmHalfPallet {
+        public SoapUtility.SOPickServiceGroup.NoYes HalfPallet {
             get {
-                return this.@__k_parmHalfPalletField;
+                return this.HalfPalletField;
             }
             set {
-                if ((this.@__k_parmHalfPalletField.Equals(value) != true)) {
-                    this.@__k_parmHalfPalletField = value;
-                    this.RaisePropertyChanged("__k_parmHalfPallet");
+                if ((this.HalfPalletField.Equals(value) != true)) {
+                    this.HalfPalletField = value;
+                    this.RaisePropertyChanged("HalfPallet");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmPackingSlip {
+        public string PackingSlip {
             get {
-                return this.@__k_parmPackingSlipField;
+                return this.PackingSlipField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmPackingSlipField, value) != true)) {
-                    this.@__k_parmPackingSlipField = value;
-                    this.RaisePropertyChanged("__k_parmPackingSlip");
+                if ((object.ReferenceEquals(this.PackingSlipField, value) != true)) {
+                    this.PackingSlipField = value;
+                    this.RaisePropertyChanged("PackingSlip");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmPickingId {
+        public string PickingId {
             get {
-                return this.@__k_parmPickingIdField;
+                return this.PickingIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmPickingIdField, value) != true)) {
-                    this.@__k_parmPickingIdField = value;
-                    this.RaisePropertyChanged("__k_parmPickingId");
+                if ((object.ReferenceEquals(this.PickingIdField, value) != true)) {
+                    this.PickingIdField = value;
+                    this.RaisePropertyChanged("PickingId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmSalesId {
+        public string SalesId {
             get {
-                return this.@__k_parmSalesIdField;
+                return this.SalesIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmSalesIdField, value) != true)) {
-                    this.@__k_parmSalesIdField = value;
-                    this.RaisePropertyChanged("__k_parmSalesId");
+                if ((object.ReferenceEquals(this.SalesIdField, value) != true)) {
+                    this.SalesIdField = value;
+                    this.RaisePropertyChanged("SalesId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] @__k_parmSalesLines {
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] SalesLines {
             get {
-                return this.@__k_parmSalesLinesField;
+                return this.SalesLinesField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmSalesLinesField, value) != true)) {
-                    this.@__k_parmSalesLinesField = value;
-                    this.RaisePropertyChanged("__k_parmSalesLines");
+                if ((object.ReferenceEquals(this.SalesLinesField, value) != true)) {
+                    this.SalesLinesField = value;
+                    this.RaisePropertyChanged("SalesLines");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmSalesName {
+        public string SalesName {
             get {
-                return this.@__k_parmSalesNameField;
+                return this.SalesNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmSalesNameField, value) != true)) {
-                    this.@__k_parmSalesNameField = value;
-                    this.RaisePropertyChanged("__k_parmSalesName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string @__k_parmSalesStatus {
-            get {
-                return this.@__k_parmSalesStatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.@__k_parmSalesStatusField, value) != true)) {
-                    this.@__k_parmSalesStatusField = value;
-                    this.RaisePropertyChanged("__k_parmSalesStatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string @__k_parmSalesType {
-            get {
-                return this.@__k_parmSalesTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.@__k_parmSalesTypeField, value) != true)) {
-                    this.@__k_parmSalesTypeField = value;
-                    this.RaisePropertyChanged("__k_parmSalesType");
+                if ((object.ReferenceEquals(this.SalesNameField, value) != true)) {
+                    this.SalesNameField = value;
+                    this.RaisePropertyChanged("SalesName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes @__k_parmSameConfiguration {
+        public int SalesStatus {
             get {
-                return this.@__k_parmSameConfigurationField;
+                return this.SalesStatusField;
             }
             set {
-                if ((this.@__k_parmSameConfigurationField.Equals(value) != true)) {
-                    this.@__k_parmSameConfigurationField = value;
-                    this.RaisePropertyChanged("__k_parmSameConfiguration");
+                if ((this.SalesStatusField.Equals(value) != true)) {
+                    this.SalesStatusField = value;
+                    this.RaisePropertyChanged("SalesStatus");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime @__k_parmStartLoad {
+        public int SalesType {
             get {
-                return this.@__k_parmStartLoadField;
+                return this.SalesTypeField;
             }
             set {
-                if ((this.@__k_parmStartLoadField.Equals(value) != true)) {
-                    this.@__k_parmStartLoadField = value;
-                    this.RaisePropertyChanged("__k_parmStartLoad");
+                if ((this.SalesTypeField.Equals(value) != true)) {
+                    this.SalesTypeField = value;
+                    this.RaisePropertyChanged("SalesType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime @__k_parmStopLoad {
+        public SoapUtility.SOPickServiceGroup.NoYes SameConfiguration {
             get {
-                return this.@__k_parmStopLoadField;
+                return this.SameConfigurationField;
             }
             set {
-                if ((this.@__k_parmStopLoadField.Equals(value) != true)) {
-                    this.@__k_parmStopLoadField = value;
-                    this.RaisePropertyChanged("__k_parmStopLoad");
+                if ((this.SameConfigurationField.Equals(value) != true)) {
+                    this.SameConfigurationField = value;
+                    this.RaisePropertyChanged("SameConfiguration");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int @__k_parmTruckLoadLine {
+        public System.DateTime StartLoad {
             get {
-                return this.@__k_parmTruckLoadLineField;
+                return this.StartLoadField;
             }
             set {
-                if ((this.@__k_parmTruckLoadLineField.Equals(value) != true)) {
-                    this.@__k_parmTruckLoadLineField = value;
-                    this.RaisePropertyChanged("__k_parmTruckLoadLine");
+                if ((this.StartLoadField.Equals(value) != true)) {
+                    this.StartLoadField = value;
+                    this.RaisePropertyChanged("StartLoad");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmTruckPlate {
+        public System.DateTime StopLoad {
             get {
-                return this.@__k_parmTruckPlateField;
+                return this.StopLoadField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmTruckPlateField, value) != true)) {
-                    this.@__k_parmTruckPlateField = value;
-                    this.RaisePropertyChanged("__k_parmTruckPlate");
+                if ((this.StopLoadField.Equals(value) != true)) {
+                    this.StopLoadField = value;
+                    this.RaisePropertyChanged("StopLoad");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string @__k_parmTruckTicket {
+        public int TruckLoadLine {
             get {
-                return this.@__k_parmTruckTicketField;
+                return this.TruckLoadLineField;
             }
             set {
-                if ((object.ReferenceEquals(this.@__k_parmTruckTicketField, value) != true)) {
-                    this.@__k_parmTruckTicketField = value;
-                    this.RaisePropertyChanged("__k_parmTruckTicket");
+                if ((this.TruckLoadLineField.Equals(value) != true)) {
+                    this.TruckLoadLineField = value;
+                    this.RaisePropertyChanged("TruckLoadLine");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string accountNum {
+        public string TruckPlate {
             get {
-                return this.accountNumField;
+                return this.TruckPlateField;
             }
             set {
-                if ((object.ReferenceEquals(this.accountNumField, value) != true)) {
-                    this.accountNumField = value;
-                    this.RaisePropertyChanged("accountNum");
+                if ((object.ReferenceEquals(this.TruckPlateField, value) != true)) {
+                    this.TruckPlateField = value;
+                    this.RaisePropertyChanged("TruckPlate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string customerName {
+        public string TruckTicket {
             get {
-                return this.customerNameField;
+                return this.TruckTicketField;
             }
             set {
-                if ((object.ReferenceEquals(this.customerNameField, value) != true)) {
-                    this.customerNameField = value;
-                    this.RaisePropertyChanged("customerName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.Date deliveryDate {
-            get {
-                return this.deliveryDateField;
-            }
-            set {
-                if ((this.deliveryDateField.Equals(value) != true)) {
-                    this.deliveryDateField = value;
-                    this.RaisePropertyChanged("deliveryDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string deliveryName {
-            get {
-                return this.deliveryNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.deliveryNameField, value) != true)) {
-                    this.deliveryNameField = value;
-                    this.RaisePropertyChanged("deliveryName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string dlvMode {
-            get {
-                return this.dlvModeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dlvModeField, value) != true)) {
-                    this.dlvModeField = value;
-                    this.RaisePropertyChanged("dlvMode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string driverName {
-            get {
-                return this.driverNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.driverNameField, value) != true)) {
-                    this.driverNameField = value;
-                    this.RaisePropertyChanged("driverName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes halfPallet {
-            get {
-                return this.halfPalletField;
-            }
-            set {
-                if ((this.halfPalletField.Equals(value) != true)) {
-                    this.halfPalletField = value;
-                    this.RaisePropertyChanged("halfPallet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string pSlipId {
-            get {
-                return this.pSlipIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.pSlipIdField, value) != true)) {
-                    this.pSlipIdField = value;
-                    this.RaisePropertyChanged("pSlipId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string pickingId {
-            get {
-                return this.pickingIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.pickingIdField, value) != true)) {
-                    this.pickingIdField = value;
-                    this.RaisePropertyChanged("pickingId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string salesId {
-            get {
-                return this.salesIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesIdField, value) != true)) {
-                    this.salesIdField = value;
-                    this.RaisePropertyChanged("salesId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.List salesLine {
-            get {
-                return this.salesLineField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesLineField, value) != true)) {
-                    this.salesLineField = value;
-                    this.RaisePropertyChanged("salesLine");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string salesName {
-            get {
-                return this.salesNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesNameField, value) != true)) {
-                    this.salesNameField = value;
-                    this.RaisePropertyChanged("salesName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string salesStatus {
-            get {
-                return this.salesStatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesStatusField, value) != true)) {
-                    this.salesStatusField = value;
-                    this.RaisePropertyChanged("salesStatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string salesType {
-            get {
-                return this.salesTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salesTypeField, value) != true)) {
-                    this.salesTypeField = value;
-                    this.RaisePropertyChanged("salesType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.NoYes sameConfig {
-            get {
-                return this.sameConfigField;
-            }
-            set {
-                if ((this.sameConfigField.Equals(value) != true)) {
-                    this.sameConfigField = value;
-                    this.RaisePropertyChanged("sameConfig");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.utcdatetime startLoad {
-            get {
-                return this.startLoadField;
-            }
-            set {
-                if ((this.startLoadField.Equals(value) != true)) {
-                    this.startLoadField = value;
-                    this.RaisePropertyChanged("startLoad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SoapUtility.SOPickServiceGroup.utcdatetime stopLoad {
-            get {
-                return this.stopLoadField;
-            }
-            set {
-                if ((this.stopLoadField.Equals(value) != true)) {
-                    this.stopLoadField = value;
-                    this.RaisePropertyChanged("stopLoad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ticketNumFG {
-            get {
-                return this.ticketNumFGField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ticketNumFGField, value) != true)) {
-                    this.ticketNumFGField = value;
-                    this.RaisePropertyChanged("ticketNumFG");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int truckLineNum {
-            get {
-                return this.truckLineNumField;
-            }
-            set {
-                if ((this.truckLineNumField.Equals(value) != true)) {
-                    this.truckLineNumField = value;
-                    this.RaisePropertyChanged("truckLineNum");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string truckPlate {
-            get {
-                return this.truckPlateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.truckPlateField, value) != true)) {
-                    this.truckPlateField = value;
-                    this.RaisePropertyChanged("truckPlate");
+                if ((object.ReferenceEquals(this.TruckTicketField, value) != true)) {
+                    this.TruckTicketField = value;
+                    this.RaisePropertyChanged("TruckTicket");
                 }
             }
         }
@@ -1219,6 +890,8 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.NoYes))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.ProxyBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CallContext))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Infolog))]
@@ -1226,22 +899,17 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InfologEntry))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InfologType))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.NoYes))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.List))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesLineContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletItemContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesLineContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesLineContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CustomerDeliveryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesTableContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.SalesTableContract[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.EVSSalesTableContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.FGDeliveryContract[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickingListStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.LookupContract[]))]
@@ -1252,8 +920,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PLNotDeliveredContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Date))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.utcdatetime))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
     public partial class FGDeliveryContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2062,9 +1729,9 @@ namespace SoapUtility.SOPickServiceGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SalesLineContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EVSSalesLineContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class SalesLineContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
+    public partial class EVSSalesLineContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool ExclusiveHalfPalletField;
@@ -2519,107 +2186,6 @@ namespace SoapUtility.SOPickServiceGroup {
         PickingList = 4,
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Date", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp.AxShared")]
-    [System.SerializableAttribute()]
-    public partial struct Date : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private System.DateTime _valueField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _value {
-            get {
-                return this._valueField;
-            }
-            set {
-                if ((this._valueField.Equals(value) != true)) {
-                    this._valueField = value;
-                    this.RaisePropertyChanged("_value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="utcdatetime", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp.AxShared")]
-    [System.SerializableAttribute()]
-    public partial struct utcdatetime : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private System.DateTime _valueField;
-        
-        private int ruleIdField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _value {
-            get {
-                return this._valueField;
-            }
-            set {
-                if ((this._valueField.Equals(value) != true)) {
-                    this._valueField = value;
-                    this.RaisePropertyChanged("_value");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int ruleId {
-            get {
-                return this.ruleIdField;
-            }
-            set {
-                if ((this.ruleIdField.Equals(value) != true)) {
-                    this.ruleIdField = value;
-                    this.RaisePropertyChanged("ruleId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="NoYes", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     public enum NoYes : int {
@@ -2646,163 +2212,163 @@ namespace SoapUtility.SOPickServiceGroup {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="SOPickService", ConfigurationName="SOPickServiceGroup.SOPickService")]
-    public interface SOPickService {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="EVSSOPickService", ConfigurationName="SOPickServiceGroup.EVSSOPickService")]
+    public interface EVSSOPickService {
         
         // CODEGEN: Generating message contract since message ChangeTruckLoadingLine has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ChangeTruckLoadingLine", ReplyAction="SOPickService/SOPickService/ChangeTruckLoadingLineResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/ChangeTruckLoadingLine", ReplyAction="EVSSOPickService/EVSSOPickService/ChangeTruckLoadingLineResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse ChangeTruckLoadingLine(SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLine request);
         
         // CODEGEN: Generating message contract since message CheckPalletAvailable has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CheckPalletAvailable", ReplyAction="SOPickService/SOPickService/CheckPalletAvailableResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/CheckPalletAvailable", ReplyAction="EVSSOPickService/EVSSOPickService/CheckPalletAvailableResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CheckPalletAvailable request);
         
         // CODEGEN: Generating message contract since message CheckPalletAvailableMulti has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CheckPalletAvailableMulti", ReplyAction="SOPickService/SOPickService/CheckPalletAvailableMultiResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/CheckPalletAvailableMulti", ReplyAction="EVSSOPickService/EVSSOPickService/CheckPalletAvailableMultiResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti request);
         
         // CODEGEN: Generating message contract since message CustomersDeliveryByQty has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CustomersDeliveryByQty", ReplyAction="SOPickService/SOPickService/CustomersDeliveryByQtyResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/CustomersDeliveryByQty", ReplyAction="EVSSOPickService/EVSSOPickService/CustomersDeliveryByQtyResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse CustomersDeliveryByQty(SoapUtility.SOPickServiceGroup.CustomersDeliveryByQty request);
         
         // CODEGEN: Generating message contract since message CustomersDeliveryByTrucks has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/CustomersDeliveryByTrucks", ReplyAction="SOPickService/SOPickService/CustomersDeliveryByTrucksResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/CustomersDeliveryByTrucks", ReplyAction="EVSSOPickService/EVSSOPickService/CustomersDeliveryByTrucksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse CustomersDeliveryByTrucks(SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucks request);
         
         // CODEGEN: Generating message contract since message findPickingList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findPickingList", ReplyAction="SOPickService/SOPickService/findPickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/findPickingList", ReplyAction="EVSSOPickService/EVSSOPickService/findPickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findPickingListResponse findPickingList(SoapUtility.SOPickServiceGroup.findPickingList request);
         
         // CODEGEN: Generating message contract since message findSalesOrder has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findSalesOrder", ReplyAction="SOPickService/SOPickService/findSalesOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/findSalesOrder", ReplyAction="EVSSOPickService/EVSSOPickService/findSalesOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findSalesOrderResponse findSalesOrder(SoapUtility.SOPickServiceGroup.findSalesOrder request);
         
         // CODEGEN: Generating message contract since message findSalesOrdersList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/findSalesOrdersList", ReplyAction="SOPickService/SOPickService/findSalesOrdersListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/findSalesOrdersList", ReplyAction="EVSSOPickService/EVSSOPickService/findSalesOrdersListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse findSalesOrdersList(SoapUtility.SOPickServiceGroup.findSalesOrdersList request);
         
         // CODEGEN: Generating message contract since message GetCustomerDeliveries has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetCustomerDeliveries", ReplyAction="SOPickService/SOPickService/GetCustomerDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetCustomerDeliveries", ReplyAction="EVSSOPickService/EVSSOPickService/GetCustomerDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse GetCustomerDeliveries(SoapUtility.SOPickServiceGroup.GetCustomerDeliveries request);
         
         // CODEGEN: Generating message contract since message GetCustomerDeliveriesByStatus has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetCustomerDeliveriesByStatus", ReplyAction="SOPickService/SOPickService/GetCustomerDeliveriesByStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetCustomerDeliveriesByStatus", ReplyAction="EVSSOPickService/EVSSOPickService/GetCustomerDeliveriesByStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse GetCustomerDeliveriesByStatus(SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatus request);
         
         // CODEGEN: Generating message contract since message GetDailyDeliverySummaryByCust has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDailyDeliverySummaryByCust", ReplyAction="SOPickService/SOPickService/GetDailyDeliverySummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetDailyDeliverySummaryByCust", ReplyAction="EVSSOPickService/EVSSOPickService/GetDailyDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse GetDailyDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCust request);
         
         // CODEGEN: Generating message contract since message GetDeliveries has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliveries", ReplyAction="SOPickService/SOPickService/GetDeliveriesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetDeliveries", ReplyAction="EVSSOPickService/EVSSOPickService/GetDeliveriesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliveriesResponse GetDeliveries(SoapUtility.SOPickServiceGroup.GetDeliveries request);
         
         // CODEGEN: Generating message contract since message GetDeliveryStatusLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliveryStatusLookup", ReplyAction="SOPickService/SOPickService/GetDeliveryStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetDeliveryStatusLookup", ReplyAction="EVSSOPickService/EVSSOPickService/GetDeliveryStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse GetDeliveryStatusLookup(SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup request);
         
         // CODEGEN: Generating message contract since message GetDeliverySummaryByCust has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetDeliverySummaryByCust", ReplyAction="SOPickService/SOPickService/GetDeliverySummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetDeliverySummaryByCust", ReplyAction="EVSSOPickService/EVSSOPickService/GetDeliverySummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse GetDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCust request);
         
         // CODEGEN: Generating message contract since message GetFGLines has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetFGLines", ReplyAction="SOPickService/SOPickService/GetFGLinesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetFGLines", ReplyAction="EVSSOPickService/EVSSOPickService/GetFGLinesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetFGLinesResponse GetFGLines(SoapUtility.SOPickServiceGroup.GetFGLines request);
         
         // CODEGEN: Generating message contract since message GetLatestPallets has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetLatestPallets", ReplyAction="SOPickService/SOPickService/GetLatestPalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetLatestPallets", ReplyAction="EVSSOPickService/EVSSOPickService/GetLatestPalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse GetLatestPallets(SoapUtility.SOPickServiceGroup.GetLatestPallets request);
         
         // CODEGEN: Generating message contract since message GetOpenPickingListByCustByItem has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetOpenPickingListByCustByItem", ReplyAction="SOPickService/SOPickService/GetOpenPickingListByCustByItemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetOpenPickingListByCustByItem", ReplyAction="EVSSOPickService/EVSSOPickService/GetOpenPickingListByCustByItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse GetOpenPickingListByCustByItem(SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItem request);
         
         // CODEGEN: Generating message contract since message GetPalletInfo has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetPalletInfo", ReplyAction="SOPickService/SOPickService/GetPalletInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetPalletInfo", ReplyAction="EVSSOPickService/EVSSOPickService/GetPalletInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetPalletInfoResponse GetPalletInfo(SoapUtility.SOPickServiceGroup.GetPalletInfo request);
         
         // CODEGEN: Generating message contract since message GetSingleDelivery has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/GetSingleDelivery", ReplyAction="SOPickService/SOPickService/GetSingleDeliveryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/GetSingleDelivery", ReplyAction="EVSSOPickService/EVSSOPickService/GetSingleDeliveryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse GetSingleDelivery(SoapUtility.SOPickServiceGroup.GetSingleDelivery request);
         
         // CODEGEN: Generating message contract since message LoginDevice has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/LoginDevice", ReplyAction="SOPickService/SOPickService/LoginDeviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/LoginDevice", ReplyAction="EVSSOPickService/EVSSOPickService/LoginDeviceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.LoginDeviceResponse LoginDevice(SoapUtility.SOPickServiceGroup.LoginDevice request);
         
         // CODEGEN: Generating message contract since message ReceivePickingList has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ReceivePickingList", ReplyAction="SOPickService/SOPickService/ReceivePickingListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/ReceivePickingList", ReplyAction="EVSSOPickService/EVSSOPickService/ReceivePickingListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ReceivePickingListResponse ReceivePickingList(SoapUtility.SOPickServiceGroup.ReceivePickingList request);
         
         // CODEGEN: Generating message contract since message ReservePallets has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/ReservePallets", ReplyAction="SOPickService/SOPickService/ReservePalletsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/ReservePallets", ReplyAction="EVSSOPickService/EVSSOPickService/ReservePalletsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.ReservePalletsResponse ReservePallets(SoapUtility.SOPickServiceGroup.ReservePallets request);
         
         // CODEGEN: Generating message contract since message SaveHistory has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SaveHistory", ReplyAction="SOPickService/SOPickService/SaveHistoryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/SaveHistory", ReplyAction="EVSSOPickService/EVSSOPickService/SaveHistoryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SaveHistoryResponse SaveHistory(SoapUtility.SOPickServiceGroup.SaveHistory request);
         
         // CODEGEN: Generating message contract since message SavePickingLoad has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SavePickingLoad", ReplyAction="SOPickService/SOPickService/SavePickingLoadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/SavePickingLoad", ReplyAction="EVSSOPickService/EVSSOPickService/SavePickingLoadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SavePickingLoadResponse SavePickingLoad(SoapUtility.SOPickServiceGroup.SavePickingLoad request);
         
         // CODEGEN: Generating message contract since message UnreservePallet has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/UnreservePallet", ReplyAction="SOPickService/SOPickService/UnreservePalletResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/UnreservePallet", ReplyAction="EVSSOPickService/EVSSOPickService/UnreservePalletResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.UnreservePalletResponse UnreservePallet(SoapUtility.SOPickServiceGroup.UnreservePallet request);
         
         // CODEGEN: Generating message contract since message SalesDeliveryNote has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/SalesDeliveryNote", ReplyAction="SOPickService/SOPickService/SalesDeliveryNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/SalesDeliveryNote", ReplyAction="EVSSOPickService/EVSSOPickService/SalesDeliveryNoteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse SalesDeliveryNote(SoapUtility.SOPickServiceGroup.SalesDeliveryNote request);
         
         // CODEGEN: Generating message contract since message PalletsReserving has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/PalletsReserving", ReplyAction="SOPickService/SOPickService/PalletsReservingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/PalletsReserving", ReplyAction="EVSSOPickService/EVSSOPickService/PalletsReservingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.PalletsReservingResponse PalletsReserving(SoapUtility.SOPickServiceGroup.PalletsReserving request);
         
         // CODEGEN: Generating message contract since message Evs_ServiceMessage has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOPickService/SOPickService/Evs_ServiceMessage", ReplyAction="SOPickService/SOPickService/Evs_ServiceMessageResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="SOPickService/SOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        [System.ServiceModel.OperationContractAttribute(Action="EVSSOPickService/EVSSOPickService/Evs_ServiceMessage", ReplyAction="EVSSOPickService/EVSSOPickService/Evs_ServiceMessageResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SOPickServiceGroup.Fault), Action="EVSSOPickService/EVSSOPickService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.Evs_ServiceMessage request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLine", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLine", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ChangeTruckLoadingLine {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public int lineNum;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string pickingNum;
         
         public ChangeTruckLoadingLine() {
@@ -2818,13 +2384,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLineResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChangeTruckLoadingLineResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ChangeTruckLoadingLineResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string result;
         
         public ChangeTruckLoadingLineResponse() {
@@ -2839,28 +2405,28 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailable", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailable", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailable {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=3)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=4)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=5)]
         public string serialId;
         
         public CheckPalletAvailable() {
@@ -2880,19 +2446,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract result;
         
         public CheckPalletAvailableResponse() {
         }
         
-        public CheckPalletAvailableResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract result) {
+        public CheckPalletAvailableResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesLineContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2901,34 +2467,34 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMulti", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMulti", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableMulti {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=4)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=5)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=6)]
         public SoapUtility.SOPickServiceGroup.PalletItemContract[] serials;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=7)]
         public string userName;
         
         public CheckPalletAvailableMulti() {
@@ -2950,19 +2516,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMultiResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckPalletAvailableMultiResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CheckPalletAvailableMultiResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result;
         
         public CheckPalletAvailableMultiResponse() {
         }
         
-        public CheckPalletAvailableMultiResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public CheckPalletAvailableMultiResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -2971,16 +2537,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQty", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQty", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByQty {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime startDate;
         
         public CustomersDeliveryByQty() {
@@ -2996,13 +2562,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQtyResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByQtyResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByQtyResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public CustomersDeliveryByQtyResponse() {
@@ -3017,16 +2583,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucks", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucks", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByTrucks {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime startDate;
         
         public CustomersDeliveryByTrucks() {
@@ -3042,13 +2608,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucksResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CustomersDeliveryByTrucksResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class CustomersDeliveryByTrucksResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public CustomersDeliveryByTrucksResponse() {
@@ -3063,13 +2629,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingList", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingList", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findPickingList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string pickingId;
         
         public findPickingList() {
@@ -3084,19 +2650,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findPickingListResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findPickingListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesTableContract result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesTableContract result;
         
         public findPickingListResponse() {
         }
         
-        public findPickingListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public findPickingListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3105,13 +2671,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrder", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrder", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findSalesOrder {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string salesId;
         
         public findSalesOrder() {
@@ -3126,19 +2692,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrderResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrderResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findSalesOrderResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesTableContract result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesTableContract result;
         
         public findSalesOrderResponse() {
         }
         
-        public findSalesOrderResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public findSalesOrderResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3147,19 +2713,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersList", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersList", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findSalesOrdersList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime dateEnd;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public System.DateTime dateStart;
         
         public findSalesOrdersList() {
@@ -3176,19 +2742,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="findSalesOrdersListResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class findSalesOrdersListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesTableContract[] result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesTableContract[] result;
         
         public findSalesOrdersListResponse() {
         }
         
-        public findSalesOrdersListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesTableContract[] result) {
+        public findSalesOrdersListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesTableContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3197,16 +2763,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveries", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveries", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveries {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime theDate;
         
         public GetCustomerDeliveries() {
@@ -3222,13 +2788,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetCustomerDeliveriesResponse() {
@@ -3243,19 +2809,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatus", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatus", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesByStatus {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _customerAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public SoapUtility.SOPickServiceGroup.PickingListStatus _status;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public System.DateTime theDate;
         
         public GetCustomerDeliveriesByStatus() {
@@ -3272,13 +2838,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatusResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerDeliveriesByStatusResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetCustomerDeliveriesByStatusResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetCustomerDeliveriesByStatusResponse() {
@@ -3293,16 +2859,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCust", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCust", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDailyDeliverySummaryByCust {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime startDate;
         
         public GetDailyDeliverySummaryByCust() {
@@ -3318,13 +2884,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCustResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDailyDeliverySummaryByCustResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDailyDeliverySummaryByCustResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public GetDailyDeliverySummaryByCustResponse() {
@@ -3339,13 +2905,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveries", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveries", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliveries {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public System.DateTime theDate;
         
         public GetDeliveries() {
@@ -3360,13 +2926,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveriesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveriesResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliveriesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract[] result;
         
         public GetDeliveriesResponse() {
@@ -3381,7 +2947,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookup", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookup", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliveryStatusLookup {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3398,13 +2964,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookupResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliveryStatusLookupResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliveryStatusLookupResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.LookupContract[] result;
         
         public GetDeliveryStatusLookupResponse() {
@@ -3419,19 +2985,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCust", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCust", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliverySummaryByCust {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime endDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public System.DateTime startDate;
         
         public GetDeliverySummaryByCust() {
@@ -3448,13 +3014,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCustResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDeliverySummaryByCustResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetDeliverySummaryByCustResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.CustomerDeliveryContract[] result;
         
         public GetDeliverySummaryByCustResponse() {
@@ -3469,7 +3035,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLines", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLines", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetFGLines {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3486,13 +3052,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLinesResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFGLinesResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetFGLinesResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGLineContract[] result;
         
         public GetFGLinesResponse() {
@@ -3507,16 +3073,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPallets", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPallets", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetLatestPallets {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string _pickingId;
         
         public GetLatestPallets() {
@@ -3532,19 +3098,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPalletsResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLatestPalletsResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetLatestPalletsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result;
         
         public GetLatestPalletsResponse() {
         }
         
-        public GetLatestPalletsResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public GetLatestPalletsResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3553,16 +3119,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItem", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItem", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetOpenPickingListByCustByItem {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _custAccount;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string _itemId;
         
         public GetOpenPickingListByCustByItem() {
@@ -3578,13 +3144,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItemResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOpenPickingListByCustByItemResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetOpenPickingListByCustByItemResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PLNotDeliveredContract[] result;
         
         public GetOpenPickingListByCustByItemResponse() {
@@ -3599,13 +3165,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfo", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfo", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetPalletInfo {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _serialId;
         
         public GetPalletInfo() {
@@ -3620,13 +3186,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfoResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPalletInfoResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetPalletInfoResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PalletContract result;
         
         public GetPalletInfoResponse() {
@@ -3641,13 +3207,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDelivery", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDelivery", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetSingleDelivery {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string pickingId;
         
         public GetSingleDelivery() {
@@ -3662,13 +3228,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDeliveryResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSingleDeliveryResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class GetSingleDeliveryResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.FGDeliveryContract result;
         
         public GetSingleDeliveryResponse() {
@@ -3683,22 +3249,22 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDevice", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDevice", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class LoginDevice {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string deviceIP;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string deviceName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public string projectName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=3)]
         public string userName;
         
         public LoginDevice() {
@@ -3716,7 +3282,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDeviceResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginDeviceResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class LoginDeviceResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3733,16 +3299,16 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingList", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingList", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ReceivePickingList {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string deviceName;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string userName;
         
         public ReceivePickingList() {
@@ -3758,19 +3324,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingListResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReceivePickingListResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ReceivePickingListResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesTableContract result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesTableContract result;
         
         public ReceivePickingListResponse() {
         }
         
-        public ReceivePickingListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public ReceivePickingListResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3779,40 +3345,40 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePallets", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePallets", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ReservePallets {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=4)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=5)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=6)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=7)]
         public string userName;
         
         public ReservePallets() {
         }
         
-        public ReservePallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets, string pickingId, string salesId, string userName) {
+        public ReservePallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets, string pickingId, string salesId, string userName) {
             this.CallContext = CallContext;
             this.configId = configId;
             this.device = device;
@@ -3828,19 +3394,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePalletsResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReservePalletsResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class ReservePalletsResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result;
         
         public ReservePalletsResponse() {
         }
         
-        public ReservePalletsResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public ReservePalletsResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -3849,13 +3415,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistory", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistory", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SaveHistory {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public SoapUtility.SOPickServiceGroup.PickHistoryContract history;
         
         public SaveHistory() {
@@ -3870,7 +3436,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistoryResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveHistoryResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SaveHistoryResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3887,19 +3453,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoad", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoad", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SavePickingLoad {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public System.DateTime startLoad;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public System.DateTime stopLoad;
         
         public SavePickingLoad() {
@@ -3916,7 +3482,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoadResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePickingLoadResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SavePickingLoadResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -3933,13 +3499,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePallet", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePallet", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class UnreservePallet {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string serialId;
         
         public UnreservePallet() {
@@ -3954,13 +3520,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePalletResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UnreservePalletResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class UnreservePalletResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public bool result;
         
         public UnreservePalletResponse() {
@@ -3975,13 +3541,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNote", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNote", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SalesDeliveryNote {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string _salesId;
         
         public SalesDeliveryNote() {
@@ -3996,13 +3562,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNoteResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SalesDeliveryNoteResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class SalesDeliveryNoteResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string result;
         
         public SalesDeliveryNoteResponse() {
@@ -4017,40 +3583,40 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReserving", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReserving", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class PalletsReserving {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.CallContext CallContext;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string configId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=1)]
         public string device;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=2)]
         public string itemId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=3)]
         public long lineRecId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=4)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=4)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=5)]
         public string pickingId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=6)]
         public string salesId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=7)]
         public string userName;
         
         public PalletsReserving() {
         }
         
-        public PalletsReserving(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets, string pickingId, string salesId, string userName) {
+        public PalletsReserving(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets, string pickingId, string salesId, string userName) {
             this.CallContext = CallContext;
             this.configId = configId;
             this.device = device;
@@ -4066,19 +3632,19 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReservingResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletsReservingResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class PalletsReservingResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
-        public SoapUtility.SOPickServiceGroup.SalesLineContract[] result;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
+        public SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result;
         
         public PalletsReservingResponse() {
         }
         
-        public PalletsReservingResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public PalletsReservingResponse(SoapUtility.SOPickServiceGroup.Infolog Infolog, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -4087,7 +3653,7 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessage", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessage", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class Evs_ServiceMessage {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
@@ -4104,13 +3670,13 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessageResponse", WrapperNamespace="SOPickService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Evs_ServiceMessageResponse", WrapperNamespace="EVSSOPickService", IsWrapped=true)]
     public partial class Evs_ServiceMessageResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SOPickServiceGroup.Infolog Infolog;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOPickService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="EVSSOPickService", Order=0)]
         public string result;
         
         public Evs_ServiceMessageResponse() {
@@ -4123,34 +3689,34 @@ namespace SoapUtility.SOPickServiceGroup {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface SOPickServiceChannel : SoapUtility.SOPickServiceGroup.SOPickService, System.ServiceModel.IClientChannel {
+    public interface EVSSOPickServiceChannel : SoapUtility.SOPickServiceGroup.EVSSOPickService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SOPickServiceClient : System.ServiceModel.ClientBase<SoapUtility.SOPickServiceGroup.SOPickService>, SoapUtility.SOPickServiceGroup.SOPickService {
+    public partial class EVSSOPickServiceClient : System.ServiceModel.ClientBase<SoapUtility.SOPickServiceGroup.EVSSOPickService>, SoapUtility.SOPickServiceGroup.EVSSOPickService {
         
-        public SOPickServiceClient() {
+        public EVSSOPickServiceClient() {
         }
         
-        public SOPickServiceClient(string endpointConfigurationName) : 
+        public EVSSOPickServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public SOPickServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public EVSSOPickServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SOPickServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EVSSOPickServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SOPickServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EVSSOPickServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse SoapUtility.SOPickServiceGroup.SOPickService.ChangeTruckLoadingLine(SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLine request) {
+        SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.ChangeTruckLoadingLine(SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLine request) {
             return base.Channel.ChangeTruckLoadingLine(request);
         }
         
@@ -4159,17 +3725,17 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue.lineNum = lineNum;
             inValue.pickingNum = pickingNum;
-            SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).ChangeTruckLoadingLine(inValue);
+            SoapUtility.SOPickServiceGroup.ChangeTruckLoadingLineResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).ChangeTruckLoadingLine(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse SoapUtility.SOPickServiceGroup.SOPickService.CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CheckPalletAvailable request) {
+        SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CheckPalletAvailable request) {
             return base.Channel.CheckPalletAvailable(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string itemId, long lineRecId, string pickingId, string salesId, string serialId, out SoapUtility.SOPickServiceGroup.SalesLineContract result) {
+        public SoapUtility.SOPickServiceGroup.Infolog CheckPalletAvailable(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string itemId, long lineRecId, string pickingId, string salesId, string serialId, out SoapUtility.SOPickServiceGroup.EVSSalesLineContract result) {
             SoapUtility.SOPickServiceGroup.CheckPalletAvailable inValue = new SoapUtility.SOPickServiceGroup.CheckPalletAvailable();
             inValue.CallContext = CallContext;
             inValue.configId = configId;
@@ -4178,17 +3744,17 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.pickingId = pickingId;
             inValue.salesId = salesId;
             inValue.serialId = serialId;
-            SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).CheckPalletAvailable(inValue);
+            SoapUtility.SOPickServiceGroup.CheckPalletAvailableResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).CheckPalletAvailable(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse SoapUtility.SOPickServiceGroup.SOPickService.CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti request) {
+        SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti request) {
             return base.Channel.CheckPalletAvailableMulti(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, string pickingId, string salesId, SoapUtility.SOPickServiceGroup.PalletItemContract[] serials, string userName, out SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public SoapUtility.SOPickServiceGroup.Infolog CheckPalletAvailableMulti(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, string pickingId, string salesId, SoapUtility.SOPickServiceGroup.PalletItemContract[] serials, string userName, out SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti inValue = new SoapUtility.SOPickServiceGroup.CheckPalletAvailableMulti();
             inValue.CallContext = CallContext;
             inValue.configId = configId;
@@ -4199,13 +3765,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.salesId = salesId;
             inValue.serials = serials;
             inValue.userName = userName;
-            SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).CheckPalletAvailableMulti(inValue);
+            SoapUtility.SOPickServiceGroup.CheckPalletAvailableMultiResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).CheckPalletAvailableMulti(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse SoapUtility.SOPickServiceGroup.SOPickService.CustomersDeliveryByQty(SoapUtility.SOPickServiceGroup.CustomersDeliveryByQty request) {
+        SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.CustomersDeliveryByQty(SoapUtility.SOPickServiceGroup.CustomersDeliveryByQty request) {
             return base.Channel.CustomersDeliveryByQty(request);
         }
         
@@ -4214,13 +3780,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue.endDate = endDate;
             inValue.startDate = startDate;
-            SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).CustomersDeliveryByQty(inValue);
+            SoapUtility.SOPickServiceGroup.CustomersDeliveryByQtyResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).CustomersDeliveryByQty(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse SoapUtility.SOPickServiceGroup.SOPickService.CustomersDeliveryByTrucks(SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucks request) {
+        SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.CustomersDeliveryByTrucks(SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucks request) {
             return base.Channel.CustomersDeliveryByTrucks(request);
         }
         
@@ -4229,57 +3795,57 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue.endDate = endDate;
             inValue.startDate = startDate;
-            SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).CustomersDeliveryByTrucks(inValue);
+            SoapUtility.SOPickServiceGroup.CustomersDeliveryByTrucksResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).CustomersDeliveryByTrucks(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.findPickingListResponse SoapUtility.SOPickServiceGroup.SOPickService.findPickingList(SoapUtility.SOPickServiceGroup.findPickingList request) {
+        SoapUtility.SOPickServiceGroup.findPickingListResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.findPickingList(SoapUtility.SOPickServiceGroup.findPickingList request) {
             return base.Channel.findPickingList(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog findPickingList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string pickingId, out SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public SoapUtility.SOPickServiceGroup.Infolog findPickingList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string pickingId, out SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             SoapUtility.SOPickServiceGroup.findPickingList inValue = new SoapUtility.SOPickServiceGroup.findPickingList();
             inValue.CallContext = CallContext;
             inValue.pickingId = pickingId;
-            SoapUtility.SOPickServiceGroup.findPickingListResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).findPickingList(inValue);
+            SoapUtility.SOPickServiceGroup.findPickingListResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).findPickingList(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.findSalesOrderResponse SoapUtility.SOPickServiceGroup.SOPickService.findSalesOrder(SoapUtility.SOPickServiceGroup.findSalesOrder request) {
+        SoapUtility.SOPickServiceGroup.findSalesOrderResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.findSalesOrder(SoapUtility.SOPickServiceGroup.findSalesOrder request) {
             return base.Channel.findSalesOrder(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog findSalesOrder(SoapUtility.SOPickServiceGroup.CallContext CallContext, string salesId, out SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public SoapUtility.SOPickServiceGroup.Infolog findSalesOrder(SoapUtility.SOPickServiceGroup.CallContext CallContext, string salesId, out SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             SoapUtility.SOPickServiceGroup.findSalesOrder inValue = new SoapUtility.SOPickServiceGroup.findSalesOrder();
             inValue.CallContext = CallContext;
             inValue.salesId = salesId;
-            SoapUtility.SOPickServiceGroup.findSalesOrderResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).findSalesOrder(inValue);
+            SoapUtility.SOPickServiceGroup.findSalesOrderResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).findSalesOrder(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse SoapUtility.SOPickServiceGroup.SOPickService.findSalesOrdersList(SoapUtility.SOPickServiceGroup.findSalesOrdersList request) {
+        SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.findSalesOrdersList(SoapUtility.SOPickServiceGroup.findSalesOrdersList request) {
             return base.Channel.findSalesOrdersList(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog findSalesOrdersList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string customerAccount, System.DateTime dateEnd, System.DateTime dateStart, out SoapUtility.SOPickServiceGroup.SalesTableContract[] result) {
+        public SoapUtility.SOPickServiceGroup.Infolog findSalesOrdersList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string customerAccount, System.DateTime dateEnd, System.DateTime dateStart, out SoapUtility.SOPickServiceGroup.EVSSalesTableContract[] result) {
             SoapUtility.SOPickServiceGroup.findSalesOrdersList inValue = new SoapUtility.SOPickServiceGroup.findSalesOrdersList();
             inValue.CallContext = CallContext;
             inValue.customerAccount = customerAccount;
             inValue.dateEnd = dateEnd;
             inValue.dateStart = dateStart;
-            SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).findSalesOrdersList(inValue);
+            SoapUtility.SOPickServiceGroup.findSalesOrdersListResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).findSalesOrdersList(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse SoapUtility.SOPickServiceGroup.SOPickService.GetCustomerDeliveries(SoapUtility.SOPickServiceGroup.GetCustomerDeliveries request) {
+        SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetCustomerDeliveries(SoapUtility.SOPickServiceGroup.GetCustomerDeliveries request) {
             return base.Channel.GetCustomerDeliveries(request);
         }
         
@@ -4288,13 +3854,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue.customerAccount = customerAccount;
             inValue.theDate = theDate;
-            SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetCustomerDeliveries(inValue);
+            SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetCustomerDeliveries(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse SoapUtility.SOPickServiceGroup.SOPickService.GetCustomerDeliveriesByStatus(SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatus request) {
+        SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetCustomerDeliveriesByStatus(SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatus request) {
             return base.Channel.GetCustomerDeliveriesByStatus(request);
         }
         
@@ -4304,13 +3870,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue._customerAccount = _customerAccount;
             inValue._status = _status;
             inValue.theDate = theDate;
-            SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetCustomerDeliveriesByStatus(inValue);
+            SoapUtility.SOPickServiceGroup.GetCustomerDeliveriesByStatusResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetCustomerDeliveriesByStatus(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse SoapUtility.SOPickServiceGroup.SOPickService.GetDailyDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCust request) {
+        SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetDailyDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCust request) {
             return base.Channel.GetDailyDeliverySummaryByCust(request);
         }
         
@@ -4319,13 +3885,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue._custAccount = _custAccount;
             inValue.startDate = startDate;
-            SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetDailyDeliverySummaryByCust(inValue);
+            SoapUtility.SOPickServiceGroup.GetDailyDeliverySummaryByCustResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetDailyDeliverySummaryByCust(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetDeliveriesResponse SoapUtility.SOPickServiceGroup.SOPickService.GetDeliveries(SoapUtility.SOPickServiceGroup.GetDeliveries request) {
+        SoapUtility.SOPickServiceGroup.GetDeliveriesResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetDeliveries(SoapUtility.SOPickServiceGroup.GetDeliveries request) {
             return base.Channel.GetDeliveries(request);
         }
         
@@ -4333,26 +3899,26 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.GetDeliveries inValue = new SoapUtility.SOPickServiceGroup.GetDeliveries();
             inValue.CallContext = CallContext;
             inValue.theDate = theDate;
-            SoapUtility.SOPickServiceGroup.GetDeliveriesResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetDeliveries(inValue);
+            SoapUtility.SOPickServiceGroup.GetDeliveriesResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetDeliveries(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse SoapUtility.SOPickServiceGroup.SOPickService.GetDeliveryStatusLookup(SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup request) {
+        SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetDeliveryStatusLookup(SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup request) {
             return base.Channel.GetDeliveryStatusLookup(request);
         }
         
         public SoapUtility.SOPickServiceGroup.Infolog GetDeliveryStatusLookup(SoapUtility.SOPickServiceGroup.CallContext CallContext, out SoapUtility.SOPickServiceGroup.LookupContract[] result) {
             SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup inValue = new SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookup();
             inValue.CallContext = CallContext;
-            SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetDeliveryStatusLookup(inValue);
+            SoapUtility.SOPickServiceGroup.GetDeliveryStatusLookupResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetDeliveryStatusLookup(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse SoapUtility.SOPickServiceGroup.SOPickService.GetDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCust request) {
+        SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetDeliverySummaryByCust(SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCust request) {
             return base.Channel.GetDeliverySummaryByCust(request);
         }
         
@@ -4362,41 +3928,41 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue._custAccount = _custAccount;
             inValue.endDate = endDate;
             inValue.startDate = startDate;
-            SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetDeliverySummaryByCust(inValue);
+            SoapUtility.SOPickServiceGroup.GetDeliverySummaryByCustResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetDeliverySummaryByCust(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetFGLinesResponse SoapUtility.SOPickServiceGroup.SOPickService.GetFGLines(SoapUtility.SOPickServiceGroup.GetFGLines request) {
+        SoapUtility.SOPickServiceGroup.GetFGLinesResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetFGLines(SoapUtility.SOPickServiceGroup.GetFGLines request) {
             return base.Channel.GetFGLines(request);
         }
         
         public SoapUtility.SOPickServiceGroup.Infolog GetFGLines(SoapUtility.SOPickServiceGroup.CallContext CallContext, out SoapUtility.SOPickServiceGroup.FGLineContract[] result) {
             SoapUtility.SOPickServiceGroup.GetFGLines inValue = new SoapUtility.SOPickServiceGroup.GetFGLines();
             inValue.CallContext = CallContext;
-            SoapUtility.SOPickServiceGroup.GetFGLinesResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetFGLines(inValue);
+            SoapUtility.SOPickServiceGroup.GetFGLinesResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetFGLines(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse SoapUtility.SOPickServiceGroup.SOPickService.GetLatestPallets(SoapUtility.SOPickServiceGroup.GetLatestPallets request) {
+        SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetLatestPallets(SoapUtility.SOPickServiceGroup.GetLatestPallets request) {
             return base.Channel.GetLatestPallets(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog GetLatestPallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string _itemId, string _pickingId, out SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public SoapUtility.SOPickServiceGroup.Infolog GetLatestPallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string _itemId, string _pickingId, out SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             SoapUtility.SOPickServiceGroup.GetLatestPallets inValue = new SoapUtility.SOPickServiceGroup.GetLatestPallets();
             inValue.CallContext = CallContext;
             inValue._itemId = _itemId;
             inValue._pickingId = _pickingId;
-            SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetLatestPallets(inValue);
+            SoapUtility.SOPickServiceGroup.GetLatestPalletsResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetLatestPallets(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse SoapUtility.SOPickServiceGroup.SOPickService.GetOpenPickingListByCustByItem(SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItem request) {
+        SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetOpenPickingListByCustByItem(SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItem request) {
             return base.Channel.GetOpenPickingListByCustByItem(request);
         }
         
@@ -4405,13 +3971,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.CallContext = CallContext;
             inValue._custAccount = _custAccount;
             inValue._itemId = _itemId;
-            SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetOpenPickingListByCustByItem(inValue);
+            SoapUtility.SOPickServiceGroup.GetOpenPickingListByCustByItemResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetOpenPickingListByCustByItem(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetPalletInfoResponse SoapUtility.SOPickServiceGroup.SOPickService.GetPalletInfo(SoapUtility.SOPickServiceGroup.GetPalletInfo request) {
+        SoapUtility.SOPickServiceGroup.GetPalletInfoResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetPalletInfo(SoapUtility.SOPickServiceGroup.GetPalletInfo request) {
             return base.Channel.GetPalletInfo(request);
         }
         
@@ -4419,13 +3985,13 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.GetPalletInfo inValue = new SoapUtility.SOPickServiceGroup.GetPalletInfo();
             inValue.CallContext = CallContext;
             inValue._serialId = _serialId;
-            SoapUtility.SOPickServiceGroup.GetPalletInfoResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetPalletInfo(inValue);
+            SoapUtility.SOPickServiceGroup.GetPalletInfoResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetPalletInfo(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse SoapUtility.SOPickServiceGroup.SOPickService.GetSingleDelivery(SoapUtility.SOPickServiceGroup.GetSingleDelivery request) {
+        SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.GetSingleDelivery(SoapUtility.SOPickServiceGroup.GetSingleDelivery request) {
             return base.Channel.GetSingleDelivery(request);
         }
         
@@ -4433,13 +3999,13 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.GetSingleDelivery inValue = new SoapUtility.SOPickServiceGroup.GetSingleDelivery();
             inValue.CallContext = CallContext;
             inValue.pickingId = pickingId;
-            SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).GetSingleDelivery(inValue);
+            SoapUtility.SOPickServiceGroup.GetSingleDeliveryResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).GetSingleDelivery(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.LoginDeviceResponse SoapUtility.SOPickServiceGroup.SOPickService.LoginDevice(SoapUtility.SOPickServiceGroup.LoginDevice request) {
+        SoapUtility.SOPickServiceGroup.LoginDeviceResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.LoginDevice(SoapUtility.SOPickServiceGroup.LoginDevice request) {
             return base.Channel.LoginDevice(request);
         }
         
@@ -4450,31 +4016,31 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.deviceName = deviceName;
             inValue.projectName = projectName;
             inValue.userName = userName;
-            SoapUtility.SOPickServiceGroup.LoginDeviceResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).LoginDevice(inValue);
+            SoapUtility.SOPickServiceGroup.LoginDeviceResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).LoginDevice(inValue);
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.ReceivePickingListResponse SoapUtility.SOPickServiceGroup.SOPickService.ReceivePickingList(SoapUtility.SOPickServiceGroup.ReceivePickingList request) {
+        SoapUtility.SOPickServiceGroup.ReceivePickingListResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.ReceivePickingList(SoapUtility.SOPickServiceGroup.ReceivePickingList request) {
             return base.Channel.ReceivePickingList(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog ReceivePickingList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string deviceName, string userName, out SoapUtility.SOPickServiceGroup.SalesTableContract result) {
+        public SoapUtility.SOPickServiceGroup.Infolog ReceivePickingList(SoapUtility.SOPickServiceGroup.CallContext CallContext, string deviceName, string userName, out SoapUtility.SOPickServiceGroup.EVSSalesTableContract result) {
             SoapUtility.SOPickServiceGroup.ReceivePickingList inValue = new SoapUtility.SOPickServiceGroup.ReceivePickingList();
             inValue.CallContext = CallContext;
             inValue.deviceName = deviceName;
             inValue.userName = userName;
-            SoapUtility.SOPickServiceGroup.ReceivePickingListResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).ReceivePickingList(inValue);
+            SoapUtility.SOPickServiceGroup.ReceivePickingListResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).ReceivePickingList(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.ReservePalletsResponse SoapUtility.SOPickServiceGroup.SOPickService.ReservePallets(SoapUtility.SOPickServiceGroup.ReservePallets request) {
+        SoapUtility.SOPickServiceGroup.ReservePalletsResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.ReservePallets(SoapUtility.SOPickServiceGroup.ReservePallets request) {
             return base.Channel.ReservePallets(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog ReservePallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets, string pickingId, string salesId, string userName, out SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public SoapUtility.SOPickServiceGroup.Infolog ReservePallets(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets, string pickingId, string salesId, string userName, out SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             SoapUtility.SOPickServiceGroup.ReservePallets inValue = new SoapUtility.SOPickServiceGroup.ReservePallets();
             inValue.CallContext = CallContext;
             inValue.configId = configId;
@@ -4485,13 +4051,13 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.pickingId = pickingId;
             inValue.salesId = salesId;
             inValue.userName = userName;
-            SoapUtility.SOPickServiceGroup.ReservePalletsResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).ReservePallets(inValue);
+            SoapUtility.SOPickServiceGroup.ReservePalletsResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).ReservePallets(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.SaveHistoryResponse SoapUtility.SOPickServiceGroup.SOPickService.SaveHistory(SoapUtility.SOPickServiceGroup.SaveHistory request) {
+        SoapUtility.SOPickServiceGroup.SaveHistoryResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.SaveHistory(SoapUtility.SOPickServiceGroup.SaveHistory request) {
             return base.Channel.SaveHistory(request);
         }
         
@@ -4499,12 +4065,12 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.SaveHistory inValue = new SoapUtility.SOPickServiceGroup.SaveHistory();
             inValue.CallContext = CallContext;
             inValue.history = history;
-            SoapUtility.SOPickServiceGroup.SaveHistoryResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).SaveHistory(inValue);
+            SoapUtility.SOPickServiceGroup.SaveHistoryResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).SaveHistory(inValue);
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.SavePickingLoadResponse SoapUtility.SOPickServiceGroup.SOPickService.SavePickingLoad(SoapUtility.SOPickServiceGroup.SavePickingLoad request) {
+        SoapUtility.SOPickServiceGroup.SavePickingLoadResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.SavePickingLoad(SoapUtility.SOPickServiceGroup.SavePickingLoad request) {
             return base.Channel.SavePickingLoad(request);
         }
         
@@ -4514,12 +4080,12 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue._pickingId = _pickingId;
             inValue.startLoad = startLoad;
             inValue.stopLoad = stopLoad;
-            SoapUtility.SOPickServiceGroup.SavePickingLoadResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).SavePickingLoad(inValue);
+            SoapUtility.SOPickServiceGroup.SavePickingLoadResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).SavePickingLoad(inValue);
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.UnreservePalletResponse SoapUtility.SOPickServiceGroup.SOPickService.UnreservePallet(SoapUtility.SOPickServiceGroup.UnreservePallet request) {
+        SoapUtility.SOPickServiceGroup.UnreservePalletResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.UnreservePallet(SoapUtility.SOPickServiceGroup.UnreservePallet request) {
             return base.Channel.UnreservePallet(request);
         }
         
@@ -4527,13 +4093,13 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.UnreservePallet inValue = new SoapUtility.SOPickServiceGroup.UnreservePallet();
             inValue.CallContext = CallContext;
             inValue.serialId = serialId;
-            SoapUtility.SOPickServiceGroup.UnreservePalletResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).UnreservePallet(inValue);
+            SoapUtility.SOPickServiceGroup.UnreservePalletResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).UnreservePallet(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse SoapUtility.SOPickServiceGroup.SOPickService.SalesDeliveryNote(SoapUtility.SOPickServiceGroup.SalesDeliveryNote request) {
+        SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.SalesDeliveryNote(SoapUtility.SOPickServiceGroup.SalesDeliveryNote request) {
             return base.Channel.SalesDeliveryNote(request);
         }
         
@@ -4541,17 +4107,17 @@ namespace SoapUtility.SOPickServiceGroup {
             SoapUtility.SOPickServiceGroup.SalesDeliveryNote inValue = new SoapUtility.SOPickServiceGroup.SalesDeliveryNote();
             inValue.CallContext = CallContext;
             inValue._salesId = _salesId;
-            SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).SalesDeliveryNote(inValue);
+            SoapUtility.SOPickServiceGroup.SalesDeliveryNoteResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).SalesDeliveryNote(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.PalletsReservingResponse SoapUtility.SOPickServiceGroup.SOPickService.PalletsReserving(SoapUtility.SOPickServiceGroup.PalletsReserving request) {
+        SoapUtility.SOPickServiceGroup.PalletsReservingResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.PalletsReserving(SoapUtility.SOPickServiceGroup.PalletsReserving request) {
             return base.Channel.PalletsReserving(request);
         }
         
-        public SoapUtility.SOPickServiceGroup.Infolog PalletsReserving(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.SalesLineContract[] pallets, string pickingId, string salesId, string userName, out SoapUtility.SOPickServiceGroup.SalesLineContract[] result) {
+        public SoapUtility.SOPickServiceGroup.Infolog PalletsReserving(SoapUtility.SOPickServiceGroup.CallContext CallContext, string configId, string device, string itemId, long lineRecId, SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] pallets, string pickingId, string salesId, string userName, out SoapUtility.SOPickServiceGroup.EVSSalesLineContract[] result) {
             SoapUtility.SOPickServiceGroup.PalletsReserving inValue = new SoapUtility.SOPickServiceGroup.PalletsReserving();
             inValue.CallContext = CallContext;
             inValue.configId = configId;
@@ -4562,20 +4128,20 @@ namespace SoapUtility.SOPickServiceGroup {
             inValue.pickingId = pickingId;
             inValue.salesId = salesId;
             inValue.userName = userName;
-            SoapUtility.SOPickServiceGroup.PalletsReservingResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).PalletsReserving(inValue);
+            SoapUtility.SOPickServiceGroup.PalletsReservingResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).PalletsReserving(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse SoapUtility.SOPickServiceGroup.SOPickService.Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.Evs_ServiceMessage request) {
+        SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse SoapUtility.SOPickServiceGroup.EVSSOPickService.Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.Evs_ServiceMessage request) {
             return base.Channel.Evs_ServiceMessage(request);
         }
         
         public SoapUtility.SOPickServiceGroup.Infolog Evs_ServiceMessage(SoapUtility.SOPickServiceGroup.CallContext CallContext, out string result) {
             SoapUtility.SOPickServiceGroup.Evs_ServiceMessage inValue = new SoapUtility.SOPickServiceGroup.Evs_ServiceMessage();
             inValue.CallContext = CallContext;
-            SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse retVal = ((SoapUtility.SOPickServiceGroup.SOPickService)(this)).Evs_ServiceMessage(inValue);
+            SoapUtility.SOPickServiceGroup.Evs_ServiceMessageResponse retVal = ((SoapUtility.SOPickServiceGroup.EVSSOPickService)(this)).Evs_ServiceMessage(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

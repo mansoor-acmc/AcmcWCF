@@ -9,7 +9,726 @@
 //------------------------------------------------------------------------------
 
 namespace TestWebservice.FGSyncService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventAvailContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventAvailContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AvailPhysicalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BatchIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ConfigurationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SerialIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SiteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SizeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SyncIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WMSLocationIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal AvailPhysical {
+            get {
+                return this.AvailPhysicalField;
+            }
+            set {
+                if ((this.AvailPhysicalField.Equals(value) != true)) {
+                    this.AvailPhysicalField = value;
+                    this.RaisePropertyChanged("AvailPhysical");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BatchId {
+            get {
+                return this.BatchIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BatchIdField, value) != true)) {
+                    this.BatchIdField = value;
+                    this.RaisePropertyChanged("BatchId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorId {
+            get {
+                return this.ColorIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorIdField, value) != true)) {
+                    this.ColorIdField = value;
+                    this.RaisePropertyChanged("ColorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ConfigurationId {
+            get {
+                return this.ConfigurationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ConfigurationIdField, value) != true)) {
+                    this.ConfigurationIdField = value;
+                    this.RaisePropertyChanged("ConfigurationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SerialId {
+            get {
+                return this.SerialIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SerialIdField, value) != true)) {
+                    this.SerialIdField = value;
+                    this.RaisePropertyChanged("SerialId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SiteId {
+            get {
+                return this.SiteIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SiteIdField, value) != true)) {
+                    this.SiteIdField = value;
+                    this.RaisePropertyChanged("SiteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SizeId {
+            get {
+                return this.SizeIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SizeIdField, value) != true)) {
+                    this.SizeIdField = value;
+                    this.RaisePropertyChanged("SizeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SyncId {
+            get {
+                return this.SyncIdField;
+            }
+            set {
+                if ((this.SyncIdField.Equals(value) != true)) {
+                    this.SyncIdField = value;
+                    this.RaisePropertyChanged("SyncId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WMSLocationId {
+            get {
+                return this.WMSLocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WMSLocationIdField, value) != true)) {
+                    this.WMSLocationIdField = value;
+                    this.RaisePropertyChanged("WMSLocationId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProxyBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventSumContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventForItemUnit))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.WarehouseContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.WmsLocationContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventJournalTransContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.SCForTransfer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventJournalTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventAvailContract))]
+    public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventSumContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventForItemUnit))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.WarehouseContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.WmsLocationContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventJournalTransContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.SCForTransfer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventJournalTableContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.FGSyncService.InventAvailContract))]
+    public partial class XppObjectBase : TestWebservice.FGSyncService.ProxyBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventSumContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventSumContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AvailPhysicalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal AvailPhysical {
+            get {
+                return this.AvailPhysicalField;
+            }
+            set {
+                if ((this.AvailPhysicalField.Equals(value) != true)) {
+                    this.AvailPhysicalField = value;
+                    this.RaisePropertyChanged("AvailPhysical");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventForItemUnit", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventForItemUnit : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UnitIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemIdField, value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UnitId {
+            get {
+                return this.UnitIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UnitIdField, value) != true)) {
+                    this.UnitIdField = value;
+                    this.RaisePropertyChanged("UnitId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WarehouseContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class WarehouseContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmLocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmLocationNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSiteIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmLocationId {
+            get {
+                return this.parmLocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmLocationIdField, value) != true)) {
+                    this.parmLocationIdField = value;
+                    this.RaisePropertyChanged("parmLocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmLocationName {
+            get {
+                return this.parmLocationNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmLocationNameField, value) != true)) {
+                    this.parmLocationNameField = value;
+                    this.RaisePropertyChanged("parmLocationName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSiteId {
+            get {
+                return this.parmSiteIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSiteIdField, value) != true)) {
+                    this.parmSiteIdField = value;
+                    this.RaisePropertyChanged("parmSiteId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WmsLocationContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class WmsLocationContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventJournalTransContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventJournalTransContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal parmCostPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal parmCountedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmJournalIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmLocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSiteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmWarehouseIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal parmCostPrice {
+            get {
+                return this.parmCostPriceField;
+            }
+            set {
+                if ((this.parmCostPriceField.Equals(value) != true)) {
+                    this.parmCostPriceField = value;
+                    this.RaisePropertyChanged("parmCostPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal parmCounted {
+            get {
+                return this.parmCountedField;
+            }
+            set {
+                if ((this.parmCountedField.Equals(value) != true)) {
+                    this.parmCountedField = value;
+                    this.RaisePropertyChanged("parmCounted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmItemId {
+            get {
+                return this.parmItemIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmItemIdField, value) != true)) {
+                    this.parmItemIdField = value;
+                    this.RaisePropertyChanged("parmItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmJournalId {
+            get {
+                return this.parmJournalIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmJournalIdField, value) != true)) {
+                    this.parmJournalIdField = value;
+                    this.RaisePropertyChanged("parmJournalId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmLocationId {
+            get {
+                return this.parmLocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmLocationIdField, value) != true)) {
+                    this.parmLocationIdField = value;
+                    this.RaisePropertyChanged("parmLocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSiteId {
+            get {
+                return this.parmSiteIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSiteIdField, value) != true)) {
+                    this.parmSiteIdField = value;
+                    this.RaisePropertyChanged("parmSiteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmWarehouseId {
+            get {
+                return this.parmWarehouseIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmWarehouseIdField, value) != true)) {
+                    this.parmWarehouseIdField = value;
+                    this.RaisePropertyChanged("parmWarehouseId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SCForTransfer", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class SCForTransfer : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsPostedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsTransferredField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemLocationFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemLocationToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ItemQuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsPosted {
+            get {
+                return this.IsPostedField;
+            }
+            set {
+                if ((this.IsPostedField.Equals(value) != true)) {
+                    this.IsPostedField = value;
+                    this.RaisePropertyChanged("IsPosted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsTransferred {
+            get {
+                return this.IsTransferredField;
+            }
+            set {
+                if ((this.IsTransferredField.Equals(value) != true)) {
+                    this.IsTransferredField = value;
+                    this.RaisePropertyChanged("IsTransferred");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemLocationFrom {
+            get {
+                return this.ItemLocationFromField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemLocationFromField, value) != true)) {
+                    this.ItemLocationFromField = value;
+                    this.RaisePropertyChanged("ItemLocationFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemLocationTo {
+            get {
+                return this.ItemLocationToField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemLocationToField, value) != true)) {
+                    this.ItemLocationToField = value;
+                    this.RaisePropertyChanged("ItemLocationTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ItemNumber {
+            get {
+                return this.ItemNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
+                    this.ItemNumberField = value;
+                    this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal ItemQuantity {
+            get {
+                return this.ItemQuantityField;
+            }
+            set {
+                if ((this.ItemQuantityField.Equals(value) != true)) {
+                    this.ItemQuantityField = value;
+                    this.RaisePropertyChanged("ItemQuantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventJournalTableContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class InventJournalTableContract : TestWebservice.FGSyncService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmJournalIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmJournalNameIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmDescription {
+            get {
+                return this.parmDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmDescriptionField, value) != true)) {
+                    this.parmDescriptionField = value;
+                    this.RaisePropertyChanged("parmDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmJournalId {
+            get {
+                return this.parmJournalIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmJournalIdField, value) != true)) {
+                    this.parmJournalIdField = value;
+                    this.RaisePropertyChanged("parmJournalId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmJournalNameId {
+            get {
+                return this.parmJournalNameIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmJournalNameIdField, value) != true)) {
+                    this.parmJournalNameIdField = value;
+                    this.RaisePropertyChanged("parmJournalNameId");
+                }
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FGSyncService.IFGSyncService")]
@@ -19,7 +738,7 @@ namespace TestWebservice.FGSyncService {
         SyncServices.PalletEntity[] ResetData();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFGSyncService/GetFGYearInventory", ReplyAction="http://tempuri.org/IFGSyncService/GetFGYearInventoryResponse")]
-        SyncServices.InventCountingService.InventAvailContract[] GetFGYearInventory(int startId);
+        TestWebservice.FGSyncService.InventAvailContract[] GetFGYearInventory(int startId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFGSyncService/GetUserData", ReplyAction="http://tempuri.org/IFGSyncService/GetUserDataResponse")]
         SyncServices.UserData[] GetUserData();
@@ -62,7 +781,7 @@ namespace TestWebservice.FGSyncService {
             return base.Channel.ResetData();
         }
         
-        public SyncServices.InventCountingService.InventAvailContract[] GetFGYearInventory(int startId) {
+        public TestWebservice.FGSyncService.InventAvailContract[] GetFGYearInventory(int startId) {
             return base.Channel.GetFGYearInventory(startId);
         }
         

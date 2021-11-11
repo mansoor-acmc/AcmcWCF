@@ -1,128 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-  <xs:complexType name="SalesTableContract">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:import schemaLocation="http://localhost:58380/SalesOrderService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfEVSSalesTableContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVSSalesTableContract" nillable="true" type="tns:EVSSalesTableContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVSSalesTableContract" nillable="true" type="tns:ArrayOfEVSSalesTableContract" />
+  <xs:complexType name="EVSSalesTableContract">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
         <xs:sequence>
-          <xs:element name="customerIdField" nillable="true" type="xs:string" />
-          <xs:element name="customerNameField" nillable="true" type="xs:string" />
-          <xs:element name="deliveryDateField" type="xs:dateTime" />
-          <xs:element name="deliveryDateFieldSpecified" type="xs:boolean" />
-          <xs:element name="deliveryModeField" nillable="true" type="xs:string" />
-          <xs:element name="deliveryNameField" nillable="true" type="xs:string" />
-          <xs:element name="driverNameField" nillable="true" type="xs:string" />
-          <xs:element name="halfPalletField" type="tns:NoYes" />
-          <xs:element name="halfPalletFieldSpecified" type="xs:boolean" />
-          <xs:element name="packingSlipField" nillable="true" type="xs:string" />
-          <xs:element name="pickingIdField" nillable="true" type="xs:string" />
-          <xs:element name="salesIdField" nillable="true" type="xs:string" />
-          <xs:element name="salesLinesField" nillable="true" type="tns:ArrayOfSalesLineContract" />
-          <xs:element name="salesNameField" nillable="true" type="xs:string" />
-          <xs:element name="salesStatusField" type="tns:SalesStatus" />
-          <xs:element name="salesStatusFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesTypeField" type="tns:SalesType" />
-          <xs:element name="salesTypeFieldSpecified" type="xs:boolean" />
-          <xs:element name="sameConfigurationField" type="tns:NoYes" />
-          <xs:element name="sameConfigurationFieldSpecified" type="xs:boolean" />
-          <xs:element name="startLoadField" type="xs:dateTime" />
-          <xs:element name="startLoadFieldSpecified" type="xs:boolean" />
-          <xs:element name="stopLoadField" type="xs:dateTime" />
-          <xs:element name="stopLoadFieldSpecified" type="xs:boolean" />
-          <xs:element name="truckLoadLineField" type="xs:int" />
-          <xs:element name="truckLoadLineFieldSpecified" type="xs:boolean" />
-          <xs:element name="truckPlateField" nillable="true" type="xs:string" />
-          <xs:element name="truckTicketField" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HalfPallet" type="q1:NoYes" />
+          <xs:element minOccurs="0" name="PackingSlip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesLines" nillable="true" type="tns:ArrayOfEVSSalesLineContract" />
+          <xs:element minOccurs="0" name="SalesName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesType" type="xs:int" />
+          <xs:element minOccurs="0" name="SameConfiguration" type="q1:NoYes" />
+          <xs:element minOccurs="0" name="StartLoad" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StopLoad" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TruckLoadLine" type="xs:int" />
+          <xs:element minOccurs="0" name="TruckPlate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TruckTicket" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="SalesTableContract" nillable="true" type="tns:SalesTableContract" />
-  <xs:complexType name="XppObjectBase">
-    <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="XppObjectBase" nillable="true" type="tns:XppObjectBase" />
-  <xs:simpleType name="NoYes">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="No" />
-      <xs:enumeration value="Yes" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="NoYes" nillable="true" type="tns:NoYes" />
-  <xs:complexType name="ArrayOfSalesLineContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesLineContract" nillable="true" type="tns:SalesLineContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSalesLineContract" nillable="true" type="tns:ArrayOfSalesLineContract" />
-  <xs:complexType name="SalesLineContract">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
-        <xs:sequence>
-          <xs:element name="exclusiveHalfPalletField" type="xs:boolean" />
-          <xs:element name="exclusiveHalfPalletFieldSpecified" type="xs:boolean" />
-          <xs:element name="gradeField" nillable="true" type="xs:string" />
-          <xs:element name="inventTransIDField" nillable="true" type="xs:string" />
-          <xs:element name="isHalfPalletField" type="xs:boolean" />
-          <xs:element name="isHalfPalletFieldSpecified" type="xs:boolean" />
-          <xs:element name="itemIdField" nillable="true" type="xs:string" />
-          <xs:element name="lineRecIdField" type="xs:long" />
-          <xs:element name="lineRecIdFieldSpecified" type="xs:boolean" />
-          <xs:element name="locationsField" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
-          <xs:element name="nameField" nillable="true" type="xs:string" />
-          <xs:element name="pickingIdField" nillable="true" type="xs:string" />
-          <xs:element name="remarksField" nillable="true" type="xs:string" />
-          <xs:element name="salesIdField" nillable="true" type="xs:string" />
-          <xs:element name="salesQtyBoxField" type="xs:decimal" />
-          <xs:element name="salesQtyBoxFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesQtyField" type="xs:decimal" />
-          <xs:element name="salesQtyFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesQtyPalletField" type="xs:decimal" />
-          <xs:element name="salesQtyPalletFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesQtySQMField" type="xs:decimal" />
-          <xs:element name="salesQtySQMFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesQtySQMRemainingField" type="xs:decimal" />
-          <xs:element name="salesQtySQMRemainingFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesQtySQMReservedField" type="xs:decimal" />
-          <xs:element name="salesQtySQMReservedFieldSpecified" type="xs:boolean" />
-          <xs:element name="salesUnitField" nillable="true" type="xs:string" />
-          <xs:element name="serialField" nillable="true" type="xs:string" />
-          <xs:element name="shadeField" nillable="true" type="xs:string" />
-          <xs:element name="siteField" nillable="true" type="xs:string" />
-          <xs:element name="sizeField" nillable="true" type="xs:string" />
-          <xs:element name="updateStatusField" type="tns:PalletStatus" />
-          <xs:element name="updateStatusFieldSpecified" type="xs:boolean" />
-          <xs:element name="updatedByField" nillable="true" type="xs:string" />
-          <xs:element name="updatedDateField" type="xs:dateTime" />
-          <xs:element name="updatedDateFieldSpecified" type="xs:boolean" />
-          <xs:element name="wLocationIdField" nillable="true" type="xs:string" />
-          <xs:element name="warehouseField" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SalesLineContract" nillable="true" type="tns:SalesLineContract" />
-  <xs:complexType name="ArrayOfInventByGrLocContract">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfInventByGrLocContract" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
+  <xs:element name="EVSSalesTableContract" nillable="true" type="tns:EVSSalesTableContract" />
   <xs:complexType name="InventByGrLocContract">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:XppObjectBase">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
         <xs:sequence>
-          <xs:element name="gradeField" nillable="true" type="xs:string" />
-          <xs:element name="locationIdField" nillable="true" type="xs:string" />
-          <xs:element name="onHandField" type="xs:decimal" />
-          <xs:element name="onHandFieldSpecified" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnHand" type="xs:decimal" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
+  <xs:complexType name="PalletItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
+  <xs:complexType name="CustomerDeliveryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackingSlipNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Trucks" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
+  <xs:complexType name="FGDeliveryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Barcode_Code128" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeliveryItems" nillable="true" type="q6:ArrayOfanyType" />
+          <xs:element minOccurs="0" name="DeliveryStatus" type="tns:PickingListStatus" />
+          <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackingSlipGenerate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PackingSlipNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityInPallets" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityInSQM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartLoadTruck" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StopLoadTruck" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TruckDriver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TruckPlateNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
+  <xs:simpleType name="PickingListStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Opened" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="Cancelled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PickingListStatus" nillable="true" type="tns:PickingListStatus" />
+  <xs:complexType name="LookupContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LookupId" type="xs:int" />
+          <xs:element minOccurs="0" name="LookupString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupContract" nillable="true" type="tns:LookupContract" />
+  <xs:complexType name="FGLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FGLineName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FGLineNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="OnGateNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FGLineContract" nillable="true" type="tns:FGLineContract" />
+  <xs:complexType name="PLNotDeliveredContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q9:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityInPallets" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityInSQM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PLNotDeliveredContract" nillable="true" type="tns:PLNotDeliveredContract" />
+  <xs:complexType name="PalletContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q10:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseLocation" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PalletContract" nillable="true" type="tns:PalletContract" />
+  <xs:complexType name="PickHistoryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q11:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PalletNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateStatus" type="tns:PalletStatus" />
+          <xs:element minOccurs="0" name="UpdatedByUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedDateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PickHistoryContract" nillable="true" type="tns:PickHistoryContract" />
   <xs:simpleType name="PalletStatus">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Search" />
@@ -133,26 +195,88 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="PalletStatus" nillable="true" type="tns:PalletStatus" />
-  <xs:simpleType name="SalesStatus">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="None" />
-      <xs:enumeration value="Backorder" />
-      <xs:enumeration value="Delivered" />
-      <xs:enumeration value="Invoiced" />
-      <xs:enumeration value="Canceled" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="SalesStatus" nillable="true" type="tns:SalesStatus" />
-  <xs:simpleType name="SalesType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Journal" />
-      <xs:enumeration value="DEL_Quotation" />
-      <xs:enumeration value="Subscription" />
-      <xs:enumeration value="Sales" />
-      <xs:enumeration value="ReturnItem" />
-      <xs:enumeration value="DEL_Blanket" />
-      <xs:enumeration value="ItemReq" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="SalesType" nillable="true" type="tns:SalesType" />
+  <xs:complexType name="EVSSalesLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q12:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExclusiveHalfPallet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventTransID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsHalfPallet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineRecId" type="xs:long" />
+          <xs:element minOccurs="0" name="Locations" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtyBox" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtyPallet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQM" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQMRemaining" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQMReserved" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateStatus" type="tns:PalletStatus" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Warehouse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="wLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EVSSalesLineContract" nillable="true" type="tns:EVSSalesLineContract" />
+  <xs:complexType name="ArrayOfInventByGrLocContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventByGrLocContract" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
+  <xs:complexType name="ArrayOfPalletItemContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PalletItemContract" nillable="true" type="tns:PalletItemContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPalletItemContract" nillable="true" type="tns:ArrayOfPalletItemContract" />
+  <xs:complexType name="ArrayOfEVSSalesLineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EVSSalesLineContract" nillable="true" type="tns:EVSSalesLineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEVSSalesLineContract" nillable="true" type="tns:ArrayOfEVSSalesLineContract" />
+  <xs:complexType name="ArrayOfCustomerDeliveryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDeliveryContract" nillable="true" type="tns:CustomerDeliveryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerDeliveryContract" nillable="true" type="tns:ArrayOfCustomerDeliveryContract" />
+  <xs:complexType name="ArrayOfFGDeliveryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FGDeliveryContract" nillable="true" type="tns:FGDeliveryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFGDeliveryContract" nillable="true" type="tns:ArrayOfFGDeliveryContract" />
+  <xs:complexType name="ArrayOfLookupContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LookupContract" nillable="true" type="tns:LookupContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookupContract" nillable="true" type="tns:ArrayOfLookupContract" />
+  <xs:complexType name="ArrayOfFGLineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FGLineContract" nillable="true" type="tns:FGLineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFGLineContract" nillable="true" type="tns:ArrayOfFGLineContract" />
+  <xs:complexType name="ArrayOfPLNotDeliveredContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PLNotDeliveredContract" nillable="true" type="tns:PLNotDeliveredContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPLNotDeliveredContract" nillable="true" type="tns:ArrayOfPLNotDeliveredContract" />
 </xs:schema>

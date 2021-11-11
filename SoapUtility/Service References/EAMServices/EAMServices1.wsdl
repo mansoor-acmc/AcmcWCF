@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="WorkItemsService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="WorkItemsService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd2" namespace="http://tempuri.org" />
+    <xsd:schema targetNamespace="WorkItemsService/Imports">
+      <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd2" namespace="WorkItemsService" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
@@ -358,119 +358,119 @@
   </wsdl:message>
   <wsdl:portType name="WorkItemsService">
     <wsdl:operation name="CreateOrUpdate">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/CreateOrUpdate" name="CreateOrUpdate" message="tns:CreateOrUpdate" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/CreateOrUpdateResponse" name="CreateOrUpdateResponse" message="tns:CreateOrUpdateResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_CreateOrUpdate_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/CreateOrUpdate" name="CreateOrUpdate" message="tns:CreateOrUpdate" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/CreateOrUpdateResponse" name="CreateOrUpdateResponse" message="tns:CreateOrUpdateResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_CreateOrUpdate_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteWorkItem">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/DeleteWorkItem" name="DeleteWorkItem" message="tns:DeleteWorkItem" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemResponse" name="DeleteWorkItemResponse" message="tns:DeleteWorkItemResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_DeleteWorkItem_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/DeleteWorkItem" name="DeleteWorkItem" message="tns:DeleteWorkItem" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/DeleteWorkItemResponse" name="DeleteWorkItemResponse" message="tns:DeleteWorkItemResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_DeleteWorkItem_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteWorkItemByRecId">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecId" name="DeleteWorkItemByRecId" message="tns:DeleteWorkItemByRecId" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/DeleteWorkItemByRecIdResponse" name="DeleteWorkItemByRecIdResponse" message="tns:DeleteWorkItemByRecIdResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_DeleteWorkItemByRecId_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/DeleteWorkItemByRecId" name="DeleteWorkItemByRecId" message="tns:DeleteWorkItemByRecId" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/DeleteWorkItemByRecIdResponse" name="DeleteWorkItemByRecIdResponse" message="tns:DeleteWorkItemByRecIdResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_DeleteWorkItemByRecId_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllEquipments">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetAllEquipments" name="GetAllEquipments" message="tns:GetAllEquipments" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetAllEquipmentsResponse" name="GetAllEquipmentsResponse" message="tns:GetAllEquipmentsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetAllEquipments_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetAllEquipments" name="GetAllEquipments" message="tns:GetAllEquipments" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetAllEquipmentsResponse" name="GetAllEquipmentsResponse" message="tns:GetAllEquipmentsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetAllEquipments_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetEquipLocations">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetEquipLocations" name="GetEquipLocations" message="tns:GetEquipLocations" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetEquipLocationsResponse" name="GetEquipLocationsResponse" message="tns:GetEquipLocationsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipLocations_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetEquipLocations" name="GetEquipLocations" message="tns:GetEquipLocations" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetEquipLocationsResponse" name="GetEquipLocationsResponse" message="tns:GetEquipLocationsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipLocations_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetEquipment">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetEquipment" name="GetEquipment" message="tns:GetEquipment" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetEquipmentResponse" name="GetEquipmentResponse" message="tns:GetEquipmentResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipment_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetEquipment" name="GetEquipment" message="tns:GetEquipment" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetEquipmentResponse" name="GetEquipmentResponse" message="tns:GetEquipmentResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipment_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetEquipmentsByCostCenter">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenter" name="GetEquipmentsByCostCenter" message="tns:GetEquipmentsByCostCenter" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetEquipmentsByCostCenterResponse" name="GetEquipmentsByCostCenterResponse" message="tns:GetEquipmentsByCostCenterResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipmentsByCostCenter_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetEquipmentsByCostCenter" name="GetEquipmentsByCostCenter" message="tns:GetEquipmentsByCostCenter" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetEquipmentsByCostCenterResponse" name="GetEquipmentsByCostCenterResponse" message="tns:GetEquipmentsByCostCenterResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetEquipmentsByCostCenter_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetFailureCodes">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetFailureCodes" name="GetFailureCodes" message="tns:GetFailureCodes" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetFailureCodesResponse" name="GetFailureCodesResponse" message="tns:GetFailureCodesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetFailureCodes_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetFailureCodes" name="GetFailureCodes" message="tns:GetFailureCodes" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetFailureCodesResponse" name="GetFailureCodesResponse" message="tns:GetFailureCodesResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetFailureCodes_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetInlineWorkItems">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetInlineWorkItems" name="GetInlineWorkItems" message="tns:GetInlineWorkItems" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetInlineWorkItemsResponse" name="GetInlineWorkItemsResponse" message="tns:GetInlineWorkItemsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetInlineWorkItems_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetInlineWorkItems" name="GetInlineWorkItems" message="tns:GetInlineWorkItems" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetInlineWorkItemsResponse" name="GetInlineWorkItemsResponse" message="tns:GetInlineWorkItemsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetInlineWorkItems_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetLatestWorkorder">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetLatestWorkorder" name="GetLatestWorkorder" message="tns:GetLatestWorkorder" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetLatestWorkorderResponse" name="GetLatestWorkorderResponse" message="tns:GetLatestWorkorderResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetLatestWorkorder_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetLatestWorkorder" name="GetLatestWorkorder" message="tns:GetLatestWorkorder" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetLatestWorkorderResponse" name="GetLatestWorkorderResponse" message="tns:GetLatestWorkorderResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetLatestWorkorder_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="getMaxId">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/getMaxId" name="getMaxId" message="tns:getMaxId" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/getMaxIdResponse" name="getMaxIdResponse" message="tns:getMaxIdResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_getMaxId_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/getMaxId" name="getMaxId" message="tns:getMaxId" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/getMaxIdResponse" name="getMaxIdResponse" message="tns:getMaxIdResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_getMaxId_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetOnhand">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetOnhand" name="GetOnhand" message="tns:GetOnhand" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetOnhandResponse" name="GetOnhandResponse" message="tns:GetOnhandResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetOnhand_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetOnhand" name="GetOnhand" message="tns:GetOnhand" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetOnhandResponse" name="GetOnhandResponse" message="tns:GetOnhandResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetOnhand_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetOtherWorkItems">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetOtherWorkItems" name="GetOtherWorkItems" message="tns:GetOtherWorkItems" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetOtherWorkItemsResponse" name="GetOtherWorkItemsResponse" message="tns:GetOtherWorkItemsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetOtherWorkItems_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetOtherWorkItems" name="GetOtherWorkItems" message="tns:GetOtherWorkItems" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetOtherWorkItemsResponse" name="GetOtherWorkItemsResponse" message="tns:GetOtherWorkItemsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetOtherWorkItems_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetRepaireCodes">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetRepaireCodes" name="GetRepaireCodes" message="tns:GetRepaireCodes" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetRepaireCodesResponse" name="GetRepaireCodesResponse" message="tns:GetRepaireCodesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetRepaireCodes_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetRepaireCodes" name="GetRepaireCodes" message="tns:GetRepaireCodes" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetRepaireCodesResponse" name="GetRepaireCodesResponse" message="tns:GetRepaireCodesResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetRepaireCodes_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWOPoolCode">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetWOPoolCode" name="GetWOPoolCode" message="tns:GetWOPoolCode" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetWOPoolCodeResponse" name="GetWOPoolCodeResponse" message="tns:GetWOPoolCodeResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWOPoolCode_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetWOPoolCode" name="GetWOPoolCode" message="tns:GetWOPoolCode" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetWOPoolCodeResponse" name="GetWOPoolCodeResponse" message="tns:GetWOPoolCodeResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWOPoolCode_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWorkordersByDates">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetWorkordersByDates" name="GetWorkordersByDates" message="tns:GetWorkordersByDates" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetWorkordersByDatesResponse" name="GetWorkordersByDatesResponse" message="tns:GetWorkordersByDatesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkordersByDates_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetWorkordersByDates" name="GetWorkordersByDates" message="tns:GetWorkordersByDates" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetWorkordersByDatesResponse" name="GetWorkordersByDatesResponse" message="tns:GetWorkordersByDatesResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkordersByDates_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWorkordersByEquipment">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipment" name="GetWorkordersByEquipment" message="tns:GetWorkordersByEquipment" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetWorkordersByEquipmentResponse" name="GetWorkordersByEquipmentResponse" message="tns:GetWorkordersByEquipmentResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkordersByEquipment_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetWorkordersByEquipment" name="GetWorkordersByEquipment" message="tns:GetWorkordersByEquipment" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetWorkordersByEquipmentResponse" name="GetWorkordersByEquipmentResponse" message="tns:GetWorkordersByEquipmentResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkordersByEquipment_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWorkOrderStatusLookup">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookup" name="GetWorkOrderStatusLookup" message="tns:GetWorkOrderStatusLookup" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetWorkOrderStatusLookupResponse" name="GetWorkOrderStatusLookupResponse" message="tns:GetWorkOrderStatusLookupResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkOrderStatusLookup_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetWorkOrderStatusLookup" name="GetWorkOrderStatusLookup" message="tns:GetWorkOrderStatusLookup" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetWorkOrderStatusLookupResponse" name="GetWorkOrderStatusLookupResponse" message="tns:GetWorkOrderStatusLookupResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkOrderStatusLookup_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWorkOrderTypes">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypes" name="GetWorkOrderTypes" message="tns:GetWorkOrderTypes" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/GetWorkOrderTypesResponse" name="GetWorkOrderTypesResponse" message="tns:GetWorkOrderTypesResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkOrderTypes_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/GetWorkOrderTypes" name="GetWorkOrderTypes" message="tns:GetWorkOrderTypes" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/GetWorkOrderTypesResponse" name="GetWorkOrderTypesResponse" message="tns:GetWorkOrderTypesResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_GetWorkOrderTypes_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="MainCostByProdLine">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/MainCostByProdLine" name="MainCostByProdLine" message="tns:MainCostByProdLine" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/MainCostByProdLineResponse" name="MainCostByProdLineResponse" message="tns:MainCostByProdLineResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_MainCostByProdLine_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/MainCostByProdLine" name="MainCostByProdLine" message="tns:MainCostByProdLine" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/MainCostByProdLineResponse" name="MainCostByProdLineResponse" message="tns:MainCostByProdLineResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_MainCostByProdLine_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="PostedWorkItems">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/PostedWorkItems" name="PostedWorkItems" message="tns:PostedWorkItems" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/PostedWorkItemsResponse" name="PostedWorkItemsResponse" message="tns:PostedWorkItemsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_PostedWorkItems_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/PostedWorkItems" name="PostedWorkItems" message="tns:PostedWorkItems" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/PostedWorkItemsResponse" name="PostedWorkItemsResponse" message="tns:PostedWorkItemsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_PostedWorkItems_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SearchEquipments">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/SearchEquipments" name="SearchEquipments" message="tns:SearchEquipments" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/SearchEquipmentsResponse" name="SearchEquipmentsResponse" message="tns:SearchEquipmentsResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_SearchEquipments_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/SearchEquipments" name="SearchEquipments" message="tns:SearchEquipments" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/SearchEquipmentsResponse" name="SearchEquipmentsResponse" message="tns:SearchEquipmentsResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_SearchEquipments_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetWOStatus">
-      <wsdl:input wsam:Action="http://tempuri.org/WorkItemsService/SetWOStatus" name="SetWOStatus" message="tns:SetWOStatus" />
-      <wsdl:output wsam:Action="http://tempuri.org/WorkItemsService/SetWOStatusResponse" name="SetWOStatusResponse" message="tns:SetWOStatusResponse" />
-      <wsdl:fault wsam:Action="http://tempuri.org/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_SetWOStatus_SoapServiceFaultFault_FaultMessage" />
+      <wsdl:input wsam:Action="WorkItemsService/WorkItemsService/SetWOStatus" name="SetWOStatus" message="tns:SetWOStatus" />
+      <wsdl:output wsam:Action="WorkItemsService/WorkItemsService/SetWOStatusResponse" name="SetWOStatusResponse" message="tns:SetWOStatusResponse" />
+      <wsdl:fault wsam:Action="WorkItemsService/WorkItemsService/Fault" name="SoapServiceFaultFault" message="tns:WorkItemsService_SetWOStatus_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

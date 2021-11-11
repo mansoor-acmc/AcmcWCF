@@ -145,6 +145,7 @@
     <None Include="Properties\DataSources\SyncServices.SalesOrderAX.SalesTableContract.datasource" />
     <None Include="Properties\DataSources\SyncServices.SalesTable.datasource" />
     <None Include="Properties\DataSources\SyncServices.UserData.datasource" />
+    <None Include="Properties\DataSources\SyncServices.UserInfo.datasource" />
     <None Include="Properties\DataSources\SyncServices.WOPool.datasource" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Service References\DeviceOps\DeviceOps.wsdl" />
@@ -176,6 +177,18 @@
     <None Include="Service References\DMCheckService\DMCheckService5.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMExportMiniContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMSummaryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\FGSyncService\FGSyncService.wsdl" />
     <None Include="Service References\FGSyncService\FGSyncService.xsd">
       <SubType>Designer</SubType>
@@ -194,6 +207,9 @@
     </None>
     <None Include="Service References\FGSyncService\FGSyncService5.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FGSyncService\TestWebservice.FGSyncService.InventAvailContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ModulaMovement\ModulaMovement1.wsdl" />
     <None Include="Service References\ModulaMovement\ModulaMovement3.xsd">
@@ -223,6 +239,15 @@
     </None>
     <None Include="Service References\ModulaService\ModulaPR32.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.PMLineCostContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModulaService\TestWebservice.ModulaService.WOTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProdRequestService\ProdRequestService.wsdl" />
     <None Include="Service References\ProdRequestService\ProdRequestService.xsd">
@@ -265,6 +290,18 @@
     <None Include="Service References\SalesOrderService\SalesOrderService4.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\SalesOrderService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.EVSSalesTableContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesOrderService\TestWebservice.SalesOrderService.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SalesService\SalesService.wsdl" />
     <None Include="Service References\SalesService\SalesService.xsd">
       <SubType>Designer</SubType>
@@ -287,6 +324,18 @@
     <None Include="Service References\SalesService\SalesService6.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SalesService\SalesService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesService\TestWebservice.SalesService.CustomerDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesService\TestWebservice.SalesService.FGDeliveryContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesService\TestWebservice.SalesService.FGLineContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SCSyncService\SCSyncService.wsdl" />
     <None Include="Service References\SCSyncService\SCSyncService.xsd">
       <SubType>Designer</SubType>
@@ -305,6 +354,18 @@
     </None>
     <None Include="Service References\SCSyncService\SCSyncService5.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCSyncService\TestWebservice.SCSyncService.InventForItemUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SCSyncService\TestWebservice.SCSyncService.SCForTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SCSyncService\TestWebservice.SCSyncService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserMgtService\TestWebservice.UserMgtService.AttendanceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\UserMgtService\UserMgtService.wsdl" />
     <None Include="Service References\UserMgtService\UserMgtService.xsd">
