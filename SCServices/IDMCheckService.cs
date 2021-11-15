@@ -71,6 +71,9 @@ namespace SyncServices
 
         [OperationContract]
         bool ClearDuplicatePalletsAll(List<DuplicatePallet> pallets);
+
+        [OperationContract]
+        List<ItemCodeContract> GetItemCodes();
     }
 
     [DataContract]

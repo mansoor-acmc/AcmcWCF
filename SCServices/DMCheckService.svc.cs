@@ -444,8 +444,19 @@ namespace SyncServices
         {
             return new DBClass(DBClass.DbName.ImportExportDB).ClearDuplicatePalletsAll(pallets);
         }
-        
-        
+
+        public List<ItemCodeContract> GetItemCodes()
+        {
+            using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+            {
+                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                return ((DMDataToSaveService)channel).GetItemCodes(new GetItemCodes(context)).result.ToList();
+            }            
+        }
+
         public string GetPing()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
