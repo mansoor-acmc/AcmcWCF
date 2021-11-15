@@ -1464,6 +1464,21 @@ namespace SyncServices.SalesOrderAX {
         
         /// <remarks/>
         PickingList,
+        
+        /// <remarks/>
+        CreateSalesOrder,
+        
+        /// <remarks/>
+        DeleteSalesOrder,
+        
+        /// <remarks/>
+        CreateSalesLine,
+        
+        /// <remarks/>
+        DeleteSalesLine,
+        
+        /// <remarks/>
+        PrintPackingslip,
     }
     
     /// <remarks/>

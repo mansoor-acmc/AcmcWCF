@@ -18,25 +18,25 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/EAMServices" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://FAC-STAGE-AX04:8101/DynamicsAx/Services/EAMServices" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EAMServices14.xsd" MetadataType="Schema" ID="a4ed5d5e-df1c-440b-bed8-8a984bd165a6" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" />
-    <MetadataFile FileName="EAMServices141.xsd" MetadataType="Schema" ID="4cfc5e4d-409d-49fa-9443-98881aa7e42b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd3" />
-    <MetadataFile FileName="EAMServices142.xsd" MetadataType="Schema" ID="95dd5b88-6e96-4d7b-a6b1-65eefbb812a6" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd13" />
-    <MetadataFile FileName="EAMServices2.wsdl" MetadataType="Wsdl" ID="80bdbe16-c623-4fb6-b92b-67f779516825" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices" />
-    <MetadataFile FileName="EAMServices143.xsd" MetadataType="Schema" ID="026bcfad-84a2-48ae-ba7f-b9a0d51a1986" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd6" />
-    <MetadataFile FileName="EAMServices144.xsd" MetadataType="Schema" ID="ab0cb15b-cdca-4a66-8316-ee1470b8f9d8" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd2" />
-    <MetadataFile FileName="EAMServices145.xsd" MetadataType="Schema" ID="15663445-b640-4d05-9c0b-1b8b9ca3dc1b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd12" />
-    <MetadataFile FileName="EAMServices146.xsd" MetadataType="Schema" ID="eacd8538-aaa1-4342-8116-c1bfdc131917" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd9" />
-    <MetadataFile FileName="EAMServices147.xsd" MetadataType="Schema" ID="f407e6db-a17a-4ab0-a76e-866bc2234a51" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd5" />
-    <MetadataFile FileName="EAMServices148.xsd" MetadataType="Schema" ID="ee63d605-36de-45f2-b699-19665b11e142" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd1" />
-    <MetadataFile FileName="EAMServices149.xsd" MetadataType="Schema" ID="a3a22343-7020-4b10-8e5e-7204be385203" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd8" />
-    <MetadataFile FileName="EAMServices1410.xsd" MetadataType="Schema" ID="9de57ff1-d3a0-4b7e-9ae9-4479398823f2" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" />
-    <MetadataFile FileName="EAMServices1411.xsd" MetadataType="Schema" ID="d0f79369-fc50-4db0-8e7d-8a40ea42f00b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd0" />
-    <MetadataFile FileName="EAMServices21.wsdl" MetadataType="Wsdl" ID="702d0e3c-ecf1-4cd9-b48f-6951a82bb7dc" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?wsdl=wsdl0" />
-    <MetadataFile FileName="EAMServices1412.xsd" MetadataType="Schema" ID="696f04a4-166e-4626-a868-67e2ead76392" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd10" />
-    <MetadataFile FileName="EAMServices1413.xsd" MetadataType="Schema" ID="85ab60de-1753-4a02-96ac-2e7e1be954fe" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/EAMServices?xsd=xsd11" />
+    <MetadataFile FileName="EAMServices.wsdl" MetadataType="Wsdl" ID="189a5caa-cd6c-4810-8139-eb703e123ad9" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?wsdl=wsdl0" />
+    <MetadataFile FileName="EAMServices.xsd" MetadataType="Schema" ID="4ba4d9c5-6641-49b0-91eb-486f5fc47e6f" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd9" />
+    <MetadataFile FileName="EAMServices1.wsdl" MetadataType="Wsdl" ID="617b0b16-a054-4212-939f-bef913177c7c" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices" />
+    <MetadataFile FileName="EAMServices1.xsd" MetadataType="Schema" ID="e8c1bbd3-7dd3-40b7-9a2b-4758a71ffba4" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd4" />
+    <MetadataFile FileName="EAMServices2.xsd" MetadataType="Schema" ID="316b205d-b2b8-4bfe-9db0-8b03c3ad02f3" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd6" />
+    <MetadataFile FileName="EAMServices3.xsd" MetadataType="Schema" ID="54da2363-88ae-4428-a6b1-7203b168b195" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd1" />
+    <MetadataFile FileName="EAMServices4.xsd" MetadataType="Schema" ID="724c3d03-d859-4d5d-a167-9db203ec596a" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd0" />
+    <MetadataFile FileName="EAMServices5.xsd" MetadataType="Schema" ID="c3e48dbf-6c09-4a57-bbdb-ca7aaf1fe955" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd3" />
+    <MetadataFile FileName="EAMServices6.xsd" MetadataType="Schema" ID="77600f6a-c5dd-4dbe-94c5-d1f215e2446c" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd2" />
+    <MetadataFile FileName="EAMServices7.xsd" MetadataType="Schema" ID="4c7c0a58-926e-4e30-bfc2-ee9d3fec75b1" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd5" />
+    <MetadataFile FileName="EAMServices8.xsd" MetadataType="Schema" ID="6e2cc64e-e7ac-426e-9ba5-7661c695ade8" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd10" />
+    <MetadataFile FileName="EAMServices9.xsd" MetadataType="Schema" ID="570ed204-571c-4908-b9b9-a645785406f8" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd7" />
+    <MetadataFile FileName="EAMServices10.xsd" MetadataType="Schema" ID="6712baf4-2a49-4b37-9616-4846b3f9c280" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd13" />
+    <MetadataFile FileName="EAMServices11.xsd" MetadataType="Schema" ID="f8d75adf-e5ac-4755-b410-9b60b93f90ee" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd12" />
+    <MetadataFile FileName="EAMServices12.xsd" MetadataType="Schema" ID="fee8b071-7dd4-4399-82f7-c9252c34717c" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd11" />
+    <MetadataFile FileName="EAMServices13.xsd" MetadataType="Schema" ID="beed9310-248a-4e5a-a8b5-9531985e1d6d" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/EAMServices?xsd=xsd8" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

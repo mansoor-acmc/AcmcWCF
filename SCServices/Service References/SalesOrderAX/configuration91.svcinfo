@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="mCbqvba+BhAzNRJEhyetgMxkBz+N3NQBn+rCvrs6dgk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="0+Mm4i6sXyZUYnHMg2EgNc1kaTXGHffpvVr/Xx3w7GA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_SOPickService">
       <properties>
@@ -121,10 +121,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_SOPickService" contract="SalesOrderAX.SOPickService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesOrder" bindingConfiguration="NetTcpBinding_SOPickService">
+    <endpoint name="NetTcpBinding_SOPickService" contract="SalesOrderAX.SOPickService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesOrder" bindingConfiguration="NetTcpBinding_SOPickService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesOrder</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesOrder</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -151,7 +151,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>

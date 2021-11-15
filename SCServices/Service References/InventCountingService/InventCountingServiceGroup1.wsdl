@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InventCountingServiceGroup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_JournalCountingService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://tempuri.org" location="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_JournalCountingService" type="i0:JournalCountingService">
+    <wsp:PolicyReference URI="#NetTcpBinding_JournalCountingService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetItemsAvailable">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetItemsAvailable" style="document" />
+      <wsdl:input name="JournalCountingServiceGetItemsAvailableRequest">
+        <soap12:header message="i0:JournalCountingServiceGetItemsAvailableRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetItemsAvailableResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUoM">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetItemUoM" style="document" />
+      <wsdl:input name="JournalCountingServiceGetItemUoMRequest">
+        <soap12:header message="i0:JournalCountingServiceGetItemUoMRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetItemUoMResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearFGInventory">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetYearFGInventory" style="document" />
+      <wsdl:input name="JournalCountingServiceGetYearFGInventoryRequest">
+        <soap12:header message="i0:JournalCountingServiceGetYearFGInventoryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetYearFGInventoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferItems">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/UpdateTransferItems" style="document" />
+      <wsdl:input name="JournalCountingServiceUpdateTransferItemsRequest">
+        <soap12:header message="i0:JournalCountingServiceUpdateTransferItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceUpdateTransferItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCounting">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/UpdateCounting" style="document" />
+      <wsdl:input name="JournalCountingServiceUpdateCountingRequest">
+        <soap12:header message="i0:JournalCountingServiceUpdateCountingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceUpdateCountingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountingJournals">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetCountingJournals" style="document" />
+      <wsdl:input name="JournalCountingServiceGetCountingJournalsRequest">
+        <soap12:header message="i0:JournalCountingServiceGetCountingJournalsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetCountingJournalsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouse">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetWarehouse" style="document" />
+      <wsdl:input name="JournalCountingServiceGetWarehouseRequest">
+        <soap12:header message="i0:JournalCountingServiceGetWarehouseRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetWarehouseResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHLocations">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/GetWHLocations" style="document" />
+      <wsdl:input name="JournalCountingServiceGetWHLocationsRequest">
+        <soap12:header message="i0:JournalCountingServiceGetWHLocationsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceGetWHLocationsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/read" style="document" />
+      <wsdl:input name="JournalCountingServiceReadRequest">
+        <soap12:header message="i0:JournalCountingServiceReadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceReadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap12:operation soapAction="http://tempuri.org/JournalCountingService/find" style="document" />
+      <wsdl:input name="JournalCountingServiceFindRequest">
+        <soap12:header message="i0:JournalCountingServiceFindRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="JournalCountingServiceFindResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventCountingServiceGroup">
+    <wsdl:port name="NetTcpBinding_JournalCountingService" binding="tns:NetTcpBinding_JournalCountingService">
+      <soap12:address location="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/InventCountingServiceGroup" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/InventCountingServiceGroup</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ax2@kabholding.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -12,7 +12,7 @@ namespace SyncServices.InventCountingService {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -115,7 +115,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -273,7 +273,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -319,7 +319,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -379,7 +379,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services")]
     public enum InfologMessageType {
@@ -403,7 +403,7 @@ namespace SyncServices.InventCountingService {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventJournalTableContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventForItemUnit))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventAvailContract))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -421,7 +421,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -444,7 +444,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -495,7 +495,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -644,7 +644,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -709,7 +709,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -844,7 +844,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -895,7 +895,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -932,7 +932,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1147,6 +1147,27 @@ namespace SyncServices.InventCountingService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableResponse GetItemsAvailable(SyncServices.InventCountingService.JournalCountingServiceGetItemsAvailableRequest request);
         
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetItemUoMRequest) of message JournalCountingServiceGetItemUoMRequest does not match the default value (GetItemUoM)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetItemUoM", ReplyAction="http://tempuri.org/JournalCountingService/GetItemUoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetYearFGInventoryRequest) of message JournalCountingServiceGetYearFGInventoryRequest does not match the default value (GetYearFGInventory)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetYearFGInventory", ReplyAction="http://tempuri.org/JournalCountingService/GetYearFGInventoryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetYearFGInventoryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse GetYearFGInventory(SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceUpdateTransferItemsRequest) of message JournalCountingServiceUpdateTransferItemsRequest does not match the default value (UpdateTransferItems)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/UpdateTransferItems", ReplyAction="http://tempuri.org/JournalCountingService/UpdateTransferItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/UpdateTransferItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
+        SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse UpdateTransferItems(SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest request);
+        
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceUpdateCountingRequest) of message JournalCountingServiceUpdateCountingRequest does not match the default value (UpdateCounting)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/UpdateCounting", ReplyAction="http://tempuri.org/JournalCountingService/UpdateCountingResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/UpdateCountingAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -1161,12 +1182,12 @@ namespace SyncServices.InventCountingService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsResponse GetCountingJournals(SyncServices.InventCountingService.JournalCountingServiceGetCountingJournalsRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetItemUoMRequest) of message JournalCountingServiceGetItemUoMRequest does not match the default value (GetItemUoM)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetItemUoM", ReplyAction="http://tempuri.org/JournalCountingService/GetItemUoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetItemUoMAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
+        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetWarehouseRequest) of message JournalCountingServiceGetWarehouseRequest does not match the default value (GetWarehouse)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetWarehouse", ReplyAction="http://tempuri.org/JournalCountingService/GetWarehouseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetWarehouseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request);
+        SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse GetWarehouse(SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetWHLocationsRequest) of message JournalCountingServiceGetWHLocationsRequest does not match the default value (GetWHLocations)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetWHLocations", ReplyAction="http://tempuri.org/JournalCountingService/GetWHLocationsResponse")]
@@ -1182,27 +1203,6 @@ namespace SyncServices.InventCountingService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
         SyncServices.InventCountingService.JournalCountingServiceReadResponse read(SyncServices.InventCountingService.JournalCountingServiceReadRequest request);
         
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceUpdateTransferItemsRequest) of message JournalCountingServiceUpdateTransferItemsRequest does not match the default value (UpdateTransferItems)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/UpdateTransferItems", ReplyAction="http://tempuri.org/JournalCountingService/UpdateTransferItemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/UpdateTransferItemsAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse UpdateTransferItems(SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetYearFGInventoryRequest) of message JournalCountingServiceGetYearFGInventoryRequest does not match the default value (GetYearFGInventory)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetYearFGInventory", ReplyAction="http://tempuri.org/JournalCountingService/GetYearFGInventoryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetYearFGInventoryAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse GetYearFGInventory(SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest request);
-        
-        // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceGetWarehouseRequest) of message JournalCountingServiceGetWarehouseRequest does not match the default value (GetWarehouse)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetWarehouse", ReplyAction="http://tempuri.org/JournalCountingService/GetWarehouseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/GetWarehouseAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(XppObjectBase))]
-        SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse GetWarehouse(SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest request);
-        
         // CODEGEN: Generating message contract since the wrapper name (JournalCountingServiceFindRequest) of message JournalCountingServiceFindRequest does not match the default value (find)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/find", ReplyAction="http://tempuri.org/JournalCountingService/findResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SyncServices.InventCountingService.AifFault), Action="http://tempuri.org/JournalCountingService/findAifFaultFault", Name="AifFault", Namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault")]
@@ -1212,7 +1212,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1315,7 +1315,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1393,6 +1393,132 @@ namespace SyncServices.InventCountingService {
         }
         
         public JournalCountingServiceGetItemsAvailableResponse(SyncServices.InventCountingService.InventSumContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetItemUoMRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string allItems;
+        
+        public JournalCountingServiceGetItemUoMRequest() {
+        }
+        
+        public JournalCountingServiceGetItemUoMRequest(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
+            this.CallContext = CallContext;
+            this.allItems = allItems;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetItemUoMResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.InventForItemUnit[] response;
+        
+        public JournalCountingServiceGetItemUoMResponse() {
+        }
+        
+        public JournalCountingServiceGetItemUoMResponse(SyncServices.InventCountingService.InventForItemUnit[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetYearFGInventoryRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public int startId;
+        
+        public JournalCountingServiceGetYearFGInventoryRequest() {
+        }
+        
+        public JournalCountingServiceGetYearFGInventoryRequest(SyncServices.InventCountingService.CallContext CallContext, int startId) {
+            this.CallContext = CallContext;
+            this.startId = startId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetYearFGInventoryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.InventAvailContract[] response;
+        
+        public JournalCountingServiceGetYearFGInventoryResponse() {
+        }
+        
+        public JournalCountingServiceGetYearFGInventoryResponse(SyncServices.InventCountingService.InventAvailContract[] response) {
+            this.response = response;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceUpdateTransferItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceUpdateTransferItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public SyncServices.InventCountingService.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.SCForTransfer[] lines;
+        
+        public JournalCountingServiceUpdateTransferItemsRequest() {
+        }
+        
+        public JournalCountingServiceUpdateTransferItemsRequest(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.SCForTransfer[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceUpdateTransferItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceUpdateTransferItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
+        public SyncServices.InventCountingService.SCForTransfer[] response;
+        
+        public JournalCountingServiceUpdateTransferItemsResponse() {
+        }
+        
+        public JournalCountingServiceUpdateTransferItemsResponse(SyncServices.InventCountingService.SCForTransfer[] response) {
             this.response = response;
         }
     }
@@ -1485,8 +1611,8 @@ namespace SyncServices.InventCountingService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetItemUoMRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetWarehouseRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1494,32 +1620,32 @@ namespace SyncServices.InventCountingService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string allItems;
+        public string siteId;
         
-        public JournalCountingServiceGetItemUoMRequest() {
+        public JournalCountingServiceGetWarehouseRequest() {
         }
         
-        public JournalCountingServiceGetItemUoMRequest(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
+        public JournalCountingServiceGetWarehouseRequest(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
             this.CallContext = CallContext;
-            this.allItems = allItems;
+            this.siteId = siteId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetItemUoMResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetItemUoMResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class JournalCountingServiceGetWarehouseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.InventForItemUnit[] response;
+        public SyncServices.InventCountingService.WarehouseContract[] response;
         
-        public JournalCountingServiceGetItemUoMResponse() {
+        public JournalCountingServiceGetWarehouseResponse() {
         }
         
-        public JournalCountingServiceGetItemUoMResponse(SyncServices.InventCountingService.InventForItemUnit[] response) {
+        public JournalCountingServiceGetWarehouseResponse(SyncServices.InventCountingService.WarehouseContract[] response) {
             this.response = response;
         }
     }
@@ -1562,7 +1688,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1595,7 +1721,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1641,7 +1767,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1743,7 +1869,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_boolean {
@@ -1756,7 +1882,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_XMLDocPurpose {
@@ -1772,7 +1898,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2578,7 +2704,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalDeletePostedLines {
@@ -2591,7 +2717,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalDetailSummary {
@@ -2604,7 +2730,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_PlInventDocType {
@@ -2620,7 +2746,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventJournalType {
@@ -2654,7 +2780,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2686,7 +2812,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalPosted {
@@ -2699,7 +2825,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2758,7 +2884,7 @@ namespace SyncServices.InventCountingService {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_UTCTimestamp))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidTo))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AxdExtType_HcmEmploymentValidFrom))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2846,7 +2972,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_Timezone {
@@ -3168,7 +3294,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3177,7 +3303,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3186,7 +3312,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3195,7 +3321,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3204,7 +3330,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3213,7 +3339,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3222,7 +3348,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3231,7 +3357,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3240,7 +3366,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3249,7 +3375,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3258,7 +3384,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3267,7 +3393,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3276,7 +3402,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3285,7 +3411,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3294,7 +3420,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3303,7 +3429,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3312,7 +3438,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3321,7 +3447,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3330,7 +3456,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3339,7 +3465,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3348,7 +3474,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3357,7 +3483,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3366,7 +3492,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3375,7 +3501,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3384,7 +3510,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3393,7 +3519,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3402,7 +3528,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3411,7 +3537,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3420,7 +3546,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3429,7 +3555,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3438,7 +3564,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3447,7 +3573,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3456,7 +3582,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3465,7 +3591,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3474,7 +3600,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3483,7 +3609,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3492,7 +3618,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3501,7 +3627,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3510,7 +3636,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3519,7 +3645,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3528,7 +3654,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3537,7 +3663,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3546,7 +3672,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3555,7 +3681,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3564,7 +3690,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3573,7 +3699,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3582,7 +3708,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3591,7 +3717,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3600,7 +3726,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3609,7 +3735,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ItemReservation {
@@ -3625,7 +3751,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_RetailReplenishmentType {
@@ -3638,7 +3764,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_RetailRetailStatusType {
@@ -3666,7 +3792,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_Storno_RU {
@@ -3679,7 +3805,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_JournalSystemBlocked {
@@ -3692,7 +3818,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventJournalVoucherChange {
@@ -3705,7 +3831,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_JournalVoucherDraw {
@@ -3718,7 +3844,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3863,7 +3989,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_OMOperatingUnitType {
@@ -3894,7 +4020,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5204,7 +5330,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_AssetTransTypeJournal {
@@ -5283,7 +5409,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_BOMLine {
@@ -5296,7 +5422,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5329,7 +5455,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5375,7 +5501,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_NoYes {
@@ -5388,7 +5514,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ExciseRecordType_IN {
@@ -5407,7 +5533,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_ExciseType_IN {
@@ -5423,7 +5549,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_InventRefType {
@@ -5457,7 +5583,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5518,7 +5644,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdExtType_PdsCopyBatchAttrib {
@@ -5531,7 +5657,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5577,7 +5703,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_CostProfitSet {
@@ -5596,7 +5722,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes")]
     public enum AxdEnum_AxdEntityAction {
@@ -5656,134 +5782,8 @@ namespace SyncServices.InventCountingService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceUpdateTransferItemsRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceUpdateTransferItemsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.SCForTransfer[] lines;
-        
-        public JournalCountingServiceUpdateTransferItemsRequest() {
-        }
-        
-        public JournalCountingServiceUpdateTransferItemsRequest(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.SCForTransfer[] lines) {
-            this.CallContext = CallContext;
-            this.lines = lines;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceUpdateTransferItemsResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceUpdateTransferItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.SCForTransfer[] response;
-        
-        public JournalCountingServiceUpdateTransferItemsResponse() {
-        }
-        
-        public JournalCountingServiceUpdateTransferItemsResponse(SyncServices.InventCountingService.SCForTransfer[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetYearFGInventoryRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        public int startId;
-        
-        public JournalCountingServiceGetYearFGInventoryRequest() {
-        }
-        
-        public JournalCountingServiceGetYearFGInventoryRequest(SyncServices.InventCountingService.CallContext CallContext, int startId) {
-            this.CallContext = CallContext;
-            this.startId = startId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetYearFGInventoryResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetYearFGInventoryResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.InventAvailContract[] response;
-        
-        public JournalCountingServiceGetYearFGInventoryResponse() {
-        }
-        
-        public JournalCountingServiceGetYearFGInventoryResponse(SyncServices.InventCountingService.InventAvailContract[] response) {
-            this.response = response;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseRequest", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetWarehouseRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts")]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public SyncServices.InventCountingService.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string siteId;
-        
-        public JournalCountingServiceGetWarehouseRequest() {
-        }
-        
-        public JournalCountingServiceGetWarehouseRequest(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
-            this.CallContext = CallContext;
-            this.siteId = siteId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="JournalCountingServiceGetWarehouseResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class JournalCountingServiceGetWarehouseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application")]
-        public SyncServices.InventCountingService.WarehouseContract[] response;
-        
-        public JournalCountingServiceGetWarehouseResponse() {
-        }
-        
-        public JournalCountingServiceGetWarehouseResponse(SyncServices.InventCountingService.WarehouseContract[] response) {
-            this.response = response;
-        }
-    }
-    
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5815,7 +5815,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5903,7 +5903,7 @@ namespace SyncServices.InventCountingService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria")]
     public enum Operator {
@@ -6011,6 +6011,45 @@ namespace SyncServices.InventCountingService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse SyncServices.InventCountingService.JournalCountingService.GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request) {
+            return base.Channel.GetItemUoM(request);
+        }
+        
+        public SyncServices.InventCountingService.InventForItemUnit[] GetItemUoM(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
+            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest();
+            inValue.CallContext = CallContext;
+            inValue.allItems = allItems;
+            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetItemUoM(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse SyncServices.InventCountingService.JournalCountingService.GetYearFGInventory(SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest request) {
+            return base.Channel.GetYearFGInventory(request);
+        }
+        
+        public SyncServices.InventCountingService.InventAvailContract[] GetYearFGInventory(SyncServices.InventCountingService.CallContext CallContext, int startId) {
+            SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest();
+            inValue.CallContext = CallContext;
+            inValue.startId = startId;
+            SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetYearFGInventory(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse SyncServices.InventCountingService.JournalCountingService.UpdateTransferItems(SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest request) {
+            return base.Channel.UpdateTransferItems(request);
+        }
+        
+        public SyncServices.InventCountingService.SCForTransfer[] UpdateTransferItems(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.SCForTransfer[] lines) {
+            SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).UpdateTransferItems(inValue);
+            return retVal.response;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SyncServices.InventCountingService.JournalCountingServiceUpdateCountingResponse SyncServices.InventCountingService.JournalCountingService.UpdateCounting(SyncServices.InventCountingService.JournalCountingServiceUpdateCountingRequest request) {
             return base.Channel.UpdateCounting(request);
         }
@@ -6037,15 +6076,15 @@ namespace SyncServices.InventCountingService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse SyncServices.InventCountingService.JournalCountingService.GetItemUoM(SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest request) {
-            return base.Channel.GetItemUoM(request);
+        SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse SyncServices.InventCountingService.JournalCountingService.GetWarehouse(SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest request) {
+            return base.Channel.GetWarehouse(request);
         }
         
-        public SyncServices.InventCountingService.InventForItemUnit[] GetItemUoM(SyncServices.InventCountingService.CallContext CallContext, string allItems) {
-            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetItemUoMRequest();
+        public SyncServices.InventCountingService.WarehouseContract[] GetWarehouse(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
+            SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest();
             inValue.CallContext = CallContext;
-            inValue.allItems = allItems;
-            SyncServices.InventCountingService.JournalCountingServiceGetItemUoMResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetItemUoM(inValue);
+            inValue.siteId = siteId;
+            SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetWarehouse(inValue);
             return retVal.response;
         }
         
@@ -6072,45 +6111,6 @@ namespace SyncServices.InventCountingService {
             inValue.EntityKeyList = EntityKeyList;
             SyncServices.InventCountingService.JournalCountingServiceReadResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).read(inValue);
             return retVal.JournalCounting;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse SyncServices.InventCountingService.JournalCountingService.UpdateTransferItems(SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest request) {
-            return base.Channel.UpdateTransferItems(request);
-        }
-        
-        public SyncServices.InventCountingService.SCForTransfer[] UpdateTransferItems(SyncServices.InventCountingService.CallContext CallContext, SyncServices.InventCountingService.SCForTransfer[] lines) {
-            SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsRequest();
-            inValue.CallContext = CallContext;
-            inValue.lines = lines;
-            SyncServices.InventCountingService.JournalCountingServiceUpdateTransferItemsResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).UpdateTransferItems(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse SyncServices.InventCountingService.JournalCountingService.GetYearFGInventory(SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest request) {
-            return base.Channel.GetYearFGInventory(request);
-        }
-        
-        public SyncServices.InventCountingService.InventAvailContract[] GetYearFGInventory(SyncServices.InventCountingService.CallContext CallContext, int startId) {
-            SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryRequest();
-            inValue.CallContext = CallContext;
-            inValue.startId = startId;
-            SyncServices.InventCountingService.JournalCountingServiceGetYearFGInventoryResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetYearFGInventory(inValue);
-            return retVal.response;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse SyncServices.InventCountingService.JournalCountingService.GetWarehouse(SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest request) {
-            return base.Channel.GetWarehouse(request);
-        }
-        
-        public SyncServices.InventCountingService.WarehouseContract[] GetWarehouse(SyncServices.InventCountingService.CallContext CallContext, string siteId) {
-            SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest inValue = new SyncServices.InventCountingService.JournalCountingServiceGetWarehouseRequest();
-            inValue.CallContext = CallContext;
-            inValue.siteId = siteId;
-            SyncServices.InventCountingService.JournalCountingServiceGetWarehouseResponse retVal = ((SyncServices.InventCountingService.JournalCountingService)(this)).GetWarehouse(inValue);
-            return retVal.response;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

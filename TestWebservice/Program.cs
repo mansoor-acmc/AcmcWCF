@@ -51,7 +51,7 @@ namespace TestWebservice
             List<LocationHistory> allOne = new List<LocationHistory>();
             LocationHistory one = null;
 
-            one = new LocationHistory() { PalletNum = "M085601", Location = "H3", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+            one = new LocationHistory() { PalletNum = "M187719", Location = "H3", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
             allOne.Add(one);
             var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
             if (result.Count() > 0)

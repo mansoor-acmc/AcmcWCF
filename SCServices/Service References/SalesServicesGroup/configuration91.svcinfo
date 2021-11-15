@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="vI/87ClISIfAOwCfWujlQHU3AgSOWp8rvqux/S+rIyg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="FP8eO88BRIFAcDXBP1MkI+z23U8K+MyFksYBoToic+4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_CaseService">
       <properties>
@@ -593,10 +593,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_CaseService" contract="SalesServicesGroup.CaseService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_CaseService">
+    <endpoint name="NetTcpBinding_CaseService" contract="SalesServicesGroup.CaseService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_CaseService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -623,7 +623,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
@@ -678,10 +678,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_InventOnHandService" contract="SalesServicesGroup.InventOnHandService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_InventOnHandService">
+    <endpoint name="NetTcpBinding_InventOnHandService" contract="SalesServicesGroup.InventOnHandService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_InventOnHandService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -708,7 +708,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
@@ -763,10 +763,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_PrePickingService" contract="SalesServicesGroup.PrePickingService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_PrePickingService">
+    <endpoint name="NetTcpBinding_PrePickingService" contract="SalesServicesGroup.PrePickingService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_PrePickingService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -793,7 +793,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
@@ -848,10 +848,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_ProdPlanService" contract="SalesServicesGroup.ProdPlanService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_ProdPlanService">
+    <endpoint name="NetTcpBinding_ProdPlanService" contract="SalesServicesGroup.ProdPlanService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_ProdPlanService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -878,7 +878,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
@@ -933,10 +933,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_ProdRequestService" contract="SalesServicesGroup.ProdRequestService" bindingType="netTcpBinding" address="net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_ProdRequestService">
+    <endpoint name="NetTcpBinding_ProdRequestService" contract="SalesServicesGroup.ProdRequestService" bindingType="netTcpBinding" address="net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup" bindingConfiguration="NetTcpBinding_ProdRequestService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://fac-prod-ax03:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
+          <serializedValue>net.tcp://fac-stage-ax04:8201/DynamicsAx/Services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -963,7 +963,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AX2@kabholding.com</serializedValue>
+          <serializedValue>ax2@kabholding.com</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>

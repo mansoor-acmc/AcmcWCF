@@ -18,25 +18,25 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://FAC-PROD-AX03:8101/DynamicsAx/Services/InventCountingServiceGroup" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://FAC-STAGE-AX04:8101/DynamicsAx/Services/InventCountingServiceGroup" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InventCountingServiceGroup14.xsd" MetadataType="Schema" ID="1e927fdd-46b1-4894-bddd-a927e74e51fc" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd5" />
-    <MetadataFile FileName="InventCountingServiceGroup141.xsd" MetadataType="Schema" ID="ac579094-0c94-4940-b1be-fb4a00b0454f" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd4" />
-    <MetadataFile FileName="InventCountingServiceGroup142.xsd" MetadataType="Schema" ID="8b731f28-afa0-4182-a16f-d996ded900cb" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd9" />
-    <MetadataFile FileName="InventCountingServiceGroup143.xsd" MetadataType="Schema" ID="e9c545e7-2b40-4e71-82c1-df8b4ce12ba9" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd8" />
-    <MetadataFile FileName="InventCountingServiceGroup144.xsd" MetadataType="Schema" ID="24681a06-7c14-4fee-b865-89917932cd25" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd10" />
-    <MetadataFile FileName="InventCountingServiceGroup145.xsd" MetadataType="Schema" ID="91dfe148-0d7d-4797-9bf7-cebd40a395c5" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd11" />
-    <MetadataFile FileName="InventCountingServiceGroup2.wsdl" MetadataType="Wsdl" ID="2e12ea30-e5d4-4b38-b4d3-9d419920d636" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?wsdl=wsdl0" />
-    <MetadataFile FileName="InventCountingServiceGroup146.xsd" MetadataType="Schema" ID="3d1de85c-b6aa-4ccd-82e9-2bc0fd5b7206" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd12" />
-    <MetadataFile FileName="InventCountingServiceGroup147.xsd" MetadataType="Schema" ID="c23dbddb-df54-40cd-baa6-29e11936cb03" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd13" />
-    <MetadataFile FileName="InventCountingServiceGroup21.wsdl" MetadataType="Wsdl" ID="9d068009-542c-4e51-9522-55aabe05689e" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup" />
-    <MetadataFile FileName="InventCountingServiceGroup148.xsd" MetadataType="Schema" ID="a171a86d-df71-47dc-9ded-44499796e172" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd3" />
-    <MetadataFile FileName="InventCountingServiceGroup149.xsd" MetadataType="Schema" ID="8d5c195b-1f30-4016-b0ba-05abd7f2f11a" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd2" />
-    <MetadataFile FileName="InventCountingServiceGroup1410.xsd" MetadataType="Schema" ID="176bec50-bef2-4af3-9356-ac7d8e3da355" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd1" />
-    <MetadataFile FileName="InventCountingServiceGroup1411.xsd" MetadataType="Schema" ID="809ab89e-8ab2-4cc5-8798-d90d5ec9dbd5" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd0" />
-    <MetadataFile FileName="InventCountingServiceGroup1412.xsd" MetadataType="Schema" ID="0e1de402-f958-45cc-94f4-77d0f6b5f99b" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd7" />
-    <MetadataFile FileName="InventCountingServiceGroup1413.xsd" MetadataType="Schema" ID="55485897-f12b-44f8-99c0-1acdb4e012a4" SourceId="1" SourceUrl="http://fac-prod-ax03:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="InventCountingServiceGroup.xsd" MetadataType="Schema" ID="8418fa6a-514e-46f0-a3a9-b776be45e2ba" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd13" />
+    <MetadataFile FileName="InventCountingServiceGroup1.xsd" MetadataType="Schema" ID="64f72195-7afe-4066-83f6-8edb9508dcb9" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd12" />
+    <MetadataFile FileName="InventCountingServiceGroup2.xsd" MetadataType="Schema" ID="7e1b229c-de49-41e8-8ece-0743b1823a21" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd5" />
+    <MetadataFile FileName="InventCountingServiceGroup3.xsd" MetadataType="Schema" ID="134aaeb1-180c-43a8-a3a4-a113dfb29f35" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd1" />
+    <MetadataFile FileName="InventCountingServiceGroup4.xsd" MetadataType="Schema" ID="763188b4-76b6-4b61-b81b-beb32f90584d" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd9" />
+    <MetadataFile FileName="InventCountingServiceGroup5.xsd" MetadataType="Schema" ID="3e4265ff-7b71-4908-870a-b3cb04a22a62" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd10" />
+    <MetadataFile FileName="InventCountingServiceGroup6.xsd" MetadataType="Schema" ID="9225588d-bfb3-465b-8360-9faf347b39e2" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="InventCountingServiceGroup7.xsd" MetadataType="Schema" ID="5e1b1334-d2f6-40a3-ad8c-a880a9c9ccef" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd0" />
+    <MetadataFile FileName="InventCountingServiceGroup.wsdl" MetadataType="Wsdl" ID="579b2a8f-721a-4479-be19-ff6dc606641c" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="InventCountingServiceGroup8.xsd" MetadataType="Schema" ID="f1d6e4e6-7488-45fd-b4f4-36b040abf25a" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd8" />
+    <MetadataFile FileName="InventCountingServiceGroup9.xsd" MetadataType="Schema" ID="8de52b4a-6249-4e93-8b50-17565da3c63e" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd7" />
+    <MetadataFile FileName="InventCountingServiceGroup10.xsd" MetadataType="Schema" ID="adc5cbab-85c4-47f1-ba92-d94971b469f6" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd3" />
+    <MetadataFile FileName="InventCountingServiceGroup1.wsdl" MetadataType="Wsdl" ID="80bbb8a9-0823-4426-9a21-dc759f9cc09f" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup" />
+    <MetadataFile FileName="InventCountingServiceGroup11.xsd" MetadataType="Schema" ID="c584fa16-99bf-4665-ac60-72a285ab9d0b" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd11" />
+    <MetadataFile FileName="InventCountingServiceGroup12.xsd" MetadataType="Schema" ID="5ef867fc-59cc-42d5-b396-3539657c7167" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="InventCountingServiceGroup13.xsd" MetadataType="Schema" ID="5338d494-ebfc-43bd-ac9a-0f9e97c8378a" SourceId="1" SourceUrl="http://fac-stage-ax04:8101/DynamicsAx/Services/InventCountingServiceGroup?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

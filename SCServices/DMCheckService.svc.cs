@@ -409,5 +409,18 @@ namespace SyncServices
         {
             return new DBClass(DBClass.DbName.ImportExportDB).ClearDuplicatePalletsAll(pallets);
         }
+
+        public List<ItemCodeContract> GetItemCodes()
+        {
+            CallContext context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+            };
+
+            DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
+            return client.GetItemCodes(context).ToList();
+        }
+
     }
 }
