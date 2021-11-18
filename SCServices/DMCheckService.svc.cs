@@ -130,12 +130,12 @@ namespace SyncServices
 
         #region Location Transfer
         public List<LocationHistory> TransferPalletsToNewLocation(List<LocationHistory> lines)
-        {
-            DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
+        {            
             string deviceName, userName;
             deviceName = lines[0].DeviceName;
             userName = lines[0].UserName;
 
+            /*DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
             LocationHistory objLocation = MergeDMLines(lines, deviceName, userName);
 
             string hasPalletsApproved = dbClass.CheckPalletApprovedBulk(objLocation.Message);
@@ -172,7 +172,8 @@ namespace SyncServices
             SaveLocations(objLocation.PalletNum, objLocation.Location, "After direct saving to DB, the remaining Pallets", objLocation.DeviceName, objLocation.UserName);
 
             if (returnedLines.Count > 0)
-            {
+            {*/
+            List<LocationHistory> returnedLines = new List<LocationHistory>();
                 try
                 {
                     CallContext context = new CallContext()
@@ -182,7 +183,8 @@ namespace SyncServices
                     };
 
                     DMDataToSaveServiceClient client = new DMDataToSaveServiceClient();
-                    var linesFromAX = client.UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray());
+                    //var linesFromAX = client.UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray());
+                    var linesFromAX = client.UpdateTransferPallets(context, ConvertToDMForTransfer(lines).ToArray());
                     if (linesFromAX.Count() > 0)
                         returnedLines = ConvertFromDMForTransfer(linesFromAX.ToList());
                     //if (linesFromAX != null && linesFromAX.Count() > 0)
@@ -197,10 +199,10 @@ namespace SyncServices
                 catch (Exception exp)
                 {
                     var locError = MergeDMLines(returnedLines, deviceName, userName);
-                    SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message, locError.DeviceName, locError.UserName);
+                    //SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message, locError.DeviceName, locError.UserName);
                     throw exp;
                 }
-            }
+            //}
 
             return returnedLines;
         }
