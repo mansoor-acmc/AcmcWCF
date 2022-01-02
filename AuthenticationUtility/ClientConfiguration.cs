@@ -26,8 +26,8 @@ namespace AuthenticationUtility
             // Some samples: https://login.windows.net/yourtenant.onmicrosoft.com, https://login.windows.net/microsoft.com
             ActiveDirectoryClientAppId = ConfigurationManager.AppSettings["adClientAppId"],
             // Insert here the application secret when authenticate with AAD by the application
-            ActiveDirectoryClientAppSecret = "~qP8S7j-y3r1mrwo-v9_999CYk_sQ.YD2_",
-
+            //ActiveDirectoryClientAppSecret = "~qP8S7j-y3r1mrwo-v9_999CYk_sQ.YD2_",
+            ActiveDirectoryClientAppSecret= "I3m7Q~mmv2Pdro2-QBGOml1BPLI-n5FJlAOqD",
             // Change TLS version of HTTP request from the client here
             // Ex: TLSVersion = "1.2"
             // Leave it empty if want to use the default version

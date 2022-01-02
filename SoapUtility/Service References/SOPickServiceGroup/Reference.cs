@@ -890,9 +890,6 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FGDeliveryContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.NoYes))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.ProxyBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.CallContext))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.Infolog))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.InfologEntry[]))]
@@ -920,7 +917,10 @@ namespace SoapUtility.SOPickServiceGroup {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PLNotDeliveredContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PalletContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.PickHistoryContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.XppObjectBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.NoYes))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.SOPickServiceGroup.ProxyBase))]
     public partial class FGDeliveryContract : SoapUtility.SOPickServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]

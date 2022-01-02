@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:complexType name="ArrayOfInventJournalTableContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTableContract" nillable="true" type="tns:InventJournalTableContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventJournalTableContract" nillable="true" type="tns:ArrayOfInventJournalTableContract" />
+  <xs:complexType name="InventJournalTableContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmJournalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmJournalNameId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventJournalTableContract" nillable="true" type="tns:InventJournalTableContract" />
+  <xs:complexType name="ArrayOfInventSumContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventSumContract" nillable="true" type="tns:InventSumContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventSumContract" nillable="true" type="tns:ArrayOfInventSumContract" />
+  <xs:complexType name="InventSumContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AvailPhysical" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventSumContract" nillable="true" type="tns:InventSumContract" />
+  <xs:complexType name="ArrayOfInventForItemUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventForItemUnit" nillable="true" type="tns:ArrayOfInventForItemUnit" />
+  <xs:complexType name="InventForItemUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventForItemUnit" nillable="true" type="tns:InventForItemUnit" />
+  <xs:complexType name="ArrayOfWarehouseContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarehouseContract" nillable="true" type="tns:ArrayOfWarehouseContract" />
+  <xs:complexType name="WarehouseContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmLocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmLocationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSiteId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WarehouseContract" nillable="true" type="tns:WarehouseContract" />
+  <xs:complexType name="ArrayOfWmsLocationContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="WmsLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+  <xs:complexType name="ArrayOfInventAvailContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventAvailContract" nillable="true" type="tns:InventAvailContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventAvailContract" nillable="true" type="tns:ArrayOfInventAvailContract" />
+  <xs:complexType name="InventAvailContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AvailPhysical" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColorId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigurationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SiteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SizeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SyncId" type="xs:int" />
+          <xs:element minOccurs="0" name="WMSLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventAvailContract" nillable="true" type="tns:InventAvailContract" />
+  <xs:complexType name="ArrayOfInventJournalTransContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventJournalTransContract" nillable="true" type="tns:InventJournalTransContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventJournalTransContract" nillable="true" type="tns:ArrayOfInventJournalTransContract" />
+  <xs:complexType name="InventJournalTransContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmCostPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="parmCounted" type="xs:decimal" />
+          <xs:element minOccurs="0" name="parmItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmJournalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmLocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSiteId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmWarehouseId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventJournalTransContract" nillable="true" type="tns:InventJournalTransContract" />
+  <xs:complexType name="ArrayOfSCForTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSCForTransfer" nillable="true" type="tns:ArrayOfSCForTransfer" />
+  <xs:complexType name="SCForTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTransferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemLocationFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemLocationTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+</xs:schema>

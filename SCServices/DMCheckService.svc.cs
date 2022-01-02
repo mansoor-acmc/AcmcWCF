@@ -93,15 +93,29 @@ namespace SyncServices
 
         public bool UpdateAndConfirmPalletReceive(DMExportContract pallet)
         {
+            bool returnAnswer = false;
+            UpdateAndConfirmPalletReceiveResponse res;
             using (OperationContextScope operationContextScope = new OperationContextScope(channel))
             {
-                HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
-                requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
-                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+                try
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                return ((DMDataToSaveService)channel).UpdateAndConfirmPalletReceive(new UpdateAndConfirmPalletReceive(context, pallet)).result;
-            }            
+                    res = ((DMDataToSaveService)channel).UpdateAndConfirmPalletReceive(new UpdateAndConfirmPalletReceive(context, pallet));
+                    returnAnswer = res.result;
+                }
+                catch(Exception exp)
+                {
+                    string err = exp.Message;
+                    throw  exp;
+                }
+            }
+            return returnAnswer;
         }
+
+        
 
         public bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser)
         {
@@ -152,11 +166,11 @@ namespace SyncServices
         /// <param name="lines"></param>
         /// <returns></returns>
         public List<LocationHistory> TransferPalletsToNewLocation(List<LocationHistory> lines)
-        {
-            DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
+        {            
             string deviceName, userName;
             deviceName = lines[0].DeviceName;
             userName = lines[0].UserName;
+            /*DBClass dbClass = new DBClass(DBClass.DbName.DynamicsAX);
 
             LocationHistory objLocation = MergeDMLines(lines, deviceName, userName);
 
@@ -194,7 +208,8 @@ namespace SyncServices
             SaveLocations(objLocation.PalletNum, objLocation.Location, "After direct saving to DB, the remaining Pallets", objLocation.DeviceName, objLocation.UserName);
 
             if (returnedLines.Count > 0)
-            {
+            {*/
+            List<LocationHistory> returnedLines = new List<LocationHistory>();
                 try
                 {
                     using (OperationContextScope operationContextScope = new OperationContextScope(channel))
@@ -203,7 +218,7 @@ namespace SyncServices
                         requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
                         OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                        var linesFromAX = ((DMDataToSaveService)channel).UpdateTransferPallets(new UpdateTransferPallets(context, ConvertToDMForTransfer(returnedLines).ToArray())).result;
+                        var linesFromAX = ((DMDataToSaveService)channel).PalletLocTransfer(new PalletLocTransfer(context, ConvertToDMForTransfer(lines).ToArray())).result;
 
 
                         if (linesFromAX.Count() > 0)
@@ -220,11 +235,11 @@ namespace SyncServices
                 }
                 catch (Exception exp)
                 {
-                    var locError = MergeDMLines(returnedLines, deviceName, userName);
-                    SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message, locError.DeviceName, locError.UserName);
+                    //var locError = MergeDMLines(returnedLines, deviceName, userName);
+                    //SaveLocations(locError.PalletNum, locError.Location, "On Error: " + exp.Message, locError.DeviceName, locError.UserName);
                     throw exp;
                 }
-            }
+            //}
 
             return returnedLines;
         }

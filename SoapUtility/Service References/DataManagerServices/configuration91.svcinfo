@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="8seiFFwLec/71eQ8eflKs+U21ea/rGjmUrOuFM/CIQc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="2lcCCW0M+ouaMbtJygw1zI8ytizK1zowzvt0YaTIM2A=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_DMDataToSaveService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_DMDataToSaveService" contract="DataManagerServices.DMDataToSaveService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup" bindingConfiguration="BasicHttpBinding_DMDataToSaveService">
+    <endpoint name="BasicHttpBinding_DMDataToSaveService" contract="DataManagerServices.DMDataToSaveService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup" bindingConfiguration="BasicHttpBinding_DMDataToSaveService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/DataManagerServiceGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

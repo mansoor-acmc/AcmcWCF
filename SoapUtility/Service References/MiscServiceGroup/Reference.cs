@@ -671,8 +671,9 @@ namespace SoapUtility.MiscServiceGroup {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.XppObjectBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.InventByGrLocContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.WorkitemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.UnderStockItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.ModulaItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.AcmcSalesLineContract))]
     public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -704,8 +705,9 @@ namespace SoapUtility.MiscServiceGroup {
     [System.Runtime.Serialization.DataContractAttribute(Name="XppObjectBase", Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.InventByGrLocContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.WorkitemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.UnderStockItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.ModulaItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.MiscServiceGroup.AcmcSalesLineContract))]
     public partial class XppObjectBase : SoapUtility.MiscServiceGroup.ProxyBase {
     }
@@ -767,198 +769,54 @@ namespace SoapUtility.MiscServiceGroup {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EamWorkitemsContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WorkitemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class EamWorkitemsContract : SoapUtility.MiscServiceGroup.XppObjectBase {
+    public partial class WorkitemContract : SoapUtility.MiscServiceGroup.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_ActualRequesterField;
+        private string StoHostRIFField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_RefRequistNumField;
+        private int StoIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_RequesterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_CostCenterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_HostRIFField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int parmSto_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_ItemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_OperatorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal parmSto_QuantityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_ReqNoteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime parmSto_TimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long parmSto_WmsLocIDField;
+        private string StoItemField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_ActualRequester {
+        public string StoHostRIF {
             get {
-                return this.parmSTO_ActualRequesterField;
+                return this.StoHostRIFField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_ActualRequesterField, value) != true)) {
-                    this.parmSTO_ActualRequesterField = value;
-                    this.RaisePropertyChanged("parmSTO_ActualRequester");
+                if ((object.ReferenceEquals(this.StoHostRIFField, value) != true)) {
+                    this.StoHostRIFField = value;
+                    this.RaisePropertyChanged("StoHostRIF");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_RefRequistNum {
+        public int StoID {
             get {
-                return this.parmSTO_RefRequistNumField;
+                return this.StoIDField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_RefRequistNumField, value) != true)) {
-                    this.parmSTO_RefRequistNumField = value;
-                    this.RaisePropertyChanged("parmSTO_RefRequistNum");
+                if ((this.StoIDField.Equals(value) != true)) {
+                    this.StoIDField = value;
+                    this.RaisePropertyChanged("StoID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_Requester {
+        public string StoItem {
             get {
-                return this.parmSTO_RequesterField;
+                return this.StoItemField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_RequesterField, value) != true)) {
-                    this.parmSTO_RequesterField = value;
-                    this.RaisePropertyChanged("parmSTO_Requester");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_CostCenter {
-            get {
-                return this.parmSto_CostCenterField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_CostCenterField, value) != true)) {
-                    this.parmSto_CostCenterField = value;
-                    this.RaisePropertyChanged("parmSto_CostCenter");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_HostRIF {
-            get {
-                return this.parmSto_HostRIFField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_HostRIFField, value) != true)) {
-                    this.parmSto_HostRIFField = value;
-                    this.RaisePropertyChanged("parmSto_HostRIF");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int parmSto_ID {
-            get {
-                return this.parmSto_IDField;
-            }
-            set {
-                if ((this.parmSto_IDField.Equals(value) != true)) {
-                    this.parmSto_IDField = value;
-                    this.RaisePropertyChanged("parmSto_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_Item {
-            get {
-                return this.parmSto_ItemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_ItemField, value) != true)) {
-                    this.parmSto_ItemField = value;
-                    this.RaisePropertyChanged("parmSto_Item");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_Operator {
-            get {
-                return this.parmSto_OperatorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_OperatorField, value) != true)) {
-                    this.parmSto_OperatorField = value;
-                    this.RaisePropertyChanged("parmSto_Operator");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal parmSto_Quantity {
-            get {
-                return this.parmSto_QuantityField;
-            }
-            set {
-                if ((this.parmSto_QuantityField.Equals(value) != true)) {
-                    this.parmSto_QuantityField = value;
-                    this.RaisePropertyChanged("parmSto_Quantity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_ReqNote {
-            get {
-                return this.parmSto_ReqNoteField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_ReqNoteField, value) != true)) {
-                    this.parmSto_ReqNoteField = value;
-                    this.RaisePropertyChanged("parmSto_ReqNote");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime parmSto_Time {
-            get {
-                return this.parmSto_TimeField;
-            }
-            set {
-                if ((this.parmSto_TimeField.Equals(value) != true)) {
-                    this.parmSto_TimeField = value;
-                    this.RaisePropertyChanged("parmSto_Time");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long parmSto_WmsLocID {
-            get {
-                return this.parmSto_WmsLocIDField;
-            }
-            set {
-                if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
-                    this.parmSto_WmsLocIDField = value;
-                    this.RaisePropertyChanged("parmSto_WmsLocID");
+                if ((object.ReferenceEquals(this.StoItemField, value) != true)) {
+                    this.StoItemField = value;
+                    this.RaisePropertyChanged("StoItem");
                 }
             }
         }
@@ -1099,6 +957,253 @@ namespace SoapUtility.MiscServiceGroup {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ModulaItemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class ModulaItemContract : SoapUtility.MiscServiceGroup.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_ActualRequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RefRequistNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_CostCenterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_HostRIFField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int parmSto_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ItemField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ModifiedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_OperatorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal parmSto_QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ReqNoteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime parmSto_TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_WOPoolCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long parmSto_WmsLocIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_WorkOrderIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_ActualRequester {
+            get {
+                return this.parmSTO_ActualRequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_ActualRequesterField, value) != true)) {
+                    this.parmSTO_ActualRequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_ActualRequester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_RefRequistNum {
+            get {
+                return this.parmSTO_RefRequistNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RefRequistNumField, value) != true)) {
+                    this.parmSTO_RefRequistNumField = value;
+                    this.RaisePropertyChanged("parmSTO_RefRequistNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_Requester {
+            get {
+                return this.parmSTO_RequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RequesterField, value) != true)) {
+                    this.parmSTO_RequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_Requester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_CostCenter {
+            get {
+                return this.parmSto_CostCenterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_CostCenterField, value) != true)) {
+                    this.parmSto_CostCenterField = value;
+                    this.RaisePropertyChanged("parmSto_CostCenter");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_HostRIF {
+            get {
+                return this.parmSto_HostRIFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_HostRIFField, value) != true)) {
+                    this.parmSto_HostRIFField = value;
+                    this.RaisePropertyChanged("parmSto_HostRIF");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int parmSto_ID {
+            get {
+                return this.parmSto_IDField;
+            }
+            set {
+                if ((this.parmSto_IDField.Equals(value) != true)) {
+                    this.parmSto_IDField = value;
+                    this.RaisePropertyChanged("parmSto_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Item {
+            get {
+                return this.parmSto_ItemField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ItemField, value) != true)) {
+                    this.parmSto_ItemField = value;
+                    this.RaisePropertyChanged("parmSto_Item");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_ModifiedBy {
+            get {
+                return this.parmSto_ModifiedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ModifiedByField, value) != true)) {
+                    this.parmSto_ModifiedByField = value;
+                    this.RaisePropertyChanged("parmSto_ModifiedBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Operator {
+            get {
+                return this.parmSto_OperatorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_OperatorField, value) != true)) {
+                    this.parmSto_OperatorField = value;
+                    this.RaisePropertyChanged("parmSto_Operator");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal parmSto_Quantity {
+            get {
+                return this.parmSto_QuantityField;
+            }
+            set {
+                if ((this.parmSto_QuantityField.Equals(value) != true)) {
+                    this.parmSto_QuantityField = value;
+                    this.RaisePropertyChanged("parmSto_Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_ReqNote {
+            get {
+                return this.parmSto_ReqNoteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ReqNoteField, value) != true)) {
+                    this.parmSto_ReqNoteField = value;
+                    this.RaisePropertyChanged("parmSto_ReqNote");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime parmSto_Time {
+            get {
+                return this.parmSto_TimeField;
+            }
+            set {
+                if ((this.parmSto_TimeField.Equals(value) != true)) {
+                    this.parmSto_TimeField = value;
+                    this.RaisePropertyChanged("parmSto_Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_WOPoolCode {
+            get {
+                return this.parmSto_WOPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_WOPoolCodeField, value) != true)) {
+                    this.parmSto_WOPoolCodeField = value;
+                    this.RaisePropertyChanged("parmSto_WOPoolCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long parmSto_WmsLocID {
+            get {
+                return this.parmSto_WmsLocIDField;
+            }
+            set {
+                if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
+                    this.parmSto_WmsLocIDField = value;
+                    this.RaisePropertyChanged("parmSto_WmsLocID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_WorkOrderID {
+            get {
+                return this.parmSto_WorkOrderIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_WorkOrderIDField, value) != true)) {
+                    this.parmSto_WorkOrderIDField = value;
+                    this.RaisePropertyChanged("parmSto_WorkOrderID");
+                }
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PalletStatus", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public enum PalletStatus : int {
@@ -1197,6 +1302,268 @@ namespace SoapUtility.MiscServiceGroup {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="ModulaMovement", ConfigurationName="MiscServiceGroup.ModulaMovement")]
+    public interface ModulaMovement {
+        
+        // CODEGEN: Generating message contract since message OpenWorkItem has headers
+        [System.ServiceModel.OperationContractAttribute(Action="ModulaMovement/ModulaMovement/OpenWorkItem", ReplyAction="ModulaMovement/ModulaMovement/OpenWorkItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="ModulaMovement/ModulaMovement/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.MiscServiceGroup.OpenWorkItemResponse OpenWorkItem(SoapUtility.MiscServiceGroup.OpenWorkItem request);
+        
+        // CODEGEN: Generating message contract since message ItemsNotUsed has headers
+        [System.ServiceModel.OperationContractAttribute(Action="ModulaMovement/ModulaMovement/ItemsNotUsed", ReplyAction="ModulaMovement/ModulaMovement/ItemsNotUsedResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="ModulaMovement/ModulaMovement/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.MiscServiceGroup.ItemsNotUsedResponse ItemsNotUsed(SoapUtility.MiscServiceGroup.ItemsNotUsed request);
+        
+        // CODEGEN: Generating message contract since message ItemsUsedButNotPosted has headers
+        [System.ServiceModel.OperationContractAttribute(Action="ModulaMovement/ModulaMovement/ItemsUsedButNotPosted", ReplyAction="ModulaMovement/ModulaMovement/ItemsUsedButNotPostedResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="ModulaMovement/ModulaMovement/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.MiscServiceGroup.ItemsUsedButNotPostedResponse ItemsUsedButNotPosted(SoapUtility.MiscServiceGroup.ItemsUsedButNotPosted request);
+        
+        // CODEGEN: Generating message contract since message ItemsNotUsedWithWOId has headers
+        [System.ServiceModel.OperationContractAttribute(Action="ModulaMovement/ModulaMovement/ItemsNotUsedWithWOId", ReplyAction="ModulaMovement/ModulaMovement/ItemsNotUsedWithWOIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="ModulaMovement/ModulaMovement/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOIdResponse ItemsNotUsedWithWOId(SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOId request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="OpenWorkItem", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class OpenWorkItem {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="ModulaMovement", Order=0)]
+        public int _itemId;
+        
+        public OpenWorkItem() {
+        }
+        
+        public OpenWorkItem(SoapUtility.MiscServiceGroup.CallContext CallContext, int _itemId) {
+            this.CallContext = CallContext;
+            this._itemId = _itemId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="OpenWorkItemResponse", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class OpenWorkItemResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="ModulaMovement", Order=0)]
+        public bool result;
+        
+        public OpenWorkItemResponse() {
+        }
+        
+        public OpenWorkItemResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, bool result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsNotUsed", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsNotUsed {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.CallContext CallContext;
+        
+        public ItemsNotUsed() {
+        }
+        
+        public ItemsNotUsed(SoapUtility.MiscServiceGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsNotUsedResponse", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsNotUsedResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="ModulaMovement", Order=0)]
+        public SoapUtility.MiscServiceGroup.ModulaItemContract[] result;
+        
+        public ItemsNotUsedResponse() {
+        }
+        
+        public ItemsNotUsedResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsUsedButNotPosted", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsUsedButNotPosted {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.CallContext CallContext;
+        
+        public ItemsUsedButNotPosted() {
+        }
+        
+        public ItemsUsedButNotPosted(SoapUtility.MiscServiceGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsUsedButNotPostedResponse", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsUsedButNotPostedResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="ModulaMovement", Order=0)]
+        public SoapUtility.MiscServiceGroup.ModulaItemContract[] result;
+        
+        public ItemsUsedButNotPostedResponse() {
+        }
+        
+        public ItemsUsedButNotPostedResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsNotUsedWithWOId", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsNotUsedWithWOId {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.CallContext CallContext;
+        
+        public ItemsNotUsedWithWOId() {
+        }
+        
+        public ItemsNotUsedWithWOId(SoapUtility.MiscServiceGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ItemsNotUsedWithWOIdResponse", WrapperNamespace="ModulaMovement", IsWrapped=true)]
+    public partial class ItemsNotUsedWithWOIdResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.MiscServiceGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="ModulaMovement", Order=0)]
+        public SoapUtility.MiscServiceGroup.ModulaItemContract[] result;
+        
+        public ItemsNotUsedWithWOIdResponse() {
+        }
+        
+        public ItemsNotUsedWithWOIdResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ModulaMovementChannel : SoapUtility.MiscServiceGroup.ModulaMovement, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ModulaMovementClient : System.ServiceModel.ClientBase<SoapUtility.MiscServiceGroup.ModulaMovement>, SoapUtility.MiscServiceGroup.ModulaMovement {
+        
+        public ModulaMovementClient() {
+        }
+        
+        public ModulaMovementClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ModulaMovementClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ModulaMovementClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ModulaMovementClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.MiscServiceGroup.OpenWorkItemResponse SoapUtility.MiscServiceGroup.ModulaMovement.OpenWorkItem(SoapUtility.MiscServiceGroup.OpenWorkItem request) {
+            return base.Channel.OpenWorkItem(request);
+        }
+        
+        public SoapUtility.MiscServiceGroup.Infolog OpenWorkItem(SoapUtility.MiscServiceGroup.CallContext CallContext, int _itemId, out bool result) {
+            SoapUtility.MiscServiceGroup.OpenWorkItem inValue = new SoapUtility.MiscServiceGroup.OpenWorkItem();
+            inValue.CallContext = CallContext;
+            inValue._itemId = _itemId;
+            SoapUtility.MiscServiceGroup.OpenWorkItemResponse retVal = ((SoapUtility.MiscServiceGroup.ModulaMovement)(this)).OpenWorkItem(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.MiscServiceGroup.ItemsNotUsedResponse SoapUtility.MiscServiceGroup.ModulaMovement.ItemsNotUsed(SoapUtility.MiscServiceGroup.ItemsNotUsed request) {
+            return base.Channel.ItemsNotUsed(request);
+        }
+        
+        public SoapUtility.MiscServiceGroup.Infolog ItemsNotUsed(SoapUtility.MiscServiceGroup.CallContext CallContext, out SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            SoapUtility.MiscServiceGroup.ItemsNotUsed inValue = new SoapUtility.MiscServiceGroup.ItemsNotUsed();
+            inValue.CallContext = CallContext;
+            SoapUtility.MiscServiceGroup.ItemsNotUsedResponse retVal = ((SoapUtility.MiscServiceGroup.ModulaMovement)(this)).ItemsNotUsed(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.MiscServiceGroup.ItemsUsedButNotPostedResponse SoapUtility.MiscServiceGroup.ModulaMovement.ItemsUsedButNotPosted(SoapUtility.MiscServiceGroup.ItemsUsedButNotPosted request) {
+            return base.Channel.ItemsUsedButNotPosted(request);
+        }
+        
+        public SoapUtility.MiscServiceGroup.Infolog ItemsUsedButNotPosted(SoapUtility.MiscServiceGroup.CallContext CallContext, out SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            SoapUtility.MiscServiceGroup.ItemsUsedButNotPosted inValue = new SoapUtility.MiscServiceGroup.ItemsUsedButNotPosted();
+            inValue.CallContext = CallContext;
+            SoapUtility.MiscServiceGroup.ItemsUsedButNotPostedResponse retVal = ((SoapUtility.MiscServiceGroup.ModulaMovement)(this)).ItemsUsedButNotPosted(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOIdResponse SoapUtility.MiscServiceGroup.ModulaMovement.ItemsNotUsedWithWOId(SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOId request) {
+            return base.Channel.ItemsNotUsedWithWOId(request);
+        }
+        
+        public SoapUtility.MiscServiceGroup.Infolog ItemsNotUsedWithWOId(SoapUtility.MiscServiceGroup.CallContext CallContext, out SoapUtility.MiscServiceGroup.ModulaItemContract[] result) {
+            SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOId inValue = new SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOId();
+            inValue.CallContext = CallContext;
+            SoapUtility.MiscServiceGroup.ItemsNotUsedWithWOIdResponse retVal = ((SoapUtility.MiscServiceGroup.ModulaMovement)(this)).ItemsNotUsedWithWOId(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="SOReserve", ConfigurationName="MiscServiceGroup.SOReserve")]
     public interface SOReserve {
         
@@ -1210,10 +1577,10 @@ namespace SoapUtility.MiscServiceGroup {
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="SOReserve/SOReserve/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.MiscServiceGroup.ServiceTestResponse ServiceTest(SoapUtility.MiscServiceGroup.ServiceTest request);
         
-        // CODEGEN: Generating message contract since message PostedWorkItemsNew has headers
-        [System.ServiceModel.OperationContractAttribute(Action="SOReserve/SOReserve/PostedWorkItemsNew", ReplyAction="SOReserve/SOReserve/PostedWorkItemsNewResponse")]
+        // CODEGEN: Generating message contract since message WorkItemsPosted has headers
+        [System.ServiceModel.OperationContractAttribute(Action="SOReserve/SOReserve/WorkItemsPosted", ReplyAction="SOReserve/SOReserve/WorkItemsPostedResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.MiscServiceGroup.Fault), Action="SOReserve/SOReserve/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.MiscServiceGroup.PostedWorkItemsNewResponse PostedWorkItemsNew(SoapUtility.MiscServiceGroup.PostedWorkItemsNew request);
+        SoapUtility.MiscServiceGroup.WorkItemsPostedResponse WorkItemsPosted(SoapUtility.MiscServiceGroup.WorkItemsPosted request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1331,16 +1698,16 @@ namespace SoapUtility.MiscServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PostedWorkItemsNew", WrapperNamespace="SOReserve", IsWrapped=true)]
-    public partial class PostedWorkItemsNew {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsPosted", WrapperNamespace="SOReserve", IsWrapped=true)]
+    public partial class WorkItemsPosted {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.MiscServiceGroup.CallContext CallContext;
         
-        public PostedWorkItemsNew() {
+        public WorkItemsPosted() {
         }
         
-        public PostedWorkItemsNew(SoapUtility.MiscServiceGroup.CallContext CallContext) {
+        public WorkItemsPosted(SoapUtility.MiscServiceGroup.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -1348,19 +1715,19 @@ namespace SoapUtility.MiscServiceGroup {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="PostedWorkItemsNewResponse", WrapperNamespace="SOReserve", IsWrapped=true)]
-    public partial class PostedWorkItemsNewResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="WorkItemsPostedResponse", WrapperNamespace="SOReserve", IsWrapped=true)]
+    public partial class WorkItemsPostedResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.MiscServiceGroup.Infolog Infolog;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="SOReserve", Order=0)]
-        public SoapUtility.MiscServiceGroup.EamWorkitemsContract[] result;
+        public SoapUtility.MiscServiceGroup.WorkitemContract[] result;
         
-        public PostedWorkItemsNewResponse() {
+        public WorkItemsPostedResponse() {
         }
         
-        public PostedWorkItemsNewResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, SoapUtility.MiscServiceGroup.EamWorkitemsContract[] result) {
+        public WorkItemsPostedResponse(SoapUtility.MiscServiceGroup.Infolog Infolog, SoapUtility.MiscServiceGroup.WorkitemContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -1429,14 +1796,14 @@ namespace SoapUtility.MiscServiceGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.MiscServiceGroup.PostedWorkItemsNewResponse SoapUtility.MiscServiceGroup.SOReserve.PostedWorkItemsNew(SoapUtility.MiscServiceGroup.PostedWorkItemsNew request) {
-            return base.Channel.PostedWorkItemsNew(request);
+        SoapUtility.MiscServiceGroup.WorkItemsPostedResponse SoapUtility.MiscServiceGroup.SOReserve.WorkItemsPosted(SoapUtility.MiscServiceGroup.WorkItemsPosted request) {
+            return base.Channel.WorkItemsPosted(request);
         }
         
-        public SoapUtility.MiscServiceGroup.Infolog PostedWorkItemsNew(SoapUtility.MiscServiceGroup.CallContext CallContext, out SoapUtility.MiscServiceGroup.EamWorkitemsContract[] result) {
-            SoapUtility.MiscServiceGroup.PostedWorkItemsNew inValue = new SoapUtility.MiscServiceGroup.PostedWorkItemsNew();
+        public SoapUtility.MiscServiceGroup.Infolog WorkItemsPosted(SoapUtility.MiscServiceGroup.CallContext CallContext, out SoapUtility.MiscServiceGroup.WorkitemContract[] result) {
+            SoapUtility.MiscServiceGroup.WorkItemsPosted inValue = new SoapUtility.MiscServiceGroup.WorkItemsPosted();
             inValue.CallContext = CallContext;
-            SoapUtility.MiscServiceGroup.PostedWorkItemsNewResponse retVal = ((SoapUtility.MiscServiceGroup.SOReserve)(this)).PostedWorkItemsNew(inValue);
+            SoapUtility.MiscServiceGroup.WorkItemsPostedResponse retVal = ((SoapUtility.MiscServiceGroup.SOReserve)(this)).WorkItemsPosted(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

@@ -3384,781 +3384,6 @@ namespace SoapUtility.SalesServicesGroup {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="CaseService", ConfigurationName="SalesServicesGroup.CaseService")]
-    public interface CaseService {
-        
-        // CODEGEN: Generating message contract since message CreateCustomerCase has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/CreateCustomerCase", ReplyAction="CaseService/CaseService/CreateCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse CreateCustomerCase(SoapUtility.SalesServicesGroup.CreateCustomerCase request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/CreateCustomerCase", ReplyAction="CaseService/CaseService/CreateCustomerCaseResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CreateCustomerCase request);
-        
-        // CODEGEN: Generating message contract since message DeleteCustomerCase has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/DeleteCustomerCase", ReplyAction="CaseService/CaseService/DeleteCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse DeleteCustomerCase(SoapUtility.SalesServicesGroup.DeleteCustomerCase request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/DeleteCustomerCase", ReplyAction="CaseService/CaseService/DeleteCustomerCaseResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.DeleteCustomerCase request);
-        
-        // CODEGEN: Generating message contract since message GetCase has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCase", ReplyAction="CaseService/CaseService/GetCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetCaseResponse GetCase(SoapUtility.SalesServicesGroup.GetCase request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCase", ReplyAction="CaseService/CaseService/GetCaseResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> GetCaseAsync(SoapUtility.SalesServicesGroup.GetCase request);
-        
-        // CODEGEN: Generating message contract since message GetCasesSummaryByCust has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCasesSummaryByCust", ReplyAction="CaseService/CaseService/GetCasesSummaryByCustResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCasesSummaryByCust", ReplyAction="CaseService/CaseService/GetCasesSummaryByCustResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request);
-        
-        // CODEGEN: Generating message contract since message GetCategoryTypeLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCategoryTypeLookup", ReplyAction="CaseService/CaseService/GetCategoryTypeLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCategoryTypeLookup", ReplyAction="CaseService/CaseService/GetCategoryTypeLookupResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request);
-        
-        // CODEGEN: Generating message contract since message GetCustomerCases has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCustomerCases", ReplyAction="CaseService/CaseService/GetCustomerCasesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetCustomerCasesResponse GetCustomerCases(SoapUtility.SalesServicesGroup.GetCustomerCases request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCustomerCases", ReplyAction="CaseService/CaseService/GetCustomerCasesResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.GetCustomerCases request);
-        
-        // CODEGEN: Generating message contract since message GetPriorityLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetPriorityLookup", ReplyAction="CaseService/CaseService/GetPriorityLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetPriorityLookupResponse GetPriorityLookup(SoapUtility.SalesServicesGroup.GetPriorityLookup request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetPriorityLookup", ReplyAction="CaseService/CaseService/GetPriorityLookupResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.GetPriorityLookup request);
-        
-        // CODEGEN: Generating message contract since message GetResolutionLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetResolutionLookup", ReplyAction="CaseService/CaseService/GetResolutionLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetResolutionLookupResponse GetResolutionLookup(SoapUtility.SalesServicesGroup.GetResolutionLookup request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetResolutionLookup", ReplyAction="CaseService/CaseService/GetResolutionLookupResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.GetResolutionLookup request);
-        
-        // CODEGEN: Generating message contract since message GetStatusLookup has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetStatusLookup", ReplyAction="CaseService/CaseService/GetStatusLookupResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetStatusLookupResponse GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetStatusLookup", ReplyAction="CaseService/CaseService/GetStatusLookupResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup request);
-        
-        // CODEGEN: Generating message contract since message UpdateCustomerCase has headers
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/UpdateCustomerCase", ReplyAction="CaseService/CaseService/UpdateCustomerCaseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse UpdateCustomerCase(SoapUtility.SalesServicesGroup.UpdateCustomerCase request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/UpdateCustomerCase", ReplyAction="CaseService/CaseService/UpdateCustomerCaseResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.UpdateCustomerCase request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class CreateCustomerCase {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.CustomerCaseContract row;
-        
-        public CreateCustomerCase() {
-        }
-        
-        public CreateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
-            this.CallContext = CallContext;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class CreateCustomerCaseResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string result;
-        
-        public CreateCustomerCaseResponse() {
-        }
-        
-        public CreateCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, string result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class DeleteCustomerCase {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string _caseId;
-        
-        public DeleteCustomerCase() {
-        }
-        
-        public DeleteCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            this.CallContext = CallContext;
-            this._caseId = _caseId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class DeleteCustomerCaseResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public bool result;
-        
-        public DeleteCustomerCaseResponse() {
-        }
-        
-        public DeleteCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, bool result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCase", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCase {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string _caseId;
-        
-        public GetCase() {
-        }
-        
-        public GetCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            this.CallContext = CallContext;
-            this._caseId = _caseId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCaseResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.CustomerCaseContract result;
-        
-        public GetCaseResponse() {
-        }
-        
-        public GetCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CustomerCaseContract result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCasesSummaryByCust", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCasesSummaryByCust {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string _custAccount;
-        
-        public GetCasesSummaryByCust() {
-        }
-        
-        public GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCasesSummaryByCustResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCasesSummaryByCustResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.SummaryContract[] result;
-        
-        public GetCasesSummaryByCustResponse() {
-        }
-        
-        public GetCasesSummaryByCustResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.SummaryContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCategoryTypeLookup", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCategoryTypeLookup {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        public GetCategoryTypeLookup() {
-        }
-        
-        public GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCategoryTypeLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCategoryTypeLookupResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result;
-        
-        public GetCategoryTypeLookupResponse() {
-        }
-        
-        public GetCategoryTypeLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerCases", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCustomerCases {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string _custAccount;
-        
-        public GetCustomerCases() {
-        }
-        
-        public GetCustomerCases(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            this.CallContext = CallContext;
-            this._custAccount = _custAccount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerCasesResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetCustomerCasesResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.CustomerCaseContract[] result;
-        
-        public GetCustomerCasesResponse() {
-        }
-        
-        public GetCustomerCasesResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CustomerCaseContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPriorityLookup", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetPriorityLookup {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        public GetPriorityLookup() {
-        }
-        
-        public GetPriorityLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPriorityLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetPriorityLookupResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.LookupContract[] result;
-        
-        public GetPriorityLookupResponse() {
-        }
-        
-        public GetPriorityLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResolutionLookup", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetResolutionLookup {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        public GetResolutionLookup() {
-        }
-        
-        public GetResolutionLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResolutionLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetResolutionLookupResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.LookupContract[] result;
-        
-        public GetResolutionLookupResponse() {
-        }
-        
-        public GetResolutionLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookup", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetStatusLookup {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        public GetStatusLookup() {
-        }
-        
-        public GetStatusLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            this.CallContext = CallContext;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class GetStatusLookupResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public SoapUtility.SalesServicesGroup.LookupContract[] result;
-        
-        public GetStatusLookupResponse() {
-        }
-        
-        public GetStatusLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class UpdateCustomerCase {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.CallContext CallContext;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public string _caseId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=1)]
-        public SoapUtility.SalesServicesGroup.CustomerCaseContract row;
-        
-        public UpdateCustomerCase() {
-        }
-        
-        public UpdateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
-            this.CallContext = CallContext;
-            this._caseId = _caseId;
-            this.row = row;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
-    public partial class UpdateCustomerCaseResponse {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        public SoapUtility.SalesServicesGroup.Infolog Infolog;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
-        public bool result;
-        
-        public UpdateCustomerCaseResponse() {
-        }
-        
-        public UpdateCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, bool result) {
-            this.Infolog = Infolog;
-            this.result = result;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CaseServiceChannel : SoapUtility.SalesServicesGroup.CaseService, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CaseServiceClient : System.ServiceModel.ClientBase<SoapUtility.SalesServicesGroup.CaseService>, SoapUtility.SalesServicesGroup.CaseService {
-        
-        public CaseServiceClient() {
-        }
-        
-        public CaseServiceClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public CaseServiceClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public CaseServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public CaseServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.CreateCustomerCase(SoapUtility.SalesServicesGroup.CreateCustomerCase request) {
-            return base.Channel.CreateCustomerCase(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog CreateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row, out string result) {
-            SoapUtility.SalesServicesGroup.CreateCustomerCase inValue = new SoapUtility.SalesServicesGroup.CreateCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CreateCustomerCase request) {
-            return base.Channel.CreateCustomerCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
-            SoapUtility.SalesServicesGroup.CreateCustomerCase inValue = new SoapUtility.SalesServicesGroup.CreateCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue.row = row;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).CreateCustomerCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.DeleteCustomerCase(SoapUtility.SalesServicesGroup.DeleteCustomerCase request) {
-            return base.Channel.DeleteCustomerCase(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog DeleteCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, out bool result) {
-            SoapUtility.SalesServicesGroup.DeleteCustomerCase inValue = new SoapUtility.SalesServicesGroup.DeleteCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).DeleteCustomerCase(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.DeleteCustomerCase request) {
-            return base.Channel.DeleteCustomerCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            SoapUtility.SalesServicesGroup.DeleteCustomerCase inValue = new SoapUtility.SalesServicesGroup.DeleteCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).DeleteCustomerCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetCaseResponse SoapUtility.SalesServicesGroup.CaseService.GetCase(SoapUtility.SalesServicesGroup.GetCase request) {
-            return base.Channel.GetCase(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, out SoapUtility.SalesServicesGroup.CustomerCaseContract result) {
-            SoapUtility.SalesServicesGroup.GetCase inValue = new SoapUtility.SalesServicesGroup.GetCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            SoapUtility.SalesServicesGroup.GetCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> SoapUtility.SalesServicesGroup.CaseService.GetCaseAsync(SoapUtility.SalesServicesGroup.GetCase request) {
-            return base.Channel.GetCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> GetCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
-            SoapUtility.SalesServicesGroup.GetCase inValue = new SoapUtility.SalesServicesGroup.GetCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse SoapUtility.SalesServicesGroup.CaseService.GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request) {
-            return base.Channel.GetCasesSummaryByCust(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount, out SoapUtility.SalesServicesGroup.SummaryContract[] result) {
-            SoapUtility.SalesServicesGroup.GetCasesSummaryByCust inValue = new SoapUtility.SalesServicesGroup.GetCasesSummaryByCust();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCasesSummaryByCust(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> SoapUtility.SalesServicesGroup.CaseService.GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request) {
-            return base.Channel.GetCasesSummaryByCustAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            SoapUtility.SalesServicesGroup.GetCasesSummaryByCust inValue = new SoapUtility.SalesServicesGroup.GetCasesSummaryByCust();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCasesSummaryByCustAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request) {
-            return base.Channel.GetCategoryTypeLookup(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result) {
-            SoapUtility.SalesServicesGroup.GetCategoryTypeLookup inValue = new SoapUtility.SalesServicesGroup.GetCategoryTypeLookup();
-            inValue.CallContext = CallContext;
-            SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request) {
-            return base.Channel.GetCategoryTypeLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            SoapUtility.SalesServicesGroup.GetCategoryTypeLookup inValue = new SoapUtility.SalesServicesGroup.GetCategoryTypeLookup();
-            inValue.CallContext = CallContext;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetCustomerCasesResponse SoapUtility.SalesServicesGroup.CaseService.GetCustomerCases(SoapUtility.SalesServicesGroup.GetCustomerCases request) {
-            return base.Channel.GetCustomerCases(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetCustomerCases(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount, out SoapUtility.SalesServicesGroup.CustomerCaseContract[] result) {
-            SoapUtility.SalesServicesGroup.GetCustomerCases inValue = new SoapUtility.SalesServicesGroup.GetCustomerCases();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            SoapUtility.SalesServicesGroup.GetCustomerCasesResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCustomerCases(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> SoapUtility.SalesServicesGroup.CaseService.GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.GetCustomerCases request) {
-            return base.Channel.GetCustomerCasesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
-            SoapUtility.SalesServicesGroup.GetCustomerCases inValue = new SoapUtility.SalesServicesGroup.GetCustomerCases();
-            inValue.CallContext = CallContext;
-            inValue._custAccount = _custAccount;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCustomerCasesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetPriorityLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetPriorityLookup(SoapUtility.SalesServicesGroup.GetPriorityLookup request) {
-            return base.Channel.GetPriorityLookup(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetPriorityLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            SoapUtility.SalesServicesGroup.GetPriorityLookup inValue = new SoapUtility.SalesServicesGroup.GetPriorityLookup();
-            inValue.CallContext = CallContext;
-            SoapUtility.SalesServicesGroup.GetPriorityLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetPriorityLookup(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.GetPriorityLookup request) {
-            return base.Channel.GetPriorityLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            SoapUtility.SalesServicesGroup.GetPriorityLookup inValue = new SoapUtility.SalesServicesGroup.GetPriorityLookup();
-            inValue.CallContext = CallContext;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetPriorityLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetResolutionLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetResolutionLookup(SoapUtility.SalesServicesGroup.GetResolutionLookup request) {
-            return base.Channel.GetResolutionLookup(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetResolutionLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            SoapUtility.SalesServicesGroup.GetResolutionLookup inValue = new SoapUtility.SalesServicesGroup.GetResolutionLookup();
-            inValue.CallContext = CallContext;
-            SoapUtility.SalesServicesGroup.GetResolutionLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetResolutionLookup(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.GetResolutionLookup request) {
-            return base.Channel.GetResolutionLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            SoapUtility.SalesServicesGroup.GetResolutionLookup inValue = new SoapUtility.SalesServicesGroup.GetResolutionLookup();
-            inValue.CallContext = CallContext;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetResolutionLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetStatusLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup request) {
-            return base.Channel.GetStatusLookup(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog GetStatusLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            SoapUtility.SalesServicesGroup.GetStatusLookup inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup();
-            inValue.CallContext = CallContext;
-            SoapUtility.SalesServicesGroup.GetStatusLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup request) {
-            return base.Channel.GetStatusLookupAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            SoapUtility.SalesServicesGroup.GetStatusLookup inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup();
-            inValue.CallContext = CallContext;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetStatusLookupAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.UpdateCustomerCase(SoapUtility.SalesServicesGroup.UpdateCustomerCase request) {
-            return base.Channel.UpdateCustomerCase(request);
-        }
-        
-        public SoapUtility.SalesServicesGroup.Infolog UpdateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row, out bool result) {
-            SoapUtility.SalesServicesGroup.UpdateCustomerCase inValue = new SoapUtility.SalesServicesGroup.UpdateCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            inValue.row = row;
-            SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).UpdateCustomerCase(inValue);
-            result = retVal.result;
-            return retVal.Infolog;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.UpdateCustomerCase request) {
-            return base.Channel.UpdateCustomerCaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
-            SoapUtility.SalesServicesGroup.UpdateCustomerCase inValue = new SoapUtility.SalesServicesGroup.UpdateCustomerCase();
-            inValue.CallContext = CallContext;
-            inValue._caseId = _caseId;
-            inValue.row = row;
-            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).UpdateCustomerCaseAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="SalesServicesGroup.InventOnHandService")]
     public interface InventOnHandService {
         
@@ -5708,10 +4933,10 @@ namespace SoapUtility.SalesServicesGroup {
         // CODEGEN: Generating message contract since message GetStatusLookup has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="http://tempuri.org/PrePickingService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
-        SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup1 request);
+        SoapUtility.SalesServicesGroup.GetStatusLookupResponse GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/GetStatusLookup", ReplyAction="http://tempuri.org/PrePickingService/GetStatusLookupResponse")]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup1 request);
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup request);
         
         // CODEGEN: Generating message contract since message StatusUpdatePrePicking has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PrePickingService/StatusUpdatePrePicking", ReplyAction="http://tempuri.org/PrePickingService/StatusUpdatePrePickingResponse")]
@@ -6036,15 +5261,15 @@ namespace SoapUtility.SalesServicesGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookup", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetStatusLookup1 {
+    public partial class GetStatusLookup {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SalesServicesGroup.CallContext CallContext;
         
-        public GetStatusLookup1() {
+        public GetStatusLookup() {
         }
         
-        public GetStatusLookup1(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+        public GetStatusLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
             this.CallContext = CallContext;
         }
     }
@@ -6053,7 +5278,7 @@ namespace SoapUtility.SalesServicesGroup {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookupResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
-    public partial class GetStatusLookupResponse1 {
+    public partial class GetStatusLookupResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         public SoapUtility.SalesServicesGroup.Infolog Infolog;
@@ -6061,10 +5286,10 @@ namespace SoapUtility.SalesServicesGroup {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
         public SoapUtility.SalesServicesGroup.LookupContract[] result;
         
-        public GetStatusLookupResponse1() {
+        public GetStatusLookupResponse() {
         }
         
-        public GetStatusLookupResponse1(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
+        public GetStatusLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -6376,25 +5601,25 @@ namespace SoapUtility.SalesServicesGroup {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 SoapUtility.SalesServicesGroup.PrePickingService.GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup1 request) {
+        SoapUtility.SalesServicesGroup.GetStatusLookupResponse SoapUtility.SalesServicesGroup.PrePickingService.GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup request) {
             return base.Channel.GetStatusLookup(request);
         }
         
         public SoapUtility.SalesServicesGroup.Infolog GetStatusLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
-            SoapUtility.SalesServicesGroup.GetStatusLookup1 inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup1();
+            SoapUtility.SalesServicesGroup.GetStatusLookup inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup();
             inValue.CallContext = CallContext;
-            SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 retVal = ((SoapUtility.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
+            SoapUtility.SalesServicesGroup.GetStatusLookupResponse retVal = ((SoapUtility.SalesServicesGroup.PrePickingService)(this)).GetStatusLookup(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> SoapUtility.SalesServicesGroup.PrePickingService.GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup1 request) {
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> SoapUtility.SalesServicesGroup.PrePickingService.GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup request) {
             return base.Channel.GetStatusLookupAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
-            SoapUtility.SalesServicesGroup.GetStatusLookup1 inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup1();
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            SoapUtility.SalesServicesGroup.GetStatusLookup inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup();
             inValue.CallContext = CallContext;
             return ((SoapUtility.SalesServicesGroup.PrePickingService)(this)).GetStatusLookupAsync(inValue);
         }
@@ -9352,6 +8577,781 @@ namespace SoapUtility.SalesServicesGroup {
             inValue._custReqId = _custReqId;
             inValue.row = row;
             return ((SoapUtility.SalesServicesGroup.ProdRequestService)(this)).UpdateProdRequestAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="CaseService", ConfigurationName="SalesServicesGroup.CaseService")]
+    public interface CaseService {
+        
+        // CODEGEN: Generating message contract since message CreateCustomerCase has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/CreateCustomerCase", ReplyAction="CaseService/CaseService/CreateCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse CreateCustomerCase(SoapUtility.SalesServicesGroup.CreateCustomerCase request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/CreateCustomerCase", ReplyAction="CaseService/CaseService/CreateCustomerCaseResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CreateCustomerCase request);
+        
+        // CODEGEN: Generating message contract since message DeleteCustomerCase has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/DeleteCustomerCase", ReplyAction="CaseService/CaseService/DeleteCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse DeleteCustomerCase(SoapUtility.SalesServicesGroup.DeleteCustomerCase request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/DeleteCustomerCase", ReplyAction="CaseService/CaseService/DeleteCustomerCaseResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.DeleteCustomerCase request);
+        
+        // CODEGEN: Generating message contract since message GetCase has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCase", ReplyAction="CaseService/CaseService/GetCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetCaseResponse GetCase(SoapUtility.SalesServicesGroup.GetCase request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCase", ReplyAction="CaseService/CaseService/GetCaseResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> GetCaseAsync(SoapUtility.SalesServicesGroup.GetCase request);
+        
+        // CODEGEN: Generating message contract since message GetCasesSummaryByCust has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCasesSummaryByCust", ReplyAction="CaseService/CaseService/GetCasesSummaryByCustResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCasesSummaryByCust", ReplyAction="CaseService/CaseService/GetCasesSummaryByCustResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request);
+        
+        // CODEGEN: Generating message contract since message GetCategoryTypeLookup has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCategoryTypeLookup", ReplyAction="CaseService/CaseService/GetCategoryTypeLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCategoryTypeLookup", ReplyAction="CaseService/CaseService/GetCategoryTypeLookupResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request);
+        
+        // CODEGEN: Generating message contract since message GetCustomerCases has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCustomerCases", ReplyAction="CaseService/CaseService/GetCustomerCasesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetCustomerCasesResponse GetCustomerCases(SoapUtility.SalesServicesGroup.GetCustomerCases request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetCustomerCases", ReplyAction="CaseService/CaseService/GetCustomerCasesResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.GetCustomerCases request);
+        
+        // CODEGEN: Generating message contract since message GetPriorityLookup has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetPriorityLookup", ReplyAction="CaseService/CaseService/GetPriorityLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetPriorityLookupResponse GetPriorityLookup(SoapUtility.SalesServicesGroup.GetPriorityLookup request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetPriorityLookup", ReplyAction="CaseService/CaseService/GetPriorityLookupResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.GetPriorityLookup request);
+        
+        // CODEGEN: Generating message contract since message GetResolutionLookup has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetResolutionLookup", ReplyAction="CaseService/CaseService/GetResolutionLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetResolutionLookupResponse GetResolutionLookup(SoapUtility.SalesServicesGroup.GetResolutionLookup request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetResolutionLookup", ReplyAction="CaseService/CaseService/GetResolutionLookupResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.GetResolutionLookup request);
+        
+        // CODEGEN: Generating message contract since message GetStatusLookup has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetStatusLookup", ReplyAction="CaseService/CaseService/GetStatusLookupResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup1 request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/GetStatusLookup", ReplyAction="CaseService/CaseService/GetStatusLookupResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup1 request);
+        
+        // CODEGEN: Generating message contract since message UpdateCustomerCase has headers
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/UpdateCustomerCase", ReplyAction="CaseService/CaseService/UpdateCustomerCaseResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.SalesServicesGroup.Fault), Action="CaseService/CaseService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse UpdateCustomerCase(SoapUtility.SalesServicesGroup.UpdateCustomerCase request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CaseService/CaseService/UpdateCustomerCase", ReplyAction="CaseService/CaseService/UpdateCustomerCaseResponse")]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.UpdateCustomerCase request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class CreateCustomerCase {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.CustomerCaseContract row;
+        
+        public CreateCustomerCase() {
+        }
+        
+        public CreateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
+            this.CallContext = CallContext;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class CreateCustomerCaseResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string result;
+        
+        public CreateCustomerCaseResponse() {
+        }
+        
+        public CreateCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, string result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class DeleteCustomerCase {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string _caseId;
+        
+        public DeleteCustomerCase() {
+        }
+        
+        public DeleteCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class DeleteCustomerCaseResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public bool result;
+        
+        public DeleteCustomerCaseResponse() {
+        }
+        
+        public DeleteCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, bool result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCase", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCase {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string _caseId;
+        
+        public GetCase() {
+        }
+        
+        public GetCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCaseResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.CustomerCaseContract result;
+        
+        public GetCaseResponse() {
+        }
+        
+        public GetCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CustomerCaseContract result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCasesSummaryByCust", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCasesSummaryByCust {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string _custAccount;
+        
+        public GetCasesSummaryByCust() {
+        }
+        
+        public GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCasesSummaryByCustResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCasesSummaryByCustResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.SummaryContract[] result;
+        
+        public GetCasesSummaryByCustResponse() {
+        }
+        
+        public GetCasesSummaryByCustResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.SummaryContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCategoryTypeLookup", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCategoryTypeLookup {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        public GetCategoryTypeLookup() {
+        }
+        
+        public GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCategoryTypeLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCategoryTypeLookupResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result;
+        
+        public GetCategoryTypeLookupResponse() {
+        }
+        
+        public GetCategoryTypeLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerCases", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCustomerCases {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string _custAccount;
+        
+        public GetCustomerCases() {
+        }
+        
+        public GetCustomerCases(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            this.CallContext = CallContext;
+            this._custAccount = _custAccount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerCasesResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetCustomerCasesResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.CustomerCaseContract[] result;
+        
+        public GetCustomerCasesResponse() {
+        }
+        
+        public GetCustomerCasesResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.CustomerCaseContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPriorityLookup", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetPriorityLookup {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        public GetPriorityLookup() {
+        }
+        
+        public GetPriorityLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPriorityLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetPriorityLookupResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.LookupContract[] result;
+        
+        public GetPriorityLookupResponse() {
+        }
+        
+        public GetPriorityLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResolutionLookup", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetResolutionLookup {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        public GetResolutionLookup() {
+        }
+        
+        public GetResolutionLookup(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetResolutionLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetResolutionLookupResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.LookupContract[] result;
+        
+        public GetResolutionLookupResponse() {
+        }
+        
+        public GetResolutionLookupResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookup", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetStatusLookup1 {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        public GetStatusLookup1() {
+        }
+        
+        public GetStatusLookup1(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStatusLookupResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class GetStatusLookupResponse1 {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public SoapUtility.SalesServicesGroup.LookupContract[] result;
+        
+        public GetStatusLookupResponse1() {
+        }
+        
+        public GetStatusLookupResponse1(SoapUtility.SalesServicesGroup.Infolog Infolog, SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCustomerCase", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class UpdateCustomerCase {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public string _caseId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=1)]
+        public SoapUtility.SalesServicesGroup.CustomerCaseContract row;
+        
+        public UpdateCustomerCase() {
+        }
+        
+        public UpdateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
+            this.CallContext = CallContext;
+            this._caseId = _caseId;
+            this.row = row;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCustomerCaseResponse", WrapperNamespace="CaseService", IsWrapped=true)]
+    public partial class UpdateCustomerCaseResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.SalesServicesGroup.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CaseService", Order=0)]
+        public bool result;
+        
+        public UpdateCustomerCaseResponse() {
+        }
+        
+        public UpdateCustomerCaseResponse(SoapUtility.SalesServicesGroup.Infolog Infolog, bool result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface CaseServiceChannel : SoapUtility.SalesServicesGroup.CaseService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CaseServiceClient : System.ServiceModel.ClientBase<SoapUtility.SalesServicesGroup.CaseService>, SoapUtility.SalesServicesGroup.CaseService {
+        
+        public CaseServiceClient() {
+        }
+        
+        public CaseServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public CaseServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CaseServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CaseServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.CreateCustomerCase(SoapUtility.SalesServicesGroup.CreateCustomerCase request) {
+            return base.Channel.CreateCustomerCase(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog CreateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row, out string result) {
+            SoapUtility.SalesServicesGroup.CreateCustomerCase inValue = new SoapUtility.SalesServicesGroup.CreateCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).CreateCustomerCase(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CreateCustomerCase request) {
+            return base.Channel.CreateCustomerCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.CreateCustomerCaseResponse> CreateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
+            SoapUtility.SalesServicesGroup.CreateCustomerCase inValue = new SoapUtility.SalesServicesGroup.CreateCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue.row = row;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).CreateCustomerCaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.DeleteCustomerCase(SoapUtility.SalesServicesGroup.DeleteCustomerCase request) {
+            return base.Channel.DeleteCustomerCase(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog DeleteCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, out bool result) {
+            SoapUtility.SalesServicesGroup.DeleteCustomerCase inValue = new SoapUtility.SalesServicesGroup.DeleteCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).DeleteCustomerCase(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.DeleteCustomerCase request) {
+            return base.Channel.DeleteCustomerCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.DeleteCustomerCaseResponse> DeleteCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            SoapUtility.SalesServicesGroup.DeleteCustomerCase inValue = new SoapUtility.SalesServicesGroup.DeleteCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).DeleteCustomerCaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetCaseResponse SoapUtility.SalesServicesGroup.CaseService.GetCase(SoapUtility.SalesServicesGroup.GetCase request) {
+            return base.Channel.GetCase(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, out SoapUtility.SalesServicesGroup.CustomerCaseContract result) {
+            SoapUtility.SalesServicesGroup.GetCase inValue = new SoapUtility.SalesServicesGroup.GetCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            SoapUtility.SalesServicesGroup.GetCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCase(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> SoapUtility.SalesServicesGroup.CaseService.GetCaseAsync(SoapUtility.SalesServicesGroup.GetCase request) {
+            return base.Channel.GetCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCaseResponse> GetCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId) {
+            SoapUtility.SalesServicesGroup.GetCase inValue = new SoapUtility.SalesServicesGroup.GetCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse SoapUtility.SalesServicesGroup.CaseService.GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request) {
+            return base.Channel.GetCasesSummaryByCust(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetCasesSummaryByCust(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount, out SoapUtility.SalesServicesGroup.SummaryContract[] result) {
+            SoapUtility.SalesServicesGroup.GetCasesSummaryByCust inValue = new SoapUtility.SalesServicesGroup.GetCasesSummaryByCust();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCasesSummaryByCust(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> SoapUtility.SalesServicesGroup.CaseService.GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.GetCasesSummaryByCust request) {
+            return base.Channel.GetCasesSummaryByCustAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCasesSummaryByCustResponse> GetCasesSummaryByCustAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            SoapUtility.SalesServicesGroup.GetCasesSummaryByCust inValue = new SoapUtility.SalesServicesGroup.GetCasesSummaryByCust();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCasesSummaryByCustAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request) {
+            return base.Channel.GetCategoryTypeLookup(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetCategoryTypeLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.CategoryTypeLookup[] result) {
+            SoapUtility.SalesServicesGroup.GetCategoryTypeLookup inValue = new SoapUtility.SalesServicesGroup.GetCategoryTypeLookup();
+            inValue.CallContext = CallContext;
+            SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookup(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.GetCategoryTypeLookup request) {
+            return base.Channel.GetCategoryTypeLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCategoryTypeLookupResponse> GetCategoryTypeLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            SoapUtility.SalesServicesGroup.GetCategoryTypeLookup inValue = new SoapUtility.SalesServicesGroup.GetCategoryTypeLookup();
+            inValue.CallContext = CallContext;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCategoryTypeLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetCustomerCasesResponse SoapUtility.SalesServicesGroup.CaseService.GetCustomerCases(SoapUtility.SalesServicesGroup.GetCustomerCases request) {
+            return base.Channel.GetCustomerCases(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetCustomerCases(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount, out SoapUtility.SalesServicesGroup.CustomerCaseContract[] result) {
+            SoapUtility.SalesServicesGroup.GetCustomerCases inValue = new SoapUtility.SalesServicesGroup.GetCustomerCases();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            SoapUtility.SalesServicesGroup.GetCustomerCasesResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCustomerCases(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> SoapUtility.SalesServicesGroup.CaseService.GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.GetCustomerCases request) {
+            return base.Channel.GetCustomerCasesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetCustomerCasesResponse> GetCustomerCasesAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _custAccount) {
+            SoapUtility.SalesServicesGroup.GetCustomerCases inValue = new SoapUtility.SalesServicesGroup.GetCustomerCases();
+            inValue.CallContext = CallContext;
+            inValue._custAccount = _custAccount;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetCustomerCasesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetPriorityLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetPriorityLookup(SoapUtility.SalesServicesGroup.GetPriorityLookup request) {
+            return base.Channel.GetPriorityLookup(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetPriorityLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            SoapUtility.SalesServicesGroup.GetPriorityLookup inValue = new SoapUtility.SalesServicesGroup.GetPriorityLookup();
+            inValue.CallContext = CallContext;
+            SoapUtility.SalesServicesGroup.GetPriorityLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetPriorityLookup(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.GetPriorityLookup request) {
+            return base.Channel.GetPriorityLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetPriorityLookupResponse> GetPriorityLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            SoapUtility.SalesServicesGroup.GetPriorityLookup inValue = new SoapUtility.SalesServicesGroup.GetPriorityLookup();
+            inValue.CallContext = CallContext;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetPriorityLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetResolutionLookupResponse SoapUtility.SalesServicesGroup.CaseService.GetResolutionLookup(SoapUtility.SalesServicesGroup.GetResolutionLookup request) {
+            return base.Channel.GetResolutionLookup(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetResolutionLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            SoapUtility.SalesServicesGroup.GetResolutionLookup inValue = new SoapUtility.SalesServicesGroup.GetResolutionLookup();
+            inValue.CallContext = CallContext;
+            SoapUtility.SalesServicesGroup.GetResolutionLookupResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetResolutionLookup(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> SoapUtility.SalesServicesGroup.CaseService.GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.GetResolutionLookup request) {
+            return base.Channel.GetResolutionLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetResolutionLookupResponse> GetResolutionLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            SoapUtility.SalesServicesGroup.GetResolutionLookup inValue = new SoapUtility.SalesServicesGroup.GetResolutionLookup();
+            inValue.CallContext = CallContext;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetResolutionLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 SoapUtility.SalesServicesGroup.CaseService.GetStatusLookup(SoapUtility.SalesServicesGroup.GetStatusLookup1 request) {
+            return base.Channel.GetStatusLookup(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog GetStatusLookup(SoapUtility.SalesServicesGroup.CallContext CallContext, out SoapUtility.SalesServicesGroup.LookupContract[] result) {
+            SoapUtility.SalesServicesGroup.GetStatusLookup1 inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup1();
+            inValue.CallContext = CallContext;
+            SoapUtility.SalesServicesGroup.GetStatusLookupResponse1 retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetStatusLookup(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> SoapUtility.SalesServicesGroup.CaseService.GetStatusLookupAsync(SoapUtility.SalesServicesGroup.GetStatusLookup1 request) {
+            return base.Channel.GetStatusLookupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.GetStatusLookupResponse1> GetStatusLookupAsync(SoapUtility.SalesServicesGroup.CallContext CallContext) {
+            SoapUtility.SalesServicesGroup.GetStatusLookup1 inValue = new SoapUtility.SalesServicesGroup.GetStatusLookup1();
+            inValue.CallContext = CallContext;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).GetStatusLookupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse SoapUtility.SalesServicesGroup.CaseService.UpdateCustomerCase(SoapUtility.SalesServicesGroup.UpdateCustomerCase request) {
+            return base.Channel.UpdateCustomerCase(request);
+        }
+        
+        public SoapUtility.SalesServicesGroup.Infolog UpdateCustomerCase(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row, out bool result) {
+            SoapUtility.SalesServicesGroup.UpdateCustomerCase inValue = new SoapUtility.SalesServicesGroup.UpdateCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            inValue.row = row;
+            SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse retVal = ((SoapUtility.SalesServicesGroup.CaseService)(this)).UpdateCustomerCase(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> SoapUtility.SalesServicesGroup.CaseService.UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.UpdateCustomerCase request) {
+            return base.Channel.UpdateCustomerCaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoapUtility.SalesServicesGroup.UpdateCustomerCaseResponse> UpdateCustomerCaseAsync(SoapUtility.SalesServicesGroup.CallContext CallContext, string _caseId, SoapUtility.SalesServicesGroup.CustomerCaseContract row) {
+            SoapUtility.SalesServicesGroup.UpdateCustomerCase inValue = new SoapUtility.SalesServicesGroup.UpdateCustomerCase();
+            inValue.CallContext = CallContext;
+            inValue._caseId = _caseId;
+            inValue.row = row;
+            return ((SoapUtility.SalesServicesGroup.CaseService)(this)).UpdateCustomerCaseAsync(inValue);
         }
     }
 }

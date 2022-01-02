@@ -33,6 +33,8 @@ namespace SyncServices
         [OperationContract]
         bool UpdateAndConfirmPalletReceive(DMExportContract pallet);
 
+       
+
         [OperationContract]
         bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser);
 

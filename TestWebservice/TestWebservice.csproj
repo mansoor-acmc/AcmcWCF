@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\EAMService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\FGSyncService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,7 +191,29 @@
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.DMSummaryContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.ItemCodeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\DMCheckService\TestWebservice.DMCheckService.WmsLocationContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EAMService\EAMService.wsdl" />
+    <None Include="Service References\EAMService\EAMService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMService\EAMService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMService\EAMService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMService\EAMService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMService\EAMService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAMService\TestWebservice.EAMService.EamWorkitemsContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\FGSyncService\FGSyncService.wsdl" />
@@ -390,6 +417,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\DeviceOps\" />
     <WCFMetadataStorage Include="Service References\DMCheckService\" />
+    <WCFMetadataStorage Include="Service References\EAMService\" />
     <WCFMetadataStorage Include="Service References\FGSyncService\" />
     <WCFMetadataStorage Include="Service References\ModulaMovement\" />
     <WCFMetadataStorage Include="Service References\ModulaService\" />
@@ -472,9 +500,6 @@
     <None Include="Service References\ModulaMovement\ModulaMovement1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DMCheckService\DMCheckService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SCServices\SyncServices.csproj">
       <Project>{0886A1BB-E874-4319-BFF7-57B3A5C636DE}</Project>
       <Name>SyncServices</Name>
@@ -551,6 +576,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\FGSyncService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DMCheckService\DMCheckService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMService\EAMService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

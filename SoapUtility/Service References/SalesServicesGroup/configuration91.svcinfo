@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="qqBKi6MdFkJ45+xjVmHGAxO+VWkXPaSLs/J5OBcpqT0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="b4UbRgPiZrxALlP2RYjVv1l8iIIxlWRAbw6Pza6p0L4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_CaseService">
       <properties>
@@ -548,10 +548,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_CaseService" contract="SalesServicesGroup.CaseService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_CaseService">
+    <endpoint name="BasicHttpBinding_CaseService" contract="SalesServicesGroup.CaseService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_CaseService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -633,10 +633,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_InventOnHandService" contract="SalesServicesGroup.InventOnHandService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_InventOnHandService">
+    <endpoint name="BasicHttpBinding_InventOnHandService" contract="SalesServicesGroup.InventOnHandService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_InventOnHandService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -718,10 +718,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_PrePickingService" contract="SalesServicesGroup.PrePickingService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_PrePickingService">
+    <endpoint name="BasicHttpBinding_PrePickingService" contract="SalesServicesGroup.PrePickingService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_PrePickingService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -803,10 +803,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_ProdPlanService" contract="SalesServicesGroup.ProdPlanService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_ProdPlanService">
+    <endpoint name="BasicHttpBinding_ProdPlanService" contract="SalesServicesGroup.ProdPlanService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_ProdPlanService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -888,10 +888,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_ProdRequestService" contract="SalesServicesGroup.ProdRequestService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_ProdRequestService">
+    <endpoint name="BasicHttpBinding_ProdRequestService" contract="SalesServicesGroup.ProdRequestService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" bindingConfiguration="BasicHttpBinding_ProdRequestService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

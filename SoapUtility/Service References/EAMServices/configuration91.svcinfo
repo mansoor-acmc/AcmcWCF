@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="iACOQxEYWy3fozHCeDfrX4egUnM6xMTEV982szulI38=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="wpTXJTNz881ScdG38pYe1C5WFvNodc4qCkJGysyAbnA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_WorkItemsService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_WorkItemsService" contract="EAMServices.WorkItemsService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices" bindingConfiguration="BasicHttpBinding_WorkItemsService">
+    <endpoint name="BasicHttpBinding_WorkItemsService" contract="EAMServices.WorkItemsService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/EAMServices" bindingConfiguration="BasicHttpBinding_WorkItemsService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/EAMServices</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

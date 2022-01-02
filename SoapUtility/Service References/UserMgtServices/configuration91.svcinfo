@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="VVJRs77K9FZSAQu0gDo3zV0YlxztlxKyIlX/IBF6Abg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="4jFfURhYs17Vvr4AwIv4wuAsKmPKe/zo2IcRjW1ZgEc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_UserManagementService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_UserManagementService" contract="UserMgtServices.UserManagementService" bindingType="basicHttpBinding" address="https://acmcuat.sandbox.operations.dynamics.com/soap/services/UserMgtServices" bindingConfiguration="BasicHttpBinding_UserManagementService">
+    <endpoint name="BasicHttpBinding_UserManagementService" contract="UserMgtServices.UserManagementService" bindingType="basicHttpBinding" address="https://acmc.operations.dynamics.com/soap/services/UserMgtServices" bindingConfiguration="BasicHttpBinding_UserManagementService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://acmcuat.sandbox.operations.dynamics.com/soap/services/UserMgtServices</serializedValue>
+          <serializedValue>https://acmc.operations.dynamics.com/soap/services/UserMgtServices</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

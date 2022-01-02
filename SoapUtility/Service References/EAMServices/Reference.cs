@@ -1599,6 +1599,11 @@ namespace SoapUtility.EAMServices {
         [System.ServiceModel.OperationContractAttribute(Action="WorkItemsService/WorkItemsService/SetWOStatus", ReplyAction="WorkItemsService/WorkItemsService/SetWOStatusResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="WorkItemsService/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.EAMServices.SetWOStatusResponse SetWOStatus(SoapUtility.EAMServices.SetWOStatus request);
+        
+        // CODEGEN: Generating message contract since message SaveWorkOrder has headers
+        [System.ServiceModel.OperationContractAttribute(Action="WorkItemsService/WorkItemsService/SaveWorkOrder", ReplyAction="WorkItemsService/WorkItemsService/SaveWorkOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.EAMServices.Fault), Action="WorkItemsService/WorkItemsService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.EAMServices.SaveWorkOrderResponse SaveWorkOrder(SoapUtility.EAMServices.SaveWorkOrder request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2563,6 +2568,48 @@ namespace SoapUtility.EAMServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveWorkOrder", WrapperNamespace="WorkItemsService", IsWrapped=true)]
+    public partial class SaveWorkOrder {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="WorkItemsService", Order=0)]
+        public SoapUtility.EAMServices.PMWorkOrderContract woEntity;
+        
+        public SaveWorkOrder() {
+        }
+        
+        public SaveWorkOrder(SoapUtility.EAMServices.CallContext CallContext, SoapUtility.EAMServices.PMWorkOrderContract woEntity) {
+            this.CallContext = CallContext;
+            this.woEntity = woEntity;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveWorkOrderResponse", WrapperNamespace="WorkItemsService", IsWrapped=true)]
+    public partial class SaveWorkOrderResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.EAMServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="WorkItemsService", Order=0)]
+        public SoapUtility.EAMServices.PMWorkOrderContract result;
+        
+        public SaveWorkOrderResponse() {
+        }
+        
+        public SaveWorkOrderResponse(SoapUtility.EAMServices.Infolog Infolog, SoapUtility.EAMServices.PMWorkOrderContract result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WorkItemsServiceChannel : SoapUtility.EAMServices.WorkItemsService, System.ServiceModel.IClientChannel {
     }
@@ -2907,6 +2954,20 @@ namespace SoapUtility.EAMServices {
             inValue.statusId = statusId;
             inValue.woId = woId;
             SoapUtility.EAMServices.SetWOStatusResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).SetWOStatus(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.EAMServices.SaveWorkOrderResponse SoapUtility.EAMServices.WorkItemsService.SaveWorkOrder(SoapUtility.EAMServices.SaveWorkOrder request) {
+            return base.Channel.SaveWorkOrder(request);
+        }
+        
+        public SoapUtility.EAMServices.Infolog SaveWorkOrder(SoapUtility.EAMServices.CallContext CallContext, SoapUtility.EAMServices.PMWorkOrderContract woEntity, out SoapUtility.EAMServices.PMWorkOrderContract result) {
+            SoapUtility.EAMServices.SaveWorkOrder inValue = new SoapUtility.EAMServices.SaveWorkOrder();
+            inValue.CallContext = CallContext;
+            inValue.woEntity = woEntity;
+            SoapUtility.EAMServices.SaveWorkOrderResponse retVal = ((SoapUtility.EAMServices.WorkItemsService)(this)).SaveWorkOrder(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

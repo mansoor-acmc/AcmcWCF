@@ -27,7 +27,36 @@ namespace TestWebservice
             ArrayList abc = new ArrayList();
             bool result11 = false;
             string str = "";
+
+            DMExportContract contract1 = new DMExportContract()
+            {
+                PalletNum = "M208370",
+                RecordId = 1561891,
+                Grade = "G1",
+                Shade = "D70",
+                Caliber = "C5",
+                Size = "340X340X8",
+                LineOfOrigin = 8,
+                WhichMarpak = 1,
+                LGVOrForklift = PalletTransportBy.LGV,
+                BoxesOnPallet = 54
+            };
+            DMCheckServiceClient dmClient = new DMCheckServiceClient();
+            var check =dmClient.UpdatePalletProperties(contract1);
+
+           //var locs=dmClient.GetWHLocations();
+           //int totRows = locs.Count();
+           //Console.WriteLine(totRows.ToString());
+            SCSyncService.SCSyncServiceClient scClient1 = new SCSyncService.SCSyncServiceClient();
+            var scUomItems = scClient1.GetSCUnitOfMeasureFromAX("SM3M00091,SM3M00017,SM2M010149,DP2M010005");
+
+
+            EAMService.EAMServiceClient eamClient = new EAMService.EAMServiceClient();
+            var eamItems = eamClient.PostedWorkItems();
+
             /*string[] pallets = { "M031855"};
+             * 
+            
 
             SalesOrder.SalesServiceClient ssClient = new SalesServiceClient();
             //str = ssClient.SalesDeliveryNote("21SO-01327");
@@ -40,69 +69,84 @@ namespace TestWebservice
             var salesTable = soPick.FindSalesOrder("21SO-01820");
             Console.WriteLine(salesTable.PickingId);
 */
+            FGSyncService.FGSyncServiceClient fgClient1 = new FGSyncService.FGSyncServiceClient();
+            var fgItems = fgClient1.GetFGYearInventory(0);
+            int countFG = fgItems.Count();
 
-            ProdRequestService.ProdRequestServiceClient prodService = new ProdRequestService.ProdRequestServiceClient();
-            //ProdRequestService prodRequestService = new SyncServices.ProdRequestService();
-            var allLines = prodService.GetAllProductionLines();
 
-            foreach (string line in allLines)
-            {
-                Console.WriteLine(line);
-            }
-            Console.WriteLine();
-            Console.Write("Select Line: ");
-            string lineId = Console.ReadLine();
-
-            var lineCaps = prodService.GetLineCapacities(lineId);
-            foreach(var cap in lineCaps)
-                Console.WriteLine(cap.ItemSizeThickness);
-
-            //var isSuccess = new Program().CheckLoginAsync("am.bagedo@arabian-ceramics.com", "Amro*7894");
-
-            Console.WriteLine("Sales Users---");
-            SalesService.SalesServiceClient ssClient = new SalesService.SalesServiceClient();
-            var userData = ssClient.GetUserData();
             
-            
-            foreach (var user in userData)
-            {
-                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
-            }
-            
-            Console.WriteLine("");
-            Console.WriteLine("SC Users---");
-            SCSyncService.SCSyncServiceClient scClient = new SCSyncService.SCSyncServiceClient();
-            userData = scClient.GetUserData();
-            foreach (var user in userData)
-            {
-                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
-            }
 
-            Console.WriteLine("");
-            Console.WriteLine("FG Users---");
-            FGSyncService.FGSyncServiceClient fgClient = new FGSyncService.FGSyncServiceClient();
-            userData = fgClient.GetUserData();
-            foreach (var user in userData)
-            {
-                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
-            }
+           List<SyncServices.LocationHistory> allOne = new List<SyncServices.LocationHistory>();
+            SyncServices.LocationHistory one = null;
 
-            /*DMCheckServiceClient dmClient = new DMCheckServiceClient();
-            //var locs=dmClient.GetWHLocations();
-            //int totRows = locs.Count();
-            //Console.WriteLine(totRows.ToString());
+           one = new SyncServices.LocationHistory() { PalletNum = "M200052", Location = "C5", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+           allOne.Add(one);
+           var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+           if (result.Count() > 0)
+               Console.WriteLine("Lines Transferred: " + result.Count().ToString());
 
-            List<LocationHistory> allOne = new List<LocationHistory>();
-            LocationHistory one = null;
+           ProdRequestService.ProdRequestServiceClient prodService = new ProdRequestService.ProdRequestServiceClient();
+           //ProdRequestService prodRequestService = new SyncServices.ProdRequestService();
+           var allLines = prodService.GetAllProductionLines();
 
-            one = new LocationHistory() { PalletNum = "M085601", Location = "H3", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
-            allOne.Add(one);
-            var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
-            if (result.Count() > 0)
-                Console.WriteLine("Lines Transferred: " + result.Count().ToString());
-            
-            dmClient.Close();
-            */
+           foreach (string line in allLines)
+           {
+               Console.WriteLine(line);
+           }
+           Console.WriteLine();
+           Console.Write("Select Line: ");
+           string lineId = Console.ReadLine();
+
+           var lineCaps = prodService.GetLineCapacities(lineId);
+           foreach(var cap in lineCaps)
+               Console.WriteLine(cap.ItemSizeThickness);
+
+           //var isSuccess = new Program().CheckLoginAsync("am.bagedo@arabian-ceramics.com", "Amro*7894");
+
+           Console.WriteLine("Sales Users---");
+           SalesService.SalesServiceClient ssClient = new SalesService.SalesServiceClient();
+           var userData = ssClient.GetUserData();
+
+
+           foreach (var user in userData)
+           {
+               Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+           }
+
+           Console.WriteLine("");
+           Console.WriteLine("SC Users---");
+           SCSyncService.SCSyncServiceClient scClient = new SCSyncService.SCSyncServiceClient();
+           userData = scClient.GetUserData();
+           foreach (var user in userData)
+           {
+               Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+           }
+
+           Console.WriteLine("");
+           Console.WriteLine("FG Users---");
+           FGSyncService.FGSyncServiceClient fgClient = new FGSyncService.FGSyncServiceClient();
+           userData = fgClient.GetUserData();
+           foreach (var user in userData)
+           {
+               Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
+           }
+
+           /*DMCheckServiceClient dmClient = new DMCheckServiceClient();
+           //var locs=dmClient.GetWHLocations();
+           //int totRows = locs.Count();
+           //Console.WriteLine(totRows.ToString());
+
+           List<LocationHistory> allOne = new List<LocationHistory>();
+           LocationHistory one = null;
+
+           one = new LocationHistory() { PalletNum = "M085601", Location = "H3", IsManual = true, UserName = "fg", DeviceName = "S8-172.17.5.6" };
+           allOne.Add(one);
+           var result = dmClient.TransferPalletsToNewLocation(allOne.ToArray());
+           if (result.Count() > 0)
+               Console.WriteLine("Lines Transferred: " + result.Count().ToString());
+
+           dmClient.Close();
+           */
 
 
 

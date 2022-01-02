@@ -1711,6 +1711,16 @@ namespace SoapUtility.DataManagerServices {
         [System.ServiceModel.OperationContractAttribute(Action="DMDataToSaveService/DMDataToSaveService/UpdateTransferPallets", ReplyAction="DMDataToSaveService/DMDataToSaveService/UpdateTransferPalletsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.DataManagerServices.Fault), Action="DMDataToSaveService/DMDataToSaveService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.DataManagerServices.UpdateTransferPalletsResponse UpdateTransferPallets(SoapUtility.DataManagerServices.UpdateTransferPallets request);
+        
+        // CODEGEN: Generating message contract since message TransferPalletToLoc has headers
+        [System.ServiceModel.OperationContractAttribute(Action="DMDataToSaveService/DMDataToSaveService/TransferPalletToLoc", ReplyAction="DMDataToSaveService/DMDataToSaveService/TransferPalletToLocResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.DataManagerServices.Fault), Action="DMDataToSaveService/DMDataToSaveService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.DataManagerServices.TransferPalletToLocResponse TransferPalletToLoc(SoapUtility.DataManagerServices.TransferPalletToLoc request);
+        
+        // CODEGEN: Generating message contract since message PalletLocTransfer has headers
+        [System.ServiceModel.OperationContractAttribute(Action="DMDataToSaveService/DMDataToSaveService/PalletLocTransfer", ReplyAction="DMDataToSaveService/DMDataToSaveService/PalletLocTransferResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.DataManagerServices.Fault), Action="DMDataToSaveService/DMDataToSaveService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.DataManagerServices.PalletLocTransferResponse PalletLocTransfer(SoapUtility.DataManagerServices.PalletLocTransfer request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2521,6 +2531,90 @@ namespace SoapUtility.DataManagerServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TransferPalletToLoc", WrapperNamespace="DMDataToSaveService", IsWrapped=true)]
+    public partial class TransferPalletToLoc {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="DMDataToSaveService", Order=0)]
+        public SoapUtility.DataManagerServices.DMForTransfer[] lines;
+        
+        public TransferPalletToLoc() {
+        }
+        
+        public TransferPalletToLoc(SoapUtility.DataManagerServices.CallContext CallContext, SoapUtility.DataManagerServices.DMForTransfer[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TransferPalletToLocResponse", WrapperNamespace="DMDataToSaveService", IsWrapped=true)]
+    public partial class TransferPalletToLocResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.DataManagerServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="DMDataToSaveService", Order=0)]
+        public SoapUtility.DataManagerServices.DMForTransfer[] result;
+        
+        public TransferPalletToLocResponse() {
+        }
+        
+        public TransferPalletToLocResponse(SoapUtility.DataManagerServices.Infolog Infolog, SoapUtility.DataManagerServices.DMForTransfer[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletLocTransfer", WrapperNamespace="DMDataToSaveService", IsWrapped=true)]
+    public partial class PalletLocTransfer {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.DataManagerServices.CallContext CallContext;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="DMDataToSaveService", Order=0)]
+        public SoapUtility.DataManagerServices.DMForTransfer[] lines;
+        
+        public PalletLocTransfer() {
+        }
+        
+        public PalletLocTransfer(SoapUtility.DataManagerServices.CallContext CallContext, SoapUtility.DataManagerServices.DMForTransfer[] lines) {
+            this.CallContext = CallContext;
+            this.lines = lines;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PalletLocTransferResponse", WrapperNamespace="DMDataToSaveService", IsWrapped=true)]
+    public partial class PalletLocTransferResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.DataManagerServices.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="DMDataToSaveService", Order=0)]
+        public SoapUtility.DataManagerServices.DMForTransfer[] result;
+        
+        public PalletLocTransferResponse() {
+        }
+        
+        public PalletLocTransferResponse(SoapUtility.DataManagerServices.Infolog Infolog, SoapUtility.DataManagerServices.DMForTransfer[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DMDataToSaveServiceChannel : SoapUtility.DataManagerServices.DMDataToSaveService, System.ServiceModel.IClientChannel {
     }
@@ -2809,6 +2903,34 @@ namespace SoapUtility.DataManagerServices {
             inValue.CallContext = CallContext;
             inValue.lines = lines;
             SoapUtility.DataManagerServices.UpdateTransferPalletsResponse retVal = ((SoapUtility.DataManagerServices.DMDataToSaveService)(this)).UpdateTransferPallets(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.DataManagerServices.TransferPalletToLocResponse SoapUtility.DataManagerServices.DMDataToSaveService.TransferPalletToLoc(SoapUtility.DataManagerServices.TransferPalletToLoc request) {
+            return base.Channel.TransferPalletToLoc(request);
+        }
+        
+        public SoapUtility.DataManagerServices.Infolog TransferPalletToLoc(SoapUtility.DataManagerServices.CallContext CallContext, SoapUtility.DataManagerServices.DMForTransfer[] lines, out SoapUtility.DataManagerServices.DMForTransfer[] result) {
+            SoapUtility.DataManagerServices.TransferPalletToLoc inValue = new SoapUtility.DataManagerServices.TransferPalletToLoc();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SoapUtility.DataManagerServices.TransferPalletToLocResponse retVal = ((SoapUtility.DataManagerServices.DMDataToSaveService)(this)).TransferPalletToLoc(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.DataManagerServices.PalletLocTransferResponse SoapUtility.DataManagerServices.DMDataToSaveService.PalletLocTransfer(SoapUtility.DataManagerServices.PalletLocTransfer request) {
+            return base.Channel.PalletLocTransfer(request);
+        }
+        
+        public SoapUtility.DataManagerServices.Infolog PalletLocTransfer(SoapUtility.DataManagerServices.CallContext CallContext, SoapUtility.DataManagerServices.DMForTransfer[] lines, out SoapUtility.DataManagerServices.DMForTransfer[] result) {
+            SoapUtility.DataManagerServices.PalletLocTransfer inValue = new SoapUtility.DataManagerServices.PalletLocTransfer();
+            inValue.CallContext = CallContext;
+            inValue.lines = lines;
+            SoapUtility.DataManagerServices.PalletLocTransferResponse retVal = ((SoapUtility.DataManagerServices.DMDataToSaveService)(this)).PalletLocTransfer(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

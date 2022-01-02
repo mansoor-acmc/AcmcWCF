@@ -114,27 +114,27 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.wsdl" />
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup2.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup21.wsdl" />
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.wsdl" />
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup2.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup3.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup4.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup5.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup6.xsd">
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup76.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.DMExportContract.datasource">
@@ -158,27 +158,27 @@
     <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.WmsLocationContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EAMServices\EAMServices.wsdl" />
-    <None Include="Service References\EAMServices\EAMServices.xsd">
+    <None Include="Service References\EAMServices\EAMServices2.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices21.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices1.wsdl" />
-    <None Include="Service References\EAMServices\EAMServices1.xsd">
+    <None Include="Service References\EAMServices\EAMServices71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices2.xsd">
+    <None Include="Service References\EAMServices\EAMServices72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices3.xsd">
+    <None Include="Service References\EAMServices\EAMServices73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices4.xsd">
+    <None Include="Service References\EAMServices\EAMServices74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices5.xsd">
+    <None Include="Service References\EAMServices\EAMServices75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices6.xsd">
+    <None Include="Service References\EAMServices\EAMServices76.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EAMServices\SoapUtility.EAMServices.EquipContract.datasource">
@@ -217,27 +217,27 @@
     <None Include="Service References\EAMServices\SoapUtility.EAMServices.WOTypeContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup.wsdl" />
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup2.wsdl" />
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup21.wsdl" />
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup1.wsdl" />
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup1.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup2.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup3.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup4.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup5.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup6.xsd">
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup76.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.Infolog.datasource">
@@ -271,63 +271,70 @@
     <None Include="Service References\MiscServiceGroup\MiscServiceGroup.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.wsdl" />
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup3.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup31.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup32.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup2.wsdl" />
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup2.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup81.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup3.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup82.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup4.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup83.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup5.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup84.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup6.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup85.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup7.xsd">
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup87.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.AcmcSalesLineContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.EamWorkitemsContract.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.Infolog.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.xsd">
+    <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.ModulaItemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.WorkitemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup31.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup32.wsdl" />
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup81.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.wsdl" />
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup2.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup82.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup83.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup4.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup84.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup5.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup85.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup6.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup86.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup7.xsd">
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup87.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.CategoryTypeLookup.datasource">
@@ -600,27 +607,27 @@
     <None Include="Service References\SalesServicesGroup\SoapUtility.SalesServicesGroup.UpdateProdRequestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup.wsdl" />
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup2.wsdl" />
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup21.wsdl" />
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup1.wsdl" />
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup1.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup2.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup3.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup4.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup5.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup6.xsd">
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup76.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SOPickServiceGroup\SoapUtility.SOPickServiceGroup.CustomerDeliveryContract.datasource">
@@ -662,27 +669,27 @@
     <None Include="Service References\UserMgtServices\SoapUtility.UserMgtServices.UserInfoContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices2.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices21.wsdl" />
+    <None Include="Service References\UserMgtServices\UserMgtServices7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices1.wsdl" />
-    <None Include="Service References\UserMgtServices\UserMgtServices1.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices2.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices3.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices4.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices5.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserMgtServices\UserMgtServices6.xsd">
+    <None Include="Service References\UserMgtServices\UserMgtServices76.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -696,9 +703,6 @@
     <WCFMetadataStorage Include="Service References\UserMgtServices\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SalesServicesGroup\SalesServicesGroup.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\SalesServicesGroup\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -709,9 +713,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserMgtServices\UserMgtServices.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\UserMgtServices\configuration91.svcinfo" />
@@ -738,9 +739,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\EAMServices\EAMServices.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\EAMServices\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -751,9 +749,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\InventCountingService\InventCountingServiceGroup.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\InventCountingService\configuration91.svcinfo" />
@@ -768,9 +763,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DataManagerServices\DataManagerServiceGroup.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\DataManagerServices\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -783,12 +775,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\MiscServiceGroup\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -799,6 +785,27 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\EAMServices1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventCountingService\InventCountingServiceGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOPickServiceGroup\EVSSOPickServiceGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMgtServices\UserMgtServices1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

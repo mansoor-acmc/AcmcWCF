@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="DMDataToSaveService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="DMDataToSaveService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="DMDataToSaveService/Imports">
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd2" namespace="DMDataToSaveService" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd3" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/DataManagerServiceGroup?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelPalletReceive">
+    <wsdl:part name="parameters" element="tns:CancelPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="CancelPalletReceive_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CancelPalletReceiveResponse">
+    <wsdl:part name="parameters" element="tns:CancelPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelPalletReceiveResponse_Headers">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q2:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_CancelPalletReceive_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q3:Fault" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletAndLocationReceive">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletAndLocationReceive" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletAndLocationReceive_Headers">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q4:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletAndLocationReceiveResponse">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletAndLocationReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletAndLocationReceiveResponse_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q5:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_ConfirmPalletAndLocationReceive_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q6:Fault" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletReceive">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletReceive_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletReceiveResponse">
+    <wsdl:part name="parameters" element="tns:ConfirmPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPalletReceiveResponse_Headers">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q8:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_ConfirmPalletReceive_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q9:Fault" />
+  </wsdl:message>
+  <wsdl:message name="CreateDowntimeForMarpak">
+    <wsdl:part name="parameters" element="tns:CreateDowntimeForMarpak" />
+  </wsdl:message>
+  <wsdl:message name="CreateDowntimeForMarpak_Headers">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q10:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreateDowntimeForMarpakResponse">
+    <wsdl:part name="parameters" element="tns:CreateDowntimeForMarpakResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDowntimeForMarpakResponse_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q11:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_CreateDowntimeForMarpak_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q12:Fault" />
+  </wsdl:message>
+  <wsdl:message name="DMClearPrintAgain">
+    <wsdl:part name="parameters" element="tns:DMClearPrintAgain" />
+  </wsdl:message>
+  <wsdl:message name="DMClearPrintAgain_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="DMClearPrintAgainResponse">
+    <wsdl:part name="parameters" element="tns:DMClearPrintAgainResponse" />
+  </wsdl:message>
+  <wsdl:message name="DMClearPrintAgainResponse_Headers">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q14:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_DMClearPrintAgain_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q15:Fault" />
+  </wsdl:message>
+  <wsdl:message name="DMSetPrintAgain">
+    <wsdl:part name="parameters" element="tns:DMSetPrintAgain" />
+  </wsdl:message>
+  <wsdl:message name="DMSetPrintAgain_Headers">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q16:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="DMSetPrintAgainResponse">
+    <wsdl:part name="parameters" element="tns:DMSetPrintAgainResponse" />
+  </wsdl:message>
+  <wsdl:message name="DMSetPrintAgainResponse_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q17:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_DMSetPrintAgain_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q18:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCodes">
+    <wsdl:part name="parameters" element="tns:GetItemCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCodes_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCodesResponse">
+    <wsdl:part name="parameters" element="tns:GetItemCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCodesResponse_Headers">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q20:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_GetItemCodes_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q21:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovementNumber">
+    <wsdl:part name="parameters" element="tns:GetMaxMovementNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovementNumber_Headers">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q22:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovementNumberResponse">
+    <wsdl:part name="parameters" element="tns:GetMaxMovementNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovementNumberResponse_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q23:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_GetMaxMovementNumber_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q24:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfo">
+    <wsdl:part name="parameters" element="tns:GetPalletInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfo_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoResponse">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoResponse_Headers">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q26:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_GetPalletInfo_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q27:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoByRecordId">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoByRecordId" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoByRecordId_Headers">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q28:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoByRecordIdResponse">
+    <wsdl:part name="parameters" element="tns:GetPalletInfoByRecordIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPalletInfoByRecordIdResponse_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q29:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_GetPalletInfoByRecordId_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q30:Fault" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocations">
+    <wsdl:part name="parameters" element="tns:GetWHLocations" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocations_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocationsResponse">
+    <wsdl:part name="parameters" element="tns:GetWHLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWHLocationsResponse_Headers">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q32:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_GetWHLocations_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q33:Fault" />
+  </wsdl:message>
+  <wsdl:message name="ImportDataInDynamics">
+    <wsdl:part name="parameters" element="tns:ImportDataInDynamics" />
+  </wsdl:message>
+  <wsdl:message name="ImportDataInDynamics_Headers">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q34:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="ImportDataInDynamicsResponse">
+    <wsdl:part name="parameters" element="tns:ImportDataInDynamicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportDataInDynamicsResponse_Headers">
+    <wsdl:part xmlns:q35="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q35:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_ImportDataInDynamics_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q36:Fault" />
+  </wsdl:message>
+  <wsdl:message name="ItemGroupPallets">
+    <wsdl:part name="parameters" element="tns:ItemGroupPallets" />
+  </wsdl:message>
+  <wsdl:message name="ItemGroupPallets_Headers">
+    <wsdl:part xmlns:q37="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q37:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="ItemGroupPalletsResponse">
+    <wsdl:part name="parameters" element="tns:ItemGroupPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ItemGroupPalletsResponse_Headers">
+    <wsdl:part xmlns:q38="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q38:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_ItemGroupPallets_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q39:Fault" />
+  </wsdl:message>
+  <wsdl:message name="saveItemNumber">
+    <wsdl:part name="parameters" element="tns:saveItemNumber" />
+  </wsdl:message>
+  <wsdl:message name="saveItemNumber_Headers">
+    <wsdl:part xmlns:q40="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q40:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="saveItemNumberResponse">
+    <wsdl:part name="parameters" element="tns:saveItemNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveItemNumberResponse_Headers">
+    <wsdl:part xmlns:q41="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q41:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_saveItemNumber_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q42:Fault" />
+  </wsdl:message>
+  <wsdl:message name="SummaryNormalPallets">
+    <wsdl:part name="parameters" element="tns:SummaryNormalPallets" />
+  </wsdl:message>
+  <wsdl:message name="SummaryNormalPallets_Headers">
+    <wsdl:part xmlns:q43="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q43:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="SummaryNormalPalletsResponse">
+    <wsdl:part name="parameters" element="tns:SummaryNormalPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SummaryNormalPalletsResponse_Headers">
+    <wsdl:part xmlns:q44="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q44:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_SummaryNormalPallets_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q45:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAndConfirmPalletReceive">
+    <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceive" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAndConfirmPalletReceive_Headers">
+    <wsdl:part xmlns:q46="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q46:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAndConfirmPalletReceiveResponse">
+    <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAndConfirmPalletReceiveResponse_Headers">
+    <wsdl:part xmlns:q47="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q47:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_UpdateAndConfirmPalletReceive_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q48:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfflinePallets">
+    <wsdl:part name="parameters" element="tns:UpdateOfflinePallets" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfflinePallets_Headers">
+    <wsdl:part xmlns:q49="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q49:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfflinePalletsResponse">
+    <wsdl:part name="parameters" element="tns:UpdateOfflinePalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfflinePalletsResponse_Headers">
+    <wsdl:part xmlns:q50="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q50:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_UpdateOfflinePallets_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q51:Fault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferPallets">
+    <wsdl:part name="parameters" element="tns:UpdateTransferPallets" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferPallets_Headers">
+    <wsdl:part xmlns:q52="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q52:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferPalletsResponse">
+    <wsdl:part name="parameters" element="tns:UpdateTransferPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferPalletsResponse_Headers">
+    <wsdl:part xmlns:q53="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q53:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_UpdateTransferPallets_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q54:Fault" />
+  </wsdl:message>
+  <wsdl:message name="TransferPalletToLoc">
+    <wsdl:part name="parameters" element="tns:TransferPalletToLoc" />
+  </wsdl:message>
+  <wsdl:message name="TransferPalletToLoc_Headers">
+    <wsdl:part xmlns:q55="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q55:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="TransferPalletToLocResponse">
+    <wsdl:part name="parameters" element="tns:TransferPalletToLocResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferPalletToLocResponse_Headers">
+    <wsdl:part xmlns:q56="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q56:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_TransferPalletToLoc_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q57:Fault" />
+  </wsdl:message>
+  <wsdl:message name="PalletLocTransfer">
+    <wsdl:part name="parameters" element="tns:PalletLocTransfer" />
+  </wsdl:message>
+  <wsdl:message name="PalletLocTransfer_Headers">
+    <wsdl:part xmlns:q58="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q58:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="PalletLocTransferResponse">
+    <wsdl:part name="parameters" element="tns:PalletLocTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="PalletLocTransferResponse_Headers">
+    <wsdl:part xmlns:q59="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q59:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="DMDataToSaveService_PalletLocTransfer_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q60:Fault" />
+  </wsdl:message>
+  <wsdl:portType name="DMDataToSaveService">
+    <wsdl:operation name="CancelPalletReceive">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/CancelPalletReceive" name="CancelPalletReceive" message="tns:CancelPalletReceive" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/CancelPalletReceiveResponse" name="CancelPalletReceiveResponse" message="tns:CancelPalletReceiveResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_CancelPalletReceive_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletAndLocationReceive">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/ConfirmPalletAndLocationReceive" name="ConfirmPalletAndLocationReceive" message="tns:ConfirmPalletAndLocationReceive" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/ConfirmPalletAndLocationReceiveResponse" name="ConfirmPalletAndLocationReceiveResponse" message="tns:ConfirmPalletAndLocationReceiveResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_ConfirmPalletAndLocationReceive_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPalletReceive">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/ConfirmPalletReceive" name="ConfirmPalletReceive" message="tns:ConfirmPalletReceive" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/ConfirmPalletReceiveResponse" name="ConfirmPalletReceiveResponse" message="tns:ConfirmPalletReceiveResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_ConfirmPalletReceive_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDowntimeForMarpak">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/CreateDowntimeForMarpak" name="CreateDowntimeForMarpak" message="tns:CreateDowntimeForMarpak" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/CreateDowntimeForMarpakResponse" name="CreateDowntimeForMarpakResponse" message="tns:CreateDowntimeForMarpakResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_CreateDowntimeForMarpak_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DMClearPrintAgain">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/DMClearPrintAgain" name="DMClearPrintAgain" message="tns:DMClearPrintAgain" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/DMClearPrintAgainResponse" name="DMClearPrintAgainResponse" message="tns:DMClearPrintAgainResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_DMClearPrintAgain_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DMSetPrintAgain">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/DMSetPrintAgain" name="DMSetPrintAgain" message="tns:DMSetPrintAgain" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/DMSetPrintAgainResponse" name="DMSetPrintAgainResponse" message="tns:DMSetPrintAgainResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_DMSetPrintAgain_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodes">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/GetItemCodes" name="GetItemCodes" message="tns:GetItemCodes" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/GetItemCodesResponse" name="GetItemCodesResponse" message="tns:GetItemCodesResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_GetItemCodes_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMovementNumber">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/GetMaxMovementNumber" name="GetMaxMovementNumber" message="tns:GetMaxMovementNumber" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/GetMaxMovementNumberResponse" name="GetMaxMovementNumberResponse" message="tns:GetMaxMovementNumberResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_GetMaxMovementNumber_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfo">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/GetPalletInfo" name="GetPalletInfo" message="tns:GetPalletInfo" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/GetPalletInfoResponse" name="GetPalletInfoResponse" message="tns:GetPalletInfoResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_GetPalletInfo_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalletInfoByRecordId">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/GetPalletInfoByRecordId" name="GetPalletInfoByRecordId" message="tns:GetPalletInfoByRecordId" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/GetPalletInfoByRecordIdResponse" name="GetPalletInfoByRecordIdResponse" message="tns:GetPalletInfoByRecordIdResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_GetPalletInfoByRecordId_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHLocations">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/GetWHLocations" name="GetWHLocations" message="tns:GetWHLocations" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/GetWHLocationsResponse" name="GetWHLocationsResponse" message="tns:GetWHLocationsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_GetWHLocations_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportDataInDynamics">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/ImportDataInDynamics" name="ImportDataInDynamics" message="tns:ImportDataInDynamics" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/ImportDataInDynamicsResponse" name="ImportDataInDynamicsResponse" message="tns:ImportDataInDynamicsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_ImportDataInDynamics_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemGroupPallets">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/ItemGroupPallets" name="ItemGroupPallets" message="tns:ItemGroupPallets" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/ItemGroupPalletsResponse" name="ItemGroupPalletsResponse" message="tns:ItemGroupPalletsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_ItemGroupPallets_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveItemNumber">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/saveItemNumber" name="saveItemNumber" message="tns:saveItemNumber" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/saveItemNumberResponse" name="saveItemNumberResponse" message="tns:saveItemNumberResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_saveItemNumber_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SummaryNormalPallets">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/SummaryNormalPallets" name="SummaryNormalPallets" message="tns:SummaryNormalPallets" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/SummaryNormalPalletsResponse" name="SummaryNormalPalletsResponse" message="tns:SummaryNormalPalletsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_SummaryNormalPallets_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAndConfirmPalletReceive">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateAndConfirmPalletReceive" name="UpdateAndConfirmPalletReceive" message="tns:UpdateAndConfirmPalletReceive" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateAndConfirmPalletReceiveResponse" name="UpdateAndConfirmPalletReceiveResponse" message="tns:UpdateAndConfirmPalletReceiveResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_UpdateAndConfirmPalletReceive_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfflinePallets">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateOfflinePallets" name="UpdateOfflinePallets" message="tns:UpdateOfflinePallets" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateOfflinePalletsResponse" name="UpdateOfflinePalletsResponse" message="tns:UpdateOfflinePalletsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_UpdateOfflinePallets_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferPallets">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateTransferPallets" name="UpdateTransferPallets" message="tns:UpdateTransferPallets" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/UpdateTransferPalletsResponse" name="UpdateTransferPalletsResponse" message="tns:UpdateTransferPalletsResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_UpdateTransferPallets_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferPalletToLoc">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/TransferPalletToLoc" name="TransferPalletToLoc" message="tns:TransferPalletToLoc" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/TransferPalletToLocResponse" name="TransferPalletToLocResponse" message="tns:TransferPalletToLocResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_TransferPalletToLoc_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletLocTransfer">
+      <wsdl:input wsam:Action="DMDataToSaveService/DMDataToSaveService/PalletLocTransfer" name="PalletLocTransfer" message="tns:PalletLocTransfer" />
+      <wsdl:output wsam:Action="DMDataToSaveService/DMDataToSaveService/PalletLocTransferResponse" name="PalletLocTransferResponse" message="tns:PalletLocTransferResponse" />
+      <wsdl:fault wsam:Action="DMDataToSaveService/DMDataToSaveService/Fault" name="SoapServiceFaultFault" message="tns:DMDataToSaveService_PalletLocTransfer_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

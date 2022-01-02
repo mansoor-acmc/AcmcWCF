@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/EAMService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:complexType name="ArrayOfEamWorkitemsContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EamWorkitemsContract" nillable="true" type="tns:EamWorkitemsContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEamWorkitemsContract" nillable="true" type="tns:ArrayOfEamWorkitemsContract" />
+  <xs:complexType name="EamWorkitemsContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_CostCenter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_HostRIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="parmSto_Item" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Operator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EamWorkitemsContract" nillable="true" type="tns:EamWorkitemsContract" />
+  <xs:complexType name="InventByGrLocContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnHand" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
+  <xs:complexType name="UnderStockItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EngagedInDeposit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EngagedInPickup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemStock" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnderStockValue" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnderStockItemContract" nillable="true" type="tns:UnderStockItemContract" />
+  <xs:complexType name="AcmcSalesLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExclusiveHalfPallet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventTransID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsHalfPallet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineRecId" type="xs:long" />
+          <xs:element minOccurs="0" name="Locations" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtyBox" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtyPallet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQM" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQMRemaining" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesQtySQMReserved" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateStatus" type="tns:PalletStatus" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Warehouse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="wLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AcmcSalesLineContract" nillable="true" type="tns:AcmcSalesLineContract" />
+  <xs:complexType name="ArrayOfInventByGrLocContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventByGrLocContract" nillable="true" type="tns:InventByGrLocContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventByGrLocContract" nillable="true" type="tns:ArrayOfInventByGrLocContract" />
+  <xs:simpleType name="PalletStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Search" />
+      <xs:enumeration value="Remove" />
+      <xs:enumeration value="Reserve" />
+      <xs:enumeration value="UnReserve" />
+      <xs:enumeration value="PickingList" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PalletStatus" nillable="true" type="tns:PalletStatus" />
+</xs:schema>

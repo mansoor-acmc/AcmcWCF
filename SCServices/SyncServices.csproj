@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="DeviceOps.svc" />
     <Content Include="DMCheckService.svc" />
+    <Content Include="EAMService.svc" />
     <Content Include="FGSyncService.svc" />
     <Content Include="ModulaMovement.svc" />
     <Content Include="ModulaPR.svc" />
@@ -137,11 +138,15 @@
       <DependentUpon>DMCheckService.svc</DependentUpon>
     </Compile>
     <Compile Include="DuplicatePallet.cs" />
+    <Compile Include="EAMService.svc.cs">
+      <DependentUpon>EAMService.svc</DependentUpon>
+    </Compile>
     <Compile Include="FGSyncService.svc.cs">
       <DependentUpon>FGSyncService.svc</DependentUpon>
     </Compile>
     <Compile Include="IDeviceOps.cs" />
     <Compile Include="IDMCheckService.cs" />
+    <Compile Include="IEAMService.cs" />
     <Compile Include="IFGSyncService.cs" />
     <Compile Include="IModulaMovement.cs" />
     <Compile Include="IModulaPR.cs" />

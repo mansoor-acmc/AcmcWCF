@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="WorkItemsService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EAMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_WorkItemsService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="WorkItemsService" location="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_WorkItemsService" type="i0:WorkItemsService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_WorkItemsService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOrUpdate">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/CreateOrUpdate" style="document" />
+      <wsdl:input name="CreateOrUpdate">
+        <soap:header message="i0:CreateOrUpdate_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CreateOrUpdateResponse">
+        <soap:header message="i0:CreateOrUpdateResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/DeleteWorkItem" style="document" />
+      <wsdl:input name="DeleteWorkItem">
+        <soap:header message="i0:DeleteWorkItem_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteWorkItemResponse">
+        <soap:header message="i0:DeleteWorkItemResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItemByRecId">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/DeleteWorkItemByRecId" style="document" />
+      <wsdl:input name="DeleteWorkItemByRecId">
+        <soap:header message="i0:DeleteWorkItemByRecId_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteWorkItemByRecIdResponse">
+        <soap:header message="i0:DeleteWorkItemByRecIdResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEquipments">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetAllEquipments" style="document" />
+      <wsdl:input name="GetAllEquipments">
+        <soap:header message="i0:GetAllEquipments_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllEquipmentsResponse">
+        <soap:header message="i0:GetAllEquipmentsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipLocations">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipLocations" style="document" />
+      <wsdl:input name="GetEquipLocations">
+        <soap:header message="i0:GetEquipLocations_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEquipLocationsResponse">
+        <soap:header message="i0:GetEquipLocationsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipment">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipment" style="document" />
+      <wsdl:input name="GetEquipment">
+        <soap:header message="i0:GetEquipment_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEquipmentResponse">
+        <soap:header message="i0:GetEquipmentResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentsByCostCenter">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetEquipmentsByCostCenter" style="document" />
+      <wsdl:input name="GetEquipmentsByCostCenter">
+        <soap:header message="i0:GetEquipmentsByCostCenter_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEquipmentsByCostCenterResponse">
+        <soap:header message="i0:GetEquipmentsByCostCenterResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFailureCodes">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetFailureCodes" style="document" />
+      <wsdl:input name="GetFailureCodes">
+        <soap:header message="i0:GetFailureCodes_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFailureCodesResponse">
+        <soap:header message="i0:GetFailureCodesResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInlineWorkItems">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetInlineWorkItems" style="document" />
+      <wsdl:input name="GetInlineWorkItems">
+        <soap:header message="i0:GetInlineWorkItems_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetInlineWorkItemsResponse">
+        <soap:header message="i0:GetInlineWorkItemsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestWorkorder">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetLatestWorkorder" style="document" />
+      <wsdl:input name="GetLatestWorkorder">
+        <soap:header message="i0:GetLatestWorkorder_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLatestWorkorderResponse">
+        <soap:header message="i0:GetLatestWorkorderResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/getMaxId" style="document" />
+      <wsdl:input name="getMaxId">
+        <soap:header message="i0:getMaxId_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMaxIdResponse">
+        <soap:header message="i0:getMaxIdResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnhand">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetOnhand" style="document" />
+      <wsdl:input name="GetOnhand">
+        <soap:header message="i0:GetOnhand_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetOnhandResponse">
+        <soap:header message="i0:GetOnhandResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherWorkItems">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetOtherWorkItems" style="document" />
+      <wsdl:input name="GetOtherWorkItems">
+        <soap:header message="i0:GetOtherWorkItems_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetOtherWorkItemsResponse">
+        <soap:header message="i0:GetOtherWorkItemsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepaireCodes">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetRepaireCodes" style="document" />
+      <wsdl:input name="GetRepaireCodes">
+        <soap:header message="i0:GetRepaireCodes_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRepaireCodesResponse">
+        <soap:header message="i0:GetRepaireCodesResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOPoolCode">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWOPoolCode" style="document" />
+      <wsdl:input name="GetWOPoolCode">
+        <soap:header message="i0:GetWOPoolCode_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWOPoolCodeResponse">
+        <soap:header message="i0:GetWOPoolCodeResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkordersByDates">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkordersByDates" style="document" />
+      <wsdl:input name="GetWorkordersByDates">
+        <soap:header message="i0:GetWorkordersByDates_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWorkordersByDatesResponse">
+        <soap:header message="i0:GetWorkordersByDatesResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkordersByEquipment">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkordersByEquipment" style="document" />
+      <wsdl:input name="GetWorkordersByEquipment">
+        <soap:header message="i0:GetWorkordersByEquipment_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWorkordersByEquipmentResponse">
+        <soap:header message="i0:GetWorkordersByEquipmentResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderStatusLookup">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkOrderStatusLookup" style="document" />
+      <wsdl:input name="GetWorkOrderStatusLookup">
+        <soap:header message="i0:GetWorkOrderStatusLookup_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWorkOrderStatusLookupResponse">
+        <soap:header message="i0:GetWorkOrderStatusLookupResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrderTypes">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/GetWorkOrderTypes" style="document" />
+      <wsdl:input name="GetWorkOrderTypes">
+        <soap:header message="i0:GetWorkOrderTypes_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWorkOrderTypesResponse">
+        <soap:header message="i0:GetWorkOrderTypesResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MainCostByProdLine">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/MainCostByProdLine" style="document" />
+      <wsdl:input name="MainCostByProdLine">
+        <soap:header message="i0:MainCostByProdLine_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MainCostByProdLineResponse">
+        <soap:header message="i0:MainCostByProdLineResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PostedWorkItems">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/PostedWorkItems" style="document" />
+      <wsdl:input name="PostedWorkItems">
+        <soap:header message="i0:PostedWorkItems_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PostedWorkItemsResponse">
+        <soap:header message="i0:PostedWorkItemsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEquipments">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/SearchEquipments" style="document" />
+      <wsdl:input name="SearchEquipments">
+        <soap:header message="i0:SearchEquipments_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SearchEquipmentsResponse">
+        <soap:header message="i0:SearchEquipmentsResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetWOStatus">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/SetWOStatus" style="document" />
+      <wsdl:input name="SetWOStatus">
+        <soap:header message="i0:SetWOStatus_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetWOStatusResponse">
+        <soap:header message="i0:SetWOStatusResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkOrder">
+      <soap:operation soapAction="WorkItemsService/WorkItemsService/SaveWorkOrder" style="document" />
+      <wsdl:input name="SaveWorkOrder">
+        <soap:header message="i0:SaveWorkOrder_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveWorkOrderResponse">
+        <soap:header message="i0:SaveWorkOrderResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EAMServices">
+    <wsdl:port name="BasicHttpBinding_WorkItemsService" binding="tns:BasicHttpBinding_WorkItemsService">
+      <soap:address location="https://acmc.operations.dynamics.com/soap/services/EAMServices" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

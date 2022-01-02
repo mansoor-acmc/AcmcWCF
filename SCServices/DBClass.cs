@@ -42,11 +42,11 @@ namespace SyncServices
                 connString = ConfigurationManager.ConnectionStrings["ConnImpExpDB"].ConnectionString;
                 conn = new SqlConnection(connString);
             }
-            else if (msgDB == DbName.DynamicsAX)
-            {
-                connString = ConfigurationManager.ConnectionStrings["dynamicsConString"].ConnectionString;
-                conn = new SqlConnection(connString);
-            }
+            //else if (msgDB == DbName.DynamicsAX)
+            //{
+            //    connString = ConfigurationManager.ConnectionStrings["dynamicsConString"].ConnectionString;
+            //    conn = new SqlConnection(connString);
+            //}
         }
 
         public enum DbName
@@ -55,7 +55,7 @@ namespace SyncServices
             Modula,
             Counting,
             ImportExportDB,
-            DynamicsAX
+            //DynamicsAX
         }
 
         public long GetLastSyncId(bool isFgData)

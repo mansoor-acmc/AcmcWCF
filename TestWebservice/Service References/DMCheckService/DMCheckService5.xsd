@@ -1,295 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" />
-  <xs:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
-  <xs:element name="GetPing">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPingResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetPingResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPalletInfo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="palletNum" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPalletInfoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="GetPalletInfoResult" nillable="true" type="q1:DMExportContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPalletInfoByRecordId">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="recordId" type="xs:long" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPalletInfoByRecordIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="GetPalletInfoByRecordIdResult" nillable="true" type="q2:DMExportContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ConfirmPalletReceive">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="palletNum" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="recordId" type="xs:long" />
-        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="deviceUser" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="isFromSL" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ConfirmPalletReceiveResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ConfirmPalletReceiveResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ConfirmPalletAndLocationReceive">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="palletNum" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="locationId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="recordId" type="xs:long" />
-        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="deviceUser" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="isFromSL" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ConfirmPalletAndLocationReceiveResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ConfirmPalletAndLocationReceiveResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CancelPalletReceive">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="palletNum" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="recordId" type="xs:long" />
-        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="deviceUser" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CancelPalletReceiveResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CancelPalletReceiveResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateAndConfirmPalletReceive">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="pallet" nillable="true" type="q3:DMExportContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateAndConfirmPalletReceiveResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateAndConfirmPalletReceiveResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="PrintAgainPallet">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="palletNum" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="recordId" type="xs:long" />
-        <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="deviceUser" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="PrintAgainPalletResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="PrintAgainPalletResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DMClearPrintAgain">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DMClearPrintAgainResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="DMClearPrintAgainResult" nillable="true" type="q4:ArrayOfDMExportMiniContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateOfflinePallets">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="lines" nillable="true" type="q5:ArrayOfDMExportOfflineContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateOfflinePalletsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="UpdateOfflinePalletsResult" nillable="true" type="q6:ArrayOfDMExportContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TransferPalletsToNewLocation">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfLocationHistory" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TransferPalletsToNewLocationResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="TransferPalletsToNewLocationResult" nillable="true" type="q8:ArrayOfLocationHistory" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SummaryPallets">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SummaryPalletsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="SummaryPalletsResult" nillable="true" type="q9:ArrayOfDMSummaryContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ItemGroupPallets">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="grade" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="shade" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="caliber" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ItemGroupPalletsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="ItemGroupPalletsResult" nillable="true" type="q10:ArrayOfDMExportContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateDowntimeForMarpak">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="whichMarpak" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateDowntimeForMarpakResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CreateDowntimeForMarpakResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetProductionByLinesForChart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetProductionByLinesForChartResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetProductionByLinesForChartResult" nillable="true" type="q11:ArrayOfItemForChart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetProductionByItemsForChart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetProductionByItemsForChartResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetProductionByItemsForChartResult" nillable="true" type="q12:ArrayOfItemForChart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetWHLocations">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetWHLocationsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" minOccurs="0" name="GetWHLocationsResult" nillable="true" type="q13:ArrayOfWmsLocationContract" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDuplicatePallets">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDuplicatePalletsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetDuplicatePalletsResult" nillable="true" type="q14:ArrayOfDuplicatePallet" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ClearDuplicatePallet">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="pallet" nillable="true" type="q15:DuplicatePallet" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ClearDuplicatePalletResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ClearDuplicatePalletResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ClearDuplicatePalletsAll">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="pallets" nillable="true" type="q16:ArrayOfDuplicatePallet" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ClearDuplicatePalletsAllResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ClearDuplicatePalletsAllResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:complexType name="DMExportContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BarCodePallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BoxesOnPallet" type="xs:int" />
+          <xs:element minOccurs="0" name="Caliber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CodeLabel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DMShortDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DMShortDesc2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviceUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FGApprovalTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsApprovedByFG" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsApprovedBySL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsCancelled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LGVOrForklift" type="tns:PalletTransportBy" />
+          <xs:element minOccurs="0" name="LineOfOrigin" type="xs:int" />
+          <xs:element minOccurs="0" name="MarpakMovNum" type="xs:long" />
+          <xs:element minOccurs="0" name="MovementNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="PalletNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PiecesForBox" type="xs:int" />
+          <xs:element minOccurs="0" name="RecordId" type="xs:long" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shift" type="xs:int" />
+          <xs:element minOccurs="0" name="ShiftDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurfaceMQBox" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TotalPiecesOnPallet" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalSurface" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WhichMarpak" type="xs:int" />
+          <xs:element minOccurs="0" name="whLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportContract" nillable="true" type="tns:DMExportContract" />
+  <xs:complexType name="ItemCodeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BoxPerPallet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Desc1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Desc2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqmPerBox" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TilesPerBox" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ItemCodeContract" nillable="true" type="tns:ItemCodeContract" />
+  <xs:complexType name="WmsLocationContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+  <xs:complexType name="DMExportItemNumContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateSave" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HasProcessed" type="xs:int" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportItemNumContract" nillable="true" type="tns:DMExportItemNumContract" />
+  <xs:complexType name="DMSummaryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Caliber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumOfPallets" type="xs:int" />
+          <xs:element minOccurs="0" name="NumOfPalletsApproved" type="xs:int" />
+          <xs:element minOccurs="0" name="NumOfPalletsPosted" type="xs:int" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalQty" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />
+  <xs:complexType name="DMExportOfflineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BoxesOnPallet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Caliber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviceUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsApprovedByFG" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsApprovedBySL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsOfflineMode" type="q6:NoYes" />
+          <xs:element minOccurs="0" name="PalletNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="whLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportOfflineContract" nillable="true" type="tns:DMExportOfflineContract" />
+  <xs:complexType name="DMForTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTransferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PalletNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="whLocationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMForTransfer" nillable="true" type="tns:DMForTransfer" />
+  <xs:complexType name="DMExportMiniContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BarCodePallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DMShortDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DMShortDesc2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PalletNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecordId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
+  <xs:simpleType name="PalletTransportBy">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LGV" />
+      <xs:enumeration value="Forklift" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PalletTransportBy" nillable="true" type="tns:PalletTransportBy" />
+  <xs:complexType name="ArrayOfDMExportMiniContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportMiniContract" nillable="true" type="tns:DMExportMiniContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportMiniContract" nillable="true" type="tns:ArrayOfDMExportMiniContract" />
+  <xs:complexType name="ArrayOfDMExportOfflineContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportOfflineContract" nillable="true" type="tns:DMExportOfflineContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportOfflineContract" nillable="true" type="tns:ArrayOfDMExportOfflineContract" />
+  <xs:complexType name="ArrayOfDMExportContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMExportContract" nillable="true" type="tns:DMExportContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMExportContract" nillable="true" type="tns:ArrayOfDMExportContract" />
+  <xs:complexType name="ArrayOfDMSummaryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMSummaryContract" nillable="true" type="tns:DMSummaryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMSummaryContract" nillable="true" type="tns:ArrayOfDMSummaryContract" />
+  <xs:complexType name="ArrayOfWmsLocationContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WmsLocationContract" nillable="true" type="tns:WmsLocationContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWmsLocationContract" nillable="true" type="tns:ArrayOfWmsLocationContract" />
+  <xs:complexType name="ArrayOfItemCodeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemCodeContract" nillable="true" type="tns:ItemCodeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemCodeContract" nillable="true" type="tns:ArrayOfItemCodeContract" />
 </xs:schema>

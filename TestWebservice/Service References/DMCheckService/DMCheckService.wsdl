@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DMCheckService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DMCheckService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices.DataManagerServices" />
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
-      <xsd:import schemaLocation="http://172.17.0.50/HandHeldServices/DMCheckService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+      <xsd:import schemaLocation="http://localhost:58380/DMCheckService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IDMCheckService_GetPing_InputMessage">
@@ -51,6 +51,12 @@
   </wsdl:message>
   <wsdl:message name="IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdatePalletProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePalletProperties" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_UpdatePalletProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePalletPropertiesResponse" />
   </wsdl:message>
   <wsdl:message name="IDMCheckService_PrintAgainPallet_InputMessage">
     <wsdl:part name="parameters" element="tns:PrintAgainPallet" />
@@ -130,6 +136,12 @@
   <wsdl:message name="IDMCheckService_ClearDuplicatePalletsAll_OutputMessage">
     <wsdl:part name="parameters" element="tns:ClearDuplicatePalletsAllResponse" />
   </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetItemCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemCodes" />
+  </wsdl:message>
+  <wsdl:message name="IDMCheckService_GetItemCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemCodesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDMCheckService">
     <wsdl:operation name="GetPing">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetPing" message="tns:IDMCheckService_GetPing_InputMessage" />
@@ -158,6 +170,10 @@
     <wsdl:operation name="UpdateAndConfirmPalletReceive">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceiveResponse" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePalletProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdatePalletProperties" message="tns:IDMCheckService_UpdatePalletProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdatePalletPropertiesResponse" message="tns:IDMCheckService_UpdatePalletProperties_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="PrintAgainPallet">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/PrintAgainPallet" message="tns:IDMCheckService_PrintAgainPallet_InputMessage" />
@@ -210,6 +226,10 @@
     <wsdl:operation name="ClearDuplicatePalletsAll">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePalletsAll" message="tns:IDMCheckService_ClearDuplicatePalletsAll_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/ClearDuplicatePalletsAllResponse" message="tns:IDMCheckService_ClearDuplicatePalletsAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/GetItemCodes" message="tns:IDMCheckService_GetItemCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/GetItemCodesResponse" message="tns:IDMCheckService_GetItemCodes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDMCheckService" type="tns:IDMCheckService">
@@ -270,6 +290,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateAndConfirmPalletReceive">
       <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePalletProperties">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdatePalletProperties" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -394,10 +423,19 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetItemCodes">
+      <soap:operation soapAction="http://tempuri.org/IDMCheckService/GetItemCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="DMCheckService">
     <wsdl:port name="BasicHttpBinding_IDMCheckService" binding="tns:BasicHttpBinding_IDMCheckService">
-      <soap:address location="http://172.17.0.50/HandHeldServices/DMCheckService.svc" />
+      <soap:address location="http://localhost:58380/DMCheckService.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6705c629-5282-43c3-b245-6d83b26a1f1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58380/EAMService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EAMService.xsd" MetadataType="Schema" ID="84c85ecf-1a2c-4f6a-ad6d-97dd724a905a" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EAMService1.xsd" MetadataType="Schema" ID="4e1f681f-c6f1-44d8-97e0-69e5cfc05f39" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EAMService2.xsd" MetadataType="Schema" ID="064fd0ae-a39e-49f6-b5c8-d1bb489ea61b" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EAMService3.xsd" MetadataType="Schema" ID="ddb623f6-80af-4fed-b911-94ad89a22658" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EAMService4.xsd" MetadataType="Schema" ID="367d6a56-f2a2-48ff-84fc-6c4db296a7ad" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?xsd=xsd4" />
+    <MetadataFile FileName="EAMService.disco" MetadataType="Disco" ID="4d068263-85a4-4d2a-bf6f-e701717b85f6" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?disco" />
+    <MetadataFile FileName="EAMService.wsdl" MetadataType="Wsdl" ID="9f13b0a5-29a7-4634-a291-c6a39636aa8e" SourceId="1" SourceUrl="http://localhost:58380/EAMService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
