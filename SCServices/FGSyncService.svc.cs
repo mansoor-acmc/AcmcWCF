@@ -78,7 +78,7 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            return new UserMgtService().GetUserData("PalletScan");
+            return new UserMgtService(string.Empty).GetUserData("PalletScan");
 
         }
 

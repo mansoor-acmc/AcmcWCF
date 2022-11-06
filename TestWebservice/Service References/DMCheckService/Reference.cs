@@ -76,6 +76,9 @@ namespace TestWebservice.DMCheckService {
         private decimal BoxPerPalletField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Desc1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -83,6 +86,9 @@ namespace TestWebservice.DMCheckService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SacoBarcodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SizeField;
@@ -102,6 +108,19 @@ namespace TestWebservice.DMCheckService {
                 if ((this.BoxPerPalletField.Equals(value) != true)) {
                     this.BoxPerPalletField = value;
                     this.RaisePropertyChanged("BoxPerPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandField, value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
                 }
             }
         }
@@ -141,6 +160,19 @@ namespace TestWebservice.DMCheckService {
                 if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
                     this.ItemNumberField = value;
                     this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SacoBarcode {
+            get {
+                return this.SacoBarcodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SacoBarcodeField, value) != true)) {
+                    this.SacoBarcodeField = value;
+                    this.RaisePropertyChanged("SacoBarcode");
                 }
             }
         }
@@ -1353,9 +1385,6 @@ namespace TestWebservice.DMCheckService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive", ReplyAction="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceiveResponse")]
         bool UpdateAndConfirmPalletReceive(TestWebservice.DMCheckService.DMExportContract pallet);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/UpdatePalletProperties", ReplyAction="http://tempuri.org/IDMCheckService/UpdatePalletPropertiesResponse")]
-        bool UpdatePalletProperties(TestWebservice.DMCheckService.DMExportContract pallet);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDMCheckService/PrintAgainPallet", ReplyAction="http://tempuri.org/IDMCheckService/PrintAgainPalletResponse")]
         bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser);
         
@@ -1452,10 +1481,6 @@ namespace TestWebservice.DMCheckService {
         
         public bool UpdateAndConfirmPalletReceive(TestWebservice.DMCheckService.DMExportContract pallet) {
             return base.Channel.UpdateAndConfirmPalletReceive(pallet);
-        }
-        
-        public bool UpdatePalletProperties(TestWebservice.DMCheckService.DMExportContract pallet) {
-            return base.Channel.UpdatePalletProperties(pallet);
         }
         
         public bool PrintAgainPallet(string palletNum, long recordId, string deviceName, string deviceUser) {

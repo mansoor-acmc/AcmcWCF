@@ -21,16 +21,16 @@
     <MetadataSource Address="https://acmc.operations.dynamics.com/soap/services/EAMServices" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EAMServices1.disco" MetadataType="Disco" ID="74605561-16f9-4415-8fa3-fa06db438969" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?disco" />
-    <MetadataFile FileName="EAMServices7.xsd" MetadataType="Schema" ID="a7989f5b-1ba7-4347-87b2-de89a767f4c3" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd1" />
-    <MetadataFile FileName="EAMServices71.xsd" MetadataType="Schema" ID="84af90d1-d015-46e6-871f-475cedf73713" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd2" />
-    <MetadataFile FileName="EAMServices72.xsd" MetadataType="Schema" ID="abe56e2e-5de7-425a-8174-e0ff0bb60269" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd5" />
-    <MetadataFile FileName="EAMServices2.wsdl" MetadataType="Wsdl" ID="4a0e555d-c882-4231-b9f1-beea14a5caa2" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl" />
-    <MetadataFile FileName="EAMServices21.wsdl" MetadataType="Wsdl" ID="eebed7ad-941b-4211-96a6-f7daeb6e7b07" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
-    <MetadataFile FileName="EAMServices73.xsd" MetadataType="Schema" ID="b94bb5e9-de55-4419-b97d-e1a1253f63be" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd3" />
-    <MetadataFile FileName="EAMServices74.xsd" MetadataType="Schema" ID="15e30458-ba67-4f46-8488-331017e9a241" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd6" />
-    <MetadataFile FileName="EAMServices75.xsd" MetadataType="Schema" ID="0f03bb6f-c8e9-4206-ba50-6f72a65b7b60" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd4" />
-    <MetadataFile FileName="EAMServices76.xsd" MetadataType="Schema" ID="4f5e4d17-c40d-4135-a65a-905a4313ea7f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd0" />
+    <MetadataFile FileName="EAMServices1.disco" MetadataType="Disco" ID="1b0d6a5a-5eaf-4000-9c51-990b60608386" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?disco" />
+    <MetadataFile FileName="EAMServices7.xsd" MetadataType="Schema" ID="07115b41-8fcb-4975-b068-3b570fe263a5" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd1" />
+    <MetadataFile FileName="EAMServices71.xsd" MetadataType="Schema" ID="52729cf9-f53e-4c0c-93f9-ca835d221591" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd2" />
+    <MetadataFile FileName="EAMServices72.xsd" MetadataType="Schema" ID="059e9c63-f150-4f99-a783-9643f8c62987" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd5" />
+    <MetadataFile FileName="EAMServices2.wsdl" MetadataType="Wsdl" ID="f91684c4-4c52-4f26-888c-3ac94cce9355" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl" />
+    <MetadataFile FileName="EAMServices21.wsdl" MetadataType="Wsdl" ID="ff6aa3b3-dde1-49cb-a4fc-80a6202b5a68" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
+    <MetadataFile FileName="EAMServices73.xsd" MetadataType="Schema" ID="01cb86b4-db5b-4ae8-a567-aabe431062fa" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd3" />
+    <MetadataFile FileName="EAMServices74.xsd" MetadataType="Schema" ID="119a1683-cc79-406d-a7d2-9f73cf9f19cd" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd6" />
+    <MetadataFile FileName="EAMServices75.xsd" MetadataType="Schema" ID="263c5954-0f7a-4d89-b749-ee8de75406a0" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd4" />
+    <MetadataFile FileName="EAMServices76.xsd" MetadataType="Schema" ID="6e3d1914-4dba-4c06-9df2-2eaa38112027" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/EAMServices?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

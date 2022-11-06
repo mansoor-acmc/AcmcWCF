@@ -293,6 +293,7 @@ namespace SoapUtility.InventCountingService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventAvailContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventJournalTransContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.SCForTransfer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.FixedAssetContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventJournalTableContract))]
     public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -330,6 +331,7 @@ namespace SoapUtility.InventCountingService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventAvailContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventJournalTransContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.SCForTransfer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.FixedAssetContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapUtility.InventCountingService.InventJournalTableContract))]
     public partial class XppObjectBase : SoapUtility.InventCountingService.ProxyBase {
     }
@@ -945,6 +947,173 @@ namespace SoapUtility.InventCountingService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FixedAssetContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class FixedAssetContract : SoapUtility.InventCountingService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime AcquireDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AcquirePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssetGroupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssetIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssetNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BarCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BookIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime AcquireDate {
+            get {
+                return this.AcquireDateField;
+            }
+            set {
+                if ((this.AcquireDateField.Equals(value) != true)) {
+                    this.AcquireDateField = value;
+                    this.RaisePropertyChanged("AcquireDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal AcquirePrice {
+            get {
+                return this.AcquirePriceField;
+            }
+            set {
+                if ((this.AcquirePriceField.Equals(value) != true)) {
+                    this.AcquirePriceField = value;
+                    this.RaisePropertyChanged("AcquirePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AssetGroupId {
+            get {
+                return this.AssetGroupIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssetGroupIdField, value) != true)) {
+                    this.AssetGroupIdField = value;
+                    this.RaisePropertyChanged("AssetGroupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AssetId {
+            get {
+                return this.AssetIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssetIdField, value) != true)) {
+                    this.AssetIdField = value;
+                    this.RaisePropertyChanged("AssetId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AssetName {
+            get {
+                return this.AssetNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssetNameField, value) != true)) {
+                    this.AssetNameField = value;
+                    this.RaisePropertyChanged("AssetName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BarCode {
+            get {
+                return this.BarCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BarCodeField, value) != true)) {
+                    this.BarCodeField = value;
+                    this.RaisePropertyChanged("BarCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BookId {
+            get {
+                return this.BookIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BookIdField, value) != true)) {
+                    this.BookIdField = value;
+                    this.RaisePropertyChanged("BookId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
     [System.SerializableAttribute()]
     public partial class Fault : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1063,6 +1232,11 @@ namespace SoapUtility.InventCountingService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/UpdateTransferItems", ReplyAction="http://tempuri.org/JournalCountingService/UpdateTransferItemsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.InventCountingService.Fault), Action="http://tempuri.org/JournalCountingService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
         SoapUtility.InventCountingService.UpdateTransferItemsResponse UpdateTransferItems(SoapUtility.InventCountingService.UpdateTransferItems request);
+        
+        // CODEGEN: Generating message contract since message GetFixedAssetListing has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JournalCountingService/GetFixedAssetListing", ReplyAction="http://tempuri.org/JournalCountingService/GetFixedAssetListingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoapUtility.InventCountingService.Fault), Action="http://tempuri.org/JournalCountingService/Fault", Name="Fault", Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        SoapUtility.InventCountingService.GetFixedAssetListingResponse GetFixedAssetListing(SoapUtility.InventCountingService.GetFixedAssetListing request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1320,13 +1494,17 @@ namespace SoapUtility.InventCountingService {
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=1)]
         public SoapUtility.InventCountingService.InventJournalTransContract[] lines;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=2)]
+        public System.DateTime newLineTransDate;
+        
         public UpdateCounting() {
         }
         
-        public UpdateCounting(SoapUtility.InventCountingService.CallContext CallContext, string journald, SoapUtility.InventCountingService.InventJournalTransContract[] lines) {
+        public UpdateCounting(SoapUtility.InventCountingService.CallContext CallContext, string journald, SoapUtility.InventCountingService.InventJournalTransContract[] lines, System.DateTime newLineTransDate) {
             this.CallContext = CallContext;
             this.journald = journald;
             this.lines = lines;
+            this.newLineTransDate = newLineTransDate;
         }
     }
     
@@ -1388,6 +1566,44 @@ namespace SoapUtility.InventCountingService {
         }
         
         public UpdateTransferItemsResponse(SoapUtility.InventCountingService.Infolog Infolog, SoapUtility.InventCountingService.SCForTransfer[] result) {
+            this.Infolog = Infolog;
+            this.result = result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFixedAssetListing", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetFixedAssetListing {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.InventCountingService.CallContext CallContext;
+        
+        public GetFixedAssetListing() {
+        }
+        
+        public GetFixedAssetListing(SoapUtility.InventCountingService.CallContext CallContext) {
+            this.CallContext = CallContext;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFixedAssetListingResponse", WrapperNamespace="http://tempuri.org", IsWrapped=true)]
+    public partial class GetFixedAssetListingResponse {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+        public SoapUtility.InventCountingService.Infolog Infolog;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org", Order=0)]
+        public SoapUtility.InventCountingService.FixedAssetContract[] result;
+        
+        public GetFixedAssetListingResponse() {
+        }
+        
+        public GetFixedAssetListingResponse(SoapUtility.InventCountingService.Infolog Infolog, SoapUtility.InventCountingService.FixedAssetContract[] result) {
             this.Infolog = Infolog;
             this.result = result;
         }
@@ -1506,11 +1722,12 @@ namespace SoapUtility.InventCountingService {
             return base.Channel.UpdateCounting(request);
         }
         
-        public SoapUtility.InventCountingService.Infolog UpdateCounting(SoapUtility.InventCountingService.CallContext CallContext, string journald, SoapUtility.InventCountingService.InventJournalTransContract[] lines, out SoapUtility.InventCountingService.InventJournalTransContract[] result) {
+        public SoapUtility.InventCountingService.Infolog UpdateCounting(SoapUtility.InventCountingService.CallContext CallContext, string journald, SoapUtility.InventCountingService.InventJournalTransContract[] lines, System.DateTime newLineTransDate, out SoapUtility.InventCountingService.InventJournalTransContract[] result) {
             SoapUtility.InventCountingService.UpdateCounting inValue = new SoapUtility.InventCountingService.UpdateCounting();
             inValue.CallContext = CallContext;
             inValue.journald = journald;
             inValue.lines = lines;
+            inValue.newLineTransDate = newLineTransDate;
             SoapUtility.InventCountingService.UpdateCountingResponse retVal = ((SoapUtility.InventCountingService.JournalCountingService)(this)).UpdateCounting(inValue);
             result = retVal.result;
             return retVal.Infolog;
@@ -1526,6 +1743,19 @@ namespace SoapUtility.InventCountingService {
             inValue.CallContext = CallContext;
             inValue.lines = lines;
             SoapUtility.InventCountingService.UpdateTransferItemsResponse retVal = ((SoapUtility.InventCountingService.JournalCountingService)(this)).UpdateTransferItems(inValue);
+            result = retVal.result;
+            return retVal.Infolog;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoapUtility.InventCountingService.GetFixedAssetListingResponse SoapUtility.InventCountingService.JournalCountingService.GetFixedAssetListing(SoapUtility.InventCountingService.GetFixedAssetListing request) {
+            return base.Channel.GetFixedAssetListing(request);
+        }
+        
+        public SoapUtility.InventCountingService.Infolog GetFixedAssetListing(SoapUtility.InventCountingService.CallContext CallContext, out SoapUtility.InventCountingService.FixedAssetContract[] result) {
+            SoapUtility.InventCountingService.GetFixedAssetListing inValue = new SoapUtility.InventCountingService.GetFixedAssetListing();
+            inValue.CallContext = CallContext;
+            SoapUtility.InventCountingService.GetFixedAssetListingResponse retVal = ((SoapUtility.InventCountingService.JournalCountingService)(this)).GetFixedAssetListing(inValue);
             result = retVal.result;
             return retVal.Infolog;
         }

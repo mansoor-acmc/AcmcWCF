@@ -73,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\FAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\FGSyncService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +94,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ProdRequestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PurchaseService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -130,6 +140,7 @@
     <None Include="Properties\DataSources\SyncServices.DuplicatePallet.datasource" />
     <None Include="Properties\DataSources\SyncServices.EAMServices.WOLocationContract.datasource" />
     <None Include="Properties\DataSources\SyncServices.EAMServices.WOTypeContract.datasource" />
+    <None Include="Properties\DataSources\SyncServices.FAEntity.datasource" />
     <None Include="Properties\DataSources\SyncServices.InventCountingService.InventAvailContract.datasource" />
     <None Include="Properties\DataSources\SyncServices.InventCountingService.InventForItemUnit.datasource" />
     <None Include="Properties\DataSources\SyncServices.InventCountingService.SCForTransfer.datasource" />
@@ -216,6 +227,16 @@
     <None Include="Service References\EAMService\TestWebservice.EAMService.EamWorkitemsContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\FAService\FixedAssetService.wsdl" />
+    <None Include="Service References\FAService\FixedAssetService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FAService\FixedAssetService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FAService\FixedAssetService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\FGSyncService\FGSyncService.wsdl" />
     <None Include="Service References\FGSyncService\FGSyncService.xsd">
       <SubType>Designer</SubType>
@@ -299,6 +320,25 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProdRequestService\TestWebservice.ProdRequestService.SLCapacityContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PurchaseService\PurchaseService.wsdl" />
+    <None Include="Service References\PurchaseService\PurchaseService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseService\PurchaseService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseService\PurchaseService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseService\PurchaseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseService\PurchaseService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseService\TestWebservice.PurchaseService.POHeader.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SalesOrderService\SalesOrderService.wsdl" />
@@ -418,10 +458,12 @@
     <WCFMetadataStorage Include="Service References\DeviceOps\" />
     <WCFMetadataStorage Include="Service References\DMCheckService\" />
     <WCFMetadataStorage Include="Service References\EAMService\" />
+    <WCFMetadataStorage Include="Service References\FAService\" />
     <WCFMetadataStorage Include="Service References\FGSyncService\" />
     <WCFMetadataStorage Include="Service References\ModulaMovement\" />
     <WCFMetadataStorage Include="Service References\ModulaService\" />
     <WCFMetadataStorage Include="Service References\ProdRequestService\" />
+    <WCFMetadataStorage Include="Service References\PurchaseService\" />
     <WCFMetadataStorage Include="Service References\SalesOrderService\" />
     <WCFMetadataStorage Include="Service References\SalesService\" />
     <WCFMetadataStorage Include="Service References\SCSyncService\" />
@@ -594,6 +636,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EAMService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FAService\FixedAssetService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FAService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FAService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseService\PurchaseService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

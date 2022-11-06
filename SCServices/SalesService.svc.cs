@@ -41,6 +41,27 @@ namespace SyncServices
             };
         }
 
+        public SalesService(string _company)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var aosUriString = ClientConfiguration.Default.UriString;
+
+            oauthHeader = OAuthHelper.GetAuthenticationHeader(true);
+            var serviceUriString = SoapUtility.SoapHelper.GetSoapServiceUriString(D365ServiceName, aosUriString);
+
+            var endpointAddress = new EndpointAddress(serviceUriString);
+            var binding = SoapUtility.SoapHelper.GetBinding();
+
+            var client = new EVSSOPickServiceClient(binding, endpointAddress);
+            channel = client.InnerChannel;
+
+            context = new CallContext()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                Company = _company
+            };
+        }
+
 
         public SalesTable FindSalesOrder(string salesId)
         {
@@ -235,7 +256,59 @@ namespace SyncServices
         public List<SalesLine> ValidatePallets(string salesId, string itemId, string configId, string pickingId,
                 List<string> pallets, string userName, string device, long lineRecId)
         {
-            return new SOService().PalletsReserve(salesId, itemId, configId, pickingId, pallets, userName, device, lineRecId);
+            //return new SOService().PalletsReserve(salesId, itemId, configId, pickingId, pallets, userName, device, lineRecId);
+            List<SalesLine> returnValue = new List<SalesLine>();
+            EVSSalesLineContract[] result = null;
+
+            try
+            {
+                List<EVSSalesLineContract> rows = new List<EVSSalesLineContract>();
+                foreach (string pallet in pallets)
+                {
+                    EVSSalesLineContract row = new EVSSalesLineContract() { Serial = pallet };
+                    rows.Add(row);
+                }
+                using (OperationContextScope operationContextScope = new OperationContextScope(channel))
+                {
+                    HttpRequestMessageProperty requestMessage = new HttpRequestMessageProperty();
+                    requestMessage.Headers[OAuthHelper.OAuthHeader] = oauthHeader;
+                    OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
+
+                    result = ((EVSSOPickService)channel).PalletsReserving(new PalletsReserving(context, configId,device, itemId, lineRecId, rows.ToArray(), pickingId, salesId, userName)).result;
+                }
+
+                if (result != null && result.Length > 0)
+                    returnValue = new SalesLine().ToListConvert(result.ToList());
+            }
+            catch (System.ServiceModel.FaultException aifExp)
+            {
+                string allMsgs = string.Empty;
+                //InfologMessage[] msgs = aifExp.Detail.InfologMessageList;
+                //foreach (InfologMessage msg in msgs)
+                //{
+                //    allMsgs += msg.Message + Environment.NewLine;
+                //}
+                allMsgs = aifExp.Message;
+                if (!string.IsNullOrEmpty(allMsgs))
+                {
+                    string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
+                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", allMsgs, "", DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
+
+                    throw new Exception(allMsgs);
+                }
+            }
+            catch (Exception exp)
+            {
+                try
+                {
+                    string allParameters = "SalesId: " + salesId + ", ItemId:" + itemId + ", PickingId:" + pickingId + ", Pallets:[" + string.Join(";", pallets) + "], Username:" + userName + ", Device:" + device;
+                    new DBClass(SyncServices.DBClass.DbName.DeviceMsg).ErrorInsert("", "", exp.Message, exp.StackTrace, DateTime.Now, "SaleService", userName, device, "ValidatePallets", allParameters);
+                }
+                catch { }
+                throw exp;
+            }
+
+            return returnValue;
         }
 
 
@@ -674,7 +747,7 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            return new UserMgtService().GetUserData("SaleService");            
+            return new UserMgtService(string.Empty).GetUserData("SaleService");            
             
         }
 

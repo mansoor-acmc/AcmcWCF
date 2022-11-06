@@ -142,6 +142,20 @@
         <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="GetFixedAssetListing">
+      <soap:operation soapAction="http://tempuri.org/JournalCountingService/GetFixedAssetListing" style="document" />
+      <wsdl:input name="GetFixedAssetListing">
+        <soap:header message="i0:GetFixedAssetListing_Headers" part="callContext" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFixedAssetListingResponse">
+        <soap:header message="i0:GetFixedAssetListingResponse_Headers" part="infolog" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SoapServiceFaultFault">
+        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="InventCountingServiceGroup">
     <wsdl:port name="BasicHttpBinding_JournalCountingService" binding="tns:BasicHttpBinding_JournalCountingService">

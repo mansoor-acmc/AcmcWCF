@@ -24,7 +24,7 @@ namespace SyncServices
         string oauthHeader = string.Empty;
         CallContext context = null;
 
-        public UserMgtService()
+        public UserMgtService(string companyName)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var aosUriString = ClientConfiguration.Default.UriString;
@@ -38,10 +38,15 @@ namespace SyncServices
             var client = new UserManagementServiceClient(binding, endpointAddress);
             channel = client.InnerChannel;
 
+            if(string.IsNullOrEmpty(companyName))
+            {
+                companyName = ConfigurationManager.AppSettings["DynamicsCompany"];
+            }
+
             context = new CallContext()
             {
                 MessageId = Guid.NewGuid().ToString(),
-                Company = ConfigurationManager.AppSettings["DynamicsCompany"]
+                Company = companyName
             };
         }
 

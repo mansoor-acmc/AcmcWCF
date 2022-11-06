@@ -52,12 +52,6 @@
   <wsdl:message name="IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateAndConfirmPalletReceiveResponse" />
   </wsdl:message>
-  <wsdl:message name="IDMCheckService_UpdatePalletProperties_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePalletProperties" />
-  </wsdl:message>
-  <wsdl:message name="IDMCheckService_UpdatePalletProperties_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePalletPropertiesResponse" />
-  </wsdl:message>
   <wsdl:message name="IDMCheckService_PrintAgainPallet_InputMessage">
     <wsdl:part name="parameters" element="tns:PrintAgainPallet" />
   </wsdl:message>
@@ -170,10 +164,6 @@
     <wsdl:operation name="UpdateAndConfirmPalletReceive">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceiveResponse" message="tns:IDMCheckService_UpdateAndConfirmPalletReceive_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePalletProperties">
-      <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/UpdatePalletProperties" message="tns:IDMCheckService_UpdatePalletProperties_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IDMCheckService/UpdatePalletPropertiesResponse" message="tns:IDMCheckService_UpdatePalletProperties_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="PrintAgainPallet">
       <wsdl:input wsaw:Action="http://tempuri.org/IDMCheckService/PrintAgainPallet" message="tns:IDMCheckService_PrintAgainPallet_InputMessage" />
@@ -290,15 +280,6 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateAndConfirmPalletReceive">
       <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdateAndConfirmPalletReceive" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePalletProperties">
-      <soap:operation soapAction="http://tempuri.org/IDMCheckService/UpdatePalletProperties" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

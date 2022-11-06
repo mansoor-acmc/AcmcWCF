@@ -43,8 +43,11 @@ namespace SyncServices
         public List<SalesLine> PalletsReserve(string salesId, string itemId, string configId, string pickingId,
                 List<string> pallets, string userName, string device, long lineRecId)
         {
+            /*
+             Already moved the code to SalesService.svc.cs
+             */
             List<SalesLine> returnValue = new List<SalesLine>();
-            AcmcSalesLineContract[] result = null;
+            /*AcmcSalesLineContract[] result = null;
 
             try
             {
@@ -92,7 +95,7 @@ namespace SyncServices
                 }
                 catch { }
                 throw exp;
-            }
+            }*/
 
             return returnValue;
         }

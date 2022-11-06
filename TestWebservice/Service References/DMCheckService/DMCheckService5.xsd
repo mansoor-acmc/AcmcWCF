@@ -49,9 +49,11 @@
       <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="BoxPerPallet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Desc1" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Desc2" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SacoBarcode" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SqmPerBox" type="xs:decimal" />
           <xs:element minOccurs="0" name="TilesPerBox" type="xs:decimal" />

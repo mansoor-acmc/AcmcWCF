@@ -76,9 +76,11 @@
     <Content Include="DMCheckService.svc" />
     <Content Include="EAMService.svc" />
     <Content Include="FGSyncService.svc" />
+    <Content Include="FixedAssetService.svc" />
     <Content Include="ModulaMovement.svc" />
     <Content Include="ModulaPR.svc" />
     <Content Include="ProdRequestService.svc" />
+    <Content Include="PurchaseService.svc" />
     <Content Include="SalesOrderService.svc" />
     <Content Include="SalesService.svc" />
     <Content Include="Properties\DataSources\SoapUtility.SalesServicesGroup.CategoryTypeLookup.datasource" />
@@ -106,6 +108,7 @@
     <None Include="Properties\PublishProfiles\HandHeldServicesTest.pubxml" />
     <None Include="Properties\PublishProfiles\LocalSyncServices.pubxml" />
     <None Include="Properties\PublishProfiles\ServicesD365.pubxml" />
+    <None Include="Properties\PublishProfiles\ServicesD365Test.pubxml" />
     <None Include="Properties\PublishProfiles\SyncService2020.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServices.pubxml" />
     <None Include="Properties\PublishProfiles\SyncServicesTest.pubxml" />
@@ -144,13 +147,18 @@
     <Compile Include="FGSyncService.svc.cs">
       <DependentUpon>FGSyncService.svc</DependentUpon>
     </Compile>
+    <Compile Include="FixedAssetService.svc.cs">
+      <DependentUpon>FixedAssetService.svc</DependentUpon>
+    </Compile>
     <Compile Include="IDeviceOps.cs" />
     <Compile Include="IDMCheckService.cs" />
     <Compile Include="IEAMService.cs" />
     <Compile Include="IFGSyncService.cs" />
+    <Compile Include="IFixedAssetService.cs" />
     <Compile Include="IModulaMovement.cs" />
     <Compile Include="IModulaPR.cs" />
     <Compile Include="IProdRequestService.cs" />
+    <Compile Include="IPurchaseService.cs" />
     <Compile Include="ISalesOrderService.cs" />
     <Compile Include="ISalesService.cs" />
     <Compile Include="ISCSyncService.cs" />
@@ -170,6 +178,9 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseService.svc.cs">
+      <DependentUpon>PurchaseService.svc</DependentUpon>
     </Compile>
     <Compile Include="SalesLine.cs" />
     <Compile Include="SalesOrderService.svc.cs">

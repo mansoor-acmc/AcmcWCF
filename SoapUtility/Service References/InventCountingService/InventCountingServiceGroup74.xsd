@@ -159,4 +159,29 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="SCForTransfer" nillable="true" type="tns:SCForTransfer" />
+  <xs:complexType name="ArrayOfFixedAssetContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FixedAssetContract" nillable="true" type="tns:FixedAssetContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFixedAssetContract" nillable="true" type="tns:ArrayOfFixedAssetContract" />
+  <xs:complexType name="FixedAssetContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q9:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcquireDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AcquirePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AssetGroupId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssetId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BookId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FixedAssetContract" nillable="true" type="tns:FixedAssetContract" />
 </xs:schema>

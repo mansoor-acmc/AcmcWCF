@@ -85,7 +85,7 @@ namespace SyncServices
 
         public List<UserData> GetUserData()
         {
-            return new UserMgtService().GetUserData("SCCounting");            
+            return new UserMgtService(string.Empty).GetUserData("SCCounting");            
 
             //allUser.Add(new UserData() { UserName = "mansoor", Password = "12345aa", UserType = "Admin" });
             //allUser.Add(new UserData() { UserName = "usman", Password = "us12345", UserType = "Supervisor" });

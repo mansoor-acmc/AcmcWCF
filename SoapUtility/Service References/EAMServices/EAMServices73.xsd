@@ -11,6 +11,7 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
         <xs:sequence>
+          <xs:element minOccurs="0" name="parmModifiedBy" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
@@ -23,6 +24,8 @@
           <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
           <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+          <xs:element minOccurs="0" name="parmWOPoolCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmWorkOrderID" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

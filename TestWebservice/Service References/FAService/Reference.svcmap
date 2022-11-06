@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91612ff3-24e0-4517-aea7-6f0e23f2893e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58380/FixedAssetService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FixedAssetService.xsd" MetadataType="Schema" ID="6891aa8d-c8b8-4777-8192-609b58e2ff8b" SourceId="1" SourceUrl="http://localhost:58380/FixedAssetService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FixedAssetService.wsdl" MetadataType="Wsdl" ID="aaabe5ca-ae6d-4056-b056-8259ce4e57ac" SourceId="1" SourceUrl="http://localhost:58380/FixedAssetService.svc?wsdl" />
+    <MetadataFile FileName="FixedAssetService1.xsd" MetadataType="Schema" ID="3dba5454-b9f9-4c4b-8eb6-d65ede59849a" SourceId="1" SourceUrl="http://localhost:58380/FixedAssetService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FixedAssetService2.xsd" MetadataType="Schema" ID="421c1594-2ffe-40a3-aecd-7c73c6e4fc20" SourceId="1" SourceUrl="http://localhost:58380/FixedAssetService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FixedAssetService.disco" MetadataType="Disco" ID="5bcb47ec-3c98-4211-b5c6-007913621287" SourceId="1" SourceUrl="http://localhost:58380/FixedAssetService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

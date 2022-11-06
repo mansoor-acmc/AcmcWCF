@@ -1,231 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i0="SOReserve" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="UnderstockItemsInfoNewService" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i2="ModulaMovement" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MiscServiceGroup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="BasicHttpBinding_SOReserve_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <sp:HttpsToken RequireClientCertificate="false" />
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="BasicHttpBinding_UnderstockItemsInfoNewService_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <sp:HttpsToken RequireClientCertificate="false" />
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="BasicHttpBinding_ModulaMovement_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <sp:HttpsToken RequireClientCertificate="false" />
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsdl:import namespace="SOReserve" location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl=wsdl0" />
-  <wsdl:import namespace="UnderstockItemsInfoNewService" location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl=wsdl1" />
-  <wsdl:import namespace="ModulaMovement" location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?wsdl=wsdl2" />
-  <wsdl:types />
-  <wsdl:binding name="BasicHttpBinding_SOReserve" type="i0:SOReserve">
-    <wsp:PolicyReference URI="#BasicHttpBinding_SOReserve_policy" />
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="PalletsReserving">
-      <soap:operation soapAction="SOReserve/SOReserve/PalletsReserving" style="document" />
-      <wsdl:input name="PalletsReserving">
-        <soap:header message="i0:PalletsReserving_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="PalletsReservingResponse">
-        <soap:header message="i0:PalletsReservingResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ServiceTest">
-      <soap:operation soapAction="SOReserve/SOReserve/ServiceTest" style="document" />
-      <wsdl:input name="ServiceTest">
-        <soap:header message="i0:ServiceTest_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="ServiceTestResponse">
-        <soap:header message="i0:ServiceTestResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="WorkItemsPosted">
-      <soap:operation soapAction="SOReserve/SOReserve/WorkItemsPosted" style="document" />
-      <wsdl:input name="WorkItemsPosted">
-        <soap:header message="i0:WorkItemsPosted_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="WorkItemsPostedResponse">
-        <soap:header message="i0:WorkItemsPostedResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="BasicHttpBinding_UnderstockItemsInfoNewService" type="i1:UnderstockItemsInfoNewService">
-    <wsp:PolicyReference URI="#BasicHttpBinding_UnderstockItemsInfoNewService_policy" />
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="UnderstockItemsInfoNewService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="UnderstockItemsInfoNewService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="UnderstockItemsInfoNewService/Imports">
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd7" namespace="UnderstockItemsInfoNewService" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd2" namespace="SOReserve" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateItems">
+    <wsdl:part name="parameters" element="tns:CreateItems" />
+  </wsdl:message>
+  <wsdl:message name="CreateItems_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="CreateItemsResponse">
+    <wsdl:part name="parameters" element="tns:CreateItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateItemsResponse_Headers">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q2:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="UnderstockItemsInfoNewService_CreateItems_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q3:Fault" />
+  </wsdl:message>
+  <wsdl:message name="deleteOld">
+    <wsdl:part name="parameters" element="tns:deleteOld" />
+  </wsdl:message>
+  <wsdl:message name="deleteOld_Headers">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q4:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="deleteOldResponse">
+    <wsdl:part name="parameters" element="tns:deleteOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteOldResponse_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q5:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="UnderstockItemsInfoNewService_deleteOld_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q6:Fault" />
+  </wsdl:message>
+  <wsdl:portType name="UnderstockItemsInfoNewService">
     <wsdl:operation name="CreateItems">
-      <soap:operation soapAction="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/CreateItems" style="document" />
-      <wsdl:input name="CreateItems">
-        <soap:header message="i1:CreateItems_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CreateItemsResponse">
-        <soap:header message="i1:CreateItemsResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
+      <wsdl:input wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/CreateItems" name="CreateItems" message="tns:CreateItems" />
+      <wsdl:output wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/CreateItemsResponse" name="CreateItemsResponse" message="tns:CreateItemsResponse" />
+      <wsdl:fault wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/Fault" name="SoapServiceFaultFault" message="tns:UnderstockItemsInfoNewService_CreateItems_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="deleteOld">
-      <soap:operation soapAction="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/deleteOld" style="document" />
-      <wsdl:input name="deleteOld">
-        <soap:header message="i1:deleteOld_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="deleteOldResponse">
-        <soap:header message="i1:deleteOldResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
+      <wsdl:input wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/deleteOld" name="deleteOld" message="tns:deleteOld" />
+      <wsdl:output wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/deleteOldResponse" name="deleteOldResponse" message="tns:deleteOldResponse" />
+      <wsdl:fault wsam:Action="UnderstockItemsInfoNewService/UnderstockItemsInfoNewService/Fault" name="SoapServiceFaultFault" message="tns:UnderstockItemsInfoNewService_deleteOld_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="BasicHttpBinding_ModulaMovement" type="i2:ModulaMovement">
-    <wsp:PolicyReference URI="#BasicHttpBinding_ModulaMovement_policy" />
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="OpenWorkItem">
-      <soap:operation soapAction="ModulaMovement/ModulaMovement/OpenWorkItem" style="document" />
-      <wsdl:input name="OpenWorkItem">
-        <soap:header message="i2:OpenWorkItem_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="OpenWorkItemResponse">
-        <soap:header message="i2:OpenWorkItemResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ItemsNotUsed">
-      <soap:operation soapAction="ModulaMovement/ModulaMovement/ItemsNotUsed" style="document" />
-      <wsdl:input name="ItemsNotUsed">
-        <soap:header message="i2:ItemsNotUsed_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="ItemsNotUsedResponse">
-        <soap:header message="i2:ItemsNotUsedResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ItemsUsedButNotPosted">
-      <soap:operation soapAction="ModulaMovement/ModulaMovement/ItemsUsedButNotPosted" style="document" />
-      <wsdl:input name="ItemsUsedButNotPosted">
-        <soap:header message="i2:ItemsUsedButNotPosted_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="ItemsUsedButNotPostedResponse">
-        <soap:header message="i2:ItemsUsedButNotPostedResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="ItemsNotUsedWithWOId">
-      <soap:operation soapAction="ModulaMovement/ModulaMovement/ItemsNotUsedWithWOId" style="document" />
-      <wsdl:input name="ItemsNotUsedWithWOId">
-        <soap:header message="i2:ItemsNotUsedWithWOId_Headers" part="callContext" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="ItemsNotUsedWithWOIdResponse">
-        <soap:header message="i2:ItemsNotUsedWithWOIdResponse_Headers" part="infolog" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="SoapServiceFaultFault">
-        <soap:fault use="literal" name="SoapServiceFaultFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:service name="MiscServiceGroup">
-    <wsdl:port name="BasicHttpBinding_SOReserve" binding="tns:BasicHttpBinding_SOReserve">
-      <soap:address location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup" />
-    </wsdl:port>
-    <wsdl:port name="BasicHttpBinding_UnderstockItemsInfoNewService" binding="tns:BasicHttpBinding_UnderstockItemsInfoNewService">
-      <soap:address location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup" />
-    </wsdl:port>
-    <wsdl:port name="BasicHttpBinding_ModulaMovement" binding="tns:BasicHttpBinding_ModulaMovement">
-      <soap:address location="https://acmc.operations.dynamics.com/soap/services/MiscServiceGroup" />
-    </wsdl:port>
-  </wsdl:service>
+  </wsdl:portType>
 </wsdl:definitions>

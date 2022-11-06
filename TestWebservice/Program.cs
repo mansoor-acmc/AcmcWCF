@@ -23,6 +23,8 @@ namespace TestWebservice
     {
         static void Main(string[] args)
         {
+            var pOHeader = new PurchaseService.PurchaseServiceClient().GetPurchOrderForGRN("22/PO-1991");
+            //var FAItems = new FAService.FixedAssetServiceClient().ResetData("acmc").ToList();
 
             ArrayList abc = new ArrayList();
             bool result11 = false;
@@ -30,19 +32,21 @@ namespace TestWebservice
 
             DMExportContract contract1 = new DMExportContract()
             {
-                PalletNum = "M208370",
-                RecordId = 1561891,
+                PalletNum = "N149017",
+                ItemNumber = "SWE-2086012DG095/R",
+                RecordId = 1733457,
                 Grade = "G1",
-                Shade = "D70",
+                Shade = "D51",
                 Caliber = "C5",
-                Size = "340X340X8",
-                LineOfOrigin = 8,
+                Size = "600X600X10",
+                LineOfOrigin = 4,
                 WhichMarpak = 1,
                 LGVOrForklift = PalletTransportBy.LGV,
-                BoxesOnPallet = 54
+                BoxesOnPallet = 48
             };
             DMCheckServiceClient dmClient = new DMCheckServiceClient();
-            var check =dmClient.UpdatePalletProperties(contract1);
+            dmClient.UpdateAndConfirmPalletReceive(contract1);
+            
 
            //var locs=dmClient.GetWHLocations();
            //int totRows = locs.Count();

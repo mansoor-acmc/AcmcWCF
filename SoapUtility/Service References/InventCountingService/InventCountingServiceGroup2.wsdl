@@ -131,6 +131,21 @@
   <wsdl:message name="JournalCountingService_UpdateTransferItems_SoapServiceFaultFault_FaultMessage">
     <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q24:Fault" />
   </wsdl:message>
+  <wsdl:message name="GetFixedAssetListing">
+    <wsdl:part name="parameters" element="tns:GetFixedAssetListing" />
+  </wsdl:message>
+  <wsdl:message name="GetFixedAssetListing_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="callContext" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GetFixedAssetListingResponse">
+    <wsdl:part name="parameters" element="tns:GetFixedAssetListingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFixedAssetListingResponse_Headers">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="infolog" element="q26:Infolog" />
+  </wsdl:message>
+  <wsdl:message name="JournalCountingService_GetFixedAssetListing_SoapServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2013/01/datacontracts" name="detail" element="q27:Fault" />
+  </wsdl:message>
   <wsdl:portType name="JournalCountingService">
     <wsdl:operation name="GetCountingJournals">
       <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetCountingJournals" name="GetCountingJournals" message="tns:GetCountingJournals" />
@@ -171,6 +186,11 @@
       <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/UpdateTransferItems" name="UpdateTransferItems" message="tns:UpdateTransferItems" />
       <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/UpdateTransferItemsResponse" name="UpdateTransferItemsResponse" message="tns:UpdateTransferItemsResponse" />
       <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_UpdateTransferItems_SoapServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixedAssetListing">
+      <wsdl:input wsam:Action="http://tempuri.org/JournalCountingService/GetFixedAssetListing" name="GetFixedAssetListing" message="tns:GetFixedAssetListing" />
+      <wsdl:output wsam:Action="http://tempuri.org/JournalCountingService/GetFixedAssetListingResponse" name="GetFixedAssetListingResponse" message="tns:GetFixedAssetListingResponse" />
+      <wsdl:fault wsam:Action="http://tempuri.org/JournalCountingService/Fault" name="SoapServiceFaultFault" message="tns:JournalCountingService_GetFixedAssetListing_SoapServiceFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

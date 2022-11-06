@@ -58,12 +58,23 @@ namespace SyncServices
             //DynamicsAX
         }
 
-        public long GetLastSyncId(bool isFgData)
+        public enum TableType
+        {
+            FGData,
+            SCData,
+            AssetData
+        }
+
+        public long GetLastSyncId(TableType _tableType)
         {
             long lastSyncId = 0;
-            string sqlString = "select max(SyncId) from CountingSC";
-            if (isFgData)
+            string sqlString = "";
+            if (_tableType == TableType.FGData)
                 sqlString = "select max(SyncId) from ItemsFG";
+            else if (_tableType == TableType.SCData)
+                sqlString = "select max(SyncId) from CountingSC";
+            else if (_tableType == TableType.AssetData)
+                sqlString = "select max(SyncId) from CountingFixedAsset";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
@@ -85,7 +96,7 @@ namespace SyncServices
         public long UpdateFGCountingDesktop(List<PalletEntity> dt)
         {
             long rowsEffected = 0;
-            long lastSyncId = GetLastSyncId(true);
+            long lastSyncId = GetLastSyncId(TableType.FGData);
 
             try
             {
@@ -172,7 +183,7 @@ namespace SyncServices
         {
             //DataTable dt = GetSCData();
             //int numOfRec = 0;
-            long lastSyncId = GetLastSyncId(false);
+            long lastSyncId = GetLastSyncId(TableType.SCData);
 
             try
             {
@@ -213,6 +224,83 @@ namespace SyncServices
                     cmd.Parameters["@pUpdatedBy"].Value = row.UpdatedBy;
                     cmd.Parameters["@pDeviceName"].Value = row.DeviceName;
                     cmd.Parameters["@pIsManual"].Value = row.IsManual;
+                    cmd.Parameters["@return"].Direction = ParameterDirection.ReturnValue;
+
+                    if (this.conn.State != ConnectionState.Open)
+                        this.conn.Open();
+
+                    int rowsEffected = cmd.ExecuteNonQuery();
+
+                    rowsEffected = (int)cmd.Parameters["@return"].Value;
+                    if (rowsEffected > 0)
+                    {
+                        //numOfRec++;
+                        lastSyncId = row.SyncId;
+                    }
+                }
+            }
+            finally
+            {
+                if (this.conn.State != ConnectionState.Closed)
+                    this.conn.Close();
+            }
+
+            return lastSyncId;
+        }
+
+        public long UpdateFixedAssetDesktop(List<FAEntity> dt)
+        {
+            //DataTable dt = GetSCData();
+            //int numOfRec = 0;
+            long lastSyncId = GetLastSyncId(TableType.AssetData);
+            
+            try
+            {
+                foreach (FAEntity row in dt)
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "UpdateFixedAsset";
+
+                    cmd.Parameters.Add("@pAssetId", SqlDbType.NVarChar, 20);
+                    cmd.Parameters.Add("@pAssetName", SqlDbType.NVarChar, 30);
+                    cmd.Parameters.Add("@pAssetGroupId", SqlDbType.NVarChar, 10);
+                    cmd.Parameters.Add("@pBookId", SqlDbType.NVarChar, 10);
+                    cmd.Parameters.Add("@pLocation", SqlDbType.NVarChar, 100);
+                    cmd.Parameters.Add("@pAcquireDate", SqlDbType.DateTime);
+                    cmd.Parameters.Add("@pAcquirePrice", SqlDbType.Decimal);
+                    cmd.Parameters.Add("@pIsMatched", SqlDbType.Bit);
+                    cmd.Parameters.Add("@pProcessByIT", SqlDbType.Bit);
+                    cmd.Parameters.Add("@pSyncID", SqlDbType.BigInt);
+                    cmd.Parameters.Add("@pPhysicalCount", SqlDbType.Decimal);
+                    cmd.Parameters.Add("@pAvailableCount", SqlDbType.Decimal);
+                    cmd.Parameters.Add("@pDateUpdated", SqlDbType.DateTime);
+                    cmd.Parameters.Add("@pUpdatedBy", SqlDbType.NVarChar, 25);
+                    cmd.Parameters.Add("@pDeviceName", SqlDbType.NVarChar, 25);
+                    cmd.Parameters.Add("@pIsManual", SqlDbType.Bit);
+                    cmd.Parameters.Add("@pCompany", SqlDbType.NVarChar, 6);
+                    cmd.Parameters.Add("@return", SqlDbType.Int);
+
+                    cmd.Parameters["@pAssetId"].Value = row.AssetId;
+                    cmd.Parameters["@pAssetName"].Value = row.AssetName;
+                    cmd.Parameters["@pAssetGroupId"].Value = row.AssetGroupId;
+                    cmd.Parameters["@pBookId"].Value = row.BookId;
+                    cmd.Parameters["@pLocation"].Value = string.IsNullOrEmpty(row.Location) ? string.Empty : row.Location;
+                    cmd.Parameters["@pAcquireDate"].Value = row.AcquireDate;
+                    cmd.Parameters["@pAcquirePrice"].Value = row.AcquirePrice;
+                    cmd.Parameters["@pIsMatched"].Value = row.IsMatched;
+                    cmd.Parameters["@pProcessByIT"].Value = row.ProcessByIT;
+                    cmd.Parameters["@pSyncID"].Value = row.SyncId;
+                    cmd.Parameters["@pPhysicalCount"].Value = row.PhysicalCount;
+                    cmd.Parameters["@pAvailableCount"].Value = row.AvailableCount;
+                    cmd.Parameters["@pDateUpdated"].Value = row.DateUpdated;
+                    if (row.DateUpdated.Year <= 1753)
+                        cmd.Parameters["@pDateUpdated"].Value = DBNull.Value;
+                    cmd.Parameters["@pUpdatedBy"].Value = row.UpdatedBy;
+                    cmd.Parameters["@pDeviceName"].Value = row.DeviceName;
+                    cmd.Parameters["@pIsManual"].Value = row.IsManual;
+                    cmd.Parameters["@pCompany"].Value = row.Company;
                     cmd.Parameters["@return"].Direction = ParameterDirection.ReturnValue;
 
                     if (this.conn.State != ConnectionState.Open)
@@ -485,6 +573,67 @@ namespace SyncServices
             }
 
             
+
+            return items;
+        }
+
+        public List<FAEntity> ResetDataFACount(string _company)
+        {
+            List<FAEntity> items = new List<FAEntity>();
+
+
+            string sqlString = "SELECT * FROM FixedAsset WHERE Company='"+_company+"'";
+                
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sqlString;
+
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                long iCount = 0;
+                while (dr.Read())
+                {
+                    FAEntity oneItem = new FAEntity()
+                    {
+                        AssetId = dr["AssetId"].ToString(),
+                        AssetName = dr["AssetName"].ToString(),
+                        AssetGroupId = dr["AssetGroupId"].ToString(),
+                        BookId = dr["BookId"].ToString(),
+                        AcquireDate = DateTime.Parse(dr["AcquireDate"].ToString()),
+                        AcquirePrice = decimal.Parse(dr["AcquirePrice"].ToString()),
+                        AvailableCount = decimal.Parse(dr["AvailableCount"].ToString()),
+                        StatusFA = dr["StatusFA"].ToString(),
+                        DateUpdated = DateTime.Parse(dr["DateInserted"].ToString()),
+                        Company = dr["Company"].ToString(),
+                        Location = dr["Location"].ToString(),
+                        SyncId = long.Parse(dr["SyncId"].ToString())
+                    };
+
+                    items.Add(oneItem);
+                    iCount++;
+                }
+
+
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+            finally
+            {
+                this.conn.Close();
+            }
+
+
 
             return items;
         }

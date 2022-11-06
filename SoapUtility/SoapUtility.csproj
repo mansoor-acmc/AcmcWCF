@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ProcurementGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\SalesServicesGroup\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,6 +245,9 @@
     <None Include="Service References\InventCountingService\InventCountingServiceGroup76.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.FixedAssetContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\InventCountingService\SoapUtility.InventCountingService.Infolog.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -271,31 +279,31 @@
     <None Include="Service References\MiscServiceGroup\MiscServiceGroup.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup2.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\MiscServiceGroup\MiscServiceGroup3.wsdl" />
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup31.wsdl" />
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup32.wsdl" />
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MiscServiceGroup\MiscServiceGroup7.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\MiscServiceGroup\MiscServiceGroup8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MiscServiceGroup\MiscServiceGroup87.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.AcmcSalesLineContract.datasource">
@@ -308,6 +316,44 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MiscServiceGroup\SoapUtility.MiscServiceGroup.WorkitemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup.wsdl" />
+    <None Include="Service References\ProcurementGroup\ProcurementGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup1.wsdl" />
+    <None Include="Service References\ProcurementGroup\ProcurementGroup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcurementGroup\SoapUtility.ProcurementGroup.GenerateGRNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcurementGroup\SoapUtility.ProcurementGroup.GetAvailablePOsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcurementGroup\SoapUtility.ProcurementGroup.GetPurchOrderForGRNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcurementGroup\SoapUtility.ProcurementGroup.Infolog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcurementGroup\SoapUtility.ProcurementGroup.POHeader.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SalesServicesGroup\SalesServicesGroup3.wsdl" />
@@ -698,6 +744,7 @@
     <WCFMetadataStorage Include="Service References\EAMServices\" />
     <WCFMetadataStorage Include="Service References\InventCountingService\" />
     <WCFMetadataStorage Include="Service References\MiscServiceGroup\" />
+    <WCFMetadataStorage Include="Service References\ProcurementGroup\" />
     <WCFMetadataStorage Include="Service References\SalesServicesGroup\" />
     <WCFMetadataStorage Include="Service References\SOPickServiceGroup\" />
     <WCFMetadataStorage Include="Service References\UserMgtServices\" />
@@ -787,6 +834,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ProcurementGroup\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcurementGroup\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcurementGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -797,6 +856,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MiscServiceGroup\MiscServiceGroup1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcurementGroup\ProcurementGroup.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SalesServicesGroup\SalesServicesGroup1.disco" />

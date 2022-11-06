@@ -84,6 +84,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="journald" nillable="true" type="xs:string" />
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="lines" nillable="true" type="q7:ArrayOfInventJournalTransContract" />
+        <xs:element minOccurs="0" name="newLineTransDate" type="xs:dateTime" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,6 +106,18 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q10:ArrayOfSCForTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFixedAssetListing">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFixedAssetListingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" minOccurs="0" name="result" nillable="true" type="q11:ArrayOfFixedAssetContract" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

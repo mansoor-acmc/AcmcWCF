@@ -121,49 +121,49 @@ namespace SyncServices
 
 
 
-        public SalesLine ToConvert(misc.AcmcSalesLineContract axdline)
-        {
-            string locs = string.Empty;
-            if (axdline.Locations != null && axdline.Locations.Count() > 0)
-            {
-                locs = string.Join(",", (axdline.Locations.Select(t => t.LocationId)));
-            }
-            return new SalesLine()
-            {
-                SalesId = axdline.SalesId,
-                ItemId = axdline.ItemId,
-                Name = axdline.Name,
-                SalesQty = axdline.SalesQty,
-                SalesQtyBox = axdline.SalesQtyBox,
-                SalesQtyPallet = axdline.SalesQtyPallet,
-                SalesQtySQM = axdline.SalesQtySQM,
-                SalesQtySQMReserved = axdline.SalesQtySQMReserved,
-                SalesQtySQMRemaining = axdline.SalesQtySQMRemaining,
-                SalesUnit = axdline.SalesUnit,
-                Grade = axdline.Grade,
-                Color = axdline.Shade,
-                Size = axdline.Size,
-                Site = axdline.Site,
-                Warehouse = axdline.Warehouse,
-                SerialNumber = axdline.Serial,
-                PickingId = axdline.PickingId,
-                Location = locs,
-                Remarks = axdline.Remarks,
-                IsHalfPallet = axdline.IsHalfPallet,
-                ExclusiveHalfPallet = axdline.ExclusiveHalfPallet,
-                LineRecId = axdline.LineRecId,
-                //Locations = axdline.Locations
-            };
+        //public SalesLine ToConvert(misc.AcmcSalesLineContract axdline)
+        //{
+        //    string locs = string.Empty;
+        //    if (axdline.Locations != null && axdline.Locations.Count() > 0)
+        //    {
+        //        locs = string.Join(",", (axdline.Locations.Select(t => t.LocationId)));
+        //    }
+        //    return new SalesLine()
+        //    {
+        //        SalesId = axdline.SalesId,
+        //        ItemId = axdline.ItemId,
+        //        Name = axdline.Name,
+        //        SalesQty = axdline.SalesQty,
+        //        SalesQtyBox = axdline.SalesQtyBox,
+        //        SalesQtyPallet = axdline.SalesQtyPallet,
+        //        SalesQtySQM = axdline.SalesQtySQM,
+        //        SalesQtySQMReserved = axdline.SalesQtySQMReserved,
+        //        SalesQtySQMRemaining = axdline.SalesQtySQMRemaining,
+        //        SalesUnit = axdline.SalesUnit,
+        //        Grade = axdline.Grade,
+        //        Color = axdline.Shade,
+        //        Size = axdline.Size,
+        //        Site = axdline.Site,
+        //        Warehouse = axdline.Warehouse,
+        //        SerialNumber = axdline.Serial,
+        //        PickingId = axdline.PickingId,
+        //        Location = locs,
+        //        Remarks = axdline.Remarks,
+        //        IsHalfPallet = axdline.IsHalfPallet,
+        //        ExclusiveHalfPallet = axdline.ExclusiveHalfPallet,
+        //        LineRecId = axdline.LineRecId,
+        //        //Locations = axdline.Locations
+        //    };
 
-        }
+        //}
 
-        public List<SalesLine> ToAcmcListConvert(List<misc.AcmcSalesLineContract> lines)
-        {
-            List<SalesLine> result = new List<SalesLine>();
-            foreach (misc.AcmcSalesLineContract line in lines)
-                result.Add(new SalesLine().ToConvert(line));
+        //public List<SalesLine> ToAcmcListConvert(List<misc.AcmcSalesLineContract> lines)
+        //{
+        //    List<SalesLine> result = new List<SalesLine>();
+        //    foreach (misc.AcmcSalesLineContract line in lines)
+        //        result.Add(new SalesLine().ToConvert(line));
 
-            return result;
-        }
+        //    return result;
+        //}
     }
 }

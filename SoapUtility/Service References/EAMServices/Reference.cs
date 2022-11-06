@@ -233,6 +233,9 @@ namespace SoapUtility.EAMServices {
     public partial class EamWorkitemsContract : SoapUtility.EAMServices.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmModifiedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string parmSTO_ActualRequesterField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -267,6 +270,25 @@ namespace SoapUtility.EAMServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long parmSto_WmsLocIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmWOPoolCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmWorkOrderIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmModifiedBy {
+            get {
+                return this.parmModifiedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmModifiedByField, value) != true)) {
+                    this.parmModifiedByField = value;
+                    this.RaisePropertyChanged("parmModifiedBy");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string parmSTO_ActualRequester {
@@ -420,6 +442,32 @@ namespace SoapUtility.EAMServices {
                 if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
                     this.parmSto_WmsLocIDField = value;
                     this.RaisePropertyChanged("parmSto_WmsLocID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmWOPoolCode {
+            get {
+                return this.parmWOPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmWOPoolCodeField, value) != true)) {
+                    this.parmWOPoolCodeField = value;
+                    this.RaisePropertyChanged("parmWOPoolCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmWorkOrderID {
+            get {
+                return this.parmWorkOrderIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmWorkOrderIDField, value) != true)) {
+                    this.parmWorkOrderIDField = value;
+                    this.RaisePropertyChanged("parmWorkOrderID");
                 }
             }
         }

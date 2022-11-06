@@ -453,6 +453,9 @@ namespace SoapUtility.DataManagerServices {
         private decimal BoxPerPalletField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Desc1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -460,6 +463,9 @@ namespace SoapUtility.DataManagerServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ItemNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SacoBarcodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SizeField;
@@ -479,6 +485,19 @@ namespace SoapUtility.DataManagerServices {
                 if ((this.BoxPerPalletField.Equals(value) != true)) {
                     this.BoxPerPalletField = value;
                     this.RaisePropertyChanged("BoxPerPallet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandField, value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
                 }
             }
         }
@@ -518,6 +537,19 @@ namespace SoapUtility.DataManagerServices {
                 if ((object.ReferenceEquals(this.ItemNumberField, value) != true)) {
                     this.ItemNumberField = value;
                     this.RaisePropertyChanged("ItemNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SacoBarcode {
+            get {
+                return this.SacoBarcodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SacoBarcodeField, value) != true)) {
+                    this.SacoBarcodeField = value;
+                    this.RaisePropertyChanged("SacoBarcode");
                 }
             }
         }
