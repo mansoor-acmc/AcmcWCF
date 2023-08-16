@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/dC1BqgGPGAbCP/HU7gACsz7bBjaOD2vLhX6CXIaWAI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bsCEN8967Fhx9+grQulWpJA96MnIbgdx2avTshsnJ/M=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IModulaPR1">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IModulaPR1" contract="ModulaService.IModulaPR" bindingType="basicHttpBinding" address="http://localhost:58380/ModulaPR.svc" bindingConfiguration="BasicHttpBinding_IModulaPR1">
+    <endpoint name="BasicHttpBinding_IModulaPR" contract="ModulaService.IModulaPR" bindingType="basicHttpBinding" address="http://localhost:58380/ModulaPR.svc" bindingConfiguration="BasicHttpBinding_IModulaPR1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:58380/ModulaPR.svc</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IModulaPR1</serializedValue>
+          <serializedValue>BasicHttpBinding_IModulaPR</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -22,18 +22,18 @@
     <MetadataSource Address="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SalesServicesGroup8.xsd" MetadataType="Schema" ID="d88f074d-0933-4c12-8b56-131a096c24ed" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd4" />
-    <MetadataFile FileName="SalesServicesGroup81.xsd" MetadataType="Schema" ID="ebd2545f-9438-4c34-9c0c-572621e3c2f5" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd0" />
-    <MetadataFile FileName="SalesServicesGroup3.wsdl" MetadataType="Wsdl" ID="96e29f5c-a699-4074-9262-d4d2d1cb3e55" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl1" />
-    <MetadataFile FileName="SalesServicesGroup82.xsd" MetadataType="Schema" ID="0dfe4e38-1cd5-4222-b93a-b7c8c797eda3" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd7" />
-    <MetadataFile FileName="SalesServicesGroup83.xsd" MetadataType="Schema" ID="9ee8f597-b62b-4235-9f13-81ea392fa33b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd3" />
-    <MetadataFile FileName="SalesServicesGroup31.wsdl" MetadataType="Wsdl" ID="ea6a220c-3806-485d-85db-9e9b29569184" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl0" />
-    <MetadataFile FileName="SalesServicesGroup84.xsd" MetadataType="Schema" ID="c463ee84-a3c9-46a8-bdca-67e614829b92" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd6" />
-    <MetadataFile FileName="SalesServicesGroup85.xsd" MetadataType="Schema" ID="2ba476d2-16bc-40fe-8db2-b8114de4d08d" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd2" />
-    <MetadataFile FileName="SalesServicesGroup86.xsd" MetadataType="Schema" ID="bb8bb94d-073a-4426-af02-8a001d9842dc" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd5" />
-    <MetadataFile FileName="SalesServicesGroup87.xsd" MetadataType="Schema" ID="118ffc29-4eaa-4808-99c8-5a571d7b761f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd1" />
-    <MetadataFile FileName="SalesServicesGroup1.disco" MetadataType="Disco" ID="ecf1733f-109b-4c13-9118-9bf14c3abac1" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?disco" />
-    <MetadataFile FileName="SalesServicesGroup32.wsdl" MetadataType="Wsdl" ID="4513af84-ba6f-4a18-a7bd-295de63c2784" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl" />
+    <MetadataFile FileName="SalesServicesGroup8.xsd" MetadataType="Schema" ID="0874aa50-0f12-4ea5-83c0-c163869982e1" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd4" />
+    <MetadataFile FileName="SalesServicesGroup81.xsd" MetadataType="Schema" ID="6ca271bc-e8d2-4a21-ad3a-09f90192b677" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd0" />
+    <MetadataFile FileName="SalesServicesGroup3.wsdl" MetadataType="Wsdl" ID="f4329c01-055f-4b6e-b16b-340627b4b992" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl1" />
+    <MetadataFile FileName="SalesServicesGroup82.xsd" MetadataType="Schema" ID="e4f33369-506d-4ced-aa2a-61f84c0f9164" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd7" />
+    <MetadataFile FileName="SalesServicesGroup83.xsd" MetadataType="Schema" ID="320c79a5-f21d-4e86-bc68-7a825b27ff8f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd3" />
+    <MetadataFile FileName="SalesServicesGroup31.wsdl" MetadataType="Wsdl" ID="4002ec1a-9517-4f81-ad63-d2bb550aff8e" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesServicesGroup84.xsd" MetadataType="Schema" ID="af9cf510-e7a6-4929-81fd-9494f2f602e7" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd6" />
+    <MetadataFile FileName="SalesServicesGroup85.xsd" MetadataType="Schema" ID="e171ff82-37ea-4601-aa5f-1c85d23303a8" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd2" />
+    <MetadataFile FileName="SalesServicesGroup86.xsd" MetadataType="Schema" ID="a9eaaa7e-85c6-4c12-aa7e-0ffa1d49d612" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd5" />
+    <MetadataFile FileName="SalesServicesGroup87.xsd" MetadataType="Schema" ID="702656c4-cb6f-4304-b45a-ce88abe2cc81" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?xsd=xsd1" />
+    <MetadataFile FileName="SalesServicesGroup1.disco" MetadataType="Disco" ID="69ea2d05-9fbc-4444-9db8-b92d0b52f429" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?disco" />
+    <MetadataFile FileName="SalesServicesGroup32.wsdl" MetadataType="Wsdl" ID="11ca2fa4-607f-476a-ba23-3e569adf837f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/SalesServicesGroup?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

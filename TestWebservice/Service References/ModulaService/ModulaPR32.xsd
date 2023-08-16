@@ -107,8 +107,8 @@
           <xs:element minOccurs="0" name="WorkOrderID" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="WorkOrderItems" nillable="true" type="tns:ArrayOfPMWorkItemContract" />
           <xs:element minOccurs="0" name="WorkOrderPoolCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="WorkOrderStatus" type="tns:PMWorkOrderStatus" />
-          <xs:element minOccurs="0" name="WorkOrderType" type="tns:PMWorkOrderType" />
+          <xs:element minOccurs="0" name="WorkOrderStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkOrderType" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -120,36 +120,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfPMWorkItemContract" nillable="true" type="tns:ArrayOfPMWorkItemContract" />
-  <xs:simpleType name="PMWorkOrderStatus">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Created" />
-      <xs:enumeration value="Approved" />
-      <xs:enumeration value="Released" />
-      <xs:enumeration value="WorkInProgress" />
-      <xs:enumeration value="Cancelled" />
-      <xs:enumeration value="Completed" />
-      <xs:enumeration value="Posted" />
-      <xs:enumeration value="Closed" />
-      <xs:enumeration value="EPMove" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="PMWorkOrderStatus" nillable="true" type="tns:PMWorkOrderStatus" />
-  <xs:simpleType name="PMWorkOrderType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="MaintenanceOrder" />
-      <xs:enumeration value="Inspection" />
-      <xs:enumeration value="Improvement" />
-      <xs:enumeration value="Installation" />
-      <xs:enumeration value="Troubleshooting" />
-      <xs:enumeration value="Preventive" />
-      <xs:enumeration value="ScheduledMaintenance" />
-      <xs:enumeration value="Consumable" />
-      <xs:enumeration value="ToolsSafetyEquipment" />
-      <xs:enumeration value="Uniform" />
-      <xs:enumeration value="StationeryANDcomputer" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="PMWorkOrderType" nillable="true" type="tns:PMWorkOrderType" />
   <xs:complexType name="OnHandContract">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
@@ -213,6 +183,7 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q13:XppObjectBase">
         <xs:sequence>
+          <xs:element minOccurs="0" name="parmModifiedBy" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
@@ -225,6 +196,8 @@
           <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
           <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+          <xs:element minOccurs="0" name="parmWOPoolCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmWorkOrderID" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

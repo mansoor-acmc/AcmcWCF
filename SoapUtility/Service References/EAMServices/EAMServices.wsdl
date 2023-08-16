@@ -25,7 +25,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsdl:import namespace="WorkItemsService" location="https://acmc.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
+  <wsdl:import namespace="WorkItemsService" location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices?wsdl=wsdl0" />
   <wsdl:types />
   <wsdl:binding name="BasicHttpBinding_WorkItemsService" type="i0:WorkItemsService">
     <wsp:PolicyReference URI="#BasicHttpBinding_WorkItemsService_policy" />
@@ -369,7 +369,7 @@
   </wsdl:binding>
   <wsdl:service name="EAMServices">
     <wsdl:port name="BasicHttpBinding_WorkItemsService" binding="tns:BasicHttpBinding_WorkItemsService">
-      <soap:address location="https://acmc.operations.dynamics.com/soap/services/EAMServices" />
+      <soap:address location="https://acmcuat.sandbox.operations.dynamics.com/soap/services/EAMServices" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

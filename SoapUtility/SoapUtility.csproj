@@ -163,27 +163,27 @@
     <None Include="Service References\DataManagerServices\SoapUtility.DataManagerServices.WmsLocationContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EAMServices\EAMServices2.wsdl" />
-    <None Include="Service References\EAMServices\EAMServices21.wsdl" />
-    <None Include="Service References\EAMServices\EAMServices7.xsd">
+    <None Include="Service References\EAMServices\EAMServices.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices71.xsd">
+    <None Include="Service References\EAMServices\EAMServices1.wsdl" />
+    <None Include="Service References\EAMServices\EAMServices1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices72.xsd">
+    <None Include="Service References\EAMServices\EAMServices2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices73.xsd">
+    <None Include="Service References\EAMServices\EAMServices3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices74.xsd">
+    <None Include="Service References\EAMServices\EAMServices4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices75.xsd">
+    <None Include="Service References\EAMServices\EAMServices5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EAMServices\EAMServices76.xsd">
+    <None Include="Service References\EAMServices\EAMServices6.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EAMServices\SoapUtility.EAMServices.EquipContract.datasource">
@@ -849,9 +849,6 @@
     <None Include="Service References\DataManagerServices\DataManagerServiceGroup1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\EAMServices\EAMServices1.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\InventCountingService\InventCountingServiceGroup1.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -868,6 +865,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\UserMgtServices\UserMgtServices1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EAMServices\EAMServices.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

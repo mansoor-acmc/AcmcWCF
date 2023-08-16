@@ -21,16 +21,16 @@
     <MetadataSource Address="https://acmc.operations.dynamics.com/soap/services/UserMgtServices" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UserMgtServices7.xsd" MetadataType="Schema" ID="296df7df-1880-465d-a345-e4b85aa5d5e1" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd4" />
-    <MetadataFile FileName="UserMgtServices1.disco" MetadataType="Disco" ID="db064e79-c0b7-4339-8d45-74d2e93bcd84" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?disco" />
-    <MetadataFile FileName="UserMgtServices2.wsdl" MetadataType="Wsdl" ID="64f8aece-d7f9-4d66-ba86-95ca39e12b9e" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?wsdl" />
-    <MetadataFile FileName="UserMgtServices71.xsd" MetadataType="Schema" ID="ca6e75d5-de64-4f9d-83ef-7d92cd4c9721" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd5" />
-    <MetadataFile FileName="UserMgtServices72.xsd" MetadataType="Schema" ID="3644080e-6fa4-4f78-9bc6-de636738c22f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd0" />
-    <MetadataFile FileName="UserMgtServices73.xsd" MetadataType="Schema" ID="cb9b8162-e22b-4617-8f25-480a5c069fe6" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd2" />
-    <MetadataFile FileName="UserMgtServices21.wsdl" MetadataType="Wsdl" ID="b20b75ca-c67f-4d9f-9b72-bbf2916a11ba" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?wsdl=wsdl0" />
-    <MetadataFile FileName="UserMgtServices74.xsd" MetadataType="Schema" ID="fd64b2d1-86c5-406c-be70-e676647742db" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd1" />
-    <MetadataFile FileName="UserMgtServices75.xsd" MetadataType="Schema" ID="28db230c-88b6-4ef4-a599-8a6a17faa29a" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd3" />
-    <MetadataFile FileName="UserMgtServices76.xsd" MetadataType="Schema" ID="22f66932-065f-41e6-b2af-467045503258" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd6" />
+    <MetadataFile FileName="UserMgtServices7.xsd" MetadataType="Schema" ID="0a28a0ec-0c38-46ed-9b7e-24ddbea0ec1b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd4" />
+    <MetadataFile FileName="UserMgtServices1.disco" MetadataType="Disco" ID="b6b8592c-2d0a-4c6c-bd5f-5776d2cbb060" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?disco" />
+    <MetadataFile FileName="UserMgtServices2.wsdl" MetadataType="Wsdl" ID="758d1f99-fc1d-45c3-aa7a-b42eb1bd9bba" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?wsdl" />
+    <MetadataFile FileName="UserMgtServices71.xsd" MetadataType="Schema" ID="d9d998d8-fcc6-424c-a036-ab0ed0a67819" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd5" />
+    <MetadataFile FileName="UserMgtServices72.xsd" MetadataType="Schema" ID="949567a7-c1bd-470c-8e47-5a72f252df89" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd0" />
+    <MetadataFile FileName="UserMgtServices73.xsd" MetadataType="Schema" ID="7cf62662-72b2-42c9-a9b8-f616ed2eba28" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd2" />
+    <MetadataFile FileName="UserMgtServices21.wsdl" MetadataType="Wsdl" ID="2c67067c-d5c2-40ab-8c2c-ecf4f4a2f2de" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?wsdl=wsdl0" />
+    <MetadataFile FileName="UserMgtServices74.xsd" MetadataType="Schema" ID="04db7fde-d36b-4654-89d1-e2b8fb5db12d" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd1" />
+    <MetadataFile FileName="UserMgtServices75.xsd" MetadataType="Schema" ID="79f26b39-6b1b-43c8-a507-a8b947f6dd64" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd3" />
+    <MetadataFile FileName="UserMgtServices76.xsd" MetadataType="Schema" ID="57b7e27f-76e6-421f-9678-ac61aa0ccc61" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/UserMgtServices?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

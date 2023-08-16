@@ -15,198 +15,54 @@ namespace TestWebservice.EAMService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EamWorkitemsContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WorkitemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     [System.SerializableAttribute()]
-    public partial class EamWorkitemsContract : TestWebservice.EAMService.XppObjectBase {
+    public partial class WorkitemContract : TestWebservice.EAMService.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_ActualRequesterField;
+        private string StoHostRIFField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_RefRequistNumField;
+        private int StoIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSTO_RequesterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_CostCenterField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_HostRIFField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int parmSto_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_ItemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_OperatorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal parmSto_QuantityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string parmSto_ReqNoteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime parmSto_TimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long parmSto_WmsLocIDField;
+        private string StoItemField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_ActualRequester {
+        public string StoHostRIF {
             get {
-                return this.parmSTO_ActualRequesterField;
+                return this.StoHostRIFField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_ActualRequesterField, value) != true)) {
-                    this.parmSTO_ActualRequesterField = value;
-                    this.RaisePropertyChanged("parmSTO_ActualRequester");
+                if ((object.ReferenceEquals(this.StoHostRIFField, value) != true)) {
+                    this.StoHostRIFField = value;
+                    this.RaisePropertyChanged("StoHostRIF");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_RefRequistNum {
+        public int StoID {
             get {
-                return this.parmSTO_RefRequistNumField;
+                return this.StoIDField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_RefRequistNumField, value) != true)) {
-                    this.parmSTO_RefRequistNumField = value;
-                    this.RaisePropertyChanged("parmSTO_RefRequistNum");
+                if ((this.StoIDField.Equals(value) != true)) {
+                    this.StoIDField = value;
+                    this.RaisePropertyChanged("StoID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSTO_Requester {
+        public string StoItem {
             get {
-                return this.parmSTO_RequesterField;
+                return this.StoItemField;
             }
             set {
-                if ((object.ReferenceEquals(this.parmSTO_RequesterField, value) != true)) {
-                    this.parmSTO_RequesterField = value;
-                    this.RaisePropertyChanged("parmSTO_Requester");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_CostCenter {
-            get {
-                return this.parmSto_CostCenterField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_CostCenterField, value) != true)) {
-                    this.parmSto_CostCenterField = value;
-                    this.RaisePropertyChanged("parmSto_CostCenter");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_HostRIF {
-            get {
-                return this.parmSto_HostRIFField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_HostRIFField, value) != true)) {
-                    this.parmSto_HostRIFField = value;
-                    this.RaisePropertyChanged("parmSto_HostRIF");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int parmSto_ID {
-            get {
-                return this.parmSto_IDField;
-            }
-            set {
-                if ((this.parmSto_IDField.Equals(value) != true)) {
-                    this.parmSto_IDField = value;
-                    this.RaisePropertyChanged("parmSto_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_Item {
-            get {
-                return this.parmSto_ItemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_ItemField, value) != true)) {
-                    this.parmSto_ItemField = value;
-                    this.RaisePropertyChanged("parmSto_Item");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_Operator {
-            get {
-                return this.parmSto_OperatorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_OperatorField, value) != true)) {
-                    this.parmSto_OperatorField = value;
-                    this.RaisePropertyChanged("parmSto_Operator");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal parmSto_Quantity {
-            get {
-                return this.parmSto_QuantityField;
-            }
-            set {
-                if ((this.parmSto_QuantityField.Equals(value) != true)) {
-                    this.parmSto_QuantityField = value;
-                    this.RaisePropertyChanged("parmSto_Quantity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string parmSto_ReqNote {
-            get {
-                return this.parmSto_ReqNoteField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.parmSto_ReqNoteField, value) != true)) {
-                    this.parmSto_ReqNoteField = value;
-                    this.RaisePropertyChanged("parmSto_ReqNote");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime parmSto_Time {
-            get {
-                return this.parmSto_TimeField;
-            }
-            set {
-                if ((this.parmSto_TimeField.Equals(value) != true)) {
-                    this.parmSto_TimeField = value;
-                    this.RaisePropertyChanged("parmSto_Time");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long parmSto_WmsLocID {
-            get {
-                return this.parmSto_WmsLocIDField;
-            }
-            set {
-                if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
-                    this.parmSto_WmsLocIDField = value;
-                    this.RaisePropertyChanged("parmSto_WmsLocID");
+                if ((object.ReferenceEquals(this.StoItemField, value) != true)) {
+                    this.StoItemField = value;
+                    this.RaisePropertyChanged("StoItem");
                 }
             }
         }
@@ -219,8 +75,9 @@ namespace TestWebservice.EAMService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.XppObjectBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.UnderStockItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.ModulaItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.AcmcSalesLineContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.WorkitemContract))]
     public partial class ProxyBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -252,8 +109,9 @@ namespace TestWebservice.EAMService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.InventByGrLocContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.UnderStockItemContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.ModulaItemContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.AcmcSalesLineContract))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.EamWorkitemsContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWebservice.EAMService.WorkitemContract))]
     public partial class XppObjectBase : TestWebservice.EAMService.ProxyBase {
     }
     
@@ -442,6 +300,253 @@ namespace TestWebservice.EAMService {
                 if ((this.UnderStockValueField.Equals(value) != true)) {
                     this.UnderStockValueField = value;
                     this.RaisePropertyChanged("UnderStockValue");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ModulaItemContract", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    [System.SerializableAttribute()]
+    public partial class ModulaItemContract : TestWebservice.EAMService.XppObjectBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_ActualRequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RefRequistNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSTO_RequesterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_CostCenterField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_HostRIFField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int parmSto_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ItemField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ModifiedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_OperatorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal parmSto_QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_ReqNoteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime parmSto_TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_WOPoolCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long parmSto_WmsLocIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmSto_WorkOrderIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_ActualRequester {
+            get {
+                return this.parmSTO_ActualRequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_ActualRequesterField, value) != true)) {
+                    this.parmSTO_ActualRequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_ActualRequester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_RefRequistNum {
+            get {
+                return this.parmSTO_RefRequistNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RefRequistNumField, value) != true)) {
+                    this.parmSTO_RefRequistNumField = value;
+                    this.RaisePropertyChanged("parmSTO_RefRequistNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSTO_Requester {
+            get {
+                return this.parmSTO_RequesterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSTO_RequesterField, value) != true)) {
+                    this.parmSTO_RequesterField = value;
+                    this.RaisePropertyChanged("parmSTO_Requester");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_CostCenter {
+            get {
+                return this.parmSto_CostCenterField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_CostCenterField, value) != true)) {
+                    this.parmSto_CostCenterField = value;
+                    this.RaisePropertyChanged("parmSto_CostCenter");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_HostRIF {
+            get {
+                return this.parmSto_HostRIFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_HostRIFField, value) != true)) {
+                    this.parmSto_HostRIFField = value;
+                    this.RaisePropertyChanged("parmSto_HostRIF");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int parmSto_ID {
+            get {
+                return this.parmSto_IDField;
+            }
+            set {
+                if ((this.parmSto_IDField.Equals(value) != true)) {
+                    this.parmSto_IDField = value;
+                    this.RaisePropertyChanged("parmSto_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Item {
+            get {
+                return this.parmSto_ItemField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ItemField, value) != true)) {
+                    this.parmSto_ItemField = value;
+                    this.RaisePropertyChanged("parmSto_Item");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_ModifiedBy {
+            get {
+                return this.parmSto_ModifiedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ModifiedByField, value) != true)) {
+                    this.parmSto_ModifiedByField = value;
+                    this.RaisePropertyChanged("parmSto_ModifiedBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_Operator {
+            get {
+                return this.parmSto_OperatorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_OperatorField, value) != true)) {
+                    this.parmSto_OperatorField = value;
+                    this.RaisePropertyChanged("parmSto_Operator");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal parmSto_Quantity {
+            get {
+                return this.parmSto_QuantityField;
+            }
+            set {
+                if ((this.parmSto_QuantityField.Equals(value) != true)) {
+                    this.parmSto_QuantityField = value;
+                    this.RaisePropertyChanged("parmSto_Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_ReqNote {
+            get {
+                return this.parmSto_ReqNoteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_ReqNoteField, value) != true)) {
+                    this.parmSto_ReqNoteField = value;
+                    this.RaisePropertyChanged("parmSto_ReqNote");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime parmSto_Time {
+            get {
+                return this.parmSto_TimeField;
+            }
+            set {
+                if ((this.parmSto_TimeField.Equals(value) != true)) {
+                    this.parmSto_TimeField = value;
+                    this.RaisePropertyChanged("parmSto_Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_WOPoolCode {
+            get {
+                return this.parmSto_WOPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_WOPoolCodeField, value) != true)) {
+                    this.parmSto_WOPoolCodeField = value;
+                    this.RaisePropertyChanged("parmSto_WOPoolCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long parmSto_WmsLocID {
+            get {
+                return this.parmSto_WmsLocIDField;
+            }
+            set {
+                if ((this.parmSto_WmsLocIDField.Equals(value) != true)) {
+                    this.parmSto_WmsLocIDField = value;
+                    this.RaisePropertyChanged("parmSto_WmsLocID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmSto_WorkOrderID {
+            get {
+                return this.parmSto_WorkOrderIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmSto_WorkOrderIDField, value) != true)) {
+                    this.parmSto_WorkOrderIDField = value;
+                    this.RaisePropertyChanged("parmSto_WorkOrderID");
                 }
             }
         }
@@ -911,10 +1016,10 @@ namespace TestWebservice.EAMService {
     public interface IEAMService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEAMService/PostedWorkItems", ReplyAction="http://tempuri.org/IEAMService/PostedWorkItemsResponse")]
-        TestWebservice.EAMService.EamWorkitemsContract[] PostedWorkItems();
+        TestWebservice.EAMService.WorkitemContract[] PostedWorkItems();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEAMService/PostedWorkItems", ReplyAction="http://tempuri.org/IEAMService/PostedWorkItemsResponse")]
-        System.Threading.Tasks.Task<TestWebservice.EAMService.EamWorkitemsContract[]> PostedWorkItemsAsync();
+        System.Threading.Tasks.Task<TestWebservice.EAMService.WorkitemContract[]> PostedWorkItemsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -944,11 +1049,11 @@ namespace TestWebservice.EAMService {
                 base(binding, remoteAddress) {
         }
         
-        public TestWebservice.EAMService.EamWorkitemsContract[] PostedWorkItems() {
+        public TestWebservice.EAMService.WorkitemContract[] PostedWorkItems() {
             return base.Channel.PostedWorkItems();
         }
         
-        public System.Threading.Tasks.Task<TestWebservice.EAMService.EamWorkitemsContract[]> PostedWorkItemsAsync() {
+        public System.Threading.Tasks.Task<TestWebservice.EAMService.WorkitemContract[]> PostedWorkItemsAsync() {
             return base.Channel.PostedWorkItemsAsync();
         }
     }

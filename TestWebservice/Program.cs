@@ -23,6 +23,15 @@ namespace TestWebservice
     {
         static void Main(string[] args)
         {
+            ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
+            //var tbl = clientMov.ItemsNotUsed();
+            Debug.Print("Start Program...");
+            bool isOpened = clientMov.OpenItemCode(208814, "2023-08-13 08:32:22");
+            /*
+            ModulaService.ModulaPRClient prClient = new ModulaService.ModulaPRClient();
+            var codes = prClient.GetWOPools();
+
+
             var pOHeader = new PurchaseService.PurchaseServiceClient().GetPurchOrderForGRN("22/PO-1991");
             //var FAItems = new FAService.FixedAssetServiceClient().ResetData("acmc").ToList();
 
@@ -58,8 +67,8 @@ namespace TestWebservice
             EAMService.EAMServiceClient eamClient = new EAMService.EAMServiceClient();
             var eamItems = eamClient.PostedWorkItems();
 
-            /*string[] pallets = { "M031855"};
-             * 
+            string[] pallets = { "M031855"};
+              
             
 
             SalesOrder.SalesServiceClient ssClient = new SalesServiceClient();
@@ -72,7 +81,7 @@ namespace TestWebservice
             var soPick = new SalesService.SalesServiceClient();
             var salesTable = soPick.FindSalesOrder("21SO-01820");
             Console.WriteLine(salesTable.PickingId);
-*/
+
             FGSyncService.FGSyncServiceClient fgClient1 = new FGSyncService.FGSyncServiceClient();
             var fgItems = fgClient1.GetFGYearInventory(0);
             int countFG = fgItems.Count();
@@ -135,7 +144,7 @@ namespace TestWebservice
                Console.WriteLine(user.UserName + "(" + user.UserType + "): " + user.Password);
            }
 
-           /*DMCheckServiceClient dmClient = new DMCheckServiceClient();
+           DMCheckServiceClient dmClient = new DMCheckServiceClient();
            //var locs=dmClient.GetWHLocations();
            //int totRows = locs.Count();
            //Console.WriteLine(totRows.ToString());
@@ -150,13 +159,13 @@ namespace TestWebservice
                Console.WriteLine("Lines Transferred: " + result.Count().ToString());
 
            dmClient.Close();
-           */
+           
 
 
 
 
 
-            /*
+            
             ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
             var tbl = clientMov.ItemsNotUsed();
 
@@ -168,7 +177,7 @@ namespace TestWebservice
 
             //DateTime start = new DateTime(2019, 05, 15);
             //DateTime end = new DateTime(2019, 10, 15);
-            var saleOrders = soClient.GetSalesOrders(start.ToShortDateString(), end.ToShortDateString(), "LC0004");*/
+            var saleOrders = soClient.GetSalesOrders(start.ToShortDateString(), end.ToShortDateString(), "LC0004");
 
 
             ////var delv=soClient.GetDeliveries(start.ToShortDateString());
@@ -193,27 +202,27 @@ namespace TestWebservice
             //    Console.WriteLine("Lines Transferred: " + result.Count().ToString());
 
 
-            /*List<PalletItemContract> contract = new List<PalletItemContract>();
+            List<PalletItemContract> contract = new List<PalletItemContract>();
             contract.Add(new PalletItemContract
             {
                 serialField = "L004649"
             });
            SalesOrder.SalesServiceClient client1 = new SalesServiceClient();
             var linesReturned = client1.CheckPalletAvailableMulti("20SO-00393", "GRA-3088010DM140", "G1", "PKL20-000984", contract.ToArray(),"KVN","S10",5637550335);
-            */
+            
 
-            /*var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
+            var items1 = client1.ReceivePickingList("169.254.2.1", "169.254.2.1");
             foreach (SalesLine line in items1.Lines)
             {
                 str += line.PickingId.ToString() + ": "+line.Location;
             }
-            */
+            
             //FGService.FGSyncServiceClient client = new FGService.FGSyncServiceClient();
 
             //var dt = new DMCheckService.DMCheckServiceClient().GetProductionByLinesForChart(DateTime.Now.Date);
 
 
-            /*******SalesOrder**/
+            
             //SalesOrder.SalesServiceClient client = new SalesServiceClient();
             //List<PalletItemContract> items = new List<PalletItemContract>();
             //items.Add(new PalletItemContract() { serialField = "K148334", updatedDateField = new DateTime(2020, 3, 1, 8, 9, 15), updatedDateFieldSpecified = true });
@@ -223,13 +232,13 @@ namespace TestWebservice
             //items.Add(new PalletItemContract() { serialField = "H172195", updatedDateField = new DateTime(2017, 5, 15, 8, 12, 25), updatedDateFieldSpecified = true });
             //items.Add(new PalletItemContract() { serialField = "I035316", updatedDateField = new DateTime(2017, 5, 15, 8, 13, 53), updatedDateFieldSpecified = true });
 
-            /*var result = client.CheckPalletAvailableMulti("20SO-01080", "CET-3049024AG090", "G1", "PKL20-002745", items.ToArray(), "Mansoor", "Computer", 0);
+            var result = client.CheckPalletAvailableMulti("20SO-01080", "CET-3049024AG090", "G1", "PKL20-002745", items.ToArray(), "Mansoor", "Computer", 0);
             if (result!=null)
             {
                 new DBClass().CheckDMExport();
 
                 new DBClass().ErrorInsert("16SO-06291", "ACMC-014127", "error string", "error trace", DateTime.Now, "SalesService", "Mansoor", "Computer", "CheckPalletAvailable");
-            }*/
+            }
             ////SalesTableContract contract = client.findSalesOrder(context, "16SO-06192");
             ////Console.Write( contract.DeliveryName);
 
@@ -239,7 +248,7 @@ namespace TestWebservice
             //pallets.Add("I113648");
             //pallets.Add("I113650");
 
-            /*
+            
            string str="";
            var items = client.FindPickingList("ACMC-025199", "mansoor", "0.125");
            foreach (SalesLine line in items.Lines)
@@ -250,14 +259,14 @@ namespace TestWebservice
            Console.Write(str);
            Console.Write( items.SalesId);
            Console.Write(",  "+items.DeliveryDate.ToString());
-           */
+           
 
             //var items = client.ValidatePallets("17SO-04439", "JOS-3049024SG090", "G1", "ACMC-016936", pallets.ToArray(), "Mansoor", "Computer 0.125", 5637162577);
             //if (items != null && items.Count() > 0)
             //  Console.Write(items[0].Name);
             //var items = client.ValidatePallets("16SO-06291", "CTO-3015008DM120", "G1", "ACMC-014108", pallets.ToArray(), "Mansoor", "Computer");
 
-            /*List<string> pallets = new List<string>();
+            List<string> pallets = new List<string>();
             pallets.Add("G145786");
 
             try
@@ -268,7 +277,7 @@ namespace TestWebservice
             catch (Exception exp)
             {
                 string msg = exp.Message;
-            }*/
+            }
 
             //SCSyncServiceClient client = new SCSyncServiceClient();
             //List<ItemEntity> data = client.ResetData().ToList();
@@ -276,8 +285,8 @@ namespace TestWebservice
             //string count = data.Count().ToString();
 
 
-            /**********ModulaPRClient**/
-            /*ModulaPRClient client = new ModulaPRClient();
+            //**********ModulaPRClient**
+            ModulaPRClient client = new ModulaPRClient();
 
             PMWorkOrder order = new PMWorkOrder()
             {                
@@ -329,20 +338,20 @@ namespace TestWebservice
             if (newOrder != null)
             {
                 string woId = newOrder.WorkOrderID;
-            }*/
+            }
 
             //ModulaPRClient client = new ModulaPRClient();
 
             //int result = client.SetWorkOrderStatus("W-0007100", 6);
             //var items = client.GetOtherWorkItems("W-0007093", "", 10);
             //var items=client.GetInlineWorkItems("W-0007091");
-            /*foreach (PMWorkItem item in items)
+            foreach (PMWorkItem item in items)
             {
                 string name = item.ItemID;
                 Console.WriteLine(name+", "+item.Sto_HostRIF+", "+item.ItemName);
-            }*/
+            }
 
-            /*UserMgtServices.UserMgtServiceClient client = new  UserMgtServices.UserMgtServiceClient();
+            UserMgtServices.UserMgtServiceClient client = new  UserMgtServices.UserMgtServiceClient();
             byte[] fileTo = client.DownloadFile("PH3200 HYDRAULIC PRESS WITH QUICK DIE-SET CHANGE-OVER DEVICE1_ACMC-02092_ACMC-01295.pdf", "\\\\172.17.0.150\\Dyn_Attach_Doc\\EamEqp\\");
             using (FileStream fs = new FileStream(@"C:\FilesToImport\HYDRAULIC PRESS.pdf", FileMode.OpenOrCreate))
             {
@@ -352,15 +361,15 @@ namespace TestWebservice
 
             string count = fileTo.Length.ToString();
 
-            Console.WriteLine("Bytes count: "+count);*/
+            Console.WriteLine("Bytes count: "+count);
             //Process.Start()
-            /*var attendances = client.GetAttendances("h.bahakeem", "123",new DateTime(2016,10,20));
+            var attendances = client.GetAttendances("h.bahakeem", "123",new DateTime(2016,10,20));
             foreach (UserMgtServices.AttendanceContract row in attendances)
             {
                 Console.WriteLine(row.EmployeeId+", "+row.WorkStartTime+" -- "+row.WorkEndTime);
-            }*/
+            }
 
-            /*DMCheckService.DMExportContract line1 = new DMCheckService.DMExportContract()
+            DMCheckService.DMExportContract line1 = new DMCheckService.DMExportContract()
             {
                 palletNumField = "I000365",
                 recordIdField = 54817,
@@ -383,8 +392,8 @@ namespace TestWebservice
               //  result11 = true;
             DMCheckService.DMExportContract item = client.GetPalletInfo("J032910");
             
-            Console.Write(item.itemDescField);*/
-            /*
+            Console.Write(item.itemDescField);
+            
            DeviceMessage msg = new DeviceMessage()
            {
                DeviceName = "Mansoor",
@@ -400,6 +409,8 @@ namespace TestWebservice
            bool isSaved = opsClient.SaveMessage(msg);
            Console.Write("Msg Saved");
              */
+
+            Debug.Print("Ends Program...");
             Console.Read();
         }
 

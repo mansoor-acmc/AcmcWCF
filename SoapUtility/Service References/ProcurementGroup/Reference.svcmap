@@ -22,16 +22,16 @@
     <MetadataSource Address="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProcurementGroup.xsd" MetadataType="Schema" ID="02ef0c4f-98b5-4f93-82ce-4b21081cd8c1" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd3" />
-    <MetadataFile FileName="ProcurementGroup1.xsd" MetadataType="Schema" ID="9412c40a-9345-44b3-a4a3-9d2c69a5eed5" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd4" />
-    <MetadataFile FileName="ProcurementGroup2.xsd" MetadataType="Schema" ID="01f1b46e-dc0d-4a94-b97f-f49e6bf63264" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd2" />
-    <MetadataFile FileName="ProcurementGroup.wsdl" MetadataType="Wsdl" ID="aac91075-6385-4c20-ba6e-23173101de00" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?wsdl" />
-    <MetadataFile FileName="ProcurementGroup3.xsd" MetadataType="Schema" ID="e4858e94-48eb-462b-821b-944f68382ff7" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd1" />
-    <MetadataFile FileName="ProcurementGroup.disco" MetadataType="Disco" ID="e42afc0c-c49a-4b3f-be8b-67931686eb29" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?disco" />
-    <MetadataFile FileName="ProcurementGroup1.wsdl" MetadataType="Wsdl" ID="0663a16c-125e-4e37-bbbd-9d496c4dc071" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?wsdl=wsdl0" />
-    <MetadataFile FileName="ProcurementGroup4.xsd" MetadataType="Schema" ID="98cbec1b-7c17-403e-86ba-66b949d703ab" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd0" />
-    <MetadataFile FileName="ProcurementGroup5.xsd" MetadataType="Schema" ID="230fc814-87d9-447d-82e2-7d8605c07208" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd5" />
-    <MetadataFile FileName="ProcurementGroup6.xsd" MetadataType="Schema" ID="c5a5850c-d451-42f8-a06f-e00aa83aeaa1" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd6" />
+    <MetadataFile FileName="ProcurementGroup.xsd" MetadataType="Schema" ID="de54eac6-b5ca-46c3-923f-bc978256a5a6" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd3" />
+    <MetadataFile FileName="ProcurementGroup1.xsd" MetadataType="Schema" ID="587d387f-0f84-4d8f-a824-a78bba209139" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd4" />
+    <MetadataFile FileName="ProcurementGroup2.xsd" MetadataType="Schema" ID="88b1437d-437b-477b-99bf-381e24c1c60f" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd2" />
+    <MetadataFile FileName="ProcurementGroup.wsdl" MetadataType="Wsdl" ID="3e0a5ea1-e2d7-43ff-9bb8-ae108637e39a" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?wsdl" />
+    <MetadataFile FileName="ProcurementGroup3.xsd" MetadataType="Schema" ID="cfed0c98-29c7-488d-8bb4-aaa0bdcaa6b6" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd1" />
+    <MetadataFile FileName="ProcurementGroup.disco" MetadataType="Disco" ID="5d211b42-c27f-4703-aba9-253ff285764b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?disco" />
+    <MetadataFile FileName="ProcurementGroup1.wsdl" MetadataType="Wsdl" ID="9be16571-6f02-4a30-a661-2113a6a6a145" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="ProcurementGroup4.xsd" MetadataType="Schema" ID="a731bc0f-0ee5-487a-8e5a-48d507dbc3bb" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd0" />
+    <MetadataFile FileName="ProcurementGroup5.xsd" MetadataType="Schema" ID="dfa80a9a-f247-4c7a-a617-95b51e9ac8c4" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd5" />
+    <MetadataFile FileName="ProcurementGroup6.xsd" MetadataType="Schema" ID="0e5ffd21-f32b-4c38-9764-704d15bd3dc5" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/ProcurementGroup?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

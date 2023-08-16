@@ -584,10 +584,10 @@ namespace TestWebservice.ModulaService {
         private string WorkOrderPoolCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestWebservice.ModulaService.PMWorkOrderStatus WorkOrderStatusField;
+        private int WorkOrderStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestWebservice.ModulaService.PMWorkOrderType WorkOrderTypeField;
+        private int WorkOrderTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Description {
@@ -707,7 +707,7 @@ namespace TestWebservice.ModulaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestWebservice.ModulaService.PMWorkOrderStatus WorkOrderStatus {
+        public int WorkOrderStatus {
             get {
                 return this.WorkOrderStatusField;
             }
@@ -720,7 +720,7 @@ namespace TestWebservice.ModulaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestWebservice.ModulaService.PMWorkOrderType WorkOrderType {
+        public int WorkOrderType {
             get {
                 return this.WorkOrderTypeField;
             }
@@ -999,6 +999,9 @@ namespace TestWebservice.ModulaService {
     public partial class EamWorkitemsContract : TestWebservice.ModulaService.XppObjectBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmModifiedByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string parmSTO_ActualRequesterField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1033,6 +1036,25 @@ namespace TestWebservice.ModulaService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long parmSto_WmsLocIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmWOPoolCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string parmWorkOrderIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmModifiedBy {
+            get {
+                return this.parmModifiedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmModifiedByField, value) != true)) {
+                    this.parmModifiedByField = value;
+                    this.RaisePropertyChanged("parmModifiedBy");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string parmSTO_ActualRequester {
@@ -1189,76 +1211,32 @@ namespace TestWebservice.ModulaService {
                 }
             }
         }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkOrderStatus", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
-    public enum PMWorkOrderStatus : int {
         
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Created = 0,
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmWOPoolCode {
+            get {
+                return this.parmWOPoolCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmWOPoolCodeField, value) != true)) {
+                    this.parmWOPoolCodeField = value;
+                    this.RaisePropertyChanged("parmWOPoolCode");
+                }
+            }
+        }
         
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Approved = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Released = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        WorkInProgress = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Cancelled = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Completed = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Posted = 6,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Closed = 7,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        EPMove = 8,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PMWorkOrderType", Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
-    public enum PMWorkOrderType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        MaintenanceOrder = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Inspection = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Improvement = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Installation = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Troubleshooting = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Preventive = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ScheduledMaintenance = 6,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Consumable = 7,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ToolsSafetyEquipment = 8,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Uniform = 9,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        StationeryANDcomputer = 10,
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string parmWorkOrderID {
+            get {
+                return this.parmWorkOrderIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.parmWorkOrderIDField, value) != true)) {
+                    this.parmWorkOrderIDField = value;
+                    this.RaisePropertyChanged("parmWorkOrderID");
+                }
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

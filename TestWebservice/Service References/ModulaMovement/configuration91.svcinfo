@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="TECYFOZ2PcXk1/BSp9yKgofjpoZTa3tYheiEC6whuUc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="iRtip0rUYlpyICpK9aG3ReKs0TlZ1SQQZv6YTaAhfX4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IModulaMovement">
       <properties>
@@ -34,7 +34,7 @@
           <serializedValue>65536</serializedValue>
         </property>
         <property path="/maxReceivedMessageSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>2147483647</serializedValue>
+          <serializedValue />
         </property>
         <property path="/proxyAddress" isComplexType="false" isExplicitlyDefined="false" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IModulaMovement" contract="ModulaMovement.IModulaMovement" bindingType="basicHttpBinding" address="http://172.17.0.50/HandHeldServices/ModulaMovement.svc" bindingConfiguration="BasicHttpBinding_IModulaMovement">
+    <endpoint name="BasicHttpBinding_IModulaMovement" contract="ModulaMovement.IModulaMovement" bindingType="basicHttpBinding" address="http://localhost:58380/ModulaMovement.svc" bindingConfiguration="BasicHttpBinding_IModulaMovement">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://172.17.0.50/HandHeldServices/ModulaMovement.svc</serializedValue>
+          <serializedValue>http://localhost:58380/ModulaMovement.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -21,16 +21,16 @@
     <MetadataSource Address="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InventCountingServiceGroup7.xsd" MetadataType="Schema" ID="177f7067-2f7f-4ec6-af57-d5f847f40caa" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd0" />
-    <MetadataFile FileName="InventCountingServiceGroup1.disco" MetadataType="Disco" ID="6f65c0ad-214d-4526-953f-d68c0d9b1bfb" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?disco" />
-    <MetadataFile FileName="InventCountingServiceGroup71.xsd" MetadataType="Schema" ID="5a8292c4-e4f0-42e3-a2aa-02d6a4e3f4b6" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd2" />
-    <MetadataFile FileName="InventCountingServiceGroup72.xsd" MetadataType="Schema" ID="90dbc961-9d1f-4b42-be44-5dd3e8d89068" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd3" />
-    <MetadataFile FileName="InventCountingServiceGroup73.xsd" MetadataType="Schema" ID="5829e815-48f9-48e6-991d-fa8491b09266" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd1" />
-    <MetadataFile FileName="InventCountingServiceGroup2.wsdl" MetadataType="Wsdl" ID="2131fe34-111a-4ef4-8811-9b5ab97447e9" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?wsdl=wsdl0" />
-    <MetadataFile FileName="InventCountingServiceGroup21.wsdl" MetadataType="Wsdl" ID="1cce7dbc-7fb9-43b1-b2e7-b9e3d9b2c157" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?wsdl" />
-    <MetadataFile FileName="InventCountingServiceGroup74.xsd" MetadataType="Schema" ID="e33bbd1a-68f4-4871-bb30-659d94119224" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd4" />
-    <MetadataFile FileName="InventCountingServiceGroup75.xsd" MetadataType="Schema" ID="ca4dcc3e-5aaa-40cd-bad1-3c5316e46835" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd5" />
-    <MetadataFile FileName="InventCountingServiceGroup76.xsd" MetadataType="Schema" ID="9b25039e-8fc2-4286-8474-2dd3704d3607" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd6" />
+    <MetadataFile FileName="InventCountingServiceGroup7.xsd" MetadataType="Schema" ID="89759087-e70a-4691-b65f-a0384a51151a" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd0" />
+    <MetadataFile FileName="InventCountingServiceGroup1.disco" MetadataType="Disco" ID="30828404-05c0-48a6-a222-e82e207669da" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?disco" />
+    <MetadataFile FileName="InventCountingServiceGroup71.xsd" MetadataType="Schema" ID="9450c1ad-f0ca-4c2d-a9cc-aa2f2256d79b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd2" />
+    <MetadataFile FileName="InventCountingServiceGroup72.xsd" MetadataType="Schema" ID="4465b6f0-b027-402b-8756-abf2a6964bf3" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd3" />
+    <MetadataFile FileName="InventCountingServiceGroup73.xsd" MetadataType="Schema" ID="7cf5ff08-c78d-43e7-b17e-b01c08d48d77" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd1" />
+    <MetadataFile FileName="InventCountingServiceGroup2.wsdl" MetadataType="Wsdl" ID="0cc1da45-5151-425a-a9a8-0910908ad0a9" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?wsdl=wsdl0" />
+    <MetadataFile FileName="InventCountingServiceGroup21.wsdl" MetadataType="Wsdl" ID="be7f7871-5d9c-4abd-8a9c-141a28b2c26b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?wsdl" />
+    <MetadataFile FileName="InventCountingServiceGroup74.xsd" MetadataType="Schema" ID="7313e76b-02a6-4c0c-aa5e-6e5d74fbf87b" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd4" />
+    <MetadataFile FileName="InventCountingServiceGroup75.xsd" MetadataType="Schema" ID="daec20ab-2f78-4101-a449-5d1f78927e13" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd5" />
+    <MetadataFile FileName="InventCountingServiceGroup76.xsd" MetadataType="Schema" ID="3d6bbe4b-01b7-4bc3-a81d-27b36a158f50" SourceId="1" SourceUrl="https://acmc.operations.dynamics.com/soap/services/InventCountingServiceGroup?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

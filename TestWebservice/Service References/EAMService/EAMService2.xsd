@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:58380/EAMService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
-  <xs:complexType name="ArrayOfEamWorkitemsContract">
+  <xs:complexType name="ArrayOfWorkitemContract">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EamWorkitemsContract" nillable="true" type="tns:EamWorkitemsContract" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkitemContract" nillable="true" type="tns:WorkitemContract" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfEamWorkitemsContract" nillable="true" type="tns:ArrayOfEamWorkitemsContract" />
-  <xs:complexType name="EamWorkitemsContract">
+  <xs:element name="ArrayOfWorkitemContract" nillable="true" type="tns:ArrayOfWorkitemContract" />
+  <xs:complexType name="WorkitemContract">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
         <xs:sequence>
-          <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_CostCenter" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_HostRIF" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_ID" type="xs:int" />
-          <xs:element minOccurs="0" name="parmSto_Item" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_Operator" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_Quantity" type="xs:decimal" />
-          <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+          <xs:element minOccurs="0" name="StoHostRIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoID" type="xs:int" />
+          <xs:element minOccurs="0" name="StoItem" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="EamWorkitemsContract" nillable="true" type="tns:EamWorkitemsContract" />
+  <xs:element name="WorkitemContract" nillable="true" type="tns:WorkitemContract" />
   <xs:complexType name="InventByGrLocContract">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
@@ -57,9 +48,33 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UnderStockItemContract" nillable="true" type="tns:UnderStockItemContract" />
-  <xs:complexType name="AcmcSalesLineContract">
+  <xs:complexType name="ModulaItemContract">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parmSTO_ActualRequester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_RefRequistNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSTO_Requester" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_CostCenter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_HostRIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="parmSto_Item" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Operator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="parmSto_ReqNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="parmSto_WOPoolCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parmSto_WmsLocID" type="xs:long" />
+          <xs:element minOccurs="0" name="parmSto_WorkOrderID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModulaItemContract" nillable="true" type="tns:ModulaItemContract" />
+  <xs:complexType name="AcmcSalesLineContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
         <xs:sequence>
           <xs:element minOccurs="0" name="ExclusiveHalfPallet" type="xs:boolean" />
           <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
