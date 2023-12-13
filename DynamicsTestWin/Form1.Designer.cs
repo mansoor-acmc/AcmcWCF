@@ -33,6 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkMultiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getFromWCFServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgTest)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             this.dgTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTest.Location = new System.Drawing.Point(0, 28);
             this.dgTest.Name = "dgTest";
+            this.dgTest.RowHeadersWidth = 51;
             this.dgTest.RowTemplate.Height = 24;
             this.dgTest.Size = new System.Drawing.Size(800, 422);
             this.dgTest.TabIndex = 0;
@@ -62,24 +64,32 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkMultiToolStripMenuItem,
-            this.getFromWCFServiceToolStripMenuItem});
+            this.getFromWCFServiceToolStripMenuItem,
+            this.openItemToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // checkMultiToolStripMenuItem
             // 
             this.checkMultiToolStripMenuItem.Name = "checkMultiToolStripMenuItem";
-            this.checkMultiToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.checkMultiToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.checkMultiToolStripMenuItem.Text = "Get From Dynamics";
             this.checkMultiToolStripMenuItem.Click += new System.EventHandler(this.checkMultiToolStripMenuItem_Click);
             // 
             // getFromWCFServiceToolStripMenuItem
             // 
             this.getFromWCFServiceToolStripMenuItem.Name = "getFromWCFServiceToolStripMenuItem";
-            this.getFromWCFServiceToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.getFromWCFServiceToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.getFromWCFServiceToolStripMenuItem.Text = "Get From WCF Service";
             this.getFromWCFServiceToolStripMenuItem.Click += new System.EventHandler(this.getFromWCFServiceToolStripMenuItem_Click);
+            // 
+            // openItemToolStripMenuItem
+            // 
+            this.openItemToolStripMenuItem.Name = "openItemToolStripMenuItem";
+            this.openItemToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.openItemToolStripMenuItem.Text = "Open Item";
+            this.openItemToolStripMenuItem.Click += new System.EventHandler(this.openItemToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -107,6 +117,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkMultiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getFromWCFServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openItemToolStripMenuItem;
     }
 }
 

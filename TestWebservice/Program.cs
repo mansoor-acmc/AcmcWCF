@@ -26,7 +26,9 @@ namespace TestWebservice
             ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
             //var tbl = clientMov.ItemsNotUsed();
             Debug.Print("Start Program...");
-            bool isOpened = clientMov.OpenItemCode(208814, "2023-08-13 08:32:22");
+            Console.Read();
+
+            bool isOpened = clientMov.OpenItemCode(210089, "2023-10-22 08:32:22");
             /*
             ModulaService.ModulaPRClient prClient = new ModulaService.ModulaPRClient();
             var codes = prClient.GetWOPools();

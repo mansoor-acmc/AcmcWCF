@@ -20,7 +20,7 @@ namespace DynamicsTestWin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgTest.DataSource = GetLatestPallets("PKL20-005574");
+            //dgTest.DataSource = GetLatestPallets("PKL20-005574");
         }
 
         private DataTable DbErrorCollection()
@@ -126,6 +126,16 @@ namespace DynamicsTestWin
         private void getFromWCFServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dgTest.DataSource = GetDeliveries(DateTime.Now.Date);
+        }
+
+        private void openItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModulaMovement.ModulaMovementClient clientMov = new ModulaMovement.ModulaMovementClient();
+            int _itemId = 210089;
+            //var tbl = clientMov.ItemsNotUsed();
+            
+            bool isOpened = clientMov.OpenItemCode(_itemId, "2023-10-22 08:32:22");
+            MessageBox.Show("Result is: " + isOpened.ToString());
         }
     }
 }
